@@ -4,9 +4,10 @@ To set up library structures for "East" and "West" demo ReShare libraries on a f
 - delete sample institutions and locations
 - create the East and West library and locations structures
 
-A script setting variables for the host and tenant to update must be invoked. In the project 
-is a settings file for tenant 'diku' at 'localhost' and another for 'si-cardinal'. Username and
-password for a user with suitable permissions in that tenant must be provided on the command line.
+A script setting variables for the target host and tenant must be invoked. There are two such settings files 
+in this directory: one for tenant 'diku' at 'localhost' and another for 'si-cardinal'. 
+
+Username and password for a user with suitable CRUD permissions in that tenant must be provided on the command line.
 
 So to clear out FOLIO's default sample locations for 'diku' on localhost, do:
 
