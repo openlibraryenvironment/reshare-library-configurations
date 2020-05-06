@@ -10,8 +10,8 @@ password for a user with suitable permissions in that tenant must be provided on
 
 So to clear out FOLIO's default sample locations for 'diku' on localhost, do:
 
-./delete-folio-sample-locations.sh diku@localhost:9130.sh diku_admin admin 
+`./delete-folio-sample-locations.sh diku@localhost:9130.sh diku_admin admin` 
 
 And to install East's and West's locations and library codes, do:
 
-./create-sample-library-structure.sh diku@localhost:9130.sh diku_admin admin
+`./create-sample-library-structure.sh diku@localhost:9130.sh diku_admin admin`
