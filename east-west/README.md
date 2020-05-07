@@ -2,7 +2,9 @@
 
 The scripts in this directory can be used for setting up location hierarchies and record identifier types for "East" and "West"  on a freshly installed FOLIO instance.
 
-- delete sample inventory records, like instances and holdings (often not loaded at install)
+It involves following steps:
+
+- possibly delete sample inventory records, like instances and holdings (often not loaded at install)
 - delete FOLIO's default sample institutions and locations
 - create East's and West's library locations structures and their ReShare record identifier types
 
