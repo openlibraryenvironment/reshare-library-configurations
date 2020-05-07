@@ -1,8 +1,6 @@
-. $1 # script setting tenant and host variables
-username=$2
-password=$3
+banner=" This will attempt to create locations hierarchies and record identifier types for imaginary libraries East and West"
 
-token=$(../util/get-token.sh $tenant $username $password $protocol $host)
+. $1 # the script setting tenant, username, host and auth
 
 curl -w '\n' -X POST -D - \
   -H "Content-type: application/json" \
@@ -130,4 +128,4 @@ curl -w '\n' -X POST -D - \
     }' \
     $protocol://$host/identifier-types
 
-
+echo

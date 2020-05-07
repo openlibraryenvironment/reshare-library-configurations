@@ -1,10 +1,10 @@
 tenant=$1
-username=$2
-password=$3
-protocol=$4
-host=$5
+token=$2
+protocol=$3
+host=$4
 
-token=$(../util/get-token.sh $tenant $username $password $protocol $host)
+
+
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/locations/53cf956f-c1df-410b-8bea-27f712cca7c0
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/locations/fcd64ce1-6995-48f0-840e-89ffa2288371
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/locations/758258bc-ecc1-41b8-abca-f7b610822ffd
