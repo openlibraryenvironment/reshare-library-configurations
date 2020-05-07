@@ -1,4 +1,4 @@
-# Setting up a demo for a shared index Inventory with imaginary libraries "East" and "West"
+# Setting up a shared index demo with imaginary libraries "East" and "West"
 
 The scripts in this directory can be used for setting up location hierarchies and record identifier types for "East" and "West"  on a freshly installed FOLIO instance.
 
