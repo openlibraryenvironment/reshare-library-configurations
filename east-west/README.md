@@ -5,10 +5,10 @@ The scripts in this directory can be used for setting up location hierarchies an
 It involves following steps:
 
 - possibly delete sample inventory records, like instances and holdings (often not loaded at install)
-- delete FOLIO's default sample institutions and locations
-- create East's and West's library locations structures and their ReShare record identifier types
+- [delete FOLIO's default sample institutions and locations](delete-folio-sample-locations.sh)
+- [create East's and West's library locations structures and their ReShare record identifier types](create-sample-library-structure.sh)
 
-A script setting variables for the target host and tenant and authenticating the user by password must be invoked. At the time of writing there are two such settings files in this directory: one for updating for [tenant 'diku' at 'localhost'](diku%40localhost%3A9130.sh) and another for updating demo service ['si-cardinal'](si_cardinal%40si-cardinal-okapi.folio-dev.indexdata.com.sh).
+A script setting variables for the target host and tenant and authenticating the user by password must be invoked to succesfully run each script. At the time of writing there are two such settings files in this directory: one for updating for [tenant 'diku' at 'localhost'](diku%40localhost%3A9130.sh) and another for updating demo service ['si-cardinal'](si_cardinal%40si-cardinal-okapi.folio-dev.indexdata.com.sh).
 
 ### Examples: 
 
