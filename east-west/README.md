@@ -6,7 +6,7 @@ To set up library structures for "East" and "West" demo ReShare libraries on a f
 - delete sample institutions and locations
 - create the East and West library and locations structures
 
-A script setting variables for the target host and tenant and authenticating the user by password must be invoked. At the time of writing there are two such settings files in this directory: one for tenant ['diku' at 'localhost'](diku%40localhost%3A9130.sh) and another for ['si-cardinal'](si_cardinal%40si-cardinal-okapi.folio-dev.indexdata.com.sh) .
+A script setting variables for the target host and tenant and authenticating the user by password must be invoked. At the time of writing there are two such settings files in this directory: one for updating for [tenant 'diku' at 'localhost'](diku%40localhost%3A9130.sh) and another for updating demo service ['si-cardinal'](si_cardinal%40si-cardinal-okapi.folio-dev.indexdata.com.sh).
 
 So to clear out FOLIO's default sample locations for 'diku' on localhost, do:
 
