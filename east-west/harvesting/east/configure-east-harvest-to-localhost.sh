@@ -12,7 +12,7 @@ echo Configure East
 echo ========================================
 
 echo ============ Pipeline
-curl -H "Content-Type: application/xml"  -d @201201-transformation-east.xml $transformationUrl
+curl -H "Content-Type: application/xml"  -d @201201-transformation-east-1st.xml $transformationUrl
 
 echo ============ Step: library codes
 curl -H "Content-Type: application/xml"  -d @201301-step-library-codes-east.xml $stepUrl
