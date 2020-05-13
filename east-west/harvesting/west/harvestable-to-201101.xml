@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <harvestable>
     <oaiPmh>
-        <id>201501</id>
-        <name>Demo: East</name>
+        <id>201503</id>
+        <name>Demo: West (to localhost)</name>
         <serviceProvider>Records contributed by Millersville</serviceProvider>
         <url>https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_MILLRSVL/request</url>
         <oaiSetName>PALCI_RESHARE</oaiSetName>
@@ -13,7 +12,7 @@
             <id>201101</id>
         </storage>
         <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
-            <id>201201</id>
+            <id>201202</id>
         </transformation>
         <harvestImmediately>false</harvestImmediately>
         <logLevel>INFO</logLevel>

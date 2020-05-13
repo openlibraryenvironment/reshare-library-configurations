@@ -2,7 +2,7 @@
 <storage>
     <inventoryStorage>
         <id>201101</id>
-        <name>localhost:9130</name>
+        <name>East/West: FOLIO @ localhost</name>
         <url>http://localhost:9130/</url>
         <description>Inventory storage at localhost</description>
         <enabled>true</enabled>

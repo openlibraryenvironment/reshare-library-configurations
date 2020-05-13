@@ -1,0 +1,24 @@
+<harvestable>
+    <oaiPmh>
+        <id>201504</id>
+        <name>Demo: West (to si dev)</name>
+        <serviceProvider>Records contributed by Millersville</serviceProvider>
+        <url>https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_MILLRSVL/request</url>
+        <oaiSetName>PALCI_RESHARE</oaiSetName>
+        <storeOriginal>true</storeOriginal>
+        <enabled>false</enabled>
+        <metadataPrefix>marc21</metadataPrefix>
+        <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
+            <id>201102</id>
+        </storage>
+        <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
+            <id>201202</id>
+        </transformation>
+        <harvestImmediately>false</harvestImmediately>
+        <logLevel>INFO</logLevel>
+        <mailLevel>WARN</mailLevel>
+        <overwrite>false</overwrite>
+        <scheduleString>10 10 10 6 *</scheduleString>
+        <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
+    </oaiPmh>
+</harvestable>

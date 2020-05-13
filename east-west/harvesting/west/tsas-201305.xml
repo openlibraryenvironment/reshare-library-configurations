@@ -5,7 +5,7 @@
         <position>3</position>
         <transformation>201202</transformation>
         <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-            <id>201302</id> <!-- Library codes, West --> 
+            <id>201305</id> <!-- Library codes, West --> 
         </step>
     </transformationStepAssociation>
 </tsa>

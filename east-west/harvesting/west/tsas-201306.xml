@@ -5,7 +5,7 @@
         <position>2</position>
         <transformation>201202</transformation>
         <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-            <id>4005</id>  <!-- Millersville holdings and items -->
+            <id>201306</id>  <!-- West holdings and items -->
         </step>
     </transformationStepAssociation>
 </tsa>
