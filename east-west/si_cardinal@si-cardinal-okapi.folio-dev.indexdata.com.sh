@@ -1,7 +1,7 @@
-# Source this file in scripts to run them against tenant si_cardinal on si-cardinal-okapi.folio-dev.indexdata.com 
+# Source this file in scripts to run them for tenant `si_cardinal` at FOLIO host `si-cardinal-okapi.folio-dev.indexdata.com` 
 host=si-cardinal-okapi.folio-dev.indexdata.com
 protocol=https
 tenant=si_cardinal
 username=si_admin
 
-. ../util/auth.sh
+. ../folio-auth/login.sh

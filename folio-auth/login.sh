@@ -13,7 +13,7 @@ if [ -z $password ]; then
   echo
   exit 1
 fi
-token=$(../util/get-token.sh $tenant $username $password $protocol $host)
+token=$(../folio-auth/get-token.sh $tenant $username $password $protocol $host)
 if [ -z $token ]; then
   echo
   echo

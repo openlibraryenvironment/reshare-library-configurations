@@ -4,4 +4,4 @@ protocol=http
 tenant=diku
 username=diku_admin
 
-. ../util/auth.sh
+. ../folio-auth/login.sh
