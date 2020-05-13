@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<storage>
+    <inventoryStorage>
+        <id>201101</id>
+        <name>localhost:9130</name>
+        <url>http://localhost:9130/</url>
+        <description>Inventory storage at localhost</description>
+        <enabled>true</enabled>
+        <json>
+{&#xD;
+    "folioAuthPath": "bl-users/login",&#xD;
+    "folioTenant": "diku",&#xD;
+    "folioUsername": "diku_admin",&#xD;
+    "folioPassword": "PW-HERE",&#xD;
+    "instanceStoragePath": "instance-storage/instances",&#xD;
+    "holdingsStoragePath": "holdings-storage/holdings",&#xD;
+    "itemStoragePath": "item-storage/items"&#xD;
+    "marcStoragePath": "marc-records"&#xD;
+}
+        </json>
+    </inventoryStorage>
+</storage>

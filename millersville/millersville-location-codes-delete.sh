@@ -1,4 +1,4 @@
-banner=" This will delete a Millersville location structure of the simple kind"
+banner=" This will delete a simple (high-level) Millersville location structure"
 
 . $1
 
