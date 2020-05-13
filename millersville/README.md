@@ -1,5 +1,5 @@
-# Setting up location codes and library identifiers in a shared index for Millersville
+# Millersville locations and codes for shared index
 
-The scripts coming to this directory can be used for setting up location hierarchies and record identifier types for Millersvill in a FOLIO Inventory service.
+The scripts coming to this directory can be used for setting up location hierarchies and record identifier types in FOLIO Inventory for Millersville.
 
 ! work in progress - do not use !
