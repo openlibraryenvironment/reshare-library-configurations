@@ -10,7 +10,7 @@ It involves following steps:
 
 A script setting variables for the target host and tenant and authenticating the user by password must be invoked to succesfully run each script. At the time of writing there are two such settings files in this directory: one for updating for [tenant 'diku' at 'localhost'](diku%40localhost%3A9130.sh) and another for updating demo service ['si-cardinal'](si_cardinal%40si-cardinal-okapi.folio-dev.indexdata.com.sh).
 
-In order to harvest inventory data for East and West, the [appropriate stylesheets](harvester-style-sheets) must be installed in the [Harvester](https://github.com/indexdata/localindices). These style sheets reference identifiers installed to the given FOLIO server by the scripts described here.  
+
 
 ### Examples: 
 
