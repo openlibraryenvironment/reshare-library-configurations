@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <basicTransformation>
+        <id>201202</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>Demo: West</name>
+        <parallel>false</parallel>
+        <stepAssociations>        
+            <id>201411</id>
+            <position>1</position>
+            <transformation>201202</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>4004</id> <!-- OAI20-MARC21 to Instance XML -->
+            </step>
+        </stepAssociations>
+        <stepAssociations> 
+            <id>2014412</id>
+            <position>2</position>
+            <transformation>201202</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>4005</id>  <!-- Millersville holdings and items -->
+            </step>     
+        </stepAssociations>
+        <stepAssociations> 
+            <id>201413</id>
+            <position>3</position>
+            <transformation>201202</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>201302</id> <!-- Library codes, West --> 
+            </step>       
+        </stepAssociations>
+        <stepAssociations> 
+            <id>201414</id>
+            <position>4</position>
+            <transformation>201202</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>4003</id> <!-- XML 2 JSON -->
+            </step>     
+        </stepAssociations>
+    </basicTransformation>
+</transformation>
