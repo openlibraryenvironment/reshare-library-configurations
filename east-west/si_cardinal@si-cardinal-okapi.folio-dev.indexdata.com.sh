@@ -4,4 +4,4 @@ protocol=https
 tenant=si_cardinal
 username=si_admin
 
-. ../folio-auth/login.sh
+. ../util/folio/login.sh

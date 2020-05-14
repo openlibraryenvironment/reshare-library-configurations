@@ -12,12 +12,24 @@ A script setting variables for the target host and tenant and authenticating the
 
 
 
-### Examples: 
+### Examples:
 
-To clear out FOLIO's default sample locations for 'diku' on localhost, do:
+Clear out FOLIO's default sample locations for 'diku' on localhost, do:
 
 `./delete-folio-sample-locations.sh diku@localhost:9130.sh`
 
-And to install East's and West's locations and library codes, do:
+Install East's and West's locations and library codes, do:
 
 `./create-sample-library-structure.sh diku@localhost:9130.sh`
+
+Install East's and West's localtions and library codes at Cardinal shared index:
+
+`./create-sample-library-structure.sh si_cardinal@si-cardinal-okapi.folio-dev.indexdata.com.sh`
+
+Configure storages, transformations, jobs for East and West in harvester at localhost:8080
+
+`./harvesting/push-shared-east-west.sh localhost:8080`
+
+  Passwords for FOLIO Inventory must be entered, either in the STORAGE configs before
+  pushing or through the Harvester Admin UI after.
+

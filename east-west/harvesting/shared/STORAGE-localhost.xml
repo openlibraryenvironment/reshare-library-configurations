@@ -2,8 +2,8 @@
 <storage>
     <inventoryStorage>
         <id>201101</id>
-        <name>East/West: FOLIO @ localhost</name>
-        <url>http://localhost:9130/</url>
+        <name>East/West: FOLIO @ localhost from Vagrant box</name>
+        <url>http://10.0.2.2:9130/</url>
         <description>Inventory storage at localhost</description>
         <enabled>true</enabled>
         <json>
