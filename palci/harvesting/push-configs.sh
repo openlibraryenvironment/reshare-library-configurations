@@ -11,8 +11,9 @@ fi
 
 if [ ! -d "$dir" ]; then
   echo
-  echo " Cannot find configuration files directory $dir. Exiting."
+  echo " Cannot find configuration files directory '$dir'. Exiting."
   echo 
+  exit 1
 fi
 
 cd shared

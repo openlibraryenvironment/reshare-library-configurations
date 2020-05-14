@@ -15,7 +15,7 @@ echo =============================================================
 if ls STORAGE*.xml 1>/dev/null 2>&1; then
 for file in `ls STORAGE*.xml`
 do
-    id=$(grep -oPm1 "(?<=<id>)[^<]+" $file)
+    id=$(grep -oPm1 "(?<=<id>)[^<]+" $file)  # get value of <id></id>
     if curl --output /dev/null --silent --fail $storageUrl/$id; then
       echo "STORAGE $id already exists. Skipping"
     else
