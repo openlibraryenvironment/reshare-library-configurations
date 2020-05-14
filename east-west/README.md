@@ -10,7 +10,7 @@ Scripts in these directories can be used for
 - [delete FOLIO's default sample institutions and locations](delete-folio-sample-locations.sh)
 - [create East's and West's library locations structures and their ReShare record identifier types](create-sample-library-structure.sh)
 
-### Examples - populating library codes for East and West in FOLIO Inventory
+#### Examples
 
 Clear out FOLIO's default sample locations for 'diku' in FOLIO Inventory on localhost:
 
@@ -32,7 +32,7 @@ The `harvesting/shared` directory contains two Inventory storage definitions to 
 
 The storage definitions must be finished with the correct passwords - either by editing the `STORAGE*.xml` configuration files, in the `shared/` directory, before running the scripts or by going to the Harvester's admin UI, "Storage Engines", after pushing the configs. 
 
-### Examples - configuring harvest jobs for East and West in Harvester
+#### Examples
 
 Configure storages, transformations, jobs for East and West in harvester at localhost:8080
 
