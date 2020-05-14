@@ -1,11 +1,5 @@
 protocol=http
 host=$1
-baseUrl=$protocol://$host/harvester/records
-storageUrl=$baseUrl/storages
-transformationUrl=$baseUrl/transformations
-stepUrl=$baseUrl/steps
-tsasUrl=$baseUrl/tsas
-harvestableUrl=$baseUrl/harvestables
 transformationId=201202
 
 if [ -z $host ]; then
@@ -23,7 +17,7 @@ do
     echo "=== Looking for harvester configuration files in '$dir/'"
     echo
     cd $dir
-    . ../../../util/harvester/push-all.sh
+    ../../../util/harvester/push-all.sh $protocol $host
     cd ..
 done
 

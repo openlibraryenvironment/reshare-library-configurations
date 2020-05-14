@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <storage>
     <inventoryStorage>
-        <id>201102</id>
-        <name>East/West @ SI Cardinal</name>
-        <url>https://si-cardinal-okapi.folio-dev.indexdata.com/</url>
-        <description>Inventory storage at localhost</description>
+        <id>301102</id>
+        <name>SI dev - PALCI</name>
+        <url>https://si-dev-okapi.folio-dev.indexdata.com/</url>
+        <description>Inventory storage - dev server</description>
         <enabled>true</enabled>
         <json>
 {&#xD;
     "folioAuthPath": "bl-users/login",&#xD;
-    "folioTenant": "diku",&#xD;
-    "folioUsername": "diku_admin",&#xD;
+    "folioTenant": "si_dev",&#xD;
+    "folioUsername": "si_admin",&#xD;
     "folioPassword": "PW-HERE",&#xD;
     "instanceStoragePath": "instance-storage-match/instances",&#xD;
     "holdingsStoragePath": "holdings-storage/holdings",&#xD;

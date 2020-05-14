@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep uri="http://localhost:8080/harvester/records/steps/4012">
+    <id>303301</id>
+    <XmlTransformStep>
+        <description>Holdings, Villanova</description>
+        <inputFormat>XML</inputFormat>
+        <name>Holdings, Villanova</name>
+        <outputFormat>XML</outputFormat>
+        <script>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet&#xD;
+  version="1.0"&#xD;
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&#xD;
+  xmlns:marc="http://www.loc.gov/MARC21/slim"&#xD;
+  &gt;&#xD;
+&#xD;
+  &lt;xsl:strip-space elements="*"/&gt;&#xD;
+  &lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
+&#xD;
+  &lt;xsl:template match="collection"&gt;&#xD;
+    &lt;collection&gt;&#xD;
+        &lt;xsl:apply-templates/&gt;&#xD;
+    &lt;/collection&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;xsl:template match="record"&gt;&#xD;
+    &lt;record&gt;&#xD;
+        &lt;xsl:for-each select="@* | node()"&gt;&#xD;
+            &lt;xsl:copy-of select="."/&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+        &lt;xsl:apply-templates/&gt;&#xD;
+    &lt;/record&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;xsl:template match="//marc:record"&gt;&#xD;
+    &lt;xsl:choose&gt;&#xD;
+      &lt;xsl:when test="marc:datafield[@tag='852']"&gt;&#xD;
+        &lt;holdingsRecords&gt;&#xD;
+           &lt;arr&gt;&#xD;
+             &lt;xsl:for-each select="marc:datafield[@tag='852']"&gt;&#xD;
+               &lt;i&gt;&#xD;
+                 &lt;permanentLocationIdHere&gt;&lt;xsl:value-of select="marc:subfield[@code='b']"/&gt;&lt;/permanentLocationIdHere&gt;&#xD;
+                 &lt;callNumber&gt;&#xD;
+                   &lt;xsl:for-each select="marc:subfield[@code='h']"&gt;&#xD;
+                     &lt;xsl:if test="position() &gt; 1"&gt;&#xD;
+                       &lt;xsl:text&gt; &lt;/xsl:text&gt;&#xD;
+                     &lt;/xsl:if&gt;&#xD;
+                     &lt;xsl:value-of select="."/&gt;&#xD;
+                   &lt;/xsl:for-each&gt;&#xD;
+                 &lt;/callNumber&gt;&#xD;
+               &lt;/i&gt;&#xD;
+             &lt;/xsl:for-each&gt;&#xD;
+           &lt;/arr&gt;&#xD;
+        &lt;/holdingsRecords&gt;&#xD;
+      &lt;/xsl:when&gt;&#xD;
+      &lt;xsl:otherwise&gt;&#xD;
+        &lt;holdingsRecords&gt;&#xD;
+          &lt;arr&gt;&#xD;
+            &lt;i&gt;&#xD;
+              &lt;permanentLocationIdHere/&gt;&#xD;
+            &lt;/i&gt;&#xD;
+          &lt;/arr&gt;&#xD;
+        &lt;/holdingsRecords&gt;&#xD;
+      &lt;/xsl:otherwise&gt;&#xD;
+    &lt;/xsl:choose&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template match="text()"/&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+        <id>303301</id>
+        <testData></testData>
+        <testOutput></testOutput>
+    </XmlTransformStep>
+    <id>303301</id>
+</transformationStep>

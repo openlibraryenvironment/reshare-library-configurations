@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tsa>
+    <transformationStepAssociation>
+        <id>303402</id>
+        <position>2</position>
+        <transformation>303201</transformation>
+        <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+            <id>303301</id>  <!-- Temple holdings -->
+        </step>
+    </transformationStepAssociation>
+</tsa>
+
