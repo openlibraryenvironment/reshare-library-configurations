@@ -4,10 +4,15 @@ Scripts in these directories can be used for
  1) setting up location hierarchies and record identifier types for "East" and "West"  on a freshly installed FOLIO instance
  2) configuring jobs in Harvester for East and West 
 
-## Configuring a library in FOLIO Inventory for a shared index
+## 1 Configuring a library in FOLIO Inventory for a shared index
+
+This probably involves cleaning up pre-installed locations and Inventory records :
 
 - possibly delete sample inventory records, like instances and holdings (often not loaded at install)
 - [delete FOLIO's default sample institutions and locations](delete-folio-sample-locations.sh)
+
+And then, to load the new library structures: 
+
 - [create East's and West's library locations structures and their ReShare record identifier types](create-sample-library-structure.sh)
 
 #### Examples
@@ -26,7 +31,7 @@ Install East's and West's localtions and library codes in SI Cardinal:
 
 More target Inventories can be added following the template of `diku@localhost:9130.sh` and `si_cardinal@si-cardinal-okapi.folio-dev.indexdata.com.sh`
 
-## Configuring harvest jobs to populate Inventory with Instances, holdings records and items for a library 
+## 2 Configuring harvest jobs to populate Inventory with Instances, holdings records and items for a library 
 
 The `harvesting/shared` directory contains two Inventory storage definitions to set up in the Harvester - one for an [Inventory at localhost as seen from a Harvester in a Vagrant box](harvesting/shared/STORAGE-localhost.xml), and one for [SI Cardinal](harvesting/shared/STORAGE-si-cardinal.xml). It then contains four job definitions for harvesting to East and/or West at either of these two FOLIO addresses, as well as the transformation steps required to harvest OAI-PMH MARC records to FOLIO Inventory.  
 
