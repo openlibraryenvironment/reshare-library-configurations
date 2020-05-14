@@ -38,7 +38,7 @@ Configure storages, transformations, jobs for East and West in harvester at loca
 
 `./harvesting/push-shared-east-west.sh localhost:8080`
 
-The Harvester configurations are in XML files following a naming convention that let's the script know what Harvester end points to POST or PUT the different configuration files to:
+The Harvester configurations are in XML files following a naming convention that lets the script know what Harvester end points to POST or PUT the different configuration files to:
 
 - HARVESTABLE*.xml  - contains the definition of a harvest job
 - STORAGE*.xml - contains the Inventory storage URL, end points and credentials
