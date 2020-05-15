@@ -2,7 +2,7 @@
 
 Scripts in these directories can be used for 
  1) setting up location hierarchies and record identifier types for "East" and "West"  on a freshly installed FOLIO instance
- 2) configuring jobs in Harvester for East and West 
+ 2) configuring jobs in Harvester for loading bibliographic records for East and West 
 
 ## 1 Configuring a library in FOLIO Inventory for a shared index
 
