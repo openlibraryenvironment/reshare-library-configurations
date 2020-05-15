@@ -11,7 +11,7 @@ The script looks at the file names to decide what Harvester end points to POST o
 - `STEP*.xml` - contains the individual transformation steps that make up a pipeline
 - `TSAS*.xml` - (transformation step associations) defines what STEPs are included in what pipelines
 
-Due to peculiarities in the way the Harvester APIs work with the Java Persistence API (JPA) the TRANSFORMATION record must be pushed twice for the transformation step associations to stick. `push-all.sh` takes care of that, but it must be able to find both the TRANSFORMATION*POST*.xml and the TRANSFORMATION*PUT*.xml or the step associations will appear not to persist, not without a Tomcat restart at least. 
+Due to peculiarities in the Harvester APIs and the underlying Java Persistence API (JPA) the `TRANSFORMATION` record must be pushed twice for the transformation step associations to stick. `push-all.sh` takes care of that, but it must be able to find both the `TRANSFORMATION*POST*.xml` and the `TRANSFORMATION*PUT*.xml` or the step associations will appear not to persist, at least not without a Tomcat restart. 
 
 The script will search for the record's primary key in each XML file - looking for the value of the field &lt;id&gt;&lt;/id&gt; - and use that to look up the record by ID in the Harvester. If the record already exists with that ID in the Harvester, the file is skipped. 
 
