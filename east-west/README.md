@@ -1,4 +1,4 @@
-# Setting up a shared index demo with imaginary libraries "East" and "West"
+# Setting up a shared index for ReShare demo with imaginary libraries "East" and "West"
 
 Scripts in these directories can be used for 
  1) setting up location hierarchies and record identifier types for "East" and "West"  on a freshly installed FOLIO instance
