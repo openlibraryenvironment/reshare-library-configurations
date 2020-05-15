@@ -1,10 +1,6 @@
-tenant=$1
-username=$2
-password=$3
-protocol=$4
-host=$5
+banner=" This will delete a simple (high-level) Temple location structure"
 
-token=$(./get-token.sh $tenant $username $password $protocol $host)
+. $1
 
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/service-points/efb9addf-caf4-4052-bb17-135cb4aa0594
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/identifier-types/17bb9b44-0063-44cc-8f1a-ccbb6188060b

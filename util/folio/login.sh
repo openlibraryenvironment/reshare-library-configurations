@@ -14,7 +14,8 @@ if [ -z $password ]; then
   exit 1
 fi
 
-token=$(../util/folio/get-token.sh $tenant $username $password $protocol $host)
+token=$(curl -s -X POST -D - -H "Content-type: application/json" -H "X-Okapi-Tenant: $tenant"  -d "{ \"username\": \"$username\", \"password\": \"$password\"}" "$protocol://$host/authn/login" | grep x-okapi-token | tr -d '\r' | cut -d " " -f2)
+
 if [ -z $token ]; then
   echo
   echo

@@ -1,10 +1,6 @@
-tenant=$1
-username=$2
-password=$3
-protocol=$4
-host=$5
+banner=" This will delete a Villanova location structure"
 
-token=$(./get-token.sh $tenant $username $password $protocol $host)
+. $1
 
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/service-points/170f6942-fec5-42af-9b5d-6bbba3e0a44a
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/identifier-types/170f6942-fec5-42af-9b5d-6bbba3e0a44a

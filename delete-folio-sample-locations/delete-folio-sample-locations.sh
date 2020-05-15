@@ -1,9 +1,16 @@
-tenant=$1
-token=$2
-protocol=$3
-host=$4
+banner="This will delete the sample institutions, libraries and locations that come pre-loaded with a new FOLIO inventory install"
 
+if [ -z $1 ]; then
+  echo
+  echo
+  echo " Please provide name of file containing the settings for the FOLIO install to run this script against. Example:  ./delete-folio-sample-locations.sh diku@localhost:9130.sh"
+  echo
+  exit 1
+fi
 
+. $1
+
+echo
 
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/locations/53cf956f-c1df-410b-8bea-27f712cca7c0
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/locations/fcd64ce1-6995-48f0-840e-89ffa2288371
@@ -16,3 +23,6 @@ curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/location-units/campuses/62cf76b7-cca5-4d33-9217-edf42ce1a848
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/location-units/campuses/470ff1dd-937a-4195-bf9e-06bcfcd135df
 curl -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -X DELETE $protocol://$host/location-units/institutions/40ee00ca-a518-4b49-be01-0638d0a4ac57
+
+echo
+echo Done `date`
