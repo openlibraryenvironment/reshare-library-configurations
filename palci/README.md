@@ -1,19 +1,19 @@
 # PALCI setup: Populate FOLIO Inventory locations and configure the Harvester jobs
 
-In order to load data to ReShare the participitating libraries must have the locations set up in FOLIO Inventory and harvesting jobs must be set up in the Harvester to start loading bibliographic records to Inventory. This is a description of the steps involved; the examples assume both the Harvester and FOLIO Inventory is running on localhost.
+In order to load data to a ReShare Inventory, the participitating libraries must have the locations set up in the Inventory and harvesting jobs must be set up in the Harvester to start loading bibliographic records to FOLIO. This is a description of the steps involved; the examples assume both the Harvester and FOLIO Inventory is running on localhost.
 
-1) A new FOLIO install may have some sample locations installed already - to remove them, do
+1) A new FOLIO install may have some sample locations installed already - to remove them, 
     
-     Go to folder `/delete-folio-sample-locations`
+     go to folder `/delete-folio-sample-locations`
      
-     Run
+     and run
      `./delete-folio-sample-locations.sh diku@localhost:9130.sh`
 
 2) Install Millersville locations (granular structure in this example), Temple locations (granular) and Villanova locations
 
-    Go to folder `/palci/inventory-reference-data/`
+    go to folder `/palci/inventory-reference-data/`
     
-    Run
+    and run
     
     `./millersville/millersville-granular-location-codes-create.sh diku@localhost\:9130.sh`
     
