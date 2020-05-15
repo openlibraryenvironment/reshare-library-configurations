@@ -8,6 +8,8 @@ stepUrl=$baseUrl/steps
 tsasUrl=$baseUrl/tsas
 harvestableUrl=$baseUrl/harvestables
 
+SCRIPTDIR=$(dirname "$0")
+
 echo =============================================================
 echo Pushing Harvester configurations from `pwd` to $host
 echo =============================================================
@@ -15,13 +17,7 @@ echo =============================================================
 if ls STORAGE*.xml 1>/dev/null 2>&1; then
 for file in `ls STORAGE*.xml`
 do
-    id=$(grep -oPm1 "(?<=<id>)[^<]+" $file)  # get value of <id></id>
-    if curl --output /dev/null --silent --fail $storageUrl/$id; then
-      echo "STORAGE $id already exists. Skipping"
-    else
-      echo POSTing $file with id $id to $storageUrl
-      curl -H "Content-Type: application/xml" -d @$file $storageUrl
-    fi
+    $SCRIPTDIR/push-config-if-not-exists.sh $file $storageUrl STORAGE
 done
 else
     echo "No STORAGE* configs in '`pwd`'"
@@ -30,13 +26,7 @@ fi
 if ls STEP*.xml 1>/dev/null 2>&1; then
 for file in `ls STEP*.xml`
 do
-    id=$(grep -oPm1 "(?<=<id>)[^<]+" $file)
-    if curl --output /dev/null --silent --fail $stepUrl/$id; then
-      echo "STEP $id already exists. Skipping"
-    else
-      echo POSTing step $file with id $id to $stepUrl
-      curl -H "Content-Type: application/xml" -d @$file $stepUrl
-    fi
+    $SCRIPTDIR/push-config-if-not-exists.sh $file $stepUrl STEP
 done
 else
     echo "No STEP* configs in '`pwd`'"
@@ -45,13 +35,7 @@ fi
 if ls TRANSFORMATION*POST*.xml 1>/dev/null 2>&1; then
 for file in `ls TRANSFORMATION*POST*.xml`
 do
-    id=$(grep -oPm1 "(?<=<id>)[^<]+" $file)
-    if curl --output /dev/null --silent --fail $transformationUrl/$id; then
-      echo "TRANSFORMATION $id already exists. Skipping"
-    else
-      echo POSTing $file with id $id to $transformationUrl
-      curl -H "Content-Type: application/xml" -d @$file $transformationUrl
-    fi
+    $SCRIPTDIR/push-config-if-not-exists.sh $file $transformationUrl TRANSFORMATION½
 done
 else
     echo "No TRANSFORMATION*POST configs to POST in '`pwd`'"
@@ -62,13 +46,7 @@ curl -s -H "Content-Type: application/xml" $stepUrl 1>/dev/null
 if ls TSAS*.xml 1>/dev/null 2>&1; then
 for file in `ls TSAS*.xml`
 do
-    id=$(grep -oPm1 "(?<=<id>)[^<]+" $file)
-    if curl --output /dev/null --silent --fail $tsasUrl/$id; then
-      echo "TSAS $id already exists. Skipping"
-    else
-      echo POSTing association $file with id $id to $tsasUrl
-      curl -H "Content-Type: application/xml" -d @$file $tsasUrl
-    fi
+    $SCRIPTDIR/push-config-if-not-exists.sh $file $tsasUrl TSAS
 done
 else
     echo "No step associations (TSAS* configs) to POST in '`pwd`'"
@@ -88,14 +66,10 @@ fi
 if ls HARVESTABLE*.xml 1>/dev/null 2>&1; then
 for file in `ls HARVESTABLE*.xml`
 do
-    id=$(grep -oPm1 "(?<=<id>)[^<]+" $file)
-    if curl --output /dev/null --silent --fail $harvestableUrl/$id; then
-      echo "HARVESTABLE $id already exists. Skipping"
-    else
-      echo POSTing harvest job $file to $harvestableUrl
-      curl -H "Content-Type: application/xml" -d @$file $harvestableUrl
-    fi
+    $SCRIPTDIR/push-config-if-not-exists.sh $file $harvestableUrl HARVESTABLE
 done
 else
     echo "No harvest job (HARVESTABLE* configs) to POST in '`pwd`'"
 fi
+
+echo "push-all DONE ... `date`"
