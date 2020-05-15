@@ -4,6 +4,6 @@ Scripts for setting up library codes and location structures for libraries in a 
 
 Find additional information in 
 
-- [Setting up imaginary libraries 'East' and 'West' for demos](east-west)
+- [Setting up imaginary libraries 'East' and 'West' for ReShare demos](east-west)
 
-- [Setting up PALCI libraries for a shared index](palci) 
+- [Setting up PALCI libraries in a shared index and configure harvest jobs for them](palci) 
