@@ -1,4 +1,4 @@
-# PALCI setup: Populate FOLIO Inventory with location codes, configure the Harvester
+# PALCI setup: Populate FOLIO Inventory locations and configure the Harvester jobs
 
 Setting up a new FOLIO Inventory with library location structures and/or configuring the Harvester with configurations for populating the Inventory  can involve followin steps. The example assumes both the Harvester and FOLIO Inventory is running on localhost.
 
