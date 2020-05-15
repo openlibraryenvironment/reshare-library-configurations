@@ -4,7 +4,8 @@ Setting up a new FOLIO Inventory with library location structures and/or configu
 
 1) A new FOLIO install may have some sample locations installed already - to remove them do
     
-     Go to folder /delete-folio-sample-locations
+     Go to folder `/delete-folio-sample-locations`
+     
      Do 
 
      `./delete-folio-sample-locations.sh diku@localhost:9130.sh`
