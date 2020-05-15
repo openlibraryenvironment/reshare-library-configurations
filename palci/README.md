@@ -11,7 +11,8 @@ Setting up a new FOLIO Inventory with library location structures and/or configu
 
 2) Install Millersville locations (granular structure in this example), Temple locations (granular) and Villanova locations
 
-    Go to folder /palci/inventory-reference-data/
+    Go to folder `/palci/inventory-reference-data/`
+    
     Do
 
     `./millersville/millersville-granular-location-codes-create.sh diku@localhost\:9130.sh`
@@ -22,9 +23,9 @@ Setting up a new FOLIO Inventory with library location structures and/or configu
 
 2) Push configurations for the Harvest jobs to populate Inventory with instances, holdings and item for Millersville, Temple and Villanova
 
-    Go to folder /palci/harvester-config
+    Go to folder `/palci/harvester-config`
 
-    Assuming the Harvester runs at localhost:8080, do
+    Assuming the Harvester runs at `localhost:8080`, do
 
     `./push-configs.sh millersville localhost:8080`
     
