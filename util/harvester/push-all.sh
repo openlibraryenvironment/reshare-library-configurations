@@ -24,7 +24,7 @@ do
     fi
 done
 else
-    echo "No STORAGE* configs in '$dir/'"
+    echo "No STORAGE* configs in '`pwd`'"
 fi
 
 if ls STEP*.xml 1>/dev/null 2>&1; then
@@ -39,7 +39,7 @@ do
     fi
 done
 else
-    echo "No STEP* configs in '$dir/'"
+    echo "No STEP* configs in '`pwd`'"
 fi
 
 if ls TRANSFORMATION*POST*.xml 1>/dev/null 2>&1; then
@@ -54,7 +54,7 @@ do
     fi
 done
 else
-    echo "No TRANSFORMATION*POST configs to POST in '$dir/'"
+    echo "No TRANSFORMATION*POST configs to POST in '`pwd`'"
 fi
 
 curl -s -H "Content-Type: application/xml" $stepUrl 1>/dev/null
@@ -71,7 +71,7 @@ do
     fi
 done
 else
-    echo "No step associations (TSAS* configs) to POST in '$dir/'"
+    echo "No step associations (TSAS* configs) to POST in '`pwd`'"
 fi
 
 if ls TRANSFORMATION*PUT*.xml 1>/dev/null 2>&1; then
@@ -82,7 +82,7 @@ do
     curl -X PUT -H "Content-Type: application/xml" -d @$file $transformationUrl/$id/
 done
 else
-    echo "No TRANSFORMATION*PUT configs to PUT in '$dir/'"
+    echo "No TRANSFORMATION*PUT configs to PUT in '`pwd`'"
 fi
 
 if ls HARVESTABLE*.xml 1>/dev/null 2>&1; then
@@ -97,5 +97,5 @@ do
     fi
 done
 else
-    echo "No harvest job (HARVESTABLE* configs) to POST in '$dir/'"
+    echo "No harvest job (HARVESTABLE* configs) to POST in '`pwd`'"
 fi
