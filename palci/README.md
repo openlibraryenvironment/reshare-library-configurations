@@ -1,4 +1,4 @@
-# PALCI setup: Populate FOLIO Inventory locations and configure the Harvester jobs
+# Setting up PALCI libraries in a shared index and configure harvest jobs for them
 
 In order to load data to a ReShare Inventory, the participitating libraries must have the locations set up in the Inventory and harvesting jobs must be set up in the Harvester to start loading bibliographic records to FOLIO. This is a description of the steps involved; the examples assume both the Harvester and FOLIO Inventory is running on localhost.
 
