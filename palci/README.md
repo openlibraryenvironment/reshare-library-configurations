@@ -1,6 +1,6 @@
 # PALCI setup: Populate FOLIO Inventory locations and configure the Harvester jobs
 
-Setting up a new FOLIO Inventory with library location structures and/or configuring the Harvester with configurations for populating the Inventory  can involve followin steps. The example assumes both the Harvester and FOLIO Inventory is running on localhost.
+In order to load data to ReShare the participitating libraries must have the locations set up in FOLIO Inventory and harvesting jobs must be set up in the Harvester to start loading bibliographic records to Inventory. This is a description of the steps involved; the examples assume both the Harvester and FOLIO Inventory is running on localhost.
 
 1) A new FOLIO install may have some sample locations installed already - to remove them do
     
