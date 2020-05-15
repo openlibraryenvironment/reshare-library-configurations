@@ -15,5 +15,5 @@ Due to peculiarities in the Harvester APIs and the underlying Java Persistence A
 
 The script will search for the record's primary key in each XML file - looking for the value of the field &lt;id&gt;&lt;/id&gt; - and use that to look up the record by ID in the Harvester. If the record already exists with that ID in the Harvester, the file is skipped. 
 
-NOTE: It's important, when writing config files, that the configurations primary key element appears as the first ID element in the record -- for example at the top of the XML document -- before any other &lt;id&gt; fields holding foreign keys. The HARVESTABLE record for example has such foreign key ID elements.
+NOTE: It's important, when writing config files, that the configurations primary key element appears as the first ID element in the record -- for example at the top of the XML document -- before any other &lt;id&gt; fields holding foreign keys. The HARVESTABLE record for example has such foreign key &lt;id&gt; elements.
 
