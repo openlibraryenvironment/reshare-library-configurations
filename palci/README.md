@@ -9,23 +9,23 @@ In order to load data to a ReShare Inventory, the participitating libraries must
      and run
      `./delete-folio-sample-locations.sh diku@localhost:9130.sh`
 
-2) Install Millersville locations (granular structure in this example), Temple locations (granular) and Villanova locations
+2) To install Millersville locations (granular locations structure in this example), Temple locations (granular too) and Villanova locations,
 
     go to folder `/palci/inventory-reference-data/`
     
     and run
     
-    `./millersville/millersville-granular-location-codes-create.sh diku@localhost\:9130.sh`
+    `./millersville/millersville-granular-location-codes-create.sh diku@localhost:9130.sh`
     
-    `./temple/temple-granular-location-codes-create.sh diku@localhost\:9130.sh`
+    `./temple/temple-granular-location-codes-create.sh diku@localhost:9130.sh`
     
-    `./villanova/villanova-location-codes-create.sh diku@localhost\:9130.sh`
+    `./villanova/villanova-location-codes-create.sh diku@localhost:9130.sh`
 
-2) Push configurations for the Harvest jobs that will populate Inventory with instances, holdings and item for Millersville, Temple and Villanova
+2) To push configurations for the Harvest jobs that will populate Inventory with instances, holdings and item for Millersville, Temple and Villanova,
 
-    Go to folder `/palci/harvester-config`
+    go to folder `/palci/harvester-config`
 
-    Assuming the Harvester runs at `localhost:8080`, run
+    and assuming that the Harvester is running at `localhost:8080`, run
 
     `./push-configs.sh millersville localhost:8080`
     
