@@ -4,7 +4,7 @@ When executing the script [push-all.sh](push-all.sh) in a given directory, the s
 
 The script takes two arguments, the base URL of the Harvester and optional basic authentication username:password.
 
-Scripts in the directories for PALCI or East-West (demo) make use of `push-all.sh`. 
+Scripts in the directories for [PALCI](/palci/harvester-configs) and [East-West (demo)](/east-west/harvesting) make use of `push-all.sh`. 
 
 The script looks at the file names to decide what Harvester end points to POST or PUT the different configuration files to, so following conventions must be used when creating config files:
 
