@@ -41,7 +41,11 @@ The storage definitions must be finished with the correct passwords - either by 
 
 Configure storages, transformations, jobs for East and West in a Harvester at localhost:8080
 
-`./harvesting/push-shared-east-west.sh localhost:8080`
+`./harvesting/push-shared-east-west.sh http://localhost:8080`
+
+For pushing the config files to a Harvester protected by basic authentication - and maybe SSL - provide the Harvester admin user's user name as well:
+
+`./harvesting/push-shared-east-west.sh https://harvester-dev.indexdata.com/  harvester_admin`
 
 The Harvester configurations are in XML file,s following a naming convention that lets the script know what Harvester end points to POST or PUT the different configuration files to:
 

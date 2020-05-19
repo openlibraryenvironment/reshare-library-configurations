@@ -1,7 +1,7 @@
 file=$1
 url=$2
-entitytype=$3
-creds=$4
+creds=$3
+entitytype=$4
 
 id=$(grep -oPm1 "(?<=<id>)[^<]+" $file)  # get value of <id></id>
 
