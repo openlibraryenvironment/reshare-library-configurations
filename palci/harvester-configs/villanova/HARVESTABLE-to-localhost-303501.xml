@@ -4,7 +4,7 @@
         <id>303501</id>
         <name>PALCI SI: Villanova to localhost</name>
         <url>https://library.villanova.edu/Find/OAI/Server</url>
-        <oaiSetName>collection:"Main Stacks"</oaiSetName>
+        <oaiSetName>main_only</oaiSetName>
         <storeOriginal>true</storeOriginal>
         <enabled>false</enabled>
         <metadataPrefix>marc21</metadataPrefix>
