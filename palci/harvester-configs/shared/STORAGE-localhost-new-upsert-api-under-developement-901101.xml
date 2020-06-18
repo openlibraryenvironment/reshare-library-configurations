@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <storage>
     <inventoryStorage>
-        <id>201101</id>
-        <name>East/West: FOLIO @ localhost from Vagrant box</name>
+        <id>901101</id>
+        <name>Inventory @ localhost - upsert by HRID (under development)</name>
         <url>http://10.0.2.2:9130/</url>
-        <description>Inventory storage at localhost</description>
+        <description>Inventory storage - localhost - upsert by HRID (under development)</description>
         <enabled>true</enabled>
         <json>
 {&#xD;
     "folioAuthPath": "bl-users/login",&#xD;
     "folioTenant": "diku",&#xD;
     "folioUsername": "diku_admin",&#xD;
-    "folioPassword": "PW-HERE",&#xD;
-    "instanceStoragePath": "instance-storage-match/instances",&#xD;
-    "holdingsStoragePath": "holdings-storage/holdings",&#xD;
-    "itemStoragePath": "item-storage/items",&#xD;
+    "folioPassword": "admin",&#xD;
+    "inventoryUpsertPath": "inventory-upsert-hrid",&#xD;
     "marcStoragePath": "marc-records"&#xD;
 }
         </json>

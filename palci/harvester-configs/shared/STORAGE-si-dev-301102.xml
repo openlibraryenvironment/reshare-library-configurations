@@ -14,7 +14,7 @@
     "folioPassword": "PW-HERE",&#xD;
     "instanceStoragePath": "instance-storage-match/instances",&#xD;
     "holdingsStoragePath": "holdings-storage/holdings",&#xD;
-    "itemStoragePath": "item-storage/items"&#xD;
+    "itemStoragePath": "item-storage/items",&#xD;
     "marcStoragePath": "marc-records"&#xD;
 }
         </json>
