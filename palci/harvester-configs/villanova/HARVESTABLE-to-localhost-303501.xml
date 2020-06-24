@@ -12,7 +12,7 @@
             <id>301101</id>
         </storage>
         <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
-            <id>302201</id>
+            <id>303201</id>
         </transformation>
         <harvestImmediately>false</harvestImmediately>
         <logLevel>INFO</logLevel>
