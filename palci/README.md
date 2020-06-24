@@ -27,15 +27,15 @@ In order to load data to a ReShare Inventory, the participitating libraries must
 
     and assuming that the Harvester is running at `localhost:8080`, run
 
-    `./push-configs.sh millersville http://localhost:8080`
+    `./push-configs.sh millersville localhost8080.sh`
     
-    `./push-configs.sh temple http://localhost:8080`
+    `./push-configs.sh temple localhost8080.sh`
     
-    `./push-configs.sh villanova http://localhost:8080`
+    `./push-configs.sh villanova localhost8080.sh`
 
-    For a remote harvester protected by basic authentication - and maybe SSL - provide the basic auth user name as well:
+    For a remote harvester protected by basic authentication - and maybe SSL - the BASIC AUTH username should be provided in the host config scripts, which will bring up a password prompt. For example, the script providing access information for the Harvester at folio-dev-us-east-1-1 contains the BASIC user name for that Harvester: 
 
-    `./push-configs.sh temple https://harvester-dev.indexdata.com/  harvester_admin`
+    `./push-configs.sh temple harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com.sh`
 
     Some of the configurations are shared (the FOLIO storage definition for example). The first command will install them if they don't already exist, the following will display messages that the entities already exist and thus were skipped.
 

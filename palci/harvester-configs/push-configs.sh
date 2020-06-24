@@ -1,8 +1,7 @@
 banner=" This will attempt to push configuration files in directory '$1'"
 
-dir=$1
-host=$2
-username=$3
+dir=$1 # Pass in the config directory as first argument
+. $2   # pass in the Harvester host config scripts as second argument
 
 if [ -z $username ]; then
  creds="noop:noop"
@@ -13,12 +12,12 @@ fi
 
 if [ -z $host ]; then
   echo
-  echo " Usage:  ./push-configs.sh config-dir harvester-host [harvester username]"
+  echo " Usage:  ./push-configs.sh config-dir harvester-host-script"
   echo
   echo " Examples:"
-  echo "           ./push-configs.sh millersville http://localhost:8080"
+  echo "           ./push-configs.sh millersville localhost8080.sh"
   echo
-  echo "           ./push-configs.sh temple https://harvester-dev.indexdata.com harvester_admin"
+  echo "           ./push-configs.sh temple harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com.sh"
   exit 1
 fi
 

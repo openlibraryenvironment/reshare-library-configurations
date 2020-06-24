@@ -1,5 +1,4 @@
-host=$1
-username=$2
+. $1   # pass in the Harvester host config script
 
 if [ -z $host ]; then
   echo
