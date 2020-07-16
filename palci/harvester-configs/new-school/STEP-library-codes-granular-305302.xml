@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep uri="http://localhost:8080/harvester/records/steps/4015">
+    <id>305302</id>
+    <XmlTransformStep>
+       <id>305302</id>
+
+       <description>Library codes, New School, granular locations</description>
+        <inputFormat>XML</inputFormat>
+        <name>Library codes, New School, granular locations</name>
+        <outputFormat>XML</outputFormat>
+        <script>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;&#xD;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;&#xD;
+&#xD;
+  &lt;xsl:strip-space elements="*"/&gt;&#xD;
+  &lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
+&#xD;
+  &lt;xsl:template match="@* | node()"&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select="@* | node()"/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match="//identifierTypeIdHere"&gt;&#xD;
+    &lt;identifierTypeId&gt;3f6508b0-764b-4c99-b7f0-db542ac59b6c&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match="//permanentLocationIdHere"&gt;&#xD;
+  &lt;permanentLocationId&gt;&#xD;
+  &lt;xsl:choose&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.ARCH '"&gt;31ac73c8-e26d-4a20-860b-1489b51ada90&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.ATLAS'"&gt;404237f4-e470-479f-88f2-2ccc026142b0&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.AV'"&gt;7bb92d25-eb12-4f3d-870a-fae478d9a2dd&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.CATM '"&gt;c7ced7f8-b35f-4491-b53b-1ed0a1041bda&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.CLOSP'"&gt;5c255581-18cc-4100-9b30-fc469b19ddd3&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.CLOSS'"&gt;74c41ff2-44ef-4288-a1e9-e6ee7239524a&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.INDEX'"&gt;54757414-6ead-4c8d-b2ba-c898c32fc7d5&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.MAIN'"&gt;4a097625-e21d-4e32-bee7-a93526cfde04&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.MICRO'"&gt;f7fe23fd-d815-4f2a-bb57-89ae628f198c&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.MIG'"&gt;d212ef65-f8d7-41bd-bcd8-49a66e178b08&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.NCIP'"&gt;f74d72c9-a6dd-4219-b396-7af1349e3abe&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.NRES'"&gt;85aeca74-d846-40ac-bb4e-d50f464752b0&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.OVERZ'"&gt;666ed659-5e62-49d3-a82c-024ae9240b79&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.PERIO'"&gt;9542dc05-91bd-482d-b275-62df720cb39a&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.REF'"&gt;abe6eb4d-4c69-446c-aeea-531ed9c43bf1&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.REFD'"&gt;2dc36fce-6d6d-42a2-bc7e-62bfceb22d70&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.REFI'"&gt;8b7396c2-2799-4b65-9dfc-0eb8abc0c88b&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.SPCL'"&gt;6a6fe291-cd5a-4674-9930-9aa059134b70&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.SPCLP'"&gt;266266d5-5dfe-4352-a8c5-d1ca9798b85c&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.STOR'"&gt;097452cd-6240-45b3-918a-280cd839ea9d&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.TECH'"&gt;4260d20c-2a85-4d8c-8f1f-d0796f1e22e6&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.TESOL'"&gt;43466231-a15d-4e98-9a04-e8b7be30272e&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSFO.THES'"&gt;b350998b-010a-41bf-a98c-24b5787db09c&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.ARCH'"&gt;691b823a-4149-42c8-8794-e0d103a7413c&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.AV'"&gt;09577ba8-7da9-4d19-aa09-fb4e842bc867&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.MAIN'"&gt;fbaf2b18-b49c-40bc-bc87-00bb9dcafd07&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.NCIP'"&gt;7a1ac4a3-a879-4e49-9b5a-859adad031f6&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.NRES'"&gt;4af8938b-8869-4ab7-9298-ae4d9177aa08&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.OVERZ'"&gt;6168c6fc-cc0f-42fb-a4ee-7b5cbcce2f0c&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.PERIO'"&gt;3f28360d-eb70-4d22-8bee-1d040c6e99cd&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.REF'"&gt;ea9c4c26-14d3-4ab6-93b9-c76958e99e26&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.!REFA'"&gt;fbda43f1-97d1-4411-a8f2-84b8fbf0ae44&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.SPCL'"&gt;0617aedd-4187-419e-b198-8ebbf459b0c5&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.SPCLP'"&gt;5ef1e64e-f675-42ff-a114-a4a6892f724e&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSGI.TECH'"&gt;550e0fee-373f-4c3a-99ef-fdf29e6156c8&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSKE.ARCH'"&gt;85afbbdd-1354-4f72-a8a3-638c84f108fe&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSKE.SPCLA'"&gt;7f4aca30-8445-42d7-9c55-1c783f55bcea&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSKE.SPCL'"&gt;3ae0c2ae-3f90-4786-9845-f714d774ef39&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSKE.SPCLP'"&gt;3266b344-dd1f-42b8-97c6-8173b2cbff7e&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSKE.AV'"&gt;54c06900-0c09-4100-b798-5758c88bcf23&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSKE.MICRO'"&gt;f0c72e64-400b-49ba-9057-afca7a8fc0e5&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSKE.MUSIC'"&gt;82d83505-5b09-4899-a739-840f87180b70&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSKE.THES'"&gt;ae0c8eaa-9466-4357-b45d-c7bc14cb3b32&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.AUD09'"&gt;6746f2c2-1741-4cbc-ac87-38c7bf220ec3&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.AUD10'"&gt;0bb904e4-2135-439f-b17d-4ab8a6b49d7d&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.ERES'"&gt;afe0e592-05fc-498b-8c0d-83eda247e647&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.ERES4'"&gt;4249ce25-2ee9-4afe-816e-34a58ba16fb1&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.MAIN'"&gt;254a09e3-59e0-4e2c-90ed-954b4a57b69f&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.MAIN4'"&gt;dabc04a9-9ec9-4768-95b0-3fab46f6df19&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.MICRO'"&gt;e8870965-e0aa-4700-95ae-7a8e96d0be19&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.MICRB'"&gt;fce822c9-1241-4bd0-9d13-c5dffa3f2913&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.MICR4'"&gt;83642d47-9c82-43bd-a960-2597392700c6&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.MINI'"&gt;f54ca2a4-14f7-4a77-b205-d70fb7e7edb7&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.OVERZ'"&gt;bcacb3f7-6ede-400d-8a76-44c3046853c9&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.OVER4'"&gt;f9d68cc8-db4a-4d21-84cf-9b9f8f39dea9&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.OVERM'"&gt;dfffd3f8-71d0-4fc1-bd42-f83f52b5ef77&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.PERI1'"&gt;1c172fb2-66f4-4ab5-b9f9-9ccce914aa42&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.PERIO'"&gt;17e5c6ab-f795-4dad-aa8d-383a765611fc&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.REF'"&gt;fae6abd1-3014-4777-b7c8-d61b6cf78dac&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.SCORE'"&gt;a5eefcc9-bc44-44f6-bbbe-dc8ed1788080&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.SCOR4'"&gt;bd49bf53-38d1-460c-85eb-e7fb150d9ef8&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.TECH'"&gt;eddd2e23-2df6-4b91-8322-022ae906a748&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.THES'"&gt;d34d0845-d582-46ae-a8bd-a83ab1809b81&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.THES5'"&gt;c4ec2343-1fbe-401a-8210-6788300f0688&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.VIDEO'"&gt;875e9e71-7839-47f1-863e-7d8fc4c7002f&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSOS.VID03'"&gt;9120995e-fdde-4934-b7f3-7f0a65675540&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.ANNEX'"&gt;467c2035-e15b-4a46-ada6-1821db2438fb&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.ARCH'"&gt;eaadea2c-94c2-43b8-be8c-5e0580a9604a&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.AV'"&gt;506efbb0-306d-4910-ae27-2630f8327a08&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.CIRC'"&gt;4ac9df86-29d3-42f3-ae63-3f7d6d7d9cf2&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.MAIN'"&gt;32086ab3-e9df-402a-b58a-dd591b3a76fe&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.MINI'"&gt;507eaf07-4274-408e-bb01-18b12afed5b2&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.MUREF'"&gt;6d7c09e8-088d-4bab-ad09-e304f74d2b49&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.MUSIC'"&gt;f5cb9636-387c-4a0a-b727-1f671ec6f8e0&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.NCIP'"&gt;d513c4b7-f8da-4fad-bb34-17dc666483cd&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.NRES'"&gt;3f7240d2-6cc1-4bc6-a6dc-146c888e61a9&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.OFFIC'"&gt;d5a243e4-5d57-4678-a7bc-c0d97eae02e7&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.OVERZ'"&gt;201ff153-e0be-4d93-8e3a-cb4d53f51084&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.OVERM'"&gt;57428a39-b46b-4df6-b0e5-8fe527fa84f3&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.PERIO'"&gt;5c9f8734-e520-4f2a-a9fb-9c2787a6fabc&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.REF'"&gt;6afdacaa-937e-40ad-82af-f57718b9dc35&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.SCORE'"&gt;7a7b307a-0e9c-4eeb-8536-6ecb253c0933&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.SCORE'"&gt;0c175409-9d52-4d27-b646-d71cf3337f29&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.SPCL'"&gt;3d4ae129-7e35-47cd-9dfd-08c442b0bf9d&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.SPCLP'"&gt;fac240f7-1e84-46c5-b126-94fc5aa4ddb4&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TNSSC.TECH'"&gt;9b3430a6-af1d-477e-9a82-b8ad6c198614&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:when test=".='TWEB.TNSI'"&gt;40c4e931-2fec-487c-8cfc-3d09a1983e9e&lt;/xsl:when&gt;&#xD;
+  &lt;xsl:otherwise&gt;a2be9b49-a393-4b15-a236-47bdf97928c3&lt;/xsl:otherwise&gt;&#xD;
+  &lt;/xsl:choose&gt;&#xD;
+  &lt;/permanentLocationId&gt;&#xD;  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for institution New School --&gt;&#xD;
+  &lt;xsl:template match="//institutionIdHere"&gt;&#xD;
+     &lt;institutionId&gt;c646eeb1-b4dc-4458-a4e0-a39c2a7d36cd&lt;/institutionId&gt;&#xD;
+     
+  &lt;/xsl:template&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+        <testData></testData>
+        <testOutput></testOutput>
+    </XmlTransformStep>
+</transformationStep>

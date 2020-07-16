@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<harvestable uri="http://localhost:8080/harvester/records/harvestables/10001">
+    <id>305502</id>
+    <xmlBulk>
+        <id>305502</id>
+        <name>PALCI SI: New School to PALCI SI</name>
+        <splitAt>1</splitAt>
+        <splitSize>1000</splitSize>
+        <url>http://localhost:8080/test/reshare/new-school-sample.xml</url>
+        <storeOriginal>true</storeOriginal>
+        <enabled>false</enabled>
+        <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
+            <id>301104</id>  <!-- Storage PALCI SI via local okapi -->        </storage>
+        <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
+            <id>305201</id>
+        </transformation>
+        <harvestImmediately>false</harvestImmediately>
+        <logLevel>INFO</logLevel>
+        <mailLevel>WARN</mailLevel>
+        <overwrite>false</overwrite>
+        <scheduleString>10 10 10 6 *</scheduleString>
+        <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
+        <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
+    </xmlBulk>
+</harvestable>

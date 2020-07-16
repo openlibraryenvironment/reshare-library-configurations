@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<storage>
+    <inventoryStorage>
+        <id>301105</id>
+        <name>palci_si remote</name>
+        <url>https://palci-si-okapi.folio-dev.indexdata.com/</url>
+        <description>Inventory storage - Remote PALCI SI server</description>
+        <enabled>true</enabled>
+        <json>
+{&#xD;
+    "folioAuthPath": "bl-users/login",&#xD;
+    "folioTenant": "palci_si",&#xD;
+    "folioUsername": "palci_admin",&#xD;
+    "folioPassword": "PW-HERE",&#xD;
+    "instanceStoragePath": "instance-storage-match/instances",&#xD;
+    "holdingsStoragePath": "holdings-storage/holdings",&#xD;
+    "itemStoragePath": "item-storage/items",&#xD;
+    "marcStoragePath": "marc-records"&#xD;
+}
+        </json>
+    </inventoryStorage>
+</storage>

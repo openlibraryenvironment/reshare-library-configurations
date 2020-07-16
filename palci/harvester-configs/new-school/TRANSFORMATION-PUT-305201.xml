@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation uri="http://localhost:8080/harvester/records/transformations/305201">
+    <id>305201</id>
+    <basicTransformation>
+        <id>305201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>New School - MARC21 to FOLIO Inventory</name>
+        <parallel>false</parallel>
+        <stepAssociations>
+            <id>305401</id>
+            <position>1</position>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>301303</id>
+            </step>
+            <transformation>305201</transformation>
+        </stepAssociations>
+        <stepAssociations>
+            <id>305402</id>
+            <position>2</position>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>305301</id>
+            </step>
+            <transformation>305201</transformation>
+        </stepAssociations>
+        <stepAssociations>
+            <id>305403</id>
+            <position>3</position>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>305302</id>
+            </step>
+            <transformation>305201</transformation>
+        </stepAssociations>
+        <stepAssociations>
+            <id>305404</id>
+            <position>4</position>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>301302</id>
+            </step>
+            <transformation>305201</transformation>
+        </stepAssociations>
+    </basicTransformation>
+</transformation>

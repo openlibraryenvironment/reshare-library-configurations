@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tsa>
+    <transformationStepAssociation>
+        <id>305403</id>
+        <position>3</position>
+        <transformation>305201</transformation>
+        <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+            <id>305302</id> <!-- granular location codes -->
+        </step>
+    </transformationStepAssociation>
+</tsa>
