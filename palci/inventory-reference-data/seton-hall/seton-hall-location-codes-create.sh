@@ -8,7 +8,7 @@ curl -w '\n' -X POST -D - \
   -H "X-Okapi-Token: $token" \
   -d '{
         "id": "b4d96d6d-92f4-414a-a058-e91ef8e8ea07",
-        "name": "ReShare_STH",
+        "name": "ReShare_US-NJSOOS",
         "source": "RESHARE"
     }' \
     $protocol://$host/identifier-types
@@ -20,7 +20,7 @@ curl -w '\n' -X POST -D - \
   -d '{
         "id": "1369a65f-ac15-4e20-b241-4af827732552",
         "name": "Seton Hall",
-        "code": "STH",
+        "code": "US-NJSOOS",
         "discoveryDisplayName": "Seton Hall",
         "pickupLocation": true,
         "holdShelfExpiryPeriod": {
@@ -37,7 +37,7 @@ curl -w '\n' -X POST -D - \
   -d '{
         "id": "01355129-8c25-4f81-aa72-d424e00cbe67",
         "name": "Seton Hall",
-        "code": "STH"
+        "code": "US-NJSOOS"
      }' \
   $protocol://$host/location-units/institutions
 
@@ -48,7 +48,7 @@ curl -w '\n' -X POST -D - \
   -d '{
         "id": "b1b284b5-9e3e-4cdf-a83e-478271f404ee",
         "name": "Seton Hall",
-        "code": "STH",
+        "code": "US-NJSOOS",
         "institutionId": "01355129-8c25-4f81-aa72-d424e00cbe67"
      }' \
   $protocol://$host/location-units/campuses
@@ -74,7 +74,7 @@ curl -w '\n' -X POST -D - \
   -d '{
         "id": "f29e2419-2373-48de-85a8-78b87ba865bc",
         "name": "Seton Hall - Walsh Library",
-        "code": "STH/STH/STHM/STHM",
+        "code": "US-NJSOOS/US-NJSOOS/STHM/STHM",
         "isActive": true,
         "institutionId": "01355129-8c25-4f81-aa72-d424e00cbe67",
         "campusId": "b1b284b5-9e3e-4cdf-a83e-478271f404ee",
