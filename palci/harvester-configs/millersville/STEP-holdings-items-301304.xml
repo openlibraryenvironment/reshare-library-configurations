@@ -2,6 +2,7 @@
 <transformationStep>
     <id>301304</id>
     <XmlTransformStep>
+        <id>301304</id>
         <description>Holdings and Items, Millersville</description>
         <enabled>true</enabled>
         <inputFormat>XML</inputFormat>
@@ -268,7 +269,6 @@
   &lt;xsl:template match="text()"/&gt;&#xD;
 &lt;/xsl:stylesheet&gt;&#xD;
 </script>
-        <id>301304</id>
         <testData></testData>
         <testOutput></testOutput>
     </XmlTransformStep>

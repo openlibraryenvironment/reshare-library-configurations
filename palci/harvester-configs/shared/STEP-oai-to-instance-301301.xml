@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transformationStep>
+    <id>301301</id>
     <XmlTransformStep>
+        <id>301301</id>
         <description>PALCI: OAI20-MARC21 XML to FOLIO Instance XML</description>
         <inputFormat>XML</inputFormat>
         <name>PALCI: OAI20-MARC21 to Instance XML</name>
@@ -409,7 +411,5 @@
     &lt;/xsl:template&gt;&#xD;
 &#xD;
 &lt;/xsl:stylesheet&gt;</script>
-        <id>301301</id>
     </XmlTransformStep>
-    <id>301301</id>
 </transformationStep>
