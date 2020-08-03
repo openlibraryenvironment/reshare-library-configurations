@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep uri="http://localhost:8080/harvester/records/steps/304301">
+  <id>304301</id>
+  <XmlTransformStep>
+        <id>304301</id>
+        <description>Holdings and Items, placeholder, WiP</description>
+        <inputFormat>XML</inputFormat>
+        <name>Holdings and Items, placeholder, WiP</name>
+        <outputFormat>XML</outputFormat>
+        <script>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet&#xD;
+  version="1.0"&#xD;
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&#xD;
+  &gt;&#xD;
+&#xD;
+  &lt;xsl:strip-space elements="*"/&gt;&#xD;
+  &lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
+  &lt;xsl:template match="/"&gt;&#xD;
+  &lt;collection&gt;&#xD;
+      &lt;xsl:apply-templates /&gt;&#xD;
+  &lt;/collection&gt;&#xD;
+&lt;/xsl:template&gt;&#xD;
+&#xD;
+&#xD;
+  &lt;xsl:template match="record"&gt;&#xD;
+    &lt;record&gt;&#xD;
+        &lt;xsl:for-each select="@* | node()"&gt;&#xD;
+            &lt;xsl:copy-of select="."/&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+        &lt;xsl:apply-templates/&gt;&#xD;
+    &lt;/record&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;xsl:variable name="WILL_LEND"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:variable&gt; &lt;!-- FOLIO Inventory ILL Policy value 'Will lend' --&gt;&#xD;
+  &lt;xsl:variable name="WILL_NOT_LEND"&gt;b0f97013-87f5-4bab-87f2-ac4a5191b489&lt;/xsl:variable&gt; &lt;!-- FOLIO Inventory ILL Policy value 'Will not lend' --&gt;&#xD;
+&#xD;
+  &lt;xsl:template match="original/record"&gt;&#xD;
+    &lt;xsl:choose&gt;&#xD;
+      &lt;xsl:when test="datafield[@tag='work-in-progress']"&gt;&#xD;
+        &lt;holdingsRecords&gt;&#xD;
+           &lt;arr&gt;&#xD;
+           &lt;/arr&gt;&#xD;
+         &lt;/holdingsRecords&gt;&#xD;
+       &lt;/xsl:when&gt;&#xD;
+      &lt;xsl:otherwise&gt;&#xD;
+        &lt;holdingsRecords&gt;&#xD;
+          &lt;arr&gt;&#xD;
+            &lt;i&gt;&#xD;
+              &lt;permanentLocationIdHere /&gt;&#xD;
+            &lt;/i&gt;&#xD;
+          &lt;/arr&gt;&#xD;
+        &lt;/holdingsRecords&gt;&#xD;
+      &lt;/xsl:otherwise&gt;&#xD;
+    &lt;/xsl:choose&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template match="text()"/&gt;&#xD;
+&lt;/xsl:stylesheet&gt;</script>
+        
+        <testData></testData>
+        <testOutput></testOutput>
+    </XmlTransformStep>
+</transformationStep>

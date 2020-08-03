@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<harvestable uri="http://localhost:8080/harvester/records/harvestables/304501">
+    <id>304501</id>
+    <xmlBulk>
+        <id>304501</id>
+        <name>PALCI SI: Seton Hall to localhost</name>
+        <splitAt>0</splitAt>
+        <splitSize>1000</splitSize>
+        <url>http://localhost:8080/test/reshare/seton_hall_xml/ocm00000058.xml</url>
+        <storeOriginal>true</storeOriginal>
+        <enabled>false</enabled>
+        <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
+            <id>301101</id>
+        </storage>
+        <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
+            <id>304201</id>
+        </transformation>
+        <harvestImmediately>false</harvestImmediately>
+        <logLevel>INFO</logLevel>
+        <mailLevel>WARN</mailLevel>
+        <overwrite>false</overwrite>
+        <scheduleString>10 10 10 6 *</scheduleString>
+        <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
+        <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
+    </xmlBulk>
+</harvestable>
