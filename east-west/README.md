@@ -47,13 +47,12 @@ If the harvester access config script contains a username, a password prompt wil
 
 `./harvesting/push-shared-east-west.sh harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com.sh`
 
-The Harvester configurations are in XML file,s following a naming convention that lets the script know what Harvester end points to POST or PUT the different configuration files to:
+The Harvester configurations are in XML files following a naming convention that lets the script know what Harvester end points to POST or PUT the different configuration files to:
 
 - HARVESTABLE*.xml  - contains the definition of a harvest job
 - STORAGE*.xml - contains the Inventory storage URL, end points and credentials
 - TRANSFORMATION*.xml - contains the transformation pipeline that a harvest job attaches to
 - STEP*.xml - contains the individual transformation steps that make up a pipeline
-- TSAS*.xml - (transformation step associations) defines what STEPs are included in what pipelines
 
 Thus in order to ommit some configs (for example the SI cardinal storage and the East and West jobs referencing that storage) the relevant XML files can be prefixed (say, with "skipSTORAGE.xml") so that the curl script will not find them. 
 
