@@ -14,11 +14,6 @@ if [[ $file = *TRANSFORMATION*POST ]]; then
 	echo "POSTing $file to $2/harvester/records/transformations"
 fi
 
-if [[ $file = *TSAS* ]]; then
-    echo "Loading steps to memory"
-	echo "PUTing $file to $2/harvester/records/tsas"
-fi
-
 if [[ $file = *TRANSFORMATION*PUT* ]]; then
 	echo "PUTing $file to $2/harvester/records/transformations/$id"
 fi

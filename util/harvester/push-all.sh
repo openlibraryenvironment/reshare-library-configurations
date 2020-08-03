@@ -47,15 +47,6 @@ fi
 
 curl -s -H "Content-Type: application/xml" $stepUrl -u $creds 1>/dev/null
 
-if ls TSAS*.xml 1>/dev/null 2>&1; then
-for file in `ls TSAS*.xml`
-do
-    $SCRIPTDIR/push-config-if-not-exists.sh $file $tsasUrl $creds TSAS
-done
-else
-    echo "No step associations (TSAS* configs) to POST in '`pwd`'"
-fi
-
 if ls TRANSFORMATION*PUT*.xml 1>/dev/null 2>&1; then
 for file in `ls TRANSFORMATION*PUT*.xml`
 do
