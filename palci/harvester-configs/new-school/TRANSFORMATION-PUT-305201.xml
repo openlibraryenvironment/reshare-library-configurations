@@ -11,7 +11,7 @@
             <id>305401</id>
             <position>1</position>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>301303</id>
+                <id>301303</id>  <!-- MARC21 to Instance -->
             </step>
             <transformation>305201</transformation>
         </stepAssociations>
