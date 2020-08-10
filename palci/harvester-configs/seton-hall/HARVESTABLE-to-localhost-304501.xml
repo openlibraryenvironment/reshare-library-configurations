@@ -6,7 +6,7 @@
         <name>PALCI SI: Seton Hall to localhost</name>
         <splitAt>0</splitAt>
         <splitSize>1000</splitSize>
-        <url>http://localhost:8080/test/reshare/seton_hall_xml.tar.gz</url>
+        <url>http://localhost:8080/test/reshare/temp/ocm00001752.xml</url>
         <storeOriginal>true</storeOriginal>
         <enabled>false</enabled>
         <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
