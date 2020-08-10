@@ -48,7 +48,7 @@ curl -w '\n' -X POST -D - \
   -H "X-Okapi-Token: $token" \
   -d '{
         "id": "461dd110-282f-4bbf-9979-738024056abb",
-        "name": "Seton Hall",
+        "name": "New School",
         "code": "US-NNNS",
         "institutionId": "c646eeb1-b4dc-4458-a4e0-a39c2a7d36cd"
      }' \
