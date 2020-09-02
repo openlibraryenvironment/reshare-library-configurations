@@ -91,7 +91,7 @@
                         &lt;!-- Mappings to ReShare specific material types, taken from OCLC table "Type of Record" --&gt;&#xD;
                         &lt;xsl:choose&gt;&#xD;
                         &lt;xsl:when test="marc:subfield[@code='m']='BOOK'"&gt;e65ed344-a691-4f8f-8446-3c0a346c6882&lt;/xsl:when&gt; &lt;!-- BKS --&gt;&#xD;
-                        <!-- These options based on values found in Millersville feed, only BOOK seen in New School files so far -->
+                        <!-- These options based on values found in Millersville feed + DVD found in Temple's, only BOOK seen in New School files so far -->
                         &lt;xsl:when test="marc:subfield[@code='m']='ELEC'"      &gt;22cb5b81-2056-46ed-8050-c5d8f01caf90&lt;/xsl:when&gt; &lt;!-- COM --&gt;&#xD;
                         &lt;xsl:when test="marc:subfield[@code='m']='ISSUE'"     &gt;191da404-dec2-4977-9770-1443d9d6c238&lt;/xsl:when&gt; &lt;!-- CNR --&gt;&#xD;
                         &lt;xsl:when test="marc:subfield[@code='m']='MANUSCRIPT'"&gt;e65ed344-a691-4f8f-8446-3c0a346c6882&lt;/xsl:when&gt; &lt;!-- BKS --&gt;&#xD;
@@ -99,6 +99,7 @@
                         &lt;xsl:when test="marc:subfield[@code='m']='OTHER'"     &gt;04858422-c46f-4041-94fc-f5c5a6b98319&lt;/xsl:when&gt; &lt;!-- Other --&gt;&#xD;
                         &lt;xsl:when test="marc:subfield[@code='m']='SCORE'"     &gt;e5578a7e-49b9-4859-a86a-21b812215b4f&lt;/xsl:when&gt; &lt;!-- SCO --&gt;&#xD;
                         &lt;xsl:when test="marc:subfield[@code='m']='RECORD'"    &gt;d8dc9046-a9f4-4789-adf5-678fd855b016&lt;/xsl:when&gt; &lt;!-- REC --&gt;&#xD;
+                        &lt;xsl:when test="marc:subfield[@code='m']='DVD'"       &gt;14f1845d-2fad-4091-80c8-48614eaea40b&lt;/xsl:when&gt; &lt;!-- VIS --&gt;&#xD;
                         <!-- End of tentative options -->
                         &lt;xsl:otherwise&gt;f6dd0721-5d4a-439e-9205-c71aef39d15b&lt;/xsl:otherwise&gt;                              &lt;!-- Unmapped --&gt;&#xD;
                         &lt;/xsl:choose&gt;&#xD;

@@ -193,6 +193,7 @@
                                 &lt;xsl:when test="marc:subfield[@code='c']='OTHER'"     &gt;04858422-c46f-4041-94fc-f5c5a6b98319&lt;/xsl:when&gt; &lt;!-- Other --&gt;&#xD;
                                 &lt;xsl:when test="marc:subfield[@code='c']='SCORE'"     &gt;e5578a7e-49b9-4859-a86a-21b812215b4f&lt;/xsl:when&gt; &lt;!-- SCO --&gt;&#xD;
                                 &lt;xsl:when test="marc:subfield[@code='c']='RECORD'"    &gt;d8dc9046-a9f4-4789-adf5-678fd855b016&lt;/xsl:when&gt; &lt;!-- REC --&gt;&#xD;
+                                &lt;xsl:when test="marc:subfield[@code='c']='DVD'"       &gt;14f1845d-2fad-4091-80c8-48614eaea40b&lt;/xsl:when&gt; &lt;!-- VIS --&gt;&#xD;
                                 &lt;xsl:otherwise&gt;f6dd0721-5d4a-439e-9205-c71aef39d15b&lt;/xsl:otherwise&gt;                              &lt;!-- Unmapped --&gt;&#xD;
                                 &lt;/xsl:choose&gt;&#xD;
                             &lt;/materialTypeId&gt;&#xD;
