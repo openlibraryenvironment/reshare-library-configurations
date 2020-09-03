@@ -69,6 +69,7 @@
                     &lt;/xsl:choose&gt;&#xD;
                 &lt;/illPolicyId&gt;&#xD;
                  &lt;permanentLocationIdHere&gt;&lt;xsl:value-of select="marc:subfield[@code='1']"/&gt;.&lt;xsl:value-of select="marc:subfield[@code='2']"/&gt;&lt;/permanentLocationIdHere&gt;&#xD;
+                 &lt;callNumberTypeIdHere&gt;&lt;xsl:value-of select="marc:subfield[@code='1']"/&gt;.&lt;xsl:value-of select="marc:subfield[@code='2']"/&gt;&lt;/callNumberTypeIdHere&gt;&#xD;
                  &lt;callNumber&gt;&#xD;
                    &lt;xsl:for-each select="marc:subfield[@code='h' or @code='i']"&gt;&#xD;
                      &lt;xsl:if test="position() &gt; 1"&gt;&#xD;

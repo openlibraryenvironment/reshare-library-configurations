@@ -14,6 +14,16 @@ curl -w '\n' -X POST -D - \
     }' \
     $protocol://$host/identifier-types
 
+curl -w '\n' -X POST -D - -H "Content-type: application/json" -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" \
+-d '{
+  "id": "e7a29f28-24bb-4fab-9c10-0193f94669fd",
+  "name": "New School Local",
+  "source": "RESHARE"
+}' \
+$protocol://$host/call-number-types
+
+
+
 curl -w '\n' -X POST -D - \
   -H "Content-type: application/json" \
   -H "X-Okapi-Tenant: $tenant" \
@@ -1268,7 +1278,7 @@ curl -w '\n' -X POST -D - -H "Content-type: application/json" -H "X-Okapi-Tenant
 -d '{
  "id": "7a7b307a-0e9c-4eeb-8536-6ecb253c0933",
  "name" : "New School - Performing Arts Library - Score Collection (SCORE)",
- "code" : "US-NNNS/US-NNNS/TNSSC/SCORE",
+ "code" : "US-NNNS/US-NNNS/TNSFO/SCORE",
  "isActive": true,
  "institutionId" : "c646eeb1-b4dc-4458-a4e0-a39c2a7d36cd",
  "campusId" : "461dd110-282f-4bbf-9979-738024056abb",
@@ -1356,3 +1366,4 @@ curl -w '\n' -X POST -D - -H "Content-type: application/json" -H "X-Okapi-Tenant
  "servicePointIds": [ "2d4fcfa4-e820-4cf5-8e75-1e0701cafff1" ]
 }' \
 $protocol://$host/locations
+
