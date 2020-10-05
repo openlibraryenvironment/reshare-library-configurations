@@ -9,7 +9,7 @@
         <enabled>false</enabled>
         <metadataPrefix>marc21</metadataPrefix>
         <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
-            <id>301101</id>
+            <id>301101</id> <!-- localhost from vagrant box -->
         </storage>
         <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
             <id>302201</id>
