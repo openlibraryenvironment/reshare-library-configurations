@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>306302</id>
+  <XmlTransformStep>
+    <id>306302</id>
+    <description>Maps locations, record identifier type for Rowan</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Rowan</name>
+    <outputFormat>XML</outputFormat>
+    <script></script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
