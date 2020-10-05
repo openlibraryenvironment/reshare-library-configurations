@@ -6,7 +6,9 @@
         <name>PALCI SI: New School to localhost</name>
         <splitAt>1</splitAt>
         <splitSize>1000</splitSize>
-        <url>http://localhost:8080/test/reshare/new-school-sample-82000-lines.xml</url>
+        <url>ftp://un:pw@ftp.library.newschool.edu/bibs</url>
+        <includeFilePattern>reshare.*bibs.xml.gz</includeFilePattern>
+        <passiveMode>true</passiveMode>
         <storeOriginal>true</storeOriginal>
         <enabled>false</enabled>
         <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">

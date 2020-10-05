@@ -6,11 +6,14 @@
         <name>PALCI SI: New School to PALCI SI</name>
         <splitAt>1</splitAt>
         <splitSize>1000</splitSize>
-        <url>http://localhost:8080/test/reshare/new-school-sample.xml</url>
+        <url>ftp://un:pw@ftp.library.newschool.edu/bibs</url>
+        <includeFilePattern>reshare.*bibs.xml.gz</includeFilePattern>
+        <passiveMode>true</passiveMode>
         <storeOriginal>true</storeOriginal>
         <enabled>false</enabled>
         <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
-            <id>301104</id>  <!-- Storage PALCI SI via local okapi -->        </storage>
+            <id>301104</id>  <!-- Storage PALCI SI via local okapi -->
+        </storage>
         <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
             <id>305201</id>
         </transformation>
