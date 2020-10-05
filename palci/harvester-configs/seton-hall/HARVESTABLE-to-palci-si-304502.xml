@@ -4,9 +4,11 @@
     <xmlBulk>
         <id>304502</id>
         <name>PALCI SI: Seton Hall to PALCI SI</name>
-        <splitAt>0</splitAt>
-        <splitSize>1000</splitSize>
-        <url>http://localhost:8080/test/reshare/setonhall.tar.gz</url>
+        <splitAt>4</splitAt>
+        <splitSize>200</splitSize>
+        <allowErrors>true</allowErrors>
+        <passiveMode>true</passiveMode>
+        <url>ftp://un:pw@ftp.folio.indexdata.com/outgoing/test/</url>
         <storeOriginal>true</storeOriginal>
         <enabled>false</enabled>
         <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
