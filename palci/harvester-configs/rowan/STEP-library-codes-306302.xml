@@ -7,7 +7,42 @@
     <inputFormat>XML</inputFormat>
     <name>Library codes, Rowan</name>
     <outputFormat>XML</outputFormat>
-    <script></script>
+    <script>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;&#xD;
+      &lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;&#xD;
+      &#xD;
+        &lt;xsl:template match="@* | node()"&gt;&#xD;
+          &lt;xsl:copy&gt;&#xD;
+            &lt;xsl:apply-templates select="@* | node()"/&gt;&#xD;
+          &lt;/xsl:copy&gt;&#xD;
+        &lt;/xsl:template&gt;&#xD;
+      &#xD;
+        &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+             type UUID. Used for qualifying a local record identifier with the library&#xD;
+             it originated from in context of a shared index setup where the Instance&#xD;
+             represents bib records from multiple libraries.&#xD;
+        --&gt;&#xD;
+        &lt;xsl:template match="//identifierTypeIdHere"&gt;&#xD;
+          &lt;identifierTypeId&gt;8a29cc20-171b-4f6a-a68f-8bc87842c1cb&lt;/identifierTypeId&gt;&#xD;
+        &lt;/xsl:template&gt;&#xD;
+      &#xD;
+        &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+        &lt;xsl:template match="//permanentLocationIdHere"&gt;&#xD;
+          &lt;permanentLocationId&gt;&#xD;
+            &lt;xsl:choose&gt;&#xD;
+              &lt;xsl:when test=".='Main'"&gt;161ac163-7ccd-4b56-a9e0-7eec3c30c77f&lt;/xsl:when&gt;&#xD;
+              &lt;xsl:when test=".='Child3rdFl'"&gt;02f826fd-15dc-4e8c-8605-1735814c5fa8&lt;/xsl:when&gt;&#xD;
+              &lt;xsl:when test=".='Wilson'"&gt;9df2f2a1-00cd-4ebd-9ecb-6e4340a58e4a&lt;/xsl:when&gt;&#xD;
+              &lt;xsl:otherwise&gt;ed1f2e45-0acb-4a24-b584-a397fcd3d9b0&lt;/xsl:otherwise&gt;&#xD;
+            &lt;/xsl:choose&gt;&#xD;
+          &lt;/permanentLocationId&gt;&#xD;
+        &lt;/xsl:template&gt;&#xD;
+      &#xD;
+        &lt;!-- Set institutionId for Rowan --&gt;&#xD;
+        &lt;xsl:template match="//institutionIdHere"&gt;&#xD;
+          &lt;institutionId&gt;3f117a23-fa69-43cd-b509-7ec79177e798&lt;/institutionId&gt;&gt; &lt;!-- Rowan --&gt;&#xD;
+        &lt;/xsl:template&gt;&#xD;
+      &lt;/xsl:stylesheet&gt;&#xD;
+    </script>
     <testData></testData>
     <testOutput></testOutput>
   </XmlTransformStep>
