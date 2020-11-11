@@ -52,7 +52,15 @@
                                   &lt;/i&gt;&#xD;
                               &lt;/arr&gt;&#xD;
                               &lt;/formerIds&gt;&#xD;
-                              &lt;illPolicyId&gt;&lt;xsl:value-of select="$WILL_LEND"/&gt;&lt;/illPolicyId&gt;&#xD;
+                              &lt;illPolicyId&gt;&#xD;
+                                &lt;xsl:choose&gt;&#xD;
+                                    &lt;xsl:when test="contains('Main,Child3rdFl,Wilson', marc:subfield[@code='d']) and 
+                                                        contains('BOOK,AUDIO,SCORE', ../marc:datafield[@tag='995' and marc:subfield[@code='ff']=$holdingsId]/marc:subfield[@code='t'])"&gt;&#xD;
+                                      &lt;xsl:value-of select="$WILL_LEND"/&gt;&#xD;
+                                    &lt;/xsl:when&gt;&#xD;
+                                    &lt;xsl:otherwise&gt;&lt;xsl:value-of select="$WILL_NOT_LEND"/&gt;&lt;/xsl:otherwise&gt;&#xD;
+                                &lt;/xsl:choose&gt;&#xD;
+                              &lt;/illPolicyId&gt;&#xD;
                               &lt;permanentLocationIdHere&gt;&lt;xsl:value-of select="marc:subfield[@code='d']"/&gt;&lt;/permanentLocationIdHere&gt;&#xD;
                               &lt;callNumber&gt;&#xD;
                               &lt;xsl:for-each select="marc:subfield[@code='f']"&gt;&#xD;
@@ -65,7 +73,7 @@
                               &lt;items&gt;&#xD;
                               &lt;arr&gt;&#xD;
                                   &lt;xsl:for-each select="../marc:datafield[@tag='995']"&gt;&#xD;
-                                  &lt;!-- xsl:if test="marc:subfield[@code='ff']=$holdingsId" --&gt;&#xD;
+                                  &lt;xsl:if test="marc:subfield[@code='ff']=$holdingsId"&gt;&#xD;
                                       &lt;i&gt;&#xD;
                                       &lt;itemIdentifier&gt;&#xD;
                                           &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;
@@ -98,7 +106,7 @@
                                       &lt;name&gt;Unknown&lt;/name&gt;&#xD;
                                       &lt;/status&gt;&#xD;
                                       &lt;/i&gt;&#xD;
-                                  &lt;!-- /xsl:if --&gt;&#xD;
+                                  &lt;/xsl:if&gt;&#xD;
                                   &lt;/xsl:for-each&gt;&#xD;
                               &lt;/arr&gt;&#xD;
                               &lt;/items&gt;&#xD;
