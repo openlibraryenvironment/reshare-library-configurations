@@ -33,7 +33,7 @@ The templates will contain stub XSLT stylesheets that must be completed as desir
 ## Pushing the XML configuration files to the Harvester
 The written configuration files can be pushed to the Harvester using the script [push-all.sh](push-all.sh). 
 
-Scripts in the directories for [PALCI](/palci/harvester-configs) and [East-West (demo)](/east-west/harvesting) make use of `push-all.sh`.
+Scripts in the directories for [PALCI](/palci/harvester-configs) and [East-West (demo)](/east-west/harvesting) make use of `push-all.sh`. If you're looking for information on how to push PALCI configurations specifically, for example, you can look [here](/palci/README.md). The following paragraphs just describes the behavior of the basic utility script.
 
 The script is run from the directory containing the files and the script will find all XML files in that directory that match the name patterns described above. The script will then push the files to the corresponding Harvester configuration end-points while skipping files with configurations that the script finds already exist in the Harvester. It will at the same time attempt to push required configurations from the `shared/` directory and, again, these files are ignored if they already exist in the Harvester. 
 
@@ -47,5 +47,5 @@ The `TRANSFORMATION` record must be pushed twice for the transformation step ass
 
 The script will search for the record's primary key in each XML file - looking for the value of the field &lt;id&gt;&lt;/id&gt; - and use that to look up the record by ID in the Harvester. If the record already exists with that ID in the Harvester, the file is skipped.
 
-NOTE: It's important, when writing config files, that the configurations primary key element appears as the first ID element in the record -- for example at the top of the XML document -- before any other &lt;id&gt; fields holding foreign keys. The HARVESTABLE record for example has such foreign key &lt;id&gt; elements. The script will use the first ID it finds to determine if the record already exists.
+NOTE: It's important when writing config files, that the configurations primary key element appears as the first ID element in the record -- for example at the top of the XML document -- before any other &lt;id&gt; fields holding foreign keys. The HARVESTABLE record for example has such foreign key &lt;id&gt; elements. The script will use the first ID it finds to determine if the record already exists. If the config files are generated with [the script creating config template for PALCI](palci/harvester-configs/generate-templates/generateHarvesterConfig.py) then the required ordering of elements is taken care of by the script of course. 
 
