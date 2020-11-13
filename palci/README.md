@@ -34,8 +34,6 @@ This is a description of the steps involved in pushing existing data and configu
 
     `./villanova/villanova-location-codes-create.sh diku@localhost:9130.sh`
     
-    This is done for each library to add. 
-
 4) To push configurations for the Harvest jobs that will populate Inventory with instances, holdings and item for Millersville, Temple and Villanova,
 
     go to folder `/palci/harvester-config`
@@ -48,8 +46,6 @@ This is a description of the steps involved in pushing existing data and configu
 
     `./push-configs.sh villanova localhost8080.sh`
     
-    This is done for each library to add. 
-
     For a remote harvester protected by basic authentication - and maybe SSL - the BASIC AUTH username should be provided in the host config scripts, which will bring up a password prompt. For example, the script providing access information for the Harvester at folio-dev-us-east-1-1 contains the BASIC user name for that Harvester:
 
     `./push-configs.sh temple harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com.sh`
