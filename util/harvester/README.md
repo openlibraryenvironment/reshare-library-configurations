@@ -31,7 +31,9 @@ or an XML/bulk job
 The templates will contain stub XSLT stylesheets that must be completed as desired for the library in question in order for the jobs to do anything useful with the incoming data.
 
 ## Pushing the XML configuration files to the Harvester
-The written configuration files can be pushed to the Harvester using the script [push-all.sh](push-all.sh). You run it from the directory containing the files and the script will find all XML files in that directory that match certain name patterns. The script will then push the files to the corresponding Harvester configuration end-points while skipping files with configurations that the script finds already exist in the Harvester.
+The written configuration files can be pushed to the Harvester using the script [push-all.sh](push-all.sh). You run it from the directory containing the files and the script will find all XML files in that directory that match the name patterns described above. The script will then push the files to the corresponding Harvester configuration end-points while skipping files with configurations that the script finds already exist in the Harvester. It will at the same time attempt to push required configurations from the `shared/` directory and, again, these files are ignored if they already exist in the Harvester. 
+
+Please note that the script has no means for updating existing configurations. In order to update a configuration using the script, you would currently have to go to the Harvester admin and manually delete it, then run the script to push it again. 
 
 The script takes two arguments, the base URL of the Harvester and optional basic authentication username:password.
 
