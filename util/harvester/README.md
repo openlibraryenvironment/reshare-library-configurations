@@ -20,7 +20,7 @@ This is how you can use the script:
 
 1) Create a directory under harvester-configs/ to contain the harvester configuration files for the new library
 
-2) Go into that directory and run the script. For example for an OAI-PMH job:
+2) Go into that directory and run the script. For example for an OAI-PMH job using `310` as the base ID for records:
 
   `python ../generate-templates/generateHarvesterConfig.py -l "My New Library" -i 310 -t oaiPmh -u http://new-librarys-oai-server/ -s an-oai-set-name`
 
