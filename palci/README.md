@@ -5,6 +5,7 @@ a different set of item material types than the ones that come with FOLIO Invent
 
 This is a description of the steps involved in pushing existing data and configurations to set up the library. For information on how to create configuration files for a new library [look here](/util/harvester/README.md). The examples below assume both the Harvester and FOLIO Inventory are running on localhost.
 
+### Once per installation
 1) A new FOLIO install may have some sample locations installed already - to remove them,
 
      go to folder `/delete-folio-sample-locations`
@@ -12,8 +13,6 @@ This is a description of the steps involved in pushing existing data and configu
      and run
      `./delete-folio-sample-locations.sh diku@localhost:9130.sh`
      
-     This is done once for the FOLIO tenant installation.
-
 2) Install ReShare item material types
 
     go to folder `/palci/inventory-reference-data/`
@@ -22,8 +21,7 @@ This is a description of the steps involved in pushing existing data and configu
 
     `./shared-index-material-types/create-si-material-types.sh diku@localhost:9130.sh`
 
-    This is done once for the FOLIO tenant installation.
-    
+### Once per additional library    
 3) To install Millersville locations (granular locations structure in this example), Temple locations (granular too) and Villanova locations,
 
     go to folder `/palci/inventory-reference-data/`
