@@ -3,7 +3,7 @@
 In order to load data to a ReShare Inventory, the participitating libraries must have the locations set up in the Inventory and harvesting jobs must be set up in the Harvester to start loading bibliographic records to FOLIO. Also, ReShare's Inventory uses
 a different set of item material types than the ones that come with FOLIO Inventory Storage, those types must be loaded to Inventory as well.
 
-This is a description of the steps involved in pushing existing data and configurations to set up the library. For information on how to create configuration files for a new library [look here](/palci/harvester-config/README.md). The examples below assume both the Harvester and FOLIO Inventory are running on localhost.
+This is a description of the steps involved in pushing existing data and configurations to set up the library. For information on how to create configuration files for a new library [look here](/util/harvester/README.md). The examples below assume both the Harvester and FOLIO Inventory are running on localhost.
 
 1) A new FOLIO install may have some sample locations installed already - to remove them,
 
