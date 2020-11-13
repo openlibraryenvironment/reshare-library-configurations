@@ -10,7 +10,7 @@ Following conventions must be used when creating config files if they are to be 
 - `TRANSFORMATION*PUT*.xml` - contains the transformation pipeline, including step associations.
 - `STEP*.xml` - contains the individual transformation steps that make up a pipeline
 
-For the PALCI libraries there is a Python script that can write files following this naming convention, thus providing basic scaffolding for Harvester configurations for a new PALCI library [the script is here](../../palci/harvester-configs/generate-templates/generateHarvesterConfig.py)
+For the PALCI libraries there is a Python script that can write files following this naming convention, thus providing basic scaffolding for Harvester configurations for a new PALCI library; [the script is here](../../palci/harvester-configs/generate-templates/generateHarvesterConfig.py)
 
 One thing the script takes care of is creating matching primary keys and foreign keys for the configuration records that are to be pushed to the configuration database. You need to provide it with a "seed" ID that it can create the keys from and you must ensure that you don't choose a number that's already used by another PALCI library (in the same Harvester at least).
 
