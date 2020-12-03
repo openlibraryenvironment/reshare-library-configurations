@@ -2,7 +2,7 @@
 
 if [ -z $host ]; then
   echo
-  echo " Please provide Harvester host to push config to, for example:  ./push-to-harvester.sh http://localhost:8080"
+  echo " Please provide Harvester host script to push config to, for example:  ./push-to-harvester.sh localhost8080.sh"
   echo
   exit 1
 fi

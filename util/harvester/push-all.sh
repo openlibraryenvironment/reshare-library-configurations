@@ -50,7 +50,7 @@ curl -s -H "Content-Type: application/xml" $stepUrl -u $creds 1>/dev/null
 if ls TRANSFORMATION*PUT*.xml 1>/dev/null 2>&1; then
 for file in `ls TRANSFORMATION*PUT*.xml`
 do
-    id=$(grep -oPm1 "(?<=<id>)[^<]+" $file)
+    id=$(grep -oEm 1 '<id>[^<]+' $file | grep -oE '\d+')  # get value of <id></id>
     echo PUTing transformation pipeline $file to $transformationUrl/$id/
     curl -X PUT -H "Content-Type: application/xml" -d @$file $transformationUrl/$id/ -u $creds
 done
