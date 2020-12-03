@@ -13,7 +13,7 @@ fi
 
 cd "$(dirname "$0")"
 
-for dir in shared east west
+for dir in shared east west north south
 do
     echo
     echo "=== Looking for harvester configuration files in '$dir/'"

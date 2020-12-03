@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <storage>
     <inventoryStorage>
-        <id>201101</id>
-        <name>East/West: FOLIO @ localhost from Vagrant box</name>
-        <url>http://10.0.2.2:9130/</url>
+        <id>201102</id>
+        <name>SI Cardinal</name>
+        <url>https://si-cardinal-okapi.folio-dev.indexdata.com/</url>
         <description>Inventory storage at localhost</description>
         <enabled>true</enabled>
         <json>
