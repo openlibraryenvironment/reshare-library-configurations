@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<harvestable>
+  <oaiPmh>
+    <id>202501</id>
+    <name>Demo: North to Cardinal SI</name>
+    <url>https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_MILLRSVL/request</url>
+    <oaiSetName>PALCI_RESHARE</oaiSetName>
+    <metadataPrefix>marc21</metadataPrefix>
+    <storeOriginal>true</storeOriginal>
+    <enabled>false</enabled>
+    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
+      <id>201101</id> <!-- localhost -->
+    </storage>
+    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
+      <id>202201</id>
+    </transformation>
+    <harvestImmediately>false</harvestImmediately>
+    <logLevel>INFO</logLevel>
+    <mailLevel>WARN</mailLevel>
+    <overwrite>false</overwrite>
+    <scheduleString>10 10 10 6 *</scheduleString>
+    <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
+    <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
+  </oaiPmh>
+</harvestable>

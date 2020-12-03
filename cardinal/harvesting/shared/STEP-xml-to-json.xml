@@ -2,7 +2,7 @@
 <transformationStep uri="http://localhost:8080/harvester/records/steps/4003">
     <CustomTransformStep>
         <customClass>com.indexdata.masterkey.localindices.harvest.messaging.InstanceXmlToInstanceJsonTransformerRouter</customClass>
-        <description>East/West: FOLIO Instance XML to JSON</description>
+        <description>Cardinal: FOLIO Instance XML to JSON</description>
         <enabled>true</enabled>
         <inputFormat>XML</inputFormat>
         <name>East/West: Instance XML to JSON</name>

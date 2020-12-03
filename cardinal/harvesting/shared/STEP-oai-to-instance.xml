@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transformationStep uri="http://localhost:8080/harvester/records/steps/4004">
     <XmlTransformStep>
-        <description>East/West: OAI20-MARC21 XML to FOLIO Instance XML</description>
+        <description>Cardinal: OAI20-MARC21 XML to FOLIO Instance XML</description>
         <inputFormat>XML</inputFormat>
-        <name>East/West: OAI20-MARC21 to Instance XML</name>
+        <name>Cardinal: OAI20-MARC21 to Instance XML</name>
         <outputFormat>XML</outputFormat>
         <script>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
 &lt;xsl:stylesheet&#xD;
