@@ -21,11 +21,11 @@ Clear out FOLIO's default sample locations for 'diku' in FOLIO Inventory on loca
 
 `./delete-folio-sample-locations.sh diku@localhost:9130.sh`
 
-Install East's and West's locations and library codes in FOLIO Inventory on localhost:
+Install East's, West's, North's and South's locations and library codes in FOLIO Inventory on localhost:
 
 `./create-sample-library-structure.sh diku@localhost:9130.sh`
 
-Install East's and West's localtions and library codes in SI Cardinal:
+Install East's, West's, North's and South's localtions and library codes in SI Cardinal:
 
 `./create-sample-library-structure.sh si_cardinal@si-cardinal-okapi.folio-dev.indexdata.com.sh`
 
