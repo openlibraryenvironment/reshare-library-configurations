@@ -3,6 +3,11 @@ use UUID::Tiny ':std';
 use JSON;
 
 my $isil = 'US-PBBS';
+my $instid = uuid($isil);
+my $campcode = "$isil/$isil";
+my $campid = uuid($campcode);
+my $libcode = "$isil/$isil/$isil";
+my $libid = uuid("$libcode");
 
 sub uuid {
   my $msg = shift;
@@ -23,10 +28,15 @@ while (<LOC>) {
   next if $c <= 2;
   chomp;
   my @cols = split(/\t/);
+  my $code = "$libcode/$cols[0]"; 
   my $obj = {
-    id=>uuid($cols[0]),
-    code=>$cols[0],
-    name=>$cols[1]
+    id=>uuid($code),
+    code=>$code,
+    name=>$cols[1],
+    isActive=>true,
+    institutionId=>$instid,
+    campusId=>$campid,
+    libraryId=>$libid
   };
   my $json = JSON->new();
   $json->canonical();
