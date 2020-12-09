@@ -24,13 +24,14 @@ my $spcode = $conf->{servicePointCode} || $instcode;
 my $spid = uuid("service-point/$spcode");
 my $spname = $conf->{servicePointName} || $instname;
 
+my $idname = $conf->{identifierName} || "Reshare_$instcode";
+my $idid = uuid("identifier/$idname");
+
+my $file_created = {};
 my $json = JSON->new();
 $json->canonical();
 
 # service point
-my $sppath = "$dir/service-points.jsonl";
-unlink $sppath;
-open SPOUT, ">>$sppath";
 my $sp = {
   id=>$spid,
   name=>$spname,
@@ -42,22 +43,34 @@ my $sp = {
     intervalId=>'Weeks'
   }
 };
-my $spout = $json->encode($sp);
-print SPOUT $spout . "\n";
+write_jsonl('service-points', $sp);
+
+# identifier-type
+my $ident = {
+  id=>$idid,
+  name=>$idname,
+  source=>'RESHARE',
+};
+write_jsonl('identifier-types', $ident);
+
+# institution
+my $inst = {
+  id=>$instid,
+  name=>$instname,
+  code=>$instcode,
+};
+write_jsonl('institutions', $inst);
 
 # locations
 open LOC, $locfile or die "Can't find location file";
 my $c = 0;
-my $locpath = "$dir/locations.jsonl";
-unlink $locpath;
-open LOCOUT, ">>$locpath";
 while (<LOC>) {
   $c++;
   next if $c <= 2;
   chomp;
   my @cols = split(/\t/);
   my $code = "$libcode/$cols[0]"; 
-  my $obj = {
+  my $loc = {
     id=>uuid($code),
     code=>$code,
     name=>$cols[1],
@@ -68,10 +81,21 @@ while (<LOC>) {
     primaryServicePoint=>$spid,
     servicePointIds=>[ $spid ]
   };
-  my $out = $json->encode($obj);
-  print LOCOUT $out . "\n";
+  write_jsonl('locations', $loc);
 }
 print $c - 2 . " locations created...\n";
+
+sub write_jsonl {
+  my $name = shift;
+  my $obj = shift;
+  my $json = $json->encode($obj);
+  my $path = "$dir/$name.jsonl";
+  unlink $path unless $file_created->{$name};
+  $file_created->{$name} = 1;
+  open JOUT, ">>$path";
+  print JOUT $json; 
+  close JOUT;
+}
 
 sub uuid {
   my $msg = shift;
