@@ -61,6 +61,24 @@ my $inst = {
 };
 write_jsonl('institutions', $inst);
 
+# campus
+my $camp = {
+  id=>$campid,
+  name=>$campname,
+  code=>$campcode,
+  institutionId=>$instid
+};
+write_jsonl('campuses', $camp);
+
+# library
+my $lib = {
+  id=>$libid,
+  name=>$libname,
+  code=>$libcode,
+  campusId=>$campid
+};
+write_jsonl('libraries', $lib);
+
 # locations
 open LOC, $locfile or die "Can't find location file";
 my $c = 0;
