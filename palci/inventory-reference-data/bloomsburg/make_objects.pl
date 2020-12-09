@@ -2,24 +2,27 @@
 use UUID::Tiny ':std';
 use JSON;
 use File::Basename;
-
-my $isil = 'US-PBBS';
-my $spid = uuid("service-point/$isil");
-my $instid = uuid($isil);
-my $campcode = "$isil/$isil";
-my $campid = uuid($campcode);
-my $libcode = "$isil/$isil/$isil";
-my $libid = uuid("$libcode");
-
-sub uuid {
-  my $msg = shift;
-  my $uuid_bin = create_uuid(UUID_SHA1, UUID_NS_DNS, $msg);
-  my $uuid = uuid_to_string($uuid_bin);
-  return $uuid;
-}
+use Data::Dumper;
 
 my $locfile = shift || die "Usage: make_objecst.pl <tab separted locations file>";
 my $dir = dirname($locfile);
+my $conf = parse_config($dir);
+
+my $instcode = $conf->{institutionCode} or die "The config property \"institutionCode\" is required!";
+my $instid = uuid($instcode);
+my $instname = $conf->{institutionName} or die "The config property \"institutionName\" is required!";
+
+my $campcode = $conf->{campusCode} ? $instcode . "/" . $conf->{campusCode} : "$instcode/$instcode";
+my $campid = uuid($campcode);
+my $campname = $conf->{campusName} || $instname; 
+
+my $libcode = $conf->{libraryCode} ? $campcode . "/" . $conf->{libraryCode} : "$campcode/$instcode";
+my $libid = uuid("$libcode");
+my $libname = $conf->{libname} || $instname;
+
+my $spcode = $conf->{servicePointCode} || $instcode;
+my $spid = uuid("service-point/$spcode");
+my $spname = $conf->{servicePointName} || $instname;
 
 my $json = JSON->new();
 $json->canonical();
@@ -30,9 +33,9 @@ unlink $sppath;
 open SPOUT, ">>$sppath";
 my $sp = {
   id=>$spid,
-  name=>'Bloomsburg',
-  code=>$isil,
-  discoveryDisplayName=>'Bloomsburg',
+  name=>$spname,
+  code=>$spcode,
+  discoveryDisplayName=>$spname,
   pickupLocation=>true,
   holdShelfExpiryPeriod=>{
     duration=>3,
@@ -68,5 +71,19 @@ while (<LOC>) {
   my $out = $json->encode($obj);
   print LOCOUT $out . "\n";
 }
+print $c - 2 . " locations created...\n";
 
-# identifiers object;
+sub uuid {
+  my $msg = shift;
+  my $uuid_bin = create_uuid(UUID_SHA1, UUID_NS_DNS, $msg);
+  my $uuid = uuid_to_string($uuid_bin);
+  return $uuid;
+}
+
+sub parse_config {
+  my $dir = shift;
+  my $path = "$dir/config.json";
+  local $/ = '';
+  open CONF, $path or die "Can't find config.json file in \"$dir\"!";
+  my $conf = decode_json(<CONF>);
+}
