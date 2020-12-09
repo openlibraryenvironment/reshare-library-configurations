@@ -108,10 +108,13 @@ sub write_jsonl {
   my $obj = shift;
   my $json = $json->encode($obj);
   my $path = "$dir/$name.jsonl";
-  unlink $path unless $file_created->{$name};
-  $file_created->{$name} = 1;
+  if (!$file_created->{$name}) {
+    unlink $path;
+    print "Writing $name to $path\n";
+    $file_created->{$name} = 1;
+  }
   open JOUT, ">>$path";
-  print JOUT $json; 
+  print JOUT $json . "\n"; 
   close JOUT;
 }
 
