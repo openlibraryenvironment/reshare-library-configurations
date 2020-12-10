@@ -3,7 +3,7 @@
 UFILE=$1;
 if [ -z $UFILE ]
   then
-    echo 'Usage: . post_by_endpoint <jsonl_file>'
+    echo 'Usage: . delete_by_endpoint <jsonl_file>'
     exit
 fi
 if [ ! -f $UFILE ]
@@ -21,7 +21,7 @@ done
 LN=1;
 while IFS= read -r line
   do
-    echo "Loading # ${LN}"
-    curl -w '\n' --http1.1 "$protocol://$host/${EP}" -H 'content-type: application/json' -H "x-okapi-tenant: $tenant" -H "x-okapi-token: $token" -d "${line}"
-    LN=$(expr $LN + 1)
+    ID=`echo $line | sed -E 's/.*"id":"([^"]+).*/\1/'`
+    echo "Updating $ID"
+    curl -w '\n' --http1.1 -X PUT "$protocol://$host/${EP}/$ID" -H "content-type: application/json" -H "x-okapi-tenant: $tenant" -H "x-okapi-token: $token" -d "$line"
 done < $UFILE
