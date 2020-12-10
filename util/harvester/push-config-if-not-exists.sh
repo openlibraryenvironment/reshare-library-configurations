@@ -3,7 +3,7 @@ url=$2
 creds=$3
 entitytype=$4
 
-id=$(grep -oEm 1 '<id>[^<]+' $file | grep -oE '\d+')  # get value of <id></id>
+id=$(grep -oEm 1 '<id>[^<]+' $file | grep -oE '[0-9]+')  # get value of <id></id>
 
 if curl --output /dev/null --silent --fail $url/$id -u $creds; then
   echo "$entitytype $id already exists. Skipping"
