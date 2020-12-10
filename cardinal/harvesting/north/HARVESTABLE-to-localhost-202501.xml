@@ -2,7 +2,7 @@
 <harvestable>
   <oaiPmh>
     <id>202501</id>
-    <name>Demo: North to Cardinal SI</name>
+    <name>Demo: North to localhost</name>
     <url>https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_MILLRSVL/request</url>
     <oaiSetName>PALCI_RESHARE</oaiSetName>
     <metadataPrefix>marc21</metadataPrefix>

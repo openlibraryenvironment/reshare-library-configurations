@@ -5,7 +5,7 @@
         <description>Cardinal: FOLIO Instance XML to JSON</description>
         <enabled>true</enabled>
         <inputFormat>XML</inputFormat>
-        <name>East/West: Instance XML to JSON</name>
+        <name>Cardinal: Instance XML to JSON</name>
         <outputFormat>JSON</outputFormat>
         <script></script>
         <id>201303</id>
