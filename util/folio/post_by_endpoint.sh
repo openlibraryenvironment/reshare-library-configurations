@@ -1,10 +1,10 @@
 #!/bin/bash
 
-EP=$2;
-UFILE=$3;
+EP=$1;
+UFILE=$2;
 if [ -z $UFILE ]
   then
-    echo 'Usage: ./post_by_endpoint <login script> <endpoint> <jsonl_file>'
+    echo 'Usage: . post_by_endpoint <endpoint> <jsonl_file>'
     exit
 fi
 if [ ! -f $UFILE ]
@@ -13,10 +13,11 @@ if [ ! -f $UFILE ]
     exit
 fi
 
-if [ $1 != x ]
-then
-  . $1
-fi
+echo "Choose an endpoint..."
+select EP in service-points identifier-types location-units/institutions location-units/campuses location-units/libraries locations
+do
+  break;
+done
 
 LN=1;
 while IFS= read -r line
