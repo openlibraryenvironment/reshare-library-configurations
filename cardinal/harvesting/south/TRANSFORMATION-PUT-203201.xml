@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <id>203201</id>
+    <basicTransformation>
+        <id>203201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>Demo: South - OAI-PMH to FOLIO Inventory</name>
+        <parallel>false</parallel>
+        <stepAssociations>
+            <id>203401</id>
+            <position>1</position>
+            <transformation>203201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>201302</id> <!-- OAI20-MARC21 to Instance XML -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>203402</id>
+            <position>2</position>
+            <transformation>203201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>203301</id>  <!-- Demo: South holdings and items -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>203403</id>
+            <position>3</position>
+            <transformation>203201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>203302</id> <!-- Granular library codes, Demo: South -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>203404</id>
+            <position>4</position>
+            <transformation>203201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>201303</id> <!-- XML to JSON -->
+            </step>
+        </stepAssociations>
+    </basicTransformation>
+</transformation>

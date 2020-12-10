@@ -2,7 +2,7 @@
 <harvestable>
     <oaiPmh>
         <id>201502</id>
-        <name>Demo: East (to si dev)</name>
+        <name>Demo: East to Cardinal SI</name>
         <serviceProvider>Records contributed by Millersville</serviceProvider>
         <url>https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_MILLRSVL/request</url>
         <oaiSetName>PALCI_RESHARE</oaiSetName>

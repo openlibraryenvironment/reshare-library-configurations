@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transformation >
-    <id>201201</id>
+    <id>202201</id>
     <basicTransformation>
-        <id>201201</id>
+        <id>202201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>Demo: East</name>
+        <name>Demo: North - OAI-PMH to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
-            <id>201401</id>
+            <id>202401</id>
             <position>1</position>
-            <transformation>201201</transformation>
+            <transformation>202201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
                 <id>201302</id> <!-- OAI20-MARC21 to Instance XML -->
             </step>
         </stepAssociations>
         <stepAssociations>
-            <id>201402</id>
+            <id>202402</id>
             <position>2</position>
-            <transformation>201201</transformation>
+            <transformation>202201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>201304</id>  <!-- East holdings and items -->
+                <id>202301</id>  <!-- Demo: North holdings and items -->
             </step>
         </stepAssociations>
         <stepAssociations>
-            <id>201403</id>
+            <id>202403</id>
             <position>3</position>
-            <transformation>201201</transformation>
+            <transformation>202201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>201301</id> <!-- Library codes, East -->
+                <id>202302</id> <!-- Granular library codes, Demo: North -->
             </step>
         </stepAssociations>
         <stepAssociations>
-            <id>201404</id>
+            <id>202404</id>
             <position>4</position>
-            <transformation>201201</transformation>
+            <transformation>202201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
                 <id>201303</id> <!-- XML to JSON -->
-            </step>    
+            </step>
         </stepAssociations>
     </basicTransformation>
 </transformation>

@@ -4,7 +4,7 @@
         <id>201201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>Demo: East</name>
+        <name>Demo: East - OAI-PMH to FOLIO Inventory</name>
         <parallel>false</parallel>
     </basicTransformation>
 </transformation>
