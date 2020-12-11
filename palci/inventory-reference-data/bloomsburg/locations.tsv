@@ -1,0 +1,10 @@
+SHELVING LOCATIONS					Patron Locations	
+Location Code (abbreviation for the location if used)	Location Name	Type	Fulfillment Unit		Pickup Location Code (abbreviation for the location if used)	Pickup Location Name
+GENCOLL	Harvey A. Andruss Library General Collection (A-N 3rd flr; P-Z 4th flr)	Open	General		CircDesk	Harvey A. Andruss Library
+GENCOLLOV	Harvey A. Andruss Library General Collection OVERSIZE, 4th Floor		General		CircDesk	Home Delivery for Online Students
+JUVENILE	Harvey A. Andruss Library Juvenile Collection (2nd flr)		General			
+JUVENILEOV	Harvey A. Andruss Library Juvenile Collection OVERSIZE (2nd flr)		General			
+JUVFIC	Harvey A. Andruss Library Juvenile Fiction Collection (2nd flr)		General			
+JUVFICOV	Harvey A. Andruss Library Juvenile Fiction Collection OVERSIZE (2nd flr)		General			
+JUVNONFIC	Harvey A. Andruss Library Juvenile Nonfiction Collection (2nd flr)		General			
+JUVNONFOV	Harvey A. Andruss Library Juvenile Nonfiction Collection OVERSIZE (2nd flr)		General			
