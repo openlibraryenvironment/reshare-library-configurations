@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transformation >
-    <id>307501201</id>
+    <id>307201</id>
     <basicTransformation>
-        <id>307501201</id>
+        <id>307201</id>
         <description></description>
         <enabled>true</enabled>
         <name>Bloomsburg - OAI-PMH to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
-            <id>307501401</id>
+            <id>307401</id>
             <position>1</position>
-            <transformation>307501201</transformation>
+            <transformation>307201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
                 <id>301301</id> <!-- OAI20-MARC21 to Instance XML -->
             </step>
         </stepAssociations>
         <stepAssociations>
-            <id>307501402</id>
+            <id>307402</id>
             <position>2</position>
-            <transformation>307501201</transformation>
+            <transformation>307201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>307501301</id>  <!-- Bloomsburg holdings and items -->
+                <id>307301</id>  <!-- Bloomsburg holdings and items -->
             </step>
         </stepAssociations>
         <stepAssociations>
-            <id>307501403</id>
+            <id>307403</id>
             <position>3</position>
-            <transformation>307501201</transformation>
+            <transformation>307201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>307501302</id> <!-- Granular library codes, Bloomsburg -->
+                <id>307302</id> <!-- Granular library codes, Bloomsburg -->
             </step>
         </stepAssociations>
         <stepAssociations>
-            <id>307501404</id>
+            <id>307404</id>
             <position>4</position>
-            <transformation>307501201</transformation>
+            <transformation>307201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
                 <id>301302</id> <!-- XML to JSON -->
             </step>

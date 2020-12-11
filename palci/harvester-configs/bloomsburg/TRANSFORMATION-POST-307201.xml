@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transformation >
     <basicTransformation>
-        <id>307501201</id>
+        <id>307201</id>
         <description></description>
         <enabled>true</enabled>
         <name>Bloomsburg - OAI-PMH to FOLIO Inventory</name>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transformationStep>
-  <id>307501301</id>
+  <id>307301</id>
   <XmlTransformStep>
-    <id>307501301</id>
+    <id>307301</id>
     <description>Holdings and Items, Bloomsburg</description>
     <enabled>true</enabled>
     <inputFormat>XML</inputFormat>

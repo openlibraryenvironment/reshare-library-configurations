@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transformationStep>
-  <id>307501302</id>
+  <id>307302</id>
   <XmlTransformStep>
-    <id>307501302</id>
+    <id>307302</id>
     <description>Maps locations, record identifier type for Bloomsburg</description>
     <inputFormat>XML</inputFormat>
     <name>Library codes, Bloomsburg</name>
