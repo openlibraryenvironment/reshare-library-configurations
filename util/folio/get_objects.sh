@@ -3,11 +3,12 @@
 if [ -z $token ]
   then
     echo "Can't find okapi token-- Make sure to run a login script."
-    return 
+    return || exit 
 fi
+OPTS=`cat endpoints`;
 
 echo "Choose an endpoint..."
-select EP in identifier-types service-points location-units/institutions location-units/campuses location-units/libraries locations
+select EP in $OPTS
 do
   break
 done

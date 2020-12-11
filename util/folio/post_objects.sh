@@ -3,7 +3,7 @@
 UFILE=$1;
 if [ -z $UFILE ]
   then
-    echo 'Usage: . delete_by_endpoint <jsonl_file>'
+    echo "Usage: . ${BASH_SOURCE[0]} <jsonl_file>"
     return
 fi
 if [ ! -f $UFILE ]
@@ -16,6 +16,7 @@ if [ -z $token ]
     echo "Can't find okapi token-- Make sure to run a login script."
     return 
 fi
+OPTS=`cat endpoints`;
 
 case $UFILE in
   *identifier-types.jsonl) EP=identifier-types;; 
@@ -26,7 +27,7 @@ case $UFILE in
   *locations.jsonl) EP=locations;;
   *)
     echo "Choose an endpoint..."
-    select EP in identifier-types service-points location-units/institutions location-units/campuses location-units/libraries locations
+    select EP in $OPTS 
     do
       break
     done
