@@ -41,9 +41,13 @@ The locations.tsv file should be downloaded from the "Locations" tab in the temp
 There are four bash scripts that will read login information from two environment variables: `tenant` and `token`.  Please use one of various login scripts to create these.  
 
 Usage (notice the dot!):
+
 `. post_objects.sh <*.jsonl file>`
+
 `. put_objects.sh <*.jsonl file>`
+
 `. delete_objects.sh <*.jsonl file>`
+
 `. get_objects.sh`
 
 The first three scripts will determine the OKAPI endpoint by filename.  If the filename doesn't map to an endpoint, then the user is presented with a select list.  The get_objects.sh script will always display an endpoint select list.
