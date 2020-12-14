@@ -3,7 +3,7 @@
   <oaiPmh>
     <id>307502</id>
     <name>PALCI SI: Bloomsburg to localhost</name>
-    <url>http://na01.alma.exlibrisgroup.com:1921/01SSHELCO_BLMSBRG:1921</url>
+    <url>https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_BLMSBRG/request</url>
     <storeOriginal>true</storeOriginal>
     <enabled>false</enabled>
     <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">

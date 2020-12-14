@@ -3,8 +3,8 @@
   <oaiPmh>
     <id>307501</id>
     <name>PALCI SI: Bloomsburg to PALCI SI</name>
-    <url>http://na01.alma.exlibrisgroup.com:1921/01SSHELCO_BLMSBRG:1921</url>
-    <oaiSetName></oaiSetName>
+    <url>https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_BLMSBRG/request</url>
+    <oaiSetName>PALCI_RESHARE</oaiSetName>
     <metadataPrefix>marc21</metadataPrefix>
     <storeOriginal>true</storeOriginal>
     <enabled>false</enabled>
