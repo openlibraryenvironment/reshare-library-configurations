@@ -8,7 +8,9 @@ my $infile = shift or die "Usage: locations2choose.pl <locations jsonl>";
 
 open IN, $infile or die "Can't open input file!";
 
-print "  <xsl:choose>\n";
+my $ind = ' ' x 4;
+
+print "$ind<xsl:choose>\n";
 my $c = 0;
 my $ow;
 while (<IN>) {
@@ -20,8 +22,8 @@ while (<IN>) {
   if ($c == 0) {
     $ow = $id;
   }
-  print "    <xsl:when test=\".='$code'\">$id</xsl:when>\n";
+  print "$ind  <xsl:when test=\".='$code'\">$id</xsl:when>\n";
   $c++;
 }
-print "    <xsl:otherwise>$ow</xsl:otherwise>\n";
-print "  </xsl:choose>\n";
+print "$ind  <xsl:otherwise>$ow</xsl:otherwise>\n";
+print "$ind</xsl:choose>\n";
