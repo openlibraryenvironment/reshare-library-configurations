@@ -7,3 +7,5 @@ locations
 instance-storage/instances
 holdings-storage/holdings
 item-storage/items
+material-types
+marc-records
