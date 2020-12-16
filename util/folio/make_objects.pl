@@ -43,7 +43,7 @@ my $sp = {
     intervalId=>'Weeks'
   }
 };
-write_jsonl('service-points', $sp);
+write_jsonl('00-service-points', $sp);
 
 # identifier-type
 my $ident = {
@@ -51,7 +51,7 @@ my $ident = {
   name=>$idname,
   source=>'RESHARE',
 };
-write_jsonl('identifier-types', $ident);
+write_jsonl('01-identifier-types', $ident);
 
 # institution
 my $inst = {
@@ -59,7 +59,7 @@ my $inst = {
   name=>$instname,
   code=>$instcode,
 };
-write_jsonl('institutions', $inst);
+write_jsonl('02-institutions', $inst);
 
 # campus
 my $camp = {
@@ -68,7 +68,7 @@ my $camp = {
   code=>$campcode,
   institutionId=>$instid
 };
-write_jsonl('campuses', $camp);
+write_jsonl('03-campuses', $camp);
 
 # library
 my $lib = {
@@ -77,7 +77,7 @@ my $lib = {
   code=>$libcode,
   campusId=>$campid
 };
-write_jsonl('libraries', $lib);
+write_jsonl('04-libraries', $lib);
 
 # locations
 open LOC, $locfile or die "Can't find location file";
@@ -99,7 +99,7 @@ while (<LOC>) {
     primaryServicePoint=>$spid,
     servicePointIds=>[ $spid ]
   };
-  write_jsonl('locations', $loc);
+  write_jsonl('05-locations', $loc);
 }
 print $c - 2 . " locations created...\n";
 
