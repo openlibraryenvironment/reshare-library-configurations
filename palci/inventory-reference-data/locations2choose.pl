@@ -8,7 +8,7 @@ my $infile = shift or die "Usage: locations2choose.pl <locations jsonl>";
 
 open IN, $infile or die "Can't open input file!";
 
-my $ind = ' ' x 4;
+my $ind = ' ' x 6;
 
 print "$ind<xsl:choose>\n";
 my $c = 0;

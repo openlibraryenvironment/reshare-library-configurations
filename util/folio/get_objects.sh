@@ -7,10 +7,10 @@ if [ -z $token ]
 fi
 OPTS=`cat endpoints`;
 
-echo "Choose an endpoint..."
+# echo "Choose an endpoint..."
 select EP in $OPTS
 do
   break
 done
 
-curl -w '\n' --http1.1 "$protocol://$host/${EP}" -H "x-okapi-tenant: $tenant" -H "x-okapi-token: $token"
+curl -w '\n' --http1.1 "$protocol://$host/${EP}?limit=100" -H "x-okapi-tenant: $tenant" -H "x-okapi-token: $token"
