@@ -89,7 +89,6 @@ while (<LOC>) {
   my @cols = split(/\t/);
   my $name = $cols[1];
   $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
-  print $name . "\n";
   my $code = "$libcode/$cols[0]"; 
   my $loc = {
     id=>uuid($code),
