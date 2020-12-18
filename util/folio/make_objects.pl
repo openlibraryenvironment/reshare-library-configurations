@@ -18,7 +18,7 @@ my $campname = $conf->{campusName} || $instname;
 
 my $libcode = $conf->{libraryCode} ? $campcode . "/" . $conf->{libraryCode} : "$campcode/$instcode";
 my $libid = uuid("$libcode");
-my $libname = $conf->{libname} || $instname;
+my $libname = $conf->{libraryName} || $instname;
 
 my $spcode = $conf->{servicePointCode} || $instcode;
 my $spid = uuid("service-point/$spcode");
@@ -87,11 +87,14 @@ while (<LOC>) {
   next if $c <= 2;
   chomp;
   my @cols = split(/\t/);
+  my $name = $cols[1];
+  $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
+  print $name . "\n";
   my $code = "$libcode/$cols[0]"; 
   my $loc = {
     id=>uuid($code),
     code=>$code,
-    name=>$cols[1],
+    name=>"$instname - $name",
     isActive=>true,
     institutionId=>$instid,
     campusId=>$campid,
