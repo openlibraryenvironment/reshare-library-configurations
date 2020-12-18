@@ -1,11 +1,11 @@
 #!/bin/bash
-
+if [ -z $1 ]
+  then
+    echo "Usage: . ${BASH_SOURCE[0]} <jsonl_file>"
+    return || exit
+fi
+ 
 for UFILE in $@; do
-  if [ -z $UFILE ]
-    then
-      echo "Usage: . ${BASH_SOURCE[0]} <jsonl_file>"
-      return || exit
-  fi
   if [ ! -f $UFILE ]
     then
       echo 'File not found'
