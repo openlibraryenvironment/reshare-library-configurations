@@ -82,9 +82,13 @@ write_jsonl('04-libraries', $lib);
 # locations
 open LOC, $locfile or die "Can't find location file";
 my $c = 0;
+my $skip = 4;
 while (<LOC>) {
   $c++;
-  next if $c <= 2;
+  if (/^Location Code/) {
+    $skip = 2;
+  }
+  next if $c <= $skip;
   chomp;
   my @cols = split(/\t/);
   my $name = $cols[1];
