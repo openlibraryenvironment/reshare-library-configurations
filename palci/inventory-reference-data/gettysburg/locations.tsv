@@ -1,0 +1,13 @@
+ReShare uses an item's location and type to determine E-ZBorrow requestability. An item must be BOTH stored in a lendable location AND be of a lendable type in order to be requested via E-ZBorrow. 			
+Please list your library's lendable locations and item types to indicate which materials you will sharing via E-ZBorrow.			
+			
+By Location	By Item Type	Example locations	Example types
+Stacks	any	Main	Book
+CollAuth	any	Child3rdFl	Audio
+BrowseRoom	any except Item Policy = McNBook	Wilson	Score
+Display	any	All other locations are not lendable	All other types are not lendable
+Alumni	any		
+BrowseGT	any		
+Oversize	any		
+Offsite	any except Item Policy = VHS		
+NewBook	any		

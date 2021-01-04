@@ -83,15 +83,17 @@ write_jsonl('04-libraries', $lib);
 open LOC, $locfile or die "Can't find location file";
 my $c = 0;
 my $skip = 4;
+my $name_el = 0;
 while (<LOC>) {
   $c++;
   if (/^Location Code/) {
     $skip = 2;
+    $name_el = 1;
   }
   next if $c <= $skip;
   chomp;
   my @cols = split(/\t/);
-  my $name = $cols[1];
+  my $name = $cols[$name_el];
   $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
   my $code = "$libcode/$cols[0]"; 
   my $loc = {
