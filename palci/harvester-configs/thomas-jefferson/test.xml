@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2021-01-04T19:02:30Z</responseDate>
+  <request metadataPrefix="marc21" set="PALCI_RESHARE" verb="ListRecords">https://na01.alma.exlibrisgroup.com/view/oai/01TJU_INST/request</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>oai:alma.01TJU_INST:991000836546503866</identifier>
+        <datestamp>2020-12-17T19:41:50Z</datestamp>
+        <setSpec>PALCI_RESHARE</setSpec>
+      </header>
+      <metadata>
+        <record xmlns="http://www.loc.gov/MARC21/slim" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+          <leader>00871cam a2200277   4500</leader>
+          <controlfield tag="005">20040217143100.0</controlfield>
+          <controlfield tag="008">700417s1970    nyu           00010 eng  </controlfield>
+          <controlfield tag="001">991000836546503866</controlfield>
+          <datafield ind1=" " ind2=" " tag="010">
+            <subfield code="a">   70101957 //r902</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="019">
+            <subfield code="a">5047501</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">0870000632</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(PCT)38162-01tju</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">ocm00066104</subfield>
+            <subfield code="9">ExL</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">DLC</subfield>
+            <subfield code="c">DLC</subfield>
+            <subfield code="d">OCL</subfield>
+            <subfield code="d">m.c.</subfield>
+            <subfield code="d">PCT</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="049">
+            <subfield code="a">PCTS</subfield>
+            <subfield code="b">PCT2</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="0" tag="050">
+            <subfield code="a">E743</subfield>
+            <subfield code="b">.B78</subfield>
+          </datafield>
+          <datafield ind1="0" ind2="0" tag="082">
+            <subfield code="a">818/.02</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="092">
+            <subfield code="a">818.02</subfield>
+            <subfield code="b">B924o</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="100">
+            <subfield code="a">Buckley, William F.</subfield>
+            <subfield code="q">(William Frank),</subfield>
+            <subfield code="d">1925-</subfield>
+            <subfield code="w">cn</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="245">
+            <subfield code="a">Quotations from Chairman Bill;</subfield>
+            <subfield code="b">the best of Wm. F. Buckley Jr.</subfield>
+            <subfield code="c">Compiled by David Franke.</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="260">
+            <subfield code="a">New Rochelle, N.Y.,</subfield>
+            <subfield code="b">Arlington House</subfield>
+            <subfield code="c">[1970]</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">306 p.</subfield>
+            <subfield code="c">24 cm.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="350">
+            <subfield code="a">6.95</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="590">
+            <subfield code="a">7-10-70 B&amp;T 4.63</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="651">
+            <subfield code="a">United States</subfield>
+            <subfield code="x">Politics and government</subfield>
+            <subfield code="y">1945-.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="1" tag="700">
+            <subfield code="a">Franke, David,</subfield>
+            <subfield code="e">ed.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="949">
+            <subfield code="b">31365000407064</subfield>
+            <subfield code="c">BK2</subfield>
+            <subfield code="d">818.02 B924o</subfield>
+            <subfield code="h">0</subfield>
+            <subfield code="m">PCT2</subfield>
+            <subfield code="t">B</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="999">
+            <subfield code="a">38162</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="900">
+            <subfield code="b">GUTMAN</subfield>
+            <subfield code="d">BKSTACKS2</subfield>
+            <subfield code="f">818.02 B924o</subfield>
+            <subfield code="8">2240849300003866</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="995">
+            <subfield code="ff">2240849300003866</subfield>
+            <subfield code="u">1</subfield>
+            <subfield code="j">1</subfield>
+            <subfield code="aa">BKSTACKS2</subfield>
+            <subfield code="t">BOOK</subfield>
+            <subfield code="p">Status: i - Not Found</subfield>
+            <subfield code="s">31365000407064</subfield>
+            <subfield code="z">BKSTACKS2</subfield>
+            <subfield code="a">2340849290003866</subfield>
+            <subfield code="c">EMPTY</subfield>
+            <subfield code="bb">818.02 B924o</subfield>
+            <subfield code="v">false</subfield>
+            <subfield code="h">GUTMAN</subfield>
+            <subfield code="i">GUTMAN</subfield>
+          </datafield>
+        </record>
+      </metadata>
+    </record>
+    <resumptionToken>all@all@PALCI_RESHARE@marc21@6690553920003866</resumptionToken>
+  </ListRecords>
+</OAI-PMH>
