@@ -59,8 +59,8 @@
                         &lt;xsl:variable name="LOC" select="marc:subfield[@code='d']" /&gt;&#xD;
                         &lt;illPolicyId&gt;&#xD;
                              &lt;xsl:choose&gt;&#xD;
-                               &lt;xsl:when test="$LOC='bcsfi' or $LOC='bxc'"&gt;&lt;xsl:value-of select="$WILL_NOT_LEND" /&gt;&lt;/xsl:when&gt;&#xD;
-                               &lt;xsl:otherwise&gt;&lt;xsl:value-of select="$WILL_LEND" /&gt;&lt;/xsl:otherwise&gt;&#xD;
+                               &lt;xsl:when test="starts-with($LOC, 'BKSTACKS')"&gt;&lt;xsl:value-of select="$WILL_LEND" /&gt;&lt;/xsl:when&gt;&#xD;
+                               &lt;xsl:otherwise&gt;&lt;xsl:value-of select="$WILL_NOT_LEND" /&gt;&lt;/xsl:otherwise&gt;&#xD;
                              &lt;/xsl:choose&gt;&#xD;
                         &lt;/illPolicyId&gt;&#xD;
 &#xD;

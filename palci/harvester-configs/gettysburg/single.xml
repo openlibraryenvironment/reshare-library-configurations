@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2021-01-06T19:49:39Z</responseDate>
+  <request verb="ListRecords" metadataPrefix="marc21" set="PALCI_RESHARE">https://na02.alma.exlibrisgroup.com/view/oai/01GETTYSBURG_INST/request</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>oai:alma.01GETTYSBURG_INST:991000102939705231</identifier>
+        <datestamp>2020-12-14T14:14:55Z</datestamp>
+        <setSpec>PALCI_RESHARE</setSpec>
+        <setSpec>gdc-rapidr-pbooks-loanable</setSpec>
+      </header>
+      <metadata>
+        <record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+          <leader>01173cam a2200361 a 4500</leader>
+          <controlfield tag="005">19911011151552.0</controlfield>
+          <controlfield tag="008">881208s1988    nyuaf    b    001 0 eng  </controlfield>
+          <controlfield tag="001">991000102939705231</controlfield>
+          <datafield tag="010" ind1=" " ind2=" ">
+            <subfield code="a">87007121 //r88</subfield>
+          </datafield>
+          <datafield tag="020" ind1=" " ind2=" ">
+            <subfield code="a">0815624247</subfield>
+          </datafield>
+          <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(pgc)b10192724-01gettysburg_inst</subfield>
+          </datafield>
+          <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(OCoLC)16225916</subfield>
+          </datafield>
+          <datafield tag="040" ind1=" " ind2=" ">
+            <subfield code="a">DLC</subfield>
+            <subfield code="c">DLC</subfield>
+            <subfield code="d">GDC</subfield>
+          </datafield>
+          <datafield tag="043" ind1=" " ind2=" ">
+            <subfield code="a">e-ie---</subfield>
+          </datafield>
+          <datafield tag="049" ind1=" " ind2=" ">
+            <subfield code="a">GDCC</subfield>
+          </datafield>
+          <datafield tag="090" ind1=" " ind2=" ">
+            <subfield code="a">PN1993.5.I85</subfield>
+            <subfield code="b">R6 1988</subfield>
+          </datafield>
+          <datafield tag="100" ind1="1" ind2=" ">
+            <subfield code="a">Rockett, Kevin.</subfield>
+          </datafield>
+          <datafield tag="245" ind1="1" ind2="0">
+            <subfield code="a">Cinema and Ireland /</subfield>
+            <subfield code="c">Kevin Rockett, Luke Gibbons, and John Hill.</subfield>
+          </datafield>
+          <datafield tag="250" ind1=" " ind2=" ">
+            <subfield code="a">1st ed.</subfield>
+          </datafield>
+          <datafield tag="260" ind1=" " ind2=" ">
+            <subfield code="a">Syracuse, N.Y. :</subfield>
+            <subfield code="b">Syracuse University Press,</subfield>
+            <subfield code="c">1988.</subfield>
+          </datafield>
+          <datafield tag="300" ind1=" " ind2=" ">
+            <subfield code="a">xiii, 274 p., [8] p. of plates :</subfield>
+            <subfield code="b">ill. ;</subfield>
+            <subfield code="c">23 cm.</subfield>
+          </datafield>
+          <datafield tag="490" ind1="1" ind2=" ">
+            <subfield code="a">Irish studies.</subfield>
+          </datafield>
+          <datafield tag="504" ind1=" " ind2=" ">
+            <subfield code="a">Bibliography: p. 258.</subfield>
+          </datafield>
+          <datafield tag="500" ind1=" " ind2=" ">
+            <subfield code="a">Includes index.</subfield>
+          </datafield>
+          <datafield tag="599" ind1=" " ind2=" ">
+            <subfield code="a">16225916.</subfield>
+          </datafield>
+          <datafield tag="650" ind1=" " ind2="0">
+            <subfield code="a">Motion pictures</subfield>
+            <subfield code="z">Ireland</subfield>
+            <subfield code="x">History.</subfield>
+          </datafield>
+          <datafield tag="651" ind1=" " ind2="0">
+            <subfield code="a">Ireland</subfield>
+            <subfield code="x">In motion pictures.</subfield>
+          </datafield>
+          <datafield tag="700" ind1="1" ind2=" ">
+            <subfield code="a">Gibbons, Luke.</subfield>
+          </datafield>
+          <datafield tag="700" ind1="1" ind2=" ">
+            <subfield code="a">Hill, John.</subfield>
+          </datafield>
+          <datafield tag="830" ind1=" " ind2="0">
+            <subfield code="a">Irish studies (Syracuse, N.Y.)</subfield>
+          </datafield>
+          <datafield tag="907" ind1=" " ind2=" ">
+            <subfield code="a">.b10192724</subfield>
+            <subfield code="b">muss </subfield>
+          </datafield>
+          <datafield tag="902" ind1=" " ind2=" ">
+            <subfield code="a">05-24-19</subfield>
+          </datafield>
+          <datafield tag="999" ind1=" " ind2=" ">
+            <subfield code="b">1</subfield>
+            <subfield code="c">02-13-92</subfield>
+            <subfield code="d">m</subfield>
+            <subfield code="e">a</subfield>
+            <subfield code="f">-</subfield>
+            <subfield code="g">0</subfield>
+          </datafield>
+          <datafield tag="945" ind1=" " ind2=" ">
+            <subfield code="d">12-10-2008 15:44</subfield>
+            <subfield code="g">1</subfield>
+            <subfield code="i">332680002028598</subfield>
+            <subfield code="j">12-16-08</subfield>
+            <subfield code="k">  -  -  </subfield>
+            <subfield code="l">muss </subfield>
+            <subfield code="o">-</subfield>
+            <subfield code="p">$60.00</subfield>
+            <subfield code="q"> </subfield>
+            <subfield code="r">3</subfield>
+            <subfield code="s">-</subfield>
+            <subfield code="t">120</subfield>
+            <subfield code="u">2</subfield>
+            <subfield code="v">0</subfield>
+            <subfield code="w">0</subfield>
+            <subfield code="x">0</subfield>
+            <subfield code="y">.i10215918</subfield>
+            <subfield code="z">02-14-92</subfield>
+          </datafield>
+          <datafield tag="900" ind1="0" ind2=" ">
+            <subfield code="b">MUSS</subfield>
+            <subfield code="d">Stacks</subfield>
+            <subfield code="f">PN1993.5.I85</subfield>
+            <subfield code="f">R6 1988</subfield>
+            <subfield code="8">2243292860005231</subfield>
+          </datafield>
+          <datafield tag="995" ind1=" " ind2=" ">
+            <subfield code="cc">2243292860005231</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="s">0</subfield>
+            <subfield code="r">Stacks</subfield>
+            <subfield code="d">BOOK</subfield>
+            <subfield code="b">332680002028598</subfield>
+            <subfield code="p">Stacks</subfield>
+            <subfield code="a">2343292850005231</subfield>
+            <subfield code="e">Book</subfield>
+            <subfield code="t">PN1993.5.I85 R6 1988</subfield>
+            <subfield code="h">false</subfield>
+            <subfield code="c">1</subfield>
+            <subfield code="z">20051017</subfield>
+            <subfield code="o">MUSS</subfield>
+            <subfield code="q">MUSS</subfield>
+          </datafield>
+        </record>
+      </metadata>
+    </record>
+    <resumptionToken>all@all@PALCI_RESHARE@marc21@1965420530005231</resumptionToken>
+  </ListRecords>
+</OAI-PMH>

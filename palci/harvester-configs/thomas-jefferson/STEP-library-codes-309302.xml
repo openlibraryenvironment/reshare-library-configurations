@@ -29,7 +29,7 @@
       &lt;xsl:choose&gt;&#xD;
         &lt;xsl:when test=".='BKSTACKS1'"&gt;55139868-53d2-5c3e-9b85-8c9d3bb2787f&lt;/xsl:when&gt;&#xD;
         &lt;xsl:when test=".='BKSTACKS2'"&gt;a8ae2130-fa0f-5801-908f-369870981ebf&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:otherwise&gt;55139868-53d2-5c3e-9b85-8c9d3bb2787f&lt;/xsl:otherwise&gt;&#xD;
+        &lt;xsl:otherwise&gt;74718812-aadc-59ad-8034-7c862c09244b&lt;/xsl:otherwise&gt; &lt;!-- UNMAPPED --&gt;&#xD;
       &lt;/xsl:choose&gt;&#xD;
     &lt;/permanentLocationId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
