@@ -8,8 +8,10 @@ my $infile = shift or die "Usage: locations2choose.pl <locations jsonl>";
 
 open IN, $infile or die "Can't open input file!";
 
+my $ind0 = ' ' x 4;
 my $ind = ' ' x 6;
 
+print "$ind0<permanentLocationId>\n";
 print "$ind<xsl:choose>\n";
 my $c = 0;
 my $ow;
@@ -28,3 +30,4 @@ while (<IN>) {
 }
 print "$ind  <xsl:otherwise>$ow</xsl:otherwise> <!-- UNMAPPED -->\n" if $ow;
 print "$ind</xsl:choose>\n";
+print "$ind0</permanentLocationId>\n"
