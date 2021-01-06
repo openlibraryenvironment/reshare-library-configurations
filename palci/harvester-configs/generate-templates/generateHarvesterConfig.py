@@ -9,17 +9,17 @@ def main(argv):
     url = ''
     oaisetname = ''
     try:
-        opts, args = getopt.getopt(argv,"hl:i:t:u:s:",["library=","baseid=","jobtype=","url=","setname="])
+        opts, arg = getopt.getopt(argv,"hl:i:t:u:s:",["library=","baseid=","jobtype=","url=","setname="])
     except getopt.GetoptError:
-        print 'generateHarvesterConfig.py -l <name of library> -i <base id number for harvestable> -t <type of job (oaiPmh, xmlBulk)> -u <url of catalog> [-s <set name>]'
+        print('generateHarvesterConfig.py -l <name of library> -i <base id number for harvestable> -t <type of job (oaiPmh, xmlBulk)> -u <url of catalog> [-s <set name>]')
         sys.exit(2)
 
     for opt, arg in opts:
         if opt == '-h':
-            print 'generateHarvesterConfig.py -l <name of library> -i <base id number for harvestable> -t <type of job (oaiPmh, xmlBulk)> -u <url of catalog> [-s <set name>]'
+            print('generateHarvesterConfig.py -l <name of library> -i <base id number for harvestable> -t <type of job (oaiPmh, xmlBulk)> -u <url of catalog> [-s <set name>]')
             sys.exit()
         elif len(opts) < 4:
-            print 'generateHarvesterConfig.py -l <name of library> -i <base id number for harvestable> -t <type of job (oaiPmh, xmlBulk)> -u <url of catalog> [-s <set name>]'
+            print('generateHarvesterConfig.py -l <name of library> -i <base id number for harvestable> -t <type of job (oaiPmh, xmlBulk)> -u <url of catalog> [-s <set name>]')
             sys.exit(2)
         elif opt in ("-l", "--library"):
             library = arg
@@ -32,13 +32,13 @@ def main(argv):
         elif opt in ("-s", "--setname"):
             oaisetname = arg
 
-    print "Creating Harvester configs for '{}', job type '{}'".format(library,jobtype)
-    print "Using  '#{}...' for config IDs".format(baseid)
-    print 'Setting URL to: ', url
+    print("Creating Harvester configs for '{}', job type '{}'".format(library,jobtype))
+    print("Using  '#{}...' for config IDs".format(baseid))
+    print('Setting URL to: ', url)
     if jobtype == 'oaiPmh':
-        print "OAI set name is: '{}'".format(oaisetname)
+        print("OAI set name is: '{}'".format(oaisetname))
 
-    filename = 'HARVESTABLE-to-localhost-{}501.xml'.format(baseid)
+    filename = 'HARVESTABLE-to-palci-si-{}501.xml'.format(baseid)
     f = open(filename,"w")
     f.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
     f.write('<harvestable>\n')
@@ -52,7 +52,7 @@ def main(argv):
     f.write('    <storeOriginal>true</storeOriginal>\n')
     f.write('    <enabled>false</enabled>\n')
     f.write('    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">\n')
-    f.write('      <id>901102</id> <!-- localhost, upsert by match key -->\n')
+    f.write('      <id>301105</id> <!-- palci_si remote -->\n')
     f.write('    </storage>\n')
     f.write('    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">\n')
     f.write('      <id>{}201</id>\n'.format(baseid))
@@ -68,7 +68,7 @@ def main(argv):
     f.write('</harvestable>\n')
     f.close()
 
-    filename = 'HARVESTABLE-to-palci-si-{}502.xml'.format(baseid)
+    filename = 'HARVESTABLE-to-localhost-{}502.xml'.format(baseid)
     f = open(filename, "w")
     f.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
     f.write('<harvestable>\n')
@@ -76,13 +76,43 @@ def main(argv):
     f.write('    <id>{}502</id>\n'.format(baseid))
     f.write('    <name>PALCI SI: {} to localhost</name>\n'.format(library))
     f.write('    <url>{}</url>\n'.format(url))
-    if jobtype == 'oaiPhm':
+    if jobtype == 'oaiPmh':
         f.write('    <oaiSetName>{}</oaiSetName>\n'.format(oaisetname))
         f.write('    <metadataPrefix>marc21</metadataPrefix>\n')
     f.write('    <storeOriginal>true</storeOriginal>\n')
     f.write('    <enabled>false</enabled>\n')
     f.write('    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">\n')
     f.write('      <id>301104</id>  <!-- Storage PALCI SI via local okapi -->\n')
+    f.write('    </storage>\n')
+    f.write('    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">\n')
+    f.write('      <id>{}201</id>\n'.format(baseid))
+    f.write('    </transformation>\n')
+    f.write('    <harvestImmediately>false</harvestImmediately>\n')
+    f.write('    <logLevel>INFO</logLevel>\n')
+    f.write('    <mailLevel>WARN</mailLevel>\n')
+    f.write('    <overwrite>false</overwrite>\n')
+    f.write('    <scheduleString>10 10 10 6 *</scheduleString>\n')
+    f.write("    <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>\n")
+    f.write('    <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>\n')
+    f.write('  </{}>\n'.format(jobtype))
+    f.write('</harvestable>\n')
+    f.close()
+
+    filename = 'HARVESTABLE-to-si-dev-palci-{}503.xml'.format(baseid)
+    f = open(filename, "w")
+    f.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
+    f.write('<harvestable>\n')
+    f.write('  <{}>\n'.format(jobtype))
+    f.write('    <id>{}503</id>\n'.format(baseid))
+    f.write('    <name>PALCI SI: {} to SI dev - PALCI</name>\n'.format(library))
+    f.write('    <url>{}</url>\n'.format(url))
+    if jobtype == 'oaiPmh':
+        f.write('    <oaiSetName>{}</oaiSetName>\n'.format(oaisetname))
+        f.write('    <metadataPrefix>marc21</metadataPrefix>\n')
+    f.write('    <storeOriginal>true</storeOriginal>\n')
+    f.write('    <enabled>false</enabled>\n')
+    f.write('    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">\n')
+    f.write('      <id>301102</id>  <!-- SI dev - PALCI -->\n')
     f.write('    </storage>\n')
     f.write('    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">\n')
     f.write('      <id>{}201</id>\n'.format(baseid))
