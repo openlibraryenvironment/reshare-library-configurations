@@ -82,6 +82,7 @@ write_jsonl('04-libraries', $lib);
 # locations
 open LOC, $locfile or die "Can't find location file";
 my $c = 0;
+my $locttl = 0;
 my $skip = 4;
 my $name_el = 0;
 while (<LOC>) {
@@ -108,8 +109,27 @@ while (<LOC>) {
     servicePointIds=>[ $spid ]
   };
   write_jsonl('05-locations', $loc);
+  $locttl++;
 }
-print $c - 2 . " locations created...\n";
+
+# add unmapped location
+my $umcode = "$libcode/UNMAPPED";
+my $umname = "$instname - Unmapped";
+my $umloc = {
+    id=>uuid($umcode),
+    code=>$umcode,
+    name=>"$umname",
+    isActive=>true,
+    institutionId=>$instid,
+    campusId=>$campid,
+    libraryId=>$libid,
+    primaryServicePoint=>$spid,
+    servicePointIds=>[ $spid ]
+  };
+write_jsonl('05-locations', $umloc);
+$locttl++;
+  
+print "$locttl locations created...\n";
 
 sub write_jsonl {
   my $name = shift;
