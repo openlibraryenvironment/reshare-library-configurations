@@ -114,7 +114,7 @@ while (<LOC>) {
 
 # add unmapped location
 my $umcode = "$libcode/UNMAPPED";
-my $umname = "$instname - Unmapped";
+my $umname = "$instname - Unmapped location";
 my $umloc = {
     id=>uuid($umcode),
     code=>$umcode,

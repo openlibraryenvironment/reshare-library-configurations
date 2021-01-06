@@ -19,11 +19,12 @@ while (<IN>) {
   my $id = $jsonl->{id};
   my $code = $jsonl->{code};
   $code =~ s/^.+\///;
-  if ($c == 0) {
+  if ($code eq 'UNMAPPED') {
     $ow = $id;
+  } else {
+    print "$ind  <xsl:when test=\".='$code'\">$id</xsl:when>\n";
   }
-  print "$ind  <xsl:when test=\".='$code'\">$id</xsl:when>\n";
   $c++;
 }
-print "$ind  <xsl:otherwise>$ow</xsl:otherwise>\n";
+print "$ind  <xsl:otherwise>$ow</xsl:otherwise> <!-- UNMAPPED -->\n" if $ow;
 print "$ind</xsl:choose>\n";
