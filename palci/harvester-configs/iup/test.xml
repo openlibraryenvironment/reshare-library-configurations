@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2021-01-12T16:16:08Z</responseDate>
+  <request metadataPrefix="marc21" set="OAI_Definition" verb="ListRecords">https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_IUP/request</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>oai:alma.01SSHELCO_IUP:9963605003564</identifier>
+        <datestamp>2020-12-21T21:10:44Z</datestamp>
+        <setSpec>OAI_Definition</setSpec>
+      </header>
+      <metadata>
+        <record xmlns="http://www.loc.gov/MARC21/slim" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+          <leader>00592nam a2200217I  4500</leader>
+          <controlfield tag="008">721114|1964|||||||          |||||||eng|u</controlfield>
+          <controlfield tag="001">9963605003564</controlfield>
+          <datafield ind1=" " ind2=" " tag="010">
+            <subfield code="a">   64021776</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">ocl70494185</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(PInU)6360-iupdb</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="c">WSU</subfield>
+            <subfield code="d">PZI</subfield>
+          </datafield>
+          <datafield ind1="1" ind2=" " tag="041">
+            <subfield code="a">engspa</subfield>
+          </datafield>
+          <datafield ind1="|" ind2="|" tag="049">
+            <subfield code="a">PZIM</subfield>
+            <subfield code="c">1</subfield>
+            <subfield code="z">000002754758</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="090">
+            <subfield code="a">F1208</subfield>
+            <subfield code="b">.R48</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="092">
+            <subfield code="a">972</subfield>
+            <subfield code="b">R33</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="100">
+            <subfield code="a">Reyes, Alfonso,</subfield>
+            <subfield code="d">1889-1959.</subfield>
+          </datafield>
+          <datafield ind1="1" ind2="0" tag="245">
+            <subfield code="a">Mexico in a nutshell, and other essay.</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="260">
+            <subfield code="a">Berkeley,</subfield>
+            <subfield code="b">University of California Press,</subfield>
+            <subfield code="c">1964.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">145 p.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="590">
+            <subfield code="a">c.1</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="651">
+            <subfield code="a">Mexico</subfield>
+            <subfield code="x">History.</subfield>
+          </datafield>
+          <datafield ind1=" " ind2="0" tag="651">
+            <subfield code="a">America</subfield>
+            <subfield code="x">Discovery and exploration.</subfield>
+          </datafield>
+          <datafield ind1="0" ind2=" " tag="900">
+            <subfield code="b">STAPLETON</subfield>
+            <subfield code="f">F1208</subfield>
+            <subfield code="f">.R48</subfield>
+            <subfield code="c">PZII</subfield>
+            <subfield code="8">22152804470003564</subfield>
+          </datafield>
+          <datafield ind1=" " ind2=" " tag="995">
+            <subfield code="ff">22152804470003564</subfield>
+            <subfield code="u">1</subfield>
+            <subfield code="j">0</subfield>
+            <subfield code="aa">PZII</subfield>
+            <subfield code="t">BOOK</subfield>
+            <subfield code="s">000002754758</subfield>
+            <subfield code="z">PZII</subfield>
+            <subfield code="q">ON_RESERVE: N | RESERVE_CHARGES: 0 | RECALLS_PLACED: 0 | HOLDS_PLACED: 0 | HISTORICAL_BOOKINGS: 0 | SHORT_LOAN_CHARGES: 0 | </subfield>
+            <subfield code="a">23152804460003564</subfield>
+            <subfield code="c">bo</subfield>
+            <subfield code="bb">F1208 .R48</subfield>
+            <subfield code="v">false</subfield>
+            <subfield code="b">1</subfield>
+            <subfield code="h">STAPLETON</subfield>
+            <subfield code="i">STAPLETON</subfield>
+          </datafield>
+        </record>
+      </metadata>
+    </record>
+  </ListRecords>
+</OAI-PMH>
