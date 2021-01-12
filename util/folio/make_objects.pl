@@ -20,6 +20,8 @@ my $libcode = $conf->{libraryCode} ? $campcode . "/" . $conf->{libraryCode} : "$
 my $libid = uuid("$libcode");
 my $libname = $conf->{libraryName} || $instname;
 
+my $locprefix = $conf->{locationPrefix} || $instname;
+
 my $spcode = $conf->{servicePointCode} || $instcode;
 my $spid = uuid("service-point/$spcode");
 my $spname = $conf->{servicePointName} || $instname;
@@ -100,7 +102,7 @@ while (<LOC>) {
   my $loc = {
     id=>uuid($code),
     code=>$code,
-    name=>"$instname - $name",
+    name=>"$locprefix - $name",
     isActive=>true,
     institutionId=>$instid,
     campusId=>$campid,

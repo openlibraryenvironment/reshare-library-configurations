@@ -19,6 +19,7 @@ Here's what's happening in the config.json file:
   "campusName": "",
   "libraryCode": "",
   "libraryName": "",
+  "locationPrefix": "",
   "servicePointCode": "",
   "servicePointName": "",
   "identifierName": ""
@@ -30,6 +31,7 @@ Here's what's happening in the config.json file:
 * campusName -- optional (defaults to institutionName)
 * libraryCode -- optional (defaults to "campusCode/institutionCode")
 * libraryName -- optional (defaults to institutionName)
+* locationPrefix -- optional (defaults to institutionName)
 * servicePointCode -- optional (defaults to institutionCode)
 * servicePointName -- optional (defaults to institutionName)
 * identifierName -- optional (defaults to "Reshare_institutionCode")
