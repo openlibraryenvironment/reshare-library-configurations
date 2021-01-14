@@ -1,0 +1,17 @@
+SHELVING LOCATIONS					Patron Locations	
+Location Code (abbreviation for the location if used)	Location Name	Type	Fulfillment Unit		Pickup Location Code (abbreviation for the location if used)	Pickup Location Name
+g1	Gumberg 1st Floor	Open	Non Circulating		DEFALUT_CIRC_DESK	Main Circulation Desk
+g2	Gumberg 2nd Floor					
+g3	Gumberg 3rd Floor					
+g4	Gumberg 4th Floor					
+g5	Gumberg 5th Floor					
+g5cc	Gumberg Curriculum Center Chapter Books - 5th Floor					
+g5co	Gumberg Curriculum Center Oversize Stacks - 5th Floor					
+g5cp	Gumberg Curriculum Center Picture Books - 5th Floor					
+g5cs	Gumberg Curriculum Center Stacks - 5th Floor					
+g1f	Gumberg Folio - 1st Floor					
+g	Gumberg Library					
+g5mk	Gumberg Music Folio - 5th Floor					
+g5mo	Gumberg Music Oversized - 5th Floor					
+g5ms	Gumberg Music Stacks - 5th Floor					
+g1o	Gumberg Oversized - 1st Floor					
