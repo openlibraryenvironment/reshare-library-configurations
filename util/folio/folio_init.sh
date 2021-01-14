@@ -4,10 +4,12 @@ PRDIR=$1
 
 if [ -z $PRDIR ]; then
   echo "Usage: $0 <project root directory>"
+  exit
 fi
 
 if [ ! -d $PRDIR ]; then
   echo "Root directory does not exist!"
+  exit
 fi
 
 read -e -p "Institution code: " isil 
@@ -25,7 +27,7 @@ instdir=`echo $iname | tr '[:upper:]' '[:lower:]' | tr ' ' '-'`
 fullpath="$PRDIR/$instdir"
 if [ -e $fullpath ]; then
   echo "ERROR $fullpath already exists-- exiting..."
-  exit;
+  exit
 fi
 mkdir $fullpath
 
