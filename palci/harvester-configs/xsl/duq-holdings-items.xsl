@@ -24,11 +24,6 @@
     </record>
   </xsl:template>
 
-  <xsl:variable name="CNTYPE_DEWEY">03dd64d0-5626-4ecd-8ece-4531e0069f35</xsl:variable> <!-- Call number type: Dewey Decimal Classification  -->
-  <xsl:variable name="CNTYPE_LOC">95467209-6d7b-468b-94df-0f5d7ad2747d</xsl:variable> <!-- Call number type: LOC  -->
-  <xsl:variable name="CNTYPE_OTHER">6caca63e-5651-4db6-9247-3205156e9699</xsl:variable> <!-- Call number type: Other (catch unmapped)  -->
-  <xsl:variable name="CNTYPE_SUDOC">fc388041-6cd0-4806-8a74-ebe3b9ab4c6e</xsl:variable> <!-- Call number type: Other (catch unmapped)  -->
-
   <xsl:template match="//marc:record">
     <holdingsRecords>
       <arr>
