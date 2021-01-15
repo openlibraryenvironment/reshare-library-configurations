@@ -24,9 +24,6 @@
     </record>
   </xsl:template>
 
-  <xsl:variable name="WILL_LEND">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:variable> <!-- FOLIO Inventory ILL Policy value 'Will lend' -->
-  <xsl:variable name="WILL_NOT_LEND">b0f97013-87f5-4bab-87f2-ac4a5191b489</xsl:variable> <!-- FOLIO Inventory ILL Policy value 'Will not lend' -->
-
   <xsl:variable name="CNTYPE_DEWEY">03dd64d0-5626-4ecd-8ece-4531e0069f35</xsl:variable> <!-- Call number type: Dewey Decimal Classification  -->
   <xsl:variable name="CNTYPE_LOC">95467209-6d7b-468b-94df-0f5d7ad2747d</xsl:variable> <!-- Call number type: LOC  -->
   <xsl:variable name="CNTYPE_OTHER">6caca63e-5651-4db6-9247-3205156e9699</xsl:variable> <!-- Call number type: Other (catch unmapped)  -->
@@ -47,6 +44,24 @@
               <xsl:variable name="loc-clean" select="normalize-space($loc)"/>
               <permanentLocationIdHere><xsl:value-of select="$loc-clean"/></permanentLocationIdHere>
               <illPolicyId>
+                <xsl:choose>
+                  <xsl:when test="$loc-clean='g'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g1'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g1f'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g1o'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g2'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g3'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g4'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g5'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g5cc'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g5co'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g5cp'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g5cs'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g5mk'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g5mo'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='g5ms'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:otherwise>b0f97013-87f5-4bab-87f2-ac4a5191b489</xsl:otherwise> <!-- Will not lend -->
+                </xsl:choose>
               </illPolicyId>
               <callNumber><xsl:value-of select="./marc:subfield[@code='a']"/></callNumber>
               <items>
