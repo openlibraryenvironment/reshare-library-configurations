@@ -59,6 +59,15 @@
                 </xsl:choose>
               </illPolicyId>
               <callNumber><xsl:value-of select="./marc:subfield[@code='a']"/></callNumber>
+              <notes>
+                <arr>
+                  <i>
+                    <note><xsl:value-of select="concat('Sierra location code: ', $loc-clean)"/></note>
+                    <holdingsNoteTypeId>b160f13a-ddba-4053-b9c4-60ec5ea45d56</holdingsNoteTypeId>
+                    <staffOnly>true</staffOnly>
+                  </i>
+                </arr>
+              </notes>
               <items>
                 <arr>
                 <xsl:for-each select="../marc:datafield[@tag='945']/marc:subfield[@code='l'][.=$loc]/..">
