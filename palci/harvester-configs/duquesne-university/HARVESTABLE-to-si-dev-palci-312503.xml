@@ -3,7 +3,7 @@
   <xmlBulk>
     <id>312503</id>
     <name>PALCI SI: Duquesne to SI dev - PALCI</name>
-    <url>ftp://duquesne:hBYSLOcKpOST@ftp.folio.indexdata.com</url>
+    <url>ftp://duquesne:XXXXXXXXX@ftp.folio.indexdata.com/incoming</url>
     <storeOriginal>true</storeOriginal>
     <enabled>false</enabled>
     <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
