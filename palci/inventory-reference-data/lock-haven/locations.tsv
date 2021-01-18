@@ -1,0 +1,52 @@
+ReShare uses an item's location and type to determine E-ZBorrow requestability. An item must be BOTH stored in a lendable location AND be of a lendable type in order to be requested via E-ZBorrow. 		
+Location Code (value that actually appears in record)	Location Name (display value if different)	Item Type
+CALD	Caldecott Award	Books
+CDMUS	CD Music 	CD's
+CHIL	Juvenile/Young Adult	Books
+CLEAR	Clearfield Library 	Books
+CLEARADBK	Clearfield Audio Book	Audio Books
+CLEARCAR	Clearfield Library Career	Books
+CLEARCHIL	Clearfield Children	Books
+CLEARFOL	Clearfield Folio	Books
+CLEARLREAD	Clearfield Leisure Reading	Books
+CUR	Curriculum 	Books
+E-CHIL	Easy Reader	Books
+FOL	Folio	Books
+LREAD	Leisure Reading Area	Books
+MAIN	Main Stacks 	Books
+NBC	New Book Shelf Children's	Books
+NBS	New Book Shelf 	Books
+NEWBERY	Newbery Award	Books
+PICBOO	Picture Books	Books
+TFOL	Tall Folio	Books
+PER	Bound Periodiclas	Bound Periodiclas
+ARCHIVES	ARCHIVES	
+C-REF	Children's Reference 	
+CLEARARC	Clearfield Archives	
+CLEARCIRCD	Clearfiled Circ Desk	
+CLEARGAME	Clearfiled Gaming	
+CLEAR_REF	Clearfield Reference 	
+CLEAR_RES	Clearfiled Reserve	
+MFC	Microfiche	
+MICR	Microfilm	
+REF	Reference 	
+CLEARDVD	Clearfield DVD	DVD'S
+CLEARINSTD	Clearfield Inst DVD	DVD'S
+DVD	DVD-Drama	DVD'S
+DVDACT	DVD-Action	DVD'S
+DVDANI	DVD-Animation	DVD'S
+DVDC	DVD Instructional	DVD'S
+DVDCAR	DVD Carousel	DVD'S
+DVDCOM	DVD-Comedy	DVD'S
+DVDDOC	DVD-Documentry 	DVD'S
+DVDHOR	DVD-Horror	DVD'S
+DVDMYS	DVD-Mystery	DVD'S
+DVDPER	DVD-Performance	DVD'S
+DVDSCI	DVD-Science Fiction	DVD'S
+DVDTV	DVD-TV	DVD'S
+DVDWAR	DVD-War	DVD'S
+DVDWES	DVD-Western 	DVD'S
+TRREF	Treasury Room-Reference	
+TRRM	Treasury Room	
+UNPER	Unbound Periodicals	
+VIDEO	Media - Video	
