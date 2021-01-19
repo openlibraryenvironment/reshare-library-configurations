@@ -54,7 +54,7 @@
                         or marc:controlfield[@tag='001']">
                 <identifiers>
                 <arr>
-                <xsl:for-each select="marc:controlfield[@tag='001']">
+                <xsl:for-each select="marc:datafield[@tag='907']/marc:subfield[@code='a']">
                     <i>
                     <value><xsl:value-of select="."/></value>
                     <!-- A subsequent library specific transformation (style sheet)
@@ -119,7 +119,7 @@
             <xsl:if test="marc:datafield[@tag='050' or @tag='060' or @tag='080' or @tag='082' or @tag='086' or @tag='090']">
                 <classifications>
                 <arr>
-                    <xsl:for-each select="marc:datafield[@tag='050' or @tag='060' or @tag='080' or @tag='082' or @tag='086' or @tag='090']">
+                    <xsl:for-each select="marc:datafield[@tag='050' or @tag='060' or @tag='080' or @tag='082' or @tag='086' or @tag='090']/marc:subfield[@code='a' or @code='b']/..">
                     <i>
                         <xsl:choose>
                         <xsl:when test="current()[@tag='050']">
