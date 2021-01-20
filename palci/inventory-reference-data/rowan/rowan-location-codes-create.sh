@@ -125,7 +125,7 @@ curl -w '\n' -X POST -D - \
   -H "X-Okapi-Token: $token" \
   -d '{
         "id": "ed1f2e45-0acb-4a24-b584-a397fcd3d9b0",
-        "name": "Rowan",
+        "name": "Rowan - Unmapped location",
         "code": "US-NJGBS/US-NJGBS/US-NJGBS/Rowan",
         "isActive": true,
         "institutionId": "3f117a23-fa69-43cd-b509-7ec79177e798",
