@@ -35,6 +35,7 @@
   &lt;xsl:template match="//marc:record"&gt;&#xD;
     &lt;holdingsRecords&gt;&#xD;
       &lt;arr&gt;&#xD;
+      &lt;xsl:if test="marc:datafield[@tag='945']"&gt;&#xD;
         &lt;xsl:for-each select="marc:datafield[@tag='945']"&gt;&#xD;
           &lt;xsl:sort select="./marc:subfield[@code='l']"/&gt;&#xD;
           &lt;xsl:variable name="preloc"&gt;&#xD;
@@ -106,6 +107,12 @@
             &lt;/i&gt;&#xD;
           &lt;/xsl:if&gt;&#xD;
         &lt;/xsl:for-each&gt;&#xD;
+      &lt;/xsl:if&gt;&#xD;
+      &lt;xsl:if test="not(marc:datafield[@tag='945'])"&gt;&#xD;
+        &lt;i&gt;&#xD;
+          &lt;permanentLocationIdHere&gt;UNMAPPED&lt;/permanentLocationIdHere&gt;&#xD;
+        &lt;/i&gt;&#xD;
+      &lt;/xsl:if&gt;&#xD;
       &lt;/arr&gt; &#xD;
      &lt;/holdingsRecords&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
