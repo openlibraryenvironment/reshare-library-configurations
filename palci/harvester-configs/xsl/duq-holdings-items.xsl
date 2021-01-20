@@ -27,6 +27,7 @@
   <xsl:template match="//marc:record">
     <holdingsRecords>
       <arr>
+      <xsl:if test="marc:datafield[@tag='945']">
         <xsl:for-each select="marc:datafield[@tag='945']">
           <xsl:sort select="./marc:subfield[@code='l']"/>
           <xsl:variable name="preloc">
@@ -98,6 +99,12 @@
             </i>
           </xsl:if>
         </xsl:for-each>
+      </xsl:if>
+      <xsl:if test="not(marc:datafield[@tag='945'])">
+        <i>
+          <permanentLocationIdHere>UNMAPPED</permanentLocationIdHere>
+        </i>
+      </xsl:if>
       </arr> 
      </holdingsRecords>
   </xsl:template>
