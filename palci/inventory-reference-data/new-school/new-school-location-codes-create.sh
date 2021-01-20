@@ -83,7 +83,7 @@ curl -w '\n' -X POST -D - \
   -H "X-Okapi-Token: $token" \
   -d '{
         "id": "a2be9b49-a393-4b15-a236-47bdf97928c3",
-        "name": "New School",
+        "name": "New School - Unmapped location",
         "code": "US-NNNS/US-NNNS/US-NNNS/US-NNNS",
         "isActive": true,
         "institutionId": "c646eeb1-b4dc-4458-a4e0-a39c2a7d36cd",

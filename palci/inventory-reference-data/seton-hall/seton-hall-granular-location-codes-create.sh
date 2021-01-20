@@ -68,7 +68,7 @@ curl -w '\n' -X POST -D - \
   -H "X-Okapi-Token: $token" \
   -d '{
         "id": "f29e2419-2373-48de-85a8-78b87ba865bc",
-        "name": "Seton Hall - Walsh Library",
+        "name": "Seton Hall - Unmapped location",
         "code": "US-NJSOOS/US-NJSOOS/STHM/STHM",
         "isActive": true,
         "institutionId": "01355129-8c25-4f81-aa72-d424e00cbe67",

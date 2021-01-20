@@ -34,7 +34,7 @@ curl -w '\n' -X POST -D - \
   -H "Content-type: application/json" \
   -H "X-Okapi-Tenant: $tenant" \
   -H "X-Okapi-Token: $token" \
-  -d '{ 
+  -d '{
         "id": "b4578dbc-4dd9-4ac1-9c01-8a13f65aa95e",
         "name": "Millersville",
         "code": "US-PMILS"
@@ -45,7 +45,7 @@ curl -w '\n' -X POST -D - \
   -H "Content-type: application/json" \
   -H "X-Okapi-Tenant: $tenant" \
   -H "X-Okapi-Token: $token" \
-  -d '{ 
+  -d '{
         "id": "93678933-8cf2-4c98-a665-045ed466e26c",
         "name": "Millersville",
         "code": "US-PMILS",
@@ -57,7 +57,7 @@ curl -w '\n' -X POST -D - \
   -H "Content-type: application/json" \
   -H "X-Okapi-Tenant: $tenant" \
   -H "X-Okapi-Token: $token" \
-  -d '{ 
+  -d '{
         "id": "90c91643-303c-4379-9fbb-7609a1847096",
         "name": "Millersville",
         "code": "US-PMILS",
@@ -71,7 +71,7 @@ curl -w '\n' -X POST -D - \
   -H "X-Okapi-Token: $token" \
   -d '{
         "id": "004c14d3-fb87-40fc-b4db-9e91738b4f1b",
-        "name": "Millersville",
+        "name": "Millersville - Unmapped location",
         "code": "US-PMILS/US-PMILS/US-PMILS/US-PMILS",
         "isActive": true,
         "institutionId": "b4578dbc-4dd9-4ac1-9c01-8a13f65aa95e",
@@ -180,4 +180,4 @@ curl -w '\n' -X POST -D - -H "Content-type: application/json" -H "X-Okapi-Tenant
 curl -w '\n' -X POST -D - -H "Content-type: application/json" -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -d '{ "id": "1c40af59-51ba-4b25-8ff7-15b15f64aa2f","name": "Millersville - UNUSED","code": "US-PMILS/US-PMILS/US-PMILS/UNUSED",  "isActive": true, "institutionId": "b4578dbc-4dd9-4ac1-9c01-8a13f65aa95e", "campusId": "93678933-8cf2-4c98-a665-045ed466e26c", "libraryId": "90c91643-303c-4379-9fbb-7609a1847096",         "primaryServicePoint": "76d17981-f8f7-4dd5-94b7-4e55d84dde8f", "servicePointIds": [ "76d17981-f8f7-4dd5-94b7-4e55d84dde8f" ] }' $protocol://$host/locations
 curl -w '\n' -X POST -D - -H "Content-type: application/json" -H "X-Okapi-Tenant: $tenant" -H "X-Okapi-Token: $token" -d '{ "id": "12ee1371-43f0-4c0c-9a10-835459d048a3","name": "Millersville - Video","code": "US-PMILS/US-PMILS/US-PMILS/VC",  "isActive": true, "institutionId": "b4578dbc-4dd9-4ac1-9c01-8a13f65aa95e", "campusId": "93678933-8cf2-4c98-a665-045ed466e26c", "libraryId": "90c91643-303c-4379-9fbb-7609a1847096",         "primaryServicePoint": "76d17981-f8f7-4dd5-94b7-4e55d84dde8f", "servicePointIds": [ "76d17981-f8f7-4dd5-94b7-4e55d84dde8f" ] }' $protocol://$host/locations
 
-echo 
+echo

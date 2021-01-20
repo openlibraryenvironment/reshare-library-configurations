@@ -72,7 +72,7 @@ curl -w '\n' -X PUT -D - \
   -H "X-Okapi-Token: $token" \
   -d '{
         "id": "87038e41-0990-49ea-abd9-1ad00a786e45",
-        "name": "Temple",
+        "name": "Temple - Unmapped location",
         "code": "US-PPT/US-PPT/US-PPT/US-PPT",
         "isActive": true,
         "institutionId": "05770b43-8f13-41e3-9ffd-8c13ae570d18",
