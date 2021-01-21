@@ -72,15 +72,16 @@
                         <permanentLoanTypeId>2b94c631-fca9-4892-a730-03ee529ffe27</permanentLoanTypeId> <!-- Can circulate -->
                         <materialTypeId>
                           <!-- Mappings to ReShare specific material types, taken from OCLC table "Type of Record" -->
+                          <!-- I got these codes for Koha's advanced search form -->
                           <xsl:variable name="mt" select="./marc:subfield[@code='y']"/> 
                           <xsl:choose>
-                          <xsl:when test="$mt='BOOK' or $mt='JUVENILE'">e65ed344-a691-4f8f-8446-3c0a346c6882</xsl:when> <!-- BKS -->
-                          <xsl:when test="$mt='XXX'">22cb5b81-2056-46ed-8050-c5d8f01caf90</xsl:when> <!-- COM -->
-                          <xsl:when test="$mt='XXX'">191da404-dec2-4977-9770-1443d9d6c238</xsl:when> <!-- CNR -->
-                          <xsl:when test="$mt=246">9f2c8d85-97e6-4722-a67c-bb51ccfb7781</xsl:when> <!-- MAP -->
+                          <xsl:when test="$mt='BOOK' or $mt='JUVENILE' or $mt='BESTSELLER' or $mt='BKARCHIVE' or $mt='THESES' or $mt='BOOK1' or $mt='REFBOOK'">e65ed344-a691-4f8f-8446-3c0a346c6882</xsl:when> <!-- BKS -->
+                          <xsl:when test="$mt='EBOOK' or $mt='ERES'">22cb5b81-2056-46ed-8050-c5d8f01caf90</xsl:when> <!-- COM -->
+                          <xsl:when test="$mt='NEWPAPER' or $mt='MAGAZINE'">191da404-dec2-4977-9770-1443d9d6c238</xsl:when> <!-- CNR -->
                           <xsl:when test="$mt='SCORE'">e5578a7e-49b9-4859-a86a-21b812215b4f</xsl:when> <!-- SCO -->
-                          <xsl:when test="$mt='XXX'">d8dc9046-a9f4-4789-adf5-678fd855b016</xsl:when> <!-- REC -->
-                          <xsl:when test="$mt='XXX'">14f1845d-2fad-4091-80c8-48614eaea40b</xsl:when> <!-- VIS -->
+                          <xsl:when test="$mt='BOOKDISK' or $mt='JUMEDIA'">d8dc9046-a9f4-4789-adf5-678fd855b016</xsl:when> <!-- REC -->
+                          <xsl:when test="$mt='AV'">14f1845d-2fad-4091-80c8-48614eaea40b</xsl:when> <!-- VIS -->
+                          <xsl:when test="$mt='XXX'">9f2c8d85-97e6-4722-a67c-bb51ccfb7781</xsl:when> <!-- MAP -->
                           <xsl:otherwise>f6dd0721-5d4a-439e-9205-c71aef39d15b</xsl:otherwise> <!-- Unmapped -->
                           </xsl:choose>
                         </materialTypeId>
