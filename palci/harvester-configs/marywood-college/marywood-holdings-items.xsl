@@ -85,6 +85,7 @@
                           <xsl:otherwise>f6dd0721-5d4a-439e-9205-c71aef39d15b</xsl:otherwise> <!-- Unmapped -->
                           </xsl:choose>
                         </materialTypeId>
+                        <enumeration><xsl:value-of select="./marc:subfield[@code='h']"/></enumeration>
                       </i>
                     </xsl:for-each>
                     </arr>
