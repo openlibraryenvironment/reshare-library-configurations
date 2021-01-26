@@ -2,9 +2,12 @@
 use UUID::Tiny ':std';
 use JSON;
 use File::Basename;
+use Getopt::Std;
 use Data::Dumper;
 
-my $locfile = shift || die "Usage: make_objecst.pl <tab separted locations file>";
+getopts('l:c:n:');
+
+my $locfile = shift || die "Usage: make_objecst.pl [ -l <starting line num>, -c <code column num>, -n <name column num> ] <tab separted locations file>";
 my $dir = dirname($locfile);
 my $conf = parse_config($dir);
 
@@ -85,20 +88,22 @@ write_jsonl('04-libraries', $lib);
 open LOC, $locfile or die "Can't find location file";
 my $c = 0;
 my $locttl = 0;
-my $skip = 4;
-my $name_el = 0;
+my $skip = $opt_l || 0;
+my $name_el = $opt_n || 1;
+my $code_el = $opt_c || 0;
+my $seen = {};
 while (<LOC>) {
   $c++;
-  if (/^Location Code/) {
-    $skip = 2;
-    $name_el = 1;
-  }
   next if $c <= $skip;
   chomp;
   my @cols = split(/\t/);
   my $name = $cols[$name_el];
   $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
-  my $code = "$libcode/$cols[0]"; 
+  my $code = "$libcode/$cols[$code_el]";
+  if ($seen->{$code}) {
+    print "Found duplicate code: $code. Skipping...\n";
+    next;
+  }
   my $loc = {
     id=>uuid($code),
     code=>$code,
@@ -111,6 +116,7 @@ while (<LOC>) {
     servicePointIds=>[ $spid ]
   };
   write_jsonl('05-locations', $loc);
+  $seen->{$code} = 1;
   $locttl++;
 }
 
