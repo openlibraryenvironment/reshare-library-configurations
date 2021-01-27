@@ -21,7 +21,9 @@
     <permanentLocationId>
       <xsl:choose>
         <xsl:when test=".='E_ASIAN_RM'">a41e444b-1c16-535b-84d1-01d4eeef3305</xsl:when>
+        <xsl:when test=".='E.ASIAN_RM'">a41e444b-1c16-535b-84d1-01d4eeef3305</xsl:when>
         <xsl:when test=".='MUS_SCORES'">8714426b-b52f-5433-87ff-98e573d2c777</xsl:when>
+        <xsl:when test=".='SCORES'">8714426b-b52f-5433-87ff-98e573d2c777</xsl:when>
         <xsl:when test=".='OVERSIZE'">1fedd5cc-ac5d-59e7-8477-b17d26eee61c</xsl:when>
         <xsl:when test=".='STACKS'">fd68a9b9-97f2-5f88-89f1-bcb588e46def</xsl:when>
         <xsl:when test=".='STORAGE'">6849da89-8314-56f2-b510-da2d96279fd1</xsl:when>

@@ -97,9 +97,9 @@ while (<LOC>) {
   next if $c <= $skip;
   chomp;
   my @cols = split(/\t/);
-  my $name = $cols[$name_el];
-  $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
   my $code = "$libcode/$cols[$code_el]";
+  my $name = $cols[$name_el] || $cols[$code_el];
+  $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
   if ($seen->{$code}) {
     print "Found duplicate code: $code. Skipping...\n";
     next;
