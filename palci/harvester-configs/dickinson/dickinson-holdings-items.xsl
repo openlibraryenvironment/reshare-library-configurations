@@ -41,12 +41,12 @@
                   <permanentLocationIdHere><xsl:value-of select="$loc-clean"/></permanentLocationIdHere>
                   <illPolicyId>
                     <xsl:choose>
-                      <xsl:when test="$loc-clean='E_ASIAN_RM'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                      <xsl:when test="$loc-clean='MUS_SCORES'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc-clean='E.ASIAN_RM'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc-clean='SCORES'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
                       <xsl:when test="$loc-clean='OVERSIZE'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
                       <xsl:when test="$loc-clean='STACKS'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
                       <xsl:when test="$loc-clean='STORAGE'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                      <xsl:when test="$loc-clean='CIRC_DESK'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc-clean='CIRC-DESK'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
                       <xsl:otherwise>b0f97013-87f5-4bab-87f2-ac4a5191b489</xsl:otherwise> <!-- Will not lend -->
                     </xsl:choose>
                   </illPolicyId>

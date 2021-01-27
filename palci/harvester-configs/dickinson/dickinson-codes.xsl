@@ -20,14 +20,16 @@
   <xsl:template match="//permanentLocationIdHere">
     <permanentLocationId>
       <xsl:choose>
-        <xsl:when test=".='E_ASIAN_RM'">a41e444b-1c16-535b-84d1-01d4eeef3305</xsl:when>
-        <xsl:when test=".='E.ASIAN_RM'">a41e444b-1c16-535b-84d1-01d4eeef3305</xsl:when>
-        <xsl:when test=".='MUS_SCORES'">8714426b-b52f-5433-87ff-98e573d2c777</xsl:when>
-        <xsl:when test=".='SCORES'">8714426b-b52f-5433-87ff-98e573d2c777</xsl:when>
+        <xsl:when test=".='E.ASIAN_RM'">83fef42d-1370-5c01-872d-ea3e62497a6c</xsl:when>
+        <xsl:when test=".='SCORES'">cef5eff8-2074-50ff-8bd3-c8f0b87ecb04</xsl:when>
         <xsl:when test=".='OVERSIZE'">1fedd5cc-ac5d-59e7-8477-b17d26eee61c</xsl:when>
         <xsl:when test=".='STACKS'">fd68a9b9-97f2-5f88-89f1-bcb588e46def</xsl:when>
         <xsl:when test=".='STORAGE'">6849da89-8314-56f2-b510-da2d96279fd1</xsl:when>
-        <xsl:when test=".='CIRC_DESK'">415505ed-4f89-5c9a-b86f-020c9937765b</xsl:when>
+        <xsl:when test=".='CIRC-DESK'">fff16cea-aafc-5571-8646-3083fbab0c4d</xsl:when>
+        <xsl:when test=".='REFERENCE'">c8c0c134-b99d-53a8-a626-073bffa62b64</xsl:when>
+        <xsl:when test=".='SC'">1d8d06ee-875f-5215-b1c0-75b9b0131f45</xsl:when>
+        <xsl:when test=".='SC-KENNEDY'">1cbdba9c-a454-59ca-a7f6-222196cd53fa</xsl:when>
+        <xsl:when test=".='TOME'">1f89f01b-b096-591b-9b41-91f3a21ecd74</xsl:when>
         <xsl:otherwise>e1f479d8-7916-576c-bb33-c524fd86ac0e</xsl:otherwise> <!-- UNMAPPED -->
       </xsl:choose>
     </permanentLocationId>
