@@ -92,6 +92,7 @@ my $skip = $opt_l || 0;
 my $name_el = $opt_n || 1;
 my $code_el = $opt_c || 0;
 my $seen = {};
+my @xsllocs;
 while (<LOC>) {
   $c++;
   next if $c <= $skip;
@@ -118,6 +119,7 @@ while (<LOC>) {
   write_jsonl('05-locations', $loc);
   $seen->{$code} = 1;
   $locttl++;
+  push @xsllocs, $loc;
 }
 
 # add unmapped location
@@ -136,8 +138,11 @@ my $umloc = {
   };
 write_jsonl('05-locations', $umloc);
 $locttl++;
+push @xsllocs, $umloc;
   
 print "$locttl locations created...\n";
+
+make_codes($instid, $idid, @xsllocs);
 
 sub write_jsonl {
   my $name = shift;
@@ -167,4 +172,60 @@ sub parse_config {
   local $/ = '';
   open CONF, $path or die "Can't find config.json file in \"$dir\"!";
   my $conf = decode_json(<CONF>);
+}
+
+sub make_codes {
+  my $inst_id = shift;
+  my $idid = shift;
+  my $when;
+  foreach (@_) {
+    my $code = $_->{code};
+    $code =~ s/^.+\///;
+    my $id = $_->{id};
+    if ($code eq 'UNMAPPED') {
+      $when .= "\n        <xsl:otherwise>$id</xsl:otherwise>";
+    } else {
+      $when .= "\n        <xsl:when test.=\"$code\">$id</xsl:when>";
+    }
+  }
+  my $xsl = <<"END_XSL";
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/>
+  <xsl:template match="@* | node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@* | node()"/>
+    </xsl:copy>
+  </xsl:template>
+
+  <!-- Map legacy code for the library/institution to a FOLIO resource identifier
+       type UUID. Used for qualifying a local record identifier with the library
+       it originated from in context of a shared index setup where the Instance
+       represents bib records from multiple libraries.
+  -->
+  <xsl:template match="//identifierTypeIdHere">
+    <identifierTypeId>$idid</identifierTypeId>
+  </xsl:template>
+
+  <!-- Map legacy location code to a FOLIO location UUID -->
+  <xsl:template match="//permanentLocationIdHere">
+    <permanentLocationId>
+      <xsl:choose>$when
+      </xsl:choose>
+    </permanentLocationId>
+  </xsl:template>
+
+  <!-- Set FOLIO Inventory ID for the institution -->
+  <xsl:template match="//institutionIdHere">
+     <institutionId>$instid</institutionId>
+  </xsl:template>
+
+</xsl:stylesheet>
+END_XSL
+
+  my $xslfile = "$dir/library-codes.xsl";
+  print "Creating codes file at $xslfile\n";
+  open XSL, ">$xslfile";
+  print XSL $xsl;
+  close XSL;
 }
