@@ -185,7 +185,7 @@ sub make_codes {
     if ($code eq 'UNMAPPED') {
       $when .= "\n        <xsl:otherwise>$id</xsl:otherwise>";
     } else {
-      $when .= "\n        <xsl:when test.=\"$code\">$id</xsl:when>";
+      $when .= "\n        <xsl:when test=\".='$code'\">$id</xsl:when>";
     }
   }
   my $xsl = <<"END_XSL";
