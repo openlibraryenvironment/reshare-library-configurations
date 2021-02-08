@@ -23,12 +23,14 @@
         <xsl:when test=".='FOLIO'">d71ee2fc-a103-512f-8c8c-7b58319ca541</xsl:when>
         <xsl:when test=".='FOLIOSCORE'">ab45865c-1eaa-58a5-8237-3a671022a6f9</xsl:when>
         <xsl:when test=".='JUVFOLIO'">48e7cad6-8441-5d1a-8407-3e915cace436</xsl:when>
-        <xsl:when test=".='JUV '">827f23ee-77f2-5e6e-94e6-fd10c7993fdb</xsl:when>
+        <xsl:when test=".='JUV'">827f23ee-77f2-5e6e-94e6-fd10c7993fdb</xsl:when>
         <xsl:when test=".='LEISURE'">67e92850-1b51-5099-af5f-f24fba273e2c</xsl:when>
         <xsl:when test=".='MAIN'">1824e787-e16a-5067-b963-a87d48dc5c03</xsl:when>
         <xsl:when test=".='SCORES'">0d70bb37-fd7d-5c66-afde-9838f0cb39c2</xsl:when>
         <xsl:when test=".='OVERSIZE'">5c428f69-615a-53f4-a54e-10180854fdb9</xsl:when>
+        <xsl:when test=".='VIDEO'">84095983-5f1d-5939-bf5d-497211286c29</xsl:when>
         <xsl:when test=".='VIDEOS'">84095983-5f1d-5939-bf5d-497211286c29</xsl:when>
+        <xsl:when test=".='MUSIC_CD'">19ebd702-fe23-52e9-845c-1f754531d473</xsl:when>
         <xsl:when test=".='MUSIC_CDS'">19ebd702-fe23-52e9-845c-1f754531d473</xsl:when>
         <xsl:when test=".='ATLAS_REF'">26a1098e-45f4-550e-bc40-8a9e6e04e3fd</xsl:when>
         <xsl:when test=".='RESHELVING'">be0b7ac4-4836-582a-92bc-6815815e484d</xsl:when>
