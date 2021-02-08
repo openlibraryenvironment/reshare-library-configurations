@@ -1,0 +1,35 @@
+STACK2	02 Stacks 2nd Floor
+STACK3	01 Stacks 3rd Floor
+CIRCAV	08 Circulation Audiovisuals
+DISP	Display Case
+DOC	14 Documents
+DOCREF	15 Documents Reference
+DVD	07 DVD Collection
+IMC	04 IMC
+IMCAV	06 IMC Audiovisuals
+IMCEQUIP	IMC Equipment
+IMCOV	05 IMC Award Collection, Noncirculating
+IMCTEXT	11 IMC Textbooks
+IMCYA	09 IMC YA
+INDEX	23 Indexes and Abstracts
+OCTH	25 OCTH Collection
+OFFICE	Office
+PADOC	16 Pennsylvania Documents
+PASC	24 PAS Collection
+PASREF	PAS Reference
+PER	20 Periodicals
+PERBDVL	21 Periodicals Bound Volumes
+READROOM2	12 Reading Room 2
+REF	03 Reference
+REFATLAS	19 Reference Atlas Case
+REFREDY	17 Ready Reference
+REFREDY2	18 Ready Reference 2
+RESV	22 Reserves
+STACK2NT	02B Stacks New Non Lending Books
+STACK3NT	01B Stacks New Non Lending Books
+STACKFOL	26 Stacks Folios
+STACKSPEC	28 Special Collections
+STORAGE	27 Storage
+UARCH	29 University Archives
+UARCHO	University Archives Off
+UNASSIGNED	Problem
