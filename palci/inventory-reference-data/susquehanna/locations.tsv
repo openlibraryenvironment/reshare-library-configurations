@@ -1,0 +1,35 @@
+FOLIO	Folio
+FOLIOSCORE	Folio Scores
+JUVFOLIO	Juvenile Folio
+JUV 	Juvenile Literature
+LEISURE	Leisure
+MAIN	Main Collection
+SCORES	Music Scores
+OVERSIZE	Oversize Books
+VIDEOS	Videos
+MUSIC_CDS	Music CDs
+ATLAS_REF	Atlas Ref
+RESHELVING	Being returned to permanent shelving
+GAMES	Board Games
+COMPACSHLF	Compact Shelving Storage
+WITHDRAWN	Discarded; attached order
+EQUIPMENT	Equipment
+GRAPHICNOV	Graphic Novels
+TECH_SERV	In technical services
+REPAIR	Item Being Repaired
+SERV_DESK	Library Service Desk
+LOST	Lost
+BINDERY	Material at the bindery
+CATALOGING	Material being cataloged
+CHECKEDOUT	Material has been checked/charged out
+ON_ORDER	Materials on order
+MICROFICHE	Microfiche
+MICROFILM	Microfilm
+MICROFORM	Microform
+NEW_BOOKS	New Books
+HOLDS	On hold for a patron
+PRINT_PER	Print Periodicals
+REFERENCE	Reference in Compact Shelving
+RESERVES	Reserves, Service Desk
+UNASSIGNED	UNASSIGNED
+DISCARD	Withdrawn from the collection
