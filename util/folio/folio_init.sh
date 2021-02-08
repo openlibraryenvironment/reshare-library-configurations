@@ -23,7 +23,7 @@ read -e -p "Service point code (optional): " scode
 read -e -p "Service point name (optional): " sname
 read -e -p "Identifier name (optional): " idname
 
-instdir=`echo $iname | tr '[:upper:]' '[:lower:]' | tr ' ' '-'`
+instdir=`echo $iname | tr '[:upper:]' '[:lower:]' | tr -s " .,'" "-"`
 fullpath="$PRDIR/$instdir"
 if [ -e $fullpath ]; then
   echo "ERROR $fullpath already exists-- exiting..."

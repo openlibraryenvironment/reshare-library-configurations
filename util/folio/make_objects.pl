@@ -1,13 +1,20 @@
 #! /usr/bin/perl
+
+use strict;
+use warnings;
 use UUID::Tiny ':std';
 use JSON;
 use File::Basename;
 use Getopt::Std;
 use Data::Dumper;
 
+my $opt_l;
+my $opt_n;
+my $opt_c;
 getopts('l:c:n:');
 
-my $locfile = shift || die "Usage: make_objecst.pl [ -l <starting line num>, -c <code column num>, -n <name column num> ] <tab separted locations file>";
+my $locfile = shift || die "Usage: make_objecst.pl [ -l <starting line num>, -c <code column num>, -n <name column num> ] <tab separted locations file> [ <harvester confgs dir> ]";
+my $hconfig = shift;
 my $dir = dirname($locfile);
 my $conf = parse_config($dir);
 
@@ -42,7 +49,7 @@ my $sp = {
   name=>$spname,
   code=>$spcode,
   discoveryDisplayName=>$spname,
-  pickupLocation=>true,
+  pickupLocation=>'true',
   holdShelfExpiryPeriod=>{
     duration=>3,
     intervalId=>'Weeks'
@@ -109,7 +116,7 @@ while (<LOC>) {
     id=>uuid($code),
     code=>$code,
     name=>"$locprefix - $name",
-    isActive=>true,
+    isActive=>'true',
     institutionId=>$instid,
     campusId=>$campid,
     libraryId=>$libid,
@@ -129,7 +136,7 @@ my $umloc = {
     id=>uuid($umcode),
     code=>$umcode,
     name=>"$umname",
-    isActive=>true,
+    isActive=>'true',
     institutionId=>$instid,
     campusId=>$campid,
     libraryId=>$libid,
@@ -223,7 +230,17 @@ sub make_codes {
 </xsl:stylesheet>
 END_XSL
 
-  my $xslfile = "$dir/library-codes.xsl";
+  my $hdir = $dir;
+  if ($hconfig) {
+    $hconfig =~ s/\/$//;
+    my $iname = $instname;
+    $iname =~ s/'//g;
+    $iname =~ s/[ ,.]+/-/g;
+    $iname = lc $iname;
+    mkdir "$hconfig/$iname";
+    $hdir = "$hconfig/$iname"
+  }
+  my $xslfile = "$hdir/library-codes.xsl";
   print "Creating codes file at $xslfile\n";
   open XSL, ">$xslfile";
   print XSL $xsl;
