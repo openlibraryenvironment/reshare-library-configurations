@@ -238,7 +238,8 @@ END_XSL
     $iname =~ s/[ ,.]+/-/g;
     $iname = lc $iname;
     mkdir "$hconfig/$iname";
-    $hdir = "$hconfig/$iname"
+    $hdir = "$hconfig/$iname";
+    mkdir "$hdir/data";
   }
   my $xslfile = "$hdir/library-codes.xsl";
   print "Creating codes file at $xslfile\n";
