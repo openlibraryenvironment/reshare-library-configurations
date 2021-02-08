@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <id>320201</id>
+    <basicTransformation>
+        <id>320201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>Slippery Rock - OAI-PMH to FOLIO Inventory</name>
+        <parallel>false</parallel>
+        <stepAssociations>
+            <id>320401</id>
+            <position>1</position>
+            <transformation>320201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>301301</id> <!-- OAI20-MARC21 to Instance XML -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>320402</id>
+            <position>2</position>
+            <transformation>320201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>320301</id>  <!-- Slippery Rock holdings and items -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>320403</id>
+            <position>3</position>
+            <transformation>320201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>320302</id> <!-- Granular library codes, Slippery Rock -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>320404</id>
+            <position>4</position>
+            <transformation>320201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>301302</id> <!-- XML to JSON -->
+            </step>
+        </stepAssociations>
+    </basicTransformation>
+</transformation>

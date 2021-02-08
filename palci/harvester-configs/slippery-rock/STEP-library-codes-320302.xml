@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep uri="http://harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com/harvester/records/steps/320302">
+    <XmlTransformStep>
+        <description>Maps locations, record identifier type for Slippery Rock</description>
+        <inputFormat>XML</inputFormat>
+        <name>Library codes, Slippery Rock</name>
+        <outputFormat>XML</outputFormat>
+        <script>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;&#xD;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;&#xD;
+&lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
+  &lt;xsl:template match="@* | node()"&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select="@* | node()"/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match="//identifierTypeIdHere"&gt;&#xD;
+    &lt;identifierTypeId&gt;4d3a1039-41f4-521e-8388-1d3c267adee4&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match="//permanentLocationIdHere"&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=".='STACK2'"&gt;acefb7ac-3fbe-5311-b619-1020764489c0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='STACK3'"&gt;60393540-eccd-5f42-b451-baed6f866fe5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='CIRCAV'"&gt;039da841-7f96-5316-99a2-cc75fe0e50dc&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='DISP'"&gt;d9d631e3-5195-5332-a10b-e7840a14cbeb&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='DOC'"&gt;a5735d34-5c8a-5626-b4ab-9be25be1e489&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='DOCREF'"&gt;103c93db-164a-5d3f-9bd3-1f30f7f3dc3a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='DVD'"&gt;540bb585-4723-5a2c-b413-0c1a41b952e2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='IMC'"&gt;14c60f43-8075-5b85-b463-06a33be45326&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='IMCAV'"&gt;37bf8e02-19a9-5e1c-883a-f931edb36b4e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='IMCEQUIP'"&gt;657ef640-2d63-5dd0-9438-bdaedd571ea7&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='IMCOV'"&gt;1aa82c5a-9e00-50b8-be30-fba78aab4c1a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='IMCTEXT'"&gt;fc53fa89-142e-5d2e-84fa-1af1be8a5754&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='IMCYA'"&gt;a06b59f1-67b7-5e62-867d-16fb7e702226&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='INDEX'"&gt;d0c2ffa9-ff0d-50c0-881c-8057ded9bb44&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='OCTH'"&gt;a66f8ebf-2049-5a77-b87c-b36149751021&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='OFFICE'"&gt;4522fe43-18a8-52e2-9337-4b4e24f43a8a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='PADOC'"&gt;f4a9acb7-f710-5574-a647-9194525e7b30&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='PASC'"&gt;d2fe7f8e-35e5-53a1-b82b-df2106e25edb&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='PASREF'"&gt;78a55af4-df5a-5083-adeb-9f4f35e68d46&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='PER'"&gt;1a3c4622-7a73-5056-a30a-123a074b6cc7&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='PERBDVL'"&gt;0cacc4e7-006d-5423-9b87-e70cef9738ab&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='READROOM2'"&gt;41905bf8-be87-59b1-a35b-841a4f87b7b5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='REF'"&gt;b0d1f7ce-d3b4-5d77-82c3-b1090dd5413e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='REFATLAS'"&gt;e6e31000-ea8b-513a-87be-aef596932afe&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='REFREDY'"&gt;5bceca8d-aebb-5cdc-86d0-4132a1a8acf7&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='REFREDY2'"&gt;08d51759-a646-5ae0-a9a6-02745ac5d72e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='RESV'"&gt;19ae626b-bbf0-5169-b8fe-655be1045b07&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='STACK2NT'"&gt;fd05c122-1062-5633-b405-cb914c2eecab&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='STACK3NT'"&gt;04bd03cc-7cc5-5271-8b80-77b448cdd831&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='STACKFOL'"&gt;d7bd0ff2-75fb-51ba-9081-0eaf5484e2e3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='STACKSPEC'"&gt;229f457f-0a71-554f-a1a9-f302c379314d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='STORAGE'"&gt;196dcf83-75a4-5502-8131-a95d3f8d8750&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='UARCH'"&gt;4e34ed91-658c-5629-8f46-6fd2d2dc4514&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='UARCHO'"&gt;99e16212-a784-589c-9b9a-bb6ccf44c0d0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='UNASSIGNED'"&gt;aa6c6384-6c3f-50a5-a218-bd9e016b2eb3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;28814724-d0fb-5089-b950-dbe2cb5da31e&lt;/xsl:otherwise&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match="//institutionIdHere"&gt;&#xD;
+     &lt;institutionId&gt;85558664-502a-515f-a305-55247826aba0&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+        <id>320302</id>
+        <testData></testData>
+        <testOutput></testOutput>
+    </XmlTransformStep>
+    <id>320302</id>
+</transformationStep>
