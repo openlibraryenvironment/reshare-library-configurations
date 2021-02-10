@@ -45,7 +45,7 @@
       &lt;xsl:choose&gt;&#xD;
         &lt;xsl:when test="marc:datafield[@tag='900' and @ind1!='4' and @ind1!=' ']"&gt;        &#xD;
           &lt;arr&gt;&#xD;
-            &lt;xsl:for-each select="marc:datafield[@tag='900' and @ind1!='4' and @ind1!=' ']"&gt;&#xD;
+            &lt;xsl:for-each select="marc:datafield[@tag='900' and @ind1!='4' and @ind1!=' ']/marc:subfield[@code='d' and starts-with(., 's')]/.."&gt;&#xD;
               &lt;xsl:variable name="holdingsId" select="marc:subfield[@code='8']"/&gt;&#xD;
               &lt;i&gt;&#xD;
                 &lt;formerIds&gt;&#xD;

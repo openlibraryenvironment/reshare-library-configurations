@@ -37,7 +37,7 @@
       <xsl:choose>
         <xsl:when test="marc:datafield[@tag='900' and @ind1!='4' and @ind1!=' ']">        
           <arr>
-            <xsl:for-each select="marc:datafield[@tag='900' and @ind1!='4' and @ind1!=' ']">
+            <xsl:for-each select="marc:datafield[@tag='900' and @ind1!='4' and @ind1!=' ']/marc:subfield[@code='d' and starts-with(., 's')]/..">
               <xsl:variable name="holdingsId" select="marc:subfield[@code='8']"/>
               <i>
                 <formerIds>
