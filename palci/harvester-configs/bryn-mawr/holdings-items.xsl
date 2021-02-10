@@ -89,6 +89,15 @@
                           </callNumberTypeId>
                         </xsl:if>
                     </xsl:for-each>
+                    <notes>
+                      <arr>
+                        <i>
+                          <note><xsl:value-of select="concat('Location code: ', $LOC)"/></note>
+                          <holdingsNoteTypeId>b160f13a-ddba-4053-b9c4-60ec5ea45d56</holdingsNoteTypeId>
+                          <staffOnly>true</staffOnly>
+                        </i>
+                      </arr>
+                    </notes>
                     <items>
                     <arr>
                         <xsl:for-each select="../marc:datafield[@tag='995']">
