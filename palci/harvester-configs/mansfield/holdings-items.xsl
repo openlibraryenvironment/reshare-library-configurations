@@ -108,6 +108,17 @@
                     </arr>
                   </holdingsStatementsForSupplements>
                 </xsl:if>
+
+                <xsl:if test="./marc:subfield[@code='k']">
+                  <holdingsStatementsForIndexes>
+                    <arr>
+                      <i>
+                        <statement><xsl:value-of select="./marc:subfield[@code='k']"/></statement>
+                        <note><xsl:value-of select="./marc:subfield[@code='l']"/></note>
+                      </i>
+                    </arr>
+                  </holdingsStatementsForIndexes>
+                </xsl:if>
               
                 <notes>
                     <arr>

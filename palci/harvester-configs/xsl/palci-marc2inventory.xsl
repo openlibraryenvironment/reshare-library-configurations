@@ -94,7 +94,7 @@
                     <identifierTypeIdHere/>
                     </i>
                 </xsl:for-each>
-                <xsl:for-each select="marc:datafield[@tag='001' or @tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074']">
+                <xsl:for-each select="marc:datafield[(@tag='001' or @tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074') and normalize-space(./marc:subfield[@code='a'])]">
                     <i>
                     <xsl:choose>
                         <xsl:when test="current()[@tag='010'] and marc:subfield[@code='a']">
