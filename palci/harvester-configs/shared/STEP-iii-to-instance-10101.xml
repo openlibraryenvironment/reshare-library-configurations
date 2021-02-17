@@ -1,65 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transformationStep uri="http://harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com/harvester/records/steps/301301">
+<transformationStep uri="http://harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com/harvester/records/steps/10101">
     <XmlTransformStep>
-        <description>PALCI: OAI20-MARC21 XML to FOLIO Instance XML</description>
-        <inputFormat>XML</inputFormat>
-        <name>PALCI: OAI20-MARC21 to Instance XML</name>
-        <outputFormat>XML</outputFormat>
+        <description>Grab the 907$a and store it in the localIdentifier field</description>
+        <inputFormat>xml</inputFormat>
+        <name>III MARC21 to Inventory</name>
+        <outputFormat>xml</outputFormat>
         <script>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
 &lt;xsl:stylesheet&#xD;
     version="1.0"&#xD;
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&#xD;
-    xmlns:marc="http://www.loc.gov/MARC21/slim"&#xD;
-    xmlns:oai20="http://www.openarchives.org/OAI/2.0/"&gt;&#xD;
+    xmlns:marc="http://www.loc.gov/MARC21/slim"&gt;&#xD;
 &#xD;
     &lt;xsl:import href="map-relator-to-contributor-type.xsl"/&gt;&#xD;
     &#xD;
     &lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
+&#xD;
     &lt;xsl:template match="/"&gt;&#xD;
         &lt;collection&gt;&#xD;
             &lt;xsl:apply-templates /&gt;&#xD;
         &lt;/collection&gt;&#xD;
     &lt;/xsl:template&gt;&#xD;
 &#xD;
-    &lt;xsl:template match="oai20:record"&gt;&#xD;
-      &lt;record&gt;&#xD;
-        &lt;xsl:choose&gt;&#xD;
-          &lt;xsl:when test="oai20:header[@status='deleted']"&gt;&#xD;
-             &lt;xsl:apply-templates/&gt;&#xD;
-          &lt;/xsl:when&gt;&#xD;
-          &lt;xsl:otherwise&gt;  &#xD;
-            &lt;!-- Store the original MARC record to be used by subsequent style sheets --&gt;&#xD;
-            &lt;original&gt;&#xD;
-              &lt;record xmlns="http://www.openarchives.org/OAI/2.0/" &#xD;
-                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" &#xD;
-                    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"&gt;&#xD;
-                &lt;xsl:for-each select="@* | node()"&gt;&#xD;
-                    &lt;xsl:copy-of select="."/&gt;&#xD;
-                &lt;/xsl:for-each&gt;&#xD;
-              &lt;/record&gt;            &#xD;
-            &lt;/original&gt;&#xD;
-            &lt;xsl:apply-templates/&gt;&#xD;
-          &lt;/xsl:otherwise&gt;&#xD;
-        &lt;/xsl:choose&gt;&#xD;
-      &lt;/record&gt;&#xD;
-    &lt;/xsl:template&gt;&#xD;
-&#xD;
-&#xD;
-    &lt;!-- If this is an OAI-PMH deletion record --&gt;&#xD;
-    &lt;xsl:template match="//oai20:header[@status='deleted']"&gt;&#xD;
-        &lt;delete&gt;&#xD;
-            &lt;oaiIdentifier&gt;&lt;xsl:value-of select="oai20:identifier"/&gt;&lt;/oaiIdentifier&gt;&#xD;
-            &lt;identifierTypeIdHere/&gt;&#xD;
-            &lt;institutionIdHere/&gt;&#xD;
-        &lt;/delete&gt;&#xD;
-    &lt;/xsl:template&gt;&#xD;
-&#xD;
     &lt;!-- MARC meta data --&gt;&#xD;
-    &lt;xsl:template match="//marc:record"&gt;&#xD;
+    &lt;xsl:template match="marc:record"&gt;&#xD;
+&#xD;
+    &lt;record&gt;&#xD;
 &#xD;
         &lt;!-- Information needed for storing source record in union catalog context --&gt;&#xD;
         &lt;institutionIdHere/&gt;&#xD;
-        &lt;localIdentifier&gt;&lt;xsl:value-of select="marc:controlfield[@tag='001']" /&gt;&lt;/localIdentifier&gt;&#xD;
+        &lt;localIdentifier&gt;&lt;xsl:value-of select="marc:datafield[@tag='907']/marc:subfield[@code='a']" /&gt;&lt;/localIdentifier&gt;&#xD;
 &#xD;
         &lt;!-- Bibliographic record for FOLIO inventory --&gt;&#xD;
         &lt;instance&gt;&#xD;
@@ -92,7 +61,7 @@
                         or marc:controlfield[@tag='001']"&gt;&#xD;
                 &lt;identifiers&gt;&#xD;
                 &lt;arr&gt;&#xD;
-                &lt;xsl:for-each select="marc:controlfield[@tag='001']"&gt;&#xD;
+                &lt;xsl:for-each select="marc:datafield[@tag='907']/marc:subfield[@code='a']"&gt;&#xD;
                     &lt;i&gt;&#xD;
                     &lt;value&gt;&lt;xsl:value-of select="."/&gt;&lt;/value&gt;&#xD;
                     &lt;!-- A subsequent library specific transformation (style sheet)&#xD;
@@ -101,7 +70,7 @@
                     &lt;identifierTypeIdHere/&gt;&#xD;
                     &lt;/i&gt;&#xD;
                 &lt;/xsl:for-each&gt;&#xD;
-                &lt;xsl:for-each select="marc:datafield[(@tag='001' or @tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074') and normalize-space(./marc:subfield[@code='a'])]"&gt;&#xD;
+                &lt;xsl:for-each select="marc:datafield[@tag='001' or @tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074']"&gt;&#xD;
                     &lt;i&gt;&#xD;
                     &lt;xsl:choose&gt;&#xD;
                         &lt;xsl:when test="current()[@tag='010'] and marc:subfield[@code='a']"&gt;&#xD;
@@ -157,7 +126,7 @@
             &lt;xsl:if test="marc:datafield[@tag='050' or @tag='060' or @tag='080' or @tag='082' or @tag='086' or @tag='090']"&gt;&#xD;
                 &lt;classifications&gt;&#xD;
                 &lt;arr&gt;&#xD;
-                    &lt;xsl:for-each select="marc:datafield[@tag='050' or @tag='060' or @tag='080' or @tag='082' or @tag='086' or @tag='090']"&gt;&#xD;
+                    &lt;xsl:for-each select="marc:datafield[@tag='050' or @tag='060' or @tag='080' or @tag='082' or @tag='086' or @tag='090']/marc:subfield[@code='a' or @code='b']/.."&gt;&#xD;
                     &lt;i&gt;&#xD;
                         &lt;xsl:choose&gt;&#xD;
                         &lt;xsl:when test="current()[@tag='050']"&gt;&#xD;
@@ -387,10 +356,21 @@
             &lt;/inclusive-dates&gt; --&gt;&#xD;
             &lt;/xsl:for-each&gt;&#xD;
         &lt;/matchKey&gt;&#xD;
+&#xD;
+        &lt;original&gt;            &#xD;
+            &lt;xsl:copy&gt;&#xD;
+                &lt;xsl:copy-of select="@*"/&gt;&#xD;
+                &lt;xsl:copy-of select="*"/&gt;&#xD;
+            &lt;/xsl:copy&gt;&#xD;
+        &lt;/original&gt;&#xD;
+&#xD;
+    &lt;/record&gt;&#xD;
+&#xD;
     &lt;/xsl:template&gt;&#xD;
 &#xD;
     &lt;xsl:template match="text()"/&gt;&#xD;
 &#xD;
+    &#xD;
     &lt;xsl:template name="remove-characters-last"&gt;&#xD;
         &lt;xsl:param name="input" /&gt;&#xD;
         &lt;xsl:param name="characters"/&gt;&#xD;
@@ -408,10 +388,11 @@
         &lt;/xsl:choose&gt;&#xD;
     &lt;/xsl:template&gt;&#xD;
 &#xD;
-&lt;/xsl:stylesheet&gt;</script>
-        <id>301301</id>
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+        <id>10101</id>
         <testData></testData>
         <testOutput></testOutput>
     </XmlTransformStep>
-    <id>301301</id>
+    <id>10101</id>
 </transformationStep>
