@@ -9,7 +9,7 @@
     <storeOriginal>true</storeOriginal>
     <enabled>false</enabled>
     <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
-      <id>901102</id> <!-- localhost, upsert by match key -->
+      <id>301101</id> <!-- localhost, upsert by match key -->
     </storage>
     <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
       <id>307201</id>
