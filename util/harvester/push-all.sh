@@ -1,8 +1,16 @@
 host=$1
 creds=$2
+targetFolio=$3
 
 if [ -z $creds ]; then
   creds="ignore:ignore"
+fi
+
+if [ -z $targetFolio ]; then
+  echo Posting Harvester configurations for harvesting to development FOLIOs
+  targetFolio="dev"
+else
+  echo Posting Harvester configurations for harvesting to $targetFolio only
 fi
 
 baseUrl=$host/harvester/records
@@ -18,13 +26,27 @@ echo =============================================================
 echo Pushing Harvester configurations from `pwd` to $host
 echo =============================================================
 
-if ls STORAGE*.xml 1>/dev/null 2>&1; then
-for file in `ls STORAGE*.xml`
-do
-    $SCRIPTDIR/push-config-if-not-exists.sh $file $storageUrl $creds STORAGE
-done
+if [ $targetFolio = dev ]
+then
+    echo Posting development FOLIOs storage configurations
+    if ls STORAGE*.xml 1>/dev/null 2>&1; then
+    for file in `ls STORAGE*.xml`
+    do
+        $SCRIPTDIR/push-config-if-not-exists.sh $file $storageUrl $creds STORAGE
+    done
+    else
+        echo "No STORAGE* configs in '`pwd`'"
+    fi
 else
-    echo "No STORAGE* configs in '`pwd`'"
+    echo "Posting storage configuration(s) for $targetFolio only"
+    if ls $targetFolio/STORAGE*.xml 1>/dev/null 2>&1; then
+    for file in `ls $targetFolio/STORAGE*.xml`
+    do
+        $SCRIPTDIR/push-config-if-not-exists.sh $file $storageUrl $creds STORAGE
+    done
+    else
+        echo "No STORAGE* configs in '`pwd`'"
+    fi
 fi
 
 if ls STEP*.xml 1>/dev/null 2>&1; then
@@ -58,13 +80,27 @@ else
     echo "No TRANSFORMATION*PUT configs to PUT in '`pwd`'"
 fi
 
-if ls HARVESTABLE*.xml 1>/dev/null 2>&1; then
-for file in `ls HARVESTABLE*.xml`
-do
-    $SCRIPTDIR/push-config-if-not-exists.sh $file $harvestableUrl $creds HARVESTABLE
-done
+if [ $targetFolio = dev ]
+then
+    echo Posting Harvestables for development FOLIOs
+    if ls HARVESTABLE*.xml 1>/dev/null 2>&1; then
+    for file in `ls HARVESTABLE*.xml`
+    do
+        $SCRIPTDIR/push-config-if-not-exists.sh $file $harvestableUrl $creds HARVESTABLE
+    done
+    else
+        echo "No harvest job (HARVESTABLE* configs) to POST in '`pwd`'"
+    fi
 else
-    echo "No harvest job (HARVESTABLE* configs) to POST in '`pwd`'"
+    echo Posting Harvestables in $targetFolio
+    if ls $targetFolio/HARVESTABLE*.xml 1>/dev/null 2>&1; then
+    for file in `ls $targetFolio/HARVESTABLE*.xml`
+    do
+        $SCRIPTDIR/push-config-if-not-exists.sh $file $harvestableUrl $creds HARVESTABLE
+    done
+    else
+        echo "No harvest job (HARVESTABLE* configs) to POST in '`pwd`'"
+    fi
 fi
 
 echo "push-all DONE ... `date`"

@@ -1,6 +1,8 @@
 banner=" This will attempt to push configuration files in directory '$1'"
 
 dir=$1 # Pass in the config directory as first argument
+targetFolio=$3  # If only Harvestables targeting a specific FOLIO address (ie production) should be populated to the Harvester
+
 . $2   # pass in the Harvester host config scripts as second argument
 
 if [ -z $username ]; then
@@ -29,8 +31,8 @@ if [ ! -d "$dir" ]; then
 fi
 
 cd shared
-../../../util/harvester/push-all.sh $host $creds
+../../../util/harvester/push-all.sh $host $creds $targetFolio
 cd ..
 
 cd $dir
-../../../util/harvester/push-all.sh $host $creds
+../../../util/harvester/push-all.sh $host $creds $targetFolio
