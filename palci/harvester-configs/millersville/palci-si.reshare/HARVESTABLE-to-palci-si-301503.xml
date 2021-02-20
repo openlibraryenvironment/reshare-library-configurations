@@ -6,7 +6,7 @@
         <url>https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_MILLRSVL/request</url>
         <oaiSetName>PALCI_RESHARE</oaiSetName>
         <storeOriginal>true</storeOriginal>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
         <metadataPrefix>marc21</metadataPrefix>
         <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
             <id>301199</id>  <!-- Storage PALCI ReShare SI -->
@@ -18,10 +18,11 @@
         <logLevel>INFO</logLevel>
         <mailLevel>WARN</mailLevel>
         <overwrite>false</overwrite>
+        <enabled>true</enabled>
+        <scheduleString>10 1 * * *</scheduleString>
         <failedRecordsLogging>ADD_ALL</failedRecordsLogging>
         <maxSavedFailedRecordsPerRun>200</maxSavedFailedRecordsPerRun>
         <maxSavedFailedRecordsTotal>1000</maxSavedFailedRecordsTotal>
-        <scheduleString>10 1 * * *</scheduleString>
         <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
         <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
     </oaiPmh>
