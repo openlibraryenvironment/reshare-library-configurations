@@ -30,7 +30,7 @@ if [ ! -d "$dir" ]; then
   exit 1
 fi
 
-cd shared
+cd _shared
 ../../../util/harvester/push-all.sh $host $creds $targetFolio
 cd ..
 
