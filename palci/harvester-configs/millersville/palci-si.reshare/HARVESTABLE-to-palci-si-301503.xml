@@ -18,7 +18,10 @@
         <logLevel>INFO</logLevel>
         <mailLevel>WARN</mailLevel>
         <overwrite>false</overwrite>
-        <scheduleString>10 10 10 6 *</scheduleString>
+        <failedRecordsLogging>ADD_ALL</failedRecordsLogging>
+        <maxSavedFailedRecordsPerRun>200</maxSavedFailedRecordsPerRun>
+        <maxSavedFailedRecordsTotal>1000</maxSavedFailedRecordsTotal>
+        <scheduleString>10 1 * * *</scheduleString>
         <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
         <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
     </oaiPmh>
