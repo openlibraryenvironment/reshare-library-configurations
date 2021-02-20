@@ -12,7 +12,7 @@ This is a description of the steps involved in pushing existing data and configu
 
      and run
      `./delete-folio-sample-locations.sh diku@localhost:9130.sh`
-     
+
 2) Install ReShare item material types
 
     go to folder `/palci/inventory-reference-data/`
@@ -21,7 +21,7 @@ This is a description of the steps involved in pushing existing data and configu
 
     `./shared-index-material-types/create-si-material-types.sh diku@localhost:9130.sh`
 
-### Once per additional library    
+### Once per additional library
 3) To install Millersville locations (granular locations structure in this example), Temple locations (granular too) and Villanova locations,
 
     go to folder `/palci/inventory-reference-data/`
@@ -33,22 +33,22 @@ This is a description of the steps involved in pushing existing data and configu
     `./temple/temple-granular-location-codes-create.sh diku@localhost:9130.sh`
 
     `./villanova/villanova-location-codes-create.sh diku@localhost:9130.sh`
-    
+
 4) To push configurations for the Harvest jobs that will populate Inventory with instances, holdings and item for Millersville, Temple and Villanova,
 
     go to folder `/palci/harvester-config`
 
     and assuming that the Harvester is running at `localhost:8080`, run
 
-    `./push-configs.sh millersville localhost8080.sh`
+    `./push-configs.sh millersville _harvesters/localhost8080.sh`
 
-    `./push-configs.sh temple localhost8080.sh`
+    `./push-configs.sh temple _harvesters/localhost8080.sh`
 
-    `./push-configs.sh villanova localhost8080.sh`
-    
+    `./push-configs.sh villanova _harvesters/localhost8080.sh`
+
     For a remote harvester protected by basic authentication - and maybe SSL - the BASIC AUTH username should be provided in the host config scripts, which will bring up a password prompt. For example, the script providing access information for the Harvester at folio-dev-us-east-1-1 contains the BASIC user name for that Harvester:
 
-    `./push-configs.sh temple harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com.sh`
+    `./push-configs.sh temple _harvesters/harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com.sh`
 
     Some of the configurations are shared (the FOLIO storage definition for example). The first command will install them if they don't already exist, the following will display messages that the entities already exist and thus were skipped.
 

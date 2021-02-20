@@ -17,9 +17,9 @@ if [ -z $host ]; then
   echo " Usage:  ./push-configs.sh config-dir harvester-host-script"
   echo
   echo " Examples:"
-  echo "           ./push-configs.sh millersville localhost8080.sh"
+  echo "           ./push-configs.sh millersville _harvesters/localhost8080.sh"
   echo
-  echo "           ./push-configs.sh temple harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com.sh"
+  echo "           ./push-configs.sh temple _harvesters/harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com.sh"
   exit 1
 fi
 
