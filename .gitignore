@@ -1,3 +1,4 @@
 passwords.txt
 data/
 ignored-by-git/
+.vscode/
