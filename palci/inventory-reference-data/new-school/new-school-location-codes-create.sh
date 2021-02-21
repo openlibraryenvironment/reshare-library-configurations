@@ -64,7 +64,6 @@ curl -w '\n' -X POST -D - \
      }' \
   $protocol://$host/location-units/campuses
 
-# Fallback location
 curl -w '\n' -X POST -D - \
   -H "Content-type: application/json" \
   -H "X-Okapi-Tenant: $tenant" \
@@ -77,6 +76,7 @@ curl -w '\n' -X POST -D - \
      }' \
   $protocol://$host/location-units/libraries
 
+# Fallback location
 curl -w '\n' -X POST -D - \
   -H "Content-type: application/json" \
   -H "X-Okapi-Tenant: $tenant" \
