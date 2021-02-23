@@ -99,6 +99,7 @@ my $skip = $opt_l || 0;
 my $name_el = $opt_n || 1;
 my $code_el = $opt_c || 0;
 my $seen = {};
+my $names_used = {};
 my @xsllocs;
 while (<LOC>) {
   $c++;
@@ -111,6 +112,9 @@ while (<LOC>) {
   if ($seen->{$code}) {
     print "Found duplicate code: $code. Skipping...\n";
     next;
+  }
+  if ($names_used->{$name}) {
+    $name .= " ($cols[$code_el])";
   }
   my $loc = {
     id=>uuid($code),
@@ -125,6 +129,7 @@ while (<LOC>) {
   };
   write_jsonl('05-locations', $loc);
   $seen->{$code} = 1;
+  $names_used->{$name} = 1;
   $locttl++;
   push @xsllocs, $loc;
 }
