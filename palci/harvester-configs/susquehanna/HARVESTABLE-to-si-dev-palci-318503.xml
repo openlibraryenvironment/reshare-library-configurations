@@ -46,7 +46,7 @@
     "folioAuthPath": "bl-users/login",&#xD;
     "folioTenant": "si_dev",&#xD;
     "folioUsername": "si_admin",&#xD;
-    "folioPassword": "admin1325",&#xD;
+    "folioPassword": "XXXXXXX"
     "instanceStoragePath": "instance-storage-match/instances",&#xD;
     "holdingsStoragePath": "holdings-storage/holdings",&#xD;
     "itemStoragePath": "item-storage/items",&#xD;

@@ -43,7 +43,7 @@
     "folioAuthPath": "bl-users/login",&#xD;
     "folioTenant": "palci_si",&#xD;
     "folioUsername": "palci_admin",&#xD;
-    "folioPassword": "wZ2lti9kVu9sCK4mXLAjoF0S",&#xD;
+    "folioPassword": "XXXXXXX"
     "inventoryUpsertPath": "shared-inventory-upsert-matchkey",&#xD;
     "marcStoragePath": "marc-records"&#xD;
 }</json>
