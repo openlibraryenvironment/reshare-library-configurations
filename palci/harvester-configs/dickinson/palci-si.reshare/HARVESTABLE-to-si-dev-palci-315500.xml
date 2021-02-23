@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<harvestable>
+    <oaiPmh>
+        <id>315500</id>
+        <name>PALCI SI: Dickinson</name>
+        <url>https://dickinson.alma.exlibrisgroup.com/view/oai/01DICKINSON_INST/request</url>
+        <oaiSetName>PALCI_RESHARE</oaiSetName>
+        <metadataPrefix>marc21</metadataPrefix>
+        <storeOriginal>true</storeOriginal>
+        <enabled>true</enabled>
+        <scheduleString>10 15 * * *</scheduleString>
+        <failedRecordsLogging>ADD_ALL</failedRecordsLogging>
+        <maxSavedFailedRecordsPerRun>200</maxSavedFailedRecordsPerRun>
+        <maxSavedFailedRecordsTotal>1000</maxSavedFailedRecordsTotal>
+        <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
+            <id>301199</id>  <!-- Storage PALCI SI ReShare -->
+        </storage>    
+        <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
+            <id>315201</id>
+        </transformation>
+        <harvestImmediately>false</harvestImmediately>
+        <logLevel>INFO</logLevel>
+        <mailLevel>OK</mailLevel>
+        <overwrite>false</overwrite>
+        <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
+        <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
+    </oaiPmh>
+</harvestable>
