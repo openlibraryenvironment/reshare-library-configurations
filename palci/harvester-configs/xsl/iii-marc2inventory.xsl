@@ -14,15 +14,18 @@
         </collection>
     </xsl:template>
 
+
     <!-- MARC meta data -->
     <xsl:template match="marc:record">
-
     <record>
+
+    <xsl:choose>
+      <xsl:when test="substring(marc:leader,6,1)!='d'">
 
         <!-- Information needed for storing source record in union catalog context -->
         <institutionIdHere/>
         <localIdentifier><xsl:value-of select="marc:datafield[@tag='907']/marc:subfield[@code='a']" /></localIdentifier>
-
+        
         <!-- Bibliographic record for FOLIO inventory -->
         <instance>
             <source>MARC</source>
@@ -356,6 +359,16 @@
                 <xsl:copy-of select="*"/>
             </xsl:copy>
         </original>
+
+   </xsl:when>
+   <xsl:otherwise>
+        <delete>
+          <institutionIdHere/>
+          <localIdentifier><xsl:value-of select="marc:datafield[@tag='907']/marc:subfield[@code='a']" /></localIdentifier>
+          <identifierTypeIdHere/>
+         </delete>
+      </xsl:otherwise>
+    </xsl:choose>
 
     </record>
 
