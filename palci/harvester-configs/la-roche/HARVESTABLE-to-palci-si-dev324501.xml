@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<harvestable>
+  <xmlBulk>
+    <id>324501</id>
+    <name>PALCI SI: La Roche to PALCI SI DEV</name>
+    <url>ftp://laroche:XXXXXXXX@ftp.folio.indexdata.com/incoming</url>
+    <storeOriginal>true</storeOriginal>
+    <enabled>false</enabled>
+    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
+      <id>301105</id> <!-- palci_si remote -->
+    </storage>
+    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
+      <id>324201</id>
+    </transformation>
+    <harvestImmediately>false</harvestImmediately>
+    <logLevel>INFO</logLevel>
+    <mailLevel>WARN</mailLevel>
+    <overwrite>false</overwrite>
+    <scheduleString>10 10 10 6 *</scheduleString>
+    <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
+    <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
+  </xmlBulk>
+</harvestable>
