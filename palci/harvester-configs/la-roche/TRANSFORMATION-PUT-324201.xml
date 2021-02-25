@@ -5,14 +5,14 @@
         <id>324201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>La Roche - OAI-PMH to FOLIO Inventory</name>
+        <name>La Roche - III MARC21 to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
             <id>324401</id>
             <position>1</position>
             <transformation>324201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>301301</id> <!-- OAI20-MARC21 to Instance XML -->
+                <id>301304</id> <!-- III MARC21 to Inventory -->
             </step>
         </stepAssociations>
         <stepAssociations>

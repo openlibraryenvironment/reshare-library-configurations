@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<harvestable>
+  <xmlBulk>
+    <id>324500</id>
+    <name>La Roche to localhost from vagrant</name>
+    <url></url>
+    <allowErrors>true</allowErrors>
+    <includeFilePattern></includeFilePattern>
+    <excludeFilePattern></excludeFilePattern>
+    <passiveMode>true</passiveMode>
+    <recurse>false</recurse>
+    <splitAt>1</splitAt>
+    <splitSize>100</splitSize>
+    <storeOriginal>true</storeOriginal>
+    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
+      <id>301101</id> <!-- localhost from vagrant box -->
+    </storage>
+    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
+      <id>324201</id>
+    </transformation>
+    <harvestImmediately>false</harvestImmediately>
+    <logLevel>INFO</logLevel>
+    <mailLevel>OK</mailLevel>
+    <overwrite>false</overwrite>
+    <enabled>false</enabled>
+    <failedRecordsLogging>ADD_ALL</failedRecordsLogging>
+    <maxSavedFailedRecordsPerRun>200</maxSavedFailedRecordsPerRun>
+    <maxSavedFailedRecordsTotal>1000</maxSavedFailedRecordsTotal>
+    <scheduleString>10 2 * * *</scheduleString>
+    <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
+    <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
+  </xmlBulk>
+</harvestable>
