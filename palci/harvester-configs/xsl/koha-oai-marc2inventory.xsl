@@ -2,26 +2,57 @@
 <xsl:stylesheet
     version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:marc="http://www.loc.gov/MARC21/slim">
+    xmlns:marc="http://www.loc.gov/MARC21/slim"
+    xmlns:oai20="http://www.openarchives.org/OAI/2.0/">
 
     <xsl:import href="map-relator-to-contributor-type.xsl"/>
     
     <xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/>
-
     <xsl:template match="/">
         <collection>
             <xsl:apply-templates />
         </collection>
     </xsl:template>
 
-    <!-- MARC meta data -->
-    <xsl:template match="marc:record">
+    <xsl:template match="oai20:record">
+      <record>
+        <xsl:choose>
+          <xsl:when test="oai20:header[@status='deleted']">
+             <xsl:apply-templates/>
+          </xsl:when>
+          <xsl:otherwise>  
+            <!-- Store the original MARC record to be used by subsequent style sheets -->
+            <original>
+              <record xmlns="http://www.openarchives.org/OAI/2.0/" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+                <xsl:for-each select="@* | node()">
+                    <xsl:copy-of select="."/>
+                </xsl:for-each>
+              </record>            
+            </original>
+            <xsl:apply-templates/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </record>
+    </xsl:template>
 
-    <record>
+
+    <!-- If this is an OAI-PMH deletion record -->
+    <xsl:template match="//oai20:header[@status='deleted']">
+        <delete>
+            <oaiIdentifier><xsl:value-of select="oai20:identifier"/></oaiIdentifier>
+            <identifierTypeIdHere/>
+            <institutionIdHere/>
+        </delete>
+    </xsl:template>
+
+    <!-- MARC meta data -->
+    <xsl:template match="//marc:record">
 
         <!-- Information needed for storing source record in union catalog context -->
         <institutionIdHere/>
-        <localIdentifier><xsl:value-of select="marc:controlfield[@tag='001']" /></localIdentifier>
+        <localIdentifier><xsl:value-of select="marc:datafield[@tag='999']/marc:subfield[@code='c']" /></localIdentifier>
 
         <!-- Bibliographic record for FOLIO inventory -->
         <instance>
@@ -50,11 +81,10 @@
             </instanceTypeId>
 
             <!-- Identifiers -->
-            <xsl:if test="marc:datafield[@tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074']
-                        or marc:controlfield[@tag='001']">
+            <xsl:if test="marc:datafield[@tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074' or @tag='999']">
                 <identifiers>
                 <arr>
-                <xsl:for-each select="marc:controlfield[@tag='001']">
+                <xsl:for-each select="marc:datafield[@tag='999']/marc:subfield[@code='c']">
                     <i>
                     <value><xsl:value-of select="."/></value>
                     <!-- A subsequent library specific transformation (style sheet)
@@ -63,7 +93,7 @@
                     <identifierTypeIdHere/>
                     </i>
                 </xsl:for-each>
-                <xsl:for-each select="marc:datafield[@tag='001' or @tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074']/marc:subfield[@code='a' and string-length(.) > 1]/..">
+                <xsl:for-each select="marc:datafield[(@tag='001' or @tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074') and normalize-space(./marc:subfield[@code='a'])]">
                     <i>
                     <xsl:choose>
                         <xsl:when test="current()[@tag='010'] and marc:subfield[@code='a']">
@@ -349,21 +379,10 @@
             </inclusive-dates> -->
             </xsl:for-each>
         </matchKey>
-
-        <original>            
-            <xsl:copy>
-                <xsl:copy-of select="@*"/>
-                <xsl:copy-of select="*"/>
-            </xsl:copy>
-        </original>
-
-    </record>
-
     </xsl:template>
 
     <xsl:template match="text()"/>
 
-    
     <xsl:template name="remove-characters-last">
         <xsl:param name="input" />
         <xsl:param name="characters"/>
