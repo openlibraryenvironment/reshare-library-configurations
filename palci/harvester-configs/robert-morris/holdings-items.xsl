@@ -101,7 +101,7 @@
           </xsl:if>
         </xsl:for-each>
       </xsl:if>
-      <xsl:if test="not(marc:datafield[@tag='945'])">
+      <xsl:if test="not(marc:datafield[@tag='852'])">
         <i>
           <permanentLocationIdHere>UNMAPPED</permanentLocationIdHere>
         </i>
