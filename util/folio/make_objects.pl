@@ -26,9 +26,18 @@ my $campcode = $conf->{campusCode} ? $instcode . "/" . $conf->{campusCode} : "$i
 my $campid = uuid($campcode);
 my $campname = $conf->{campusName} || $instname; 
 
-my $libcode = $conf->{libraryCode} ? $campcode . "/" . $conf->{libraryCode} : "$campcode/$instcode";
-my $libid = uuid("$libcode");
+# my $libcode = $conf->{libraryCode} ? $campcode . "/" . $conf->{libraryCode} : "$campcode/$instcode";
+my $libcode = $conf->{libraryCode} || $instcode;
 my $libname = $conf->{libraryName} || $instname;
+my @libcodes = split(/,\s*/, $libcode);
+my @libnames = split(/,\s*/, $libname);
+my $libraries = {};
+my $x = 0;
+foreach (@libcodes) {
+  my $code = "$campcode/$_";
+  $libraries->{$code} = $libnames[$x];
+  $x++;
+}
 
 my $locprefix = $conf->{locationPrefix} || $instname;
 
@@ -83,78 +92,91 @@ my $camp = {
 write_jsonl('03-campuses', $camp);
 
 # library
-my $lib = {
-  id=>$libid,
-  name=>$libname,
-  code=>$libcode,
-  campusId=>$campid
-};
-write_jsonl('04-libraries', $lib);
-
-# locations
-open LOC, $locfile or die "Can't find location file";
-my $c = 0;
-my $locttl = 0;
-my $skip = $opt_l || 0;
-my $name_el = $opt_n || 1;
-my $code_el = $opt_c || 0;
-my $seen = {};
-my $names_used = {};
-my @xsllocs;
-while (<LOC>) {
-  $c++;
-  next if $c <= $skip;
-  chomp;
-  my @cols = split(/\t/);
-  my $code = "$libcode/$cols[$code_el]";
-  my $name = $cols[$name_el] || $cols[$code_el];
-  $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
-  if ($seen->{$code}) {
-    print "Found duplicate code: $code. Skipping...\n";
-    next;
-  }
-  if ($names_used->{$name}) {
-    $name .= " ($cols[$code_el])";
-  }
-  my $loc = {
-    id=>uuid($code),
-    code=>$code,
-    name=>"$locprefix - $name",
-    isActive=>'true',
-    institutionId=>$instid,
-    campusId=>$campid,
-    libraryId=>$libid,
-    primaryServicePoint=>$spid,
-    servicePointIds=>[ $spid ]
+foreach (sort keys %{ $libraries }) {
+  my $libcode = $_;
+  my $libid = uuid($libcode);
+  my $libname = $libraries->{$_};
+  my $lib = {
+    id=>$libid,
+    name=>$libname,
+    code=>$libcode,
+    campusId=>$campid
   };
-  write_jsonl('05-locations', $loc);
-  $seen->{$code} = 1;
-  $names_used->{$name} = 1;
-  $locttl++;
-  push @xsllocs, $loc;
+  write_jsonl('04-libraries', $lib);
+  make_locations($instid, $campid, $libid, $libcode);
 }
 
-# add unmapped location
-my $umcode = "$libcode/UNMAPPED";
-my $umname = "$locprefix - Unmapped location";
-my $umloc = {
-    id=>uuid($umcode),
-    code=>$umcode,
-    name=>"$umname",
-    isActive=>'true',
-    institutionId=>$instid,
-    campusId=>$campid,
-    libraryId=>$libid,
-    primaryServicePoint=>$spid,
-    servicePointIds=>[ $spid ]
-  };
-write_jsonl('05-locations', $umloc);
-$locttl++;
-push @xsllocs, $umloc;
-  
-print "$locttl locations created...\n";
+sub make_locations {
+  my $instid = shift;
+  my $campid = shift;
+  my $libid = shift;
+  my $libcode = shift;
+  open LOC, $locfile or die "Can't find location file";
+  my $c = 0;
+  my $locttl = 0;
+  my $skip = $opt_l || 0;
+  my $lib_el = 2;
+  my $name_el = $opt_n || 1;
+  my $code_el = $opt_c || 0;
+  my $seen = {};
+  my $names_used = {};
+  my @xsllocs;
+  while (<LOC>) {
+    $c++;
+    next if $c <= $skip;
+    chomp;
+    my @cols = split(/\t/);
+    my $code = "$libcode/$cols[$code_el]";
+    my $name = $cols[$name_el] || $cols[$code_el];
+    $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
+    if ($seen->{$code}) {
+      print "Found duplicate code: $code. Skipping...\n";
+      next;
+    }
+    if ($names_used->{$name}) {
+      $name .= " ($cols[$code_el])";
+    }
+    my $loc = {
+      id=>uuid($code),
+      code=>$code,
+      name=>"$locprefix - $name",
+      isActive=>'true',
+      institutionId=>$instid,
+      campusId=>$campid,
+      libraryId=>$libid,
+      primaryServicePoint=>$spid,
+      servicePointIds=>[ $spid ]
+    };
+    write_jsonl('05-locations', $loc);
+    $seen->{$code} = 1;
+    $names_used->{$name} = 1;
+    $locttl++;
+    push @xsllocs, $loc;
+  }
 
-make_codes($instid, $idid, @xsllocs);
+  # add unmapped location
+  my $umcode = "$libcode/UNMAPPED";
+  my $umname = "$locprefix - Unmapped location";
+  my $umloc = {
+      id=>uuid($umcode),
+      code=>$umcode,
+      name=>"$umname",
+      isActive=>'true',
+      institutionId=>$instid,
+      campusId=>$campid,
+      libraryId=>$libid,
+      primaryServicePoint=>$spid,
+      servicePointIds=>[ $spid ]
+    };
+  write_jsonl('05-locations', $umloc);
+  $locttl++;
+  push @xsllocs, $umloc;
+    
+  print "$locttl locations created...\n";
+
+  make_codes($instid, $idid, @xsllocs);
+}
+
 
 sub write_jsonl {
   my $name = shift;
