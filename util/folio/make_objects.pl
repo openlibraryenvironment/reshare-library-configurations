@@ -48,6 +48,7 @@ my $idid = uuid("identifier/$idname");
 my $file_created = {};
 my $json = JSON->new();
 $json->canonical();
+my @xsllocs;
 
 # service point
 my $sp = {
@@ -103,6 +104,8 @@ foreach (sort keys %{ $libraries }) {
   make_locations($instid, $campid, $libid, $libcode, $libname);
 }
 
+make_codes($instid, $idid, @xsllocs);
+
 sub make_locations {
   my $instid = shift;
   my $campid = shift;
@@ -120,7 +123,6 @@ sub make_locations {
   $match_code =~ s/^.+\///;
   my $seen = {};
   my $names_used = {};
-  my @xsllocs;
   while (<LOC>) {
     $c++;
     next if $c <= $skip;
@@ -176,7 +178,6 @@ sub make_locations {
     
   print "$locttl locations created for $libname\n";
 
-  make_codes($instid, $idid, @xsllocs);
 }
 
 
@@ -215,8 +216,9 @@ sub make_codes {
   my $idid = shift;
   my $when;
   foreach (@_) {
+    print Dumper($_);
     my $code = $_->{code};
-    $code =~ s/^.+\///;
+    $code =~ s/(.+?\/){1,3}//;
     my $id = $_->{id};
     if ($code eq 'UNMAPPED') {
       $when .= "\n        <xsl:otherwise>$id</xsl:otherwise>";
