@@ -8,12 +8,10 @@ use File::Basename;
 use Getopt::Std;
 use Data::Dumper;
 
-my $opt_l;
-my $opt_n;
-my $opt_c;
-getopts('l:c:n:');
+our($opt_l, $opt_c, $opt_m, $opt_n);
+getopts('l:c:m:n');
 
-my $locfile = shift || die "Usage: make_objecst.pl [ -l <starting line num>, -c <code column num>, -n <name column num> ] <tab separted locations file> [ <harvester confgs dir> ]";
+my $locfile = shift || die "Usage: make_objecst.pl [ -l <starting line num>, -c <code column num>, -n <name column num> -m <library match column> ] <tab separted locations file> [ <harvester confgs dir> ]";
 my $hconfig = shift;
 my $dir = dirname($locfile);
 my $conf = parse_config($dir);
@@ -26,7 +24,6 @@ my $campcode = $conf->{campusCode} ? $instcode . "/" . $conf->{campusCode} : "$i
 my $campid = uuid($campcode);
 my $campname = $conf->{campusName} || $instname; 
 
-# my $libcode = $conf->{libraryCode} ? $campcode . "/" . $conf->{libraryCode} : "$campcode/$instcode";
 my $libcode = $conf->{libraryCode} || $instcode;
 my $libname = $conf->{libraryName} || $instname;
 my @libcodes = split(/,\s*/, $libcode);
@@ -103,7 +100,7 @@ foreach (sort keys %{ $libraries }) {
     campusId=>$campid
   };
   write_jsonl('04-libraries', $lib);
-  make_locations($instid, $campid, $libid, $libcode);
+  make_locations($instid, $campid, $libid, $libcode, $libname);
 }
 
 sub make_locations {
@@ -111,13 +108,16 @@ sub make_locations {
   my $campid = shift;
   my $libid = shift;
   my $libcode = shift;
+  my $libname = shift;
   open LOC, $locfile or die "Can't find location file";
   my $c = 0;
   my $locttl = 0;
   my $skip = $opt_l || 0;
-  my $lib_el = 2;
+  my $lib_el = ($opt_m =~ /[0-9]/) ? $opt_m : -1;
   my $name_el = $opt_n || 1;
   my $code_el = $opt_c || 0;
+  my $match_code = $libcode;
+  $match_code =~ s/^.+\///;
   my $seen = {};
   my $names_used = {};
   my @xsllocs;
@@ -128,7 +128,9 @@ sub make_locations {
     my @cols = split(/\t/);
     my $code = "$libcode/$cols[$code_el]";
     my $name = $cols[$name_el] || $cols[$code_el];
-    $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
+    my $libmatch = $cols[$lib_el] || '';
+    next if $lib_el > -1 && $libmatch !~ /$match_code/;
+    # $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
     if ($seen->{$code}) {
       print "Found duplicate code: $code. Skipping...\n";
       next;
@@ -156,7 +158,7 @@ sub make_locations {
 
   # add unmapped location
   my $umcode = "$libcode/UNMAPPED";
-  my $umname = "$locprefix - Unmapped location";
+  my $umname = "$locprefix - $libname Unmapped location";
   my $umloc = {
       id=>uuid($umcode),
       code=>$umcode,
@@ -172,7 +174,7 @@ sub make_locations {
   $locttl++;
   push @xsllocs, $umloc;
     
-  print "$locttl locations created...\n";
+  print "$locttl locations created for $libname\n";
 
   make_codes($instid, $idid, @xsllocs);
 }
