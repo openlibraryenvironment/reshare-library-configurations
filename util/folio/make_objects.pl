@@ -216,7 +216,6 @@ sub make_codes {
   my $idid = shift;
   my $when;
   foreach (@_) {
-    print Dumper($_);
     my $code = $_->{code};
     $code =~ s/(.+?\/){1,3}//;
     my $id = $_->{id};

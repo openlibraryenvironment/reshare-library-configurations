@@ -44,10 +44,12 @@
               <permanentLocationIdHere><xsl:value-of select="$loc-clean"/></permanentLocationIdHere>
               <illPolicyId>
                 <xsl:choose>
-                  <xsl:when test="$loc-clean='Stacks (Top Floor)'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='New Books'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='Oversize (Main Floor)'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='Kalevitch Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='LFMC / Flat Oversize Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='LFMC / General Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='LFMC / Oversize Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='LFMM / Flat Oversize Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='LFMM / General Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='LFMM / Oversize Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
                   <xsl:otherwise>b0f97013-87f5-4bab-87f2-ac4a5191b489</xsl:otherwise> <!-- Will not lend -->
                 </xsl:choose>
               </illPolicyId>
