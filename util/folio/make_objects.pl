@@ -9,6 +9,7 @@ use Getopt::Std;
 use Data::Dumper;
 
 our($opt_l, $opt_c, $opt_m, $opt_n);
+$opt_m = 1;
 getopts('l:c:m:n');
 
 my $locfile = shift || die "Usage: make_objecst.pl [ -l <starting line num>, -c <code column num>, -n <name column num> -m <library match column> ] <tab separted locations file> [ <harvester confgs dir> ]";
@@ -116,7 +117,7 @@ sub make_locations {
   my $c = 0;
   my $locttl = 0;
   my $skip = $opt_l || 0;
-  my $lib_el = ($opt_m && $opt_m =~ /[0-9]/) ? $opt_m : -1;
+  my $lib_el = ($opt_m =~ /[0-9]/) ? $opt_m : -1;
   my $name_el = $opt_n || 1;
   my $code_el = $opt_c || 0;
   my $match_code = $libcode;
@@ -184,7 +185,6 @@ sub make_locations {
 
 }
 
-
 sub write_jsonl {
   my $name = shift;
   my $obj = shift;
@@ -222,9 +222,13 @@ sub make_codes {
   foreach (@_) {
     my $code = $_->{code};
     $code =~ s/(.+?\/){1,3}//;
+    my $libcode = $_->{code};
+    $libcode =~ s/.+\/.+\/(.+)\/.+/$1/;
     my $id = $_->{id};
-    if ($code eq 'UNMAPPED') {
-      $when .= "\n        <xsl:otherwise>$id</xsl:otherwise>";
+    if ($_ eq $_[-1] && $code eq 'UNMAPPED') {
+      $when .= "\n        <xsl:otherwise>$id</xsl:otherwise> <!-- Unmapped ($libcode) -->";
+    } elsif ($code eq 'UNMAPPED') {
+      $when .= "\n        <xsl:when test=\"starts-with(., '$libcode')\">$id</xsl:when> <!-- Unmapped ($libcode)-->";
     } else {
       $when .= "\n        <xsl:when test=\".='$code'\">$id</xsl:when>";
     }

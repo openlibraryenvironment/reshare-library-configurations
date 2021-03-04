@@ -50,16 +50,10 @@
                 <xsl:variable name="LOC" select="marc:subfield[@code='d']" />
                 <illPolicyId>
                   <xsl:choose>
-                    <xsl:when test="$LOC='FOLIO'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='FOLIOSCORE'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='JUVFOLIO'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='JUV'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='LEISURE'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='MAIN'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='SCORES'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='OVERSIZE'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='VIDEOS'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='MUSIC_CDS'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
+                    <xsl:when test="$LOC='humain'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
+                    <xsl:when test="$LOC='hutxt'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
+                    <xsl:when test="$LOC='hugames'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
+                    <xsl:when test="$LOC='hucareer'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
                     <xsl:otherwise><xsl:value-of select="$WILL_NOT_LEND" /></xsl:otherwise>
                   </xsl:choose>
                 </illPolicyId>
