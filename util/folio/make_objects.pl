@@ -116,7 +116,7 @@ sub make_locations {
   my $c = 0;
   my $locttl = 0;
   my $skip = $opt_l || 0;
-  my $lib_el = ($opt_m =~ /[0-9]/) ? $opt_m : -1;
+  my $lib_el = ($opt_m && $opt_m =~ /[0-9]/) ? $opt_m : -1;
   my $name_el = $opt_n || 1;
   my $code_el = $opt_c || 0;
   my $match_code = $libcode;
@@ -160,7 +160,11 @@ sub make_locations {
 
   # add unmapped location
   my $umcode = "$libcode/UNMAPPED";
-  my $umname = "$locprefix - $libname Unmapped location";
+  my $libsect = '';
+  if ($locprefix ne $libname) {
+    $libsect = " $libname"
+  }
+  my $umname = "$locprefix -$libsect Unmapped location";
   my $umloc = {
       id=>uuid($umcode),
       code=>$umcode,
