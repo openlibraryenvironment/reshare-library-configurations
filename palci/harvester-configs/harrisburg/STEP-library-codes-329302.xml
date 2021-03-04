@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>329302</id>
+  <XmlTransformStep>
+    <id>329302</id>
+    <description>Maps locations, record identifier type for Harrisburg</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Harrisburg</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;&#xD;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;&#xD;
+&lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
+  &lt;xsl:template match="@* | node()"&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select="@* | node()"/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match="//identifierTypeIdHere"&gt;&#xD;
+    &lt;identifierTypeId&gt; uuid &lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match="//permanentLocationIdHere"&gt;&#xD;
+    &lt;permanentLocationId&gt; uuid &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match="//institutionIdHere"&gt;&#xD;
+     &lt;institutionId&gt; uuid &lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
