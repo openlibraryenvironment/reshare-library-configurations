@@ -162,7 +162,7 @@ sub make_locations {
   # add unmapped location
   my $umcode = "$libcode/UNMAPPED";
   my $libsect = '';
-  if ($locprefix ne $libname) {
+  if ($opt_m > -1 && $locprefix ne $libname) {
     $libsect = " $libname"
   }
   my $umname = "$locprefix -$libsect Unmapped location";
