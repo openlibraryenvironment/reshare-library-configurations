@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<storage>
+    <inventoryStorage>
+        <id>301102</id>
+        <name>si dev</name>
+        <url>https://si-dev-okapi.folio-dev.indexdata.com/</url>
+        <description>Inventory storage - dev server</description>
+        <enabled>true</enabled>
+        <json>
+{&#xD;
+    "folioAuthPath": "bl-users/login",&#xD;
+    "folioTenant": "si_dev",&#xD;
+    "folioUsername": "si_admin",&#xD;
+    "folioPassword": "PW-HERE",&#xD;
+    "inventoryUpsertPath": "shared-inventory-upsert-matchkey",&#xD;
+    "marcStoragePath": "marc-records"&#xD;
+}
+        </json>
+    </inventoryStorage>
+</storage>

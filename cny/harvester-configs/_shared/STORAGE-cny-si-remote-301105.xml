@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<storage>
+    <inventoryStorage>
+        <id>301105</id>
+        <name>cny_si remote</name>
+        <url>https://cny-okapi.reshare.indexdata.com</url>
+        <description>Remote CNY SI server</description>
+        <enabled>true</enabled>
+        <json>
+{&#xD;
+    "folioAuthPath": "bl-users/login",&#xD;
+    "folioTenant": "cny_si",&#xD;
+    "folioUsername": "cny_admin",&#xD;
+    "folioPassword": "PW-HERE",&#xD;
+    "inventoryUpsertPath": "shared-inventory-upsert-matchkey",&#xD;
+    "marcStoragePath": "marc-records"&#xD;
+}
+        </json>
+    </inventoryStorage>
+</storage>

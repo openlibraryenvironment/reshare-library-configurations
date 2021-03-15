@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+    <CustomTransformStep>
+        <customClass>com.indexdata.masterkey.localindices.harvest.messaging.InstanceXmlToInstanceJsonTransformerRouter</customClass>
+        <description>FOLIO Instance XML to JSON</description>
+        <enabled>true</enabled>
+        <inputFormat>XML</inputFormat>
+        <name>Instance XML to JSON</name>
+        <outputFormat>JSON</outputFormat>
+        <script></script>
+        <id>301302</id>
+        <testData></testData>
+        <testOutput></testOutput>
+        <type>custom</type>
+    </CustomTransformStep>
+    <id>301302</id>
+</transformationStep>
