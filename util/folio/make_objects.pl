@@ -9,7 +9,7 @@ use Getopt::Std;
 use Data::Dumper;
 
 our($opt_l, $opt_c, $opt_m, $opt_n);
-$opt_m = 1;
+$opt_m = -1;
 getopts('l:c:m:n');
 
 my $locfile = shift || die "Usage: make_objecst.pl [ -l <starting line num>, -c <code column num>, -n <name column num> -m <library match column> ] <tab separted locations file> [ <harvester confgs dir> ]";
