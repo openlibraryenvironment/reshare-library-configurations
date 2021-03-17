@@ -1,0 +1,44 @@
+53room	53 Room	Full
+vcassette	Audiovisual-Cassette Tape	Short
+vcdmusic	Audiovisual-CD Music	Short
+vcdrom	Audiovisual-CD-ROM	Short
+vlanguage	Audiovisual-Language Material	Short
+vmisc	Audiovisual-Miscellaneous	Short
+vvhs	Audiovisual-VHS	Short
+circ	Circulating Books	Full
+folio	Circulating Folio Books	Full
+oversize	Circulating Oversize Books	Full
+vdvd	DVD	Short
+gdocs	Gov Docs	Full
+rr4	Reading Room - 4th floor	Full
+uarchives	Archives
+pbound	Bound Periodicals
+ubradley	Bradley
+pcurrent	Current Periodicals
+uearlyamer	Early American Imprints
+uearlyeuro	Early European Imprints
+cdgdrom	Gov Docs CD-ROM
+gdindex	Gov Docs Indexes
+gdref	Gov Docs Reference
+honorkiosk	Honor Kiosk
+umanu	Manuscripts
+microfiche	Microfiche
+microfilm	Microfilm
+unininger	Nininger
+soriental	Orientalia
+upatton	Patton
+rr3	Reading Room - 3rd floor
+readyref	Ready Reference
+reference	Reference
+reserve	Reserves
+uschley	Schley
+dcpme	Simon Center
+uspecial	Special Collection
+uoversize	Special Collection Oversize
+ureading	Special Collection Reading Room
+storage	Storage
+utextbook	Textbooks
+uthayer	Thayer
+uthayerbig	Thayer Oversize
+uvault	Vault
+vvinyl	Audiovisual-Vinyl Records
