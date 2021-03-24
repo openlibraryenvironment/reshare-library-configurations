@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<harvestable>
+  <xmlBulk>
+    <id>304503</id>
+    <name>CNY: RPI to SI dev</name>
+    <url>ftp://rpi:XXXXXXXX@ftp.folio.indexdata.com</url>
+    <storeOriginal>true</storeOriginal>
+    <enabled>false</enabled>
+    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
+      <id>301102</id>
+    </storage>
+    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
+      <id>304201</id>
+    </transformation>
+    <harvestImmediately>false</harvestImmediately>
+    <logLevel>INFO</logLevel>
+    <mailLevel>WARN</mailLevel>
+    <overwrite>false</overwrite>
+    <scheduleString>10 10 10 6 *</scheduleString>
+    <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
+    <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
+  </xmlBulk>
+</harvestable>
