@@ -133,6 +133,9 @@ sub make_locations {
     my $name = $cols[$name_el] || $cols[$code_el];
     my $libmatch = $cols[$lib_el] || '';
     next if $lib_el > -1 && $libmatch !~ /$match_code/;
+    if ($lib_el > -1) {
+      $name = "$libname $name";
+    }
     # $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
     if ($seen->{$code}) {
       print "Found duplicate code: $code. Skipping...\n";
