@@ -10,7 +10,7 @@ use Data::Dumper;
 
 our($opt_l, $opt_c, $opt_m, $opt_n);
 $opt_m = -1;
-getopts('l:c:m:n');
+getopts('l:c:m:n:');
 
 my $locfile = shift || die "Usage: make_objecst.pl [ -l <starting line num>, -c <code column num>, -n <name column num> -m <library match column> ] <tab separted locations file> [ <harvester confgs dir> ]";
 my $hconfig = shift;
@@ -232,6 +232,8 @@ sub make_codes {
       $when .= "\n        <xsl:otherwise>$id</xsl:otherwise> <!-- Unmapped ($libcode) -->";
     } elsif ($code eq 'UNMAPPED') {
       $when .= "\n        <xsl:when test=\"starts-with(., '$libcode')\">$id</xsl:when> <!-- Unmapped ($libcode)-->";
+    } elsif ($opt_m > -1) {
+      $when .= "\n        <xsl:when test=\".='$libcode $code'\">$id</xsl:when>";
     } else {
       $when .= "\n        <xsl:when test=\".='$code'\">$id</xsl:when>";
     }

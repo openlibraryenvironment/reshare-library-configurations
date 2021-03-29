@@ -1,66 +1,68 @@
-YRMA	Beranek Collection
-YRMA	Book Stacks
-YRMA	CDROM
-YRMA	DVD
-YRMA	Outsize
-YRMA	Video
-YRMM	Book Stacks
-YRMM	CD (1st Floor)
-YRMM	CDROM (1st Floor)
-YRMM	DVD (2nd Floor)
-YRMM	Microform
-YRMM	Outsize
-YRMM	Phonorecord (1st Floor)
-YRMM	Technical Reports (3rd Floor)
-YRMM	Thesis Microfilm (1st Floor)
-YRMM	VHS Video (Service Desk)
-YRMA	Billed
-YRMA	Course Reserve
-YRMA	Course Reserve Overnight
-YRMA	In Process
-YRMA	Journal Stacks
-YRMA	Microform
-YRMA	Outsize Library-Use Only
-YRMA	Reference
-YRMA	Reference CDROM
-YRMA	Reference Outsize
-YRMA	Reserve
-YRMA	Reserve Overnight
-YRMA	Special Reserve
-YRMA	Technical Services
-YRMA	Thesis
-YRMM	1st Floor Shelving
-YRMM	Architecture Thesis (Folsom Service Desk)
-YRMM	Ask Staff
-YRMM	Billed
-YRMM	Book Stacks Library-Use Only
-YRMM	Class of '96 Reading Room
-YRMM	Class of '96 Reading Room (2nd Floor)
-YRMM	Course Reserve
-YRMM	Course Reserve 2-day
-YRMM	Course Reserve Overnight
-YRMM	Exhibit
-YRMM	Hartford Thesis (1st Floor Shelving)
-YRMM	Hartford Thesis CDROM Storage (Service Desk)
-YRMM	In Process
-YRMM	Journal Stacks
-YRMM	Music Score (3rd Floor)
-YRMM	Music Score Outsize (3rd Floor)
-YRMM	Online
-YRMM	Online (Rensselaer Users)
-YRMM	Outsize Library-Use Only
-YRMM	Reference
-YRMM	Reference Reserve (Service Desk)
-YRMM	Technical Services
-YRMM	Thesis (1st Floor Shelving)
-YRMM	Web Resource (Rensselaer Users)
-YRMS	Book Stacks
-YRMS	Friedman Library
-YRMS	In Process
-YRMS	Manuscripts
-YRMS	Microfilm
-YRMS	Outsize Shelves
-YRMS	Reference
-YRMS	Roebling Library
-YRMS	Shuster Library
-YRMS	Thesis
+YRMA	YRMA / Beranek Collection	Beranek Collection
+YRMA	YRMA / Book Stacks	Book Stacks
+YRMA	YRMA / CDROM	CDROM
+YRMA	YRMA / DVD	DVD
+YRMA	YRMA / Outsize	Outsize
+YRMA	YRMA / Video	Video
+YRMM	YRMM / Book Stacks	Book Stacks
+YRMM	YRMM / CD (1st Floor)	CD (1st Floor)
+YRMM	YRMM / CDROM (1st Floor)	CDROM (1st Floor)
+YRMM	YRMM / DVD (2nd Floor)	DVD (2nd Floor)
+YRMM	YRMM / Microform	Microform
+YRMM	YRMM / Outsize	Outsize
+YRMM	YRMM / Phonorecord (1st Floor)	Phonorecord (1st Floor)
+YRMM	YRMM / Technical Reports (3rd Floor)	Technical Reports (3rd Floor)
+YRMM	YRMM / Thesis Microfilm (1st Floor)	Thesis Microfilm (1st Floor)
+YRMM	YRMM / VHS Video (Service Desk)	VHS Video (Service Desk)
+YRMA	YRMA / Billed	Billed
+YRMA	YRMA / Course Reserve	Course Reserve
+YRMA	YRMA / Course Reserve Overnight	Course Reserve Overnight
+YRMA	YRMA / In Process	In Process
+YRMA	YRMA / Journal Stacks	Journal Stacks
+YRMA	YRMA / Microform	Microform
+YRMA	YRMA / Outsize Library-Use Only	Outsize Library-Use Only
+YRMA	YRMA / Reference	Reference
+YRMA	YRMA / Reference CDROM	Reference CDROM
+YRMA	YRMA / Reference Outsize	Reference Outsize
+YRMA	YRMA / Reserve	Reserve
+YRMA	YRMA / Reserve Overnight	Reserve Overnight
+YRMA	YRMA / Special Reserve	Special Reserve
+YRMA	YRMA / Technical Services	Technical Services
+YRMA	YRMA / Thesis	Thesis
+YRMM	YRMM / 1st Floor Shelving	1st Floor Shelving
+YRMM	YRMM / Architecture Thesis (Folsom Service Desk)	Architecture Thesis (Folsom Service Desk)
+YRMM	YRMM / Ask Staff	Ask Staff
+YRMM	YRMM / Billed	Billed
+YRMM	YRMM / Book Stacks Library-Use Only	Book Stacks Library-Use Only
+YRMM	YRMM / Class of '96 Reading Room	Class of '96 Reading Room
+YRMM	YRMM / Class of '96 Reading Room (2nd Floor)	Class of '96 Reading Room (2nd Floor)
+YRMM	YRMM / Course Reserve	Course Reserve
+YRMM	YRMM / Course Reserve 2-day	Course Reserve 2-day
+YRMM	YRMM / Course Reserve Overnight	Course Reserve Overnight
+YRMM	YRMM / Exhibit	Exhibit
+YRMM	YRMM / Hartford Thesis (1st Floor Shelving)	Hartford Thesis (1st Floor Shelving)
+YRMM	YRMM / Hartford Thesis CDROM Storage (Service Desk)	Hartford Thesis CDROM Storage (Service Desk)
+YRMM	YRMM / In Process	In Process
+YRMM	YRMM / Journal Stacks	Journal Stacks
+YRMM	YRMM / Music Score (3rd Floor)	Music Score (3rd Floor)
+YRMM	YRMM / Music Score Outsize (3rd Floor)	Music Score Outsize (3rd Floor)
+YRMM	YRMM / Online	Online
+YRMM	YRMM / Online (Rensselaer Users)	Online (Rensselaer Users)
+YRMM	YRMM / Outsize Library-Use Only	Outsize Library-Use Only
+YRMM	YRMM / Reference	Reference
+YRMM	YRMM / Reference Reserve (Service Desk)	Reference Reserve (Service Desk)
+YRMM	YRMM / Technical Services	Technical Services
+YRMM	YRMM / Thesis (1st Floor Shelving)	Thesis (1st Floor Shelving)
+YRMM	YRMM / Web Resource (Rensselaer Users)	Web Resource (Rensselaer Users)
+YRMS	YRMS / Book Stacks	Book Stacks
+YRMS	YRMS / Friedman Library	Friedman Library
+YRMS	YRMS / In Process	In Process
+YRMS	YRMS / Manuscripts	Manuscripts
+YRMS	YRMS / In Process	In Process
+YRMS	YRMS / Manuscripts	Manuscripts
+YRMS	YRMS / Microfilm	Microfilm
+YRMS	YRMS / Outsize Shelves	Outsize Shelves
+YRMS	YRMS / Reference	Reference
+YRMS	YRMS / Roebling Library	Roebling Library
+YRMS	YRMS / Shuster Library	Shuster Library
+YRMS	YRMS / Thesis	Thesis
