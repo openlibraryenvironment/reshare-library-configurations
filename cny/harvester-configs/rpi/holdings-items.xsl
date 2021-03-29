@@ -37,7 +37,7 @@
           </xsl:variable>
           <xsl:variable name="lib" select="./marc:subfield[@code='b']"/>
           <xsl:variable name="loc-code" select="./marc:subfield[@code='c']"/>
-          <xsl:variable name="loc" select="concat($lib, ' / ', $loc-code)"/>
+          <xsl:variable name="loc" select="concat($lib, ' ', $loc-code)"/>
           <xsl:if test="not($loc=$preloc)">
             <i>
               <xsl:variable name="loc-clean" select="normalize-space($loc)"/>
