@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep uri="http://cny-harvester.reshare.indexdata.com/harvester/records/steps/305302">
+    <XmlTransformStep>
+        <description>Maps locations, record identifier type for Adelphi</description>
+        <inputFormat>XML</inputFormat>
+        <name>Library codes, Adelphi</name>
+        <outputFormat>XML</outputFormat>
+        <script>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;&#xD;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;&#xD;
+&lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
+  &lt;xsl:template match="@* | node()"&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select="@* | node()"/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match="//identifierTypeIdHere"&gt;&#xD;
+    &lt;identifierTypeId&gt;52694239-f231-5534-b3cc-002c67502f22&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match="//permanentLocationIdHere"&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=".='HAUP dvd'"&gt;15351808-da55-5d7b-bb32-567198b163fb&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HAUP main'"&gt;4a50d1be-4767-52fe-868d-a18715844d93&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HAUP juvenile'"&gt;da0f9c73-3f72-5758-8039-588d7c7ed28d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HAUP periodical'"&gt;d3ae2d34-feaf-5f93-bb64-ddbcfe1e7cec&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HAUP prcl'"&gt;1cbe012a-0484-5bcf-8062-22a0d8467030&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HAUP reference'"&gt;114e633d-0819-5721-8133-d178b5c72fd7&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HAUP reserve'"&gt;7c4f91a9-e6c1-5976-a937-16bbf8057d8e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test="starts-with(., 'HAUP')"&gt;4da1e125-fd26-5043-bafe-69db3c5e7435&lt;/xsl:when&gt; &lt;!-- Unmapped (HAUP)--&gt;&#xD;
+        &lt;xsl:when test=".='HV reserve'"&gt;3a92bbc9-4324-5d84-8125-d15af66de9a1&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HV reference'"&gt;3f3a85d5-8708-5f36-b031-167890dcad7d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HV occres'"&gt;66b2b26a-e127-596d-ac58-6f2b56a025f9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HV dvd'"&gt;7d7e5e49-17e0-575b-9d5b-e546a1a3206e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HV main'"&gt;b3f6d241-f02f-56b2-8ca1-1a5bc456d612&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='HV vhs'"&gt;d358139e-e387-510a-841e-c55c2d5e7cb0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test="starts-with(., 'HV')"&gt;1261112f-bd28-5eca-9fb7-a75a7740e7bc&lt;/xsl:when&gt; &lt;!-- Unmapped (HV)--&gt;&#xD;
+        &lt;xsl:when test=".='MAIN main'"&gt;c60fc2c1-c36f-5ffa-b0b7-a89224934c9a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN clevel'"&gt;ec65fd3a-7e4c-5268-b444-fbd97553b96a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN microforms'"&gt;7ac74207-3375-5dcb-b4d4-f5a075bb3e05&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN dvd'"&gt;833247f3-fa0c-5bb7-adb8-27d4e00b32f3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN atlas'"&gt;9efca190-7426-5537-a1e5-c15e7f6f70f9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN cmcact'"&gt;5fa59922-bc80-5206-9366-2325630563bf&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN cmcbb'"&gt;0c7fdbfb-c185-5e2e-bac5-3e5fbcaa3606&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN cmcjuv'"&gt;6c678f68-feb3-571a-81ac-7369c53991b6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN cmctest'"&gt;37f42cbf-e12d-577e-816c-7cd1a7fed156&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN cmctext'"&gt;36394d0d-13c8-597f-be35-23a9495247f6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN pdfres'"&gt;59894c34-4a5b-59c7-8d65-c13d5ee5c0b5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN cmc'"&gt;52e4be99-cbbb-586c-a733-02e170100d7c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN dei'"&gt;f800df6a-d6af-51c3-b987-924dd2931fa9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN vhs'"&gt;33801df0-f9ac-51d5-bc5a-07714450293a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN internet'"&gt;d24fbef1-0536-5908-9735-103a56de2afe&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN empty'"&gt;b34fd5f5-4091-5c07-9fe1-aa7004e538d6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN folio'"&gt;80932324-601e-550a-a8f3-aab99a6a4d36&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN reffolio'"&gt;1ab83c31-cdf2-51ad-bbc9-0484708aea0b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN refcfolio'"&gt;b6e8d6ec-4c72-5af9-84da-6d46eb988260&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN foliox'"&gt;9f6d2bfd-4f18-587a-b936-2b1c7b60a22c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN govdoc'"&gt;202860f8-0c89-5e18-bc58-1496ecd9d542&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN haylounge'"&gt;6c1336a5-4d34-5bd6-84e3-e09115f92d11&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN ill'"&gt;d47e863c-4bb9-5fdb-b8ad-ad84f3f4ff56&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN itdesk'"&gt;e578149b-3b4c-5424-b7cd-bed7537f48bd&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN newbooks'"&gt;45f2bd43-5cdd-5b8e-9f86-aa8ad7f07207&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN npreserve'"&gt;463900e9-5fb4-55b3-86f7-a722e0db20f2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN periodical'"&gt;d9c1f1c3-e1b4-522a-b218-2896900853e9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN persres'"&gt;077ef2f5-9fda-5b55-851e-f45e81116c6c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN prcl'"&gt;2cf6419a-a20a-5b14-b6dc-2187defcc4ef&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN UNASSIGNED'"&gt;0ae2124e-6167-547b-a17c-98da7f6d9cad&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN readyref'"&gt;05dc186b-6dc2-53b4-b584-3828af43dbe6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN reference'"&gt;2563f35b-1556-5b7d-8889-0cb67f4561cb&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN refc'"&gt;e64f34b2-481d-5000-81f3-69f05dc96bd8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN reserve'"&gt;bf72c982-05d3-5e01-9b7d-3d5b8b012285&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN reserve112'"&gt;ecd65847-bb83-5506-a800-013890a5a053&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN servicept'"&gt;ec365961-e531-5622-8167-5b64e0e2a423&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN stref'"&gt;99e54f87-a735-5107-84bf-3ed21a208a12&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MAIN swirbul112'"&gt;4ce1c730-5ec3-533e-8385-c69517da3298&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test="starts-with(., 'MAIN')"&gt;cc5ffd6a-553f-5ab9-8911-cd03b9d8b9f7&lt;/xsl:when&gt; &lt;!-- Unmapped (MAIN)--&gt;&#xD;
+        &lt;xsl:when test=".='MH dvd'"&gt;abd3a491-71a5-5918-9e0d-864078e0fbe9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH main'"&gt;b8ca6ff8-3876-58a5-8fed-cd1e231ed59f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH vhs'"&gt;011cc40a-ba9d-5bba-a71f-e11493876fa5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH cmcact'"&gt;2780c9d3-6e86-51d7-aca5-bfa468302023&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH cmcjuv'"&gt;02609422-fd07-58b8-9d9a-cba80d3126bd&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH cmcjuvref'"&gt;8fba5e41-5936-5c92-8764-903dc9184f6f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH cmc'"&gt;29e67ff5-e208-5ac0-ad24-a6d6060ee2cd&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH periodical'"&gt;44af25cd-ad6b-5d74-8d1e-1f2e79a7b3da&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH reserve'"&gt;98c12be7-eb43-5d39-86ec-43bb51b6c429&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH reference'"&gt;8a4000de-3c5a-5e0d-baa5-ebfeb911d66a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH nonprint'"&gt;01d91021-18be-525b-92b4-396fabc1a7ad&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH prcl'"&gt;1ecebb6c-cc76-5fab-bdd0-741148baee1c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='MH vfr'"&gt;8802771d-b4e0-5751-8ac7-c96f285b492e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test="starts-with(., 'MH')"&gt;450266bf-a75f-5d1c-8772-947f1cc79c81&lt;/xsl:when&gt; &lt;!-- Unmapped (MH)--&gt;&#xD;
+        &lt;xsl:when test=".='UASC archives'"&gt;e1d26cfd-f9c4-554e-89fe-bfbc5dfa6ca6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='UASC speccoll'"&gt;df96ab9f-0d95-5401-8d76-19a83fa66203&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='UASC specflat'"&gt;124c4e8a-3da0-5d7b-82f2-72f2c3db8cdf&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='UASC specfolio'"&gt;2b58662c-3743-5423-9566-1b92851894a7&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='UASC specfolx'"&gt;749f7064-008e-5622-b385-db49a5fc169c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=".='UASC specoff'"&gt;9bed65cd-0b8d-5aef-8172-cfbefa7a2e3a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;2100fb0c-2fc1-5e7f-8803-d0a492f6089c&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (UASC) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match="//institutionIdHere"&gt;&#xD;
+     &lt;institutionId&gt;3a4afabb-e8a0-5d3d-965f-616363548f6d&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+        <id>305302</id>
+        <testData></testData>
+        <testOutput></testOutput>
+    </XmlTransformStep>
+    <id>305302</id>
+</transformationStep>
