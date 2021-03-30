@@ -17,6 +17,7 @@
   </xsl:template>
 
   <!-- Map legacy location code to a FOLIO location UUID -->
+  <xsl:variable name="apos">'</xsl:variable>
   <xsl:template match="//permanentLocationIdHere">
     <permanentLocationId>
       <xsl:choose>
@@ -57,8 +58,8 @@
         <xsl:when test=".='YRMM Ask Staff'">02c8ee6c-182e-55ba-b2a2-061a49c6c12d</xsl:when>
         <xsl:when test=".='YRMM Billed'">ffd423d4-ae9f-577f-8a8a-0253a349fa2c</xsl:when>
         <xsl:when test=".='YRMM Book Stacks Library-Use Only'">9bc97412-4c76-53b5-b238-c7ce6902eca9</xsl:when>
-        <xsl:when test=".='YRMM Class of '96 Reading Room'">6b3ced3b-f9ac-5f9c-b6c4-c30e63b044d3</xsl:when>
-        <xsl:when test=".='YRMM Class of '96 Reading Room (2nd Floor)'">8aaac369-a571-5408-92d1-6dcd93a0084c</xsl:when>
+        <xsl:when test='.="YRMM Class of &apos;96 Reading Room"'>6b3ced3b-f9ac-5f9c-b6c4-c30e63b044d3</xsl:when>
+        <xsl:when test='.="YRMM Class of &apos;96 Reading Room (2nd Floor)"'>8aaac369-a571-5408-92d1-6dcd93a0084c</xsl:when>
         <xsl:when test=".='YRMM Course Reserve'">6182d0c8-1e47-58b6-94fd-3ab746d4c9a7</xsl:when>
         <xsl:when test=".='YRMM Course Reserve 2-day'">f92cb6bd-50fa-5407-916d-7658cdcfd42c</xsl:when>
         <xsl:when test=".='YRMM Course Reserve Overnight'">5eb82105-cd91-5b59-a950-c0c224119f22</xsl:when>

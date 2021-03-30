@@ -44,26 +44,41 @@
               <permanentLocationIdHere><xsl:value-of select="$loc-clean"/></permanentLocationIdHere>
               <illPolicyId>
                 <xsl:choose>
-                  <xsl:when test="$loc-clean='LFMC / Flat Oversize Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='LFMC / General Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='LFMC / Oversize Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='LFMM / Flat Oversize Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='LFMM / General Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='LFMM / Oversize Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='YRMA Beranek Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMA Book Stacks'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMA CDROM'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMA DVD'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMA Outsize'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMA Video'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMM Book Stacks'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMM CD (1st Floor)'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMM CDROM (1st Floor)'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMM DVD (2nd Floor)'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMM Microform'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMM Outsize'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMM Phonorecord (1st Floor)'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMM Technical Reports (3rd Floor)'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMM Thesis Microfilm (1st Floor)'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='YRMM VHS Video (Service Desk)'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
                   <xsl:otherwise>b0f97013-87f5-4bab-87f2-ac4a5191b489</xsl:otherwise> <!-- Will not lend -->
                 </xsl:choose>
               </illPolicyId>
-              <callNumber>
+              <xsl:variable name="callno">
                 <xsl:choose>
-                  <xsl:when test="../marc:datafield[@tag='852']/marc:subfield[@code='i']">
-                    <xsl:value-of select="concat(../marc:datafield[@tag='852']/marc:subfield[@code='h'], ' ', ../marc:datafield[@tag='852']/marc:subfield[@code='i'])"/>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="../marc:datafield[@tag='852']/marc:subfield[@code='h']"/>
-                  </xsl:otherwise>
+                  <xsl:when test="./marc:subfield[@code='i']"><xsl:value-of select="concat(./marc:subfield[@code='h'], ' ', ./marc:subfield[@code='i'])"/></xsl:when>
+                  <xsl:otherwise><xsl:value-of select="./marc:subfield[@code='h']"/></xsl:otherwise>
                 </xsl:choose>
-              </callNumber>
-              <callNumberTypeId>95467209-6d7b-468b-94df-0f5d7ad2747d</callNumberTypeId> <!-- LC -->
+              </xsl:variable>
+              <callNumber><xsl:value-of select="$callno"/></callNumber>
+              <xsl:variable name='cntype'>
+                <xsl:choose>
+                  <xsl:when test="./@ind1='0'">95467209-6d7b-468b-94df-0f5d7ad2747d</xsl:when> <!-- LC -->
+                  <xsl:when test="./@ind1='1'">03dd64d0-5626-4ecd-8ece-4531e0069f35</xsl:when> <!-- Dewey -->
+                  <xsl:when test="./@ind1='3'">fc388041-6cd0-4806-8a74-ebe3b9ab4c6e</xsl:when> <!-- Sudoc -->
+                  <xsl:otherwise>6caca63e-5651-4db6-9247-3205156e9699</xsl:otherwise> <!-- Other -->
+                </xsl:choose>
+              </xsl:variable>
+              <callNumberTypeId><xsl:value-of select="$cntype"/></callNumberTypeId>
               <notes>
                 <arr>
                   <i>
@@ -80,22 +95,21 @@
                     <xsl:variable name="iid" select="./marc:subfield[@code='8']" />
                     <xsl:variable name="item-node" select="../marc:datafield[@tag='876' and ./marc:subfield[@code='9']=$iid]" />
                     <itemIdentifier><xsl:value-of select="$iid"/></itemIdentifier>
+                    <permanentLocationIdHere><xsl:value-of select="$loc-clean"/></permanentLocationIdHere>
                     <barcode><xsl:value-of select="$item-node/marc:subfield[@code='p']"/></barcode>
                     <status><name>Unknown</name></status>
                     <permanentLoanTypeId>2b94c631-fca9-4892-a730-03ee529ffe27</permanentLoanTypeId> <!-- Can circulate -->
                     <materialTypeId>
-                      <!-- Mappings to ReShare specific material types, taken from OCLC table "Type of Record" -->
-                      <!-- Mapping from leader position 6 -->
                       <xsl:choose>
-                      <xsl:when test="$bl='s' or $bl='b'">191da404-dec2-4977-9770-1443d9d6c238</xsl:when> <!-- CNR -->
-                      <xsl:when test="$mt='a' or $mt='t'">e65ed344-a691-4f8f-8446-3c0a346c6882</xsl:when> <!-- BKS -->
-                      <xsl:when test="$mt='m'">22cb5b81-2056-46ed-8050-c5d8f01caf90</xsl:when>            <!-- COM -->
-                      <xsl:when test="$mt='e' or $mt='f'">9f2c8d85-97e6-4722-a67c-bb51ccfb7781</xsl:when> <!-- MAP -->
-                      <xsl:when test="$mt='c' or $mt='d'">e5578a7e-49b9-4859-a86a-21b812215b4f</xsl:when> <!-- SCO -->
-                      <xsl:when test="$mt='i' or $mt='j'">d8dc9046-a9f4-4789-adf5-678fd855b016</xsl:when> <!-- REC -->
-                      <xsl:when test="$mt='g'">14f1845d-2fad-4091-80c8-48614eaea40b</xsl:when>            <!-- VIS -->
-                      <xsl:when test="$mt='p'">bdfc300b-8a03-4ae6-b42a-6243afa0b7b1</xsl:when>            <!-- MIX -->
-                      <xsl:otherwise>f6dd0721-5d4a-439e-9205-c71aef39d15b</xsl:otherwise>            <!-- Unmapped -->
+                        <xsl:when test="$bl='s' or $bl='b'">191da404-dec2-4977-9770-1443d9d6c238</xsl:when> <!-- CNR -->
+                        <xsl:when test="$mt='a' or $mt='t'">e65ed344-a691-4f8f-8446-3c0a346c6882</xsl:when> <!-- BKS -->
+                        <xsl:when test="$mt='m'">22cb5b81-2056-46ed-8050-c5d8f01caf90</xsl:when>            <!-- COM -->
+                        <xsl:when test="$mt='e' or $mt='f'">9f2c8d85-97e6-4722-a67c-bb51ccfb7781</xsl:when> <!-- MAP -->
+                        <xsl:when test="$mt='c' or $mt='d'">e5578a7e-49b9-4859-a86a-21b812215b4f</xsl:when> <!-- SCO -->
+                        <xsl:when test="$mt='i' or $mt='j'">d8dc9046-a9f4-4789-adf5-678fd855b016</xsl:when> <!-- REC -->
+                        <xsl:when test="$mt='g'">14f1845d-2fad-4091-80c8-48614eaea40b</xsl:when>            <!-- VIS -->
+                        <xsl:when test="$mt='p'">bdfc300b-8a03-4ae6-b42a-6243afa0b7b1</xsl:when>            <!-- MIX -->
+                        <xsl:otherwise>f6dd0721-5d4a-439e-9205-c71aef39d15b</xsl:otherwise>            <!-- Unmapped -->
                       </xsl:choose>
                     </materialTypeId>
                     <xsl:choose>
