@@ -136,7 +136,7 @@ sub make_locations {
     if ($lib_el > -1) {
       $name = "$libname $name";
     }
-    # $name =~ s/^$libname\s*//;  # strip the library name from the front of location name
+    $name =~ s/^$libname $libname/$libname/;  # strip the library name from the front of location name
     if ($seen->{$code}) {
       print "Found duplicate code: $code. Skipping...\n";
       next;
