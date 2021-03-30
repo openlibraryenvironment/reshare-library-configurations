@@ -1,0 +1,71 @@
+main	Main	All
+clevel	C Level	Book
+microforms	Microforms	All
+dvd	DVD	All
+haup dvd	Hauppauge DVD	All
+haup main	Hauppauge Main	All
+mh dvd	Manhattan DVD	All
+mh main	Manhattan Main	All
+mh vhs	Manhattan VHS	All
+atlas	Atlas Stand
+cmcact	CMC Activity
+cmcbb	CMC Big Book
+cmcjuv	CMC Juvenile
+cmctest	CMC Test
+cmctext	CMC Textbook
+pdfres	Course Reserve Documents
+cmc	Curriculum Materials Center
+dei	DEI Display
+vhs	VHS Storage
+internet	Electronic Resource
+empty	Empty
+folio	Folio
+reffolio	Folio Reference
+refcfolio	Folio Reference C Level
+foliox	Folio X
+govdoc	Government Documents
+haylounge	Hay Lounge
+ill	InterLibrary Loan
+itdesk	IT Help Desk
+newbooks	New Book Lounge
+npreserve	Nonprint Reserve
+periodical	Periodicals
+persres	Personal Copy Reserve
+prcl	Popular Reading Collection Lounge
+UNASSIGNED	Problem location from Migration
+readyref	Ready Reference
+reference	Reference
+refc	Reference C Level
+reserve	Reserve
+reserve112	Reserve112
+servicept	Single Service Point
+stref	Staff Reference
+swirbul112	Swirbul 112
+vhs	VHS Storage
+haup juvenile	Hauppuage Juvenile
+haup periodical	Hauppuage Periodical
+haup prcl	Hauppuage Popular Reading Collection
+haup reference	Hauppuage Reference
+haup reserve	Hauppuage Reserve
+hv reserve	Hudson Valley Reserve
+hv reference	Hudson Valley Reference
+hv occres	Hudson Valley OCC Reserve
+mh cmcact	Manhattan CMC Activity
+mh cmcjuv	Manhattan CMC Juvenile
+mh cmcjuvref	Manhattan CMC Juvenile Ref
+mh cmc	Manhattan CMC
+mh periodical	Manhattan Periodicals
+mh reserve	Manhattan Reserve
+mh reference	Manhattan Reference
+mh nonprint	Manhattan Nonprint
+mh prcl	Manhattan Popular Reading Collection
+mh vfr	Manhattan VFR
+uasc archives	Special Collections and Archives Archives
+uasc speccoll	Special Collections and Archives Special Collections
+uasc specflat	Special Collections and Archives Special Collections Flat
+uasc specfolio	Special Collections and Archives Special Collections Folio
+uasc specfolx	Special Collections and Archives Special Collections Folio X
+uasc specoff	Special Collections and Archives Special Collections Office
+hv dvd	Hudson Valley DVD
+hv main	Hudson Valley Main
+hv vhs	Hudson Valley VHS
