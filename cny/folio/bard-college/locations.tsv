@@ -1,0 +1,127 @@
+m	ain	Bard Stevenson Library
+m	brch	Bard Children's Browsing
+m	brju	Bard Juvenile Browsing
+m	brow	Bard Browsing Collection
+m	brya	Bard Young Adult Browsing
+m	cd	Bard CDs
+m	vid	Bard Video
+m	vidb	Bard Browsing Video
+b	ccs	CCS Library
+b	cmt	CCS: Masters Thesis
+b	dc	CCS Display Case
+b	disp	CCS Wall Display
+b	mc	CCS Media Collection
+b	off	CCS Offsite
+b	ofp	CCS Offsite Periodicals
+b	oref	CCS Office Ref
+b	over	CCS:Oversize
+b	ovfo	CCS: Oversize Folio
+b	per	CCS Lib Periodicals
+b	ref	CCS:Reference
+b	rem	CCS Archives
+b	res	CCS Library Reserves
+b	rrbl	CCS RR Backlog
+b	sbl	CCS Stacks Backlog
+b	spb	CCS Spec Coll Box
+b	spbf	CCS Spec Coll Folio Box
+b	spec	CCS Spec Coll
+b	spf	CCS Spec Coll Folio
+b	spp	CCS Spec Coll Periodicals
+b	sppf	CCS Spec Coll Periodicals Folio
+d	cdr	BGC CD-ROM
+d	dml	BGC Digital Media Lab
+d	ecor	BGC Library
+d	ele	BGC Electronic Resources
+d	ind	BGC Index Collection
+d	lof	BGC Library Offices
+d	mic	BGC Microform Collection
+d	off	BGC Offsite Storage
+d	osc	BGC Oversize Special Collections
+d	ovef	BGC Folio Stacks
+d	over	BGC Oversized Stacks
+d	per	BGC Periodicals Stacks
+d	rare	BGC Special Collections
+d	ref	BGC Reference Collection
+d	reff	BGC Oversized Reference
+d	res	BGC Course Reserves
+d	rref	BGC Ready Reference
+d	sec	Bard Hall Study Center
+d	stks	BGC Monograph Stacks
+d	thes	BGC Theses
+d	vid	BGC Video Collection
+d	vmr	BGC Visual Media Resources
+l	base	Levy Lib. Basement
+l	evy	Levy Library
+l	mc	Levy Minskey Collection
+l	per	Levy Periodicals
+l	rcom	Levy Lib. Data Room
+l	ref	Levy Reference
+l	sp	Levy Special Collections
+m	annr	Bard Ann. Review, non-circ
+m	arc 	Bard College Archives
+m	aren	Bard Arendt
+m	arnt	Arendtiana
+m	avsp	AV Special Collection
+m	bard	Bard Bardiana
+m	cas	Bard Cassettes, Res Rm
+m	disp	Bard Display
+m	dvd	DVD
+m	ebks	Electronic Book
+m	envt	Bard Environ Thesis
+m	hj	Bard Historic Journals
+m	hva	Bard HV Archive
+m	ind	Bard Index
+m	jame	The James Collection
+m	jamr	The James Collection
+m	lls	Lower Level Shelves
+m	llv	Bard Lower Level Vault
+m	mfa	Bard MFA Thesis
+m	mob	Bard Mobile Shelving
+m	mpl	Bard Montgomery Place
+m	ol	Bard Online Journals
+m	oldb	Bard Online Database
+m	oref	Bard Office Ref
+m	osco	Bard Oversize Score
+m	over	Bard Oversize
+m	ovf	Bard 1st Floor Oversize
+m	per	Bard Periodicals
+m	pro	Bard Projects
+m	rare	Bard Rare Books
+m	rarf	Bard Rare Folio
+m	raro	Bard Rare Oversized
+m	rarv	Bard Rare Vault
+m	ref	Bard Reference
+m	refa	Bard Reference Atlas
+m	refc	Bard Ref CD-ROM INDEX
+m	refe	Bard Encyclopedias
+m	res3	Bard Res 3-day Book
+m	resf	Bard Res Fac Only
+m	resn	Bard Res 0nite
+m	reso 	Bard Open Res
+m	resp	Reserves Personal Copy
+m	resr	Bard Reserves
+m	rest	0nite Pers Cop
+m	resx	Bard Res Misc
+m	rref	Bard Ready Reference
+m	sch	Bard Schuyler Bkcase
+m	sco	Bard Score
+m	scob	Bard Score Room
+m	scor	Bard Research Score
+m	spap	Bard Newsprs, Res Rm
+m	spec	Bard Spec Coll, Res Rm
+m	sper	Bard Spec Coll Per
+m	spm	Bard Mini Sp Coll
+m	spo	Oversize Sp Coll
+m	stor	Bard Storage Hoffman
+m	susf	Sussman Folio
+m	susm	Sussman Mini
+m	suso	Sussman Octovo
+m	susq	Sussman Quarto
+m	susv	Sussman Vault
+m	suvf	Sussman Vault Folio
+m	suvo	Sussman Vault Octavo
+m	suvq	Sussman Vault Quarto
+m	tr	Bard Photo Books
+m	trc	Bard Photo Books Circ
+m	trrb	Bard Photo Rare Books
+m	mic	Bard Microform
