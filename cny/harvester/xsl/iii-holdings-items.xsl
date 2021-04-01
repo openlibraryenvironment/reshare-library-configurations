@@ -37,53 +37,41 @@
           </xsl:variable>
           <xsl:variable name="iid" select="./marc:subfield[@code='y']"/>
           <xsl:variable name="loc" select="./marc:subfield[@code='l']"/>
+          <xsl:variable name="itype" select="./marc:subfield[@code='t']"/>
           <xsl:if test="not($loc=$preloc)">
             <i>
               <xsl:variable name="loc-clean" select="normalize-space($loc)"/>
               <permanentLocationIdHere><xsl:value-of select="$loc-clean"/></permanentLocationIdHere>
               <illPolicyId>
                 <xsl:choose>
-                  <xsl:when test="$loc-clean='ya'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='juv'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='brows'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='circ'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='dvd'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='educ'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='ref'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='cd'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jcal1'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jcha1'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jcha2'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jcha3'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jcha4'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jcha5'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jcha6'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jcha7'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jmat1'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jnew1'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jnew2'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jnew3'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jnew4'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jpoet'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jscie'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jsoc'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jsoc1'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jsoc2'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='jsoc3'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='main' and (($itype &gt;= '0' and $itype &lt;= 8) or $itype='18')">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='mbrch' and $itype='0'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='mbrju' and $itype='0'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='mbrow' and $itype='0'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='mbrya' and $itype='0'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='mcd' and $itype='2'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='mvid' and ($itype='3' or $itype='18')">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='mvidb' and $itype='18'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
                   <xsl:otherwise>b0f97013-87f5-4bab-87f2-ac4a5191b489</xsl:otherwise> <!-- Will not lend -->
                 </xsl:choose>
               </illPolicyId>
               <callNumber>
                 <xsl:choose>
-                  <xsl:when test="../marc:datafield[@tag='092']/marc:subfield[@code='b']">
-                    <xsl:value-of select="concat(../marc:datafield[@tag='092']/marc:subfield[@code='a'], ' ', ../marc:datafield[@tag='092']/marc:subfield[@code='b'])"/>
+                  <xsl:when test="../marc:datafield[@tag='090']/marc:subfield[@code='b']">
+                    <xsl:value-of select="concat(../marc:datafield[@tag='090']/marc:subfield[@code='a'], ' ', ../marc:datafield[@tag='090']/marc:subfield[@code='b'])"/>
+                  </xsl:when>
+                  <xsl:when test="../marc:datafield[@tag='090']/marc:subfield[@code='a']">
+                    <xsl:value-of select="concat(../marc:datafield[@tag='090']/marc:subfield[@code='a'], ' ', ../marc:datafield[@tag='090']/marc:subfield[@code='b'])"/>
+                  </xsl:when>
+                  <xsl:when test="../marc:datafield[@tag='050']/marc:subfield[@code='b']">
+                    <xsl:value-of select="concat(../marc:datafield[@tag='050']/marc:subfield[@code='a'], ' ', ../marc:datafield[@tag='050']/marc:subfield[@code='b'])"/>
                   </xsl:when>
                   <xsl:otherwise>
-                    <xsl:value-of select="../marc:datafield[@tag='092']/marc:subfield[@code='a']"/>
+                    <xsl:value-of select="../marc:datafield[@tag='050']/marc:subfield[@code='a']"/>
                   </xsl:otherwise>
                 </xsl:choose>
               </callNumber>
-              <callNumberTypeId>03dd64d0-5626-4ecd-8ece-4531e0069f35</callNumberTypeId> <!-- dewey -->
+              <callNumberTypeId>95467209-6d7b-468b-94df-0f5d7ad2747d</callNumberTypeId> <!-- LC -->
               <notes>
                 <arr>
                   <i>
