@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>306301</id>
+  <XmlTransformStep>
+    <id>306301</id>
+    <description>Holdings and Items, Bard</description>
+    <enabled>true</enabled>
+    <inputFormat>XML</inputFormat>
+    <name>Holdings and Items, Bard</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#13;
+&lt;xsl:stylesheet&#13;
+  version="1.0"&#13;
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&#13;
+  xmlns:marc="http://www.loc.gov/MARC21/slim"&#13;
+  xmlns:oai20="http://www.openarchives.org/OAI/2.0/"&#13;
+  &gt;&#13;
+&#13;
+  &lt;xsl:strip-space elements="*"/&gt;&#13;
+  &lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#13;
+&#13;
+  &lt;xsl:template match="collection"&gt;&#13;
+    &lt;collection&gt;&#13;
+        &lt;xsl:apply-templates/&gt;&#13;
+    &lt;/collection&gt;&#13;
+  &lt;/xsl:template&gt;&#13;
+&#13;
+  &lt;xsl:template match="record"&gt;&#13;
+    &lt;record&gt;&#13;
+        &lt;xsl:for-each select="@* | node()"&gt;&#13;
+            &lt;xsl:copy-of select="."/&gt;&#13;
+        &lt;/xsl:for-each&gt;&#13;
+        &lt;xsl:apply-templates/&gt;&#13;
+    &lt;/record&gt;&#13;
+  &lt;/xsl:template&gt;&#13;
+&#13;
+  &lt;xsl:template match="//marc:record"&gt;&#13;
+    &lt;xsl:variable name="mt" select="substring(./marc:leader, 7, 1)"/&gt;&#13;
+    &lt;xsl:variable name="bl" select="substring(./marc:leader, 8, 1)"/&gt;&#13;
+    &lt;holdingsRecords&gt;&#13;
+      &lt;arr&gt;&#13;
+      &lt;xsl:if test="marc:datafield[@tag='945']"&gt;&#13;
+        &lt;xsl:for-each select="marc:datafield[@tag='945']"&gt;&#13;
+          &lt;xsl:sort select="./marc:subfield[@code='l']"/&gt;&#13;
+          &lt;xsl:variable name="preloc"&gt;&#13;
+            &lt;xsl:value-of select="./preceding-sibling::marc:datafield[@tag='945'][1]/marc:subfield[@code='l']"/&gt;&#13;
+          &lt;/xsl:variable&gt;&#13;
+          &lt;xsl:variable name="iid" select="./marc:subfield[@code='y']"/&gt;&#13;
+          &lt;xsl:variable name="loc" select="./marc:subfield[@code='l']"/&gt;&#13;
+          &lt;xsl:variable name="itype" select="./marc:subfield[@code='t']"/&gt;&#13;
+          &lt;xsl:if test="not($loc=$preloc)"&gt;&#13;
+            &lt;i&gt;&#13;
+              &lt;xsl:variable name="loc-clean" select="normalize-space($loc)"/&gt;&#13;
+              &lt;permanentLocationIdHere&gt;&lt;xsl:value-of select="$loc-clean"/&gt;&lt;/permanentLocationIdHere&gt;&#13;
+              &lt;illPolicyId&gt;&#13;
+                &lt;xsl:choose&gt;&#13;
+                  &lt;xsl:when test="$loc-clean='main' and (($itype &amp;gt;= '0' and $itype &amp;lt;= 8) or $itype='18')"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#13;
+                  &lt;xsl:when test="$loc-clean='mbrch' and $itype='0'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#13;
+                  &lt;xsl:when test="$loc-clean='mbrju' and $itype='0'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#13;
+                  &lt;xsl:when test="$loc-clean='mbrow' and $itype='0'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#13;
+                  &lt;xsl:when test="$loc-clean='mbrya' and $itype='0'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#13;
+                  &lt;xsl:when test="$loc-clean='mcd' and $itype='2'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#13;
+                  &lt;xsl:when test="$loc-clean='mvid' and ($itype='3' or $itype='18')"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#13;
+                  &lt;xsl:when test="$loc-clean='mvidb' and $itype='18'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#13;
+                  &lt;xsl:otherwise&gt;b0f97013-87f5-4bab-87f2-ac4a5191b489&lt;/xsl:otherwise&gt; &lt;!-- Will not lend --&gt;&#13;
+                &lt;/xsl:choose&gt;&#13;
+              &lt;/illPolicyId&gt;&#13;
+              &lt;callNumber&gt;&#13;
+                &lt;xsl:choose&gt;&#13;
+                  &lt;xsl:when test="../marc:datafield[@tag='090']/marc:subfield[@code='b']"&gt;&#13;
+                    &lt;xsl:value-of select="concat(../marc:datafield[@tag='090']/marc:subfield[@code='a'], ' ', ../marc:datafield[@tag='090']/marc:subfield[@code='b'])"/&gt;&#13;
+                  &lt;/xsl:when&gt;&#13;
+                  &lt;xsl:when test="../marc:datafield[@tag='090']/marc:subfield[@code='a']"&gt;&#13;
+                    &lt;xsl:value-of select="concat(../marc:datafield[@tag='090']/marc:subfield[@code='a'], ' ', ../marc:datafield[@tag='090']/marc:subfield[@code='b'])"/&gt;&#13;
+                  &lt;/xsl:when&gt;&#13;
+                  &lt;xsl:when test="../marc:datafield[@tag='050']/marc:subfield[@code='b']"&gt;&#13;
+                    &lt;xsl:value-of select="concat(../marc:datafield[@tag='050']/marc:subfield[@code='a'], ' ', ../marc:datafield[@tag='050']/marc:subfield[@code='b'])"/&gt;&#13;
+                  &lt;/xsl:when&gt;&#13;
+                  &lt;xsl:otherwise&gt;&#13;
+                    &lt;xsl:value-of select="../marc:datafield[@tag='050']/marc:subfield[@code='a']"/&gt;&#13;
+                  &lt;/xsl:otherwise&gt;&#13;
+                &lt;/xsl:choose&gt;&#13;
+              &lt;/callNumber&gt;&#13;
+              &lt;callNumberTypeId&gt;95467209-6d7b-468b-94df-0f5d7ad2747d&lt;/callNumberTypeId&gt; &lt;!-- LC --&gt;&#13;
+              &lt;notes&gt;&#13;
+                &lt;arr&gt;&#13;
+                  &lt;i&gt;&#13;
+                    &lt;note&gt;&lt;xsl:value-of select="concat('Location code: ', $loc-clean)"/&gt;&lt;/note&gt;&#13;
+                    &lt;holdingsNoteTypeId&gt;b160f13a-ddba-4053-b9c4-60ec5ea45d56&lt;/holdingsNoteTypeId&gt;&#13;
+                    &lt;staffOnly&gt;true&lt;/staffOnly&gt;&#13;
+                  &lt;/i&gt;&#13;
+                &lt;/arr&gt;&#13;
+              &lt;/notes&gt;&#13;
+              &lt;items&gt;&#13;
+                &lt;arr&gt;&#13;
+                &lt;xsl:for-each select="../marc:datafield[@tag='945']/marc:subfield[@code='l'][.=$loc]/.."&gt;&#13;
+                  &lt;i&gt;&#13;
+                    &lt;itemIdentifier&gt;&lt;xsl:value-of select="./marc:subfield[@code='y']"/&gt;&lt;/itemIdentifier&gt;&#13;
+                    &lt;barcode&gt;&lt;xsl:value-of select="./marc:subfield[@code='i']"/&gt;&lt;/barcode&gt;&#13;
+                    &lt;volume&gt;&lt;xsl:value-of select="./marc:subfield[@code='c']"/&gt;&lt;/volume&gt;&#13;
+                    &lt;status&gt;&lt;name&gt;Unknown&lt;/name&gt;&lt;/status&gt;&#13;
+                    &lt;permanentLoanTypeId&gt;2b94c631-fca9-4892-a730-03ee529ffe27&lt;/permanentLoanTypeId&gt; &lt;!-- Can circulate --&gt;&#13;
+                    &lt;materialTypeId&gt;&#13;
+                      &lt;!-- Mappings to ReShare specific material types, taken from OCLC table "Type of Record" --&gt;&#13;
+                      &lt;!-- Mapping from leader position 6 --&gt;&#13;
+                      &lt;xsl:choose&gt;&#13;
+                      &lt;xsl:when test="$bl='s' or $bl='b'"&gt;191da404-dec2-4977-9770-1443d9d6c238&lt;/xsl:when&gt; &lt;!-- CNR --&gt;&#13;
+                      &lt;xsl:when test="$mt='a' or $mt='t'"&gt;e65ed344-a691-4f8f-8446-3c0a346c6882&lt;/xsl:when&gt; &lt;!-- BKS --&gt;&#13;
+                      &lt;xsl:when test="$mt='m'"&gt;22cb5b81-2056-46ed-8050-c5d8f01caf90&lt;/xsl:when&gt;            &lt;!-- COM --&gt;&#13;
+                      &lt;xsl:when test="$mt='e' or $mt='f'"&gt;9f2c8d85-97e6-4722-a67c-bb51ccfb7781&lt;/xsl:when&gt; &lt;!-- MAP --&gt;&#13;
+                      &lt;xsl:when test="$mt='c' or $mt='d'"&gt;e5578a7e-49b9-4859-a86a-21b812215b4f&lt;/xsl:when&gt; &lt;!-- SCO --&gt;&#13;
+                      &lt;xsl:when test="$mt='i' or $mt='j'"&gt;d8dc9046-a9f4-4789-adf5-678fd855b016&lt;/xsl:when&gt; &lt;!-- REC --&gt;&#13;
+                      &lt;xsl:when test="$mt='g'"&gt;14f1845d-2fad-4091-80c8-48614eaea40b&lt;/xsl:when&gt;            &lt;!-- VIS --&gt;&#13;
+                      &lt;xsl:when test="$mt='p'"&gt;bdfc300b-8a03-4ae6-b42a-6243afa0b7b1&lt;/xsl:when&gt;            &lt;!-- MIX --&gt;&#13;
+                      &lt;xsl:otherwise&gt;f6dd0721-5d4a-439e-9205-c71aef39d15b&lt;/xsl:otherwise&gt;            &lt;!-- Unmapped --&gt;&#13;
+                      &lt;/xsl:choose&gt;&#13;
+                    &lt;/materialTypeId&gt;&#13;
+                  &lt;/i&gt;&#13;
+                &lt;/xsl:for-each&gt;&#13;
+                &lt;/arr&gt;&#13;
+              &lt;/items&gt;&#13;
+            &lt;/i&gt;&#13;
+          &lt;/xsl:if&gt;&#13;
+        &lt;/xsl:for-each&gt;&#13;
+      &lt;/xsl:if&gt;&#13;
+      &lt;xsl:if test="not(marc:datafield[@tag='945'])"&gt;&#13;
+        &lt;i&gt;&#13;
+          &lt;permanentLocationIdHere&gt;UNMAPPED&lt;/permanentLocationIdHere&gt;&#13;
+        &lt;/i&gt;&#13;
+      &lt;/xsl:if&gt;&#13;
+      &lt;/arr&gt; &#13;
+     &lt;/holdingsRecords&gt;&#13;
+  &lt;/xsl:template&gt;&#13;
+  &lt;xsl:template match="text()"/&gt;&#13;
+&lt;/xsl:stylesheet&gt;&#13;
+</script>
+    <testData/>
+    <testOutput/>
+  </XmlTransformStep>
+</transformationStep>
