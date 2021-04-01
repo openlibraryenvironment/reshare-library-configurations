@@ -81,6 +81,10 @@ def main(argv):
     if jobtype == 'oaiPmh':
         f.write('    <oaiSetName>{}</oaiSetName>\n'.format(oaisetname))
         f.write('    <metadataPrefix>marc21</metadataPrefix>\n')
+    if jobtype == 'xmlBulk':
+        f.write('    <passiveMode>true</passiveMode>\n')
+        f.write('    <splitAt>1</splitAt>\n')
+        f.write('    <splitSize>100</splitSize>\n')
     f.write('    <storeOriginal>true</storeOriginal>\n')
     f.write('    <enabled>false</enabled>\n')
     f.write('    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">\n')
@@ -111,6 +115,10 @@ def main(argv):
     if jobtype == 'oaiPmh':
         f.write('    <oaiSetName>{}</oaiSetName>\n'.format(oaisetname))
         f.write('    <metadataPrefix>marc21</metadataPrefix>\n')
+    if jobtype == 'xmlBulk':
+        f.write('    <passiveMode>true</passiveMode>\n')
+        f.write('    <splitAt>1</splitAt>\n')
+        f.write('    <splitSize>100</splitSize>\n')
     f.write('    <storeOriginal>true</storeOriginal>\n')
     f.write('    <enabled>false</enabled>\n')
     f.write('    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">\n')
@@ -124,6 +132,7 @@ def main(argv):
     f.write('    <mailLevel>WARN</mailLevel>\n')
     f.write('    <overwrite>false</overwrite>\n')
     f.write('    <scheduleString>10 10 10 6 *</scheduleString>\n')
+    f.write('    <recordLimit>500</recordLimit>\n')
     f.write("    <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>\n")
     f.write('    <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>\n')
     f.write('  </{}>\n'.format(jobtype))
