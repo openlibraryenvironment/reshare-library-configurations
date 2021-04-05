@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>308302</id>
+  <XmlTransformStep>
+    <id>308302</id>
+    <description>Maps locations, record identifier type for Pratt</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Pratt</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;f9855df3-c9e0-5a79-a728-1121eeacc475&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pb0od&#39;&quot;&gt;861afd98-a303-542e-a58e-342bcea542ce&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbcf&#39;&quot;&gt;3e4d4e68-d32a-5063-b153-ca389b2b9e11&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbcn&#39;&quot;&gt;f83d0444-07f5-5914-860d-e89a4317f721&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbco&#39;&quot;&gt;32c61db8-1112-5025-a47d-1fc13c2651e3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbfc&#39;&quot;&gt;4e46150b-b9b3-5219-9c76-9243753e1bb9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbgn&#39;&quot;&gt;2416be80-c9f0-5cb6-9d6c-e443faf76d57&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbsk&#39;&quot;&gt;45378787-8da5-5f21-940b-cfe7b27db3ea&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbso&#39;&quot;&gt;509f3e0c-7992-57c2-9e51-903fe0f39791&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pm0od&#39;&quot;&gt;ee4fe643-eea5-5581-a5f9-e7d193f2329a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pmbfc&#39;&quot;&gt;aa546c53-f32c-556e-a89b-2c49a6bf08c4&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pmbsk&#39;&quot;&gt;9efd3463-bd0b-5bef-88f5-41e457436f2e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pmbso&#39;&quot;&gt;4596d517-2800-5fe8-87cd-cbadadcf0553&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;psfav&#39;&quot;&gt;444c181d-4dd5-5d53-b312-0bd66805b077&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;p00st&#39;&quot;&gt;381498b7-13ad-5ad3-86e9-a72da89f5c57&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;p0www&#39;&quot;&gt;f2facf85-aa49-53fb-8f00-3cd48ec7d6cc&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pb0ar&#39;&quot;&gt;51336eec-2af1-5207-8aa0-87e4fb0e0de0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pb0ce&#39;&quot;&gt;a4ba21e4-2b9b-5111-bb71-b41a61614a71&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pb0il&#39;&quot;&gt;baa4e8b1-7ca5-5717-9732-96b6e71288a1&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pb0rr&#39;&quot;&gt;80b71985-abe6-51db-8404-b6e4144fbddd&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pb0ts&#39;&quot;&gt;2e5a73fe-b7e1-5667-bb49-945bd119a9b9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbab&#39;&quot;&gt;906bfa99-0664-56e5-9d6e-3ba67363ad64&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbfo&#39;&quot;&gt;30079c33-1c4d-5c2c-ac93-f1386e553c34&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbboc&#39;&quot;&gt;e89e42bd-a408-5e0c-a227-ba1108a3c63f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbpb&#39;&quot;&gt;4c0cff9c-6c28-53ac-8385-697a6675bcc0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbrb&#39;&quot;&gt;82d0d4f3-4be8-5e16-bfea-a15fd95d2e09&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbsc&#39;&quot;&gt;e589ae02-4601-5dd2-b335-ebe277ded954&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbsf&#39;&quot;&gt;241aa039-7d0f-5ef0-8c58-184b395b0b61&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbth&#39;&quot;&gt;2c996bd3-2239-524c-b950-f611b707f276&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbbtl&#39;&quot;&gt;3d803197-7141-5b3f-a386-c1b806ea1dfd&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbcac&#39;&quot;&gt;4d51cbe2-8605-509b-a5c9-a09f1260a1be&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbccr&#39;&quot;&gt;335ffdad-e86c-5d6b-8394-6ead8e51c867&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbcsm&#39;&quot;&gt;ee6de1ed-faf7-5da6-9ff9-32ace88ae762&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbmfm&#39;&quot;&gt;dc24af60-d3e5-589c-9804-4f846b4d9ca1&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbs2m&#39;&quot;&gt;83df9659-6c80-5ff6-83da-5aafadb1a724&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbsaa&#39;&quot;&gt;b198104a-a3f0-5fb5-bf69-9cef470d6807&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbscp&#39;&quot;&gt;beb68da3-f37c-5005-877e-1508e950390a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbslc&#39;&quot;&gt;7961d60e-20de-5276-b01d-e4546fd8db68&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbsll&#39;&quot;&gt;a5c7ac9a-5a79-54de-bc98-81b282a1cbf5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbsls&#39;&quot;&gt;7c48ff35-ad4a-58b4-8464-4bbaec09fe8a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbssc&#39;&quot;&gt;deb9777c-9c85-56a0-aff1-21d89473017c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pbszc&#39;&quot;&gt;c94c823e-f71c-5809-beb7-f7418e73aaa7&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pm0ce&#39;&quot;&gt;fbd4cd22-996a-5577-8c00-fad7bb6afa1e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pm0cs&#39;&quot;&gt;979badef-592c-56a5-9074-12e5782bb66a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pm0il&#39;&quot;&gt;e64257b6-5929-5fc5-ad33-ca1809c02a0a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pm0rr&#39;&quot;&gt;4bc6e132-8e78-55a9-a65e-9100655b238e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pm0ts&#39;&quot;&gt;bfa56b15-53bd-5a10-b209-7d4f5781f510&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pmbrf&#39;&quot;&gt;9a172582-3509-5237-a460-4091f3d78a52&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;pmspc&#39;&quot;&gt;ee9310bb-a7b1-5e98-9876-690ccf3a878d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;psbkl&#39;&quot;&gt;852cda8e-e8bf-5214-a709-22bacecd58cd&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;psemm&#39;&quot;&gt;b564582d-2b63-5771-b3de-601d7a5e1204&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;psf16&#39;&quot;&gt;1d7ad347-9fc9-56e9-9eb7-9e0102f216bc&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;psrmm&#39;&quot;&gt;38f2f8ad-4bb5-572e-b1da-33981ca3c407&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;tsd&#39;&quot;&gt;ac0f54c1-588d-5c74-be45-23762566fc73&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;2f8e64b1-d1bd-5d3f-842a-829f4bb51dea&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (US-NBP) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;3fafb70c-9ca8-56a8-94c1-ba1697c4c68e&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
