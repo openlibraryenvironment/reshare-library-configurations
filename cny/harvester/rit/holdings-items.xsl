@@ -30,7 +30,7 @@
     <holdingsRecords>
       <arr>
       <xsl:if test="marc:datafield[@tag='945']">
-        <xsl:for-each select="marc:datafield[@tag='945']">
+        <xsl:for-each select="marc:datafield[@tag='945' and ./marc:subfield[@code='p']]">
           <xsl:sort select="./marc:subfield[@code='k']"/>
           <xsl:variable name="preloc">
             <xsl:value-of select="./preceding-sibling::marc:datafield[@tag='945'][1]/marc:subfield[@code='k']"/>
@@ -71,7 +71,7 @@
               </notes>
               <items>
                 <arr>
-                <xsl:for-each select="../marc:datafield[@tag='945']/marc:subfield[@code='k'][.=$loc]/..">
+                <xsl:for-each select="../marc:datafield[@tag='945' and ./marc:subfield[@code='k']=$loc and ./marc:subfield[@code='p']]">
                   <i>
                     <itemIdentifier><xsl:value-of select="./marc:subfield[@code='p']"/></itemIdentifier>
                     <barcode><xsl:value-of select="./marc:subfield[@code='d']"/></barcode>
