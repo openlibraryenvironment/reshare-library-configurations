@@ -1,26 +1,253 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<harvestable>
-  <xmlBulk>
+<harvestable uri="http://cny-harvester.reshare.indexdata.com/harvester/records/harvestables/309502">
+    <xmlBulk>
+        <allowErrors>true</allowErrors>
+        <cacheEnabled>false</cacheEnabled>
+        <constantFields></constantFields>
+        <contactNotes></contactNotes>
+        <currentStatus>RUNNING</currentStatus>
+        <description></description>
+        <diskRun>false</diskRun>
+        <enabled>false</enabled>
+        <failedRecordsLogging>CLEAN_DIRECTORY</failedRecordsLogging>
+        <harvestImmediately>false</harvestImmediately>
+        <id>309502</id>
+        <initiallyHarvested>2021-04-06T13:40:28.176Z</initiallyHarvested>
+        <json></json>
+        <lastHarvestStarted>2021-04-06T13:40:28.176Z</lastHarvestStarted>
+        <lastUpdated>2021-04-06T13:40:26.891Z</lastUpdated>
+        <laxParsing>false</laxParsing>
+        <logLevel>INFO</logLevel>
+        <mailAddress></mailAddress>
+        <mailLevel>WARN</mailLevel>
+        <managedBy></managedBy>
+        <maxSavedFailedRecordsPerRun>100</maxSavedFailedRecordsPerRun>
+        <maxSavedFailedRecordsTotal>1000</maxSavedFailedRecordsTotal>
+        <name>CNY: RIT to localhost</name>
+        <openAccess>false</openAccess>
+        <overwrite>false</overwrite>
+        <retryCount>2</retryCount>
+        <retryWait>60</retryWait>
+        <scheduleString>10 10 10 6 *</scheduleString>
+        <serviceProvider></serviceProvider>
+        <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
+            <bulkSize>1000</bulkSize>
+            <currentStatus>TODO</currentStatus>
+            <customClass></customClass>
+            <description>Inventory storage accessed locally without SSL</description>
+            <enabled>true</enabled>
+            <id>301104</id>
+            <idAsString>301104</idAsString>
+            <json>{&#xD;
+    "folioAuthPath": "bl-users/login",&#xD;
+    "folioTenant": "cny_si",&#xD;
+    "folioUsername": "cny_admin",&#xD;
+    "folioPassword": "",&#xD;
+    "inventoryUpsertPath": "shared-inventory-upsert-matchkey",&#xD;
+    "marcStoragePath": "marc-records"&#xD;
+}        </json>
+            <name>local via http</name>
+            <url>http://okapi:9130/</url>
+        </storage>
+        <storeOriginal>true</storeOriginal>
+        <technicalNotes></technicalNotes>
+        <timeout>300</timeout>
+        <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
+            <description></description>
+            <enabled>true</enabled>
+            <name>RIT - OAI-PMH to FOLIO Inventory</name>
+            <parallel>false</parallel>
+            <stepAssociations>
+                <id>309401</id>
+                <position>1</position>
+                <step xsi:type="xmlTransformationStep">
+                    <description>Grab the 907$a and store it in the localIdentifier field</description>
+                    <inputFormat>xml</inputFormat>
+                    <name>III MARC21 to Inventory</name>
+                    <outputFormat>xml</outputFormat>
+                    <script>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;&lt;xsl:stylesheet&#xD;    version="1.0"&#xD;    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&#xD;    xmlns:marc="http://www.loc.gov/MARC21/slim"&gt;&#xD;&#xD;    &lt;xsl:import href="map-relator-to-contributor-type.xsl"/&gt;&#xD;    &#xD;    &lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;&#xD;    &lt;xsl:template match="/"&gt;&#xD;        &lt;collection&gt;&#xD;            &lt;xsl:apply-templates /&gt;&#xD;        &lt;/collection&gt;&#xD;    &lt;/xsl:template&gt;&#xD;&#xD;    &lt;!-- MARC meta data --&gt;&#xD;    &lt;xsl:template match="marc:record"&gt;&#xD;&#xD;    &lt;record&gt;&#xD;&#xD;        &lt;!-- Information needed for storing source record in union catalog context --&gt;&#xD;        &lt;institutionIdHere/&gt;&#xD;        &lt;localIdentifier&gt;&lt;xsl:value-of select="marc:datafield[@tag='907']/marc:subfield[@code='a']" /&gt;&lt;/localIdentifier&gt;&#xD;&#xD;        &lt;!-- Bibliographic record for FOLIO inventory --&gt;&#xD;        &lt;instance&gt;&#xD;            &lt;source&gt;MARC&lt;/source&gt;&#xD;&#xD;            &lt;!-- Instance type ID (resource type) --&gt;&#xD;            &lt;instanceTypeId&gt;&#xD;                &lt;!-- UUIDs for resource types --&gt;&#xD;                &lt;xsl:choose&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='a'"&gt;6312d172-f0cf-40f6-b27d-9fa8feaf332f&lt;/xsl:when&gt; &lt;!-- language material : text --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='c'"&gt;497b5090-3da2-486c-b57f-de5bb3c2e26d&lt;/xsl:when&gt; &lt;!-- notated music : notated music --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='d'"&gt;497b5090-3da2-486c-b57f-de5bb3c2e26d&lt;/xsl:when&gt; &lt;!-- manuscript notated music : notated music -&gt; notated music --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='e'"&gt;526aa04d-9289-4511-8866-349299592c18&lt;/xsl:when&gt; &lt;!-- cartographic material : cartographic image --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='f'"&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- other --&gt; &lt;!-- manuscript cartographic material : ? --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='g'"&gt;535e3160-763a-42f9-b0c0-d8ed7df6e2a2&lt;/xsl:when&gt; &lt;!-- projected image : still image --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='i'"&gt;9bce18bd-45bf-4949-8fa8-63163e4b7d7f&lt;/xsl:when&gt; &lt;!-- nonmusical sound recording : sounds --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='j'"&gt;3be24c14-3551-4180-9292-26a786649c8b&lt;/xsl:when&gt; &lt;!-- musical sound recording : performed music --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='k'"&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- other --&gt; &lt;!-- two-dimensional nonprojectable graphic : ?--&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='m'"&gt;df5dddff-9c30-4507-8b82-119ff972d4d7&lt;/xsl:when&gt; &lt;!-- computer file : computer dataset --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='o'"&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- kit : other --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='p'"&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- mixed material : other --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='r'"&gt;c1e95c2b-4efc-48cf-9e71-edb622cf0c22&lt;/xsl:when&gt; &lt;!-- three-dimensional artifact or naturally occurring object : three-dimensional form --&gt;&#xD;                &lt;xsl:when test="substring(marc:leader,7,1)='t'"&gt;6312d172-f0cf-40f6-b27d-9fa8feaf332f&lt;/xsl:when&gt; &lt;!-- manuscript language material : text --&gt;&#xD;                &lt;xsl:otherwise&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:otherwise&gt;                             &lt;!--  : other --&gt;&#xD;                &lt;/xsl:choose&gt;&#xD;            &lt;/instanceTypeId&gt;&#xD;&#xD;            &lt;!-- Identifiers --&gt;&#xD;            &lt;xsl:if test="marc:datafield[@tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074']&#xD;                        or marc:controlfield[@tag='001']"&gt;&#xD;                &lt;identifiers&gt;&#xD;                &lt;arr&gt;&#xD;                &lt;xsl:for-each select="marc:datafield[@tag='907']/marc:subfield[@code='a']"&gt;&#xD;                    &lt;i&gt;&#xD;                    &lt;value&gt;&lt;xsl:value-of select="."/&gt;&lt;/value&gt;&#xD;                    &lt;!-- A subsequent library specific transformation (style sheet)&#xD;                        must replace this tag with the actual identifierTypeId for&#xD;                        the record identifer type of the given library --&gt;&#xD;                    &lt;identifierTypeIdHere/&gt;&#xD;                    &lt;/i&gt;&#xD;                &lt;/xsl:for-each&gt;&#xD;                &lt;xsl:for-each select="marc:datafield[@tag='001' or @tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074']"&gt;&#xD;                    &lt;i&gt;&#xD;                    &lt;xsl:choose&gt;&#xD;                        &lt;xsl:when test="current()[@tag='010'] and marc:subfield[@code='a']"&gt;&#xD;                        &lt;value&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;                        &lt;/value&gt;&#xD;                        &lt;identifierTypeId&gt;c858e4f2-2b6b-4385-842b-60732ee14abb&lt;/identifierTypeId&gt; &lt;!-- LCCN --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:when test="current()[@tag='020'] and marc:subfield[@code='a']"&gt;&#xD;                        &lt;value&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;                        &lt;/value&gt;&#xD;                        &lt;identifierTypeId&gt;8261054f-be78-422d-bd51-4ed9f33c3422&lt;/identifierTypeId&gt; &lt;!-- ISBN --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:when test="current()[@tag='022'] and marc:subfield[@code='a']"&gt;&#xD;                        &lt;value&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;                        &lt;/value&gt;&#xD;                        &lt;identifierTypeId&gt;913300b2-03ed-469a-8179-c1092c991227&lt;/identifierTypeId&gt; &lt;!-- ISSN --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:when test="current()[@tag='024'] and marc:subfield[@code='a']"&gt;&#xD;                        &lt;value&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;                        &lt;/value&gt;&#xD;                        &lt;identifierTypeId&gt;2e8b3b6c-0e7d-4e48-bca2-b0b23b376af5&lt;/identifierTypeId&gt; &lt;!-- Other standard identifier --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:when test="current()[@tag='028'] and marc:subfield[@code='a']"&gt;&#xD;                        &lt;value&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;                        &lt;/value&gt;&#xD;                        &lt;identifierTypeId&gt;b5d8cdc4-9441-487c-90cf-0c7ec97728eb&lt;/identifierTypeId&gt; &lt;!-- Publisher number --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:when test="current()[@tag='035'] and marc:subfield[@code='a']"&gt;&#xD;                        &lt;value&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;                        &lt;/value&gt;&#xD;                        &lt;identifierTypeId&gt;7e591197-f335-4afb-bc6d-a6d76ca3bace&lt;/identifierTypeId&gt; &lt;!-- System control number --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:when test="current()[@tag='074'] and marc:subfield[@code='a']"&gt;&#xD;                        &lt;value&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;                        &lt;/value&gt;&#xD;                        &lt;identifierTypeId&gt;351ebc1c-3aae-4825-8765-c6d50dbf011f&lt;/identifierTypeId&gt; &lt;!-- GPO item number --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                    &lt;/xsl:choose&gt;&#xD;                    &lt;/i&gt;&#xD;                &lt;/xsl:for-each&gt;&#xD;                &lt;/arr&gt;&#xD;                &lt;/identifiers&gt;&#xD;            &lt;/xsl:if&gt;&#xD;&#xD;            &lt;!-- Classifications --&gt;&#xD;            &lt;xsl:if test="marc:datafield[@tag='050' or @tag='060' or @tag='080' or @tag='082' or @tag='086' or @tag='090']"&gt;&#xD;                &lt;classifications&gt;&#xD;                &lt;arr&gt;&#xD;                    &lt;xsl:for-each select="marc:datafield[@tag='050' or @tag='060' or @tag='080' or @tag='082' or @tag='086' or @tag='090']/marc:subfield[@code='a' or @code='b']/.."&gt;&#xD;                    &lt;i&gt;&#xD;                        &lt;xsl:choose&gt;&#xD;                        &lt;xsl:when test="current()[@tag='050']"&gt;&#xD;                            &lt;classificationNumber&gt;&#xD;                            &lt;xsl:for-each select="marc:subfield[@code='a' or @code='b']"&gt;&#xD;                                &lt;xsl:if test="position() &gt; 1"&gt;&#xD;                                &lt;xsl:text&gt;; &lt;/xsl:text&gt;&#xD;                            &lt;/xsl:if&gt;&#xD;                            &lt;xsl:value-of select="."/&gt;&#xD;                            &lt;/xsl:for-each&gt;&#xD;                            &lt;/classificationNumber&gt;&#xD;                            &lt;classificationTypeId&gt;ce176ace-a53e-4b4d-aa89-725ed7b2edac&lt;/classificationTypeId&gt; &lt;!-- LC, Library of Congress --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:when test="current()[@tag='082']"&gt;&#xD;                            &lt;classificationNumber&gt;&#xD;                            &lt;xsl:for-each select="marc:subfield[@code='a' or @code='b']"&gt;&#xD;                                &lt;xsl:if test="position() &gt; 1"&gt;&#xD;                                &lt;xsl:text&gt;; &lt;/xsl:text&gt;&#xD;                            &lt;/xsl:if&gt;&#xD;                            &lt;xsl:value-of select="."/&gt;&#xD;                            &lt;/xsl:for-each&gt;&#xD;                            &lt;/classificationNumber&gt;&#xD;                            &lt;classificationTypeId&gt;42471af9-7d25-4f3a-bf78-60d29dcf463b&lt;/classificationTypeId&gt; &lt;!-- Dewey --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:when test="current()[@tag='086']"&gt;&#xD;                            &lt;classificationNumber&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;                            &lt;/classificationNumber&gt;&#xD;                            &lt;classificationTypeId&gt;9075b5f8-7d97-49e1-a431-73fdd468d476&lt;/classificationTypeId&gt; &lt;!-- SUDOC --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;/xsl:choose&gt;&#xD;                    &lt;/i&gt;&#xD;                    &lt;/xsl:for-each&gt;&#xD;                &lt;/arr&gt;&#xD;                &lt;/classifications&gt;&#xD;            &lt;/xsl:if&gt;&#xD;&#xD;            &lt;!-- title --&gt;&#xD;            &lt;xsl:for-each select="marc:datafield[@tag='245']"&gt;&#xD;                &lt;title&gt;&#xD;                &lt;xsl:call-template name="remove-characters-last"&gt;&#xD;                    &lt;xsl:with-param  name="input" select="marc:subfield[@code='a']" /&gt;&#xD;                    &lt;xsl:with-param  name="characters"&gt;,-./ :;&lt;/xsl:with-param&gt;&#xD;                &lt;/xsl:call-template&gt;&#xD;                &lt;xsl:if test="marc:subfield[@code='b']"&gt;&#xD;                &lt;xsl:text&gt; : &lt;/xsl:text&gt;&#xD;                    &lt;xsl:call-template name="remove-characters-last"&gt;&#xD;                    &lt;xsl:with-param  name="input" select="marc:subfield[@code='b']" /&gt;&#xD;                    &lt;xsl:with-param  name="characters"&gt;,-./ :;&lt;/xsl:with-param&gt;&#xD;                    &lt;/xsl:call-template&gt;&#xD;                &lt;/xsl:if&gt;&#xD;                &lt;xsl:if test="marc:subfield[@code='h']"&gt;&#xD;                    &lt;xsl:text&gt; &lt;/xsl:text&gt;&#xD;                    &lt;xsl:call-template name="remove-characters-last"&gt;&#xD;                    &lt;xsl:with-param  name="input" select="marc:subfield[@code='h']" /&gt;&#xD;                    &lt;xsl:with-param  name="characters"&gt;,-./ :;&lt;/xsl:with-param&gt;&#xD;                    &lt;/xsl:call-template&gt;&#xD;                &lt;/xsl:if&gt;&#xD;                &lt;/title&gt;&#xD;            &lt;/xsl:for-each&gt;&#xD;            &lt;!-- Contributors --&gt;&#xD;            &lt;xsl:if test="marc:datafield[@tag='100' or @tag='110' or @tag='111' or @tag='700' or @tag='710' or @tag='711']"&gt;&#xD;                &lt;contributors&gt;&#xD;                &lt;arr&gt;&#xD;                    &lt;xsl:for-each select="marc:datafield[@tag='100' or @tag='110' or @tag='111' or @tag='700' or @tag='710' or @tag='711']"&gt;&#xD;                    &lt;i&gt;&#xD;                        &lt;name&gt;&#xD;                        &lt;xsl:for-each select="marc:subfield[@code='a' or @code='b' or @code='c' or @code='d' or @code='f' or @code='g' or @code='j' or @code='k' or @code='l' or @code='n' or @code='p' or @code='q' or @code='t' or @code='u']"&gt;&#xD;                        &lt;xsl:if test="position() &gt; 1"&gt;&#xD;                            &lt;xsl:text&gt;, &lt;/xsl:text&gt;&#xD;                        &lt;/xsl:if&gt;&#xD;                        &lt;xsl:call-template name="remove-characters-last"&gt;&#xD;                            &lt;xsl:with-param  name="input" select="." /&gt;&#xD;                            &lt;xsl:with-param  name="characters"&gt;,-.&lt;/xsl:with-param&gt;&#xD;                        &lt;/xsl:call-template&gt;&#xD;                        &lt;/xsl:for-each&gt;&#xD;                        &lt;/name&gt;&#xD;                        &lt;xsl:choose&gt;&#xD;                        &lt;xsl:when test="@tag='100' or @tag='700'"&gt;&#xD;                            &lt;contributorNameTypeId&gt;2b94c631-fca9-4892-a730-03ee529ffe2a&lt;/contributorNameTypeId&gt; &lt;!-- personal name --&gt;&#xD;                            &lt;xsl:if test="@tag='100'"&gt;&#xD;                            &lt;primary&gt;true&lt;/primary&gt;&#xD;                            &lt;/xsl:if&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:when test="@tag='110' or @tag='710'"&gt;&#xD;                            &lt;contributorNameTypeId&gt;2e48e713-17f3-4c13-a9f8-23845bb210aa&lt;/contributorNameTypeId&gt; &lt;!-- corporate name --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:when test="@tag='111' or @tage='711'"&gt;&#xD;                            &lt;contributorNameTypeId&gt;e8b311a6-3b21-43f2-a269-dd9310cb2d0a&lt;/contributorNameTypeId&gt; &lt;!-- meeting name --&gt;&#xD;                        &lt;/xsl:when&gt;&#xD;                        &lt;xsl:otherwise&gt;&#xD;                            &lt;contributorNameTypeId&gt;2b94c631-fca9-4892-a730-03ee529ffe2a&lt;/contributorNameTypeId&gt; &lt;!-- personal name --&gt;&#xD;                        &lt;/xsl:otherwise&gt;&#xD;                        &lt;/xsl:choose&gt;&#xD;                        &lt;xsl:if test="marc:subfield[@code='e' or @code='4']"&gt;&#xD;                        &lt;contributorTypeId&gt;&#xD;                            &lt;xsl:call-template name="map-relator"/&gt;&#xD;                        &lt;/contributorTypeId&gt;&#xD;                        &lt;/xsl:if&gt;&#xD;                    &lt;/i&gt;&#xD;                    &lt;/xsl:for-each&gt;&#xD;                &lt;/arr&gt;&#xD;                &lt;/contributors&gt;&#xD;            &lt;/xsl:if&gt;&#xD;&#xD;            &lt;!-- Editions --&gt;&#xD;            &lt;xsl:if test="marc:datafield[@tag='250']"&gt;&#xD;                &lt;editions&gt;&#xD;                &lt;arr&gt;&#xD;                &lt;xsl:for-each select="marc:datafield[@tag='250']"&gt;&#xD;                    &lt;i&gt;&#xD;                    &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;                    &lt;xsl:if test="marc:subfield[@code='b']"&gt;; &lt;xsl:value-of select="marc:subfield[@code='b']"/&gt;&lt;/xsl:if&gt;&#xD;                    &lt;/i&gt;&#xD;                &lt;/xsl:for-each&gt;&#xD;                &lt;/arr&gt;&#xD;                &lt;/editions&gt;&#xD;            &lt;/xsl:if&gt;&#xD;&#xD;            &lt;!-- Publication --&gt;&#xD;            &lt;xsl:choose&gt;&#xD;                &lt;xsl:when test="marc:datafield[@tag='260' or @tag='264']"&gt;&#xD;                &lt;publication&gt;&#xD;                    &lt;arr&gt;&#xD;                    &lt;xsl:for-each select="marc:datafield[@tag='260' or @tag='264']"&gt;&#xD;                        &lt;i&gt;&#xD;                        &lt;publisher&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='b']"/&gt;&#xD;                        &lt;/publisher&gt;&#xD;                        &lt;place&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='a']"/&gt;&#xD;                        &lt;/place&gt;&#xD;                        &lt;dateOfPublication&gt;&#xD;                            &lt;xsl:value-of select="marc:subfield[@code='c']"/&gt;&#xD;                        &lt;/dateOfPublication&gt;&#xD;                        &lt;/i&gt;&#xD;                    &lt;/xsl:for-each&gt;&#xD;                    &lt;/arr&gt;&#xD;                &lt;/publication&gt;&#xD;                &lt;/xsl:when&gt;&#xD;                &lt;xsl:otherwise&gt;&#xD;                &lt;publication&gt;&#xD;                    &lt;arr&gt;&#xD;                    &lt;i&gt;&#xD;                        &lt;dateOfPublication&gt;&#xD;                        &lt;xsl:value-of select="substring(marc:controlfield[@tag='008'],8,4)"/&gt;&#xD;                        &lt;/dateOfPublication&gt;&#xD;                    &lt;/i&gt;&#xD;                    &lt;/arr&gt;&#xD;                &lt;/publication&gt;&#xD;                &lt;/xsl:otherwise&gt;&#xD;            &lt;/xsl:choose&gt;&#xD;&#xD;            &lt;!-- physicalDescriptions --&gt;&#xD;            &lt;xsl:if test="marc:datafield[@tag='300']"&gt;&#xD;                &lt;physicalDescriptions&gt;&#xD;                &lt;arr&gt;&#xD;                    &lt;xsl:for-each select="marc:datafield[@tag='300']"&gt;&#xD;                    &lt;i&gt;&#xD;                        &lt;xsl:call-template name="remove-characters-last"&gt;&#xD;                        &lt;xsl:with-param  name="input" select="marc:subfield[@code='a']" /&gt;&#xD;                        &lt;xsl:with-param  name="characters"&gt;,-./ :;&lt;/xsl:with-param&gt;&#xD;                        &lt;/xsl:call-template&gt;&#xD;                    &lt;/i&gt;&#xD;                    &lt;/xsl:for-each&gt;&#xD;                &lt;/arr&gt;&#xD;                &lt;/physicalDescriptions&gt;&#xD;            &lt;/xsl:if&gt;&#xD;&#xD;            &lt;!-- Subjects --&gt;&#xD;            &lt;xsl:if test="marc:datafield[@tag='600' or @tag='610' or @tag='611' or @tag='630' or @tag='648' or @tag='650' or @tag='651' or @tag='653' or @tag='654' or @tag='655' or @tag='656' or @tag='657' or @tag='658' or @tag='662' or @tag='69X']"&gt;&#xD;                &lt;subjects&gt;&#xD;                &lt;arr&gt;&#xD;                &lt;xsl:for-each select="marc:datafield[@tag='600' or @tag='610' or @tag='611' or @tag='630' or @tag='648' or @tag='650' or @tag='651' or @tag='653' or @tag='654' or @tag='655' or @tag='656' or @tag='657' or @tag='658' or @tag='662' or @tag='69X']"&gt;&#xD;                    &lt;i&gt;&#xD;                    &lt;xsl:for-each select="marc:subfield[@code='a' or @code='b' or @code='c' or @code='d' or @code='f' or @code='g' or @code='j' or @code='k' or @code='l' or @code='n' or @code='p' or @code='q' or @code='t' or @code='u' or @code='v' or @code='z']"&gt;&#xD;                    &lt;xsl:if test="position() &gt; 1"&gt;&#xD;                        &lt;xsl:text&gt;--&lt;/xsl:text&gt;&#xD;                    &lt;/xsl:if&gt;&#xD;                    &lt;xsl:call-template name="remove-characters-last"&gt;&#xD;                        &lt;xsl:with-param  name="input" select="." /&gt;&#xD;                        &lt;xsl:with-param  name="characters"&gt;,-.&lt;/xsl:with-param&gt;&#xD;                        &lt;/xsl:call-template&gt;&#xD;                    &lt;/xsl:for-each&gt;&#xD;                    &lt;/i&gt;&#xD;                &lt;/xsl:for-each&gt;&#xD;                &lt;/arr&gt;&#xD;                &lt;/subjects&gt;&#xD;            &lt;/xsl:if&gt;&#xD;        &lt;/instance&gt;&#xD;&#xD;        &lt;!-- Additional info for creating match key in FOLIO Inventory match module --&gt;&#xD;        &lt;matchKey&gt;&#xD;            &lt;xsl:for-each select="marc:datafield[@tag='245']"&gt;&#xD;            &lt;title&gt;&#xD;                &lt;xsl:call-template name="remove-characters-last"&gt;&#xD;                &lt;xsl:with-param  name="input" select="marc:subfield[@code='a']" /&gt;&#xD;                &lt;xsl:with-param  name="characters"&gt;,-./ :;&lt;/xsl:with-param&gt;&#xD;                &lt;/xsl:call-template&gt;&#xD;            &lt;/title&gt;&#xD;            &lt;remainder-of-title&gt;&#xD;            &lt;xsl:text&gt; : &lt;/xsl:text&gt;&#xD;                &lt;xsl:call-template name="remove-characters-last"&gt;&#xD;                &lt;xsl:with-param  name="input" select="marc:subfield[@code='b']" /&gt;&#xD;                &lt;xsl:with-param  name="characters"&gt;,-./ :;&lt;/xsl:with-param&gt;&#xD;                &lt;/xsl:call-template&gt;&#xD;            &lt;/remainder-of-title&gt;&#xD;            &lt;medium&gt;&#xD;                &lt;xsl:call-template name="remove-characters-last"&gt;&#xD;                &lt;xsl:with-param  name="input" select="marc:subfield[@code='h']" /&gt;&#xD;                &lt;xsl:with-param  name="characters"&gt;,-./ :;&lt;/xsl:with-param&gt;&#xD;                &lt;/xsl:call-template&gt;&#xD;            &lt;/medium&gt;&#xD;            &lt;!-- Only fields that are actually included in&#xD;                the instance somewhere - for example in 'title' -&#xD;                should be included as 'matchKey' elements lest&#xD;                the instance "magically" splits on "invisible"&#xD;                properties.&#xD;            &lt;name-of-part-section-of-work&gt;&#xD;                &lt;xsl:value-of select="marc:subfield[@code='p']" /&gt;&#xD;            &lt;/name-of-part-section-of-work&gt;&#xD;            &lt;number-of-part-section-of-work&gt;&#xD;                &lt;xsl:value-of select="marc:subfield[@code='n']" /&gt;&#xD;            &lt;/number-of-part-section-of-work&gt;&#xD;            &lt;inclusive-dates&gt;&#xD;                &lt;xsl:value-of select="marc:subfield[@code='f']" /&gt;&#xD;            &lt;/inclusive-dates&gt; --&gt;&#xD;            &lt;/xsl:for-each&gt;&#xD;        &lt;/matchKey&gt;&#xD;&#xD;        &lt;original&gt;            &#xD;            &lt;xsl:copy&gt;&#xD;                &lt;xsl:copy-of select="@*"/&gt;&#xD;                &lt;xsl:copy-of select="*"/&gt;&#xD;            &lt;/xsl:copy&gt;&#xD;        &lt;/original&gt;&#xD;&#xD;    &lt;/record&gt;&#xD;&#xD;    &lt;/xsl:template&gt;&#xD;&#xD;    &lt;xsl:template match="text()"/&gt;&#xD;&#xD;    &#xD;    &lt;xsl:template name="remove-characters-last"&gt;&#xD;        &lt;xsl:param name="input" /&gt;&#xD;        &lt;xsl:param name="characters"/&gt;&#xD;        &lt;xsl:variable name="lastcharacter" select="substring($input,string-length($input))" /&gt;&#xD;        &lt;xsl:choose&gt;&#xD;            &lt;xsl:when test="$characters and $lastcharacter and contains($characters, $lastcharacter)"&gt;&#xD;            &lt;xsl:call-template name="remove-characters-last"&gt;&#xD;                &lt;xsl:with-param  name="input" select="substring($input,1, string-length($input)-1)" /&gt;&#xD;                &lt;xsl:with-param  name="characters" select="$characters" /&gt;&#xD;            &lt;/xsl:call-template&gt;&#xD;            &lt;/xsl:when&gt;&#xD;            &lt;xsl:otherwise&gt;&#xD;            &lt;xsl:value-of select="$input"/&gt;&#xD;            &lt;/xsl:otherwise&gt;&#xD;        &lt;/xsl:choose&gt;&#xD;    &lt;/xsl:template&gt;&#xD;&#xD;&lt;/xsl:stylesheet&gt;&#xD;</script>
+                    <id>301304</id>
+                    <testData></testData>
+                    <testOutput></testOutput>
+                </step>
+                <transformation>309201</transformation>
+            </stepAssociations>
+            <stepAssociations>
+                <id>309402</id>
+                <position>2</position>
+                <step xsi:type="xmlTransformationStep">
+                    <description>Holdings and Items, RIT</description>
+                    <enabled>true</enabled>
+                    <inputFormat>XML</inputFormat>
+                    <name>Holdings and Items, RIT</name>
+                    <outputFormat>XML</outputFormat>
+                    <script>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet&#xD;
+  version="1.0"&#xD;
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&#xD;
+  xmlns:marc="http://www.loc.gov/MARC21/slim"&#xD;
+  xmlns:oai20="http://www.openarchives.org/OAI/2.0/"&#xD;
+  &gt;&#xD;
+&#xD;
+  &lt;xsl:strip-space elements="*"/&gt;&#xD;
+  &lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
+&#xD;
+  &lt;xsl:template match="collection"&gt;&#xD;
+    &lt;collection&gt;&#xD;
+        &lt;xsl:apply-templates/&gt;&#xD;
+    &lt;/collection&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;xsl:template match="record"&gt;&#xD;
+    &lt;record&gt;&#xD;
+        &lt;xsl:for-each select="@* | node()"&gt;&#xD;
+            &lt;xsl:copy-of select="."/&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+        &lt;xsl:apply-templates/&gt;&#xD;
+    &lt;/record&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;xsl:template match="//marc:record"&gt;&#xD;
+    &lt;xsl:variable name="mt" select="substring(./marc:leader, 7, 1)"/&gt;&#xD;
+    &lt;xsl:variable name="bl" select="substring(./marc:leader, 8, 1)"/&gt;&#xD;
+    &lt;holdingsRecords&gt;&#xD;
+      &lt;arr&gt;&#xD;
+      &lt;xsl:if test="marc:datafield[@tag='945']"&gt;&#xD;
+        &lt;xsl:for-each select="marc:datafield[@tag='945' and ./marc:subfield[@code='p']]"&gt;&#xD;
+          &lt;xsl:sort select="./marc:subfield[@code='k']"/&gt;&#xD;
+          &lt;xsl:variable name="preloc"&gt;&#xD;
+            &lt;xsl:value-of select="./preceding-sibling::marc:datafield[@tag='945'][1]/marc:subfield[@code='k']"/&gt;&#xD;
+          &lt;/xsl:variable&gt;&#xD;
+          &lt;xsl:variable name="iid" select="./marc:subfield[@code='y']"/&gt;&#xD;
+          &lt;xsl:variable name="loc" select="./marc:subfield[@code='k']"/&gt;&#xD;
+          &lt;xsl:variable name="itype" select="./marc:subfield[@code='h']"/&gt;&#xD;
+          &lt;xsl:if test="not($loc=$preloc)"&gt;&#xD;
+            &lt;i&gt;&#xD;
+              &lt;xsl:variable name="loc-clean" select="normalize-space($loc)"/&gt;&#xD;
+              &lt;permanentLocationIdHere&gt;&lt;xsl:value-of select="$loc-clean"/&gt;&lt;/permanentLocationIdHere&gt;&#xD;
+              &lt;illPolicyId&gt;&#xD;
+                &lt;xsl:choose&gt;&#xD;
+                  &lt;xsl:when test="$loc-clean='w2fl'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt;&#xD;
+                  &lt;xsl:when test="$loc-clean='w3fl'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt;&#xD;
+                  &lt;xsl:when test="$loc-clean='w4fl'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt;&#xD;
+                  &lt;xsl:when test="$loc-clean='whuge'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt;&#xD;
+                  &lt;xsl:when test="$loc-clean='wmedi'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt;&#xD;
+                  &lt;xsl:when test="$loc-clean='wmic'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt;&#xD;
+                  &lt;xsl:when test="$loc-clean='wover'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt;&#xD;
+                  &lt;xsl:when test="$loc-clean='wref'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt;&#xD;
+                  &lt;xsl:when test="$loc-clean='wstob'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt;&#xD;
+                  &lt;xsl:otherwise&gt;b0f97013-87f5-4bab-87f2-ac4a5191b489&lt;/xsl:otherwise&gt; &lt;!-- Will not lend --&gt;&#xD;
+                &lt;/xsl:choose&gt;&#xD;
+              &lt;/illPolicyId&gt;&#xD;
+              &lt;callNumber&gt;&#xD;
+                &lt;xsl:value-of select="normalize-space(concat(./marc:subfield[@code='a'], ' ', ./marc:subfield[@code='b']))"/&gt;&#xD;
+              &lt;/callNumber&gt;&#xD;
+              &lt;callNumberTypeId&gt;95467209-6d7b-468b-94df-0f5d7ad2747d&lt;/callNumberTypeId&gt; &lt;!-- LC --&gt;&#xD;
+              &lt;notes&gt;&#xD;
+                &lt;arr&gt;&#xD;
+                  &lt;i&gt;&#xD;
+                    &lt;note&gt;&lt;xsl:value-of select="concat('Location code: ', $loc-clean)"/&gt;&lt;/note&gt;&#xD;
+                    &lt;holdingsNoteTypeId&gt;b160f13a-ddba-4053-b9c4-60ec5ea45d56&lt;/holdingsNoteTypeId&gt;&#xD;
+                    &lt;staffOnly&gt;true&lt;/staffOnly&gt;&#xD;
+                  &lt;/i&gt;&#xD;
+                &lt;/arr&gt;&#xD;
+              &lt;/notes&gt;&#xD;
+              &lt;items&gt;&#xD;
+                &lt;arr&gt;&#xD;
+                &lt;xsl:for-each select="../marc:datafield[@tag='945' and ./marc:subfield[@code='k']=$loc and ./marc:subfield[@code='p']]"&gt;&#xD;
+                  &lt;i&gt;&#xD;
+                    &lt;itemIdentifier&gt;&lt;xsl:value-of select="./marc:subfield[@code='p']"/&gt;&lt;/itemIdentifier&gt;&#xD;
+                    &lt;barcode&gt;&lt;xsl:value-of select="./marc:subfield[@code='d']"/&gt;&lt;/barcode&gt;&#xD;
+                    &lt;volume&gt;&lt;xsl:value-of select="./marc:subfield[@code='c']"/&gt;&lt;/volume&gt;&#xD;
+                    &lt;status&gt;&lt;name&gt;Unknown&lt;/name&gt;&lt;/status&gt;&#xD;
+                    &lt;permanentLoanTypeId&gt;2b94c631-fca9-4892-a730-03ee529ffe27&lt;/permanentLoanTypeId&gt; &lt;!-- Can circulate --&gt;&#xD;
+                    &lt;materialTypeId&gt;&#xD;
+                      &lt;!-- Mappings to ReShare specific material types, taken from OCLC table "Type of Record" --&gt;&#xD;
+                      &lt;!-- Mapping from leader position 6 --&gt;&#xD;
+                      &lt;xsl:choose&gt;&#xD;
+                      &lt;xsl:when test="$bl='s' or $bl='b'"&gt;191da404-dec2-4977-9770-1443d9d6c238&lt;/xsl:when&gt; &lt;!-- CNR --&gt;&#xD;
+                      &lt;xsl:when test="$mt='a' or $mt='t'"&gt;e65ed344-a691-4f8f-8446-3c0a346c6882&lt;/xsl:when&gt; &lt;!-- BKS --&gt;&#xD;
+                      &lt;xsl:when test="$mt='m'"&gt;22cb5b81-2056-46ed-8050-c5d8f01caf90&lt;/xsl:when&gt;            &lt;!-- COM --&gt;&#xD;
+                      &lt;xsl:when test="$mt='e' or $mt='f'"&gt;9f2c8d85-97e6-4722-a67c-bb51ccfb7781&lt;/xsl:when&gt; &lt;!-- MAP --&gt;&#xD;
+                      &lt;xsl:when test="$mt='c' or $mt='d'"&gt;e5578a7e-49b9-4859-a86a-21b812215b4f&lt;/xsl:when&gt; &lt;!-- SCO --&gt;&#xD;
+                      &lt;xsl:when test="$mt='i' or $mt='j'"&gt;d8dc9046-a9f4-4789-adf5-678fd855b016&lt;/xsl:when&gt; &lt;!-- REC --&gt;&#xD;
+                      &lt;xsl:when test="$mt='g'"&gt;14f1845d-2fad-4091-80c8-48614eaea40b&lt;/xsl:when&gt;            &lt;!-- VIS --&gt;&#xD;
+                      &lt;xsl:when test="$mt='p'"&gt;bdfc300b-8a03-4ae6-b42a-6243afa0b7b1&lt;/xsl:when&gt;            &lt;!-- MIX --&gt;&#xD;
+                      &lt;xsl:otherwise&gt;f6dd0721-5d4a-439e-9205-c71aef39d15b&lt;/xsl:otherwise&gt;            &lt;!-- Unmapped --&gt;&#xD;
+                      &lt;/xsl:choose&gt;&#xD;
+                    &lt;/materialTypeId&gt;&#xD;
+                  &lt;/i&gt;&#xD;
+                &lt;/xsl:for-each&gt;&#xD;
+                &lt;/arr&gt;&#xD;
+              &lt;/items&gt;&#xD;
+            &lt;/i&gt;&#xD;
+          &lt;/xsl:if&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+      &lt;/xsl:if&gt;&#xD;
+      &lt;xsl:if test="not(marc:datafield[@tag='945'])"&gt;&#xD;
+        &lt;i&gt;&#xD;
+          &lt;permanentLocationIdHere&gt;UNMAPPED&lt;/permanentLocationIdHere&gt;&#xD;
+        &lt;/i&gt;&#xD;
+      &lt;/xsl:if&gt;&#xD;
+      &lt;/arr&gt; &#xD;
+     &lt;/holdingsRecords&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template match="text()"/&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+                    <id>309301</id>
+                    <testData></testData>
+                    <testOutput></testOutput>
+                </step>
+                <transformation>309201</transformation>
+            </stepAssociations>
+            <stepAssociations>
+                <id>309403</id>
+                <position>3</position>
+                <step xsi:type="xmlTransformationStep">
+                    <description>Maps locations, record identifier type for RIT</description>
+                    <inputFormat>XML</inputFormat>
+                    <name>Library codes, RIT</name>
+                    <outputFormat>XML</outputFormat>
+                    <script>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;&#xD;&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;&#xD;&lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;  &lt;xsl:template match="@* | node()"&gt;&#xD;    &lt;xsl:copy&gt;&#xD;      &lt;xsl:apply-templates select="@* | node()"/&gt;&#xD;    &lt;/xsl:copy&gt;&#xD;  &lt;/xsl:template&gt;&#xD;&#xD;  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;       type UUID. Used for qualifying a local record identifier with the library&#xD;       it originated from in context of a shared index setup where the Instance&#xD;       represents bib records from multiple libraries.&#xD;  --&gt;&#xD;  &lt;xsl:template match="//identifierTypeIdHere"&gt;&#xD;    &lt;identifierTypeId&gt;a4b180f2-fe26-5441-b871-b85fed9b0fc5&lt;/identifierTypeId&gt;&#xD;  &lt;/xsl:template&gt;&#xD;&#xD;  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;  &lt;xsl:template match="//permanentLocationIdHere"&gt;&#xD;    &lt;permanentLocationId&gt;&#xD;      &lt;xsl:choose&gt;&#xD;        &lt;xsl:when test=".='w2fl'"&gt;d9f1546a-c1e5-5cb5-b816-741142d9bead&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='w3fl'"&gt;2d62d96e-befd-5995-9626-96555787da5b&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='w4fl'"&gt;f0b473f4-df7c-5642-b4dd-da5c0a809bd6&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='whuge'"&gt;4d371924-868e-5068-b018-fecd0fd33bb5&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wmedi'"&gt;8a13b91f-6440-53a7-bb2a-0b17cdf4522a&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wmic'"&gt;8031d72e-78f4-540a-8529-1327b8a3368e&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wover'"&gt;ce4abb7b-172a-5e3f-8ff8-af2a3096500b&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wref'"&gt;5eea677a-01fb-5494-a5dc-15a3db2f8573&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wstob'"&gt;217bb5ce-52ba-56a3-b28a-e9d36404d518&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carb'"&gt;4214b137-9571-5f90-a6dd-e4141eb81bdb&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carbi'"&gt;9c2fe7ee-2692-5de0-a17f-ea2e812bff75&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='caree'"&gt;34187e9d-545e-5d9c-ae74-ed06ae7169ff&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='careh'"&gt;501799fa-5f36-5bbe-a59d-af66ff93f4f7&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='careo'"&gt;90a23a81-7069-51d6-89b5-af80c792a7f4&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carl'"&gt;6eefb716-6f99-5865-a58f-f1646b494e51&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carme'"&gt;b2b12ca7-d417-5a10-8e9d-d8579fcac551&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carmf'"&gt;9a50f0c5-0cc9-5583-80ec-1b732085c081&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carmh'"&gt;e1f29f71-48d6-5d98-8c8b-9c64e1312548&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carmm'"&gt;7c2ebcdf-4156-50ae-a920-d09e3ef07767&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carmo'"&gt;8f826f07-9f13-548f-9114-d99114718137&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carmp'"&gt;52c7a985-c43c-5207-9a7d-f8e0935c3bbe&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carms'"&gt;dc55f5c8-31e7-5783-99c3-63b231e10c07&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carni'"&gt;95ebf784-5aeb-5d46-ae03-e3b1ac09a1db&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carp'"&gt;c8b58d51-5193-5d9f-99ea-f028c46b1105&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carpo'"&gt;685562ba-da40-58b2-8a6b-0418e8f138b2&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='cary'"&gt;5d941105-2803-5a19-a24d-08bb77e64a53&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='caryf'"&gt;c934ae0c-4586-581c-9088-6e01cc1c015a&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='caryh'"&gt;7257e410-9613-5dbb-aaa9-1626182c15f7&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='caryo'"&gt;d5b47fb8-388a-5aba-bc75-a5efd310204e&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='carys'"&gt;726b3157-bdba-552f-883c-1fca518330c5&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gcdm'"&gt;d70965c2-0a68-516b-92d7-a7cdac8d9494&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gcdr'"&gt;757fad73-53d0-5c18-8f03-1f69d0db5004&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gczm'"&gt;c5f3724c-faf1-5635-86b7-bb38f641af62&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gczr'"&gt;69404fd5-3c61-5c33-94f1-9bc67f2506c0&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gkpk'"&gt;640dbeff-57a4-5027-a2a4-c79675b2e213&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gkpm'"&gt;c2b13fed-9aae-5ee5-84a0-7c1411b91b8f&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gkpn'"&gt;b19f9d2c-d017-509b-8b27-70cd4f2e54bf&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gkpr'"&gt;0a6925c9-2450-5987-81ac-00b8318eb583&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gkpre'"&gt;d831eaa8-393e-5f2e-87a3-7d440ae791a9&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gkps'"&gt;a44e9482-32be-566d-8292-6ad8c20b05d8&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gkpse'"&gt;8e97b564-3785-5cd3-9065-4d730f1ec652&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gkpsu'"&gt;115ff060-7b47-5543-a819-5f8a6881ab62&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gkpw'"&gt;7f9590c1-56a3-5321-b904-33c0b32d6e19&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gudm'"&gt;19992b93-fb1c-5f49-97d9-73b3bdd32b84&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gudr'"&gt;cd381f8c-4227-558b-859a-cb03e9baaf5b&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gudre'"&gt;3d6b1002-668e-5246-98ff-e2e7a380dcae&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='gudv'"&gt;9295fc93-bd8d-5ec6-8415-768788bbcf67&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='mrc'"&gt;bea82de2-bb90-58a3-aab0-8b65b2ae0222&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='mresd'"&gt;57a3eaa8-d7d1-5796-be7a-0ea54eb61fd4&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='mtv'"&gt;687d0466-fde4-5b24-b217-797e82acc2e2&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='rasao'"&gt;67444671-0294-5f70-b8b4-1072d9ca2450&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='ripir'"&gt;d7752adf-6f36-538c-916e-44c453c6e66d&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='ripis'"&gt;add12340-0745-5b56-91b7-2314da17a239&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='rqctr'"&gt;baf31f44-aa18-5dbc-820b-c9372697d6e7&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='rqref'"&gt;c76cbed1-f5f4-52cd-849e-60f3885d6aff&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='rqvid'"&gt;aa8bb2c6-29be-5fa6-b717-a88c61aed3fc&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='srare'"&gt;39474986-fcbc-5a86-b8c8-dbbfa6b7c0d6&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='src'"&gt;38e00299-af21-53be-9c22-8ee203d99870&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='sref'"&gt;0e32f78d-cde9-5f41-b898-b113eae8ab94&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='watl'"&gt;7421bf21-30bf-5a19-af1e-7385c06aa663&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wbind'"&gt;5b12cb12-c831-566a-a19e-a368680eacec&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wcafe'"&gt;a330c92a-e6ab-543d-ba07-65e6e6767cef&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wcirc'"&gt;4aadc0b0-7737-5344-82c7-68366ff9a72f&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wcuma'"&gt;0e10fa2b-970d-51a3-8e88-5e0375f0439f&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wdi'"&gt;e753fa91-dee9-51e0-b9d0-534c5f61f1e3&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='webks'"&gt;713578bf-018f-53b4-aba1-9de647dd1c07&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wedoc'"&gt;c2ddbe80-80cf-54cc-8486-b38678ad73bc&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wetd'"&gt;572b20c9-6586-574f-8760-6b9b08d19c8c&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wfree'"&gt;5e780458-76fb-54fb-be57-869ffd82c6a1&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='will'"&gt;e3aea787-a979-5952-803a-d6c53d81638c&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='winpr'"&gt;8bcc2e95-064c-548f-9c62-5d3cf9916d16&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wgra'"&gt;37d25b6d-74b2-5c2d-bba9-53f295aafad0&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wmat'"&gt;abbf5bde-7edd-530d-b027-ecaf162742f6&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wnews'"&gt;0a805e65-754f-536f-aa34-6da484166eb9&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='word'"&gt;cce60379-b14d-58e6-9c08-767cd17f9f10&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wovid'"&gt;7425e504-98f7-5012-baaf-f705b57bdc29&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wper'"&gt;9959179b-8d19-5f16-a0a4-adc8b9e7ef02&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wpove'"&gt;9ec6b0de-86b0-52a1-975e-36a4e3c3dd1a&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wpser'"&gt;f65a4c1e-bfd2-5d3b-b0bf-4cd85f7a5794&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wradm'"&gt;d67e13ab-66ed-5bc5-a340-e706b237789c&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wram'"&gt;7266bbdb-be63-5360-8ba0-cbed0e7335d6&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wrar'"&gt;1b129525-70af-5c60-b8a3-9450c875a43b&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wras'"&gt;607579d5-046e-5570-bd69-b339c0d8fe27&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wresd'"&gt;8f5b36d4-c84f-5334-b7a9-dfa2cc1548ca&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wst'"&gt;bec1136f-d605-5bba-9651-cfa12366d35e&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wstoa'"&gt;6de40917-3cbb-5caa-aa9d-56fc196ddee0&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wstoc'"&gt;0cf4708d-bcea-5028-9220-dc0862289144&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wstoj'"&gt;028f9a70-4c4e-543e-a1e6-fce8d9b3774a&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wtser'"&gt;0b5e309a-d76f-5539-a367-cc40a3125486&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wwd'"&gt;eb9a7d63-dafb-5e28-a9ee-295f1e0c7e03&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wweb'"&gt;80377409-9518-58fd-8703-251f31777e3a&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='winde'"&gt;1434227d-9ea6-58a1-8d53-a78ae01c5dab&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wmdef'"&gt;7151abf6-2425-571b-b4e2-48ad0b8305f5&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wport'"&gt;cc0a9c0f-4ca0-511f-8d13-caa9cf974984&lt;/xsl:when&gt;&#xD;        &lt;xsl:when test=".='wstoi'"&gt;f4af6d31-6755-53b1-8534-fe9fa9bdf74c&lt;/xsl:when&gt;&#xD;        &lt;xsl:otherwise&gt;c9db97fb-9f34-5922-a290-acfe4b12e31d&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (US-NRRI) --&gt;&#xD;      &lt;/xsl:choose&gt;&#xD;    &lt;/permanentLocationId&gt;&#xD;  &lt;/xsl:template&gt;&#xD;&#xD;  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;  &lt;xsl:template match="//institutionIdHere"&gt;&#xD;     &lt;institutionId&gt;57f36f55-930c-5897-bca1-1916d5868eae&lt;/institutionId&gt;&#xD;  &lt;/xsl:template&gt;&#xD;&#xD;&lt;/xsl:stylesheet&gt;&#xD;</script>
+                    <id>309302</id>
+                    <testData></testData>
+                    <testOutput></testOutput>
+                </step>
+                <transformation>309201</transformation>
+            </stepAssociations>
+            <stepAssociations>
+                <id>309404</id>
+                <position>4</position>
+                <step xsi:type="customTransformationStep">
+                    <customClass>com.indexdata.masterkey.localindices.harvest.messaging.InstanceXmlToInstanceJsonTransformerRouter</customClass>
+                    <description>FOLIO Instance XML to JSON</description>
+                    <enabled>true</enabled>
+                    <inputFormat>XML</inputFormat>
+                    <name>Instance XML to JSON</name>
+                    <outputFormat>JSON</outputFormat>
+                    <script></script>
+                    <id>301302</id>
+                    <testData></testData>
+                    <testOutput></testOutput>
+                    <type>custom</type>
+                </step>
+                <transformation>309201</transformation>
+            </stepAssociations>
+            <id>309201</id>
+        </transformation>
+        <usedBy></usedBy>
+        <allowCondReq>false</allowCondReq>
+        <csvConfiguration></csvConfiguration>
+        <excludeFilePattern>.*\.mrk</excludeFilePattern>
+        <expectedSchema></expectedSchema>
+        <includeFilePattern></includeFilePattern>
+        <outputSchema></outputSchema>
+        <passiveMode>true</passiveMode>
+        <recurse>false</recurse>
+        <splitAt>1</splitAt>
+        <splitSize>100</splitSize>
+        <url>ftp://rit:XXXXXXXXX@ftp.folio.indexdata.com/incoming</url>
+    </xmlBulk>
     <id>309502</id>
-    <name>CNY: RIT to localhost</name>
-    <url>ftp://rit:XXXXXXX@ftp.folio.indexdata.com/incoming</url>
-    <passiveMode>true</passiveMode>
-    <splitAt>1</splitAt>
-    <splitSize>100</splitSize>
-    <storeOriginal>true</storeOriginal>
-    <enabled>false</enabled>
-    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
-      <id>301104</id>
-    </storage>
-    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
-      <id>309201</id>
-    </transformation>
-    <harvestImmediately>false</harvestImmediately>
-    <logLevel>INFO</logLevel>
-    <mailLevel>WARN</mailLevel>
-    <overwrite>false</overwrite>
-    <scheduleString>10 10 10 6 *</scheduleString>
-    <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
-    <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
-  </xmlBulk>
 </harvestable>
