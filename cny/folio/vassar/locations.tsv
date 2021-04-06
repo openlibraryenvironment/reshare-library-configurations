@@ -1,0 +1,65 @@
+MAIN	annex	Annex
+ART	ardvd	Art DVD
+ART	artcd	Art Audio
+MAIN	brow	Browsing Collection
+MAIN	cdrom	CD-ROM Cabinet
+MAIN	chrg	Charging Station
+MAIN	circ	Main Circulation Desk
+MAIN	disk	Diskette
+MAIN	stdio	Collaboration Studio
+MAIN	vxw1	VHS
+MAIN	vxw6	Main Audio
+ART	vxwa	Art
+MAIN	vxwf	Microfilm
+MAIN	vxwfa	Vassar Faculty Authors
+MAIN	vxwi	Microfiche
+MAIN	vxwr	Reference
+MAIN	vxww	Main
+MAIN	zine	Zines
+MAIN	zlit	Literature in Translation
+MUSIC	vxwm	Music Book
+ART	argr	Art Grille
+MAIN	cper	Current Periodical Room
+MAIN	dewey	Dewey
+MAIN	ffmai	Main Flat Folio
+MAIN	hi375	HIST 375 Reference
+MAIN	micro	Microtext Room
+MAIN	proom	Periodical Room
+MUSIC	vxwb	Music Score
+MAIN	vxwo	Archives/SpecColl (Archive)
+MAIN	vxwu	US Doc
+MAIN	vxwua	US Doc Map Cases
+MAIN	vxwuc	US Doc CD ROM
+MAIN	vxwug	US Doc Map Case
+MAIN	vxwui	US Doc Fiche
+MAIN	vxwup	US Doc Periodical
+MAIN	vxwv	Archives/SpecColl (VC)
+MAIN	spclm	Archives/SpecColl (Micro)
+MAIN	spcol	Archives/SpecColl (Office)
+MAIN	vxw9	Archives/SpecColl (Bechtl)
+MAIN	vxwc	Archives/SpecColl (Fac Coll)
+MAIN	vxwe	Archives/SpecColl (MSS)
+MAIN	vxwg	Archives/SpecColl (Grille)
+MAIN	vxwgt	Archives/SpecColl (Thesis)
+MAIN	vxwl	Archives/SpecColl (Alum)
+MUSIC	muper	Music Periodical
+MUSIC	muref	Music Reference Book
+MUSIC	mures	Music Library Reserve
+MUSIC	murxr	Music Reference X-Ref
+MUSIC	mus3d	Music Library 3-Day
+MUSIC	musfo	Music Folio
+MUSIC	musov	Music Oversize
+MUSIC	mustr	Music Treasure Room
+MUSIC	vxw2	Music Lib Multimedia
+MUSIC	vxw3	Music Computer Media
+MUSIC	vxwh	Music Microfilm
+MUSIC	vxwj	Music Microfiche
+MUSIC	vxwk	Music Videorecording
+MUSIC	vxws	Music Sound Recording
+ART	ardsk	Art Desk Reserve
+ART	arref	Art Reference
+ART	arres	Art Reserve
+MAIN	mndvd	Reserve DVD
+MAIN	mnlas	Reserve Laser
+MAIN	mnres	Main Reserve
+MAIN	mnvhs	Reserve Video
