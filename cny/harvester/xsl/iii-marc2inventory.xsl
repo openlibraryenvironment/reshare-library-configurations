@@ -24,7 +24,7 @@
 
         <!-- Information needed for storing source record in union catalog context -->
         <institutionIdHere/>
-        <localIdentifier><xsl:value-of select="marc:datafield[@tag='907']/marc:subfield[@code='a']" /></localIdentifier>
+        <localIdentifier><xsl:value-of select="marc:datafield[@tag='907'][1]/marc:subfield[@code='a'] | marc:datafield[@tag='948'][1]/marc:subfield[@code='a'] " /></localIdentifier>
         
         <!-- Bibliographic record for FOLIO inventory -->
         <instance>
@@ -56,16 +56,14 @@
             <xsl:if test="marc:datafield[@tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074']
                         or marc:controlfield[@tag='001']">
                 <identifiers>
+                <xsl:variable name="iiinum" select="marc:datafield[@tag='907'][1]/marc:subfield[@code='a'] | marc:datafield[@tag='948'][1]/marc:subfield[@code='a']"/>
                 <arr>
-                <xsl:for-each select="marc:datafield[@tag='907']/marc:subfield[@code='a']">
+                  <xsl:if test="$iiinum">
                     <i>
-                    <value><xsl:value-of select="."/></value>
-                    <!-- A subsequent library specific transformation (style sheet)
-                        must replace this tag with the actual identifierTypeId for
-                        the record identifer type of the given library -->
-                    <identifierTypeIdHere/>
+                      <value><xsl:value-of select="$iiinum"/></value>
+                      <identifierTypeIdHere/>
                     </i>
-                </xsl:for-each>
+                  </xsl:if>
                 <xsl:for-each select="marc:datafield[@tag='001' or @tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074']">
                     <i>
                     <xsl:choose>
