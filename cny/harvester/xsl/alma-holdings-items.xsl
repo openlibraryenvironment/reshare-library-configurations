@@ -50,12 +50,12 @@
                 <xsl:variable name="LOC" select="marc:subfield[@code='d']" />
                 <illPolicyId>
                   <xsl:choose>
-                    <xsl:when test="$LOC='graphic_no'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='stacks'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='juvenile'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='circ'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='oversize'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
-                    <xsl:when test="$LOC='remote'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
+                    <xsl:when test="$LOC='1stfl'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
+                    <xsl:when test="$LOC='2ndfl'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
+                    <xsl:when test="$LOC='lowie'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
+                    <xsl:when test="$LOC='over'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
+                    <xsl:when test="$LOC='audio'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
+                    <xsl:when test="$LOC='avcol'"><xsl:value-of select="$WILL_LEND" /></xsl:when>
                     <xsl:otherwise><xsl:value-of select="$WILL_NOT_LEND" /></xsl:otherwise>
                   </xsl:choose>
                 </illPolicyId>
@@ -129,12 +129,8 @@
                     <xsl:for-each select="../marc:datafield[@tag='995']">
                       <xsl:if test="marc:subfield[@code='ff']=$holdingsId">
                         <i>
-                          <itemIdentifier>
-                            <xsl:value-of select="marc:subfield[@code='a']"/>
-                          </itemIdentifier>
-                          <barcode>
-                            <xsl:value-of select="marc:subfield[@code='s']"/>
-                          </barcode>
+                          <itemIdentifier><xsl:value-of select="marc:subfield[@code='a']"/></itemIdentifier>
+                          <barcode><xsl:value-of select="marc:subfield[@code='s']"/></barcode>
                           <permanentLoanTypeId>2b94c631-fca9-4892-a730-03ee529ffe27</permanentLoanTypeId>                    <!-- Can circulate -->
                           <materialTypeId>
                             <!-- Mappings to ReShare specific material types, taken from OCLC table "Type of Record" -->
@@ -167,6 +163,7 @@
                             </xsl:choose>
                           </chronology>                  
                           <volume><xsl:value-of select="marc:subfield[@code='e']"/></volume>
+                          <permanentLocationIdHere><xsl:value-of select="marc:subfield[@code='aa']"/></permanentLocationIdHere>
                         </i>
                       </xsl:if>
                     </xsl:for-each>
