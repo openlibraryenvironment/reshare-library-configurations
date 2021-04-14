@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transformation >
-    <id>322201</id>
+    <id>331201</id>
     <basicTransformation>
-        <id>322201</id>
+        <id>331201</id>
         <description></description>
         <enabled>true</enabled>
         <name>Cairn - OAI-PMH to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
-            <id>322401</id>
+            <id>331401</id>
             <position>1</position>
-            <transformation>322201</transformation>
+            <transformation>331201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
                 <id>10101</id>
             </step>
         </stepAssociations>
         <stepAssociations>
-            <id>322402</id>
+            <id>331402</id>
             <position>2</position>
-            <transformation>322201</transformation>
+            <transformation>331201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>322301</id>  <!-- Cairn holdings and items -->
+                <id>331301</id>  <!-- Cairn holdings and items -->
             </step>
         </stepAssociations>
         <stepAssociations>
-            <id>322403</id>
+            <id>331403</id>
             <position>3</position>
-            <transformation>322201</transformation>
+            <transformation>331201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>322302</id> <!-- Granular library codes, Cairn -->
+                <id>331302</id> <!-- Granular library codes, Cairn -->
             </step>
         </stepAssociations>
         <stepAssociations>
-            <id>322404</id>
+            <id>331404</id>
             <position>4</position>
-            <transformation>322201</transformation>
+            <transformation>331201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
                 <id>301302</id> <!-- XML to JSON -->
             </step>

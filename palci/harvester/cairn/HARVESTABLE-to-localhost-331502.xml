@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <harvestable>
   <xmlBulk>
-    <id>322502</id>
+    <id>331502</id>
     <name>PALCI SI: Cairn to localhost</name>
     <url>ftp://cairn:XXXXXX@ftp.folio.indexdata.com/incoming</url>
     <storeOriginal>true</storeOriginal>
@@ -10,7 +10,7 @@
       <id>301104</id>  <!-- Storage PALCI SI via local okapi -->
     </storage>
     <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
-      <id>322201</id>
+      <id>331201</id>
     </transformation>
     <harvestImmediately>false</harvestImmediately>
     <logLevel>INFO</logLevel>

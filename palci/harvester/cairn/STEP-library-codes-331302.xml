@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transformationStep>
-  <id>322302</id>
+  <id>331302</id>
   <XmlTransformStep>
-    <id>322302</id>
+    <id>331302</id>
     <description>Maps locations, record identifier type for Cairn</description>
     <inputFormat>XML</inputFormat>
     <name>Library codes, Cairn</name>
