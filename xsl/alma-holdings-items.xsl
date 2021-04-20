@@ -163,6 +163,16 @@
                             </xsl:choose>
                           </chronology>                  
                           <volume><xsl:value-of select="marc:subfield[@code='e']"/></volume>
+                          <xsl:if test="./marc:subfield[@code='d']">
+                            <yearCaption>
+                              <arr>
+                                <i>
+                                  <xsl:value-of select="./marc:subfield[@code='d']"/>
+                                </i>
+                              </arr>
+                            </yearCaption>
+                          </xsl:if>
+                          <numberOfPieces><xsl:value-of select="./marc:subfield[@code='gg']"/></numberOfPieces>
                           <permanentLocationIdHere><xsl:value-of select="marc:subfield[@code='aa']"/></permanentLocationIdHere>
                         </i>
                       </xsl:if>
