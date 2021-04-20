@@ -1,0 +1,80 @@
+sldocspa	State Library sl docs PA	book
+sldocsus	State Library sl docs US	book
+slmain	State Library sl main	book
+slmainovr	State Library sl main ovr	book
+slstks	State Library sl main stack	book
+slstkover	State Library sl main stack oversize	book
+slstkrovr	State Library sl main stack ref ovr	book
+Newspapers	Newspapers
+sldocscd	sl docs CD ROMS
+sldocscis	sl docs CIS microfiche
+sldocsdvd	sl docs DVD
+sldocsfilm	sl docs microfilm
+sldocsmf	sl docs microfiche
+sldocspa	sl docs PA
+sldocspacd	sl docs PA CD ROMS
+sldocspam	sl docs PA maps
+sldocspamf	sl docs PA microfilm
+sldocsus	sl docs US
+sldocusvid	sl docs us video
+slgeno	sl geno
+slgenoill	sl geno ill
+slgenorfc	sl geno ref microfiche
+slgenorfm	sl geno ref microfilm
+slgenosfc	sl geno stack microfiche
+slgenosfm	sl geno stack microfilm
+sllaw	sl law
+sllawcase	sl law case
+sllawcd	sl law cd
+sllawfm	sl law microfilm
+sllawper	sl law periodical
+sllawref	sl law reference
+sllawrfc	sl law ref microfiche
+sllawsfc	sl law stack microfiche
+sllawstat	sl law statutes
+sllawstks	sl law stacks
+sllawstor	sl law storage
+sllc	sl lc
+sllcovr	sl lc oversize
+sllcref	sl lc reference
+sllcrefovr	sl lc reference oversize
+sllcstk	sl lc stack
+sllcstkovr	sl lc stacks oversize
+slmain	sl main
+slmainfc	sl main ref microfiche
+slmainfm	sl main ref microfilm
+slmainfol	sl main folio
+slmainmap	sl main map
+slmainnl	sl main newsletter
+slmainovr	sl main ovr
+slmainper	sl main periodical
+slmicrper	sl microfilm periodical
+slnewmicr	sl newspaper microfilm
+slneworig	sl newspapers orig
+slrare	sl rare
+slrarea	sl rare assembly coll
+slraredoc	sl rare assembly document
+slrareflfl	sl rare flat file
+slrarefofl	sl rare books flat
+slrarehill	sl rare hill
+slrarejudy	sl rare judy
+slrarenews	sl rare newspapers
+slrarenr	sl rare newspaper repos
+slrareover	sl rare workroom flat
+slrarepa	sl rare pa imprint to1865
+slrareqfl	sl rare pa imprint - flat
+slrareref	sl rare reference
+slrarewk	sl rare workroom
+slref	sl main ref
+slrefatla	sl main ref atlas
+slreffoli	sl main ref folio
+slrefover	sl main ref oversize
+slrefrdy	sl main ref ready
+slstkatls	sl main stack atlas
+slstkfc	sl main stack microfiche
+slstkfm	sl main stack microfilm
+slstkfoli	sl main stack folio
+slstkover	sl main stack oversize
+slstkreffl	sl main stack ref folio
+slstkrovr	sl main stack ref ovr
+slstks	sl main stack
