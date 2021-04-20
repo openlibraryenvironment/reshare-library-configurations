@@ -1,0 +1,482 @@
+alealfoc	Alexander Library East Asian Folio C
+alealstac	Alexander Library East Asian Stacks C
+aledlabc	Alexander Library Education Lab C
+alefolioc	Alexander Library EFolio C
+alfolioc	Alexander Library Folio C
+aldocc	Alexander Library Government Documents C
+aljuvc	Alexander Library Juvenile Materials Collection
+aljuvrc	Alexander Library Juvenile Materials Reference Collection C
+aldocnjc	Alexander Library NJ Government Documents C
+alstackc	Alexander Library Stacks C
+aldocusc	Alexander Library US Government Documents C
+aldocusfoc	Alexander Library US Government Documents Oversize C
+aldoclusc	Alexander Library US Law Government Documents C
+crcareerc	Carr Library Career Collection C
+crfolioc	Carr Library Oversize
+crstackc	Carr Library Stacks C
+chfolioc	Chang Library Oversize
+chstackc	Chang Library Stacks C
+dadocc	Dana Library Government Documents C
+dadocnjc	Dana Library NJ Government Documents C
+dafolioc	Dana Library Oversize C
+dastackc	Dana Library Stacks C
+dadocusc	Dana Library US Government Documents C
+dgfolioc	Douglass Library Oversize C
+dgplaysc	Douglass Library Playscripts
+dgstackc	Douglass Library Stacks C
+anstackc	Library Annex Stacks C
+lsdocfoc	Library of Science & Medicine Documents Folio Collection C
+lsdocc	Library of Science & Medicine Government Documents C
+lsdocnjc	Library of Science & Medicine NJ Government Documents C
+lsdocusfoc	Library of Science & Medicine Oversized US Government Documents C
+lsstackc	Library of Science & Medicine Stacks C
+lsdocusc	Library of Science & Medicine US Government Documents C
+mafolioc	Math & Physics Library Oversize C
+mastackc	Math & Physics Library Stacks C
+cafolioc	Robeson Library Oversize C
+castackc	Robeson Library Stacks C
+cadocusc	Robeson Library US Government Documents C
+sichinardm	Smith Library Chinard Humanities Collection
+sistackm	Smith Library Stacks M
+smstackc	SMLR – Carey Library Stacks C
+rastacka	Academic Resource Center Stacks
+alcirdeskq	Alexander Library Circulation Desk
+alealbdn	Alexander Library East Asian Bound Chinese/Korean Serials N
+alealpern	Alexander Library East Asian Periodicals N
+alealraren	Alexander Library East Asian Rare Materials N
+alealrefn	Alexander Library East Asian Reference N
+alengsocc	Alexander Library English and Social Sciences Collection
+alfolion	Alexander Library Folio N
+aldoccomn	Alexander Library Government Documents Computer Files N
+aldocefoc	Alexander Library Government Documents EFolio C
+aldocefon	Alexander Library Government Documents EFolio N
+aldocfoc	Alexander Library Government Documents Folio C
+aldocfon	Alexander Library Government Documents Folio N
+aldocmapn	Alexander Library Government Documents Maps
+aldocmficn	Alexander Library Government Documents Microfiche
+aldocmfiln	Alexander Library Government Documents Microfilm
+aldocmfn	Alexander Library Government Documents Microform
+aldocn	Alexander Library Government Documents N
+aldocrefc	Alexander Library Government Documents Reference C
+aldocrefn	Alexander Library Government Documents Reference N
+almcdonn	Alexander Library McDonnell Collection N
+almfichn	Alexander Library Microfiche Materials
+alfchpern	Alexander Library Microfiche Periodicals
+almfilmn	Alexander Library Microfilm Materials
+alflmpern	Alexander Library Microfilm Periodicals
+aldocnjfoc	Alexander Library NJ Government Documents Folio C
+aldocnjfon	Alexander Library NJ Government Documents Folio N
+aldocnjn	Alexander Library NJ Government Documents N
+aldoclnjn	Alexander Library NJ Law Government Documents N
+alpern	Alexander Library Periodicals N
+alperfon	Alexander Library Periodicals Oversize N
+alrecreado	Alexander Library Recreational Reading Collection
+alrefc	Alexander Library Reference C
+alrefcomn	Alexander Library Reference Computer Files
+alrefdeskn	Alexander Library Reference Desk N
+alrefefon	Alexander Library Reference EFolio
+alreffoc	Alexander Library Reference Folio C
+alreffon	Alexander Library Reference Folio N
+alrefn	Alexander Library Reference N
+alreserve	Alexander Library Reserve
+alstakcomc	Alexander Library Stacks Computer Files C
+alstakcomn	Alexander Library Stacks Computer Files N
+alstakcomy	Alexander Library Stacks Computer Files Y
+alstackn	Alexander Library Stacks N
+alstacky	Alexander Library Stacks Y
+aldocuscoc	Alexander Library US Government Documents Computer Files C
+aldocuscon	Alexander Library US Government Documents Computer Files N
+aldocuscov	Alexander Library US Government Documents Computer Files V
+aldocusman	Alexander Library US Government Documents Maps N
+aldocusmn	Alexander Library US Government Documents Microforms
+aldocusn	Alexander Library US Government Documents N
+aldocusfon	Alexander Library US Government Documents Oversize N
+aldocusrn	Alexander Library US Government Documents Reference N
+aldocusy	Alexander Library US Government Documents Y
+aldoclusn	Alexander Library US Law Government Documents N
+arcirdeskq	Art Library Circulation Desk
+ardvdn	Art Library Digital Video Discs
+arefolion	Art Library Elephant Oversize N
+armfichn	Art Library Microfiche Materials
+arfchpern	Art Library Microfiche Periodicals
+arflmpern	Art Library Microfilm Periodicals
+arfolioc	Art Library Oversize C
+arpern	Art Library Periodicals
+arpermres	Art Library Permanent Reserve
+arxefon	Art Library Rare Books Elephant Oversize
+arxn	Art Library Rare Books N
+arxfon	Art Library Rare Books Oversize N
+arxpern	Art Library Rare Periodicals
+arrefn	Art Library Reference
+arrefcomn	Art Library Reference Computer Files
+arreserve	Art Library Reserve
+arstackc	Art Library Stacks C
+arstakcomn	Art Library Stacks Computer Files
+crcarrefn	Carr Library Career Reference Collection N
+crcirdeskq	Carr Library Circulation Desk
+crmichn	Carr Library Microfiche Materials
+crflmpern	Carr Library Microfilm Periodicals
+crpern	Carr Library Periodicals
+crpercomn	Carr Library Periodicals Computer Files
+crpermres	Carr Library Permanent Reserve
+crrecceado	Carr Library Recreational Reading Collection
+crrefcomn	Carr Library Reference Computer Files
+crrefdeskn	Carr Library Reference Desk
+crrefn	Carr Library Reference N
+crreserve	Carr Library Reserve
+crstakcomn	Carr Library Stacks Computer Files
+crstackn	Carr Library Stacks N
+chcirdeskq	Chang Library Circulation Desk
+chcookn	Chang Library Cook Collection
+chpern	Chang Library Periodicals
+chpercomn	Chang Library Periodicals Computer Files
+chrefcomn	Chang Library Reference Computer Files
+chrefn	Chang Library Reference N
+chreffon	Chang Library Reference Oversize
+chreserve	Chang Library Reserve
+chstakcomc	Chang Library Stacks Computer Files
+chstackn	Chang Library Stacks N
+daarchivn	Dana Library Archives N
+dacassetr	Dana Library Audio Cassettes R
+dacdiscg	Dana Library Audio Compact Discs G
+daavkitc	Dana Library Audiovisual Kits
+dabusrefn	Dana Library Business Reference Collection
+dacirdeski	Dana Library Circulation Desk I
+danewarkn	Dana Library City of Newark Special Collection N
+danewarkp	Dana Library City of Newark Special Collection P
+danewarkv	Dana Library City of Newark Special Collection V
+dadoccomn	Dana Library Computer File Government Documents
+dadocusco0	Dana Library Computer File US Government Documents 0
+dadocuscoc	Dana Library Computer File US Government Documents C
+dadocuscog	Dana Library Computer File US Government Documents G
+dadocuscon	Dana Library Computer File US Government Documents N
+dadocuscov	Dana Library Computer File US Government Documents V
+dadocuscoy	Dana Library Computer File US Government Documents Y
+dadvdc	Dana Library Digital Video Discs C
+dadvdn	Dana Library Digital Video Discs N
+dadvdp	Dana Library Digital Video Discs P
+dadvdv	Dana Library Digital Video Discs V
+dadocusman	Dana Library Map US Government Documents
+damediac	Dana Library Media Room Books Collection C
+damedian	Dana Library Media Room Books Collection N
+damediay	Dana Library Media Room Books Collection Y
+damfichn	Dana Library Microfiche Materials
+damfilmn	Dana Library Microfilm Materials
+daflmpern	Dana Library Microfilm Periodicals
+dadocusmn	Dana Library Microform US Government Documents
+dadocnj0	Dana Library NJ Government Documents 0
+dadocnjn	Dana Library NJ Government Documents N
+dafolion	Dana Library Oversize N
+dapern	Dana Library Periodicals N
+dapermres	Dana Library Permanent Reserve
+dacamoesc	Dana Library Portuguese Cultural Heritage Room (Dana) C
+darefcomn	Dana Library Reference Computer Files
+darefdeskn	Dana Library Reference Desk
+dadocrefn	Dana Library Reference Government Documents N
+darefn	Dana Library Reference N
+dadocusrn	Dana Library Reference US Government Documents N
+dareserve	Dana Library Reserve
+daspecoln	Dana Library Special Collections
+dastakcomc	Dana Library Stacks Computer Files C
+dastackn	Dana Library Stacks N
+dastackr	Dana Library Stacks R
+dastackv	Dana Library Stacks V
+dadocus0	Dana Library US Government Documents 0
+dadocusn	Dana Library US Government Documents N
+dadocusy	Dana Library US Government Documents Y
+davideo0	Dana Library Videotapes
+dgcassetn	Douglass Library Audio Cassettes N
+dgcassetv	Douglass Library Audio Cassettes V
+dgcdiscc	Douglass Library Audio Compact Discs C
+dgcdiscg	Douglass Library Audio Compact Discs G
+dgcdiscn	Douglass Library Audio Compact Discs N
+dgcdiscv	Douglass Library Audio Compact Discs V
+dgavkity	Douglass Library Audiovisual Kits
+dgcirdeskq	Douglass Library Circulation Desk
+dgdvdc	Douglass Library Digital Video Discs C
+dgdvdn	Douglass Library Digital Video Discs N
+dgdvdp	Douglass Library Digital Video Discs P
+dgdvdv	Douglass Library Digital Video Discs V
+dgfilmn	Douglass Library Films
+dgmfichn	Douglass Library Microfiche Materials
+dgmfilmn	Douglass Library Microfilm Materials
+dgflmpern	Douglass Library Microfilm Periodicals
+dgmediafo4	Douglass Library Oversize Media Collection 4
+dgmediafoc	Douglass Library Oversize Media Collection C
+dgmediafog	Douglass Library Oversize Media Collection G
+dgmediafov	Douglass Library Oversize Media Collection V
+dgxfon	Douglass Library Oversized Rare Books
+dgpalrefn	Douglass Library Performing Arts Library Reference
+dgpern	Douglass Library Periodicals
+dgxn	Douglass Library Rare Books
+dgrefn	Douglass Library Reference
+dgreserve	Douglass Library Reserve
+dgslidev	Douglass Library Slides
+dgstackn	Douglass Library Stacks N
+dgvdiscn	Douglass Library Video Laser Discs N
+dgvideov	Douglass Library Videotapes
+dgdiscr	Douglass Library Vinyl LP Records R
+dgdiscv	Douglass Library Vinyl LP Records V
+huarchivn	Hungarian Foundation Archives
+hucassetr	Hungarian Foundation Audio Cassettes R
+hucdiscg	Hungarian Foundation Audio Compact Discs G
+hudvdv	Hungarian Foundation Digital Video Discs V
+hujuvc	Hungarian Foundation Juvenile Materials Collection C
+humssn	Hungarian Foundation Manuscript Collection
+humpcasen	Hungarian Foundation Map Case
+humapn	Hungarian Foundation Map Collection N
+humfilmn	Hungarian Foundation Microfilm Materials
+huflmpern	Hungarian Foundation Microfilm Periodicals
+hunewspapn	Hungarian Foundation Newspaper Collection
+hustkakcomn	Hungarian Foundation None
+hufolion	Hungarian Foundation Oversize
+huxfon	Hungarian Foundation Oversized Rare Books
+hupern	Hungarian Foundation Periodicals
+huxn	Hungarian Foundation Rare Books
+hurefn	Hungarian Foundation Reference N
+hustackc	Hungarian Foundation Stacks C
+hustackn	Hungarian Foundation Stacks N
+hutsdepn	Hungarian Foundation Technical Services Department
+huvideo0	Hungarian Foundation Videotapes
+hudiscn	Hungarian Foundation Vinyl LP Records
+jaarchivn	Jazz Studies Archives
+jacassetn	Jazz Studies Audio Cassettes
+jacdiscn	Jazz Studies Audio Compact Discs
+jacdfon	Jazz Studies Audio Compact Discs Oversized
+jatapen	Jazz Studies Audio Tapes
+jadvdn	Jazz Studies Digital Video Discs
+jadiscogn	Jazz Studies Discography Collection
+jadiscn	Jazz Studies Discs
+jalpfon	Jazz Studies Discs Oversized
+jaflmpern	Jazz Studies Microfilm Periodicals
+jascoresn	Jazz Studies Music Scores
+janewsletn	Jazz Studies Newsletter Collection
+jafolion	Jazz Studies Oversize
+japern	Jazz Studies Periodicals
+japerclon	Jazz Studies Periodicals in Closed Stacks
+jaxn	Jazz Studies Rare Books
+jarefn	Jazz Studies Reference
+jarefdeskn	Jazz Studies Reference Desk
+jastackn	Jazz Studies Stacks
+javdiscn	Jazz Studies Video Laser Discs
+javideon	Jazz Studies Videotapes
+CAREER	Law Library Camden Career Planning
+CIRC	Law Library Camden Circulation Desk
+CIVILPRAC	Law Library Camden Civil Practice Clinic
+FACOFFICE	Law Library Camden Faculty Office
+FIFTH	Law Library Camden Fifth Floor
+FIFTHCIRC	Law Library Camden FifthCirc
+FOURTH	Law Library Camden Fourth Floor
+FOURTHCIRC	Law Library Camden FourthCirc
+GINSBURG	Law Library Camden Ginsburgs
+LAWGEN	Law Library Camden Law General Collection
+LEISURE	Law Library Camden Leisure Reading
+MICRO	Law Library Camden Microfiche
+NJGOVDOC	Law Library Camden NJ Government Documents
+ICLE	Law Library Camden NJ ICLE
+PERIODICAL	Law Library Camden Periodicals
+REF	Law Library Camden Reference Collection
+REFDESK	Law Library Camden Reference Desk
+RESERVE	Law Library Camden Reserve
+RESERVE510	Law Library Camden Reserve 510
+RESERVECD	Law Library Camden Reserve CD
+RESERVEDVD	Law Library Camden Reserve DVD
+SCLAWCIRC	Law Library Camden Robert F. Williams SCLawCirc
+SCLAW	Law Library Camden Robert F. Williams State Constitutional Law Collection
+ROOM316	Law Library Camden Room 316
+ROOM326	Law Library Camden Room 326
+ROOM328	Law Library Camden Room 328
+ROOM334	Law Library Camden Room 334
+TAXALCOVE	Law Library Camden Tax Alcove
+THIRD	Law Library Camden Third Floor
+THIRDCIRC	Law Library Camden ThirdCirc
+CAREER	Law Library Newark Career Corner
+CRIMJUST	Law Library Newark Criminal Justice
+CJLPER	Law Library Newark Criminal Justice Library Periodicals
+CJLREF	Law Library Newark Criminal Justice Library Reference
+ELDER	Law Library Newark Elder Law Collection
+FACARCH	Law Library Newark Faculty Archives
+FACOFFICE	Law Library Newark Faculty Office
+LAWGEN	Law Library Newark Law General Collection
+LAWGENCIRC	Law Library Newark Law General Collection Circ
+LIBOFFICE	Law Library Newark Library Offices
+MAGAZINE	Law Library Newark Magazine Rack
+MICRO	Law Library Newark Microfiche
+NJGOVDOC	Law Library Newark NJ Government Documents
+NJREFRM	Law Library Newark NJ Reference
+PERIODICAL	Law Library Newark Periodicals
+RARE	Law Library Newark RareBookCollection
+REF	Law Library Newark Reference Collection
+RESERVE	Law Library Newark Reserve
+FLASHCD	Law Library Newark Reserve Flash CD
+RSTUDYAID	Law Library Newark Reserve RSTUDYAID
+DOCREF	Law Library Newark US Government Documents Reference
+anstackn	Library Annex Stacks N
+anstacky	Library Annex Stacks Y
+lscirdeskq	Library of Science & Medicine Circulation Desk
+lsdocuscoc	Library of Science & Medicine Computer File US Government Documents C
+lsdocuscon	Library of Science & Medicine Computer File US Government Documents N
+lsdocuscov	Library of Science & Medicine Computer File US Government Documents V
+lsdocuscoy	Library of Science & Medicine Computer File US Government Documents Y
+lsdocfon	Library of Science & Medicine Documents Folio Collection N
+lsdocn	Library of Science & Medicine Government Documents N
+lsdocy	Library of Science & Medicine Government Documents Y
+lsmapn	Library of Science & Medicine Map Collection
+lsdocusman	Library of Science & Medicine Map US Government Documents
+lsmedtxtm	Library of Science & Medicine Medical Textbooks Collection
+lsmfichn	Library of Science & Medicine Microfiche Periodicals
+lsmfilmn	Library of Science & Medicine Microfilm Periodicals
+lsdocusmn	Library of Science & Medicine Microform US Government Documents
+lsdocnjn	Library of Science & Medicine NJ Government Documents N
+lsdocnjfon	Library of Science & Medicine NJ Government Documents Oversize
+lsdocnjy	Library of Science & Medicine NJ Government Documents Y
+lsreffon	Library of Science & Medicine Oversize Reference
+lsdocusfon	Library of Science & Medicine Oversized US Government Documents N
+lspern	Library of Science & Medicine Periodicals
+lspermres	Library of Science & Medicine Permanent Reserve
+lsrecreado	Library of Science & Medicine Recreational Reading Collection
+lsrefcomn	Library of Science & Medicine Reference Computer Files N
+lsrefmapn	Library of Science & Medicine Reference Map Collection
+lsrefmfn	Library of Science & Medicine Reference Microforms
+lsrefn	Library of Science & Medicine Reference N
+lsdocusrn	Library of Science & Medicine Reference US Government Documents
+lsreserve	Library of Science & Medicine Reserve
+lsstackn	Library of Science & Medicine Stacks N
+lsstackq	Library of Science & Medicine Stacks Q
+lsstacky	Library of Science & Medicine Stacks Y
+lsdocusn	Library of Science & Medicine US Government Documents N
+lsdocusy	Library of Science & Medicine US Government Documents Y
+macirdeskq	Math & Physics Library Circulation Desk
+marefcomn	Math & Physics Library Computer File Reference
+mapern	Math & Physics Library Periodicals
+mapermres	Math & Physics Library Permanent Reserve
+marefn	Math & Physics Library Reference
+mareserve	Math & Physics Library Reserve
+mastakcomc	Math & Physics Library Stacks Computer Files C
+mastacks	Math & Physics Library Stacks S
+rwadmdepn	Robert Wood Johnson Library Administration
+rwconhealn	Robert Wood Johnson Library Consumer Health
+rwmedia7	Robert Wood Johnson Library Media 7
+rwmediab	Robert Wood Johnson Library Media B
+rwmedian	Robert Wood Johnson Library Media N
+rwmediav	Robert Wood Johnson Library Media V
+rwpern	Robert Wood Johnson Library Periodicals
+rwpermthen	Robert Wood Johnson Library Permanent Reserve Theses Collection
+rwrefn	Robert Wood Johnson Library Reference
+rwrefdeskn	Robert Wood Johnson Library Reference Desk
+rwstackm	Robert Wood Johnson Library Stacks M
+rwstoragen	Robert Wood Johnson Library Storage Room
+rwtsdepn	Robert Wood Johnson Library Technical Services Department
+cacirdeskq	Robeson Library Circulation Desk
+caellc	Robeson Library English Language Learners
+exhibits	Robeson Library Exhibits
+cadocmfn	Robeson Library Government Documents Microform
+camediac	Robeson Library Media C
+camfichn	Robeson Library Microfiche Materials
+camfilmn	Robeson Library Microfilm Materials
+caflmpern	Robeson Library Microfilm Periodicals
+capern	Robeson Library Periodicals N
+capermres	Robeson Library Permanent Reserve
+carecreado	Robeson Library Recreational Reading Collection
+carefcomn	Robeson Library Reference Computer Files N
+carefdeskn	Robeson Library Reference Desk N
+carefn	Robeson Library Reference N
+careserve	Robeson Library Reserve
+caxn	Robeson Library Special Collections N
+castackn	Robeson Library Stacks N
+siadmdepn	Smith Library Administration
+siarchivn	Smith Library Archives
+siauddigr	Smith Library Audio Digest R
+sihomclasn	Smith Library History of Medicine - Classics
+sihomhistm	Smith Library History of Medicine - History M
+sihomhistn	Smith Library History of Medicine - History N
+sihomnjn	Smith Library History of Medicine - New Jersey
+sihomnjrn	Smith Library History of Medicine - New Jersey - Rare Books
+sihomparn	Smith Library History of Medicine - Parsonnet
+sihomraren	Smith Library History of Medicine - Rare Books
+sihomrar1n	Smith Library History of Medicine - Rare Books - 19th Century
+simedia0	Smith Library Media 0
+simedia4	Smith Library Media 4
+simedia7	Smith Library Media 7
+simediab	Smith Library Media B
+simediac	Smith Library Media C
+simediag	Smith Library Media G
+simediam	Smith Library Media M
+simedian	Smith Library Media N
+simediar	Smith Library Media R
+simediav	Smith Library Media V
+simediay	Smith Library Media Y
+sipern	Smith Library Periodicals
+sipermres	Smith Library Permanent Reserve
+sirefdepn	Smith Library Reference Department
+sirefn	Smith Library Reference N
+sireserve	Smith Library Reserve
+siserdepn	Smith Library Serials Department
+sistoragen	Smith Library Storage Room
+smcassetn	SMLR – Carey Library Audio Cassettes N
+smcassetr	SMLR – Carey Library Audio Cassettes R
+smcdiscn	SMLR – Carey Library Audio Compact Discs
+smcirdeskb	SMLR – Carey Library Circulation Desk
+smdvdp	SMLR – Carey Library Digital Video Discs P
+smfilmc	SMLR – Carey Library Films
+smpern	SMLR – Carey Library Periodicals
+smrefn	SMLR – Carey Library Reference N
+smreserve	SMLR – Carey Library Reserve
+smvideon	SMLR – Carey Library Videotapes N
+smdiscr	SMLR – Carey Library Vinyl LP Records R
+spxburrn	Special Collections & University Archives Aaron Burr Society Materials
+sparchivn	Special Collections & University Archives Archives
+spxartsbkn	Special Collections & University Archives Artists' Books
+spcollxn	Special Collections & University Archives Collection Level Record
+spxelecn	Special Collections & University Archives Election Day Sermons
+spxelawn	Special Collections & University Archives English Law (Great Britain)
+spxfastn	Special Collections & University Archives Fast Day Sermons
+spxalcohn	Special Collections & University Archives Former Alcohol items now at SPCOL/UA
+spxfourn	Special Collections & University Archives Fourth of July Orations
+spxfrien	Special Collections & University Archives Friends Collection
+spxfulln	Special Collections & University Archives Fuller Collection
+spxgrifn	Special Collections & University Archives Griffis Collection
+spxgriffon	Special Collections & University Archives Griffis Collection Folio
+spxrichn	Special Collections & University Archives Horace G. Richards Novels Collection
+spximp2n	Special Collections & University Archives Imprint 2 Collection
+spximprn	Special Collections & University Archives Imprint Collection
+spxjuvn	Special Collections & University Archives Juvenile Collection
+spmssn	Special Collections & University Archives Manuscript Collection
+spmapn	Special Collections & University Archives Map Collection
+spmfilmn	Special Collections & University Archives Microfilm Materials
+spnewspapn	Special Collections & University Archives Newspaper Collection
+spxfoarbkn	Special Collections & University Archives Oversized Artists' Books
+spxfon	Special Collections & University Archives Oversized Rare Books
+sppern	Special Collections & University Archives Periodicals
+spperiiin	Special Collections & University Archives Periodicals III
+spxpbkn	Special Collections & University Archives Phi Beta Kappa Collection
+spxqnsn	Special Collections & University Archives Queens Collection
+spxalmannn	Special Collections & University Archives Rare Almanacs
+spxn	Special Collections & University Archives Rare Books
+spxrefn	Special Collections & University Archives Rare Books Reference Collection
+spreading	Special Collections & University Archives Reading Room
+sprefn	Special Collections & University Archives Reference
+sprefoffn	Special Collections & University Archives Reference Office
+sprnewspn	Special Collections & University Archives Rutgers Newspapers
+sprpubsn	Special Collections & University Archives Rutgers Publications
+sprthesn	Special Collections & University Archives Rutgers Theses
+spryrbkn	Special Collections & University Archives Rutgers Yearbooks
+spsnclyn	Special Collections & University Archives Sinclair Envelope size 1
+spsncly2n	Special Collections & University Archives Sinclair Envelope size 2
+spsncly3n	Special Collections & University Archives Sinclair Envelope size 3
+spsncly4n	Special Collections & University Archives Sinclair Envelope size 4
+spsnclnjn	Special Collections & University Archives Sinclair New Jersey Collection
+spsncnjfon	Special Collections & University Archives Sinclair Oversized
+spsnclxfn	Special Collections & University Archives Sinclair Oversized Rare Books
+spsnclxn	Special Collections & University Archives Sinclair Rare Books
+spxslavn	Special Collections & University Archives Slavery Collection
+spstackn	Special Collections & University Archives Stacks
+spxtempn	Special Collections & University Archives Temp Collection
+spxtextn	Special Collections & University Archives Textbook Collection
+spxtext3n	Special Collections & University Archives Textbook Collection Size 3
+spxtext4n	Special Collections & University Archives Textbook Collection Size 4
+spxthann	Special Collections & University Archives Thanksgiving Collection
+spxfo2n	Special Collections & University Archives Thicker Oversized Rare Books
+spxwaleyn	Special Collections & University Archives Waley Collection
+spxwashnn	Special Collections & University Archives Washington Orations
+whstackn	Whitman Collection Stacks
