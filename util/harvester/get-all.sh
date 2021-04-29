@@ -35,7 +35,7 @@ read -es -p "Enter password: " PW
 echo
 
 EPS="harvestables steps transformations storages"
-EPS="storages"
+
 for EP in $EPS
 do 
     ENDPOINT="${HOST}/harvester/records/${EP}"
