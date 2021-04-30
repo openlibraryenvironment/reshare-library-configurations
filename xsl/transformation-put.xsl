@@ -24,8 +24,8 @@
       <id><xsl:value-of select='id'/></id>
       <position><xsl:value-of select='position'/></position>
       <transformation><xsl:value-of select='transformation'/></transformation>
-      <step>
-        <id xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+      <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+        <id>
           <xsl:value-of select='step/id'/>
         </id>
       </step>

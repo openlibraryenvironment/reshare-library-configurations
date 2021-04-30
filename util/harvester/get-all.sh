@@ -3,7 +3,8 @@
 DEFAULTUSER='harvester_admin'
 HOSTS="https://harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com \
        https://cny-harvester.reshare.indexdata.com \
-       https://palci-harvester-admin.reshare.indexdata.com"
+       https://palci-harvester-admin.reshare.indexdata.com \
+       http://localhost:8080"
 
 SDIR=$1
 
@@ -48,8 +49,15 @@ do
         FURL="${URL}/${ID}"
         OUTFILE="${SDIR}/${EPNAME}-${ID}.xml"
         echo "Getting ${ENDPOINT}/${ID}"
-        curl -o $OUTFILE $FURL
-        echo "Writing to ${OUTFILE}"
+        if [ $EP == 'transformations' ]
+        then
+            TRANS=$(curl $FURL)
+            echo $TRANS | xsltproc ../../xsl/transformation-post.xsl - > "${SDIR}/${EPNAME}-POST-${ID}.xml"
+            echo $TRANS | xsltproc ../../xsl/transformation-put.xsl - > "${SDIR}/${EPNAME}-PUT-${ID}.xml"
+        else
+            curl -o $OUTFILE $FURL
+            echo "Writing to ${OUTFILE}"
+        fi
         echo "============================="
     done
 done
