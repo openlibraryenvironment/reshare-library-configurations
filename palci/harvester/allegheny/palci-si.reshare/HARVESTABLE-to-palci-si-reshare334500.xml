@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<harvestable>
+  <oaiPmh>
+    <id>334500</id>
+    <name>PALCI SI: Allegheny</name>
+    <url>https://na01.alma.exlibrisgroup.com/view/oai/01ACO_INST/request</url>
+    <oaiSetName>PALCI_RESHARE</oaiSetName>
+    <metadataPrefix>marc21</metadataPrefix>
+    <storeOriginal>true</storeOriginal>
+    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
+      <id>301199</id> <!-- PALCI ReShare, production shared index -->
+    </storage>
+    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
+      <id>334201</id>
+    </transformation>
+    <harvestImmediately>false</harvestImmediately>
+    <logLevel>INFO</logLevel>
+    <mailLevel>OK</mailLevel>
+    <overwrite>false</overwrite>
+    <enabled>true</enabled>
+    <failedRecordsLogging>ADD_ALL</failedRecordsLogging>
+    <maxSavedFailedRecordsPerRun>200</maxSavedFailedRecordsPerRun>
+    <maxSavedFailedRecordsTotal>1000</maxSavedFailedRecordsTotal>
+    <scheduleString>10 2 * * *</scheduleString>
+    <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
+    <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
+  </oaiPmh>
+</harvestable>
