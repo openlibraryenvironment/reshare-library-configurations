@@ -74,7 +74,7 @@ def main(argv):
     f.write('</harvestable>\n')
     f.close()
 
-
+    '''
     filename = 'HARVESTABLE-to-palci-si-dev{}501.xml'.format(baseid)
     f = open(filename,"w")
     f.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
@@ -134,14 +134,15 @@ def main(argv):
     f.write('  </{}>\n'.format(jobtype))
     f.write('</harvestable>\n')
     f.close()
+    '''
 
-    filename = 'HARVESTABLE-to-si-dev-palci-{}503.xml'.format(baseid)
+    filename = 'HARVESTABLE-to-si-dev-{}503.xml'.format(baseid)
     f = open(filename, "w")
     f.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
     f.write('<harvestable>\n')
     f.write('  <{}>\n'.format(jobtype))
     f.write('    <id>{}503</id>\n'.format(baseid))
-    f.write('    <name>PALCI SI: {} to SI dev - PALCI</name>\n'.format(library))
+    f.write('    <name>PALCI SI: {} to SI dev</name>\n'.format(library))
     f.write('    <url>{}</url>\n'.format(url))
     if jobtype == 'oaiPmh':
         f.write('    <oaiSetName>{}</oaiSetName>\n'.format(oaisetname))
