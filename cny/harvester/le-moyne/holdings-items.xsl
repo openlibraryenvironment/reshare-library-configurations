@@ -29,8 +29,8 @@
     <xsl:variable name="bl" select="substring(./marc:leader, 8, 1)"/>
     <holdingsRecords>
       <arr>
-      <xsl:if test="marc:datafield[@tag='945']">
-        <xsl:for-each select="marc:datafield[@tag='945']">
+      <xsl:if test="marc:datafield[@tag='945' and ./marc:subfield[@code='y']]">
+        <xsl:for-each select="marc:datafield[@tag='945' and ./marc:subfield[@code='y']]">
           <xsl:sort select="./marc:subfield[@code='l']"/>
           <xsl:variable name="preloc">
             <xsl:value-of select="./preceding-sibling::marc:datafield[@tag='945'][1]/marc:subfield[@code='l']"/>
