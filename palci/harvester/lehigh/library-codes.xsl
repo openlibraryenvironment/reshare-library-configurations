@@ -39,7 +39,7 @@
         <xsl:when test=".='Linderman 4th Floor - Stacks'">6814cd96-ea13-5c5e-b9b6-5a16edd230c8</xsl:when>
         <xsl:when test=".='Linderman Ground Floor - Lower Level'">a467df66-2607-544f-978f-9c0053c00591</xsl:when>
         <xsl:when test=".='Linderman Ground Floor - Upper Level'">33a82743-8e89-5374-ba7a-31359ad17771</xsl:when>
-        <xsl:when test=".='Lucy's Cafe - Linderman Ground Level Rotunda'">4a4f015e-21c8-5e11-9bbc-1e666f47e92d</xsl:when>
+        <xsl:when test=".=&quot;Lucy's Cafe - Linderman Ground Level Rotunda&quot;">4a4f015e-21c8-5e11-9bbc-1e666f47e92d</xsl:when>
         <xsl:otherwise>b654c014-4bf5-52aa-ac7c-790cfeaa11ae</xsl:otherwise> <!-- Unmapped (Linderman) -->
       </xsl:choose>
     </permanentLocationId>

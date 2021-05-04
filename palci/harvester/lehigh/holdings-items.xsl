@@ -43,12 +43,37 @@
               <permanentLocationIdHere><xsl:value-of select="$loc"/></permanentLocationIdHere>
               <illPolicyId>
                 <xsl:choose>
-                  <xsl:when test="$loc='lbks'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc='Fairchild - 5th Floor - North'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Fairchild - 6th Floor - North'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Fairchild - 6th Floor - North - Media Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Fairchild - 7th Floor - North'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman 1st Floor - Reading Room - Faculty Authors'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman 1st Floor - Reading Room - Juvenile Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman 1st Floor - Reading Room - New Books'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman 1st Floor - Reading Room - Reading Room Collection'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman 1st Floor - Rotunda'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman 2nd Floor - Rotunda'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman 3rd Floor - Rotunda'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman 3rd Floor - Stacks'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman 4th Floor - Stacks'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman Ground Floor - Lower Level'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='Linderman Ground Floor - Upper Level'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc=&quot;Lucy's Cafe - Linderman Ground Level Rotunda&quot;">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='LMC-B'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc='LMC-G'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
                   <xsl:otherwise>b0f97013-87f5-4bab-87f2-ac4a5191b489</xsl:otherwise> <!-- Will not lend -->
                 </xsl:choose>
               </illPolicyId>
               <callNumber><xsl:value-of select="normalize-space(./marc:subfield[@code='e'])"/></callNumber>
-              <callNumberTypeId>95467209-6d7b-468b-94df-0f5d7ad2747d</callNumberTypeId> <!-- LC -->
+              <callNumberTypeId>
+                <xsl:choose>
+                  <xsl:when test="starts-with(./marc:subfield[@code='h'], 'Dewey')">03dd64d0-5626-4ecd-8ece-4531e0069f35</xsl:when> <!-- DCC -->
+                  <xsl:when test="starts-with(./marc:subfield[@code='h'], 'Super')">fc388041-6cd0-4806-8a74-ebe3b9ab4c6e</xsl:when> <!-- SuDoc -->
+                  <xsl:when test="starts-with(./marc:subfield[@code='h'], 'Library')">95467209-6d7b-468b-94df-0f5d7ad2747d</xsl:when> <!-- LC -->
+                  <xsl:when test="starts-with(./marc:subfield[@code='h'], 'National')">054d460d-d6b9-4469-9e37-7a78a2266655</xsl:when> <!-- NLM -->
+                  <xsl:otherwise>6caca63e-5651-4db6-9247-3205156e9699</xsl:otherwise>
+                </xsl:choose>
+              </callNumberTypeId>
               <notes>
                 <arr>
                   <i>
@@ -62,9 +87,8 @@
                 <arr>
                 <xsl:for-each select="../marc:datafield[@tag='952']/marc:subfield[@code='d'][.=$loc]/..">
                   <i>
-                    <itemIdentifier><xsl:value-of select="./marc:subfield[@code='y']"/></itemIdentifier>
-                    <barcode><xsl:value-of select="./marc:subfield[@code='i']"/></barcode>
-                    <volume><xsl:value-of select="./marc:subfield[@code='c']"/></volume>
+                    <itemIdentifier><xsl:value-of select="./marc:subfield[@code='m']"/></itemIdentifier>
+                    <barcode><xsl:value-of select="./marc:subfield[@code='m']"/></barcode>
                     <status><name>Unknown</name></status>
                     <permanentLoanTypeId>2b94c631-fca9-4892-a730-03ee529ffe27</permanentLoanTypeId> <!-- Can circulate -->
                     <materialTypeId>
@@ -90,7 +114,7 @@
           </xsl:if>
         </xsl:for-each>
       </xsl:if>
-      <xsl:if test="not(marc:datafield[@tag='945'])">
+      <xsl:if test="not(marc:datafield[@tag='952'])">
         <i>
           <permanentLocationIdHere>UNMAPPED</permanentLocationIdHere>
         </i>
