@@ -5,14 +5,14 @@
         <id>330201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>Lehigh - OAI-PMH to FOLIO Inventory</name>
+        <name>Lehigh - FOLIO MARC to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
             <id>330401</id>
             <position>1</position>
             <transformation>330201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>301301</id> <!-- OAI20-MARC21 to Instance XML -->
+                <id>301307</id> <!-- FOLIO Marc to Instance -->
             </step>
         </stepAssociations>
         <stepAssociations>
