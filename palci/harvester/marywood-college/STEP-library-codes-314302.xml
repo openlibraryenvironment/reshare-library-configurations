@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transformationStep uri="http://harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com/harvester/records/steps/314302">
-    <XmlTransformStep>
-        <description>Maps locations, record identifier type for Marywood</description>
-        <inputFormat>XML</inputFormat>
-        <name>Library codes, Marywood</name>
-        <outputFormat>XML</outputFormat>
-        <script>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;&#xD;
-&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;&#xD;
-&lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
-  &lt;xsl:template match="@* | node()"&gt;&#xD;
+<transformationStep>
+  <id>314302</id>
+  <XmlTransformStep>
+    <id>314302</id>
+    <description>Maps locations, record identifier type for Marywood</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Marywood</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
     &lt;xsl:copy&gt;&#xD;
-      &lt;xsl:apply-templates select="@* | node()"/&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
     &lt;/xsl:copy&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
@@ -19,31 +21,29 @@
        it originated from in context of a shared index setup where the Instance&#xD;
        represents bib records from multiple libraries.&#xD;
   --&gt;&#xD;
-  &lt;xsl:template match="//identifierTypeIdHere"&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
     &lt;identifierTypeId&gt;c6516dcd-de01-5958-9a05-3f6c788d9f36&lt;/identifierTypeId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
   &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
-  &lt;xsl:template match="//permanentLocationIdHere"&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
     &lt;permanentLocationId&gt;&#xD;
       &lt;xsl:choose&gt;&#xD;
-        &lt;xsl:when test=".='BIN'"&gt;aeac1a03-ba90-5fa2-b7fa-68e1c8487238&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='MARKETPL'"&gt;b83abcf9-dfba-5a7f-b2c5-44ef052e73a4&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;BIN&#39;&quot;&gt;aeac1a03-ba90-5fa2-b7fa-68e1c8487238&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MARKETPL&#39;&quot;&gt;b83abcf9-dfba-5a7f-b2c5-44ef052e73a4&lt;/xsl:when&gt;&#xD;
         &lt;xsl:otherwise&gt;dfcd781d-148e-5c2f-8fa1-1f21dbb5b24d&lt;/xsl:otherwise&gt; &lt;!-- UNMAPPED --&gt;&#xD;
       &lt;/xsl:choose&gt;&#xD;
     &lt;/permanentLocationId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
   &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
-  &lt;xsl:template match="//institutionIdHere"&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
      &lt;institutionId&gt;655ffecf-4c8f-5648-afc5-7ec143a9b878&lt;/institutionId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
 &lt;/xsl:stylesheet&gt;&#xD;
 </script>
-        <id>314302</id>
-        <testData></testData>
-        <testOutput></testOutput>
-    </XmlTransformStep>
-    <id>314302</id>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
 </transformationStep>

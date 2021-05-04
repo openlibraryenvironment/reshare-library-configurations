@@ -5,7 +5,7 @@
         <id>331201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>Cairn - OAI-PMH to FOLIO Inventory</name>
+        <name>Cairn - XMLBulk to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
             <id>331401</id>

@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <harvestable>
-  <oaiPmh>
-    <id>329500</id>
-    <name>PALCI SI: Harrisburg</name>
-    <url>https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_HARRISBURG/request</url>
-    <oaiSetName>PALCI_RESHARE</oaiSetName>
-    <metadataPrefix>marc21</metadataPrefix>
+  <xmlBulk>
+    <id>331500</id>
+    <name>PALCI SI: Cairn</name>
+    <url>ftp://cairn:XXXXXX@ftp.folio.indexdata.com/incoming</url>
     <storeOriginal>true</storeOriginal>
     <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
       <id>301199</id> <!-- PALCI ReShare, production shared index -->
     </storage>
     <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
-      <id>329201</id>
+      <id>322201</id>
     </transformation>
     <harvestImmediately>false</harvestImmediately>
     <logLevel>INFO</logLevel>
@@ -21,8 +19,8 @@
     <failedRecordsLogging>ADD_ALL</failedRecordsLogging>
     <maxSavedFailedRecordsPerRun>200</maxSavedFailedRecordsPerRun>
     <maxSavedFailedRecordsTotal>1000</maxSavedFailedRecordsTotal>
-    <scheduleString>40 5 * * *</scheduleString>
+    <scheduleString>40 1 * * *</scheduleString>
     <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
     <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
-  </oaiPmh>
+  </xmlBulk>
 </harvestable>

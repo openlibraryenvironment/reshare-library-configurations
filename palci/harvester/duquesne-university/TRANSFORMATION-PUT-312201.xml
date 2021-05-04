@@ -3,7 +3,7 @@
     <basicTransformation>
         <description></description>
         <enabled>true</enabled>
-        <name>Duquesne - MARC21 to FOLIO Inventory</name>
+        <name>Duquesne - XMLBulk to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
             <id>10102</id>
