@@ -1,0 +1,149 @@
+FHG	docspa	Government Documents, 2nd Floor: Pennsylvania Documents
+FHG	docsus	Government Document, 2nd Floor: US Documents
+FHG	fhg3	F.H. Green Library, Third Floor General Collection
+FHG	fhg3h	F.H. Green Library, Third Floor Holocaust Collection
+FHG	fhg3o	F.H. Green Library, Third Floor Oversize Collection
+FHG	fhg3ho	F.H. Green Library, Third Floor Oversize Holocaust Collection
+FHG	fhg4	F.H. Green Library, Fourth Floor General Collection
+FHG	fhg4o	F.H. Green Library, Fourth Floor Oversize Collection
+FHG	fhg5	F.H. Green Library, Fifth Floor General Collection
+FHG	fhg5o	F.H. Green Library, Fifth Floor Oversize Collection
+FHG	fhg6	F.H. Green Library, Sixth Floor General Collection
+FHG	fhg6o	F.H. Green Library, Sixth Floor Oversize Collection
+FHG	juve	WCU Juvenile Collection, 1st Floor
+FHG	juvebrd	WCU Juvenile Board Book Collection, 1st Floor
+FHG	juvejfic	WCU Juvenile Fiction Collection, 1st Floor
+FHG	juvenonf	WCU Juvenile Nonfiction Collection, 1st Floor
+FHG	juvepict	WCU Juvenile Picture Book Collection, 1st Floor
+FHG	imcbb	IMC Big Book Collection, 1st Floor
+FHG	imcbkk	IMC Book Kit Collection, 1st Floor
+FHG	imcjkd	IMC Jackdaw Collection, 1st Floor
+FHG	imctxt	IMC Book Collection, 1st Floor
+Presser	pmbk	Presser Music Library: Books
+Presser	pmmin	Presser Music Library: Miniature Scores
+Presser	pmed	Presser Music Education Collection
+Presser	pmbkov	Presser Music Library: Oversize Books
+Presser	pmscov	Presser Music Library: Oversize Scores
+Presser	pmsc	Presser Music Library: Scores
+FHG	fhg2nf	F.H. Green Library, Second Floor New Fiction Collection
+FHG	fhg2nn	F.H. Green Library, Second Floor New Non Fiction Collection
+FHG	juveover	WCU Juvenile Collection Oversized, 1st Floor
+FHG	imc	IMC, 1st Floor
+FHG	imccd	IMC Audio CD Collection, 1st Floor
+FHG	catdept	Cataloging Department
+FHG	catpro	Cataloging Processing
+FHG	catprint	Cataloging Suppressed Save Location
+FHG	docsccref	Government Documents, 2nd Floor: Chester County Reference
+FHG	docselect	Internet
+FHG	docsparef	Government Documents, 2nd Floor: Pennsylvania Documents Reference
+FHG	docsusref	Government Documents, 2nd Floor: US Documents Reference Collection
+FHG	EGOBI	Internet
+FHG	ezblend	EZB Lending
+FHG	RELAISEZB	EZ Borrowing
+FHG	fhg1me	F.H. Green Library, 1st Floor Microform Collection
+FHG	fhg1mfi	F.H. Green Library, 1st Floor Microfilm Collection
+FHG	fhg1m	F.H. Green Library, 1st Floor Microform Collection
+FHG	fhg1n	F.H. Green Library, First Floor Newspaper Collection
+FHG	fhg1p	F.H. Green Library, First Floor Periodical Collection
+FHG	fhg2b	F.H. Green Library, Second Floor Bibliography Collection
+FHG	fhg2d	F.H. Green Library, Second Floor Display Cases
+FHG	fhgdc	F.H. Green Library, Second Floor Display Cubes
+FHG	fhg2r	F.H. Green Library, Second Floor Reference Collection
+FHG	fhg2rd	F.H. Green Library, Second Floor Reference Desk
+FHG	fhg2v	F.H. Green Library, Second Floor Library Help Desk Reserve Collection
+FHG	fhg3hc	F.H. Green Library, Holocaust Center Room 308
+FHG	fhg6f	F.H. Green Library, Sixth Floor Folio Collection
+FHG	fhgb	Remote Storage, Ask at Circulation Desk
+FHG	fhgc	F.H. Green Library, Second Floor Library Help Desk
+FHG	fhgl	F.H. Green Library, Second Floor Library Help Desk Laptops
+FHG	fhg1pm	FHG Periodicals, 1st Floor, Shelved after current issues
+FHG	GOBI	WCU
+FHG	HAPPENING	HAPPENING
+FHG	internet	Internet
+FHG	jrlibguild	Juvenile In Process
+FHG	jficnoill	WCU Juvenile Fiction Collection, 1st Floor
+FHG	juveddispl	Juvenile Collection Exhibits
+FHG	juveref	WCU Juvenile Reference Collection, 1st Floor
+FHG	maps	Map Room, 2nd Floor: Maps
+FHG	mapsatlas	Map Room, 2nd Floor: Atlases
+FHG	mapgeol	WCU Geology Department (NOT HOUSED IN LIBRARY)
+FHG	mapsref	Map Room, 2nd Floor: Reference
+FHG	oregonthes	WCU Microform Area, 1st Floor and Online
+FHG	PALCI	PALCI Temporary Location (FHG Circ Desk)
+FHG	phila	PASSHE Center City Suite, Lower Level
+FHG	serialsoff	Serials Office
+FHG	spec	Special Collections, 6th Floor
+FHG	specadl	Special Collections Adler Comic Book Collection, 6th Floor
+FHG	specaral	Special Collections Aralia Press Collection, 6th Floor
+FHG	specarch	Special Collections Archives, 6th Floor
+FHG	specball	Special Collections Ballads Collection, 6th floor
+FHG	specbeck	Special Collections Becker Collection, 6th floor
+FHG	specbeckq	Special Collections Becker Collection Oversize, 6th Floor
+FHG	specbrad	Special Collections Ethel Bradenbaugh Collection
+FHG	specches	Special Collections Chester County Collection, 6th Floor
+FHG	specchesq	Special Collection Chester County Collec. Over, 6th Floor
+FHG	specehin	Special Collections Ehinger Collection, 6th Floor
+FHG	specehinq	Special Collections Ehinger Collec. Over, 6th Floor
+FHG	specfolio	Special Collections Folio, 6th Floor
+FHG	spechon	Special Collections Honors Papers Collection, 6th Floor
+FHG	specluvim	Special Collections LUVIM Collection, B106
+FHG	specnorm	Special Collections Normal Collection, 6th Floor
+FHG	specnormq	Special Collections Normal Collec. Over, 6th Fl.
+FHG	specohc	Special Collections Oral History Collection, 6th Floor
+FHG	specq	Special Collections Oversize, 6th Floor
+FHG	specpal	Special Collections Philips Autographed Library, 6th Fl.
+FHG	specperr	Special Collections Perrone Collection, 6th floor
+FHG	specref	Special Collections Reference, 6th Floor
+FHG	specscj	Special Collections Juvenile Collection, 6th Floor
+FHG	specscjq	Special Collections Juvenile Collection Over, 6th Fl.
+FHG	spectextb	Special Collections Historic Textbooks, Basement
+FHG	specthes	Special Collections Thesis Collection, 6th Floor
+FHG	specwein	Weintraub Arts and Humanities Center-Special Collections
+FHG	specweinq	Weintraub Arts & Humanities Center-Special Collec Over
+FHG	WCU	WCU
+FHG	WITHDRAWN	Withdrawn for Alma
+FHG	imcrom	IMC CD-ROM Collection, 1st Floor
+FHG	imcdsp	Currently on exhibit. See IMC Desk to obtain.
+FHG	imcdspd	IMC Display - DVD
+FHG	imcdvd	IMC DVD Collection, 1st Floor
+FHG	imcdvr	IMC DVD-ROM Collection, 1st Floor
+FHG	imcequi	IMC Equipment, 1st Floor
+FHG	imcflm	IMC Film Collection, 1st Floor
+FHG	imcgam	IMC Game Collection, 1st Floor
+FHG	imclap	IMC Laptops, 1st floor
+FHG	imclps	IMC Vinyl Discs, Off-Site Storage
+FHG	imcoff	IMC Office, 1st Floor
+FHG	imcossdeq	IMC OSSD Equipment, 1st floor
+FHG	imcper	IMC Periodical Collection, 1st floor
+FHG	imcref	IMC Reference Collection, 1st Floor
+FHG	imcres	IMC Reserves, 1st Floor
+FHG	imcstr	IMC Streaming
+FHG	imctfeq	IMC TF Equipment, 1st Floor
+FHG	imcvhs	IMC Video Collection, 1st Floor
+FHG	unused	unused
+FHG	HAPPENING	HAPPENING
+Presser	mu	Presser Music Library: Inquire at Desk
+Presser	mucb	Presser Music Library Closed Stacks
+Presser	mufi	Presser Music Library Vertical File
+Presser	mukn	Presser Music Library Knott CD Collection
+Presser	murs	Presser Music Library Permanent Reserve
+Presser	muvi	Presser Music Library Videos
+FHG	pmperbd	Periodicals, 1st Floor, Shelved After Current Issues
+Presser	pmbox	Presser Music Library Box Set
+Presser	pmcd	Presser Music Library: CDs
+Presser	mucdcir	Presser Mus. Lib. Circulation Desk
+Presser	pmdis	Presser Music Library: Display Cases
+Presser	pmdvd	Presser Music Library: DVDs
+Presser	pmgs	Presser Music Library Remote Storage: Gilbert and Sullivan Collection
+Presser	pmoff	Presser Music Library: Office
+Presser	pmlp	Presser Music Library Remote Storage: LPs
+Presser	pmmusg	Presser Music Library Remote Storage: Musgrave Collection
+Presser	pmlapmp	Presser Music Library
+Presser	pmnew	Presser Music Library: New Book Shelf
+Presser	pmper	Current issues in Presser Music Library
+Presser	pmpp	Presser Music Library Physical Processing
+Presser	pmref	Presser Music Library: Reference
+Presser	pmrem	Presser Music Library Remote Storage
+Presser	pmres	Presser Music Library: Reserves
+Presser	pmscres	Presser Music Library: Collected Editions Scores
+Presser	pmwork	Presser Music Library Workroom
