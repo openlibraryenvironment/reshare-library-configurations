@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>337302</id>
+  <XmlTransformStep>
+    <id>337302</id>
+    <description>Maps locations, record identifier type for Moravian</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Moravian</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;4241b13d-74d4-5c1f-8925-1dc6eac2554a&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Bookstacks&#39;&quot;&gt;210e0e6a-11ce-5f21-8a18-29c6dd2500a2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Alumni Collection&#39;&quot;&gt;290680c5-fd0b-573a-bb55-836183992155&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Archives&#39;&quot;&gt;93a26def-69c2-588e-874e-04b3f099b27d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Ask Library Staff for Assistance&#39;&quot;&gt;d9d400e0-5ffd-5a9e-9b24-6a3907e54b94&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Best Sellers&#39;&quot;&gt;f551ef27-f6b4-5531-ab09-1fb63ecfeef1&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Bindery&#39;&quot;&gt;f3e27120-b2a6-58e8-877a-a3c2c312fe79&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Bound Journals&#39;&quot;&gt;db1a77bf-dcf9-5879-828a-f06ea07b1863&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&amp;quot;MORA Children&#39;s Collection&amp;quot;&quot;&gt;54ee3ca1-165f-5ea7-a6ef-b6d8c5e5dc24&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Circulation Desk&#39;&quot;&gt;a79554e6-b20e-5455-bee4-64edb1e1e1b0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Committee for the Advancement of Teaching Display&#39;&quot;&gt;1a6ebe6e-1bde-5cc6-86c8-0780d6deb188&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Educational Curriculum Materials&#39;&quot;&gt;976b976d-7c45-58b0-826f-b61bc429e74e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Educational Department Films&#39;&quot;&gt;26aa4ccd-54e9-5743-8e8a-e52af5dbdb5a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA EZ-Borrow&#39;&quot;&gt;1bb73918-fbfe-53bd-9df2-945da6f4f7ca&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Faculty owned Reserves, 2 hours&#39;&quot;&gt;a5c7563b-39e5-5f68-a568-e2849ea1c79b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Faculty owned Reserves, 24 hours&#39;&quot;&gt;40828b81-997e-5246-acb9-4d5376978d17&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Faculty owned Reserves, 3 days&#39;&quot;&gt;662b7208-8af0-5b4c-a718-6496cfbf9de0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Faculty Publications&#39;&quot;&gt;81db675e-349a-5dc4-8921-6422527530ad&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Female Seminary&#39;&quot;&gt;4b7545a7-5ae4-5181-b24a-f0e055568794&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Films&#39;&quot;&gt;16921faa-3717-5c7f-8da6-466e83158291&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA GRAD&#39;&quot;&gt;5d755845-6ff3-5bde-8c36-450178a4b1ac&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Groenfeldt Collection&#39;&quot;&gt;527cb954-abe6-53a7-92a9-f3d601e259c4&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA ILL&#39;&quot;&gt;b9d6bf94-ac26-5f03-808d-34f513502b39&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA In Processing&#39;&quot;&gt;e3e019a9-b390-5bf1-9c6b-c00af74ef652&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Media Center Equipment&#39;&quot;&gt;d454fa24-a49f-57ff-bad9-a7dfcce652b9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&amp;quot;MORA Men&#39;s Seminary Collection&amp;quot;&quot;&gt;bed0f119-5884-5696-8361-032e5b0cafc9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Mending&#39;&quot;&gt;25cda5fa-82b8-5e21-8d2e-b6218cef345d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Microfilm&#39;&quot;&gt;0ec90f65-eb22-5076-af61-61f8d79f345f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA New Books&#39;&quot;&gt;50a2c48f-b00b-55b4-8f26-6b75a4696170&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Newspapers&#39;&quot;&gt;0f51580e-51b2-501e-8715-841701d0317f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Periodicals&#39;&quot;&gt;c4592d09-5403-5a08-baf2-45786c00cbb3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Rare Books Room&#39;&quot;&gt;9aaf4f21-82a8-50bc-a5af-84a4fe4f53e3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Rare Books Room,  Oversized&#39;&quot;&gt;9aa99202-b55b-57fe-abb5-bdb352b4ec2c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Rare Books Teaching Collection&#39;&quot;&gt;5d9d2f40-6333-505b-b86d-c42812d90729&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Reference&#39;&quot;&gt;ef5a57e8-4b37-53dc-b414-bfd8d903b56a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Reference in the General Collection&#39;&quot;&gt;42d203ab-7682-5f56-be11-7afcb0fe704d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Reserves Photocopy,&#39;&quot;&gt;6542b691-cc05-52a6-810d-16d808ae5787&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA 2 hours&#39;&quot;&gt;bfba9b8e-057e-5164-95cc-f960d406b630&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Reserves Photocopy, 24 hours&#39;&quot;&gt;68772aa1-aff3-5f20-be6c-461e2de294a4&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Reserves Photocopy, 3 days&#39;&quot;&gt;b1dc3931-6f35-5d45-a43e-4ed48a2f7554&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Reserves, 2 hours&#39;&quot;&gt;5bf5a334-ffa3-5bf5-8841-cf7a0d1c5a51&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Reserves, 24 hours&#39;&quot;&gt;a8e60187-b587-557f-973b-ece896486d46&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Reserves, 3 days&#39;&quot;&gt;47f8eaaa-66ec-5d1e-b7f4-7370b6e87989&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Staff Collection&#39;&quot;&gt;acd33c48-d863-5055-a17b-b31346137f31&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Streaming&#39;&quot;&gt;8d738d32-f153-55a2-8315-259d82613fef&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;College Theses/Seminary/College/Graduate&#39;&quot;&gt;80fdb688-61f8-57f4-9c6f-ba26136973e8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORA Young Adult Collection&#39;&quot;&gt;05ec6e36-e4bf-5cbd-b51a-3bfc19143888&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;starts-with(., &#39;MORA&#39;)&quot;&gt;7a8cb913-be90-56bc-9e3b-e3b47fca7dde&lt;/xsl:when&gt; &lt;!-- Unmapped (MORA)--&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM CD Collection&#39;&quot;&gt;2bb33280-15ca-5db3-8dbe-d2317e644c9f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Chamber Music&#39;&quot;&gt;beed9636-19b7-57ad-8dbe-a0c097c63767&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Chamber Music, Oversized&#39;&quot;&gt;9149afba-94ff-531c-824e-7f4d72593f10&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Computer Equipment&#39;&quot;&gt;cd5f1404-1dde-5941-88d3-a95a256a3ab4&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Dance&#39;&quot;&gt;f8429cd4-fcbe-5890-9c91-65c4fbcdfcb6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Ed Curriculum&#39;&quot;&gt;5edeb81b-8ac9-5e1f-bd8a-fcdc62a0e286&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Films&#39;&quot;&gt;a9a04045-2866-57d7-9d30-60801e00fdb0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM General Collection&#39;&quot;&gt;891f861b-34d5-5ed4-b4f0-3a8919cf0e60&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM In Processing&#39;&quot;&gt;5bcbc452-1576-50c0-99b4-21c30184a263&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Instruments&#39;&quot;&gt;41bc344f-df0a-5640-970f-ea873e45385e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Miniature Scores&#39;&quot;&gt;97edd1db-d043-50d9-8ff0-bbb979aca99b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Oversized Scores&#39;&quot;&gt;4bc42c4a-1e14-504c-a736-69400347213d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Photography Equipment&#39;&quot;&gt;f9d0f45d-e593-5380-8b45-34c283f4353e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MORM Reserves&#39;&quot;&gt;ccdb31c6-c9dd-50ac-8b89-fee861377fd0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;68f8186a-dbb4-58c5-95b3-ca09d0840b29&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (MORM) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;31c83f0c-d40c-541b-bd90-ecabdd736d1e&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
