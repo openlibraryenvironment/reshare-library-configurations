@@ -9,7 +9,7 @@
       <id>301199</id> <!-- PALCI ReShare, production shared index -->
     </storage>
     <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
-      <id>322201</id>
+      <id>331401</id>
     </transformation>
     <harvestImmediately>false</harvestImmediately>
     <logLevel>INFO</logLevel>
