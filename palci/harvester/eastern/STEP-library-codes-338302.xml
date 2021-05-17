@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>338302</id>
+  <XmlTransformStep>
+    <id>338302</id>
+    <description>Maps locations, record identifier type for Eastern</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Eastern</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;24560426-9c04-576c-81a1-63c423483fc3&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WFPBOOK&#39;&quot;&gt;3b813e6f-f4c2-5c05-8c12-1fd52e960ce2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WMHBOOK&#39;&quot;&gt;18bf8c06-d976-5498-b93e-625c78f6c5e3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WSTACKBOOK&#39;&quot;&gt;3f54b80b-9aca-577e-9fb7-6124d426c41f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WBSBOOK&#39;&quot;&gt;8b35f4d9-74b5-55af-9cb9-3720255c9aa7&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WDISS&#39;&quot;&gt;db663f5d-fe0e-514d-9b44-e4e5e2d5ff25&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WEBRARY&#39;&quot;&gt;6402c639-9668-5997-a1d7-d91ad8c57c33&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WEZB&#39;&quot;&gt;f18806e4-8752-559a-9bce-dd30f156dc43&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WGAMES&#39;&quot;&gt;bfc3fb56-4b5b-5175-b033-d52f907e111f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WJSTOR&#39;&quot;&gt;5023e4bd-8709-5528-bc16-a8de6d49df4b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WJUVF&#39;&quot;&gt;b1e84157-5b35-525b-af03-4a6a444740ac&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WJUVN&#39;&quot;&gt;7498f428-8b0f-5afa-b222-2633e1edcbb0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WJYA&#39;&quot;&gt;75824c5f-8365-59ec-9b3e-3dde422b8be5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WMAUDBOOK&#39;&quot;&gt;f1cd0622-9248-552e-9599-7b807744e4fe&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WMBC&#39;&quot;&gt;bedac271-d5e5-581f-814c-b555ae45c930&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WMBOOK&#39;&quot;&gt;3adc1db3-5d06-51c9-9531-1d961bb04c2c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WMCD&#39;&quot;&gt;8accde2b-da62-5ee0-bfa8-78524489a17d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WMCDBOOK&#39;&quot;&gt;979d2706-6da9-511f-969a-d549035de0ca&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WMCDMS&#39;&quot;&gt;bcae04a8-131c-5442-a81e-549449c65b66&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WMDVD&#39;&quot;&gt;48adc26e-9857-577c-be12-947b1c949723&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WMSTORAGE&#39;&quot;&gt;b80993f5-da26-553c-81e2-33f689243431&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WPER&#39;&quot;&gt;ca83bd23-afe5-5511-8651-b5971a27ce2f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WREFBOOK&#39;&quot;&gt;43a9acfe-566a-5ba2-a3d7-f06e93a1e7cc&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WRES&#39;&quot;&gt;a858a0c7-4f9d-5963-afaa-509ba3c62a31&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WSTACKMSSC&#39;&quot;&gt;89dcc6ec-478c-5aed-a4c0-a9187cc30b71&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WWEBSITE&#39;&quot;&gt;5a2d07ee-d729-5e85-b897-4dcb508b0d45&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;bf76bdc4-58ce-510d-a5f1-df0dbd67622e&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (US-PSTDE) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;1965adbe-fdaa-5da5-a118-9bfd0bcd5a3f&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>

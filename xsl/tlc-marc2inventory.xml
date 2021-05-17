@@ -311,10 +311,10 @@
             </xsl:if>
 
             <!-- Notes -->
-            <xsl:if test="marc:datafield[@tag='500' or @tag='504' or @tag='505' or @tag='522']">
+            <xsl:if test="marc:datafield[@tag='500' or @tag='504' or @tag='505' or @tag='520']">
                 <notes>
                     <arr>
-                    <xsl:for-each select="marc:datafield[@tag='500' or @tag='504' or @tag='505' or @tag='522']">
+                    <xsl:for-each select="marc:datafield[@tag='500' or @tag='504' or @tag='505' or @tag='520']">
                         <i>
                             <note>
                                 <xsl:value-of select="normalize-space(.)"/>
@@ -323,7 +323,7 @@
                                 <xsl:choose>
                                     <xsl:when test='./@tag="504"'>86b6e817-e1bc-42fb-bab0-70e7547de6c1</xsl:when> <!-- biliography -->
                                     <xsl:when test='./@tag="505"'>5ba8e385-0e27-462e-a571-ffa1fa34ea54</xsl:when> <!-- contents -->
-                                    <xsl:when test='./@tag="522"'>0e2e11b-450f-45c8-b09b-0f819999966e</xsl:when> <!-- contents -->
+                                    <xsl:when test='./@tag="520"'>0e2e11b-450f-45c8-b09b-0f819999966e</xsl:when> <!-- contents -->
                                     <xsl:otherwise>6a2533a7-4de2-4e64-8466-074c2fa9308c</xsl:otherwise> <!-- general -->
                             </xsl:choose>
                             </instanceNoteTypeId>
