@@ -3,10 +3,10 @@
   <id>339301</id>
   <XmlTransformStep>
     <id>339301</id>
-    <description>Holdings and Items, drexel</description>
+    <description>Holdings and Items, Drexel</description>
     <enabled>true</enabled>
     <inputFormat>XML</inputFormat>
-    <name>Holdings and Items, drexel</name>
+    <name>Holdings and Items, Drexel</name>
     <outputFormat>XML</outputFormat>
     <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xD;
 &lt;xsl:stylesheet&#xD;

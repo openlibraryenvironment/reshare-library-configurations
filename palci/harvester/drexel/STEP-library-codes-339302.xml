@@ -3,9 +3,9 @@
   <id>339302</id>
   <XmlTransformStep>
     <id>339302</id>
-    <description>Maps locations, record identifier type for drexel</description>
+    <description>Maps locations, record identifier type for Drexel</description>
     <inputFormat>XML</inputFormat>
-    <name>Library codes, drexel</name>
+    <name>Library codes, Drexel</name>
     <outputFormat>XML</outputFormat>
     <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
 &lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;

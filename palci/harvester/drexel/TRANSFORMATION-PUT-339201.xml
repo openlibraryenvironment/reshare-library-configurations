@@ -5,7 +5,7 @@
         <id>339201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>drexel - OAI-PMH to FOLIO Inventory</name>
+        <name>Drexel - OAI-PMH to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
             <id>339401</id>
@@ -20,7 +20,7 @@
             <position>2</position>
             <transformation>339201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>339301</id>  <!-- drexel holdings and items -->
+                <id>339301</id>  <!-- Drexel holdings and items -->
             </step>
         </stepAssociations>
         <stepAssociations>
@@ -28,7 +28,7 @@
             <position>3</position>
             <transformation>339201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>339302</id> <!-- Granular library codes, drexel -->
+                <id>339302</id> <!-- Granular library codes, Drexel -->
             </step>
         </stepAssociations>
         <stepAssociations>
