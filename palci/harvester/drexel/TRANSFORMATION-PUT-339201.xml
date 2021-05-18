@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <id>339201</id>
+    <basicTransformation>
+        <id>339201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>drexel - OAI-PMH to FOLIO Inventory</name>
+        <parallel>false</parallel>
+        <stepAssociations>
+            <id>339401</id>
+            <position>1</position>
+            <transformation>339201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>301301</id> <!-- OAI20-MARC21 to Instance XML -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>339402</id>
+            <position>2</position>
+            <transformation>339201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>339301</id>  <!-- drexel holdings and items -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>339403</id>
+            <position>3</position>
+            <transformation>339201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>339302</id> <!-- Granular library codes, drexel -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>339404</id>
+            <position>4</position>
+            <transformation>339201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>301302</id> <!-- XML to JSON -->
+            </step>
+        </stepAssociations>
+    </basicTransformation>
+</transformation>

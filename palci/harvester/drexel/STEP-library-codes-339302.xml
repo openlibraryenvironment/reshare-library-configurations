@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>339302</id>
+  <XmlTransformStep>
+    <id>339302</id>
+    <description>Maps locations, record identifier type for drexel</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, drexel</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;54a6d7df-9f83-51c6-8d62-93781df18b81&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HHN d-dvd&#39;&quot;&gt;d392d9bd-52a8-54c3-8bf1-9d9348c0892a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HHN d-leisure&#39;&quot;&gt;c1f8d860-9ef6-50bd-a385-e1aef2e3fa20&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HHN d-oversize&#39;&quot;&gt;23f2d565-ddc8-5263-bb66-ab915894abe0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HHN d-stacks&#39;&quot;&gt;df19b16f-7865-5e86-b695-60bb9b19d26f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;starts-with(., &#39;HHN&#39;)&quot;&gt;95fdac9b-e2cb-5d6e-aad1-a5916af16f12&lt;/xsl:when&gt; &lt;!-- Unmapped (HHN)--&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;QL d-dvd&#39;&quot;&gt;d6bc384f-36cb-549e-a0f0-d6ac0cb50843&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;QL d-stacks&#39;&quot;&gt;d9a30fd6-6bc9-5736-b3d6-790edd8d8a10&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;starts-with(., &#39;QL&#39;)&quot;&gt;67b0b34b-28af-5d51-918d-ddd16541bc97&lt;/xsl:when&gt; &lt;!-- Unmapped (QL)--&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WWH d-child&#39;&quot;&gt;46481070-c796-5f7c-8a85-6850bf32034f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WWH d-dvd&#39;&quot;&gt;7f48fc6b-0ee0-56c7-8d5c-7b5ed773e4ed&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WWH d-leisure&#39;&quot;&gt;19a562c0-81a1-523e-9150-0a4a497974d8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WWH d-oversize&#39;&quot;&gt;e796be81-46f1-579f-942a-b9e7277b59e2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WWH d-stacks&#39;&quot;&gt;0b7fb07b-14c3-5820-b5e1-51c83cff31a6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WWH d-stacks-1&#39;&quot;&gt;444f6df8-3d34-5201-8819-4910cedc1c33&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WWH d-td-1&#39;&quot;&gt;2b54fbb9-1440-52cd-871d-ba9a5f3fdd20&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;WWH d-teen&#39;&quot;&gt;e453d5de-5cca-5f9d-95b2-e5c4ba8abbae&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;1a9d4fa2-ee61-5442-9d86-5053f3af1366&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (WWH) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;729ab720-1db9-51fd-a5d7-0aead16dd926&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
