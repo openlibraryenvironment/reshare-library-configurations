@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transformationStep uri="http://cny-harvester.reshare.indexdata.com/harvester/records/steps/301304">
+<transformationStep uri="http://harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com/harvester/records/steps/10101">
+    <id>301304</id>
     <XmlTransformStep>
+        <id>301304</id>
         <description>Grab the 907$a and store it in the localIdentifier field</description>
         <inputFormat>xml</inputFormat>
-        <name>III MARC21 to Inventory</name>
+        <name>III MARC21 to Inventory (copy)</name>
         <outputFormat>xml</outputFormat>
         <script>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
 &lt;xsl:stylesheet&#xD;
@@ -21,18 +23,15 @@
         &lt;/collection&gt;&#xD;
     &lt;/xsl:template&gt;&#xD;
 &#xD;
-&#xD;
     &lt;!-- MARC meta data --&gt;&#xD;
     &lt;xsl:template match="marc:record"&gt;&#xD;
-    &lt;record&gt;&#xD;
 &#xD;
-    &lt;xsl:choose&gt;&#xD;
-      &lt;xsl:when test="substring(marc:leader,6,1)!='d'"&gt;&#xD;
+    &lt;record&gt;&#xD;
 &#xD;
         &lt;!-- Information needed for storing source record in union catalog context --&gt;&#xD;
         &lt;institutionIdHere/&gt;&#xD;
-        &lt;localIdentifier&gt;&lt;xsl:value-of select="marc:datafield[@tag='907'][1]/marc:subfield[@code='a'] | marc:datafield[@tag='948'][1]/marc:subfield[@code='a']" /&gt;&lt;/localIdentifier&gt;&#xD;
-        &#xD;
+        &lt;localIdentifier&gt;&lt;xsl:value-of select="marc:datafield[@tag='907']/marc:subfield[@code='a']" /&gt;&lt;/localIdentifier&gt;&#xD;
+&#xD;
         &lt;!-- Bibliographic record for FOLIO inventory --&gt;&#xD;
         &lt;instance&gt;&#xD;
             &lt;source&gt;MARC&lt;/source&gt;&#xD;
@@ -63,14 +62,16 @@
             &lt;xsl:if test="marc:datafield[@tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074']&#xD;
                         or marc:controlfield[@tag='001']"&gt;&#xD;
                 &lt;identifiers&gt;&#xD;
-                &lt;xsl:variable name="iiinum" select="marc:datafield[@tag='907'][1]/marc:subfield[@code='a'] | marc:datafield[@tag='948'][1]/marc:subfield[@code='a']"/&gt;&#xD;
                 &lt;arr&gt;&#xD;
-                  &lt;xsl:if test="$iiinum"&gt;&#xD;
+                &lt;xsl:for-each select="marc:datafield[@tag='907']/marc:subfield[@code='a']"&gt;&#xD;
                     &lt;i&gt;&#xD;
-                      &lt;value&gt;&lt;xsl:value-of select="$iiinum"/&gt;&lt;/value&gt;&#xD;
-                      &lt;identifierTypeIdHere/&gt;&#xD;
+                    &lt;value&gt;&lt;xsl:value-of select="."/&gt;&lt;/value&gt;&#xD;
+                    &lt;!-- A subsequent library specific transformation (style sheet)&#xD;
+                        must replace this tag with the actual identifierTypeId for&#xD;
+                        the record identifer type of the given library --&gt;&#xD;
+                    &lt;identifierTypeIdHere/&gt;&#xD;
                     &lt;/i&gt;&#xD;
-                  &lt;/xsl:if&gt;&#xD;
+                &lt;/xsl:for-each&gt;&#xD;
                 &lt;xsl:for-each select="marc:datafield[@tag='001' or @tag='010' or @tag='020' or @tag='022' or @tag='024' or @tag='028' or @tag='035' or @tag='074']"&gt;&#xD;
                     &lt;i&gt;&#xD;
                     &lt;xsl:choose&gt;&#xD;
@@ -365,16 +366,6 @@
             &lt;/xsl:copy&gt;&#xD;
         &lt;/original&gt;&#xD;
 &#xD;
-   &lt;/xsl:when&gt;&#xD;
-   &lt;xsl:otherwise&gt;&#xD;
-        &lt;delete&gt;&#xD;
-          &lt;institutionIdHere/&gt;&#xD;
-          &lt;localIdentifier&gt;&lt;xsl:value-of select="marc:datafield[@tag='907']/marc:subfield[@code='a']" /&gt;&lt;/localIdentifier&gt;&#xD;
-          &lt;identifierTypeIdHere/&gt;&#xD;
-         &lt;/delete&gt;&#xD;
-      &lt;/xsl:otherwise&gt;&#xD;
-    &lt;/xsl:choose&gt;&#xD;
-&#xD;
     &lt;/record&gt;&#xD;
 &#xD;
     &lt;/xsl:template&gt;&#xD;
@@ -399,10 +390,9 @@
         &lt;/xsl:choose&gt;&#xD;
     &lt;/xsl:template&gt;&#xD;
 &#xD;
-&lt;/xsl:stylesheet&gt;</script>
-        <id>301304</id>
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
         <testData></testData>
         <testOutput></testOutput>
     </XmlTransformStep>
-    <id>301304</id>
 </transformationStep>
