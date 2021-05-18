@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>340302</id>
+  <XmlTransformStep>
+    <id>340302</id>
+    <description>Maps locations, record identifier type for Carnegie Mellon</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Carnegie Mellon</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;6c0da5c9-a925-5a91-9bd2-00d21d9ba085&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ENGR-SCI NEWBOOK&#39;&quot;&gt;116d6710-e533-5c27-83bc-9843818e5659&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ENGR-SCI STACKS&#39;&quot;&gt;f8ed085a-6eda-5894-8cbf-f09ea5dee1ea&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;starts-with(., &#39;ENGR-SCI&#39;)&quot;&gt;f694895f-a37e-58ca-bb23-9172b33ec473&lt;/xsl:when&gt; &lt;!-- Unmapped (ENGR-SCI)--&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HUNT CAREER-2&#39;&quot;&gt;78882fb7-d12b-5216-a07a-90fe763faa43&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HUNT FOLIOS-2&#39;&quot;&gt;bd0ba7ae-e975-5c98-95b9-4f8438d1cb15&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HUNT FOLIOS-4&#39;&quot;&gt;8891849a-cdf5-5ed0-88f9-d20e4e8e7cc8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HUNT NEWBOOK-1&#39;&quot;&gt;773cb2e4-a25b-5bcc-861d-90542498e79c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HUNT OVRSZQ-3&#39;&quot;&gt;569da046-a514-5fe2-8938-ec5e3ccd9327&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HUNT OVRSZQ-4&#39;&quot;&gt;b76b9533-35e9-5361-8875-7a21b33c17ea&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HUNT STACKS-2&#39;&quot;&gt;b6faaada-ecc7-5a46-9af5-e65175292a04&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HUNT STACKS-3&#39;&quot;&gt;d46b90ff-a096-5e22-9c5e-219c7667c648&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HUNT STACKS-4&#39;&quot;&gt;b2b6ec6c-b33f-55b8-b400-a471af6c5323&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HUNT FA-NEWBK-4&#39;&quot;&gt;b3afc848-55e0-52b0-9c64-7c88ba507149&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;starts-with(., &#39;HUNT&#39;)&quot;&gt;e85ce42a-e11a-562b-aaf5-7c7cf97c0e58&lt;/xsl:when&gt; &lt;!-- Unmapped (HUNT)--&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MELLON NEWBOOK&#39;&quot;&gt;fca32cf0-b8c3-5e09-b812-bf4627d194a2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MELLON READING-RM&#39;&quot;&gt;e450e481-280d-50eb-8f7b-f1076db0d445&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;starts-with(., &#39;MELLON&#39;)&quot;&gt;077003ed-42ef-57ce-b84f-4e52e200ee20&lt;/xsl:when&gt; &lt;!-- Unmapped (MELLON)--&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OFFSITE BY-REQUEST&#39;&quot;&gt;52653428-7ba1-5d70-abd8-b260fb747634&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;a2c878e9-5bcc-57bc-89cd-d2880aff9fe8&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (OFFSITE) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;915fc9dc-ae66-5b17-a0c4-c28cb35ded7e&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
