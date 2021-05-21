@@ -58,6 +58,8 @@
         <instance>
             <source>MARC</source>
 
+
+
             <!-- Instance type ID (resource type) -->
             <instanceTypeId>
                 <!-- UUIDs for resource types -->
@@ -188,29 +190,33 @@
                 </classifications>
             </xsl:if>
 
+
             <!-- title -->
-            <xsl:for-each select="marc:datafield[@tag='245']">
-                <title>
+
+            <title>
+                <xsl:variable name="dirty-title">
+                    <xsl:for-each select="marc:datafield[@tag='245'][1]/marc:subfield[@code='a' or @code='b' or @code='h' or @code='n' or @code='p']">
+                        <xsl:choose>
+                            <xsl:when test="substring(., string-length(.), 1) = ';'">
+                                <xsl:call-template name="remove-characters-last">
+                                    <xsl:with-param  name="input" select="." />
+                                    <xsl:with-param  name="characters"> ;</xsl:with-param>
+                                </xsl:call-template>
+                                <xsl:text> :</xsl:text>
+                            </xsl:when>
+                            <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="position() != last()">
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:variable>
                 <xsl:call-template name="remove-characters-last">
-                    <xsl:with-param  name="input" select="marc:subfield[@code='a']" />
+                    <xsl:with-param  name="input" select="$dirty-title" />
                     <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
                 </xsl:call-template>
-                <xsl:if test="marc:subfield[@code='b']">
-                <xsl:text> : </xsl:text>
-                    <xsl:call-template name="remove-characters-last">
-                    <xsl:with-param  name="input" select="marc:subfield[@code='b']" />
-                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
-                    </xsl:call-template>
-                </xsl:if>
-                <xsl:if test="marc:subfield[@code='h']">
-                    <xsl:text> </xsl:text>
-                    <xsl:call-template name="remove-characters-last">
-                    <xsl:with-param  name="input" select="marc:subfield[@code='h']" />
-                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
-                    </xsl:call-template>
-                </xsl:if>
-                </title>
-            </xsl:for-each>
+            </title>
+
             <!-- Contributors -->
             <xsl:if test="marc:datafield[@tag='100' or @tag='110' or @tag='111' or @tag='700' or @tag='710' or @tag='711']">
                 <contributors>
@@ -388,20 +394,24 @@
                 <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
                 </xsl:call-template>
             </medium>
-            <!-- Only fields that are actually included in
-                the instance somewhere - for example in 'title' -
-                should be included as 'matchKey' elements lest
-                the instance "magically" splits on "invisible"
-                properties.
             <name-of-part-section-of-work>
-                <xsl:value-of select="marc:subfield[@code='p']" />
+                <xsl:call-template name="remove-characters-last">
+                    <xsl:with-param  name="input" select="marc:subfield[@code='p']" />
+                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
+                </xsl:call-template>
             </name-of-part-section-of-work>
             <number-of-part-section-of-work>
-                <xsl:value-of select="marc:subfield[@code='n']" />
+                <xsl:call-template name="remove-characters-last">
+                    <xsl:with-param  name="input" select="marc:subfield[@code='n']" />
+                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
+                </xsl:call-template>
             </number-of-part-section-of-work>
             <inclusive-dates>
-                <xsl:value-of select="marc:subfield[@code='f']" />
-            </inclusive-dates> -->
+                <xsl:call-template name="remove-characters-last">
+                    <xsl:with-param  name="input" select="marc:subfield[@code='f']" />
+                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
+                </xsl:call-template>
+            </inclusive-dates>
             </xsl:for-each>
         </matchKey>
     </xsl:template>
