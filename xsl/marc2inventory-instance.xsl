@@ -158,28 +158,21 @@
             </xsl:if>
 
             <!-- title -->
-            <xsl:for-each select="marc:datafield[@tag='245']">
-                <title>
+            <title>
+                <xsl:variable name="dirty-title">
+                    <xsl:for-each select="marc:datafield[@tag='245'][1]/marc:subfield[@code='a' or @code='b' or @code='h' or @code='n' or @code='p']">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position() != last()">
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:variable>
                 <xsl:call-template name="remove-characters-last">
-                    <xsl:with-param  name="input" select="marc:subfield[@code='a']" />
+                    <xsl:with-param  name="input" select="$dirty-title" />
                     <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
                 </xsl:call-template>
-                <xsl:if test="marc:subfield[@code='b']">
-                <xsl:text> : </xsl:text>
-                    <xsl:call-template name="remove-characters-last">
-                    <xsl:with-param  name="input" select="marc:subfield[@code='b']" />
-                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
-                    </xsl:call-template>
-                </xsl:if>
-                <xsl:if test="marc:subfield[@code='h']">
-                    <xsl:text> </xsl:text>
-                    <xsl:call-template name="remove-characters-last">
-                    <xsl:with-param  name="input" select="marc:subfield[@code='h']" />
-                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
-                    </xsl:call-template>
-                </xsl:if>
-                </title>
-            </xsl:for-each>
+            </title>
+            
             <!-- Contributors -->
             <xsl:if test="marc:datafield[@tag='100' or @tag='110' or @tag='111' or @tag='700' or @tag='710' or @tag='711']">
                 <contributors>
@@ -295,7 +288,7 @@
                 <arr>
                 <xsl:for-each select="marc:datafield[@tag='600' or @tag='610' or @tag='611' or @tag='630' or @tag='648' or @tag='650' or @tag='651' or @tag='653' or @tag='654' or @tag='655' or @tag='656' or @tag='657' or @tag='658' or @tag='662' or @tag='69X']">
                     <i>
-                    <xsl:for-each select="marc:subfield[@code='a' or @code='b' or @code='c' or @code='d' or @code='f' or @code='g' or @code='j' or @code='k' or @code='l' or @code='n' or @code='p' or @code='q' or @code='t' or @code='u' or @code='v' or @code='z']">
+                    <xsl:for-each select="marc:subfield[@code='a' or @code='b' or @code='c' or @code='d' or @code='f' or @code='g' or @code='j' or @code='k' or @code='l' or @code='n' or @code='p' or @code='q' or @code='t' or @code='u' or @code='v' or @code='x' or @code='y' or @code='z']">
                     <xsl:if test="position() > 1">
                         <xsl:text>--</xsl:text>
                     </xsl:if>
@@ -309,46 +302,42 @@
                 </arr>
                 </subjects>
             </xsl:if>
-        </instance>
 
-        <!-- Additional info for creating match key in FOLIO Inventory match module -->
-        <matchKey>
-            <xsl:for-each select="marc:datafield[@tag='245']">
-            <title>
-                <xsl:call-template name="remove-characters-last">
-                <xsl:with-param  name="input" select="marc:subfield[@code='a']" />
-                <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
-                </xsl:call-template>
-            </title>
-            <remainder-of-title>
-            <xsl:text> : </xsl:text>
-                <xsl:call-template name="remove-characters-last">
-                <xsl:with-param  name="input" select="marc:subfield[@code='b']" />
-                <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
-                </xsl:call-template>
-            </remainder-of-title>
-            <medium>
-                <xsl:call-template name="remove-characters-last">
-                <xsl:with-param  name="input" select="marc:subfield[@code='h']" />
-                <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
-                </xsl:call-template>
-            </medium>
-            <!-- Only fields that are actually included in
-                the instance somewhere - for example in 'title' -
-                should be included as 'matchKey' elements lest
-                the instance "magically" splits on "invisible"
-                properties.
-            <name-of-part-section-of-work>
-                <xsl:value-of select="marc:subfield[@code='p']" />
-            </name-of-part-section-of-work>
-            <number-of-part-section-of-work>
-                <xsl:value-of select="marc:subfield[@code='n']" />
-            </number-of-part-section-of-work>
-            <inclusive-dates>
-                <xsl:value-of select="marc:subfield[@code='f']" />
-            </inclusive-dates> -->
-            </xsl:for-each>
-        </matchKey>
+            <!-- Additional info for creating match key in FOLIO Inventory match module -->
+            <matchKey>
+                <xsl:for-each select="marc:datafield[@tag='245']">
+                <title>
+                    <xsl:call-template name="remove-characters-last">
+                    <xsl:with-param  name="input" select="marc:subfield[@code='a']" />
+                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
+                    </xsl:call-template>
+                </title>
+                <remainder-of-title>
+                <xsl:text> : </xsl:text>
+                    <xsl:call-template name="remove-characters-last">
+                    <xsl:with-param  name="input" select="marc:subfield[@code='b']" />
+                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
+                    </xsl:call-template>
+                </remainder-of-title>
+                <medium>
+                    <xsl:call-template name="remove-characters-last">
+                    <xsl:with-param  name="input" select="marc:subfield[@code='h']" />
+                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
+                    </xsl:call-template>
+                </medium>
+                <name-of-part-section-of-work>
+                    <xsl:value-of select="marc:subfield[@code='p']" />
+                </name-of-part-section-of-work>
+                <number-of-part-section-of-work>
+                    <xsl:value-of select="marc:subfield[@code='n']" />
+                </number-of-part-section-of-work>
+                <inclusive-dates>
+                    <xsl:value-of select="marc:subfield[@code='f']" />
+                </inclusive-dates> 
+                </xsl:for-each>
+            </matchKey>
+
+        </instance>
 
         <original>            
             <xsl:copy>
