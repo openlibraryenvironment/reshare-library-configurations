@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>342302</id>
+  <XmlTransformStep>
+    <id>342302</id>
+    <description>Maps locations, record identifier type for NYU</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, NYU</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;f6f4f652-8107-50e9-8c67-e59af588bf43&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;BOBSTEZB&#39;&quot;&gt;78427fdd-a5eb-57c0-bb77-3c544a46977d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;BOBST&#39;&quot;&gt;06056209-450b-58d7-a0d1-ce04860aca1e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;starts-with(., &#39;BOBST&#39;)&quot;&gt;acd97a15-409c-5b35-89e2-cf930225ef48&lt;/xsl:when&gt; &lt;!-- Unmapped (BOBST)--&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;NCOUREZB&#39;&quot;&gt;9ee563e5-5586-5699-88d5-956bcbe8fe01&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;NCOUR&#39;&quot;&gt;24c0a218-12cb-5566-bf13-f99bd045b8ff&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;starts-with(., &#39;NCOUR&#39;)&quot;&gt;3666aeb0-b169-54f5-bbc2-ac9b430730e4&lt;/xsl:when&gt; &lt;!-- Unmapped (NCOUR)--&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OSCOREZB&#39;&quot;&gt;a57c8c83-f553-548a-8b49-8390d5aadf78&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OSCOR&#39;&quot;&gt;d89126ae-556a-5200-a567-f9dd71cf2b18&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;starts-with(., &#39;OSCOR&#39;)&quot;&gt;d4af6975-4042-5457-a642-7ae9ce1ea803&lt;/xsl:when&gt; &lt;!-- Unmapped (OSCOR)--&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OSNYUEZB&#39;&quot;&gt;eb457f21-0546-5cc2-aef2-0e799fa682b5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OSNYU&#39;&quot;&gt;6e379c57-ffdd-5a3f-8e00-6321af0f76e9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;ae401c23-9c7e-5fce-a666-d2328b07fe6b&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (OSNYU) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;f16246d4-a649-55da-a445-e965fcab96b4&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>

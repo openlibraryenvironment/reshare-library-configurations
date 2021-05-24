@@ -20,17 +20,17 @@
   <xsl:template match="//permanentLocationIdHere">
     <permanentLocationId>
       <xsl:choose>
-        <xsl:when test=".='BOBST BOBSTEZB'">78427fdd-a5eb-57c0-bb77-3c544a46977d</xsl:when>
-        <xsl:when test=".='BOBST BOBST'">06056209-450b-58d7-a0d1-ce04860aca1e</xsl:when>
+        <xsl:when test=".='BOBSTEZB'">78427fdd-a5eb-57c0-bb77-3c544a46977d</xsl:when>
+        <xsl:when test=".='BOBST'">06056209-450b-58d7-a0d1-ce04860aca1e</xsl:when>
         <xsl:when test="starts-with(., 'BOBST')">acd97a15-409c-5b35-89e2-cf930225ef48</xsl:when> <!-- Unmapped (BOBST)-->
-        <xsl:when test=".='NCOUR NCOUREZB'">9ee563e5-5586-5699-88d5-956bcbe8fe01</xsl:when>
-        <xsl:when test=".='NCOUR NCOUR'">24c0a218-12cb-5566-bf13-f99bd045b8ff</xsl:when>
+        <xsl:when test=".='NCOUREZB'">9ee563e5-5586-5699-88d5-956bcbe8fe01</xsl:when>
+        <xsl:when test=".='NCOUR'">24c0a218-12cb-5566-bf13-f99bd045b8ff</xsl:when>
         <xsl:when test="starts-with(., 'NCOUR')">3666aeb0-b169-54f5-bbc2-ac9b430730e4</xsl:when> <!-- Unmapped (NCOUR)-->
-        <xsl:when test=".='OSCOR OSCOREZB'">a57c8c83-f553-548a-8b49-8390d5aadf78</xsl:when>
-        <xsl:when test=".='OSCOR OSCOR'">d89126ae-556a-5200-a567-f9dd71cf2b18</xsl:when>
+        <xsl:when test=".='OSCOREZB'">a57c8c83-f553-548a-8b49-8390d5aadf78</xsl:when>
+        <xsl:when test=".='OSCOR'">d89126ae-556a-5200-a567-f9dd71cf2b18</xsl:when>
         <xsl:when test="starts-with(., 'OSCOR')">d4af6975-4042-5457-a642-7ae9ce1ea803</xsl:when> <!-- Unmapped (OSCOR)-->
-        <xsl:when test=".='OSNYU OSNYUEZB'">eb457f21-0546-5cc2-aef2-0e799fa682b5</xsl:when>
-        <xsl:when test=".='OSNYU OSNYU'">6e379c57-ffdd-5a3f-8e00-6321af0f76e9</xsl:when>
+        <xsl:when test=".='OSNYUEZB'">eb457f21-0546-5cc2-aef2-0e799fa682b5</xsl:when>
+        <xsl:when test=".='OSNYU'">6e379c57-ffdd-5a3f-8e00-6321af0f76e9</xsl:when>
         <xsl:otherwise>ae401c23-9c7e-5fce-a666-d2328b07fe6b</xsl:otherwise> <!-- Unmapped (OSNYU) -->
       </xsl:choose>
     </permanentLocationId>
