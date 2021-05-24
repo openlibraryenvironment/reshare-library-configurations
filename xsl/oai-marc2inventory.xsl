@@ -196,16 +196,7 @@
             <title>
                 <xsl:variable name="dirty-title">
                     <xsl:for-each select="marc:datafield[@tag='245'][1]/marc:subfield[@code='a' or @code='b' or @code='h' or @code='n' or @code='p']">
-                        <xsl:choose>
-                            <xsl:when test="substring(., string-length(.), 1) = ';'">
-                                <xsl:call-template name="remove-characters-last">
-                                    <xsl:with-param  name="input" select="." />
-                                    <xsl:with-param  name="characters"> ;</xsl:with-param>
-                                </xsl:call-template>
-                                <xsl:text> :</xsl:text>
-                            </xsl:when>
-                            <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
-                        </xsl:choose>
+                        <xsl:value-of select="."/>
                         <xsl:if test="position() != last()">
                             <xsl:text> </xsl:text>
                         </xsl:if>
@@ -369,7 +360,7 @@
                     </arr>
                 </notes>
             </xsl:if>
-            
+
         </instance>
 
         <!-- Additional info for creating match key in FOLIO Inventory match module -->
