@@ -8,7 +8,7 @@ use File::Basename;
 use strict;
 use warnings;
 
-my $mrcfile = shift or die "Usage: ./wms_merge.pl <wms_mrc_file>";
+my $mrcfile = shift or die "Usage: ./merg_mfhd.pl <mrc_file>";
 
 my $workdir = dirname($mrcfile);
 my $fname = basename($mrcfile, '.marc', '.mrc', '.marc', '.bin', '.out');
