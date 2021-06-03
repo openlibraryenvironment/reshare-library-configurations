@@ -379,11 +379,6 @@
                 <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
                 </xsl:call-template>
             </medium>
-            <!-- Only fields that are actually included in
-                the instance somewhere - for example in 'title' -
-                should be included as 'matchKey' elements lest
-                the instance "magically" splits on "invisible"
-                properties.
             <name-of-part-section-of-work>
                 <xsl:value-of select="marc:subfield[@code='p']" />
             </name-of-part-section-of-work>
@@ -392,7 +387,7 @@
             </number-of-part-section-of-work>
             <inclusive-dates>
                 <xsl:value-of select="marc:subfield[@code='f']" />
-            </inclusive-dates> -->
+            </inclusive-dates> 
             </xsl:for-each>
         </matchKey>
     </xsl:template>
