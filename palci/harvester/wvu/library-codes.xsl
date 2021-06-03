@@ -24,7 +24,7 @@
         <xsl:when test=".='WVUA Closed Stacks'">4c925422-b2da-58f6-8ca4-735e3d6bc479</xsl:when>
         <xsl:when test=".='WVUA Closed Stacks In Library Circulating'">59cf0df5-f7b6-556d-9757-cebecdc339fd</xsl:when>
         <xsl:when test=".='WVUA DVD'">f41864f1-94bd-5d52-a39f-bf61b37951ab</xsl:when>
-        <xsl:when test=".='WVUA Eliza's'">89e5a7ef-56e8-5d43-8edc-85a7d7793a94</xsl:when>
+        <xsl:when test=".=&quot;WVUA Eliza's'&quot;">89e5a7ef-56e8-5d43-8edc-85a7d7793a94</xsl:when>
         <xsl:when test=".='WVUA Government Documents'">9cd760a9-2bdd-5297-aa98-2414b52f56c3</xsl:when>
         <xsl:when test=".='WVUA Government Documents Census'">9efbdc64-8851-5cb6-b098-8741bc2864b8</xsl:when>
         <xsl:when test=".='WVUA Government Documents Index'">899a5a28-e9d2-5514-8305-dd98f9ba523b</xsl:when>
@@ -67,7 +67,7 @@
         <xsl:when test=".='WVUA Reserve Grants'">3f1ea433-eaa5-5913-ab08-3264474d6aaf</xsl:when>
         <xsl:when test=".='WVUA Reserve Media'">0e32d5d8-386e-5978-ba24-5a72869aa59d</xsl:when>
         <xsl:when test="starts-with(., 'WVUA')">8e64fc08-93fa-5771-81b5-6b335a5a0a7d</xsl:when> <!-- Unmapped (WVUA)-->
-        <xsl:when test=".='WVUC Archives & Manuscripts'">188dee6a-0146-5e84-875c-b976abe65ff0</xsl:when>
+        <xsl:when test=".='WVUC Archives &amp; Manuscripts'">188dee6a-0146-5e84-875c-b976abe65ff0</xsl:when>
         <xsl:when test=".='WVUC Bindery'">ae881a00-39ce-53d4-94e0-9f1dc149bad8</xsl:when>
         <xsl:when test=".='WVUC Closed Stacks'">e3486b0b-52e4-5374-864a-0d948dcb0ed8</xsl:when>
         <xsl:when test=".='WVUC Depository - request before arrival'">2dd61f82-cfcd-51e4-94a2-f4aaca866f20</xsl:when>
@@ -86,8 +86,8 @@
         <xsl:when test=".='WVUD Bindery'">1a64050d-aa39-5b6b-b9ea-af047af2f6b0</xsl:when>
         <xsl:when test=".='WVUD Closed Stacks Non Circulating'">330df670-76b6-51f9-aa5f-f6c6cc4b2800</xsl:when>
         <xsl:when test="starts-with(., 'WVUD')">b965fb49-247f-5168-ac0f-d28f611f639f</xsl:when> <!-- Unmapped (WVUD)-->
-        <xsl:when test=".='WVUE Children's Award Winners Collection'">a431b050-23c4-50a9-9048-e1c09784f492</xsl:when>
-        <xsl:when test=".='WVUE Children's Collection'">63682644-aedf-5ee1-a60b-4ff8ca3ab443</xsl:when>
+        <xsl:when test=".=&quot;WVUE Children's Award Winners Collection&quot;">a431b050-23c4-50a9-9048-e1c09784f492</xsl:when>
+        <xsl:when test=".=&quot;WVUE Children's Collection&quot;">63682644-aedf-5ee1-a60b-4ff8ca3ab443</xsl:when>
         <xsl:when test=".='WVUE Closed Stacks'">3a79ab94-b3d8-51a8-b3c6-8a86016dd119</xsl:when>
         <xsl:when test=".='WVUE Closed Stacks In Library Circulating'">cc0fd358-01e9-511f-9451-1aa62574f632</xsl:when>
         <xsl:when test=".='WVUE Compact Shelving'">4ff38c9c-34d6-55bb-a891-1620fdbc644b</xsl:when>
@@ -115,7 +115,7 @@
         <xsl:when test=".='WVUE Bindery'">7c01e38b-78e2-52de-a76d-49473bed9e07</xsl:when>
         <xsl:when test=".='WVUE Closed Stacks Non Circulating'">84db3a2c-51cd-5885-8875-42d647be7f71</xsl:when>
         <xsl:when test=".='WVUE Current Periodicals'">34290ed8-34a2-5208-a78c-28beec09c8f3</xsl:when>
-        <xsl:when test=".='WVUE Children's Reference Collection'">e4b09266-2849-5da0-a8b2-bdc7a5829482</xsl:when>
+        <xsl:when test=".=&quot;WVUE Children's Reference Collection&quot;">e4b09266-2849-5da0-a8b2-bdc7a5829482</xsl:when>
         <xsl:when test=".='WVUE Cleanup'">5709f9f4-abb2-5e49-ae9a-ac13b4bbe3cc</xsl:when>
         <xsl:when test=".='WVUE E-ZBorrow Temporary Loans'">ce0a1952-aefe-5f7b-b963-85952c4095e8</xsl:when>
         <xsl:when test=".='WVUE Faculty Office'">50bf9b43-3f56-5494-ad7d-4352a925b240</xsl:when>
@@ -150,7 +150,7 @@
         <xsl:when test=".='WVUH Periodicals'">1adec8f9-04bf-58d0-a4eb-6cb8e405e8c9</xsl:when>
         <xsl:when test=".='WVUH Reference'">d01c0392-a622-58ac-9ac8-776ba1752aea</xsl:when>
         <xsl:when test=".='WVUH West Virginia Medical History Collection'">f3a41410-3c87-563e-b79f-4e33f37443bd</xsl:when>
-        <xsl:when test=".='WVUH Women's Health Collection'">47b92ff9-5a16-5f3e-a4aa-cc06a7199fc8</xsl:when>
+        <xsl:when test=".=&quot;WVUH Women's Health Collection&quot;">47b92ff9-5a16-5f3e-a4aa-cc06a7199fc8</xsl:when>
         <xsl:when test="starts-with(., 'WVUH')">42c27d5d-2457-5772-9d2e-85765758f53c</xsl:when> <!-- Unmapped (WVUH)-->
         <xsl:when test=".='WVUL General Collection'">3bf562e2-dbe0-5b22-8c4d-e013a3999607</xsl:when>
         <xsl:when test=".='WVUL General Collection Non-Circulating'">ff8f9c7a-38a7-5968-b526-f49838f9c27b</xsl:when>
