@@ -1,4 +1,5 @@
 #!/bin/bash
+QUERY=$1
 
 if [ -z $token ]
   then
@@ -13,4 +14,4 @@ do
   break
 done
 
-curl -w '\n' --http1.1 "$protocol://$host/${EP}?limit=100" -H "x-okapi-tenant: $tenant" -H "x-okapi-token: $token"
+curl -w '\n' --http1.1 "$protocol://$host/${EP}?${QUERY}" -H "x-okapi-tenant: $tenant" -H "x-okapi-token: $token"
