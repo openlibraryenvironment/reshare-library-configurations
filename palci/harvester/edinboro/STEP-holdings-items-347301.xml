@@ -181,7 +181,6 @@
                             &lt;/yearCaption&gt;&#xD;
                           &lt;/xsl:if&gt;&#xD;
                           &lt;numberOfPieces&gt;&lt;xsl:value-of select=&quot;./marc:subfield[@code=&#39;gg&#39;]&quot;/&gt;&lt;/numberOfPieces&gt;&#xD;
-                          &lt;permanentLocationIdHere&gt;&lt;xsl:value-of select=&quot;marc:subfield[@code=&#39;aa&#39;]&quot;/&gt;&lt;/permanentLocationIdHere&gt;&#xD;
                         &lt;/i&gt;&#xD;
                       &lt;/xsl:if&gt;&#xD;
                     &lt;/xsl:for-each&gt;&#xD;

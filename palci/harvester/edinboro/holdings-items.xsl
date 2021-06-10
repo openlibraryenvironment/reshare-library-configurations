@@ -171,7 +171,6 @@
                             </yearCaption>
                           </xsl:if>
                           <numberOfPieces><xsl:value-of select="./marc:subfield[@code='gg']"/></numberOfPieces>
-                          <permanentLocationIdHere><xsl:value-of select="marc:subfield[@code='aa']"/></permanentLocationIdHere>
                         </i>
                       </xsl:if>
                     </xsl:for-each>
