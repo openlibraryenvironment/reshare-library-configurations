@@ -1,0 +1,226 @@
+ART	per	Journals
+ART	ref	Reference
+ART	res	Reserves
+ART	spec	Cage
+ART	stks	General Collection
+ART	stkscourse	Course materials
+ART	stksfac	Faculty Shelf
+ART	stksnc	non-circ general collection
+ART	stksrr	Reading Room
+ART	thes	Theses
+ART	zzcirc	circ
+ART	zzprob	clean-up
+CAM	spec	General Collection
+CAM	vault	Vault
+CHEM	media	Media
+CHEM	per	Journals
+CHEM	ref	Reference
+CHEM	res	Reserves
+CHEM	stks	General Collection
+CHEM	zzprob	clean-up
+ENGR	equip	Equipment
+ENGR	media	Media
+ENGR	per	Periodicals
+ENGR	ref	Reference
+ENGR	res	Reserves
+ENGR	stks	General Collection
+ENGR	zzcirc	circ
+ENGR	zzprob	clean-up
+HILL	dis	Display
+HILL	doc	US Census Docs
+HILL	ill	ILL
+HILL	lap	Laptops
+HILL	mob	Mobile Device
+HILL	palci	PALCI
+HILL	per	Journals
+HILL	perea	East Asian periodicals
+HILL	pereac	East Asian circulating periodicals
+HILL	ref	Reference
+HILL	refafro	African American Reference
+HILL	refbuhl	Buhl Reference Collection
+HILL	refeac	East Asian Reference Collection - Chinese
+HILL	refeaj	East Asian Reference Collection - Japanese
+HILL	refeak	East Asian Reference Collection - Korean
+HILL	res	Reserves
+HILL	stks	General Collection
+HILL	stksafro	African American
+HILL	stksalld	Alldred Collection 
+HILL	stkseac	East Asian Chinese Collection 
+HILL	stkseaj	East Asian Japanese Collection
+HILL	stkseak	East Asian Korean Collection 
+HILL	ulsacq	ULS Acquisitions
+HILL	web	Electronic Resource
+HILL	zzcirc	circ
+HILL	zzdel	Delete
+HILL	zzprob	clean-up
+HILLEQUIP	equip	AV Equipment
+HILLSPEC	UNASSIGNED	UNASSIGNED location
+HILLSPEC	arch	Archives and Manuscripts
+HILLSPEC	spec	spec
+HILLSPEC	specper	Periodicals
+HILLSTARK	media	Stark media
+HILLSTARK	per	Stark periodicals
+HILLSTARK	res	Stark reserves
+HILLSTARK	stks	Stark stacks
+HSLS	falk	General Collection
+HSLS	falkav	Audiovisual Collection
+HSLS	falkclo	Onsite Storage
+HSLS	falkcres	Closed Reserve
+HSLS	falkcurr	Current Collection
+HSLS	falkh	History of Medicine
+HSLS	falkhrare	Rare Book Room
+HSLS	falkhum	Medical Humanities Collection
+HSLS	falkleis	Leisure Reading Collection
+HSLS	falkmar	MAR Lending Library
+HSLS	falkover	Oversize Books
+HSLS	falkper	Periodicals
+HSLS	falkres	Course Reserves
+HSLS	falktech	Technology Helpdesk
+HSLS	falkweb	HSLS Web - Open Access
+HSLS	falkwebb	HSLS Ebooks
+HSLS	falkwebd	HSLS Databases
+HSLS	falkwebp	HSLS Ejournals
+HSLS	falkwebsm	HSLS Streaming Media
+HSLS	zzdel	Delete
+HSLS	zzhslsacq	HSLS Acquisitions
+HSLS	zzhslsprob	HSLS Cleanup
+LANG	media	Media
+LANG	over	Oversize 
+LANG	per	Periodicals
+LANG	ref	Reference
+LANG	res	Reserves
+LANG	stks	General Collection 
+LANG	zzcirc	circ
+LANG	zzprob	clean-up
+LAW	age	Agency Decisions
+LAW	bell	Derrick A. Bell Collection
+LAW	comm	Commons Collection
+LAW	fac	Faculty Collection
+LAW	genn	General Collection
+LAW	ind	Index Collection
+LAW	int	International Collection
+LAW	intn	International Collection Non-circulating
+LAW	lawaq	Acquisitions (happening)
+LAW	lawca	Cataloging (happening)
+LAW	lawstor	Storage General
+LAW	med	Audiovisual Collection
+LAW	micro	Microform Collection
+LAW	pa	Pennsylvania Collection
+LAW	pan	Pennsylvania Collection Non-circulating
+LAW	per	Periodical Collection
+LAW	rare	Rare Book Collection
+LAW	ref	Reference Collection
+LAW	res	Reserve Collection
+LAW	stan	State Materials Collection Non-circulating
+LAW	stfn	Staff Collection
+LAW	tre	Treatise Collection
+LAW	tren	Treatise Collection Non-circulating
+LAW	web	Electronic Resources
+MUS	facs	Facsimile Scores
+MUS	folio	Folio Scores
+MUS	media	Media
+MUS	over	Oversize 
+MUS	per	Periodicals
+MUS	ref	Reference
+MUS	res	Reserves
+MUS	spec	Special Collections
+MUS	stks	General Collection
+MUS	zzcirc	circ
+RES_SHARE	IN_RS_REQ	Borrowing Resource Sharing Requests
+RES_SHARE	OUT_RS_REQ	Lending Resource Sharing Requests
+THOM	presmfma	Print Master (no public use)
+THOM	presmfpn	Print Negative (no public use)
+THOM	stor	Stacks
+THOM	storarch	archival manuscripts
+THOM	stordoc	gov docs not in trays
+THOM	stormap	maps
+THOM	stormicro	micro not in trays
+THOM	storper	serials
+THOM	storspec	special collections
+THOM	ulsacq	ULS Acquisitions
+THOM	zzcirc	circ
+THOM	zzdel	Delete
+THOM	zzdocper	Gov doc periodicals clean-up
+THOM	zzprob	clean-up
+THOM	zzthes	Thesis clean up
+THOMASC	archasc	Manuscripts
+THOMASC	mediaasc	Media
+THOMASC	microasc	Microforms
+THOMASC	perasc	Periodicals
+THOMASC	specasc	Books
+THOMASC	thesasc	Theses
+ULS	dups	LCSU duplicates
+ULS	staff	Staff Copies
+ULS	ulsacq	ULS Acquisitions
+ULS	web	Electronic Resources
+ULS	zzdel	Delete
+UPB	arch	Archives
+UPB	curr	Curriculum
+UPB	frnd	Friends Reading Rm
+UPB	intl	INTL Cabinet
+UPB	lap	Laptops
+UPB	map	Maps
+UPB	media	Media
+UPB	micro	Microforms
+UPB	over	Oversize Section (first floor) 
+UPB	per	Periodicals
+UPB	ref	Reference
+UPB	res	Reserves
+UPB	spec	Laing
+UPB	specstor	Laing Storage
+UPB	staff	Staff
+UPB	stks	General Collection
+UPB	stor	Storage
+UPB	upbacq	Acquisitions
+UPB	zzprob	clean-up
+UPG	arch	Archives
+UPG	child	Children's Lit
+UPG	curr	Curriculum Collection
+UPG	equip	Equipment
+UPG	graph	Graphic Novels
+UPG	lapequip	laptops & other equip
+UPG	mediaaud	Audio CDs
+UPG	mediacd	CDs
+UPG	mediadvd	DVDs
+UPG	micro	Micro
+UPG	per	Periodicals
+UPG	ref	Reference
+UPG	res	Reserves
+UPG	score	Scores
+UPG	spec	Special Collections
+UPG	stks	General Collection
+UPG	upgacq	Acquisitions
+UPG	young	Young Adult
+UPG	zzcirc	circ
+UPG	zzhapp	happening loc for deletion
+UPG	zzprob	clean-up
+UPJ	arch	Archives
+UPJ	curr	Curriculum
+UPJ	curraid	Curriculum Aids
+UPJ	equip	Equipment
+UPJ	game	Games
+UPJ	graph	Graphic Novels (currently closed) 
+UPJ	map	Maps
+UPJ	mediacd	Audio
+UPJ	mediavid	Video
+UPJ	micro	Microforms
+UPJ	per	Periodicals
+UPJ	ref	Reference
+UPJ	refatlas	Atlas
+UPJ	res	Reserves
+UPJ	spec	Special Collections
+UPJ	staff	Staff
+UPJ	stks	General Collection (currently closed) 
+UPJ	stor	Storage
+UPJ	zzcirc	circ
+UPJ	zzhapp	happening loc for deletion
+UPJ	zzprob	clean-up
+UPT	media	Media
+UPT	mob	Mobile
+UPT	per	Periodicals
+UPT	ref	Reference
+UPT	resstrk	Reserves
+UPT	spec	Special Collections
+UPT	stks	General Collection 
+UPT	zzhapp	happening loc for deletion
+UPT	zzprob	clean-up
