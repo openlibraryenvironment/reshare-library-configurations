@@ -1,0 +1,226 @@
+AnnenLib annb	Annenberg Library
+AnnenLib annbcirc	Annenberg Library Circulation
+AnnenLib annbgovt	Annenberg Library Government Docs
+AnnenLib annbinde	Annenberg Library Bindery
+AnnenLib annbnewbk	Annenberg New Books
+AnnenLib annbrefe	Annenberg Library Reference
+AnnenLib annbrese	Annenberg Reserves
+AnnenLib annbthes	Annenberg Library Theses
+ArborLib arbor	Arbor Library
+AthLib amimp	Athenaeum Library
+AthLib atlas	Athenaeum Library
+AthLib britimp	Athenaeum Library
+AthLib catoffice	Athenaeum Library
+AthLib cidirbusrm	Athenaeum Library
+AthLib circcoll	Athenaeum Library
+AthLib collcare	Athenaeum Library
+AthLib fic	Athenaeum Library
+AthLib forimp	Athenaeum Library
+AthLib litaward	Athenaeum Library
+AthLib newacqu	Athenaeum Library
+AthLib offsitede	Athenaeum Library
+AthLib rarecoll	Athenaeum Library
+AthLib reevecoll	Athenaeum Library
+AthLib ref	Athenaeum Library
+AthLib ruppcoll	Athenaeum Library
+AthLib serials	Athenaeum Library
+AthLib tradecat	Athenaeum Library
+BatesCntr nursarch	Bates Center
+BiomLib biom	Biomedical Library
+BiomLib biomhist	Biomedical Library
+BiomLib biomlibr	Biomedical Library
+BiomLib biomperi	Biomedical Library
+BiomLib biomrede	Biomedical Library
+BiomLib biomrefe	Biomedical Library
+BiomLib biomrese	Biomedical Library
+ChemLib chcirc	Chemistry Library
+ChemLib chem	Chemistry Library
+ChemLib chemnewbk	Chemistry Library
+ChemLib chemrdrm	Chemistry Library
+ChemLib chemrefe	Chemistry Library
+ChemLib chemrese	Chemistry Library
+DentalLib dent	Dental Library
+DentalLib dentnewbks	Dental Library
+DentalLib dentrare	Dental Library
+DentalLib dentrefe	Dental Library
+DentalLib dentrese	Dental Library
+DentalLib dentshils	Dental Library
+DentalLib dncirc	Dental Library
+FisherFAL facirc	Fisher Fine Arts Library
+FisherFAL fanewbook	Fisher Fine Arts Library
+FisherFAL fine	Fisher Fine Arts Library - Stacks
+FisherFAL finecage	Fisher Fine Arts Library
+FisherFAL finecirc	Fisher Fine Arts Library
+FisherFAL finecore	Fisher Fine Arts Library
+FisherFAL finelock	Fisher Fine Arts Library
+FisherFAL finerare	Fisher Fine Arts Library
+FisherFAL finerefe	Fisher Fine Arts Library - Reference
+FisherFAL finerese	Fisher Fine Arts Library
+FisherFAL fineslid	Fisher Fine Arts Library
+FisherFAL finestudio	Fisher Fine Arts Library
+KatzLib cjs	Library at the Katz Center
+KatzLib cjsambx	Library at the Katz Center
+KatzLib cjsarc	Library at the Katz Center
+KatzLib cjsarcms	Library at the Katz Center
+KatzLib cjsarcths	Library at the Katz Center
+KatzLib cjsbox1	Library at the Katz Center
+KatzLib cjsbox2	Library at the Katz Center
+KatzLib cjsbox3	Library at the Katz Center
+KatzLib cjscdrom	Library at the Katz Center
+KatzLib cjsdir	Library at the Katz Center
+KatzLib cjsencyc	Library at the Katz Center
+KatzLib cjsfol	Library at the Katz Center
+KatzLib cjshur	Library at the Katz Center
+KatzLib cjsinproc	Library at the Katz Center
+KatzLib cjsinprocn	Library at the Katz Center
+KatzLib cjsmar	Library at the Katz Center
+KatzLib cjsmemor	Library at the Katz Center
+KatzLib cjsmini	Library at the Katz Center
+KatzLib cjsoffice	Library at the Katz Center
+KatzLib cjsover	Library at the Katz Center
+KatzLib cjspergal	Library at the Katz Center
+KatzLib cjsrar	Library at the Katz Center
+KatzLib cjsraram	Library at the Katz Center
+KatzLib cjsrarbx1	Library at the Katz Center
+KatzLib cjsrarbx2	Library at the Katz Center
+KatzLib cjsrarfol	Library at the Katz Center
+KatzLib cjsrarmini	Library at the Katz Center
+KatzLib cjsrarms	Library at the Katz Center
+KatzLib cjsrarover	Library at the Katz Center
+KatzLib cjsref	Library at the Katz Center
+KatzLib cjsreffol	Library at the Katz Center
+KatzLib cjsreffol+	Library at the Katz Center
+KatzLib cjsspec	Library at the Katz Center
+KislakCntr sc1100c	Kislak Center
+KislakCntr scadams	Kislak Center
+KislakCntr scartbk	Kislak Center
+KislakCntr scbanks	Kislak Center
+KislakCntr scblank	Kislak Center
+KislakCntr sccomics	Kislak Center
+KislakCntr scdech	Kislak Center
+KislakCntr scdreis	Kislak Center
+KislakCntr scdrey	Kislak Center
+KislakCntr scelias	Kislak Center
+KislakCntr scelz	Kislak Center
+KislakCntr scfast	Kislak Center
+KislakCntr scforr	Kislak Center
+KislakCntr scfoun	Kislak Center
+KislakCntr scfreed	Kislak Center
+KislakCntr scfurn	Kislak Center
+KislakCntr scfurnlib	Kislak Center
+KislakCntr scfurnst	Kislak Center
+KislakCntr scgull	Kislak Center
+KislakCntr sclea	Kislak Center
+KislakCntr scmain	Kislak Center
+KislakCntr scparts	Kislak Center
+KislakCntr scpspa	Kislak Center
+KislakCntr scrare	Kislak Center
+KislakCntr screading	Kislak Center
+KislakCntr screfe	Kislak Center
+KislakCntr scschimmel	Kislak Center
+KislakCntr scsing	Kislak Center
+KislakCntr scsmith	Kislak Center
+KislakCntr scsmithst	Kislak Center
+KislakCntr scsterne	Kislak Center
+KislakCntr scstor	Kislak Center
+KislakCntr scteer	Kislak Center
+KislakCntr sctehon	Kislak Center
+KislakCntr scvilain	Kislak Center
+KislakCntr scwhit	Kislak Center
+KislakCntr scyarn	Kislak Center
+Libra UNASSIGNED	Libra UNASSIGNED
+Libra athstor	Libra athstor
+Libra athstorcir	Libra athstorcir
+Libra stor	Storage - LIBRA
+Libra storcirc	Libra storcirc
+Libra storcrstxt	Libra storcrstxt
+Libra storfine	Libra storfine
+Libra storlimit	Libra storlimit
+Libra storm	Libra storm
+Libra storrare	Libra storrare
+Libra storspec	Libra storspec
+LippLib UNASSIGNED	LippLib UNASSIGNED
+LippLib lipp	Lippincott Library - Stacks
+LippLib lippbtrend	LippLib lippbtrend
+LippLib lipplipm	LippLib lipplipm
+LippLib lipppeck	LippLib lipppeck
+LippLib lipprefdsk	LippLib lipprefdsk
+LippLib lipprefe	LippLib lipprefe
+LippLib lipprese	LippLib lipprese
+LippLib lippreseds	LippLib lippreseds
+MPALib math	MPALib math
+MPALib mathcirc	MPALib mathcirc
+MPALib mathnewbk	MPALib mathnewbk
+MPALib mathperi	MPALib mathperi
+MPALib mathrese	MPALib mathrese
+MuseumLib muse	University Museum Library - Stacks
+MuseumLib musebrin	MuseumLib musebrin
+MuseumLib musedesk	MuseumLib musedesk
+MuseumLib museegyp	University Museum Library - Egyptian Collection
+MuseumLib museegypov	MuseumLib museegypov
+MuseumLib musefolio	MuseumLib musefolio
+MuseumLib muselock	MuseumLib muselock
+MuseumLib museover	University Museum Library - Oversize
+MuseumLib muserefe	University Museum Library - Reference
+MuseumLib muserese	MuseumLib muserese
+MusicLib musiclist	MusicLib musiclist
+MusicLib musicrese	MusicLib musicrese
+MusicLib musicsem	Van Pelt - Marian Anderson Music Study Center (452)
+MusicLib musictech	MusicLib musictech
+MusicLib musinwbk	MusicLib musinwbk
+MusicLib musisemres	MusicLib musisemres
+PAHospLib pah	PAHospLib pah
+PAHospLib pahhist	PAHospLib pahhist
+PAHospLib pahiph	PAHospLib pahiph
+PAHospLib pahiphf	PAHospLib pahiphf
+PAHospLib pahiphhist	PAHospLib pahiphhist
+PAHospLib pahiphref	PAHospLib pahiphref
+PAHospLib pahiphrr	PAHospLib pahiphrr
+PAHospLib pahiphstk	PAHospLib pahiphstk
+PAHospLib pahref	PAHospLib pahref
+PAHospLib pahres	PAHospLib pahres
+ROTCLib rotc	ROTCLib rotc
+UnivArcLib univarch	UnivArcLib univarch
+VanPeltLib afro	Van Pelt - Africana Studies Resource Room (305)
+VanPeltLib classics	Van Pelt - Classics Resource Room (301)
+VanPeltLib easiacmx	VanPeltLib easiacmx
+VanPeltLib easiaover	Van Pelt - East Asia Oversize
+VanPeltLib easiasem	VanPeltLib easiasem
+VanPeltLib eastasia	Van Pelt - East Asia Stacks
+VanPeltLib judaica	Van Pelt - Judaica/Ancient Near East Resource Room (401)
+VanPeltLib medieval	Van Pelt - Medieval Studies Resource Room (405)
+VanPeltLib mideast	VanPeltLib mideast
+VanPeltLib sasiarefe	VanPeltLib sasiarefe
+VanPeltLib slavic	VanPeltLib slavic
+VanPeltLib staffuse	VanPeltLib staffuse
+VanPeltLib unknownloc	VanPeltLib unknownloc
+VanPeltLib vanp	Van Pelt - Stacks
+VanPeltLib vanpNocirc	Van Pelt - Stacks (ETAS)
+VanPeltLib vanpbest	VanPeltLib vanpbest
+VanPeltLib vanpinfo	VanPeltLib vanpinfo
+VanPeltLib vanpmicro	VanPeltLib vanpmicro
+VanPeltLib vanporig	VanPeltLib vanporig
+VanPeltLib vanpvideo	VanPeltLib vanpvideo
+VanPeltLib vpcirc	VanPeltLib vpcirc
+VanPeltLib vpnewbook	Van Pelt Library - New Book Display
+VanPeltLib vpref	Van Pelt - Reference
+VanPeltLib vprefbip	VanPeltLib vprefbip
+VanPeltLib vpreffin	VanPeltLib vpreffin
+VanPeltLib vprefmoel	VanPeltLib vprefmoel
+VanPeltLib vprefover	Van Pelt - Reference - Oversize
+VanPeltLib vpresdesk	VanPeltLib vpresdesk
+VanPeltLib vpwicref	VanPeltLib vpwicref
+VanPeltLib women	VanPeltLib women
+VanPeltLib woody	VanPeltLib woody
+VanPeltLib yarn	Van Pelt - Yarnall Collection
+VetNBLib newb	VetNBLib newb
+VetNBLib newbofc	VetNBLib newbofc
+VetNBLib newbrare	VetNBLib newbrare
+VetNBLib newbrese	VetNBLib newbrese
+VetPennLib vete	VetPennLib vete
+VetPennLib vetedisp	VetPennLib vetedisp
+VetPennLib vetelibr	VetPennLib vetelibr
+VetPennLib veteover	VetPennLib veteover
+VetPennLib veterefe	VetPennLib veterefe
+VetPennLib veterese	VetPennLib veterese
+VetPennLib veteresov	VetPennLib veteresov
