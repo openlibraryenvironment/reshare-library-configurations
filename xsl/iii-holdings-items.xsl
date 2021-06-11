@@ -37,39 +37,59 @@
           </xsl:variable>
           <xsl:variable name="iid" select="./marc:subfield[@code='y']"/>
           <xsl:variable name="loc" select="./marc:subfield[@code='l']"/>
-          <xsl:variable name="itype" select="./marc:subfield[@code='t']"/>
           <xsl:if test="not($loc=$preloc)">
             <i>
               <xsl:variable name="loc-clean" select="normalize-space($loc)"/>
               <permanentLocationIdHere><xsl:value-of select="$loc-clean"/></permanentLocationIdHere>
               <illPolicyId>
                 <xsl:choose>
-                  <xsl:when test="$loc-clean='lbks'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='lbkso'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='lmcod'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='lmvc'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='ltm'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                  <xsl:when test="$loc-clean='ltmyl'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                  <xsl:when test="$loc-clean='drapp'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='drg'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='drj'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='drmfo'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='drsc'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='gdg'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='mmvc'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='drgn'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='drmm'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='drmvc'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='msg'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='drcd'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='gcg'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='scwv'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
                   <xsl:otherwise>b0f97013-87f5-4bab-87f2-ac4a5191b489</xsl:otherwise> <!-- Will not lend -->
                 </xsl:choose>
               </illPolicyId>
-              <callNumber>
-                <xsl:choose>
-                  <xsl:when test="../marc:datafield[@tag='090']/marc:subfield[@code='b']">
-                    <xsl:value-of select="concat(../marc:datafield[@tag='090']/marc:subfield[@code='a'], ' ', ../marc:datafield[@tag='090']/marc:subfield[@code='b'])"/>
-                  </xsl:when>
-                  <xsl:when test="../marc:datafield[@tag='090']/marc:subfield[@code='a']">
-                    <xsl:value-of select="../marc:datafield[@tag='090']/marc:subfield[@code='a']"/>
-                  </xsl:when>
-                  <xsl:when test="../marc:datafield[@tag='050']/marc:subfield[@code='b']">
-                    <xsl:value-of select="concat(../marc:datafield[@tag='050']/marc:subfield[@code='a'], ' ', ../marc:datafield[@tag='050']/marc:subfield[@code='b'])"/>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="../marc:datafield[@tag='050']/marc:subfield[@code='a']"/>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </callNumber>
-              <callNumberTypeId>95467209-6d7b-468b-94df-0f5d7ad2747d</callNumberTypeId> <!-- LC -->
+              <xsl:variable name='LCC' select="../marc:datafield[@tag='050']"/>
+              <xsl:variable name='NLAC' select="../marc:datafield[@tag='070']"/>
+              <xsl:variable name='DDC' select="../marc:datafield[@tag='082']"/>
+              <xsl:variable name='SUDOC' select="../marc:datafield[@tag='086']"/>
+              <xsl:variable name='LOCAL' select="../marc:datafield[@tag='090']"/>
+              <xsl:choose>
+                <xsl:when test="./marc:subfield[@code='a']">
+                  <callNumber><xsl:value-of select="./marc:subfield[@code='a']"/></callNumber>
+                </xsl:when>
+                <xsl:when test="$LCC">
+                  <callNumber><xsl:value-of select="normalize-space($LCC/marc:subfield[@code='a'])"/></callNumber>
+                  <callNumberTypeId>95467209-6d7b-468b-94df-0f5d7ad2747d</callNumberTypeId> <!-- LC -->
+                </xsl:when>
+                <xsl:when test="$LOCAL">
+                  <callNumber><xsl:value-of select="normalize-space(concat($LOCAL/marc:subfield[@code='a'], ' ', $LOCAL/marc:subfield[@code='b']))"/></callNumber>
+                  <callNumberTypeId>95467209-6d7b-468b-94df-0f5d7ad2747d</callNumberTypeId> <!-- LC -->
+                </xsl:when>
+                <xsl:when test="$SUDOC">
+                  <callNumber><xsl:value-of select="normalize-space(concat($SUDOC/marc:subfield[@code='a'], ' ', $SUDOC/marc:subfield[@code='b']))"/></callNumber>
+                  <callNumberTypeId>fc388041-6cd0-4806-8a74-ebe3b9ab4c6e</callNumberTypeId> <!-- SuDoc -->
+                </xsl:when>
+                <xsl:when test="$DDC">
+                  <callNumber><xsl:value-of select="normalize-space(concat($DDC/marc:subfield[@code='a'], ' ', $DDC/marc:subfield[@code='b']))"/></callNumber>
+                  <callNumberTypeId>03dd64d0-5626-4ecd-8ece-4531e0069f35</callNumberTypeId> <!-- Dewey -->
+                </xsl:when>
+                <xsl:when test="$NLAC">
+                  <callNumber><xsl:value-of select="normalize-space(concat($NLAC/marc:subfield[@code='a'], ' ', $NLAC/marc:subfield[@code='b']))"/></callNumber>
+                  <callNumberTypeId>95467209-6d7b-468b-94df-0f5d7ad2747d</callNumberTypeId> <!-- LC -->
+                </xsl:when>
+              </xsl:choose>
               <notes>
                 <arr>
                   <i>
