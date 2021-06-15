@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <id>352201</id>
+    <basicTransformation>
+        <id>352201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>Washington and Jefferson - FOLIO MARC21 to FOLIO Inventory</name>
+        <parallel>false</parallel>
+        <stepAssociations>
+            <id>352401</id>
+            <position>1</position>
+            <transformation>352201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>301307</id> <!-- FOLIO MARC21 to Instance XML -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>352402</id>
+            <position>2</position>
+            <transformation>352201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>352301</id>  <!-- Washington & Jefferson holdings and items -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>352403</id>
+            <position>3</position>
+            <transformation>352201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>352302</id> <!-- Granular library codes, Washington & Jefferson -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>352404</id>
+            <position>4</position>
+            <transformation>352201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>301302</id> <!-- XML to JSON -->
+            </step>
+        </stepAssociations>
+    </basicTransformation>
+</transformation>
