@@ -3,7 +3,7 @@
   <xmlBulk>
     <id>352503</id>
     <name>PALCI SI: Washington and Jefferson to SI dev</name>
-    <url>ftp://washjeff@ftp.folio.indexdata.com</url>
+    <url>ftp://washjeff@ftp.folio.indexdata.com/incoming</url>
     <storeOriginal>true</storeOriginal>
     <enabled>false</enabled>
     <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">

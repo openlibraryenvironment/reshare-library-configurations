@@ -2,8 +2,8 @@
 <harvestable>
   <xmlBulk>
     <id>352500</id>
-    <name>PALCI SI: Washington & Jefferson</name>
-    <url>ftp://washjeff@ftp.folio.indexdata.com</url>
+    <name>PALCI SI: Washington and Jefferson</name>
+    <url>ftp://washjeff@ftp.folio.indexdata.com/incoming</url>
     <storeOriginal>true</storeOriginal>
     <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
       <id>301199</id> <!-- PALCI ReShare, production shared index -->
@@ -15,7 +15,7 @@
     <logLevel>INFO</logLevel>
     <mailLevel>OK</mailLevel>
     <overwrite>false</overwrite>
-    <enabled>true</enabled>
+    <enabled>false</enabled>
     <failedRecordsLogging>ADD_ALL</failedRecordsLogging>
     <maxSavedFailedRecordsPerRun>200</maxSavedFailedRecordsPerRun>
     <maxSavedFailedRecordsTotal>1000</maxSavedFailedRecordsTotal>
