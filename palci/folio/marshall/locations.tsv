@@ -1,0 +1,79 @@
+CL	Cl	Chemistry Library
+CL	Clg	Chemistry Library collection
+CMD	Cmd	Communications Disorders Collection
+DR	Dr	Drinko Library
+DR	drapp	Appalachian Collection 2nd Floor
+DR	drcd	Music CDs 3rd Floor
+DR	drco	Drinko Cataloging Office
+DR	drd	Drinko Display
+DR	drg	Drinko general collection
+DR	drgn	Drinko Graphic Novels
+DR	drj	Drinko Juvenile Collection
+DR	drm	Drinko Media
+DR	drmb	Drinko Microfilm Basement Storage
+DR	drmfo	Drinko Music folio
+DR	drmm	Drinko Music Miniatures
+DR	drmrf	Drinko Music Reference
+DR	drmvc	Drinko Music Videocassettes
+DR	drn	Drinko Newpapers
+DR	drp	Drinko Library Periodicals
+DR	drpop	Drinko Popular Titles
+DR	drr	Drinko Library Reserve
+DR	drrf	Drinko reference
+DR	drrfa	Drinko Reference/Atlas
+DR	drrfb	Drinko Reference Storage Basement
+DR	drrfd	Drinko Reference Desk
+DR	drro	Drinko Reading Room
+DR	drsc	Drinko Musical Scores
+DR	drsel	Drinko Self Check
+DR	drt	Drinko Textbook Loan Program
+DR	drts	Drinko Technical Services
+DR	drva	Drinko Video area first floor
+GC	gc	South Charleston Library
+GC	gcg	South Charleston Library Gen Coll
+GC	gcp	South Charleston Library Periodicals
+GC	gcr	South Charleston Library Reserve
+GC	gcrf  	South Charleston Library Reference
+GC	gct	South Charleston Textbook Loan Program
+HSL	hs	Health Sciences Library
+HSL	hsav	AV
+HSL	hse	Esposito collection
+HSL	hsf	Folio
+HSL	hsg	General collection
+HSL	hsort	Ortho
+HSL	hsp	Health Sciences Library Periodicals
+HSL	hsr	Health Sciences Library Reserve
+HSL	hsrf	Reference
+MEB	vamcr	Ref
+VAC	vac	Visual Arts Center
+MOR	gd	Government Documents
+MOR	gdf	Gov. Docs. folio
+MOR	gdg	Gov. Docs. general collection
+MOR	gdrf	Gov. Docs. Ref
+MOR	mdsto	Music Department Storage
+MOR	mmlp	Music LPs
+MOR	mmvc	Music Videocassettes
+MOR	mog	MOVC
+MOR	ms	Stacks
+MOR	msf	Stacks Folio
+MOR	msg	Stacks General Collection
+MOR	msop	Stacks Oversized Periodicals
+MOR	msp	Stacks Periodicals
+MOR	onl	Online Resources
+MOR	sc	Special Collections
+MOR	sca	Special Coll/Archives
+MOR	scb	Special Collections/Blake
+MOR	scg	Special Collections
+MOR	scgh	George J. Hill Library of Medicine
+MOR	sch	Special Collections/Hoffman
+MOR	scka	Spec Coll Keith Albee Sheet Music
+MOR	scm	Special Collections/Manuscripts        false
+MOR	sco	Special Collections/Oral history
+MOR	scp	Special Collections Periodicals
+MOR	scr	Special Collections/Rare Books
+MOR	scref	Special Collections Reference
+MOR	scsc	Special Collections/Special Coll.
+MOR	scsh	Spec Coll Sheet Music
+MOR	scwv	Special Collections/West Virginia
+MOR	scwvd	Special Collections/WV Documents
+MOR	ursa	EZ-Borrow & ILL
