@@ -156,29 +156,22 @@
                 </classifications>
             </xsl:if>
 
-            <!-- title -->
-            <xsl:for-each select="marc:datafield[@tag='245']">
-                <title>
+             <!-- title -->
+            <title>
+                <xsl:variable name="dirty-title">
+                    <xsl:for-each select="marc:datafield[@tag='245'][1]/marc:subfield[@code='a' or @code='b' or @code='h' or @code='n' or @code='p']">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position() != last()">
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:variable>
                 <xsl:call-template name="remove-characters-last">
-                    <xsl:with-param  name="input" select="marc:subfield[@code='a']" />
+                    <xsl:with-param  name="input" select="$dirty-title" />
                     <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
                 </xsl:call-template>
-                <xsl:if test="marc:subfield[@code='b']">
-                <xsl:text> : </xsl:text>
-                    <xsl:call-template name="remove-characters-last">
-                    <xsl:with-param  name="input" select="marc:subfield[@code='b']" />
-                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
-                    </xsl:call-template>
-                </xsl:if>
-                <xsl:if test="marc:subfield[@code='h']">
-                    <xsl:text> </xsl:text>
-                    <xsl:call-template name="remove-characters-last">
-                    <xsl:with-param  name="input" select="marc:subfield[@code='h']" />
-                    <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
-                    </xsl:call-template>
-                </xsl:if>
-                </title>
-            </xsl:for-each>
+            </title>
+            
             <!-- Contributors -->
             <xsl:if test="marc:datafield[@tag='100' or @tag='110' or @tag='111' or @tag='700' or @tag='710' or @tag='711']">
                 <contributors>
@@ -294,7 +287,7 @@
                 <arr>
                 <xsl:for-each select="marc:datafield[@tag='600' or @tag='610' or @tag='611' or @tag='630' or @tag='648' or @tag='650' or @tag='651' or @tag='653' or @tag='654' or @tag='655' or @tag='656' or @tag='657' or @tag='658' or @tag='662' or @tag='69X']">
                     <i>
-                    <xsl:for-each select="marc:subfield[@code='a' or @code='b' or @code='c' or @code='d' or @code='f' or @code='g' or @code='j' or @code='k' or @code='l' or @code='n' or @code='p' or @code='q' or @code='t' or @code='u' or @code='v' or @code='z']">
+                    <xsl:for-each select="marc:subfield[@code='a' or @code='b' or @code='c' or @code='d' or @code='f' or @code='g' or @code='j' or @code='k' or @code='l' or @code='n' or @code='p' or @code='q' or @code='t' or @code='u' or @code='v' or @code='x' or @code='y' or @code='z']">
                     <xsl:if test="position() > 1">
                         <xsl:text>--</xsl:text>
                     </xsl:if>
@@ -307,6 +300,29 @@
                 </xsl:for-each>
                 </arr>
                 </subjects>
+            </xsl:if>
+            
+             <!-- Notes -->
+            <xsl:if test="marc:datafield[@tag='500' or @tag='504' or @tag='505' or @tag='520']">
+                <notes>
+                    <arr>
+                    <xsl:for-each select="marc:datafield[@tag='500' or @tag='504' or @tag='505' or @tag='520']">
+                        <i>
+                            <note>
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </note>
+                            <instanceNoteTypeId>
+                                <xsl:choose>
+                                    <xsl:when test='./@tag="504"'>86b6e817-e1bc-42fb-bab0-70e7547de6c1</xsl:when> <!-- biliography -->
+                                    <xsl:when test='./@tag="505"'>5ba8e385-0e27-462e-a571-ffa1fa34ea54</xsl:when> <!-- contents -->
+                                    <xsl:when test='./@tag="520"'>0e2e11b-450f-45c8-b09b-0f819999966e</xsl:when> <!-- contents -->
+                                    <xsl:otherwise>6a2533a7-4de2-4e64-8466-074c2fa9308c</xsl:otherwise> <!-- general -->
+                            </xsl:choose>
+                            </instanceNoteTypeId>
+                        </i>
+                    </xsl:for-each>
+                    </arr>
+                </notes>
             </xsl:if>
         </instance>
 
@@ -332,11 +348,6 @@
                 <xsl:with-param  name="characters">,-./ :;</xsl:with-param>
                 </xsl:call-template>
             </medium>
-            <!-- Only fields that are actually included in
-                the instance somewhere - for example in 'title' -
-                should be included as 'matchKey' elements lest
-                the instance "magically" splits on "invisible"
-                properties.
             <name-of-part-section-of-work>
                 <xsl:value-of select="marc:subfield[@code='p']" />
             </name-of-part-section-of-work>
@@ -345,7 +356,7 @@
             </number-of-part-section-of-work>
             <inclusive-dates>
                 <xsl:value-of select="marc:subfield[@code='f']" />
-            </inclusive-dates> -->
+            </inclusive-dates>
             </xsl:for-each>
         </matchKey>
 
