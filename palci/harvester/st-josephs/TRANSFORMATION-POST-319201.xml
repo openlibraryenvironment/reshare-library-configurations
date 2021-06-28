@@ -4,7 +4,7 @@
         <id>319201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>St. Joseph's - OAI-PMH to FOLIO Inventory</name>
+        <name>St Josephs - OAI-PMH to FOLIO Inventory</name>
         <parallel>false</parallel>
     </basicTransformation>
 </transformation>

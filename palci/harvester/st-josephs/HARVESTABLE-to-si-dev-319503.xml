@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <harvestable>
   <xmlBulk>
-    <id>326500</id>
-    <name>PALCI SI: Robert Morris</name>
-    <url>ftp://robertmorris@ftp.folio.indexdata.com/incoming/xml</url>
+    <id>319503</id>
+    <name>PALCI SI: St Josephs to SI dev</name>
+    <url>ftp://stjoes@ftp.folio.indexdata.com</url>
     <passiveMode>true</passiveMode>
     <allowCondReq>true</allowCondReq>
     <allowErrors>true</allowErrors>
     <storeOriginal>true</storeOriginal>
+    <enabled>false</enabled>
     <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
-      <id>301199</id> <!-- PALCI ReShare, production shared index -->
+      <id>301102</id>  <!-- SI dev - PALCI -->
     </storage>
     <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">
-      <id>326201</id>
+      <id>319201</id>
     </transformation>
     <harvestImmediately>false</harvestImmediately>
     <logLevel>INFO</logLevel>
-    <mailLevel>OK</mailLevel>
+    <mailLevel>WARN</mailLevel>
     <overwrite>false</overwrite>
-    <enabled>false</enabled>
-    <failedRecordsLogging>ADD_ALL</failedRecordsLogging>
-    <maxSavedFailedRecordsPerRun>200</maxSavedFailedRecordsPerRun>
-    <maxSavedFailedRecordsTotal>1000</maxSavedFailedRecordsTotal>
-    <scheduleString>10 2 * * *</scheduleString>
+    <scheduleString>10 10 10 6 *</scheduleString>
     <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
     <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
   </xmlBulk>
