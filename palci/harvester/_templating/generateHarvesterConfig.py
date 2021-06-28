@@ -72,6 +72,10 @@ def main(argv):
     if jobtype == 'oaiPmh':
         f.write('    <oaiSetName>{}</oaiSetName>\n'.format(oaisetname))
         f.write('    <metadataPrefix>marc21</metadataPrefix>\n')
+    if jobtype == 'xmlBulk':
+        f.write('    <passiveMode>true</passiveMode>\n')
+        f.write('    <allowCondReq>true</allowCondReq>\n')
+        f.write('    <allowErrors>true</allowErrors>\n')
     f.write('    <storeOriginal>true</storeOriginal>\n')
     f.write('    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">\n')
     f.write('      <id>301199</id> <!-- PALCI ReShare, production shared index -->\n')
@@ -106,6 +110,10 @@ def main(argv):
     if jobtype == 'oaiPmh':
         f.write('    <oaiSetName>{}</oaiSetName>\n'.format(oaisetname))
         f.write('    <metadataPrefix>marc21</metadataPrefix>\n')
+    if jobtype == 'xmlBulk':
+        f.write('    <passiveMode>true</passiveMode>\n')
+        f.write('    <allowCondReq>true</allowCondReq>\n')
+        f.write('    <allowErrors>true</allowErrors>\n')
     f.write('    <storeOriginal>true</storeOriginal>\n')
     f.write('    <enabled>false</enabled>\n')
     f.write('    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">\n')
@@ -155,7 +163,10 @@ def main(argv):
     f.write('            <position>1</position>\n')
     f.write('            <transformation>{}201</transformation>\n'.format(baseid))
     f.write('            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">\n')
-    f.write('                <id>301301</id> <!-- OAI20-MARC21 to Instance XML -->\n')
+    if jobtype == 'oaiPmh':
+        f.write('                <id>301301</id> <!-- OAI20-MARC21 to Instance XML -->\n')
+    if jobtype == 'xmlBulk':
+        f.write('                <id>301303</id> <!-- MARC21 to Instance XML -->\n')
     f.write('            </step>\n')
     f.write('        </stepAssociations>\n')
     f.write('        <stepAssociations>\n')
