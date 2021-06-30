@@ -3,9 +3,9 @@
   <id>346302</id>
   <XmlTransformStep>
     <id>346302</id>
-    <description>Maps locations, record identifier type for PMA</description>
+    <description>Maps locations, record identifier type for Philadelphia Museum of ART (PMA)</description>
     <inputFormat>XML</inputFormat>
-    <name>Library codes, PMA</name>
+    <name>Library codes, Philadelphia Museum of ART (PMA)</name>
     <outputFormat>XML</outputFormat>
     <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
 &lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <harvestable>
-  <xmlBulk>
+  <xmlBult>
     <id>346503</id>
-    <name>PALCI SI: PMA to SI dev</name>
-    <url>ftp://pma@ftp.folio.indexdata.com/incoming</url>
+    <name>PALCI SI: Philadelphia Museum of ART (PMA) to SI dev</name>
+    <url>ftp://ftp.folio.indexdata.com/incoming</url>
     <storeOriginal>true</storeOriginal>
     <enabled>false</enabled>
     <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
@@ -19,9 +19,5 @@
     <scheduleString>10 10 10 6 *</scheduleString>
     <dateFormat>yyyy-MM-dd'T'hh:mm:ss'Z'</dateFormat>
     <lastUpdated>2020-01-01T08:10:00Z</lastUpdated>
-    <passiveMode>true</passiveMode>
-    <recurse>false</recurse>
-    <splitAt>1</splitAt>
-    <splitSize>100</splitSize>
-  </xmlBulk>
+  </xmlBult>
 </harvestable>

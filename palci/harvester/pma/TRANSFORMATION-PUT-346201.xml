@@ -5,14 +5,13 @@
         <id>346201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>PMA - MARC21 to FOLIO Inventory</name>
+        <name>Philadelphia Museum of ART (PMA) - OAI-PMH to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
             <id>346401</id>
             <position>1</position>
             <transformation>346201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>301303</id> <!-- MARC21 to Instance XML -->
             </step>
         </stepAssociations>
         <stepAssociations>
@@ -20,7 +19,7 @@
             <position>2</position>
             <transformation>346201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>346301</id>  <!-- PMA holdings and items -->
+                <id>346301</id>  <!-- Philadelphia Museum of ART (PMA) holdings and items -->
             </step>
         </stepAssociations>
         <stepAssociations>
@@ -28,7 +27,7 @@
             <position>3</position>
             <transformation>346201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>346302</id> <!-- Granular library codes, PMA -->
+                <id>346302</id> <!-- Granular library codes, Philadelphia Museum of ART (PMA) -->
             </step>
         </stepAssociations>
         <stepAssociations>

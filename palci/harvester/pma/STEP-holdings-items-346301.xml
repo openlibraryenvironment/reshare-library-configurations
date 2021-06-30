@@ -3,10 +3,10 @@
   <id>346301</id>
   <XmlTransformStep>
     <id>346301</id>
-    <description>Holdings and Items, PMA</description>
+    <description>Holdings and Items, Philadelphia Museum of ART (PMA)</description>
     <enabled>true</enabled>
     <inputFormat>XML</inputFormat>
-    <name>Holdings and Items, PMA</name>
+    <name>Holdings and Items, Philadelphia Museum of ART (PMA)</name>
     <outputFormat>XML</outputFormat>
     <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xD;
 &lt;xsl:stylesheet&#xD;
