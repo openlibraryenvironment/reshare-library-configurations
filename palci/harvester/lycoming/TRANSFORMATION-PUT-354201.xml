@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <id>354201</id>
+    <basicTransformation>
+        <id>354201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>Lycoming - TLC to FOLIO Inventory</name>
+        <parallel>false</parallel>
+        <stepAssociations>
+            <id>354401</id>
+            <position>1</position>
+            <transformation>354201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>301303</id> <!-- MARC21 to Instance XML -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>354402</id>
+            <position>2</position>
+            <transformation>354201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>354301</id>  <!-- Lycoming holdings and items -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>354403</id>
+            <position>3</position>
+            <transformation>354201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>354302</id> <!-- Granular library codes, Lycoming -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>354404</id>
+            <position>4</position>
+            <transformation>354201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>301302</id> <!-- XML to JSON -->
+            </step>
+        </stepAssociations>
+    </basicTransformation>
+</transformation>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>354302</id>
+  <XmlTransformStep>
+    <id>354302</id>
+    <description>Maps locations, record identifier type for Lycoming</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Lycoming</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;64ed8145-ff6e-5cf3-a5f2-edabff0b2554&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;NEW&#39;&quot;&gt;c9686fb0-b4c3-5d16-93a8-11d2d248450a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OVSZ&#39;&quot;&gt;28bbaba8-0d28-54b4-9edc-f98aa1d11cf5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCA&#39;&quot;&gt;7c569d5b-2e18-5a3b-b4fd-a088f8ec5afb&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCJ&#39;&quot;&gt;1763ccf0-2da0-58a4-b9a9-d29dbc2691fa&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCL&#39;&quot;&gt;815b82f2-1e24-5f97-baba-ca1f98bebbbd&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCT&#39;&quot;&gt;334f637a-371b-509a-b58c-64765ae72396&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCDVD&#39;&quot;&gt;c77d5687-1498-577d-a5cc-b2576aa5164a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;10DAY&#39;&quot;&gt;ad45bbb3-1046-5b2b-8786-cc2b0246859b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;1DAY&#39;&quot;&gt;b85d98e9-cb19-5405-bc8e-d751b9de7456&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;2HR&#39;&quot;&gt;01eb1fbc-9233-5b10-84af-3398324a6df4&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;3DAY&#39;&quot;&gt;0e1240ee-a06f-5ccd-8468-b1735df6cb74&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;4HR&#39;&quot;&gt;ed3b2b1f-24b0-5cea-ac3b-907b5825f0a2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;7DAY&#39;&quot;&gt;13338fa2-f4c1-5ab9-ac93-e82d2beb8dfb&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCH&#39;&quot;&gt;1e1df1c9-deac-5ece-b1b8-8f1224fb6e91&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCR&#39;&quot;&gt;4c9bf3c8-dbac-5f07-a5c1-95e3666172f2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCZ&#39;&quot;&gt;f225d2d6-6508-5e4a-8700-1c19b161c723&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MCN&#39;&quot;&gt;c1c5cf17-ee18-56bc-ba97-ff227793f247&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCG&#39;&quot;&gt;7e741f46-a704-506b-86d0-7c757ddc68e1&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCF&#39;&quot;&gt;f7b9c24b-80c4-551e-9b58-1a9d088e591c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;STAFF&#39;&quot;&gt;038ed62d-ff2c-5f58-9b6a-d52139ad8442&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCV&#39;&quot;&gt;c26cd476-ede5-5c7f-ba34-99981dd47d0d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;BRWS&#39;&quot;&gt;558a2690-6652-5930-aaef-df1429f79095&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;DISPLAY&#39;&quot;&gt;baf30555-de3c-5aea-a666-958136307749&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ERR&#39;&quot;&gt;c2abeb8f-2d31-5cb1-a91d-e1e04b3c8d10&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;EZB&#39;&quot;&gt;ea9e433e-a219-5217-a712-7d3c308cba31&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;FILM&#39;&quot;&gt;dd5b5434-6ca2-5a4f-ac4a-5fcca20fd8df&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;GAME&#39;&quot;&gt;5287128d-f21e-57e9-962c-ae22a1381924&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;JSTOR&#39;&quot;&gt;a65afca6-1249-55b0-b49b-6e1f7115a946&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYC@&#39;&quot;&gt;2f213016-5b4d-512e-b98e-eb48361b439e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCB&#39;&quot;&gt;44beffc4-6d5d-53d4-b2b1-c9744301fe4e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCD&#39;&quot;&gt;ebf50593-4f91-50e1-9ab4-3196abfe113b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCE&#39;&quot;&gt;091ba508-6c00-5d14-bcb4-3652632b13ec&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCEB&#39;&quot;&gt;4a3a291a-2d9e-5290-9fe3-971fedd0f371&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCN&#39;&quot;&gt;9bdcce5e-c201-53bf-adb9-315fb8d4ae69&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCM&#39;&quot;&gt;3abf8430-fae8-596a-9057-a08dca0f2b32&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCP&#39;&quot;&gt;0ac3af09-12ea-5718-96b4-838267618d11&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCQ&#39;&quot;&gt;3cb8f3bb-0de3-5665-b60f-06d8f5183f68&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCS&#39;&quot;&gt;3fe7826b-82a7-5b73-baf5-4cfef1f9c30e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LYCX&#39;&quot;&gt;5d9a4f8c-5cc6-52fd-9d4e-5c9f19aa7f4b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OFFLYCA&#39;&quot;&gt;168af22c-54b7-533c-8d4b-1b9dafe1e258&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OFFLYCP&#39;&quot;&gt;0d62251b-8e34-5380-8343-08d0abb2bd85&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OFFLYCR&#39;&quot;&gt;124454bb-4b30-5bb8-9739-117159c7f343&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OSO&#39;&quot;&gt;695035b9-4a2e-50ac-af27-0eab13731b18&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PDA&#39;&quot;&gt;c9750b5e-d714-5bde-ba5f-20b18cb367a5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SAGE&#39;&quot;&gt;76ea8c46-c25f-50a9-8e82-54739a305c50&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;STAFFR&#39;&quot;&gt;19ce51e4-7cf3-51d4-999a-580b58ae654e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;a5117150-1edc-5a1d-a001-6f954b8f2224&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (Snowden) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;2a378c52-4a7e-5a63-9033-320b3ffd69c6&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
