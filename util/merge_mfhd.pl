@@ -4,6 +4,7 @@
 # -- it will probley work for other Bib/MFHD collections...
 
 use MARC::Record;
+# use MARC::Charset 'marc8_to_utf8';
 use File::Basename;
 use strict;
 use warnings;
@@ -12,8 +13,10 @@ my $mrcfile = shift or die "Usage: ./merg_mfhd.pl <mrc_file>";
 
 my $workdir = dirname($mrcfile);
 my $fname = basename($mrcfile, '.marc', '.mrc', '.marc', '.bin', '.out');
-my $savefile = "$workdir/${fname}-with-holdings.mrc";
-open OUT, ">:encoding(UTF-8)", $savefile;
+mkdir("$workdir/merged");
+my $savefile = "$workdir/merged/${fname}-with-holdings.mrc";
+# open OUT, ">:encoding(UTF-8)", $savefile;
+open OUT, ">", $savefile;
 
 $/ = "\x1D";
 open MF, $mrcfile;
@@ -25,6 +28,7 @@ my $marc;
 my $c = 0;
 my $done = 0;
 while (<MF>) {
+  # $_ = marc8_to_utf8($_) if $_ !~ /^\d{5}... a/;
   if (/^\d{5}.[vxy]/) {
     my $mfhd = MARC::Record->new_from_usmarc($_);
     my $hid = $mfhd->field('001')->data();
@@ -36,6 +40,11 @@ while (<MF>) {
         $_->add_subfields('8', $hid);
       }
       $marc->insert_fields_ordered(@h852);
+      my @h876 = $mfhd->field('876');
+      foreach (@h876) {
+        $_->add_subfields('9', $hid);
+      }
+      $marc->insert_fields_ordered(@h876);
     }
   } else {
     $c++;
