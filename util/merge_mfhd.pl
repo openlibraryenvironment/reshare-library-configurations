@@ -40,11 +40,18 @@ while (<MF>) {
         $_->add_subfields('8', $hid);
       }
       $marc->insert_fields_ordered(@h852);
+
       my @h876 = $mfhd->field('876');
       foreach (@h876) {
         $_->add_subfields('9', $hid);
       }
       $marc->insert_fields_ordered(@h876);
+
+      my @h866 = $mfhd->field('866');
+      foreach (@h866) {
+        $_->add_subfields('9', $hid);
+      }
+      $marc->insert_fields_ordered(@h866);
     }
   } else {
     $c++;
