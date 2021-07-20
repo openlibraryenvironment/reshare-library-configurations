@@ -5,14 +5,14 @@
         <id>344201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>WVU - OAI-PMH to FOLIO Inventory</name>
+        <name>WVU - MARC21 to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
             <id>344401</id>
             <position>1</position>
             <transformation>344201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>301301</id> <!-- OAI20-MARC21 to Instance XML -->
+                <id>301303</id> <!-- MARC21 to Instance XML -->
             </step>
         </stepAssociations>
         <stepAssociations>
