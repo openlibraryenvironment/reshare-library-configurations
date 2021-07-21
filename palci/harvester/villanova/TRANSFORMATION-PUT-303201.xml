@@ -28,7 +28,7 @@
             <position>3</position>
             <transformation>303201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>303302</id> <!-- Villanova library codes -->
+                <id>303302</id> <!-- Granular library codes, Villanova -->
             </step>
         </stepAssociations>
         <stepAssociations>
@@ -37,7 +37,7 @@
             <transformation>303201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
                 <id>301302</id> <!-- XML to JSON -->
-            </step>    
+            </step>
         </stepAssociations>
     </basicTransformation>
 </transformation>
