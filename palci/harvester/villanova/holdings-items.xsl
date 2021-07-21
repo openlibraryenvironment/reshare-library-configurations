@@ -55,10 +55,12 @@
                 </xsl:choose>
               </illPolicyId>
               <callNumber><xsl:value-of select="$callno"/></callNumber>
-              <xsl:variable name="ctype" select="./marc:subfield[@code='w']"/>
+              <xsl:variable name="ctype" select="./@ind1"/>
               <callNumberTypeId>
                 <xsl:choose>
-                  <xsl:when test="$ctype='LC'">95467209-6d7b-468b-94df-0f5d7ad2747d</xsl:when>
+                  <xsl:when test="$ctype='0'">95467209-6d7b-468b-94df-0f5d7ad2747d</xsl:when> <!-- LC -->
+                  <xsl:when test="$ctype='1'">03dd64d0-5626-4ecd-8ece-4531e0069f35</xsl:when> <!-- DDC -->
+                  <xsl:when test="$ctype='3'">fc388041-6cd0-4806-8a74-ebe3b9ab4c6e</xsl:when> <!-- Sudoc -->
                   <xsl:otherwise>6caca63e-5651-4db6-9247-3205156e9699</xsl:otherwise>
                 </xsl:choose>
               </callNumberTypeId>
