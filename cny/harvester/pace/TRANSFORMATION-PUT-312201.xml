@@ -5,14 +5,14 @@
         <id>312201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>Pace - OAI-PMH to FOLIO Inventory</name>
+        <name>Pace - III to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
             <id>312401</id>
             <position>1</position>
             <transformation>312201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>301304</id> <!-- OAI20-MARC21 to Instance XML -->
+                <id>301304</id> <!-- III to Instance XML -->
             </step>
         </stepAssociations>
         <stepAssociations>

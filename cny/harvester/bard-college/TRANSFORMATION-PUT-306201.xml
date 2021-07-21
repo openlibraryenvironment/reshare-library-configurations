@@ -5,14 +5,14 @@
         <id>306201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>Bard - OAI-PMH to FOLIO Inventory</name>
+        <name>Bard - III to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
-            <id>301304</id>
+            <id>306401</id>
             <position>1</position>
             <transformation>306201</transformation>
             <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
-                <id>301304</id>
+                <id>301304</id> <!-- III to instance -->
             </step>
         </stepAssociations>
         <stepAssociations>
