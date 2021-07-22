@@ -5,6 +5,9 @@
 # The output will be encoded in UTF8, so it is a good idea to convert
 # the input MARC collection to UTF8 first (use the -u option to do this).
 
+# This script will run the gzip command on the finished file using the -z option
+
+
 # NOTE: You must have yaz installed to run the -u option.  If so, yaz-marcdump will 
 # handle the conversion from marc8 to utf8.
 
@@ -18,16 +21,28 @@ use warnings;
 use MARC::File::XML ( BinaryEncoding => 'utf8', RecordFormat => 'MARC21' );
 
 my $convert_flag = 0;
-foreach (@ARGV) {
+my $zip_flag = 0;
+my $yaz_flag = 0;
+for (my $x = 0; $x < @ARGV; $x++) {
+  my $arg = $ARGV[$x];
   my $i = 0;
-  if (/-u/) {
+  if ($arg =~ /^-(u|z|y)$/) {
     splice(@ARGV, $i, 1);
-    $convert_flag = 1;
+    $x--;
+    if ($arg =~ /u/) {
+      $convert_flag = 1;
+    }
+    if ($arg =~ /z/) {
+      $zip_flag = 1;
+    }
+    if ($arg =~ /y/) {
+      $yaz_flag = 1;
+    }
     $i++;
   }
 }
 
-my $mrcfile = shift or die "Usage: ./merge_mfhd.pl [-u (convert to utf8)] <mrc_file>\n";
+my $mrcfile = shift or die "Usage: ./merge_mfhd.pl [OPTIONS: -u (convert to utf8), -z (gzip output file)] <mrc_file>\n";
 if (! -e $mrcfile) {
   die "Can't find MARC file at $mrcfile\n";
 }
@@ -44,10 +59,6 @@ if ($convert_flag) {
   `$cmd`;
   $mrcfile = $ufile;
 }
-
-# my $savefile = "$workdir/merged/${fname}-with-holdings.mrc";
-# unlink $savefile;
-# open OUT, ">", $savefile;
 
 my $xmlfile = "$workdir/merged/${fname}-with-holdings.xml";
 unlink $xmlfile;
@@ -94,7 +105,6 @@ while (<MF>) {
   } else {
     $c++;
     if ($marc) {
-      # print OUT $marc->as_usmarc();
       $file->write($marc);
     }
     $marc = MARC::Record->new_from_usmarc($_);
@@ -103,7 +113,17 @@ while (<MF>) {
     $hc = 0;
   }
   if (eof (MF)) { 
-    # print OUT $marc->as_usmarc();
     $file->write($marc);
   }
 }
+
+if ($zip_flag) {
+  print "----------\n";
+  print "Zipping $xmlfile with gzip\n";
+  print "(This may take awhile...)\n";
+  my $cmd = "gzip $xmlfile";
+  `$cmd`;
+  print "Done zipping...\n"
+}
+
+print "----------\nFinished! $c record(s) created.\n";
