@@ -1,19 +1,49 @@
 #!/usr/bin/perl
 
-# This script was specifically written to handle Voyager holdings and items
-# -- it will probley work for other Bib/MFHD collections...
+# This script will merge MFHD records with its associated Bib record.
+# Since the holdings may be rather large, this script writes MARC XML.
+# The output will be encoded in UTF8, so it is a good idea to convert
+# the input MARC collection to UTF8 first (use the -u option to do this).
+
+# NOTE: You must have yaz installed to run the -u option.  If so, yaz-marcdump will 
+# handle the conversion from marc8 to utf8.
+
+my $holdings_limit = 25;
+my $items_limit = 100;
 
 use MARC::Record;
 use File::Basename;
 use strict;
 use warnings;
-use MARC::File::XML ( BinaryEncoding => 'utf8', RecordFormat => 'UNIMARC' );
+use MARC::File::XML ( BinaryEncoding => 'utf8', RecordFormat => 'MARC21' );
 
-my $mrcfile = shift or die "Usage: ./merg_mfhd.pl <mrc_file>";
+my $convert_flag = 0;
+foreach (@ARGV) {
+  my $i = 0;
+  if (/-u/) {
+    splice(@ARGV, $i, 1);
+    $convert_flag = 1;
+    $i++;
+  }
+}
+
+my $mrcfile = shift or die "Usage: ./merge_mfhd.pl [-u (convert to utf8)] <mrc_file>\n";
+if (! -e $mrcfile) {
+  die "Can't find MARC file at $mrcfile\n";
+}
 
 my $workdir = dirname($mrcfile);
 my $fname = basename($mrcfile, '.marc', '.mrc', '.marc', '.bin', '.out');
 mkdir("$workdir/merged");
+
+if ($convert_flag) {
+  $fname .= '-utf8';
+  my $ufile = "$workdir/$fname.mrc";
+  my $cmd = "yaz-marcdump -f marc8 -t utf8 -o marc -l 9=97 $mrcfile > $ufile";
+  print "Running command: $cmd\n(This may take awhile...)\n";
+  `$cmd`;
+  $mrcfile = $ufile;
+}
 
 # my $savefile = "$workdir/merged/${fname}-with-holdings.mrc";
 # unlink $savefile;
@@ -24,7 +54,7 @@ unlink $xmlfile;
 my $file = MARC::File::XML->out($xmlfile);
 
 $/ = "\x1D";
-open MF, $mrcfile;
+open MF, $mrcfile or die "There was a problem opening $mrcfile!\n";
 
 binmode(STDOUT, ':utf8');
 
@@ -38,7 +68,7 @@ while (<MF>) {
     my $mfhd = MARC::Record->new_from_usmarc($_);
     my $hid = $mfhd->field('001')->data();
     my $match = $mfhd->field('004')->data();
-    if ($match eq $id and $hc < 50) {
+    if ($match eq $id and $hc < $holdings_limit) {
       $hc++;
       print "  [$hc] Adding holdings $hid to $id\n";
       my @h852 = $mfhd->field('852');
@@ -48,14 +78,14 @@ while (<MF>) {
       $marc->insert_fields_ordered(@h852);
 
       my @h876 = $mfhd->field('876');
-      @h876 = splice(@h876, 0, 100);
+      @h876 = splice(@h876, 0, $items_limit);
       foreach (@h876) {
         $_->add_subfields('9', $hid);
       }
       $marc->insert_fields_ordered(@h876);
 
       my @h866 = $mfhd->field('866');
-      @h866 = splice(@h866, 0, 100);
+      @h866 = splice(@h866, 0, $items_limit);
       foreach (@h866) {
         $_->add_subfields('9', $hid);
       }
