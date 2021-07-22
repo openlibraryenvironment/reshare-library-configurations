@@ -7,7 +7,6 @@
 
 # This script will run the gzip command on the finished file using the -z option
 
-
 # NOTE: You must have yaz installed to run the -u option.  If so, yaz-marcdump will 
 # handle the conversion from marc8 to utf8.
 
@@ -18,16 +17,15 @@ use MARC::Record;
 use File::Basename;
 use strict;
 use warnings;
-use MARC::File::XML ( BinaryEncoding => 'utf8', RecordFormat => 'MARC21' );
+use MARC::File::XML (BinaryEncoding => 'utf8', RecordFormat => 'MARC21');
 
 my $convert_flag = 0;
 my $zip_flag = 0;
 my $yaz_flag = 0;
 for (my $x = 0; $x < @ARGV; $x++) {
   my $arg = $ARGV[$x];
-  my $i = 0;
-  if ($arg =~ /^-(u|z|y)$/) {
-    splice(@ARGV, $i, 1);
+  if ($arg =~ /^-(u|z)$/) {
+    splice(@ARGV, $x, 1);
     $x--;
     if ($arg =~ /u/) {
       $convert_flag = 1;
@@ -35,10 +33,6 @@ for (my $x = 0; $x < @ARGV; $x++) {
     if ($arg =~ /z/) {
       $zip_flag = 1;
     }
-    if ($arg =~ /y/) {
-      $yaz_flag = 1;
-    }
-    $i++;
   }
 }
 
@@ -75,6 +69,7 @@ my $c = 0;
 my $hc = 0;
 my $done = 0;
 while (<MF>) {
+
   if (/^\d{5}.[vxy]/) {
     my $mfhd = MARC::Record->new_from_usmarc($_);
     my $hid = $mfhd->field('001')->data();
