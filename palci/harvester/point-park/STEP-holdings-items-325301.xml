@@ -1,76 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transformationStep uri="http://harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com/harvester/records/steps/325301">
-    <XmlTransformStep>
-        <description>Holdings and Items, Point Park</description>
-        <enabled>true</enabled>
-        <inputFormat>XML</inputFormat>
-        <name>Holdings and Items, Point Park</name>
-        <outputFormat>XML</outputFormat>
-        <script>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+<transformationStep>
+  <id>325301</id>
+  <XmlTransformStep>
+    <id>325301</id>
+    <description>Holdings and Items, Point Park</description>
+    <enabled>true</enabled>
+    <inputFormat>XML</inputFormat>
+    <name>Holdings and Items, Point Park</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xD;
 &lt;xsl:stylesheet&#xD;
-  version="1.0"&#xD;
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&#xD;
-  xmlns:marc="http://www.loc.gov/MARC21/slim"&#xD;
-  xmlns:oai20="http://www.openarchives.org/OAI/2.0/"&#xD;
+  version=&quot;1.0&quot;&#xD;
+  xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&#xD;
+  xmlns:marc=&quot;http://www.loc.gov/MARC21/slim&quot;&#xD;
+  xmlns:oai20=&quot;http://www.openarchives.org/OAI/2.0/&quot;&#xD;
   &gt;&#xD;
 &#xD;
-  &lt;xsl:strip-space elements="*"/&gt;&#xD;
-  &lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
+  &lt;xsl:strip-space elements=&quot;*&quot;/&gt;&#xD;
+  &lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
 &#xD;
-  &lt;xsl:template match="collection"&gt;&#xD;
+  &lt;xsl:template match=&quot;collection&quot;&gt;&#xD;
     &lt;collection&gt;&#xD;
         &lt;xsl:apply-templates/&gt;&#xD;
     &lt;/collection&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
-  &lt;xsl:template match="record"&gt;&#xD;
+  &lt;xsl:template match=&quot;record&quot;&gt;&#xD;
     &lt;record&gt;&#xD;
-        &lt;xsl:for-each select="@* | node()"&gt;&#xD;
-            &lt;xsl:copy-of select="."/&gt;&#xD;
+        &lt;xsl:for-each select=&quot;@* | node()&quot;&gt;&#xD;
+            &lt;xsl:copy-of select=&quot;.&quot;/&gt;&#xD;
         &lt;/xsl:for-each&gt;&#xD;
         &lt;xsl:apply-templates/&gt;&#xD;
     &lt;/record&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
-  &lt;xsl:template match="//marc:record"&gt;&#xD;
+  &lt;xsl:template match=&quot;//marc:record&quot;&gt;&#xD;
     &lt;holdingsRecords&gt;&#xD;
       &lt;arr&gt;&#xD;
         &lt;xsl:choose&gt;&#xD;
-          &lt;xsl:when test="marc:datafield[@tag='952']"&gt;&#xD;
-            &lt;xsl:for-each select="marc:datafield[@tag='952']"&gt;&#xD;
-              &lt;xsl:sort select="./marc:subfield[@code='c']"/&gt;&#xD;
-              &lt;xsl:variable name="preloc"&gt;&#xD;
-                &lt;xsl:value-of select="./preceding-sibling::marc:datafield[@tag='952'][1]/marc:subfield[@code='c']"/&gt;&#xD;
+          &lt;xsl:when test=&quot;marc:datafield[@tag=&#39;952&#39;]&quot;&gt;&#xD;
+            &lt;xsl:for-each select=&quot;marc:datafield[@tag=&#39;952&#39;]&quot;&gt;&#xD;
+              &lt;xsl:sort select=&quot;./marc:subfield[@code=&#39;c&#39;]&quot;/&gt;&#xD;
+              &lt;xsl:variable name=&quot;preloc&quot;&gt;&#xD;
+                &lt;xsl:value-of select=&quot;./preceding-sibling::marc:datafield[@tag=&#39;952&#39;][1]/marc:subfield[@code=&#39;c&#39;]&quot;/&gt;&#xD;
               &lt;/xsl:variable&gt;&#xD;
-              &lt;xsl:variable name="iid" select="./marc:subfield[@code='9']"/&gt;&#xD;
-              &lt;xsl:variable name="loc-clean" select="./marc:subfield[@code='c']"/&gt;&#xD;
-              &lt;xsl:if test="not($loc-clean=$preloc)"&gt;&#xD;
+              &lt;xsl:variable name=&quot;iid&quot; select=&quot;./marc:subfield[@code=&#39;9&#39;]&quot;/&gt;&#xD;
+              &lt;xsl:variable name=&quot;loc-clean&quot; select=&quot;./marc:subfield[@code=&#39;c&#39;]&quot;/&gt;&#xD;
+              &lt;xsl:if test=&quot;not($loc-clean=$preloc)&quot;&gt;&#xD;
                 &lt;i&gt;&#xD;
-                  &lt;permanentLocationIdHere&gt;&lt;xsl:value-of select="$loc-clean"/&gt;&lt;/permanentLocationIdHere&gt;&#xD;
+                  &lt;permanentLocationIdHere&gt;&lt;xsl:value-of select=&quot;$loc-clean&quot;/&gt;&lt;/permanentLocationIdHere&gt;&#xD;
                   &lt;illPolicyId&gt;&#xD;
                     &lt;xsl:choose&gt;&#xD;
-                      &lt;xsl:when test="$loc-clean='CHILDRENS'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test="$loc-clean='MAIN'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test="$loc-clean='OVERSIZED'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test="$loc-clean='SMAIN'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test="$loc-clean='SOVERSIZED'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test="$loc-clean='AUDIOBOOK'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test="$loc-clean='SAUDIOBOOK'"&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc-clean=&#39;CHILDRENS&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc-clean=&#39;MAIN&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc-clean=&#39;OVERSIZED&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc-clean=&#39;SMAIN&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc-clean=&#39;SOVERSIZED&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc-clean=&#39;AUDIOBOOK&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc-clean=&#39;SAUDIOBOOK&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
                       &lt;xsl:otherwise&gt;b0f97013-87f5-4bab-87f2-ac4a5191b489&lt;/xsl:otherwise&gt; &lt;!-- Will not lend --&gt;&#xD;
                     &lt;/xsl:choose&gt;&#xD;
                   &lt;/illPolicyId&gt;&#xD;
-                  &lt;callNumber&gt;&lt;xsl:value-of select="./marc:subfield[@code='o']"/&gt;&lt;/callNumber&gt;&#xD;
+                  &lt;callNumber&gt;&lt;xsl:value-of select=&quot;./marc:subfield[@code=&#39;o&#39;]&quot;/&gt;&lt;/callNumber&gt;&#xD;
                   &lt;callNumberTypeId&gt;&#xD;
                     &lt;xsl:choose&gt;&#xD;
-                      &lt;xsl:when test="./marc:subfield[@code='2']='lcc'"&gt;95467209-6d7b-468b-94df-0f5d7ad2747d&lt;/xsl:when&gt; &lt;!-- LC --&gt;&#xD;
-                      &lt;xsl:when test="./marc:subfield[@code='2']='ddc'"&gt;03dd64d0-5626-4ecd-8ece-4531e0069f35&lt;/xsl:when&gt; &lt;!-- Dewey --&gt;&#xD;
+                      &lt;xsl:when test=&quot;./marc:subfield[@code=&#39;2&#39;]=&#39;lcc&#39;&quot;&gt;95467209-6d7b-468b-94df-0f5d7ad2747d&lt;/xsl:when&gt; &lt;!-- LC --&gt;&#xD;
+                      &lt;xsl:when test=&quot;./marc:subfield[@code=&#39;2&#39;]=&#39;ddc&#39;&quot;&gt;03dd64d0-5626-4ecd-8ece-4531e0069f35&lt;/xsl:when&gt; &lt;!-- Dewey --&gt;&#xD;
                       &lt;xsl:otherwise&gt;6caca63e-5651-4db6-9247-3205156e9699&lt;/xsl:otherwise&gt; &lt;!-- Other --&gt;&#xD;
                     &lt;/xsl:choose&gt;&#xD;
                   &lt;/callNumberTypeId&gt;&#xD;
                   &lt;notes&gt;&#xD;
                     &lt;arr&gt;&#xD;
                       &lt;i&gt;&#xD;
-                        &lt;note&gt;&lt;xsl:value-of select="concat('Location code: ', $loc-clean)"/&gt;&lt;/note&gt;&#xD;
+                        &lt;note&gt;&lt;xsl:value-of select=&quot;concat(&#39;Location code: &#39;, $loc-clean)&quot;/&gt;&lt;/note&gt;&#xD;
                         &lt;holdingsNoteTypeId&gt;b160f13a-ddba-4053-b9c4-60ec5ea45d56&lt;/holdingsNoteTypeId&gt;&#xD;
                         &lt;staffOnly&gt;true&lt;/staffOnly&gt;&#xD;
                       &lt;/i&gt;&#xD;
@@ -78,29 +80,29 @@
                   &lt;/notes&gt;&#xD;
                   &lt;items&gt;&#xD;
                     &lt;arr&gt;&#xD;
-                    &lt;xsl:for-each select="../marc:datafield[@tag='952']/marc:subfield[@code='c'][.=$loc-clean]/.."&gt;&#xD;
+                    &lt;xsl:for-each select=&quot;../marc:datafield[@tag=&#39;952&#39;]/marc:subfield[@code=&#39;c&#39;][.=$loc-clean]/..&quot;&gt;&#xD;
                       &lt;i&gt;&#xD;
-                        &lt;itemIdentifier&gt;&lt;xsl:value-of select="./marc:subfield[@code='9']"/&gt;&lt;/itemIdentifier&gt;&#xD;
-                        &lt;barcode&gt;&lt;xsl:value-of select="./marc:subfield[@code='p']"/&gt;&lt;/barcode&gt;&#xD;
+                        &lt;itemIdentifier&gt;&lt;xsl:value-of select=&quot;./marc:subfield[@code=&#39;9&#39;]&quot;/&gt;&lt;/itemIdentifier&gt;&#xD;
+                        &lt;barcode&gt;&lt;xsl:value-of select=&quot;./marc:subfield[@code=&#39;p&#39;]&quot;/&gt;&lt;/barcode&gt;&#xD;
                         &lt;status&gt;&lt;name&gt;Unknown&lt;/name&gt;&lt;/status&gt;&#xD;
                         &lt;permanentLoanTypeId&gt;2b94c631-fca9-4892-a730-03ee529ffe27&lt;/permanentLoanTypeId&gt; &lt;!-- Can circulate --&gt;&#xD;
                         &lt;materialTypeId&gt;&#xD;
-                          &lt;!-- Mappings to ReShare specific material types, taken from OCLC table "Type of Record" --&gt;&#xD;
-                          &lt;!-- I got these codes for Koha's advanced search form --&gt;&#xD;
-                          &lt;xsl:variable name="mt" select="./marc:subfield[@code='y']"/&gt; &#xD;
+                          &lt;!-- Mappings to ReShare specific material types, taken from OCLC table &quot;Type of Record&quot; --&gt;&#xD;
+                          &lt;!-- I got these codes for Koha&#39;s advanced search form --&gt;&#xD;
+                          &lt;xsl:variable name=&quot;mt&quot; select=&quot;./marc:subfield[@code=&#39;y&#39;]&quot;/&gt; &#xD;
                           &lt;xsl:choose&gt;&#xD;
-                          &lt;xsl:when test="$mt='BOOK' or $mt='LIBRETTO' or $mt='PLAY' or $mt='REFBOOK' or $mt='STUDYGUIDE' or $mt='THESIS'"&gt;e65ed344-a691-4f8f-8446-3c0a346c6882&lt;/xsl:when&gt; &lt;!-- BKS --&gt;&#xD;
-                          &lt;xsl:when test="$mt='PERIODICAL' or $mt='NEWSPAPER'"&gt;191da404-dec2-4977-9770-1443d9d6c238&lt;/xsl:when&gt; &lt;!-- CNR --&gt;&#xD;
-                          &lt;xsl:when test="$mt='MUSICSEL'"&gt;e5578a7e-49b9-4859-a86a-21b812215b4f&lt;/xsl:when&gt; &lt;!-- SCO --&gt;&#xD;
-                          &lt;xsl:when test="$mt='AUDIOBOOK' or $mt='CD'"&gt;d8dc9046-a9f4-4789-adf5-678fd855b016&lt;/xsl:when&gt; &lt;!-- REC --&gt;&#xD;
-                          &lt;xsl:when test="$mt='DVD' or $mt='VHS'"&gt;14f1845d-2fad-4091-80c8-48614eaea40b&lt;/xsl:when&gt; &lt;!-- VIS --&gt;&#xD;
-                          &lt;xsl:when test="starts-with($mt, 'CRS') or $mt='LAPTOP' or $mt='MSPROJ' or $mt='MICROFILM' or $mt='MONOLOGUE' or $mt='VIDEOGAME'"&gt;04858422-c46f-4041-94fc-f5c5a6b98319&lt;/xsl:when&gt; &lt;!-- Other --&gt;&#xD;
-                          &lt;xsl:when test="$mt='XXXX'"&gt;22cb5b81-2056-46ed-8050-c5d8f01caf90&lt;/xsl:when&gt; &lt;!-- COM --&gt;&#xD;
-                          &lt;xsl:when test="$mt='XXXX'"&gt;9f2c8d85-97e6-4722-a67c-bb51ccfb7781&lt;/xsl:when&gt; &lt;!-- MAP --&gt;&#xD;
+                          &lt;xsl:when test=&quot;$mt=&#39;BOOK&#39; or $mt=&#39;LIBRETTO&#39; or $mt=&#39;PLAY&#39; or $mt=&#39;REFBOOK&#39; or $mt=&#39;STUDYGUIDE&#39; or $mt=&#39;THESIS&#39;&quot;&gt;e65ed344-a691-4f8f-8446-3c0a346c6882&lt;/xsl:when&gt; &lt;!-- BKS --&gt;&#xD;
+                          &lt;xsl:when test=&quot;$mt=&#39;PERIODICAL&#39; or $mt=&#39;NEWSPAPER&#39;&quot;&gt;191da404-dec2-4977-9770-1443d9d6c238&lt;/xsl:when&gt; &lt;!-- CNR --&gt;&#xD;
+                          &lt;xsl:when test=&quot;$mt=&#39;MUSICSEL&#39;&quot;&gt;e5578a7e-49b9-4859-a86a-21b812215b4f&lt;/xsl:when&gt; &lt;!-- SCO --&gt;&#xD;
+                          &lt;xsl:when test=&quot;$mt=&#39;AUDIOBOOK&#39; or $mt=&#39;CD&#39;&quot;&gt;d8dc9046-a9f4-4789-adf5-678fd855b016&lt;/xsl:when&gt; &lt;!-- REC --&gt;&#xD;
+                          &lt;xsl:when test=&quot;$mt=&#39;DVD&#39; or $mt=&#39;VHS&#39;&quot;&gt;14f1845d-2fad-4091-80c8-48614eaea40b&lt;/xsl:when&gt; &lt;!-- VIS --&gt;&#xD;
+                          &lt;xsl:when test=&quot;starts-with($mt, &#39;CRS&#39;) or $mt=&#39;LAPTOP&#39; or $mt=&#39;MSPROJ&#39; or $mt=&#39;MICROFILM&#39; or $mt=&#39;MONOLOGUE&#39; or $mt=&#39;VIDEOGAME&#39;&quot;&gt;04858422-c46f-4041-94fc-f5c5a6b98319&lt;/xsl:when&gt; &lt;!-- Other --&gt;&#xD;
+                          &lt;xsl:when test=&quot;$mt=&#39;XXXX&#39;&quot;&gt;22cb5b81-2056-46ed-8050-c5d8f01caf90&lt;/xsl:when&gt; &lt;!-- COM --&gt;&#xD;
+                          &lt;xsl:when test=&quot;$mt=&#39;XXXX&#39;&quot;&gt;9f2c8d85-97e6-4722-a67c-bb51ccfb7781&lt;/xsl:when&gt; &lt;!-- MAP --&gt;&#xD;
                           &lt;xsl:otherwise&gt;f6dd0721-5d4a-439e-9205-c71aef39d15b&lt;/xsl:otherwise&gt; &lt;!-- Unmapped --&gt;&#xD;
                           &lt;/xsl:choose&gt;&#xD;
                         &lt;/materialTypeId&gt;&#xD;
-                        &lt;enumeration&gt;&lt;xsl:value-of select="./marc:subfield[@code='h']"/&gt;&lt;/enumeration&gt;&#xD;
+                        &lt;enumeration&gt;&lt;xsl:value-of select=&quot;./marc:subfield[@code=&#39;h&#39;]&quot;/&gt;&lt;/enumeration&gt;&#xD;
                       &lt;/i&gt;&#xD;
                     &lt;/xsl:for-each&gt;&#xD;
                     &lt;/arr&gt;&#xD;
@@ -118,12 +120,10 @@
       &lt;/arr&gt; &#xD;
      &lt;/holdingsRecords&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
-  &lt;xsl:template match="text()"/&gt;&#xD;
+  &lt;xsl:template match=&quot;text()&quot;/&gt;&#xD;
 &lt;/xsl:stylesheet&gt;&#xD;
 </script>
-        <id>325301</id>
-        <testData></testData>
-        <testOutput></testOutput>
-    </XmlTransformStep>
-    <id>325301</id>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
 </transformationStep>

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transformationStep uri="http://harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com/harvester/records/steps/325302">
-    <XmlTransformStep>
-        <description>Maps locations, record identifier type for Point Park</description>
-        <inputFormat>XML</inputFormat>
-        <name>Library codes, Point Park</name>
-        <outputFormat>XML</outputFormat>
-        <script>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;&#xD;
-&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;&#xD;
-&lt;xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/&gt;&#xD;
-  &lt;xsl:template match="@* | node()"&gt;&#xD;
+<transformationStep>
+  <id>325302</id>
+  <XmlTransformStep>
+    <id>325302</id>
+    <description>Maps locations, record identifier type for Point Park</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Point Park</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
     &lt;xsl:copy&gt;&#xD;
-      &lt;xsl:apply-templates select="@* | node()"/&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
     &lt;/xsl:copy&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
@@ -19,69 +21,67 @@
        it originated from in context of a shared index setup where the Instance&#xD;
        represents bib records from multiple libraries.&#xD;
   --&gt;&#xD;
-  &lt;xsl:template match="//identifierTypeIdHere"&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
     &lt;identifierTypeId&gt;09001ff6-cf33-5488-976b-6b1b3e561764&lt;/identifierTypeId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
   &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
-  &lt;xsl:template match="//permanentLocationIdHere"&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
     &lt;permanentLocationId&gt;&#xD;
       &lt;xsl:choose&gt;&#xD;
-        &lt;xsl:when test=".='CHILDRENS'"&gt;1e91d15c-1552-512e-971e-61e7a8ff4207&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='MAIN'"&gt;146a6314-7777-5716-b2fe-7357dc57d05f&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='OVERSIZED'"&gt;84b3f377-5c8f-5b2c-95e1-f32bb7913c59&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='SMAIN'"&gt;f1edc2d6-d0c9-5d70-86c8-aff0273c081c&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='SOVERSIZED'"&gt;55ba7fb3-c88d-5861-86c7-14edb73cef22&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='AUDIOBOOK'"&gt;8522bc0e-3a71-5870-a5fa-0706ebc1d72f&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='SAUDIOBOOK'"&gt;68ec27c7-97fd-5578-929b-7e7ab2c7278f&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='ARCHIVES'"&gt;fdc8960b-0305-58e4-b9f1-b0db4ffb1b95&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='CALCULATOR'"&gt;a18d025d-0d09-5ba4-b5db-ac6d67bea697&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='CINEMADVD'"&gt;e9687c96-9c44-5e4b-b18d-d325f3c37568&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='CRS'"&gt;347e37cf-9735-5787-80f5-659f2a7e0b06&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='DIALECT'"&gt;20cd1df7-7f16-5ec4-9859-e741cdff1eb5&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='DISPLAYCASE'"&gt;15936cff-58c0-5922-8d19-dc2dc2e2c602&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='DVD'"&gt;9d345ed0-4c17-5d8a-bbf6-05a78c7770e8&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='HDMI'"&gt;a7af7acb-67a8-5458-a572-c1f58cb6e3c8&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='HEADPHONE'"&gt;de3bf689-8dd0-5a1e-a587-82efc5d60e7b&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='ILL'"&gt;48779b68-ed1b-5588-994b-228d2db05cab&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='LAPTOP'"&gt;ab4da57f-d04e-546b-a62b-8b16911087eb&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='LIBRETTO'"&gt;6e10b58f-dd1c-56ec-95c0-47e6c67951ad&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='MEDIASERV'"&gt;46e514da-47c2-5254-beec-953650d373e7&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='MICROFILM'"&gt;68b87e67-5604-5ca1-94fb-d074a1f55c00&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='MONOLOGUE'"&gt;399a5a26-a796-5c5e-b65a-e3a5a2700138&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='MUSIC'"&gt;70d33507-370d-5a01-9feb-65c74e02724a&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='NEWBOOK'"&gt;7623b113-b79b-5997-bdb9-60e155eb72d3&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='PERIODICALS'"&gt;95b4ac53-37c5-5397-8767-272aeafaba83&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='PEZB'"&gt;85ad8f66-d738-5ae2-b67b-415bdccf31c3&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='PLAY'"&gt;79134c02-eb46-5fd8-ab9a-fb2d0f2f7fd2&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='POP'"&gt;26162b60-f71f-585c-8c1a-55817bb4577b&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='PORTCHRG'"&gt;392e7305-5a5c-5107-b9c9-0d6feb4a8cd8&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='REF'"&gt;4dee614f-0515-53e4-b1f9-5628363547df&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='ROOM'"&gt;48d584b9-7b9f-58d4-9fae-01be00a2fb63&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='SCINEMADVD'"&gt;4da5836c-8a0b-585c-8069-d76958290f12&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='SDVD'"&gt;23a19a7d-2ab9-5f4d-962c-1e94174c4f3b&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='SPERIODICALS'"&gt;fb296bfc-929a-5c31-8319-9140c6eb348f&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='SPLAY'"&gt;edd9fb5c-1691-5e25-be38-048b4854cd9c&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='STHESIS'"&gt;8f0aa855-739f-5e2e-b33a-6b11b32c514f&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='STUDYGUIDE'"&gt;3ec3d44c-8026-587f-a471-a4e29190b697&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='TECHSERV'"&gt;7e7332f9-96ea-5a52-9290-0eb1689f399d&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='TEXTBOOK'"&gt;96a2ff05-67cf-52a4-b23c-434109e6f9ad&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:when test=".='VIDEOGAMES'"&gt;5beaed2c-5681-5817-970e-ab5cb9e76e9c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;CHILDRENS&#39;&quot;&gt;1e91d15c-1552-512e-971e-61e7a8ff4207&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MAIN&#39;&quot;&gt;146a6314-7777-5716-b2fe-7357dc57d05f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OVERSIZED&#39;&quot;&gt;84b3f377-5c8f-5b2c-95e1-f32bb7913c59&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SMAIN&#39;&quot;&gt;f1edc2d6-d0c9-5d70-86c8-aff0273c081c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SOVERSIZED&#39;&quot;&gt;55ba7fb3-c88d-5861-86c7-14edb73cef22&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;AUDIOBOOK&#39;&quot;&gt;8522bc0e-3a71-5870-a5fa-0706ebc1d72f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SAUDIOBOOK&#39;&quot;&gt;68ec27c7-97fd-5578-929b-7e7ab2c7278f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ARCHIVES&#39;&quot;&gt;fdc8960b-0305-58e4-b9f1-b0db4ffb1b95&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;CALCULATOR&#39;&quot;&gt;a18d025d-0d09-5ba4-b5db-ac6d67bea697&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;CINEMADVD&#39;&quot;&gt;e9687c96-9c44-5e4b-b18d-d325f3c37568&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;CRS&#39;&quot;&gt;347e37cf-9735-5787-80f5-659f2a7e0b06&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;DIALECT&#39;&quot;&gt;20cd1df7-7f16-5ec4-9859-e741cdff1eb5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;DISPLAYCASE&#39;&quot;&gt;15936cff-58c0-5922-8d19-dc2dc2e2c602&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;DVD&#39;&quot;&gt;9d345ed0-4c17-5d8a-bbf6-05a78c7770e8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HDMI&#39;&quot;&gt;a7af7acb-67a8-5458-a572-c1f58cb6e3c8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HEADPHONE&#39;&quot;&gt;de3bf689-8dd0-5a1e-a587-82efc5d60e7b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ILL&#39;&quot;&gt;48779b68-ed1b-5588-994b-228d2db05cab&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LAPTOP&#39;&quot;&gt;ab4da57f-d04e-546b-a62b-8b16911087eb&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LIBRETTO&#39;&quot;&gt;6e10b58f-dd1c-56ec-95c0-47e6c67951ad&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MEDIASERV&#39;&quot;&gt;46e514da-47c2-5254-beec-953650d373e7&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MICROFILM&#39;&quot;&gt;68b87e67-5604-5ca1-94fb-d074a1f55c00&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MONOLOGUE&#39;&quot;&gt;399a5a26-a796-5c5e-b65a-e3a5a2700138&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MUSIC&#39;&quot;&gt;70d33507-370d-5a01-9feb-65c74e02724a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;NEWBOOK&#39;&quot;&gt;7623b113-b79b-5997-bdb9-60e155eb72d3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PERIODICALS&#39;&quot;&gt;95b4ac53-37c5-5397-8767-272aeafaba83&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PEZB&#39;&quot;&gt;85ad8f66-d738-5ae2-b67b-415bdccf31c3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PLAY&#39;&quot;&gt;79134c02-eb46-5fd8-ab9a-fb2d0f2f7fd2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;POP&#39;&quot;&gt;26162b60-f71f-585c-8c1a-55817bb4577b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PORTCHRG&#39;&quot;&gt;392e7305-5a5c-5107-b9c9-0d6feb4a8cd8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;REF&#39;&quot;&gt;4dee614f-0515-53e4-b1f9-5628363547df&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ROOM&#39;&quot;&gt;48d584b9-7b9f-58d4-9fae-01be00a2fb63&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SCINEMADVD&#39;&quot;&gt;4da5836c-8a0b-585c-8069-d76958290f12&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SDVD&#39;&quot;&gt;23a19a7d-2ab9-5f4d-962c-1e94174c4f3b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SPERIODICALS&#39;&quot;&gt;fb296bfc-929a-5c31-8319-9140c6eb348f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SPLAY&#39;&quot;&gt;edd9fb5c-1691-5e25-be38-048b4854cd9c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;STHESIS&#39;&quot;&gt;8f0aa855-739f-5e2e-b33a-6b11b32c514f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;STUDYGUIDE&#39;&quot;&gt;3ec3d44c-8026-587f-a471-a4e29190b697&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TECHSERV&#39;&quot;&gt;7e7332f9-96ea-5a52-9290-0eb1689f399d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TEXTBOOK&#39;&quot;&gt;96a2ff05-67cf-52a4-b23c-434109e6f9ad&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;VIDEOGAMES&#39;&quot;&gt;5beaed2c-5681-5817-970e-ab5cb9e76e9c&lt;/xsl:when&gt;&#xD;
         &lt;xsl:otherwise&gt;9e196d9c-e240-5442-a762-9c6b365ccd36&lt;/xsl:otherwise&gt;&#xD;
       &lt;/xsl:choose&gt;&#xD;
     &lt;/permanentLocationId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
   &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
-  &lt;xsl:template match="//institutionIdHere"&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
      &lt;institutionId&gt;8c59e4db-9722-57d9-b0f6-c6a1393684c8&lt;/institutionId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
 &lt;/xsl:stylesheet&gt;&#xD;
 </script>
-        <id>325302</id>
-        <testData></testData>
-        <testOutput></testOutput>
-    </XmlTransformStep>
-    <id>325302</id>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
 </transformationStep>
