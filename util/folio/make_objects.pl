@@ -94,10 +94,10 @@ write_jsonl('03-campuses', $camp);
 foreach (sort keys %{ $libraries }) {
   my $libcode = $_;
   my $libid = uuid($libcode);
-  my $libname = $libraries->{$_};
+  my $libname = "$libraries->{$_}";
   my $lib = {
     id=>$libid,
-    name=>$libname,
+    name=>"$campname - $libname",
     code=>$libcode,
     campusId=>$campid
   };
