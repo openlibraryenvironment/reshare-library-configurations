@@ -3,13 +3,14 @@
     version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:marc21="http://www.openarchives.org/OAI/2.0/marc21/"
+    xmlns:marc="http://www.loc.gov/MARC21/slim"
     xmlns:oai20="http://www.openarchives.org/OAI/2.0/">
 
     <xsl:import href="map-relator-to-contributor-type.xsl"/>
     
     <xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/>
     <xsl:template match="/">
-        <collection>
+        <collection xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:oai20="http://www.openarchives.org/OAI/2.0/">
             <xsl:apply-templates />
         </collection>
     </xsl:template>
@@ -23,15 +24,38 @@
           <xsl:otherwise>  
             <!-- Store the original MARC record to be used by subsequent style sheets -->
             <original>
-              <record 
-                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+              <record xmlns="http://www.openarchives.org/OAI/2.0/" 
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                     xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
                 <xsl:copy-of select="//oai20:header"/>
                 <metadata>
-                    <record>
-                        <xsl:for-each select="//marc21:marc21/@* | //marc21:marc21/node()">
-                            <xsl:copy-of select="." />
+                    <record xmlns="http://www.loc.gov/MARC21/slim"
+                    xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+                        <xsl:for-each select="//marc21:marc21/@* | //marc21:marc21/*"> 
+                            <xsl:element name="{local-name()}">
+                                <xsl:for-each select="@*">
+                                    <xsl:attribute name="{local-name()}">
+                                        <xsl:value-of select="."/>
+                                    </xsl:attribute>
+                                </xsl:for-each>
+                                <xsl:choose>
+                                    <xsl:when test="local-name()='leader' or local-name()='controlfield'">
+                                        <xsl:value-of select="."/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:for-each select="*">
+                                            <xsl:element name="{local-name()}">
+                                                <xsl:for-each select="@*">
+                                                    <xsl:attribute name="{local-name()}">
+                                                        <xsl:value-of select="."/>
+                                                    </xsl:attribute>
+                                                </xsl:for-each>
+                                                <xsl:value-of select="."/>
+                                            </xsl:element>
+                                        </xsl:for-each>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:element>
                         </xsl:for-each>
                     </record>
                 </metadata>
@@ -41,8 +65,7 @@
           </xsl:otherwise>
         </xsl:choose>
       </record>
-    </xsl:template>
-
+    </xsl:template> 
 
     <!-- If this is an OAI-PMH deletion record -->
     <xsl:template match="//oai20:header[@status='deleted']">
