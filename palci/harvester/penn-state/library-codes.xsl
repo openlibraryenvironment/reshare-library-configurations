@@ -453,7 +453,6 @@
         <xsl:when test=".='UP-PAT PATTEE-W2'">f9587e42-d1a5-5698-bdf6-72bdf031a516</xsl:when>
         <xsl:when test=".='UP-PAT PATTEE-W2F'">746c785e-5520-527a-b7cb-bdaed94c92c9</xsl:when>
         <xsl:when test=".='UP-PAT PATTEE-W3'">9e7054df-a270-57dc-9436-aec5a7d169be</xsl:when>
-        <xsl:when test="starts-with(., 'UP-PAT')">7407e910-19ca-5694-9a4a-bc078f018b77</xsl:when> <!-- Unmapped (UP-PAT)-->
         <xsl:when test=".='WILKESBAR OVERSIZEWB'">360cf219-4edb-57e1-9881-8ba163859a26</xsl:when>
         <xsl:when test=".='WILKESBAR PENNSYLVAN'">5f6fa378-44d2-5bc4-9d27-112713336c56</xsl:when>
         <xsl:when test=".='WILKESBAR STACKS-AA'">a1e75321-5645-5d4a-b2e9-899f729b8889</xsl:when>
@@ -528,7 +527,8 @@
         <xsl:when test=".='YORK SWARTZ-MID'">aee03d97-ba92-5745-825d-1df0ee10aa99</xsl:when>
         <xsl:when test=".='YORK SWARTZ-PIC'">0b9954d6-724d-5e61-8c48-21ab30c7e5b2</xsl:when>
         <xsl:when test=".='YORK SWARTZ-YA'">be2ff83b-ee1a-5d1d-85a2-1276e527c0bd</xsl:when>
-        <xsl:otherwise>18c9a27a-0d95-5f7b-a58d-48281f16a28a</xsl:otherwise> <!-- Unmapped (YORK) -->
+        <xsl:when test="starts-with(., 'YORK')">18c9a27a-0d95-5f7b-a58d-48281f16a28a</xsl:when> <!-- Unmapped (YORK) -->
+        <xsl:otherwise>17407e910-19ca-5694-9a4a-bc078f018b77</xsl:otherwise> <!-- Unmapped (UP-PAT) -->
       </xsl:choose>
     </permanentLocationId>
   </xsl:template>
