@@ -80,8 +80,9 @@
     <xsl:template match="//marc21:marc21">
 
         <!-- Information needed for storing source record in union catalog context -->
+        <xsl:variable name="recnum" select="../../oai20:header/oai20:identifier"/>
         <institutionIdHere/>
-        <localIdentifier><xsl:value-of select="../../oai20:header/oai20:identifier" /></localIdentifier>
+        <localIdentifier><xsl:value-of select="$recnum"/></localIdentifier>
 
         <!-- Bibliographic record for FOLIO inventory -->
         <instance>
@@ -114,7 +115,7 @@
                         or oai20:controlfield[@tag='001']">
                 <identifiers>
                 <arr>
-                <xsl:for-each select="oai20:controlfield[@tag='001']">
+                <xsl:for-each select="$recnum">
                     <i>
                     <value><xsl:value-of select="."/></value>
                     <!-- A subsequent library specific transformation (style sheet)
