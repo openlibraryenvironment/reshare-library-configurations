@@ -70,7 +70,7 @@ my $hc = 0;
 my $done = 0;
 while (<MF>) {
 
-  if (/^\d{5}.[vxy]/) {
+  if (/^\d{5}.[uvxy]/) {
     my $mfhd = MARC::Record->new_from_usmarc($_);
     my $hid = $mfhd->field('001')->data();
     my $match = $mfhd->field('004')->data();
