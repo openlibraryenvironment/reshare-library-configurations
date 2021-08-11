@@ -31,7 +31,7 @@
                 <metadata>
                     <record xmlns="http://www.loc.gov/MARC21/slim"
                     xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
-                        <xsl:for-each select="//marc21:marc21/@* | //marc21:marc21/*"> 
+                        <xsl:for-each select=".//marc21:marc21/@* | .//marc21:marc21/*"> 
                             <xsl:element name="{local-name()}">
                                 <xsl:for-each select="@*">
                                     <xsl:attribute name="{local-name()}">
