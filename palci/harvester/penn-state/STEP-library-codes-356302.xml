@@ -537,7 +537,7 @@
         &lt;xsl:when test=&quot;.=&#39;YORK SWARTZ-PIC&#39;&quot;&gt;0b9954d6-724d-5e61-8c48-21ab30c7e5b2&lt;/xsl:when&gt;&#xD;
         &lt;xsl:when test=&quot;.=&#39;YORK SWARTZ-YA&#39;&quot;&gt;be2ff83b-ee1a-5d1d-85a2-1276e527c0bd&lt;/xsl:when&gt;&#xD;
         &lt;xsl:when test=&quot;starts-with(., &#39;YORK&#39;)&quot;&gt;18c9a27a-0d95-5f7b-a58d-48281f16a28a&lt;/xsl:when&gt; &lt;!-- Unmapped (YORK) --&gt;&#xD;
-        &lt;xsl:otherwise&gt;17407e910-19ca-5694-9a4a-bc078f018b77&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (UP-PAT) --&gt;&#xD;
+        &lt;xsl:otherwise&gt;7407e910-19ca-5694-9a4a-bc078f018b77&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (UP-PAT) --&gt;&#xD;
       &lt;/xsl:choose&gt;&#xD;
     &lt;/permanentLocationId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
