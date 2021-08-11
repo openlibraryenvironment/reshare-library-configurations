@@ -528,7 +528,7 @@
         <xsl:when test=".='YORK SWARTZ-PIC'">0b9954d6-724d-5e61-8c48-21ab30c7e5b2</xsl:when>
         <xsl:when test=".='YORK SWARTZ-YA'">be2ff83b-ee1a-5d1d-85a2-1276e527c0bd</xsl:when>
         <xsl:when test="starts-with(., 'YORK')">18c9a27a-0d95-5f7b-a58d-48281f16a28a</xsl:when> <!-- Unmapped (YORK) -->
-        <xsl:otherwise>17407e910-19ca-5694-9a4a-bc078f018b77</xsl:otherwise> <!-- Unmapped (UP-PAT) -->
+        <xsl:otherwise>7407e910-19ca-5694-9a4a-bc078f018b77</xsl:otherwise> <!-- Unmapped (UP-PAT) -->
       </xsl:choose>
     </permanentLocationId>
   </xsl:template>
