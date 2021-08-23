@@ -29,19 +29,19 @@
   <xsl:template match="//marc:record">
     <holdingsRecords>
       <arr>
-      <xsl:if test="marc:datafield[@tag='949']">
-        <xsl:for-each select="marc:datafield[@tag='949']">
+      <xsl:if test="marc:datafield[@tag='999']">
+        <xsl:for-each select="marc:datafield[@tag='999']">
           <xsl:sort select="./marc:subfield[@code='m']"/>
           <xsl:sort select="./marc:subfield[@code='l']"/>
           <xsl:sort select="./marc:subfield[@code='a']"/>
           <xsl:variable name="prelib">
-            <xsl:value-of select="./preceding-sibling::marc:datafield[@tag='949'][1]/marc:subfield[@code='m']"/>
+            <xsl:value-of select="./preceding-sibling::marc:datafield[@tag='999'][1]/marc:subfield[@code='m']"/>
           </xsl:variable>
           <xsl:variable name="preloc">
-            <xsl:value-of select="./preceding-sibling::marc:datafield[@tag='949'][1]/marc:subfield[@code='l']"/>
+            <xsl:value-of select="./preceding-sibling::marc:datafield[@tag='999'][1]/marc:subfield[@code='l']"/>
           </xsl:variable>
           <xsl:variable name="precall">
-            <xsl:value-of select="./preceding-sibling::marc:datafield[@tag='949'][1]/marc:subfield[@code='a']"/>
+            <xsl:value-of select="./preceding-sibling::marc:datafield[@tag='999'][1]/marc:subfield[@code='a']"/>
           </xsl:variable>
           <xsl:variable name="prekey" select="concat($prelib, '-', $preloc, '-', $precall)"/>
           <xsl:variable name="lib" select="./marc:subfield[@code='m']"/>
@@ -575,7 +575,7 @@
               </notes>
               <items>
                 <arr>
-                <xsl:for-each select="../marc:datafield[@tag='949' and ./marc:subfield[@code='m']=$lib and ./marc:subfield[@code='l']=$loc and ./marc:subfield[@code='a']=$callno]">
+                <xsl:for-each select="../marc:datafield[@tag='999' and ./marc:subfield[@code='m']=$lib and ./marc:subfield[@code='l']=$loc and ./marc:subfield[@code='a']=$callno]">
                   <i>
                     <itemIdentifier><xsl:value-of select="$iid"/></itemIdentifier>
                     <barcode><xsl:value-of select="./marc:subfield[@code='i']"/></barcode>
@@ -607,7 +607,7 @@
           </xsl:if>
         </xsl:for-each>
       </xsl:if>
-      <xsl:if test="not(marc:datafield[@tag='949'])">
+      <xsl:if test="not(marc:datafield[@tag='999'])">
         <i>
           <permanentLocationIdHere>UNMAPPED</permanentLocationIdHere>
         </i>
