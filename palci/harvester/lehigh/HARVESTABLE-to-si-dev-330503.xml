@@ -3,7 +3,10 @@
   <xmlBulk>
     <id>330503</id>
     <name>PALCI SI: Lehigh to SI dev</name>
-    <url>ftp://lehigh:XXXXXX@ftp.folio.indexdata.com/incoming</url>
+    <url>ftp://lehigh@ftp.folio.indexdata.com/incoming</url>
+    <passiveMode>true</passiveMode>
+    <allowCondReq>true</allowCondReq>
+    <allowErrors>true</allowErrors>
     <storeOriginal>true</storeOriginal>
     <enabled>false</enabled>
     <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">
