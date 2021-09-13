@@ -3,9 +3,9 @@
   <id>301309</id>
   <XmlTransformStep>
     <id>301309</id>
-    <description>Transforms from Sirsi Symphony OAI response with a marc21 namespace to marc namespace</description>
+    <description>Transforms from Sirsi Symphony OAI to FOLIO Instance</description>
     <inputFormat>xml</inputFormat>
-    <name>Symphony MARC21 to Instance</name>
+    <name>Symphony OAI to Instance</name>
     <outputFormat>xml</outputFormat>
     <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xD;
 &lt;xsl:stylesheet&#xD;
@@ -72,20 +72,20 @@
             &lt;instanceTypeId&gt;&#xD;
                 &lt;!-- UUIDs for resource types --&gt;&#xD;
                 &lt;xsl:choose&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;a&#39;&quot;&gt;6312d172-f0cf-40f6-b27d-9fa8feaf332f&lt;/xsl:when&gt; &lt;!-- language material : text --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;c&#39;&quot;&gt;497b5090-3da2-486c-b57f-de5bb3c2e26d&lt;/xsl:when&gt; &lt;!-- notated music : notated music --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;d&#39;&quot;&gt;497b5090-3da2-486c-b57f-de5bb3c2e26d&lt;/xsl:when&gt; &lt;!-- manuscript notated music : notated music -&gt; notated music --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;e&#39;&quot;&gt;526aa04d-9289-4511-8866-349299592c18&lt;/xsl:when&gt; &lt;!-- cartographic material : cartographic image --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;f&#39;&quot;&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- other --&gt; &lt;!-- manuscript cartographic material : ? --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;g&#39;&quot;&gt;535e3160-763a-42f9-b0c0-d8ed7df6e2a2&lt;/xsl:when&gt; &lt;!-- projected image : still image --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;i&#39;&quot;&gt;9bce18bd-45bf-4949-8fa8-63163e4b7d7f&lt;/xsl:when&gt; &lt;!-- nonmusical sound recording : sounds --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;j&#39;&quot;&gt;3be24c14-3551-4180-9292-26a786649c8b&lt;/xsl:when&gt; &lt;!-- musical sound recording : performed music --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;k&#39;&quot;&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- other --&gt; &lt;!-- two-dimensional nonprojectable graphic : ?--&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;m&#39;&quot;&gt;df5dddff-9c30-4507-8b82-119ff972d4d7&lt;/xsl:when&gt; &lt;!-- computer file : computer dataset --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;o&#39;&quot;&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- kit : other --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;p&#39;&quot;&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- mixed material : other --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;r&#39;&quot;&gt;c1e95c2b-4efc-48cf-9e71-edb622cf0c22&lt;/xsl:when&gt; &lt;!-- three-dimensional artifact or naturally occurring object : three-dimensional form --&gt;&#xD;
-                &lt;xsl:when test=&quot;substring(marc:leader,1,1)=&#39;t&#39;&quot;&gt;6312d172-f0cf-40f6-b27d-9fa8feaf332f&lt;/xsl:when&gt; &lt;!-- manuscript language material : text --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;a&#39;&quot;&gt;6312d172-f0cf-40f6-b27d-9fa8feaf332f&lt;/xsl:when&gt; &lt;!-- language material : text --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;c&#39;&quot;&gt;497b5090-3da2-486c-b57f-de5bb3c2e26d&lt;/xsl:when&gt; &lt;!-- notated music : notated music --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;d&#39;&quot;&gt;497b5090-3da2-486c-b57f-de5bb3c2e26d&lt;/xsl:when&gt; &lt;!-- manuscript notated music : notated music -&gt; notated music --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;e&#39;&quot;&gt;526aa04d-9289-4511-8866-349299592c18&lt;/xsl:when&gt; &lt;!-- cartographic material : cartographic image --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;f&#39;&quot;&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- other --&gt; &lt;!-- manuscript cartographic material : ? --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;g&#39;&quot;&gt;535e3160-763a-42f9-b0c0-d8ed7df6e2a2&lt;/xsl:when&gt; &lt;!-- projected image : still image --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;i&#39;&quot;&gt;9bce18bd-45bf-4949-8fa8-63163e4b7d7f&lt;/xsl:when&gt; &lt;!-- nonmusical sound recording : sounds --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;j&#39;&quot;&gt;3be24c14-3551-4180-9292-26a786649c8b&lt;/xsl:when&gt; &lt;!-- musical sound recording : performed music --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;k&#39;&quot;&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- other --&gt; &lt;!-- two-dimensional nonprojectable graphic : ?--&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;m&#39;&quot;&gt;df5dddff-9c30-4507-8b82-119ff972d4d7&lt;/xsl:when&gt; &lt;!-- computer file : computer dataset --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;o&#39;&quot;&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- kit : other --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;p&#39;&quot;&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:when&gt; &lt;!-- mixed material : other --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;r&#39;&quot;&gt;c1e95c2b-4efc-48cf-9e71-edb622cf0c22&lt;/xsl:when&gt; &lt;!-- three-dimensional artifact or naturally occurring object : three-dimensional form --&gt;&#xD;
+                &lt;xsl:when test=&quot;substring(marc:leader,7,1)=&#39;t&#39;&quot;&gt;6312d172-f0cf-40f6-b27d-9fa8feaf332f&lt;/xsl:when&gt; &lt;!-- manuscript language material : text --&gt;&#xD;
                 &lt;xsl:otherwise&gt;a2c91e87-6bab-44d6-8adb-1fd02481fc4f&lt;/xsl:otherwise&gt;                             &lt;!--  : other --&gt;&#xD;
                 &lt;/xsl:choose&gt;&#xD;
             &lt;/instanceTypeId&gt;&#xD;
