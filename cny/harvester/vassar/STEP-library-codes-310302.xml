@@ -20,7 +20,7 @@
        represents bib records from multiple libraries.&#xD;
   --&gt;&#xD;
   &lt;xsl:template match="//identifierTypeIdHere"&gt;&#xD;
-    &lt;identifierTypeId&gt;4c320552-7bee-5599-b0a6-2594623ce2ad&lt;/identifierTypeId&gt;&#xD;
+    &lt;identifierTypeId&gt;54ee8e74-a06e-4f05-a44e-6ec1bdb39d8f&lt;/identifierTypeId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
   &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;

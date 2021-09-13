@@ -13,7 +13,7 @@
        represents bib records from multiple libraries.
   -->
   <xsl:template match="//identifierTypeIdHere">
-    <identifierTypeId>4c320552-7bee-5599-b0a6-2594623ce2ad</identifierTypeId>
+    <identifierTypeId>54ee8e74-a06e-4f05-a44e-6ec1bdb39d8f</identifierTypeId>
   </xsl:template>
 
   <!-- Map legacy location code to a FOLIO location UUID -->
