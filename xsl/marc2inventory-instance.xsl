@@ -19,6 +19,13 @@
 
     <record>
 
+        <original>            
+            <xsl:copy>
+                <xsl:copy-of select="@*"/>
+                <xsl:copy-of select="*"/>
+            </xsl:copy>
+        </original>
+
         <!-- Information needed for storing source record in union catalog context -->
         <institutionIdHere/>
         <localIdentifier><xsl:value-of select="marc:controlfield[@tag='001']" /></localIdentifier>
@@ -361,13 +368,6 @@
             </matchKey>
 
         </instance>
-
-        <original>            
-            <xsl:copy>
-                <xsl:copy-of select="@*"/>
-                <xsl:copy-of select="*"/>
-            </xsl:copy>
-        </original>
 
     </record>
 
