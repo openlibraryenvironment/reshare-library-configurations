@@ -17,7 +17,7 @@ do
 	MRCFILES=$(find $FPATH/*.* -maxdepth 0 -mtime -$DAYS)
 	for mf in $MRCFILES
 	do
-		MCOM="./merge_mfhd.pl $mf"
+		MCOM="./merge_mfhd.pl -z $mf"
 		echo "Running ${MCOM}";
 		$MCOM >> $LOGFILE
 	done
