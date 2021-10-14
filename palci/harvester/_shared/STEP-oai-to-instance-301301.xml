@@ -61,6 +61,12 @@
         &lt;institutionIdHere/&gt;&#xD;
         &lt;localIdentifier&gt;&lt;xsl:value-of select=&quot;marc:controlfield[@tag=&#39;001&#39;]&quot; /&gt;&lt;/localIdentifier&gt;&#xD;
 &#xD;
+        &lt;processing&gt;&#xD;
+            &lt;institutionIdHere/&gt;&#xD;
+            &lt;localIdentifier&gt;&lt;xsl:value-of select="marc:controlfield[@tag='001']" /&gt;&lt;/localIdentifier&gt;&#xD;
+            &lt;identifierTypeIdHere/&gt;&#xD;
+        &lt;/processing&gt;&#xD;
+&#xD;
         &lt;!-- Bibliographic record for FOLIO inventory --&gt;&#xD;
         &lt;instance&gt;&#xD;
             &lt;source&gt;MARC&lt;/source&gt;&#xD;
