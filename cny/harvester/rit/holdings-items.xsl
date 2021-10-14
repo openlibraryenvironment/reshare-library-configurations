@@ -38,7 +38,7 @@
           <xsl:variable name="iid" select="./marc:subfield[@code='y']"/>
           <xsl:variable name="loc" select="./marc:subfield[@code='k']"/>
           <xsl:variable name="itype" select="./marc:subfield[@code='h']"/>
-          <xsl:if test="not($loc=$preloc)">
+          <xsl:if test="not($loc=$preloc) and not($loc='wwd  ')">
             <i>
               <xsl:variable name="loc-clean" select="normalize-space($loc)"/>
               <permanentLocationIdHere><xsl:value-of select="$loc-clean"/></permanentLocationIdHere>
@@ -72,28 +72,30 @@
               <items>
                 <arr>
                 <xsl:for-each select="../marc:datafield[@tag='945' and ./marc:subfield[@code='k']=$loc and ./marc:subfield[@code='p']]">
-                  <i>
-                    <itemIdentifier><xsl:value-of select="./marc:subfield[@code='p']"/></itemIdentifier>
-                    <barcode><xsl:value-of select="./marc:subfield[@code='d']"/></barcode>
-                    <volume><xsl:value-of select="./marc:subfield[@code='c']"/></volume>
-                    <status><name>Unknown</name></status>
-                    <permanentLoanTypeId>2b94c631-fca9-4892-a730-03ee529ffe27</permanentLoanTypeId> <!-- Can circulate -->
-                    <materialTypeId>
-                      <!-- Mappings to ReShare specific material types, taken from OCLC table "Type of Record" -->
-                      <!-- Mapping from leader position 6 -->
-                      <xsl:choose>
-                      <xsl:when test="$bl='s' or $bl='b'">191da404-dec2-4977-9770-1443d9d6c238</xsl:when> <!-- CNR -->
-                      <xsl:when test="$mt='a' or $mt='t'">e65ed344-a691-4f8f-8446-3c0a346c6882</xsl:when> <!-- BKS -->
-                      <xsl:when test="$mt='m'">22cb5b81-2056-46ed-8050-c5d8f01caf90</xsl:when>            <!-- COM -->
-                      <xsl:when test="$mt='e' or $mt='f'">9f2c8d85-97e6-4722-a67c-bb51ccfb7781</xsl:when> <!-- MAP -->
-                      <xsl:when test="$mt='c' or $mt='d'">e5578a7e-49b9-4859-a86a-21b812215b4f</xsl:when> <!-- SCO -->
-                      <xsl:when test="$mt='i' or $mt='j'">d8dc9046-a9f4-4789-adf5-678fd855b016</xsl:when> <!-- REC -->
-                      <xsl:when test="$mt='g'">14f1845d-2fad-4091-80c8-48614eaea40b</xsl:when>            <!-- VIS -->
-                      <xsl:when test="$mt='p'">bdfc300b-8a03-4ae6-b42a-6243afa0b7b1</xsl:when>            <!-- MIX -->
-                      <xsl:otherwise>f6dd0721-5d4a-439e-9205-c71aef39d15b</xsl:otherwise>            <!-- Unmapped -->
-                      </xsl:choose>
-                    </materialTypeId>
-                  </i>
+                  <xsl:if test="not(./marc:subfield[@code='m']='w  ' or ./marc:subfield[@code='j']='9')">
+                    <i>
+                      <itemIdentifier><xsl:value-of select="./marc:subfield[@code='p']"/></itemIdentifier>
+                      <barcode><xsl:value-of select="./marc:subfield[@code='d']"/></barcode>
+                      <volume><xsl:value-of select="./marc:subfield[@code='c']"/></volume>
+                      <status><name>Unknown</name></status>
+                      <permanentLoanTypeId>2b94c631-fca9-4892-a730-03ee529ffe27</permanentLoanTypeId> <!-- Can circulate -->
+                      <materialTypeId>
+                        <!-- Mappings to ReShare specific material types, taken from OCLC table "Type of Record" -->
+                        <!-- Mapping from leader position 6 -->
+                        <xsl:choose>
+                        <xsl:when test="$bl='s' or $bl='b'">191da404-dec2-4977-9770-1443d9d6c238</xsl:when> <!-- CNR -->
+                        <xsl:when test="$mt='a' or $mt='t'">e65ed344-a691-4f8f-8446-3c0a346c6882</xsl:when> <!-- BKS -->
+                        <xsl:when test="$mt='m'">22cb5b81-2056-46ed-8050-c5d8f01caf90</xsl:when>            <!-- COM -->
+                        <xsl:when test="$mt='e' or $mt='f'">9f2c8d85-97e6-4722-a67c-bb51ccfb7781</xsl:when> <!-- MAP -->
+                        <xsl:when test="$mt='c' or $mt='d'">e5578a7e-49b9-4859-a86a-21b812215b4f</xsl:when> <!-- SCO -->
+                        <xsl:when test="$mt='i' or $mt='j'">d8dc9046-a9f4-4789-adf5-678fd855b016</xsl:when> <!-- REC -->
+                        <xsl:when test="$mt='g'">14f1845d-2fad-4091-80c8-48614eaea40b</xsl:when>            <!-- VIS -->
+                        <xsl:when test="$mt='p'">bdfc300b-8a03-4ae6-b42a-6243afa0b7b1</xsl:when>            <!-- MIX -->
+                        <xsl:otherwise>f6dd0721-5d4a-439e-9205-c71aef39d15b</xsl:otherwise>            <!-- Unmapped -->
+                        </xsl:choose>
+                      </materialTypeId>
+                    </i>
+                  </xsl:if>
                 </xsl:for-each>
                 </arr>
               </items>

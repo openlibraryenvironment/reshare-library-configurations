@@ -45,25 +45,14 @@
               <illPolicyId>
                 <xsl:choose>
                   <xsl:when test="$loc-clean='annex'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='ardvd'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='artcd'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='brow'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='cdrom'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='chrg'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='circ'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='disk'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='stdio'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='vxw1'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='vxw6'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
                   <xsl:when test="$loc-clean='vxwa'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='vxwf'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='vxwfa'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='vxwi'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='vxwr'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
                   <xsl:when test="$loc-clean='vxww'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='zine'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
-                  <xsl:when test="$loc-clean='zlit'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='vxwb'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
                   <xsl:when test="$loc-clean='vxwm'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='vxwu'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='vxwy'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='vxw2'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
+                  <xsl:when test="$loc-clean='vxwk'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when>
                   <xsl:otherwise>b0f97013-87f5-4bab-87f2-ac4a5191b489</xsl:otherwise> <!-- Will not lend -->
                 </xsl:choose>
               </illPolicyId>

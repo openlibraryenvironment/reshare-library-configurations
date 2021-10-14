@@ -3,3 +3,4 @@ data/
 ignored-by-git/
 .vscode/
 .idea/
+*.ini

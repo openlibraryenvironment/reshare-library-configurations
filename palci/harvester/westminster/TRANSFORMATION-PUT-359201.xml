@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <id>359201</id>
+    <basicTransformation>
+        <id>359201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>Westminster - OAI-PMH to FOLIO Inventory</name>
+        <parallel>false</parallel>
+        <stepAssociations>
+            <id>359401</id>
+            <position>1</position>
+            <transformation>359201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>301303</id> <!-- MARC21 to Instance XML -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>359402</id>
+            <position>2</position>
+            <transformation>359201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>359301</id>  <!-- Westminster holdings and items -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>359403</id>
+            <position>3</position>
+            <transformation>359201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>359302</id> <!-- Granular library codes, Westminster -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>359404</id>
+            <position>4</position>
+            <transformation>359201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>301302</id> <!-- XML to JSON -->
+            </step>
+        </stepAssociations>
+    </basicTransformation>
+</transformation>
