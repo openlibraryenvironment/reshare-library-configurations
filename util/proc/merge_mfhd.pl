@@ -17,6 +17,7 @@ use MARC::Record;
 use File::Basename;
 use strict;
 use warnings;
+use Time::Piece;
 use MARC::File::XML (BinaryEncoding => 'utf8', RecordFormat => 'MARC21');
 
 my $convert_flag = 0;
@@ -41,20 +42,23 @@ if (! -e $mrcfile) {
   die "Can't find MARC file at $mrcfile\n";
 }
 
+my $mtime = localtime((stat $mrcfile)[9])->datetime;
+$mtime =~ s/\D//g;
+
 my $workdir = dirname($mrcfile);
-my $fname = basename($mrcfile, '.marc', '.mrc', '.marc', '.bin', '.out');
-mkdir("$workdir/merged");
+my $fname = basename($mrcfile, '.marc', '.mrc', '.marc', '.bin', '.out', '.dat');
+mkdir("$workdir/outgoing");
 
 if ($convert_flag) {
   $fname .= '-utf8';
-  my $ufile = "$workdir/$fname.mrc";
+  my $ufile = "$workdir/$mtime-$fname.mrc";
   my $cmd = "yaz-marcdump -f marc8 -t utf8 -o marc -l 9=97 $mrcfile > $ufile";
   print "Running command: $cmd\n(This may take awhile...)\n";
   `$cmd`;
   $mrcfile = $ufile;
 }
 
-my $xmlfile = "$workdir/merged/${fname}-with-holdings.xml";
+my $xmlfile = "$workdir/outgoing/$mtime-$fname-with-holdings.xml";
 unlink $xmlfile;
 my $file = MARC::File::XML->out($xmlfile);
 
@@ -69,7 +73,6 @@ my $c = 0;
 my $hc = 0;
 my $done = 0;
 while (<MF>) {
-
   if (/^\d{5}.[uvxy]/) {
     my $mfhd = MARC::Record->new_from_usmarc($_);
     my $hid = $mfhd->field('001')->data();
@@ -121,4 +124,4 @@ if ($zip_flag) {
   print "Done zipping...\n"
 }
 
-print "----------\nFinished! $c record(s) created.\n";
+print "----------\nFinished! $c record(s) created.\n----------\n";
