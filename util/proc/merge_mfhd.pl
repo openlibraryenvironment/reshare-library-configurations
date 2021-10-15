@@ -47,7 +47,7 @@ $mtime =~ s/\D//g;
 
 my $workdir = dirname($mrcfile);
 my $fname = basename($mrcfile, '.marc', '.mrc', '.marc', '.bin', '.out', '.dat');
-mkdir("$workdir/outgoing");
+mkdir("$workdir/merged");
 
 if ($convert_flag) {
   $fname .= '-utf8';
@@ -58,7 +58,7 @@ if ($convert_flag) {
   $mrcfile = $ufile;
 }
 
-my $xmlfile = "$workdir/outgoing/$mtime-$fname-with-holdings.xml";
+my $xmlfile = "$workdir/merged/$mtime-$fname-with-holdings.xml";
 unlink $xmlfile;
 my $file = MARC::File::XML->out($xmlfile);
 
