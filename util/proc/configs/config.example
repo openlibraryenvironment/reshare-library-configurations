@@ -1,3 +1,5 @@
 name=Test Library
 ftp_dir=/home/testlibrary/ftp/incoming
 last_run=2021-10-10
+date_field=907$b
+date_format=%m-%d-%y
