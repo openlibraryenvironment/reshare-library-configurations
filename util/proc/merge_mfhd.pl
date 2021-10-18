@@ -18,7 +18,7 @@ use File::Basename;
 use strict;
 use warnings;
 use Time::Piece;
-use MARC::File::XML (BinaryEncoding => 'utf8', RecordFormat => 'MARC21');
+use MARC::File::XML (BinaryEncoding => 'utf8', RecordFormat => 'USMARC');
 
 my $convert_flag = 0;
 my $zip_flag = 0;
@@ -112,6 +112,7 @@ while (<MF>) {
   }
   if (eof (MF)) { 
     $file->write($marc);
+    $file->close();
   }
 }
 
@@ -120,7 +121,7 @@ if ($zip_flag) {
   print "Zipping $xmlfile with gzip\n";
   print "(This may take awhile...)\n";
   my $cmd = "gzip $xmlfile";
-  `$cmd`;
+  system $cmd;
   print "Done zipping...\n"
 }
 
