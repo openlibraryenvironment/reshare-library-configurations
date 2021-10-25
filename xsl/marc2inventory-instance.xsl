@@ -14,8 +14,41 @@
         </collection>
     </xsl:template>
 
-    <!-- MARC meta data -->
     <xsl:template match="marc:record">
+      <record>
+        <xsl:choose>
+          <xsl:when test="substring(marc:leader,6,1)='d'">
+             <xsl:apply-templates/>
+          </xsl:when>
+          <xsl:otherwise>  
+            <!-- Store the original MARC record to be used by subsequent style sheets -->
+            <original>
+              <record xmlns="http://www.openarchives.org/OAI/2.0/" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+                <xsl:for-each select="@* | node()">
+                    <xsl:copy-of select="."/>
+                </xsl:for-each>
+              </record>            
+            </original>
+            <xsl:apply-templates/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </record>
+    </xsl:template>
+
+
+    <!-- If this is an OAI-PMH deletion record -->
+    <xsl:template match="marc:record[marc:leader[substring(.,6,1)='d']]">
+        <delete>
+            <localIdentifier><xsl:value-of select="marc:controlfield[@tag='001']"/></localIdentifier>
+            <identifierTypeIdHere/>
+            <institutionIdHere/>
+        </delete>
+    </xsl:template>
+
+    <!-- MARC meta data -->
+    <xsl:template match="marc:recordxxx">
 
     <record>
 
