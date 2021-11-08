@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transformationStep uri="http://harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com/harvester/records/steps/10101">
+<transformationStep>
     <id>301308</id>
     <XmlTransformStep>
         <id>301308</id>
@@ -35,7 +35,13 @@
         &lt;institutionIdHere/&gt;&#xD;
         &lt;xsl:variable name=&quot;identifier&quot; select=&quot;marc:datafield[@tag=&#39;039&#39; and ./marc:subfield[@code=&#39;a&#39;]]/marc:subfield[@code=&#39;a&#39;]&quot;/&gt;&#xD;
         &lt;localIdentifier&gt;&lt;xsl:value-of select=&quot;$identifier&quot;/&gt;&lt;/localIdentifier&gt;&#xD;
-        &#xD;
+&#xD;
+        &lt;processing&gt;&#xD;
+            &lt;identifierTypeIdHere/&gt;&#xD;
+            &lt;localIdentifier&gt;&lt;xsl:value-of select="$identifier" /&gt;&lt;/localIdentifier&gt;&#xD;
+            &lt;institutionIdHere/&gt;&#xD;
+        &lt;/processing&gt;&#xD;
+&#xD;
         &lt;!-- Bibliographic record for FOLIO inventory --&gt;&#xD;
         &lt;instance&gt;&#xD;
             &lt;source&gt;MARC&lt;/source&gt;&#xD;
