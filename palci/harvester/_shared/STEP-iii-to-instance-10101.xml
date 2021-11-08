@@ -33,6 +33,12 @@
         &lt;institutionIdHere/&gt;&#xD;
         &lt;localIdentifier&gt;&lt;xsl:value-of select=&quot;marc:datafield[@tag=&#39;907&#39;][1]/marc:subfield[@code=&#39;a&#39;] | marc:datafield[@tag=&#39;948&#39;][1]/marc:subfield[@code=&#39;a&#39;] &quot; /&gt;&lt;/localIdentifier&gt;&#xD;
         &#xD;
+        &lt;processing&gt;            &#xD;
+            &lt;identifierTypeIdHere/&gt;&#xD;
+            &lt;localIdentifier&gt;&lt;xsl:value-of select="marc:datafield[@tag='907'][1]/marc:subfield[@code='a'] | marc:datafield[@tag='948'][1]/marc:subfield[@code='a'] " /&gt;&lt;/localIdentifier&gt;            &#xD;
+            &lt;institutionIdHere/&gt;&#xD;
+        &lt;/processing&gt;&#xD;
+&#xD;
         &lt;!-- Bibliographic record for FOLIO inventory --&gt;&#xD;
         &lt;instance&gt;&#xD;
             &lt;source&gt;MARC&lt;/source&gt;&#xD;
