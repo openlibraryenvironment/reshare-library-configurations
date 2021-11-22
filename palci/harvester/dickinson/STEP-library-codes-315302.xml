@@ -44,7 +44,7 @@
 &#xD;
   &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
   &lt;xsl:template match="//institutionIdHere"&gt;&#xD;
-     &lt;institutionId&gt;b344adae-e0e1-5db8-b09c-bb99df575c4a&lt;/institutionId&gt;&#xD;
+     &lt;institutionId&gt;a700cbbf-0090-56e3-a7c1-3e8f45050eef&lt;/institutionId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;
 &#xD;
 &lt;/xsl:stylesheet&gt;&#xD;
