@@ -43,7 +43,7 @@ my $spcode = $conf->{servicePointCode} || $instcode;
 my $spid = uuid("service-point/$spcode");
 my $spname = $conf->{servicePointName} || $instname;
 
-my $idname = $conf->{identifierName} || "Reshare_$instcode";
+my $idname = $conf->{identifierName} || "ISIL:$instcode";
 my $idid = uuid("identifier/$idname");
 
 my $file_created = {};
