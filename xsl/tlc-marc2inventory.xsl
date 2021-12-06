@@ -26,7 +26,13 @@
         <institutionIdHere/>
         <xsl:variable name="identifier" select="marc:datafield[@tag='039' and ./marc:subfield[@code='a']]/marc:subfield[@code='a']"/>
         <localIdentifier><xsl:value-of select="$identifier"/></localIdentifier>
-        
+       
+        <processing>
+            <identifierTypeIdHere/>
+            <localIdentifier><xsl:value-of select="$identifier" /></localIdentifier>
+            <institutionIdHere/>
+        </processing>
+ 
         <!-- Bibliographic record for FOLIO inventory -->
         <instance>
             <source>MARC</source>

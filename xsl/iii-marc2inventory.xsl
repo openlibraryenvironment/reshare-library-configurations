@@ -25,6 +25,12 @@
         <!-- Information needed for storing source record in union catalog context -->
         <institutionIdHere/>
         <localIdentifier><xsl:value-of select="marc:datafield[@tag='907'][1]/marc:subfield[@code='a'] | marc:datafield[@tag='948'][1]/marc:subfield[@code='a'] " /></localIdentifier>
+
+        <processing>            
+            <identifierTypeIdHere/>
+            <localIdentifier><xsl:value-of select="marc:datafield[@tag='907'][1]/marc:subfield[@code='a'] | marc:datafield[@tag='948'][1]/marc:subfield[@code='a'] " /></localIdentifier>            
+            <institutionIdHere/>
+        </processing>
         
         <!-- Bibliographic record for FOLIO inventory -->
         <instance>
