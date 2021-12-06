@@ -58,7 +58,7 @@ def main(argv):
     if jobtype == 'oaiPmh':
         print("OAI set name is: '{}'".format(oaisetname))
 
-    filename = 'HARVESTABLE-to-iplc-si-reshare{}500.xml'.format(baseid)
+    filename = 'HARVESTABLE-to-iplc-si-reshare-{}500.xml'.format(baseid)
     f = open(filename,"w")
     f.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
     f.write('<harvestable>\n')
