@@ -75,7 +75,7 @@ def main(argv):
         f.write('    <allowErrors>true</allowErrors>\n')
     f.write('    <storeOriginal>true</storeOriginal>\n')
     f.write('    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">\n')
-    f.write('      <id>301199</id> <!-- PALCI ReShare, production shared index -->\n')
+    f.write('      <id>301105</id> <!-- PALCI ReShare, production shared index -->\n')
     f.write('    </storage>\n')
     f.write('    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">\n')
     f.write('      <id>{}201</id>\n'.format(baseid))
