@@ -43,13 +43,15 @@
                   <permanentLocationIdHere><xsl:value-of select="$loc"/></permanentLocationIdHere>
                   <illPolicyId>
                     <xsl:choose>
-                      <xsl:when test="$loc='CHILDRENS'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                      <xsl:when test="$loc='MAIN'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                      <xsl:when test="$loc='OVERSIZED'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                      <xsl:when test="$loc='SMAIN'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                      <xsl:when test="$loc='SOVERSIZED'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                      <xsl:when test="$loc='AUDIOBOOK'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
-                      <xsl:when test="$loc='SAUDIOBOOK'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc='STACKS'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc='CURRIC-JUV'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc='CURRICULUM'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc='CURRIC-FIC'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc='OVERSIZE'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc='DISPLAY'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc='FACAUTH'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc='THESIS'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
+                      <xsl:when test="$loc='MEDIA - AUDIOCASSETTE'">46970b40-918e-47a4-a45d-b1677a2d3d46</xsl:when> <!-- Will lend -->
                       <xsl:otherwise>b0f97013-87f5-4bab-87f2-ac4a5191b489</xsl:otherwise> <!-- Will not lend -->
                     </xsl:choose>
                   </illPolicyId>
@@ -58,7 +60,7 @@
                     <xsl:choose>
                       <xsl:when test="./marc:subfield[@code='2']='lcc'">95467209-6d7b-468b-94df-0f5d7ad2747d</xsl:when> <!-- LC -->
                       <xsl:when test="./marc:subfield[@code='2']='ddc'">03dd64d0-5626-4ecd-8ece-4531e0069f35</xsl:when> <!-- Dewey -->
-                      <xsl:otherwise>6caca63e-5651-4db6-9247-3205156e9699</xsl:otherwise> <!-- Other -->
+                      <xsl:otherwise>95467209-6d7b-468b-94df-0f5d7ad2747d</xsl:otherwise> <!-- Default the LC -->
                     </xsl:choose>
                   </callNumberTypeId>
                   <notes>
@@ -94,6 +96,7 @@
                           </xsl:choose>
                         </materialTypeId>
                         <enumeration><xsl:value-of select="./marc:subfield[@code='h']"/></enumeration>
+                        <copyNumber><xsl:value-of select="./marc:subfield[@code='t']"/></copyNumber>
                       </i>
                     </xsl:for-each>
                     </arr>

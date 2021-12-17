@@ -96,7 +96,7 @@
                           </xsl:choose>
                         </materialTypeId>
                         <enumeration><xsl:value-of select="./marc:subfield[@code='h']"/></enumeration>
-                        <copy><xsl:value-of select="./marc:subfield[@code='t']"/></copy>
+                        <copyNumber><xsl:value-of select="./marc:subfield[@code='t']"/></copyNumber>
                       </i>
                     </xsl:for-each>
                     </arr>
