@@ -47,7 +47,9 @@
                 &lt;xsl:value-of select=&quot;concat(./preceding-sibling::marc:datafield[@tag=&#39;952&#39;][1]/marc:subfield[@code=&#39;c&#39;], &#39; &#39;, ./preceding-sibling::marc:datafield[@tag=&#39;952&#39;][1]/marc:subfield[@code=&#39;c&#39;])&quot;/&gt;&#xD;
               &lt;/xsl:variable&gt;&#xD;
               &lt;xsl:variable name=&quot;iid&quot; select=&quot;./marc:subfield[@code=&#39;9&#39;]&quot;/&gt;&#xD;
-              &lt;xsl:variable name=&quot;loc&quot; select=&quot;concat(./marc:subfield[@code=&#39;a&#39;], &#39; &#39;, ./marc:subfield[@code=&#39;c&#39;])&quot;/&gt;&#xD;
+              &lt;xsl:variable name=&quot;lib&quot; select=&quot;./marc:subfield[@code=&#39;a&#39;]&quot;/&gt;&#xD;
+              &lt;xsl:variable name=&quot;col&quot; select=&quot;./marc:subfield[@code=&#39;c&#39;]&quot;/&gt;&#xD;
+              &lt;xsl:variable name=&quot;loc&quot; select=&quot;concat($lib, &#39; &#39;, $col)&quot;/&gt;&#xD;
               &lt;xsl:if test=&quot;not($loc=$preloc)&quot;&gt;&#xD;
                 &lt;i&gt;&#xD;
                   &lt;permanentLocationIdHere&gt;&lt;xsl:value-of select=&quot;$loc&quot;/&gt;&lt;/permanentLocationIdHere&gt;&#xD;
@@ -79,7 +81,7 @@
                   &lt;/notes&gt;&#xD;
                   &lt;items&gt;&#xD;
                     &lt;arr&gt;&#xD;
-                    &lt;xsl:for-each select=&quot;../marc:datafield[@tag=&#39;952&#39;]/marc:subfield[@code=&#39;c&#39;][.=$loc]/..&quot;&gt;&#xD;
+                    &lt;xsl:for-each select=&quot;../marc:datafield[@tag=&#39;952&#39; and marc:subfield[@code=&#39;a&#39;]=$lib and marc:subfield[@code=&#39;c&#39;]=$col]&quot;&gt;&#xD;
                       &lt;i&gt;&#xD;
                         &lt;itemIdentifier&gt;&lt;xsl:value-of select=&quot;./marc:subfield[@code=&#39;9&#39;]&quot;/&gt;&lt;/itemIdentifier&gt;&#xD;
                         &lt;barcode&gt;&lt;xsl:value-of select=&quot;./marc:subfield[@code=&#39;p&#39;]&quot;/&gt;&lt;/barcode&gt;&#xD;

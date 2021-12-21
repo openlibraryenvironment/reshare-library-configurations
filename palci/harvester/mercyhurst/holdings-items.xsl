@@ -71,7 +71,7 @@
                   </notes>
                   <items>
                     <arr>
-                    <xsl:for-each select="../marc:datafield[@tag='952']/marc:subfield[@code='c'][.=$loc]">
+                    <xsl:for-each select="../marc:datafield[@tag='952' and marc:subfield[@code='a']=$lib and marc:subfield[@code='c']=$col]">
                       <i>
                         <itemIdentifier><xsl:value-of select="./marc:subfield[@code='9']"/></itemIdentifier>
                         <barcode><xsl:value-of select="./marc:subfield[@code='p']"/></barcode>
