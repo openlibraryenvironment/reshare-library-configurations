@@ -64,7 +64,7 @@ def main(argv):
     f.write('<harvestable>\n')
     f.write('  <{}>\n'.format(jobtype))
     f.write('    <id>{}500</id>\n'.format(baseid))
-    f.write('    <name>PALCI SI: {}</name>\n'.format(library))
+    f.write('    <name>IPLC SI: {}</name>\n'.format(library))
     f.write('    <url>{}</url>\n'.format(url))
     if jobtype == 'oaiPmh':
         f.write('    <oaiSetName>{}</oaiSetName>\n'.format(oaisetname))
@@ -75,7 +75,7 @@ def main(argv):
         f.write('    <allowErrors>true</allowErrors>\n')
     f.write('    <storeOriginal>true</storeOriginal>\n')
     f.write('    <storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inventoryStorageEntity">\n')
-    f.write('      <id>301105</id> <!-- PALCI ReShare, production shared index -->\n')
+    f.write('      <id>301105</id> <!-- IPLC ReShare, production shared index -->\n')
     f.write('    </storage>\n')
     f.write('    <transformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="basicTransformation">\n')
     f.write('      <id>{}201</id>\n'.format(baseid))
