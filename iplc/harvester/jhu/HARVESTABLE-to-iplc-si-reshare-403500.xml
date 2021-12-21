@@ -3,7 +3,7 @@
   <xmlBulk>
     <id>403500</id>
     <name>IPLC SI: JHU</name>
-    <url>ftp://iplc:XXXXXX@ftp.folio.indexdata.com/ftp/incoming/jhu</url>
+    <url>ftp://iplc:XXXXXX@ftp.folio.indexdata.com/incoming/jhu</url>
     <passiveMode>true</passiveMode>
     <allowCondReq>true</allowCondReq>
     <allowErrors>true</allowErrors>
