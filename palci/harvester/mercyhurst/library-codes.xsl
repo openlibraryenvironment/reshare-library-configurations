@@ -55,9 +55,8 @@
         <xsl:when test=".='HAMMER TEST'">1a43dbc4-c82f-58d1-ae57-2addc6fcfde6</xsl:when>
         <xsl:when test=".='HAMMER VIDEO'">2e290649-d3b1-5b15-ab06-b84457cc93e4</xsl:when>
         <xsl:when test=".='HAMMER WC'">f58a762b-5153-55b8-889e-a1894cd46774</xsl:when>
-        <xsl:when test="starts-with(., 'HAMMER')">61ab79d7-df60-5a90-aff3-4e63fc185a4d</xsl:when> <!-- Unmapped (HAMMER)-->
-        <xsl:when test=".='NORTHEAST (any value)'">1f26b140-294f-5ede-abce-5052e8a2d542</xsl:when>
-        <xsl:otherwise>0439f266-f3a7-5114-9285-6c765349955a</xsl:otherwise> <!-- Unmapped (NORTHEAST) -->
+        <xsl:when test="starts-with(., 'NORTHEAST')">1f26b140-294f-5ede-abce-5052e8a2d542</xsl:when> <!-- Unmapped (NORTHEAST))-->
+        <xsl:otherwise>61ab79d7-df60-5a90-aff3-4e63fc185a4d</xsl:otherwise> <!-- Unmapped (HAMMER) -->
       </xsl:choose>
     </permanentLocationId>
   </xsl:template>

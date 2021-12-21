@@ -150,9 +150,9 @@
                 <classifications>
                 <arr>
                     <xsl:for-each select="marc:datafield[@tag='050' or @tag='060' or @tag='080' or @tag='082' or @tag='086' or @tag='090']">
-                    <i>
                         <xsl:choose>
                         <xsl:when test="current()[@tag='050']">
+                            <i>
                             <classificationNumber>
                             <xsl:for-each select="marc:subfield[@code='a' or @code='b']">
                                 <xsl:if test="position() > 1">
@@ -162,8 +162,10 @@
                             </xsl:for-each>
                             </classificationNumber>
                             <classificationTypeId>ce176ace-a53e-4b4d-aa89-725ed7b2edac</classificationTypeId> <!-- LC, Library of Congress -->
+                            </i>
                         </xsl:when>
                         <xsl:when test="current()[@tag='082']">
+                            <i>
                             <classificationNumber>
                             <xsl:for-each select="marc:subfield[@code='a' or @code='b']">
                                 <xsl:if test="position() > 1">
@@ -173,15 +175,17 @@
                             </xsl:for-each>
                             </classificationNumber>
                             <classificationTypeId>42471af9-7d25-4f3a-bf78-60d29dcf463b</classificationTypeId> <!-- Dewey -->
+                            </i>
                         </xsl:when>
                         <xsl:when test="current()[@tag='086']">
+                            <i>
                             <classificationNumber>
                             <xsl:value-of select="marc:subfield[@code='a']"/>
                             </classificationNumber>
                             <classificationTypeId>9075b5f8-7d97-49e1-a431-73fdd468d476</classificationTypeId> <!-- SUDOC -->
+                            </i>
                         </xsl:when>
                         </xsl:choose>
-                    </i>
                     </xsl:for-each>
                 </arr>
                 </classifications>
