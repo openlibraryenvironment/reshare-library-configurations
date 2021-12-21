@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transformationStep uri="http://harvester.folio-dev-us-east-1-1.folio-dev.indexdata.com/harvester/records/steps/10253">
-    <XmlTransformStep>
-        <description>OAI20-MARC21 to Instance XML</description>
-        <inputFormat>xml</inputFormat>
-        <name>Koha OAI20-MARC21 to Instance XML</name>
-        <outputFormat>xml</outputFormat>
-        <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xD;
+<transformationStep>
+  <id>361301</id>
+  <XmlTransformStep>
+    <id>361301</id>
+    <description>Holdings and Items, Mercyhurst</description>
+    <enabled>true</enabled>
+    <inputFormat>XML</inputFormat>
+    <name>Holdings and Items, Mercyhurst</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xD;
 &lt;xsl:stylesheet&#xD;
   version=&quot;1.0&quot;&#xD;
   xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&#xD;
@@ -41,24 +44,19 @@
             &lt;xsl:for-each select=&quot;marc:datafield[@tag=&#39;952&#39;]&quot;&gt;&#xD;
               &lt;xsl:sort select=&quot;./marc:subfield[@code=&#39;c&#39;]&quot;/&gt;&#xD;
               &lt;xsl:variable name=&quot;preloc&quot;&gt;&#xD;
-                &lt;xsl:value-of select=&quot;./preceding-sibling::marc:datafield[@tag=&#39;952&#39;][1]/marc:subfield[@code=&#39;c&#39;]&quot;/&gt;&#xD;
+                &lt;xsl:value-of select=&quot;concat(./preceding-sibling::marc:datafield[@tag=&#39;952&#39;][1]/marc:subfield[@code=&#39;c&#39;], &#39; &#39;, ./preceding-sibling::marc:datafield[@tag=&#39;952&#39;][1]/marc:subfield[@code=&#39;c&#39;])&quot;/&gt;&#xD;
               &lt;/xsl:variable&gt;&#xD;
               &lt;xsl:variable name=&quot;iid&quot; select=&quot;./marc:subfield[@code=&#39;9&#39;]&quot;/&gt;&#xD;
-              &lt;xsl:variable name=&quot;loc&quot; select=&quot;./marc:subfield[@code=&#39;c&#39;]&quot;/&gt;&#xD;
+              &lt;xsl:variable name=&quot;loc&quot; select=&quot;concat(./marc:subfield[@code=&#39;a&#39;], &#39; &#39;, ./marc:subfield[@code=&#39;c&#39;])&quot;/&gt;&#xD;
               &lt;xsl:if test=&quot;not($loc=$preloc)&quot;&gt;&#xD;
                 &lt;i&gt;&#xD;
                   &lt;permanentLocationIdHere&gt;&lt;xsl:value-of select=&quot;$loc&quot;/&gt;&lt;/permanentLocationIdHere&gt;&#xD;
                   &lt;illPolicyId&gt;&#xD;
                     &lt;xsl:choose&gt;&#xD;
-                      &lt;xsl:when test=&quot;$loc=&#39;STACKS&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test=&quot;$loc=&#39;CURRIC-JUV&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test=&quot;$loc=&#39;CURRICULUM&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test=&quot;$loc=&#39;CURRIC-FIC&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test=&quot;$loc=&#39;OVERSIZE&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test=&quot;$loc=&#39;DISPLAY&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test=&quot;$loc=&#39;FACAUTH&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test=&quot;$loc=&#39;THESIS&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
-                      &lt;xsl:when test=&quot;$loc=&#39;MEDIA - AUDIOCASSETTE&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc=&#39;HAMMER STACKS&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc=&#39;HAMMER CURR&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc=&#39;HAMMER THESIS SPEC&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
+                      &lt;xsl:when test=&quot;$loc=&#39;HAMMER NEWBOOK&#39;&quot;&gt;46970b40-918e-47a4-a45d-b1677a2d3d46&lt;/xsl:when&gt; &lt;!-- Will lend --&gt;&#xD;
                       &lt;xsl:otherwise&gt;b0f97013-87f5-4bab-87f2-ac4a5191b489&lt;/xsl:otherwise&gt; &lt;!-- Will not lend --&gt;&#xD;
                     &lt;/xsl:choose&gt;&#xD;
                   &lt;/illPolicyId&gt;&#xD;
@@ -124,9 +122,7 @@
   &lt;xsl:template match=&quot;text()&quot;/&gt;&#xD;
 &lt;/xsl:stylesheet&gt;&#xD;
 </script>
-        <id>10253</id>
-        <testData></testData>
-        <testOutput></testOutput>
-    </XmlTransformStep>
-    <id>10253</id>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
 </transformationStep>
