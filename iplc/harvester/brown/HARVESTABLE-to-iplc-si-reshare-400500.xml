@@ -2,7 +2,7 @@
 <harvestable>
   <xmlBulk>
     <id>400500</id>
-    <name>PALCI SI: brown</name>
+    <name>IPLC SI: Brown</name>
     <url>ftp://iplc:XXXX@ftp.folio.indexdata.com/incoming/brown</url>
     <passiveMode>true</passiveMode>
     <allowCondReq>true</allowCondReq>

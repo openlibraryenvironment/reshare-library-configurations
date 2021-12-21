@@ -5,7 +5,7 @@
         <id>400201</id>
         <description></description>
         <enabled>true</enabled>
-        <name>brown - OAI-PMH to FOLIO Inventory</name>
+        <name>Brown - MARC21 to FOLIO Inventory</name>
         <parallel>false</parallel>
         <stepAssociations>
             <id>400401</id>
