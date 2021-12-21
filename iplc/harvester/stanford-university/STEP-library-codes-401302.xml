@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>401302</id>
+  <XmlTransformStep>
+    <id>401302</id>
+    <description>Maps locations, record identifier type for Stanford</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Stanford</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;595f900e-ef0f-5529-82bd-47a01c83ccca&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ARTLCKL&#39;&quot;&gt;e4f8fc9b-ee47-57f7-a452-91ed15191a7e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ARTLCKM&#39;&quot;&gt;dee3cc08-08cd-55dc-9a75-d5e16787f687&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ARTLCKS&#39;&quot;&gt;fd712231-6bfd-5aba-b0ea-bae380ff4701&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;BARCHAS&#39;&quot;&gt;02951697-d46f-5e0e-b035-432902269ec0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;BASEMENT&#39;&quot;&gt;593c59ca-f9e8-5044-8a26-102581533968&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;BENDER&#39;&quot;&gt;ea2974f6-d5cb-57e3-9699-96cc6a8d7687&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;BIB-INDEX&#39;&quot;&gt;2e60ccdb-e2ed-57fc-92dd-6534043a0c2d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;BOX-COLL&#39;&quot;&gt;391c2ec9-4222-54df-b4ff-62ac68e9f8a8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;BRIT-DOCS&#39;&quot;&gt;9521871f-80a8-593a-bf3f-56ae6eb36735&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;CALIF-DOCS&#39;&quot;&gt;324961ea-9da7-57b0-90a4-a166966760a8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;EXPEDITION&#39;&quot;&gt;88c4bb51-2695-5757-a4a1-61f9379c7725&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;FED-DOCS&#39;&quot;&gt;95d8ba85-0416-5436-825b-a18456811833&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;FELTON&#39;&quot;&gt;8ee31320-9ba1-5166-977c-cd7dc1a83bec&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;FOLIO&#39;&quot;&gt;a530a90a-48f8-53e9-b0d2-a25b1d56b23c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;FOLIO-BAS&#39;&quot;&gt;89a04961-2973-551e-a9f2-032e446fa5ad&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;FOLIO-FLAT&#39;&quot;&gt;3479e9a0-1b21-5910-a279-6d99b2e745ba&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;GUNST&#39;&quot;&gt;9a68643c-a417-518f-98ef-ae58f7e3e573&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HAS-CA&#39;&quot;&gt;b71b50d3-6b25-5dfe-816f-ec53c379f37e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HAS-RR&#39;&quot;&gt;2b0f5a37-3501-5552-a167-eb4ab17aa43f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HASRC&#39;&quot;&gt;d6f7827d-85a4-5ea8-92fe-0dbf6f43b6e5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;IC&#39;&quot;&gt;61ae3e71-dff0-512b-a44c-1c462b9c059d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;INPROCESS&#39;&quot;&gt;00b67a52-15d0-5d63-94d7-7f10032a4933&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;INTERNET&#39;&quot;&gt;702c487c-68c3-592f-8b8c-921b6eab933c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;INTL-DOCS&#39;&quot;&gt;3c88d64f-1684-5d35-9352-7abd2a079978&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LCK-STOR&#39;&quot;&gt;7d271e30-301e-516e-9da9-bf7e21ffff50&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LL-NEWS&#39;&quot;&gt;2122af81-8f46-585b-96ed-8d1994450577&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;LOCKED-STK&#39;&quot;&gt;2b3c1abe-1625-5b2b-8ac5-5a88f1f8c999&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MANUSCRIPT&#39;&quot;&gt;37613bd1-061f-5b82-a99a-a6db58122084&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MAP-CASES&#39;&quot;&gt;4b0583cd-fe0a-51d2-8fe7-1556b06dac0d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MAP-FILE&#39;&quot;&gt;87043bab-9161-528c-b077-ec30fba77b46&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MEDIA-MTXT&#39;&quot;&gt;9d727a89-e201-5773-920a-e7a9c0b1f3b5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MICROFICHE&#39;&quot;&gt;ad1ebfcd-31d3-5da8-a2bf-b384895e4bae&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MICROFILM&#39;&quot;&gt;124767b3-39ca-5945-a984-a0c68274c2de&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MICROTEXT&#39;&quot;&gt;9b92f2ed-71cc-5569-b471-cf02c11b91a4&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MINIATURE&#39;&quot;&gt;690b1b65-132b-59f2-ac3a-8d5d166ab51e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MISSING&#39;&quot;&gt;58cf50db-06f5-50bf-b587-913005627e6a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MM-CDCAB&#39;&quot;&gt;f07d9e20-cf45-50a9-8c81-0786c2ea31c6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MM-DIZOCAB&#39;&quot;&gt;0adee205-4372-56d7-ad00-0819fb0fb392&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MM-OVERSIZ&#39;&quot;&gt;e0f71ed1-b084-51fb-93f9-98a7aabfbad6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;MM-STACKS&#39;&quot;&gt;64827c27-bb0d-5b36-b81b-1c2d7a7b4dec&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;NEWS-STKS&#39;&quot;&gt;736e5bde-9c0d-5943-97e4-6496000b0186&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;NEWTON&#39;&quot;&gt;cf05d582-6575-5b27-a019-8404aafa8c53&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;OVERSIZED&#39;&quot;&gt;9031d035-1760-5f15-9522-8622057406c2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PAGE-AR&#39;&quot;&gt;8b4c2412-30de-5add-af86-f26781800a9a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PAGE-AS&#39;&quot;&gt;24e89ce1-44ea-5e68-996c-6710b16ecda0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PAGE-GR&#39;&quot;&gt;fb6c38bd-9552-5ec8-80bc-e4eeb2b72fae&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PAGE-LP&#39;&quot;&gt;a68b0ae1-c554-5971-a0ab-2228e9686a24&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PAGE-MD&#39;&quot;&gt;5b5d0447-8848-51aa-8efb-175cdfc4f1ad&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PAGE-MP&#39;&quot;&gt;aae265ac-e2bb-5b57-b4e4-047482b1dded&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PAGE-MU&#39;&quot;&gt;4bef0621-dbad-54a5-97a8-0f8dea27de59&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PAGE-SP&#39;&quot;&gt;a3d2dec7-b814-5236-a8f6-4e609d784281&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;R-STACKS&#39;&quot;&gt;f6978558-1f14-5aa0-97fe-cbee1ba5b191&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;RARE-BOOKS&#39;&quot;&gt;4ad031ac-51e7-52ab-9f5d-ed8ba0305701&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;RAUB-COLL&#39;&quot;&gt;e59c6c79-675e-5aae-af4b-890f9c6afcfa&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;RAUB-NUM&#39;&quot;&gt;95ff9e28-8886-5694-89a8-14111f1a6805&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;RBC-30&#39;&quot;&gt;976c90e8-6c97-57d5-b754-6c75a7271e02&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;RECORDINGS&#39;&quot;&gt;06dd53fd-d8ef-53e4-9428-ccf6f5a15ccb&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;REFERENCE&#39;&quot;&gt;95023227-bba6-5ee4-8a54-7e18b679fa32&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SAL-FOLIO&#39;&quot;&gt;cd884002-7edb-5e77-b617-5c3834363782&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SAL-PAGE&#39;&quot;&gt;83da2745-7b2c-5123-b04a-5aee4a6bbb0f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SAL-TEMP&#39;&quot;&gt;169f7178-6264-5a79-adcd-a56aec14dfc3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SALTURKISH&#39;&quot;&gt;c010b00d-0f11-539f-bac4-4d1f18c0bdaa&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SCORES&#39;&quot;&gt;477c0428-f0d7-5a87-8dc7-e65bf45967d5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SEE-OTHER&#39;&quot;&gt;8eea8891-8249-5283-9635-e7acf7a3232d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SHELBYSER&#39;&quot;&gt;ea71de6c-d578-50cb-b273-d5b3e0e15f9b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SHELBYTITL&#39;&quot;&gt;0fad6c94-e1b6-55c6-8e7d-867ca06be985&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SOUTH-MEZZ&#39;&quot;&gt;a058bb89-06b3-5f8f-abd3-337dc29a417d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SSRC&#39;&quot;&gt;b3ad8808-109e-5932-afd1-0554f748c9b2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SSRC-FICHE&#39;&quot;&gt;7a2b8945-09a8-5aac-9b06-27e0e3578741&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SSRC-FILM&#39;&quot;&gt;48551d06-fe5c-51bb-a046-6068e2a23665&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SSRC-SSDS&#39;&quot;&gt;918ee461-88fa-5582-9aca-a24427de9864&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;SSRC-STATS&#39;&quot;&gt;410356b6-1e37-5a77-a29d-dd396b0446f4&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;STACKS&#39;&quot;&gt;6c290638-8012-59d4-9c85-51cdc90cfe37&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;STORAGE&#39;&quot;&gt;12ff98fa-267b-5c96-a54f-49175d01874e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;THESES&#39;&quot;&gt;edd4d58e-1637-57a4-a7c0-02e76d7e45ce&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TIMO-COLL&#39;&quot;&gt;69b949f1-362c-5871-9a8b-17d9f6f8b0a6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TINY&#39;&quot;&gt;e4f18eda-5c63-5058-9974-5bb6ed63543d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;U-ARCHIVES&#39;&quot;&gt;87207e5e-a69c-5cfb-a888-3de61969b680&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;UARCH-30&#39;&quot;&gt;b1281ace-06a5-5f39-88a0-dafdfd45eb61&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;UNCAT&#39;&quot;&gt;05506f7e-d5a6-59b2-8f59-70721ccdccb9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;VAULT&#39;&quot;&gt;ff08f18c-1f00-5499-8e0b-cad83786ce62&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;9b8ea9cb-9caf-5b7f-8473-a9c06d2fb3cc&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (US-CSt) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;a1decabf-302e-5e4f-9bbe-f11cbcde7296&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
