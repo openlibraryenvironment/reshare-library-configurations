@@ -13,7 +13,7 @@
        represents bib records from multiple libraries.
   -->
   <xsl:template match="//identifierTypeIdHere">
-    <identifierTypeId>04d081a1-5c52-4b84-8962-949fc5f6773c</identifierTypeId>
+    <identifierTypeId>3f6508b0-764b-4c99-b7f0-db542ac59b6c</identifierTypeId>
   </xsl:template>
 
   <!-- Map legacy location code to a FOLIO location UUID -->
@@ -36,6 +36,6 @@
 
   <!-- Set institutionId for Millersville -->
   <xsl:template match="//institutionIdHere">
-    <institutionId>b4578dbc-4dd9-4ac1-9c01-8a13f65aa95e</institutionId>> <!-- Millersville -->
+    <institutionId>c646eeb1-b4dc-4458-a4e0-a39c2a7d36cd</institutionId>> <!-- Millersville -->
   </xsl:template>
 </xsl:stylesheet>
