@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>362302</id>
+  <XmlTransformStep>
+    <id>362302</id>
+    <description>Maps locations, record identifier type for New School (new)</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, New School (new)</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;3f6508b0-764b-4c99-b7f0-db542ac59b6c&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TNSFOEZB&#39;&quot;&gt;a7671881-0585-4052-afa3-d5d971ebd840&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TNSFO&#39;&quot;&gt;63f962fb-fb4b-4436-895d-d620419d3412&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TNSGIEZB&#39;&quot;&gt;36767487-a102-479b-aa24-79258990c142&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TNSGI&#39;&quot;&gt;0a7b18cf-30d0-407e-856e-6441dcdca84b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TNSSCEZB&#39;&quot;&gt;3cd8cc4f-e989-4021-8ba6-95f7450cec22&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TNSSC&#39;&quot;&gt;93aebca8-ad00-454c-bb53-c2d7bc0c74ad&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TNSOSEZB&#39;&quot;&gt;a01c4d66-e472-44a3-981f-2da03647f117&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TNSOS&#39;&quot;&gt;365fbee1-a31b-4683-a0ee-623a0dbec87e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;TNSKE&#39;&quot;&gt;ed6969fb-585b-4704-840c-26cebfce13e9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;a2be9b49-a393-4b15-a236-47bdf97928c3&lt;/xsl:otherwise&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set institutionId for Millersville --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+    &lt;institutionId&gt;c646eeb1-b4dc-4458-a4e0-a39c2a7d36cd&lt;/institutionId&gt;&gt; &lt;!-- Millersville --&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
