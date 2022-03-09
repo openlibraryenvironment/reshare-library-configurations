@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <id>363201</id>
+    <basicTransformation>
+        <id>363201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>Bucknell - OAI-PMH to FOLIO Inventory</name>
+        <parallel>false</parallel>
+        <stepAssociations>
+            <id>363401</id>
+            <position>1</position>
+            <transformation>363201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>301303</id> <!-- MARC21 to Instance XML -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>363402</id>
+            <position>2</position>
+            <transformation>363201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>363301</id>  <!-- Bucknell holdings and items -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>363403</id>
+            <position>3</position>
+            <transformation>363201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>363302</id> <!-- Granular library codes, Bucknell -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>363404</id>
+            <position>4</position>
+            <transformation>363201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>301302</id> <!-- XML to JSON -->
+            </step>
+        </stepAssociations>
+    </basicTransformation>
+</transformation>
