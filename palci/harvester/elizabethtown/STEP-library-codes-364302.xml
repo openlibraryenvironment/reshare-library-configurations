@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>364302</id>
+  <XmlTransformStep>
+    <id>364302</id>
+    <description>Maps locations, record identifier type for Elizabethtown</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Elizabethtown</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;33fd9933-e956-509d-b3e5-f576904f71c0&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;best&#39;&quot;&gt;563c7b2b-8963-5035-be0b-73196fe6987f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;chem&#39;&quot;&gt;f984f8a4-330a-53ca-ad3b-487e530d5aff&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;chem-ref&#39;&quot;&gt;b008f9e7-bf1c-5b99-9e28-285060e82bc9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;circ&#39;&quot;&gt;66fdfdfd-590c-570a-86b9-8a6916a619a2&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;circ-res&#39;&quot;&gt;9946c4a8-8040-581a-8a1b-97458894e22b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;display&#39;&quot;&gt;88597dcc-691d-5349-8b02-934d0aa410d6&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;etown&#39;&quot;&gt;d7361ceb-48d1-56c0-832e-3c63060230ec&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;fac-dis&#39;&quot;&gt;d513592e-3e2d-5a2d-99cd-8cf2120ed91d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;games&#39;&quot;&gt;47f90639-3141-5c68-b086-3f2e86b8d225&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;juv&#39;&quot;&gt;b502c6ad-51d9-5165-b0ac-71cbbaa779e1&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;main&#39;&quot;&gt;b3da0ef0-9fb8-509d-9106-4427a6a5a842&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;mcfc&#39;&quot;&gt;f6dcd9a7-f88c-57de-9e06-dfbbbf467d75&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;mcfm&#39;&quot;&gt;35fd7a7a-8fe7-5705-9c6f-7088b9637a44&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;med-cass&#39;&quot;&gt;4966c1f3-f21f-5d99-acd6-8a4c58c890bb&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;med-cd&#39;&quot;&gt;9d02dfc7-24c8-5bef-991a-63cd42a0dc98&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;med-dvd&#39;&quot;&gt;b26393b6-c004-5a82-ae4a-8e23696d4607&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;med-lp&#39;&quot;&gt;43f5e6b4-6f52-5c13-8730-9c98deed3e14&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;med-vid&#39;&quot;&gt;a398a4ef-c352-5fb4-a840-7e0e8ba9037e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;new-books&#39;&quot;&gt;30e617fe-fb17-5131-af5d-a1586796c3d7&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;news&#39;&quot;&gt;cf98d523-a502-59b6-9770-7404e7ff2ed5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;onli&#39;&quot;&gt;56d5a399-2bdd-56a8-866a-e1bcfab7c2af&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;per&#39;&quot;&gt;9f9a5af3-d4c6-58bd-b343-3a95e0029654&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ref&#39;&quot;&gt;7ef2c070-0d1f-5bce-b803-4ca60c7d91e8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ref-desk&#39;&quot;&gt;8bf2713f-5386-59bb-8700-7354a9c36031&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;score&#39;&quot;&gt;afd71b23-d958-53b9-b1e0-252751f0cbd8&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;spec&#39;&quot;&gt;fde2e3e0-9ad2-590a-9d48-260b43be778b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;spec-spohn&#39;&quot;&gt;20518fe1-48f3-5e90-b3c5-e40b75c8aa0a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;tech&#39;&quot;&gt;5de48f01-2900-557c-b843-ef4aa54d5518&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;UNASSIGNED&#39;&quot;&gt;b204119a-9b44-5ed6-b012-d73849873a54&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;yng&#39;&quot;&gt;abe2ea9a-37ea-5a60-972d-b579ff9488be&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;yng-durn&#39;&quot;&gt;66c721cd-5b3a-5e31-88fe-018bb71a9791&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;ecb01902-4c61-5f5c-9248-a8cf047eb301&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (US-PEIC) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;0e6cc70b-d587-5ffb-8af1-3a05df405544&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
