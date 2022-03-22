@@ -16,6 +16,15 @@
     <identifierTypeId>205b23c4-87ec-581f-b3ce-c1a861da745e</identifierTypeId>
   </xsl:template>
 
+  <!-- <xsl:template match="//localIdentifier">
+    <localIdentifier><xsl:value-of select="concat('u', .)"/></localIdentifier>
+  </xsl:template> -->
+
+  <!-- We need a "u" to be placed in front of the local identifier -->
+  <xsl:template match="//identifiers/arr/i[1]/value">
+    <value><xsl:value-of select="concat('u', .)"/></value>
+  </xsl:template>
+
   <!-- Map legacy location code to a FOLIO location UUID -->
   <xsl:template match="//permanentLocationIdHere">
     <permanentLocationId>
