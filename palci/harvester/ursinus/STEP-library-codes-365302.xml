@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>365302</id>
+  <XmlTransformStep>
+    <id>365302</id>
+    <description>Maps locations, record identifier type for Ursinus</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Ursinus</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;a85d1b4c-77ba-51ab-acf0-d9a5ba244700&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Archives&#39;&quot;&gt;8e37a198-caa0-53e5-ba67-40995f1369cf&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Audiobooks&#39;&quot;&gt;f2ec71ef-b7c4-5c91-a3d2-8df023cc8329&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Being Cataloged&#39;&quot;&gt;1815df81-123a-5a92-b0b8-9ed8b2da7472&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Berman Books&#39;&quot;&gt;5b945a62-3850-5b55-9d16-3722e0a10adb&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Berman Museum of Art&#39;&quot;&gt;422aa3f8-6bbd-57e7-b619-7783b819e106&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Berman Museum Library&#39;&quot;&gt;6f23c7d9-9079-5a3a-9589-47e3a5c02c67&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Bestsellers&#39;&quot;&gt;c3a85f85-5004-59c9-82d9-47cc89ca64ee&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Career &amp;amp; Professional Development&#39;&quot;&gt;98881ebc-a8a3-54eb-86b7-fba41009e826&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Chemistry Department&#39;&quot;&gt;ce0c6f4b-9c4a-535f-94e8-08c644a380e3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Circulation Desk&#39;&quot;&gt;60fec491-85b7-5541-8ad2-ab08e8d42e51&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Data CDs&#39;&quot;&gt;bce4206e-3b6a-511a-8fe6-e71d0ded2b33&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;DVDs&#39;&quot;&gt;d5c8feb6-6b94-568c-87a9-485594dfc4e9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Eilts Collection&#39;&quot;&gt;75b5bcf6-065a-5d69-b1ea-5a753d427eab&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Faculty Publications&#39;&quot;&gt;2c1e5c50-7e8c-5503-9b4a-02c10922063b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Fine Arts Collection&#39;&quot;&gt;a1f22e9a-94bf-5264-aa57-defc5345b38e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Folio Collection&#39;&quot;&gt;f9cba811-318c-5fa4-b0c4-961c929bd06a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Founders Room&#39;&quot;&gt;2f1d4abc-5a67-585a-b5cb-cb36e6e222bc&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Juvenile Literature&#39;&quot;&gt;98a97701-9fe6-5351-a12d-feaf250004a5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Main Collection&#39;&quot;&gt;f926f340-2a21-58ab-aaca-cdfcf7411718&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Microforms&#39;&quot;&gt;8ffbe7e8-f8a9-5a5e-b5e8-ac23caf4a294&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Migration&#39;&quot;&gt;5b9c866b-add8-5eae-a63f-86bd13aa1032&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;New Books&#39;&quot;&gt;ea006924-295a-52a6-97ae-db94c53e7394&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Pennsylvania Folklife Society Collection&#39;&quot;&gt;643d23d4-1411-511e-a8a5-d74f7fc9f859&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Periodicals&#39;&quot;&gt;88b94195-59ba-50e3-b818-fc08e58a1c27&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Reference&#39;&quot;&gt;fb9b5fdf-2f2b-5304-a485-a3b3320b110d&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Reference Index Collection&#39;&quot;&gt;353a81fa-2d49-56e2-83b0-79684ec7f849&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Reserves - 1 week&#39;&quot;&gt;d7c42e56-4a83-55fa-99f0-34b4b2f17b61&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Reserves - 2 hour&#39;&quot;&gt;5d4361d0-6eeb-55ac-9e48-e29a8cb6468e&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Reserves - 3 day&#39;&quot;&gt;2ab0976d-dce8-5c6a-b6a6-569e238a67e9&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Reserves - overnight&#39;&quot;&gt;343b1979-ca56-5291-afd3-d4d0ac9161b5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Ritter Hall&#39;&quot;&gt;173ee091-aadb-571b-a108-d53e8467c709&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Ritter Slide Library&#39;&quot;&gt;82cb1dc1-9729-576c-aa8e-5ec05b541de3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Room 203&#39;&quot;&gt;876cde35-fa80-5e60-99e3-333fa031d4e3&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Student Art Collection&#39;&quot;&gt;776988a1-8a32-54e9-bcc1-cf33737328d5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Tech Support Center&#39;&quot;&gt;c69861a3-0709-523e-8e84-328c3836a8f4&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Technical Services&#39;&quot;&gt;b1ce0d1b-8bd4-5c17-8fcb-abe8474c3e6b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Vault&#39;&quot;&gt;6f69bbb7-e083-50dd-8d1e-96e961dcec54&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;Videocassettes&#39;&quot;&gt;3a803c35-7b3d-5b88-b63f-e488fab45786&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;c9f249c4-0bab-5c4a-860b-9d20f7ceb7b1&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (US-PCLVU) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;b1b1d035-3119-59b4-810f-a27403e56ddc&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
