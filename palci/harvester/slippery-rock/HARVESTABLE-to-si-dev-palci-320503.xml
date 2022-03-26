@@ -4,7 +4,7 @@
     <id>320503</id>
     <name>PALCI SI: Slippery Rock to SI dev - PALCI</name>
     <url>https://na01.alma.exlibrisgroup.com/view/oai/01SSHELCO_SLIPROCK/request</url>
-    <oaiSetName>reshare</oaiSetName>
+    <oaiSetName>PALCI_RESHARE</oaiSetName>
     <metadataPrefix>marc21</metadataPrefix>
     <storeOriginal>true</storeOriginal>
     <enabled>false</enabled>
