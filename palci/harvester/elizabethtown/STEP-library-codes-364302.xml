@@ -60,7 +60,7 @@
         &lt;xsl:when test=&quot;.=&#39;UNASSIGNED&#39;&quot;&gt;b204119a-9b44-5ed6-b012-d73849873a54&lt;/xsl:when&gt;&#xD;
         &lt;xsl:when test=&quot;.=&#39;yng&#39;&quot;&gt;abe2ea9a-37ea-5a60-972d-b579ff9488be&lt;/xsl:when&gt;&#xD;
         &lt;xsl:when test=&quot;.=&#39;yng-durn&#39;&quot;&gt;66c721cd-5b3a-5e31-88fe-018bb71a9791&lt;/xsl:when&gt;&#xD;
-        &lt;xsl:otherwise&gt;ecb01902-4c61-5f5c-9248-a8cf047eb301&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (US-PEIC) --&gt;&#xD;
+        &lt;xsl:otherwise&gt;ecb01902-4c61-5f5c-9248-a8cf047eb301&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (US-PELC) --&gt;&#xD;
       &lt;/xsl:choose&gt;&#xD;
     &lt;/permanentLocationId&gt;&#xD;
   &lt;/xsl:template&gt;&#xD;

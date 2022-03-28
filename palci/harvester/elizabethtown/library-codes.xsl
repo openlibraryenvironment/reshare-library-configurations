@@ -51,7 +51,7 @@
         <xsl:when test=".='UNASSIGNED'">b204119a-9b44-5ed6-b012-d73849873a54</xsl:when>
         <xsl:when test=".='yng'">abe2ea9a-37ea-5a60-972d-b579ff9488be</xsl:when>
         <xsl:when test=".='yng-durn'">66c721cd-5b3a-5e31-88fe-018bb71a9791</xsl:when>
-        <xsl:otherwise>ecb01902-4c61-5f5c-9248-a8cf047eb301</xsl:otherwise> <!-- Unmapped (US-PEIC) -->
+        <xsl:otherwise>ecb01902-4c61-5f5c-9248-a8cf047eb301</xsl:otherwise> <!-- Unmapped (US-PELC) -->
       </xsl:choose>
     </permanentLocationId>
   </xsl:template>
