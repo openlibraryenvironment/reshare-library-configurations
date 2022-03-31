@@ -4,10 +4,10 @@
 
 function usage {
   cat << EOU
-Usage: $0 <consortium> <format>
+Usage: $0 <format> <consortium>
 Where:
-  consortium : palci|cny|iplc (default=palci)
   format : short|long (default=short)
+  consortium : palci|cny|iplc (default=palci)
 
 The long format requires 'xq' (i.e. https://github.com/kislyuk/yq)
 
