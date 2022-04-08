@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <id>304201</id>
+    <basicTransformation>
+        <id>304201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>Seton Hall - MARC21 to FOLIO Inventory</name>
+        <parallel>false</parallel>
+        <stepAssociations>
+            <id>304401</id>
+            <position>1</position>
+            <transformation>304201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>301303</id> <!-- MARC21 to Instance XML -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>304402</id>
+            <position>2</position>
+            <transformation>304201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>304301</id>  <!-- Seton Hall holdings and items -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>304403</id>
+            <position>3</position>
+            <transformation>304201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>304302</id> <!-- High level library codes, Seton Hall -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>304404</id>
+            <position>4</position>
+            <transformation>304201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>301302</id> <!-- XML to JSON -->
+            </step>    
+        </stepAssociations>
+    </basicTransformation>
+</transformation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <basicTransformation>
+        <id>330201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>Lehigh - OAI-PMH to FOLIO Inventory</name>
+        <parallel>false</parallel>
+    </basicTransformation>
+</transformation>
