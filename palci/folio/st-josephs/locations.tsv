@@ -1,5 +1,7 @@
-sdsb1	Book shelves (1st fl.)
-sdsb2	Book shelves (2nd fl.)
-sdsb3	Book shelves (3rd fl.)
-sclsb	Campbell Coll.: Book shelves (2nd floor)
-sdccl	CMC Children's literature (2nd fl.)
+bks1	SD	Book shelves (1st fl.)
+bks2	SD	Book shelves (2nd fl.)
+bks3	SD	Book shelves (3rd fl.)
+campbk	SD	Campbell Coll.: Book shelves (2nd floor)
+cmclit	SD	CMC Children's literature (2nd fl.)
+Main	JWEL	Main Book
+Leisure	JWEL	Leisure

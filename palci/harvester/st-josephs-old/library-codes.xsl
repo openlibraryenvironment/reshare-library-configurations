@@ -13,22 +13,19 @@
        represents bib records from multiple libraries.
   -->
   <xsl:template match="//identifierTypeIdHere">
-    <identifierTypeId>8395ad8e-8728-598e-90be-fce9104ae939</identifierTypeId>
+    <identifierTypeId>ebafec6a-5f80-5b8d-9334-785ebd1a9c0b</identifierTypeId>
   </xsl:template>
 
   <!-- Map legacy location code to a FOLIO location UUID -->
   <xsl:template match="//permanentLocationIdHere">
     <permanentLocationId>
       <xsl:choose>
-        <xsl:when test=".='JWEL Main'">f2a4ab03-ad8d-5bd3-b679-62a8f030bfe6</xsl:when>
-        <xsl:when test=".='JWEL Leisure'">fd0e40f8-1c9b-5722-bd85-8fa24b2bc595</xsl:when>
-        <xsl:when test="starts-with(., 'JWEL')">e69222f3-c67b-51fe-92b4-feffaaf596cb</xsl:when> <!-- Unmapped (JWEL)-->
-        <xsl:when test=".='SD bks1'">750ad9e9-8a81-558c-8755-4b03491d3b40</xsl:when>
-        <xsl:when test=".='SD bks2'">4e810a0e-bca5-5ed8-86c7-1869e8b7c837</xsl:when>
-        <xsl:when test=".='SD bks3'">d47e88fc-7dcf-5112-a027-eb62f72d7b4e</xsl:when>
-        <xsl:when test=".='SD campbk'">7deac4f7-0f68-599e-936b-530ed9a487c2</xsl:when>
-        <xsl:when test=".='SD cmclit'">5e633c0f-1979-58f3-8277-fc0c3bcbb047</xsl:when>
-        <xsl:otherwise>01962fa1-5ef8-596f-89e4-bc0f29a44c6d</xsl:otherwise> <!-- Unmapped (SD) -->
+        <xsl:when test=".='sdsb1'">c03d2588-01b9-52c9-8749-9e9b798b70d1</xsl:when>
+        <xsl:when test=".='sdsb2'">804368fd-e1b2-59f3-8d99-a0041598cfba</xsl:when>
+        <xsl:when test=".='sdsb3'">e9154672-86b8-519f-89cb-43952b0699ec</xsl:when>
+        <xsl:when test=".='sclsb'">1e79edda-b3f6-50fc-b9d8-7a4820ba4f30</xsl:when>
+        <xsl:when test=".='sdccl'">580a72e0-d2dc-5781-b6b0-aa35731e58f6</xsl:when>
+        <xsl:otherwise>e4144b1a-d652-5a1f-a47d-ea2f00ac4515</xsl:otherwise>
       </xsl:choose>
     </permanentLocationId>
   </xsl:template>
