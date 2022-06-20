@@ -1,0 +1,1493 @@
+{
+  "clusterId": "0000082c-34a7-4ae2-83f8-49854614079e",
+  "records": [
+    {
+      "globalId": "2faad0d6-007c-4d5f-9583-4b3ca71604cb",
+      "localId": "1629466",
+      "sourceId": "US-NNC",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "1629466"
+            },
+            {
+              "005": "20190905200614.0"
+            },
+            {
+              "008": "730302s1972    xx            000 0 ger u"
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "   72361224 "
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)ocm00567827"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "9": "AKN8849CU"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "1629466"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "c": "KSU"
+                  },
+                  {
+                    "d": "ZCU"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": "0",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "DD801.B423"
+                  },
+                  {
+                    "b": "N54 1972"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Niethammer, Lutz,"
+                  },
+                  {
+                    "d": "1939-"
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/names/n80096692"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Entnazifizierung in Bayern ;"
+                  },
+                  {
+                    "b": "Säuberung und Rehabilitierung unter amerikanischer Besatzung."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "[Frankfurt am Main] :"
+                  },
+                  {
+                    "b": "S. Fischer,"
+                  },
+                  {
+                    "c": "[1972]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "710 pages ;"
+                  },
+                  {
+                    "c": "23 cm"
+                  }
+                ]
+              }
+            },
+            {
+              "336": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "text"
+                  },
+                  {
+                    "2": "rdacontent"
+                  }
+                ]
+              }
+            },
+            {
+              "337": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "unmediated"
+                  },
+                  {
+                    "2": "rdamedia"
+                  }
+                ]
+              }
+            },
+            {
+              "338": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "volume"
+                  },
+                  {
+                    "2": "rdacarrier"
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Originally presented as the author's thesis, Heidelberg."
+                  }
+                ]
+              }
+            },
+            {
+              "504": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Bibliography: p. [677]-693."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Bavaria (Germany)"
+                  },
+                  {
+                    "x": "Politics and government"
+                  },
+                  {
+                    "y": "1945-"
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85012479"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Denazification."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85036692"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Germany (West)"
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/names/n80125937"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "AUTH"
+                  }
+                ]
+              }
+            },
+            {
+              "965": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "rcp3456"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "MARS"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "0": "2009924"
+                  },
+                  {
+                    "a": "Butler Stacks (Enter at the Butler Circulation Desk)"
+                  },
+                  {
+                    "b": "glx"
+                  },
+                  {
+                    "h": "DD801.B423 N54 1972"
+                  },
+                  {
+                    "x": "SNOK"
+                  }
+                ]
+              }
+            },
+            {
+              "876": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "0": "2009924"
+                  },
+                  {
+                    "a": "2079084"
+                  },
+                  {
+                    "p": "0105905435"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "0": "2009925"
+                  },
+                  {
+                    "a": "Offsite - Place Request for delivery within 2 business days"
+                  },
+                  {
+                    "b": "off,glx"
+                  },
+                  {
+                    "h": "DD801.B423 N54 1972"
+                  }
+                ]
+              }
+            },
+            {
+              "876": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "0": "2009925"
+                  },
+                  {
+                    "a": "2079085"
+                  },
+                  {
+                    "p": "1002463989"
+                  }
+                ]
+              }
+            },
+            {
+              "990": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DD"
+                  }
+                ]
+              }
+            },
+            {
+              "991": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DD801.B423 N54 1972"
+                  },
+                  {
+                    "b": "loc+DD-+0801+00000000+B4230000+N5400000+001972"
+                  }
+                ]
+              }
+            },
+            {
+              "992": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Butler Stacks"
+                  },
+                  {
+                    "b": "Butler Stacks (Enter at the Butler Circulation Desk) >> DD801.B423 N54 1972|DELIM|2009924"
+                  }
+                ]
+              }
+            },
+            {
+              "992": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Offsite"
+                  },
+                  {
+                    "b": "Offsite - Place Request for delivery within 2 business days >> DD801.B423 N54 1972|DELIM|2009925"
+                  }
+                ]
+              }
+            },
+            {
+              "995": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "catalog"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "NNC"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01872cam a2200433   4500"
+        },
+        "inventory": {
+          "localIdentifier": "1629466"
+        }
+      }
+    },
+    {
+      "globalId": "0099926e-e8b5-431a-b12e-4a58133ff794",
+      "localId": "999220033503681",
+      "sourceId": "US-PU",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "999220033503681"
+            },
+            {
+              "005": "20220122232338.0"
+            },
+            {
+              "008": "850903s1972                        ger d"
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "   72361224 "
+                  }
+                ]
+              }
+            },
+            {
+              "020": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "3100524020"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)ocm00567827"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)567827"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(CaOTULAS)146978878"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "9": "AEJ8018"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "922003"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(PU)922003-penndb-Voyager"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "PU"
+                  },
+                  {
+                    "c": "PSt"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DD801.B423"
+                  },
+                  {
+                    "b": "N54 1972"
+                  }
+                ]
+              }
+            },
+            {
+              "090": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DD801.B423"
+                  },
+                  {
+                    "b": "N54 1972"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Niethammer, Lutz,"
+                  },
+                  {
+                    "d": "1939-"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Entnazifizierung in Bayern,"
+                  },
+                  {
+                    "b": "Säuberung und Rehabilitierung unter amerikanischer Besatzung."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "[Frankfurt am Main],"
+                  },
+                  {
+                    "b": "S. Fischer,"
+                  },
+                  {
+                    "c": "[1972]."
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "710 p."
+                  },
+                  {
+                    "c": "23 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "503": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Originally presented as the author's thesis, Heidelberg."
+                  }
+                ]
+              }
+            },
+            {
+              "504": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Bibliography: p. [677]-693."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Denazification"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Bavaria (Germany)"
+                  },
+                  {
+                    "x": "Politics and government"
+                  },
+                  {
+                    "y": "1945-"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Germany (Territory under Allied occupation, 1945-1955 : U.S. Zone)"
+                  }
+                ]
+              }
+            },
+            {
+              "950": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "l": "VPL"
+                  }
+                ]
+              }
+            },
+            {
+              "955": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "l": "VPL"
+                  },
+                  {
+                    "c": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "PU"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01084cam a22003371  4500"
+        },
+        "inventory": {
+          "localIdentifier": "999220033503681"
+        }
+      }
+    },
+    {
+      "globalId": "34ca523c-87b6-459f-a8e4-22ae18afa44c",
+      "localId": "a1178740",
+      "sourceId": "US-CST",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "a1178740"
+            },
+            {
+              "003": "SIRSI"
+            },
+            {
+              "005": "20220312050002.0"
+            },
+            {
+              "008": "860506s1972    gw       b    000 0 ger  "
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "   72361224"
+                  }
+                ]
+              }
+            },
+            {
+              "015": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "GDB***"
+                  }
+                ]
+              }
+            },
+            {
+              "020": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "3100524020"
+                  }
+                ]
+              }
+            },
+            {
+              "020": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "9783100524027"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(CStRLIN)CSUG86-B40035"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC-M)567827"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC-I)273260289"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "c": "NN"
+                  },
+                  {
+                    "d": "NN"
+                  },
+                  {
+                    "d": "OrLoB"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DD801.B423"
+                  },
+                  {
+                    "b": "N54 1972"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Niethammer, Lutz,"
+                  },
+                  {
+                    "d": "1939-"
+                  },
+                  {
+                    "=": "^A181374"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Entnazifizierung in Bayern;"
+                  },
+                  {
+                    "b": "Säuberung und Rehabilitierung unter amerikanischer Besatzung."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "[Frankfurt am Main]"
+                  },
+                  {
+                    "b": "S. Fischer"
+                  },
+                  {
+                    "c": "[1972]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "710 p. "
+                  },
+                  {
+                    "c": "23 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "502": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Originally presented as the author's thesis, Heidelberg."
+                  }
+                ]
+              }
+            },
+            {
+              "504": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Bibliography: p. [677]-693."
+                  }
+                ]
+              }
+            },
+            {
+              "596": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "31"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Denazification."
+                  },
+                  {
+                    "=": "^A1010629"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Bavaria (Germany)"
+                  },
+                  {
+                    "x": "Politics and government"
+                  },
+                  {
+                    "y": "1945-"
+                  },
+                  {
+                    "=": "^A996986"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Germany (West)"
+                  },
+                  {
+                    "=": "^A193080"
+                  }
+                ]
+              }
+            },
+            {
+              "916": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DATE CATALOGED"
+                  },
+                  {
+                    "b": "19910824"
+                  }
+                ]
+              }
+            },
+            {
+              "999": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DD801.B423 N54 1972"
+                  },
+                  {
+                    "w": "LC"
+                  },
+                  {
+                    "c": "1"
+                  },
+                  {
+                    "i": "36105037962722"
+                  },
+                  {
+                    "d": "6/25/2011"
+                  },
+                  {
+                    "e": "12/15/1994"
+                  },
+                  {
+                    "l": "STACKS"
+                  },
+                  {
+                    "m": "SAL3"
+                  },
+                  {
+                    "n": "2"
+                  },
+                  {
+                    "q": "1"
+                  },
+                  {
+                    "r": "Y"
+                  },
+                  {
+                    "s": "Y"
+                  },
+                  {
+                    "t": "STKS-MONO"
+                  },
+                  {
+                    "u": "5/6/1986"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "CSt"
+                  }
+                ]
+              }
+            },
+            {
+              "998": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "8": "999.0\\p"
+                  },
+                  {
+                    "a": "DD801.B423 N54 1972"
+                  },
+                  {
+                    "i": "36105037962722"
+                  },
+                  {
+                    "m": "SAL3"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01238nam a2200349u  4500"
+        },
+        "inventory": {
+          "localIdentifier": "a1178740"
+        }
+      }
+    },
+    {
+      "globalId": "0f838fda-4ae8-4da8-a3e6-ec5c7a3c3db1",
+      "localId": "a3095793",
+      "sourceId": "US-CST",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "a3095793"
+            },
+            {
+              "003": "SIRSI"
+            },
+            {
+              "005": "20220312050002.0"
+            },
+            {
+              "008": "730302s1972    xx            000 0 ger u"
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "   72361224"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(CSt-H)notisAQC4244"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC-M)567827"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC-I)275156765"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "c": "KSU"
+                  },
+                  {
+                    "d": "IXA"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DD801.B423"
+                  },
+                  {
+                    "b": "N54 1972"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Niethammer, Lutz,"
+                  },
+                  {
+                    "d": "1939-"
+                  },
+                  {
+                    "=": "^A181374"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Entnazifizierung in Bayern;"
+                  },
+                  {
+                    "b": "Säuberung und Rehabilitierung unter amerikanischer Besatzung."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "[Frankfurt am Main]"
+                  },
+                  {
+                    "b": "S. Fischer"
+                  },
+                  {
+                    "c": "[1972]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "710 p."
+                  },
+                  {
+                    "c": "23 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Originally presented as the author's thesis, Heidelberg."
+                  }
+                ]
+              }
+            },
+            {
+              "504": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Bibliography: p. [677]-693."
+                  }
+                ]
+              }
+            },
+            {
+              "596": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "25"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Denazification."
+                  },
+                  {
+                    "=": "^A1010629"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Bavaria (Germany)"
+                  },
+                  {
+                    "x": "Politics and government"
+                  },
+                  {
+                    "y": "1945-"
+                  },
+                  {
+                    "=": "^A996986"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Germany (West)"
+                  },
+                  {
+                    "=": "^A193080"
+                  }
+                ]
+              }
+            },
+            {
+              "916": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DATE CATALOGED"
+                  },
+                  {
+                    "b": "19960129"
+                  }
+                ]
+              }
+            },
+            {
+              "999": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DD801.B423 N66"
+                  },
+                  {
+                    "w": "LC"
+                  },
+                  {
+                    "c": "1"
+                  },
+                  {
+                    "i": "001AQC4244"
+                  },
+                  {
+                    "d": "8/7/1996"
+                  },
+                  {
+                    "l": "STACKS"
+                  },
+                  {
+                    "m": "HOOVER"
+                  },
+                  {
+                    "r": "Y"
+                  },
+                  {
+                    "s": "Y"
+                  },
+                  {
+                    "t": "STKS"
+                  },
+                  {
+                    "u": "1/29/1996"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "CSt"
+                  }
+                ]
+              }
+            },
+            {
+              "998": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "8": "999.0\\p"
+                  },
+                  {
+                    "a": "DD801.B423 N66"
+                  },
+                  {
+                    "i": "001AQC4244"
+                  },
+                  {
+                    "m": "HOOVER"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01112nam a22003131  4500"
+        },
+        "inventory": {
+          "localIdentifier": "a3095793"
+        }
+      }
+    }
+  ],
+  "datestamp": "2022-06-15T18:37:38.875395Z",
+  "matchValues": [
+    "entnazifizierung_in_bayernsauberung_und_rehabilitierung_unter_amerikan_____1972_______sfisca________________________________________niethammer__lutz___________________p"
+  ]
+}
