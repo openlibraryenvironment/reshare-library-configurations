@@ -1,7 +1,9 @@
 const localFields = {
   'US-CST': { 
     item: { tag: '999', a: 'ml', i: 'i', c: 'a', d: 'w' },
-    lendable: {
+    rules: {
+      'ARS STACKS': { l: 1 },
+      'SAL3 STACKS': { l: 1 }
     }
   }
 };
@@ -34,11 +36,13 @@ export function cluster_transform(clusterStr) {
     let sid = r.sourceId;
     let lid = r.localId;
     let rec = (r.payload) ? r.payload.marc : '';
+    let matType = rec.leader.substring(6,8);
     let fields = getFields(rec);
     let locFields = localFields[sid];
     let itemTag = (locFields) ? locFields.item.tag : '';
     if (fields[itemTag]) {
       fields[itemTag].forEach(f => {
+        let loc;
         let outField = {
           '999': {
             ind1: '1',
@@ -46,7 +50,7 @@ export function cluster_transform(clusterStr) {
             subfields: [
               { l: lid },
               { s: sid },
-              { p: 'LOANABLE' }
+              { t: matType }
             ]
           }
         };
@@ -61,10 +65,20 @@ export function cluster_transform(clusterStr) {
               }
             });
             let obj = {};
-            obj[code] = data.join(' ');
+            let text = data.join(' ');
+            obj[code] = text;
             outField['999'].subfields.push(obj);
+            if (code === 'a') loc = text;
           }
         }
+        let rulesObj = {};
+        let rules = locFields.rules[loc];
+        if (rules && rules.l === 1) {
+          rulesObj.p = 'LOANABLE';
+        } else {
+          rulesObj.p = 'UNLOANABLE';
+        }
+        outField['999'].subfields.push(rulesObj);
         r.payload.marc.fields.push(outField);
         // console.log(JSON.stringify(r, null, 2));
       });
