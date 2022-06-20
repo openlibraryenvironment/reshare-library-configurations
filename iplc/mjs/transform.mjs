@@ -80,9 +80,8 @@ export function cluster_transform(clusterStr) {
         }
         outField['999'].subfields.push(rulesObj);
         r.payload.marc.fields.push(outField);
-        // console.log(JSON.stringify(r, null, 2));
       });
     }
   });
-  console.log(JSON.stringify(cluster, null, 2));
+  return JSON.stringify(cluster, null, 2);
 }
