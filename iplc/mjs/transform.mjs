@@ -1,6 +1,8 @@
 const localFields = {
   'US-CST': { 
-    item: { tag: '999', l: 'ml', b: 'i' }
+    item: { tag: '999', a: 'ml', i: 'i', c: 'a', d: 'w' },
+    lendable: {
+    }
   }
 };
 
@@ -16,21 +18,14 @@ function getFields(rec) {
   return out;
 }
 
-function getSubs(field, code, delimiter) {
-  let data = [];
-  let dlim = delimiter || ' ';
-  if (field.subfields) {
-    field.subfields.forEach(s => {
-      for (let c in s) {
-        if (!code || code.match(c)) {
-          data.push(s[c]);
-        }
-      }
-    });
-    return data.join(dlim);
-  } else {
-    return field;
-  }
+function getSubs(field) {
+  let subs = {};
+  field.subfields.forEach(s => {
+    let code = Object.keys(s);
+    if (!subs[code]) subs[code] = [];
+    subs[code].push(s[code]);
+  });
+  return subs;
 }
 
 export function cluster_transform(clusterStr) {
@@ -44,9 +39,36 @@ export function cluster_transform(clusterStr) {
     let itemTag = (locFields) ? locFields.item.tag : '';
     if (fields[itemTag]) {
       fields[itemTag].forEach(f => {
-        let location = getSubs(f, locFields.item.l);
-        console.log(location);
+        let outField = {
+          '999': {
+            ind1: '1',
+            ind2: '1',
+            subfields: [
+              { l: lid },
+              { s: sid },
+              { p: 'LOANABLE' }
+            ]
+          }
+        };
+        let subs = getSubs(f);
+        for (let code in locFields.item) {
+          if (code.length === 1) {
+            let data = [];
+            locFields.item[code].split('').forEach(c => {
+              if (subs[c]) {
+                let text = subs[c].join(' ');
+                data.push(text);
+              }
+            });
+            let obj = {};
+            obj[code] = data.join(' ');
+            outField['999'].subfields.push(obj);
+          }
+        }
+        r.payload.marc.fields.push(outField);
+        // console.log(JSON.stringify(r, null, 2));
       });
     }
   });
+  console.log(JSON.stringify(cluster, null, 2));
 }
