@@ -97,11 +97,24 @@ export function cluster_transform(clusterStr) {
   let fields = [];
   const f001 = cluster.clusterId;
   let f008 = '';
+  let f999s = [];
   let tiSeen = 0;
   for (let x = 0; x < crecs.length; x++) {
     let crec = crecs[x];
     let rec = crec.payload.marc;
     out.leader = rec.leader;
+    let f999 = {
+      ind1: '1',
+      ind2: '0',
+      subfields: [
+        { i: cluster.clusterId },
+        { l: crec.localId },
+        { s: crec.sourceId }
+      ]
+    };
+    for (let a = 0; a < cluster.matchValues.length; a++) {
+      f999.subfields.push({ m: cluster.matchValues[a] });
+    }
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
       let tag = Object.keys(field)[0];
@@ -115,6 +128,7 @@ export function cluster_transform(clusterStr) {
       }
       if (tag === '008') f008 = field['008'];
     }
+    f999s.push({ '999': f999 });
   }
   fields.sort();
   let preKey = '';
@@ -131,6 +145,7 @@ export function cluster_transform(clusterStr) {
   out.fields.unshift({ '008': f008 });
   out.fields.unshift({ '005': f005 });
   out.fields.unshift({ '001': f001 });
+  out.fields.push(...f999s);
   return JSON.stringify(out, null, 2);
 }
 
