@@ -10,7 +10,7 @@ const localFields = {
       d: 'w'
     }
   }
-}
+};
 
 export function cluster_transform(clusterStr) {
   let now = new Date().toISOString();
@@ -31,6 +31,26 @@ export function cluster_transform(clusterStr) {
     let lid = crec.localId;
     let rec = crec.payload.marc;
     out.leader = rec.leader;
+    let mt = rec.leader.substring(6, 7);
+    let bl = rec.leader.substring(7, 8);
+    let mtype = '';
+    if (bl.match(/[sb]/)) {
+      mtype = 'CNR';
+    } else if (mt.match(/[at]/)) {
+      mtype = 'BKS';
+    } else if (mt === 'm') {
+      mtype = 'COM';
+    } else if (mt.match(/[ef]/)) {
+      mtype = 'MAP';
+    } else if (mt.match(/[cd]/)) {
+      mtype = 'SCO';
+    } else if (mt.match(/[if]/)) {
+      mtype = 'REC';
+    } else if (mt === 'g') {
+      mtype = 'VIS';
+    } else {
+      mtype = 'MIX';
+    }
     let f999 = {
       ind1: '1',
       ind2: '0',
@@ -58,7 +78,7 @@ export function cluster_transform(clusterStr) {
     }
     f999s.push({ '999': f999 });
 
-    // normal item fields
+    // normalized item fields
     let lf = localFields[sid];
     if (lf) {
       let policy = 'LOANABLE';
@@ -72,7 +92,8 @@ export function cluster_transform(clusterStr) {
             subfields: [
               { l: lid },
               { s: sid },
-              { p: policy }
+              { p: policy },
+              { t: mtype }
             ]
           }
         }
