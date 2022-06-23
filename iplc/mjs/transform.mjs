@@ -8,7 +8,8 @@ const localFields = {
       b: 'i',
       c: 'a',
       d: 'w'
-    }
+    },
+    lendableLocs: '|ARS STACKS|ART STACKS|EARTH-SCI ATLASES|EARTH-SCI MEZZANINE|EARTH-SCI STACKS|EARTH-SCI TECH-RPTS|EAST-ASIA CHINESE|EAST-ASIA JAPANESE|EAST-ASIA KOREAN|EDUCATION STACKS|EDUCATION STORAGE|GREEN CALIF-DOCS|GREEN FED-DOCS|GREEN FOLIO-FLAT|GREEN INTL-DOCS|GREEN STACKS|MUSIC FOLIO|MUSIC MINIATURE|MUSIC SCORES|MUSIC STACKS|SAL SAL-ARABIC|SAL SAL-FOLIO|SAL SAL-PAGE|SAL SALTURKISH|SAL SOUTH-MEZZ|SAL STACKS|SAL3 STACKS|SCIENCE STACKS|'
   }
 };
 
@@ -31,6 +32,8 @@ export function cluster_transform(clusterStr) {
     let lid = crec.localId;
     let rec = crec.payload.marc;
     out.leader = rec.leader;
+
+    // figure out mtypes from leader codes
     let mt = rec.leader.substring(6, 7);
     let bl = rec.leader.substring(7, 8);
     let mtype = '';
@@ -51,6 +54,7 @@ export function cluster_transform(clusterStr) {
     } else {
       mtype = 'MIX';
     }
+
     let f999 = {
       ind1: '1',
       ind2: '0',
@@ -81,7 +85,6 @@ export function cluster_transform(clusterStr) {
     // normalized item fields
     let lf = localFields[sid];
     if (lf) {
-      let policy = 'LOANABLE';
       let items = jp.query(rec.fields, `$..${lf.tag}.subfields`);
       for (let i = 0; i < items.length; i++) {
         let item = items[i];
@@ -92,7 +95,6 @@ export function cluster_transform(clusterStr) {
             subfields: [
               { l: lid },
               { s: sid },
-              { p: policy },
               { t: mtype }
             ]
           }
@@ -106,6 +108,13 @@ export function cluster_transform(clusterStr) {
             fdata.push(res);
           }
           let text = fdata.join(' ');
+          if (c === 'a') {
+            let policy = 'UNLOANABLE';
+            if (lf.lendableLocs.match(text)) {
+              policy = 'LOANABLE';
+            }
+            outItem['999'].subfields.push({ p: policy });
+          }
           if (text) {
             let obj = {};
             obj[c] = text;
