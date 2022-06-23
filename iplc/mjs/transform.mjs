@@ -101,6 +101,9 @@ export function cluster_transform(clusterStr) {
   let tiSeen = 0;
   for (let x = 0; x < crecs.length; x++) {
     let crec = crecs[x];
+    let sid = crec.sourceId;
+    let lid = crec.localId;
+
     let rec = crec.payload.marc;
     out.leader = rec.leader;
     let f999 = {
@@ -108,8 +111,8 @@ export function cluster_transform(clusterStr) {
       ind2: '0',
       subfields: [
         { i: cluster.clusterId },
-        { l: crec.localId },
-        { s: crec.sourceId }
+        { l: lid },
+        { s: sid }
       ]
     };
     for (let a = 0; a < cluster.matchValues.length; a++) {
