@@ -121,7 +121,7 @@ export function cluster_transform(clusterStr) {
       if (tag > '009' && tag < '831') {
         if (tag !== '245' || tag === '245' && !tiSeen) {
           let fkey = JSON.stringify(field);
-          fkey = fkey.replace(/,{"=":".*?"}/,''); // remove and local authority links from record.
+          fkey = fkey.replace(/,{"(=|0)":".*?"}/,''); // remove and local authority links from record.
           fields.push(fkey);
         }
         if (tag === '245') tiSeen = 1;
