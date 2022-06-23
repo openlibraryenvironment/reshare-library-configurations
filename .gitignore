@@ -4,3 +4,4 @@ ignored-by-git/
 .vscode/
 .idea/
 *.ini
+node-modules/
