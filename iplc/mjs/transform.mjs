@@ -1,90 +1,15 @@
+import jp from 'jsonpath';
+
 const localFields = {
   'US-CST': { 
-    item: { tag: '999', a: 'ml', i: 'i', c: 'a', d: 'w' },
-    rules: {
-      'ARS STACKS': { l: 1 },
-      'SAL3 STACKS': { l: 1 }
+    tag: '999',
+    subs: {
+      a: 'ml',
+      b: 'i',
+      c: 'a',
+      d: 'w'
     }
   }
-};
-
-function getFields(rec) {
-  let tags = [];
-  let out = {};
-  rec.fields.forEach(f => {
-    for (let t in f) {
-      if (!out[t]) out[t] = [];
-      out[t].push(f[t]);
-    }
-  });
-  return out;
-}
-
-function getSubs(field) {
-  let subs = {};
-  field.subfields.forEach(s => {
-    let code = Object.keys(s);
-    if (!subs[code]) subs[code] = [];
-    subs[code].push(s[code]);
-  });
-  return subs;
-}
-
-function cluster_transform_old(clusterStr) {
-  
-  let cluster = JSON.parse(clusterStr);
-  cluster.records.forEach(r => {
-    let sid = r.sourceId;
-    let lid = r.localId;
-    let rec = r.payload.marc;
-    let matType = rec.leader.substring(6, 8);
-    let fields = getFields(rec);
-    let locFields = localFields[sid];
-    let itemTag = (locFields) ? locFields.item.tag : '';
-    if (fields[itemTag]) {
-      fields[itemTag].forEach(f => {
-        let loc;
-        let outField = {
-          '999': {
-            ind1: '1',
-            ind2: '1',
-            subfields: [
-              { l: lid },
-              { s: sid },
-              { t: matType }
-            ]
-          }
-        };
-        let subs = getSubs(f);
-        for (let code in locFields.item) {
-          if (code.length === 1) {
-            let data = [];
-            locFields.item[code].split('').forEach(c => {
-              if (subs[c]) {
-                let text = subs[c].join(' ');
-                data.push(text);
-              }
-            });
-            let obj = {};
-            let text = data.join(' ');
-            obj[code] = text;
-            outField['999'].subfields.push(obj);
-            if (code === 'a') loc = text;
-          }
-        }
-        let rulesObj = {};
-        let rules = locFields.rules[loc];
-        if (rules && rules.l === 1) {
-          rulesObj.p = 'LOANABLE';
-        } else {
-          rulesObj.p = 'UNLOANABLE';
-        }
-        outField['999'].subfields.push(rulesObj);
-        r.payload.marc.fields.push(outField);
-      });
-    }
-  });
-  return JSON.stringify(cluster, null, 2);
 }
 
 export function cluster_transform(clusterStr) {
@@ -99,11 +24,11 @@ export function cluster_transform(clusterStr) {
   let f008 = '';
   let f999s = [];
   let tiSeen = 0;
+  let outItems = [];
   for (let x = 0; x < crecs.length; x++) {
     let crec = crecs[x];
     let sid = crec.sourceId;
     let lid = crec.localId;
-
     let rec = crec.payload.marc;
     out.leader = rec.leader;
     let f999 = {
@@ -132,7 +57,45 @@ export function cluster_transform(clusterStr) {
       if (tag === '008') f008 = field['008'];
     }
     f999s.push({ '999': f999 });
+
+    // normal item fields
+    let lf = localFields[sid];
+    if (lf) {
+      let policy = 'LOANABLE';
+      let items = jp.query(rec.fields, `$..${lf.tag}.subfields`);
+      for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+        let outItem = {
+          '999' : {
+            ind1: 1,
+            ind2: 1,
+            subfields: [
+              { l: lid },
+              { s: sid },
+              { p: policy }
+            ]
+          }
+        }
+        for (let c in lf.subs) {
+          let codes = lf.subs[c].split('');
+          let fdata = [];
+          for (let x = 0; x < codes.length; x++) {
+            let code = codes[x];
+            let res = jp.query(item, `$..${code}`);
+            fdata.push(res);
+          }
+          let text = fdata.join(' ');
+          if (text) {
+            let obj = {};
+            obj[c] = text;
+            outItem['999'].subfields.push(obj);
+          }
+        }
+        outItems.push(outItem);
+      }
+    }
   }
+
   fields.sort();
   let preKey = '';
   out.fields = [];
@@ -149,6 +112,7 @@ export function cluster_transform(clusterStr) {
   out.fields.unshift({ '005': f005 });
   out.fields.unshift({ '001': f001 });
   out.fields.push(...f999s);
+  out.fields.push(...outItems);
   return JSON.stringify(out, null, 2);
 }
 
