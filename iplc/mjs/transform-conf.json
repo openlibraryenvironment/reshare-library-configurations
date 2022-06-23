@@ -1,0 +1,7 @@
+{
+  "id": "transformer",
+  "method": "javascript",
+  "params": {
+    "url": "https://raw.githubusercontent.com/openlibraryenvironment/reshare-library-configurations/master/iplc/mjs/transform.mjs"
+  }
+}
