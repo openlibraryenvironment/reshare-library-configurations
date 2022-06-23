@@ -108,6 +108,7 @@ export function cluster_transform(clusterStr) {
       if (tag > '009' && tag < '831') {
         if (tag !== '245' || tag === '245' && !tiSeen) {
           let fkey = JSON.stringify(field);
+          fkey = fkey.replace(/,{"=":".*?"}/,''); // remove and local authority links from record.
           fields.push(fkey);
         }
         if (tag === '245') tiSeen = 1;
@@ -126,6 +127,7 @@ export function cluster_transform(clusterStr) {
     }
     preKey = fkey;
   }
+  out.leader = out.leader.replace(/^....../, '00000n');
   out.fields.unshift({ '008': f008 });
   out.fields.unshift({ '005': f005 });
   out.fields.unshift({ '001': f001 });
