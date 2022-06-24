@@ -1,5 +1,3 @@
-import jp from 'jsonpath';
-
 const localFields = {
   'US-CST': { 
     tag: '999',
@@ -12,6 +10,16 @@ const localFields = {
     lendableLocs: '|ARS STACKS|ART STACKS|EARTH-SCI ATLASES|EARTH-SCI MEZZANINE|EARTH-SCI STACKS|EARTH-SCI TECH-RPTS|EAST-ASIA CHINESE|EAST-ASIA JAPANESE|EAST-ASIA KOREAN|EDUCATION STACKS|EDUCATION STORAGE|GREEN CALIF-DOCS|GREEN FED-DOCS|GREEN FOLIO-FLAT|GREEN INTL-DOCS|GREEN STACKS|MUSIC FOLIO|MUSIC MINIATURE|MUSIC SCORES|MUSIC STACKS|SAL SAL-ARABIC|SAL SAL-FOLIO|SAL SAL-PAGE|SAL SALTURKISH|SAL SOUTH-MEZZ|SAL STACKS|SAL3 STACKS|SCIENCE STACKS|'
   }
 };
+
+function getSubs(field) {
+  let subs = {};
+  field.subfields.forEach(s => {
+    let code = Object.keys(s);
+    if (!subs[code]) subs[code] = [];
+    subs[code].push(s[code]);
+  });
+  return subs;
+}
 
 export function cluster_transform(clusterStr) {
   let now = new Date().toISOString();
@@ -67,9 +75,12 @@ export function cluster_transform(clusterStr) {
     for (let a = 0; a < cluster.matchValues.length; a++) {
       f999.subfields.push({ m: cluster.matchValues[a] });
     }
+    let recFields = {};
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
       let tag = Object.keys(field)[0];
+      if (!recFields[tag]) recFields[tag] = [];
+      recFields[tag].push(field[tag]);
       if (tag > '009' && tag < '831') {
         if (tag !== '245' || tag === '245' && !tiSeen) {
           let fkey = JSON.stringify(field);
@@ -85,7 +96,8 @@ export function cluster_transform(clusterStr) {
     // normalized item fields
     let lf = localFields[sid];
     if (lf) {
-      let items = jp.query(rec.fields, `$..${lf.tag}.subfields`);
+      // let items = jp.query(rec.fields, `$..${lf.tag}.subfields`);
+      let items = recFields[lf.tag];
       for (let i = 0; i < items.length; i++) {
         let item = items[i];
         let outItem = {
@@ -102,9 +114,10 @@ export function cluster_transform(clusterStr) {
         for (let c in lf.subs) {
           let codes = lf.subs[c].split('');
           let fdata = [];
+          let subData = getSubs(item);
           for (let x = 0; x < codes.length; x++) {
             let code = codes[x];
-            let res = jp.query(item, `$..${code}`);
+            let res = subData[code].join(' ');
             fdata.push(res);
           }
           let text = fdata.join(' ');
