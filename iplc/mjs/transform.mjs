@@ -1,13 +1,19 @@
+/*
+  Subfield guide: a: location, b: barcode, c: call number, d: call number type, v: volume
+*/
+
 const localFields = {
   'US-CST': { 
     tag: '999',
-    subs: {
-      a: 'ml',
-      b: 'i',
-      c: 'a',
-      d: 'w'
-    },
-    lendableLocs: '|ARS STACKS|ART STACKS|EARTH-SCI ATLASES|EARTH-SCI MEZZANINE|EARTH-SCI STACKS|EARTH-SCI TECH-RPTS|EAST-ASIA CHINESE|EAST-ASIA JAPANESE|EAST-ASIA KOREAN|EDUCATION STACKS|EDUCATION STORAGE|GREEN CALIF-DOCS|GREEN FED-DOCS|GREEN FOLIO-FLAT|GREEN INTL-DOCS|GREEN STACKS|MUSIC FOLIO|MUSIC MINIATURE|MUSIC SCORES|MUSIC STACKS|SAL SAL-ARABIC|SAL SAL-FOLIO|SAL SAL-PAGE|SAL SALTURKISH|SAL SOUTH-MEZZ|SAL STACKS|SAL3 STACKS|SCIENCE STACKS|'
+    subs: { a: 'ml', b: 'i', c: 'a', d: 'w' },
+    lendKeyFields: [ 'm', 'l' ],
+    lendKeys: ['ARS STACKS','ART STACKS','EARTH-SCI ATLASES','EARTH-SCI MEZZANINE','EARTH-SCI STACKS','EARTH-SCI TECH-RPTS','EAST-ASIA CHINESE','EAST-ASIA JAPANESE','EAST-ASIA KOREAN','EDUCATION STACKS','EDUCATION STORAGE','GREEN CALIF-DOCS','GREEN FED-DOCS','GREEN FOLIO-FLAT','GREEN INTL-DOCS','GREEN STACKS','MUSIC FOLIO','MUSIC MINIATURE','MUSIC SCORES','MUSIC STACKS','SAL SAL-ARABIC','SAL SAL-FOLIO','SAL SAL-PAGE','SAL SALTURKISH','SAL SOUTH-MEZZ','SAL STACKS','SAL3 STACKS','SCIENCE STACKS']
+  },
+  'US-MDBJ': { 
+    tag: '991',
+    subs: { a: 'cd', b: 'a', c: 'f', d: 'e' },
+    lendKeyFields: [ 'c', 'b', 'd' ],
+    lendKeys: []
   }
 };
 
@@ -111,29 +117,37 @@ export function cluster_transform(clusterStr) {
             ]
           }
         }
+        let subData = getSubs(item);
         for (let c in lf.subs) {
           let codes = lf.subs[c].split('');
           let fdata = [];
-          let subData = getSubs(item);
           for (let x = 0; x < codes.length; x++) {
             let code = codes[x];
-            let res = subData[code].join(' ');
-            fdata.push(res);
+            if (subData[code]) {
+              let res = subData[code].join(' ');
+              fdata.push(res);
+            }
           }
           let text = fdata.join(' ');
-          if (c === 'a') {
-            let policy = 'UNLOANABLE';
-            if (lf.lendableLocs.match(text)) {
-              policy = 'LOANABLE';
-            }
-            outItem['999'].subfields.push({ p: policy });
-          }
           if (text) {
             let obj = {};
             obj[c] = text;
             outItem['999'].subfields.push(obj);
           }
         }
+        let lwords = [];
+        for (let k = 0; k < lf.lendKeyFields.length; k++) {
+          let key = lf.lendKeyFields[k];
+          lwords.push(subData[key][0]);
+        }
+        let lkey = lwords.join(' ');
+        console.log(lkey);
+        let policy = 'UNLOANABLE';
+        let locFound = lf.lendKeys.indexOf(lkey);
+        if (locFound > -1) {
+          policy = 'LOANABLE';
+        }
+        outItem['999'].subfields.push({ p: policy });
         outItems.push(outItem);
       }
     }
