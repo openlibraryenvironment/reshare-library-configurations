@@ -1,0 +1,13 @@
+brown:US-RPB
+chicago:US-ICU
+columbia:US-NNC
+cornell:US-NIC
+dartmouth:US-NHD
+duke:US-NCD
+harvard:US-MH
+jhu:US-MDBJ
+mit:US-MCM
+princeton:US-NJP
+stanford:US-CST
+penn:US-PU
+yale:US-CTY
