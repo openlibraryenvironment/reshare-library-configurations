@@ -6,14 +6,17 @@ const localFields = {
   'US-CST': { 
     tag: '999',
     subs: { a: 'ml', b: 'i', c: 'a', d: 'w' },
-    lendKeyFields: [ 'm', 'l' ],
-    lendKeys: ['ARS STACKS','ART STACKS','EARTH-SCI ATLASES','EARTH-SCI MEZZANINE','EARTH-SCI STACKS','EARTH-SCI TECH-RPTS','EAST-ASIA CHINESE','EAST-ASIA JAPANESE','EAST-ASIA KOREAN','EDUCATION STACKS','EDUCATION STORAGE','GREEN CALIF-DOCS','GREEN FED-DOCS','GREEN FOLIO-FLAT','GREEN INTL-DOCS','GREEN STACKS','MUSIC FOLIO','MUSIC MINIATURE','MUSIC SCORES','MUSIC STACKS','SAL SAL-ARABIC','SAL SAL-FOLIO','SAL SAL-PAGE','SAL SALTURKISH','SAL SOUTH-MEZZ','SAL STACKS','SAL3 STACKS','SCIENCE STACKS']
+    lendLocs: ['ARS STACKS','ART STACKS','EARTH-SCI ATLASES','EARTH-SCI MEZZANINE','EARTH-SCI STACKS','EARTH-SCI TECH-RPTS','EAST-ASIA CHINESE','EAST-ASIA JAPANESE','EAST-ASIA KOREAN','EDUCATION STACKS','EDUCATION STORAGE','GREEN CALIF-DOCS','GREEN FED-DOCS','GREEN FOLIO-FLAT','GREEN INTL-DOCS','GREEN STACKS','MUSIC FOLIO','MUSIC MINIATURE','MUSIC SCORES','MUSIC STACKS','SAL SAL-ARABIC','SAL SAL-FOLIO','SAL SAL-PAGE','SAL SALTURKISH','SAL SOUTH-MEZZ','SAL STACKS','SAL3 STACKS','SCIENCE STACKS']
   },
   'US-MDBJ': { 
     tag: '991',
     subs: { a: 'cd', b: 'a', c: 'f', d: 'e' },
-    lendKeyFields: [ 'c', 'b', 'd' ],
-    lendKeys: []
+    lendLocs: []
+  },
+  'US-RPB': {
+    tag: '876',
+    subs: { a: 'iz', b: 's', c: 'b', d: 'j' },
+    lendLocs: []
   }
 };
 
@@ -136,16 +139,8 @@ export function cluster_transform(clusterStr) {
           }
         }
         let lwords = [];
-        for (let k = 0; k < lf.lendKeyFields.length; k++) {
-          let key = lf.lendKeyFields[k];
-          lwords.push(subData[key][0]);
-        }
-        let lkey = lwords.join(' ');
+
         let policy = 'UNLOANABLE';
-        let locFound = lf.lendKeys.indexOf(lkey);
-        if (locFound > -1) {
-          policy = 'LOANABLE';
-        }
         outItem['999'].subfields.push({ p: policy });
         outItems.push(outItem);
       }
