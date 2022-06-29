@@ -17,6 +17,13 @@ const localFields = {
     tag: '876',
     subs: { a: 'iz', b: 's', c: 'b', d: 'j' },
     lendLocs: []
+  },
+  'US-NNC': {
+    tag: '852',
+    linkedField: '876',
+    linkSub: '0',
+    subs: { a: 'b', b: '876p', c: 'h', d: 'j' },
+    lendLocs: []
   }
 };
 
@@ -106,7 +113,18 @@ export function cluster_transform(clusterStr) {
     let lf = localFields[sid];
     if (lf) {
       // let items = jp.query(rec.fields, `$..${lf.tag}.subfields`);
-      let items = recFields[lf.tag];
+      let items = recFields[lf.tag] || [];
+      let linkedFields = {};
+      if (lf.linkedField) {
+
+        let extra = recFields[lf.linkedField] || [];
+        for (let e = 0; e < extra.length; e++) {
+          let exField = extra[e];
+          let esubs = getSubs(exField);
+          let link = esubs['0'];
+          linkedFields[link] = exField;
+        }
+      }
       for (let i = 0; i < items.length; i++) {
         let item = items[i];
         let outItem = {
@@ -120,6 +138,7 @@ export function cluster_transform(clusterStr) {
             ]
           }
         }
+        
         let subData = getSubs(item);
         for (let c in lf.subs) {
           let codes = lf.subs[c].split('');
