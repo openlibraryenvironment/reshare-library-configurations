@@ -141,7 +141,6 @@ export function cluster_transform(clusterStr) {
           lwords.push(subData[key][0]);
         }
         let lkey = lwords.join(' ');
-        console.log(lkey);
         let policy = 'UNLOANABLE';
         let locFound = lf.lendKeys.indexOf(lkey);
         if (locFound > -1) {
