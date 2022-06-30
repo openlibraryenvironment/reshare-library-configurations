@@ -191,7 +191,7 @@ export function cluster_transform(clusterStr) {
   out.leader = out.leader.replace(/^....../, '00000n');
   out.fields.unshift({ '008': f008 });
   out.fields.unshift({ '005': f005 });
-  out.fields.unshift({ '001': f001 });
+  out.fields.unshift({ '001': "test" + f001 });
   out.fields.push(...f999s);
   out.fields.push(...outItems);
   return JSON.stringify(out, null, 2);
