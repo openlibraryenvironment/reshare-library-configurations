@@ -5,7 +5,7 @@
 const localFields = {
   'US-CST': { 
     tag: '999',
-    subs: { a: 'ml', b: 'i', c: 'a', d: 'w' },
+    subs: { a: 'm,l', b: 'i', c: 'a', d: 'w' },
     lendLocs: ['ARS STACKS','ART STACKS','EARTH-SCI ATLASES','EARTH-SCI MEZZANINE','EARTH-SCI STACKS','EARTH-SCI TECH-RPTS','EAST-ASIA CHINESE','EAST-ASIA JAPANESE','EAST-ASIA KOREAN','EDUCATION STACKS','EDUCATION STORAGE','GREEN CALIF-DOCS','GREEN FED-DOCS','GREEN FOLIO-FLAT','GREEN INTL-DOCS','GREEN STACKS','MUSIC FOLIO','MUSIC MINIATURE','MUSIC SCORES','MUSIC STACKS','SAL SAL-ARABIC','SAL SAL-FOLIO','SAL SAL-PAGE','SAL SALTURKISH','SAL SOUTH-MEZZ','SAL STACKS','SAL3 STACKS','SCIENCE STACKS']
   },
   'US-MDBJ': { 
@@ -15,7 +15,7 @@ const localFields = {
   },
   'US-RPB': {
     tag: '876',
-    subs: { a: 'iz', b: 's', c: 'b', d: 'j' },
+    subs: { a: 'i,z', b: 's', c: 'b', d: 'j' },
     lendLocs: []
   },
   'US-NNC': {
@@ -112,16 +112,14 @@ export function cluster_transform(clusterStr) {
     // normalized item fields
     let lf = localFields[sid];
     if (lf) {
-      // let items = jp.query(rec.fields, `$..${lf.tag}.subfields`);
       let items = recFields[lf.tag] || [];
       let linkedFields = {};
       if (lf.linkedField) {
-
         let extra = recFields[lf.linkedField] || [];
         for (let e = 0; e < extra.length; e++) {
           let exField = extra[e];
           let esubs = getSubs(exField);
-          let link = esubs['0'];
+          let link = esubs[lf.linkSub];
           linkedFields[link] = exField;
         }
       }
@@ -138,10 +136,23 @@ export function cluster_transform(clusterStr) {
             ]
           }
         }
-        
         let subData = getSubs(item);
         for (let c in lf.subs) {
-          let codes = lf.subs[c].split('');
+          if (lf.linkSub && lf.subs[c].match(/^\w{3}/)) {
+            let lsf = lf.subs[c].substring(3);
+            let linkDat = subData[lf.linkSub];
+            if (linkDat) {
+              let linkedItem = linkedFields[linkDat];
+              let linkedSubs = getSubs(linkedItem) || {};
+              let linkedData = linkedSubs[lsf] || [];
+              if (linkedData[0]) {
+                let linkedSubField = {};
+                linkedSubField[c] = linkedData[0];
+                outItem['999'].subfields.push(linkedSubField);
+              }
+            }
+          }
+          let codes = lf.subs[c].split(',');
           let fdata = [];
           for (let x = 0; x < codes.length; x++) {
             let code = codes[x];
@@ -157,7 +168,8 @@ export function cluster_transform(clusterStr) {
             outItem['999'].subfields.push(obj);
           }
         }
-        let lwords = [];
+        for (let lkey in linkedFields) {
+        }
 
         let policy = 'UNLOANABLE';
         outItem['999'].subfields.push({ p: policy });
@@ -165,7 +177,6 @@ export function cluster_transform(clusterStr) {
       }
     }
   }
-
   fields.sort();
   let preKey = '';
   out.fields = [];
