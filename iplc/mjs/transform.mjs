@@ -15,13 +15,13 @@ const localFields = {
   },
   'US-MDBJ': { 
     tag: '991',
-    subs: { a: 'cd', b: 'a', c: 'f', d: 'e' },
+    subs: { a: 'c,d', b: 'a', c: 'f', d: 'e' },
     lendLocs: []
   },
   'US-RPB': {
     tag: '876',
-    subs: { a: 'i,z', b: 's', c: 'b', d: 'j' },
-    lendLocs: []
+    subs: { a: 'i,z', b: 's', c: 'b', d: 'j', y: 'a' },
+    lendLocs: ['ORWIG STACKS', 'ROCK CHINESE', 'ROCK CUTTER_K', 'ROCK JAPANESE', 'ROCK KOREAN', 'ROCK RKSTORAGE', 'ROCK STACKS', 'ROCK STOR_THES', 'ROCK STORAGE', 'SCIENCE STACKS']
   },
   'US-NNC': {
     tag: '852',
