@@ -30,6 +30,11 @@ const localFields = {
     subs: { a: 'e,f', b: 'p', c: 'h', d: 'g', x: 'b', v: '3', y: 'a' },
     lendLocs: ['firestone stacks', 'recap pa']
   },
+  'US-NCD': {
+    tag: '940',
+    subs: { a: 'b,c', b: 'p', c: 'h', d: 'd', x: 'r', y: 'k' },
+    lendLocs: ['LILLY PLD', 'LILLY PLW', 'LILLY PLWF', 'LILLY PLI', 'LILLY PL2', 'LILLY PL2F', 'LILLY PL3', 'LSC PSB', 'LSC PSBF', 'LSC PSBQ', 'LSC PSD', 'LSC PSDF', 'LSC PSDQ', 'LSC PSDV', 'LSC PSK', 'LSC PSKC', 'LSC PSK2', 'LSC PSK6', 'LSC PSKE', 'LSC PSKEF', 'LSC PSKEQ', 'LSC PSKF', 'LSC PSKJ', 'LSC PSKL', 'LSC PSKN', 'LSC PSKOH', 'LSC PSKQ', 'LSC PSKL', 'LSC PSKLF', 'LSC PSV', 'LSC PSZ', 'MUSIC PMMS', 'MUSIC PMMS9', 'MUSIC PM', 'MUSIC PM9', 'MUSIC PMF', 'MUSIC PMF9', 'MUSIC PMT', 'MUSIC PMTF', 'PERKN PKE', 'PERKN PKEF', 'PERKN PK', 'PERKN PK2', 'PERKN PKQ', 'PERKN PKFF', 'PERKN PKF', 'PERKN PKT', 'LAW LALUI', 'LAW LCHRI', 'LAW LCOX', 'LAW LEMP', 'LAW LGEN']
+  },
   'US-NNC': {
     tag: '852',
     linkedField: '876',
