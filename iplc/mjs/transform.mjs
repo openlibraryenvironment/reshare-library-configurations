@@ -10,12 +10,12 @@ const localFields = {
   },
   'US-CST': { 
     tag: '999',
-    subs: { a: 'm,l', b: 'i', c: 'a', d: 'w' },
+    subs: { a: 'm,l', b: 'i', c: 'a', d: 'w', k: 'j', y: 'i' },
     lendLocs: ['ARS STACKS', 'ART STACKS', 'EARTH-SCI ATLASES', 'EARTH-SCI MEZZANINE', 'EARTH-SCI STACKS', 'EARTH-SCI TECH-RPTS', 'EAST-ASIA CHINESE', 'EAST-ASIA JAPANESE', 'EAST-ASIA KOREAN', 'EDUCATION STACKS', 'EDUCATION STORAGE', 'GREEN CALIF-DOCS', 'GREEN FED-DOCS', 'GREEN FOLIO-FLAT', 'GREEN INTL-DOCS', 'GREEN STACKS', 'MUSIC FOLIO', 'MUSIC MINIATURE', 'MUSIC SCORES', 'MUSIC STACKS', 'SAL SAL-ARABIC', 'SAL SAL-FOLIO', 'SAL SAL-PAGE', 'SAL SALTURKISH', 'SAL SOUTH-MEZZ', 'SAL STACKS', 'SAL3 STACKS', 'SCIENCE STACKS']
   },
   'US-MDBJ': { 
     tag: '991',
-    subs: { a: 'c,d', b: 'a', c: 'f', d: 'e' },
+    subs: { a: 'c,d', b: 'a', c: 'f', d: 'e', g: 'g', k: 'k', y: 'j' },
     lendLocs: []
   },
   'US-RPB': {
@@ -27,8 +27,8 @@ const localFields = {
     tag: '852',
     linkedField: '876',
     linkSub: '0',
-    subs: { a: 'b', b: '876p', c: 'h', d: 'j' },
-    lendLocs: []
+    subs: { a: 'b', b: '876p', c: 'h', d: 'j', v: '8763', y: '876a' },
+    lendLocs: ['bar', 'bar,four', 'bar,medi', 'bar,new', 'bar,over', 'bar,three', 'bar,two', 'bar,znz', 'bmc', 'bus', 'bus,new', 'docs', 'eal', 'eax', 'glg', 'glg,medi', 'glx', 'glx,pre', 'gnc', 'gsc', 'hsl', 'jou', 'leh', 'leh,eds', 'mat,anx', 'mil', 'mil,stdy', 'msc', 'msr', 'mus', 'mvr', 'off,bio', 'off,bus', 'off,docs', 'off,eal', 'off,eax', 'off,eng', 'off,glg', 'off,glx', 'off,gnc', 'off,gsc', 'off,hsl', 'off,jou', 'off,leh', 'off,mat', 'off,msr', 'off,mus', 'off,mvr', 'off,phy', 'off,psy', 'off,sci', 'off,swx', 'off,uncat', 'off,uts', 'off,war', 'pat', 'sci', 'swx', 'uts', 'uts,loc', 'uts,unn', 'war']
   }
 };
 
