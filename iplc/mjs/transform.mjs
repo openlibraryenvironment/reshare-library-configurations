@@ -1,12 +1,17 @@
 /*
-  Subfield guide: a: location, b: barcode, c: call number, d: call number type, v: volume
+  Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, v: volume, y: itemId
 */
 
 const localFields = {
+  'US-ICU': {
+    tag: '927',
+    subs: { a: 'c', b: 'b', c: 'a', d: 't', v: 'v', y: 'i' },
+    lendLocs: ['ASR-JRLASR', 'ASR-LawASR', 'ASR-LawSupr', 'ASR-RecASR', 'ASR-SciASR', 'DLL-Law', 'DLL-LawCity', 'DLL-LawDisp', 'DLL-LawFul', 'DLL-LawMic', 'DLL-LawPer', 'DLL-LawWell', 'Eck-Eck', 'JCL-Games', 'JCL-Sci', 'JCL-SciDDC', 'JCL-SciLg', 'JCL-SFilm', 'JCL-SMedia', 'JRL-CJK', 'JRL-Film', 'JRL-Gen', 'JRL-GenHY', 'JRL-LawMicG', 'JRL-Mic', 'JRL-Pam', 'JRL-SciMic', 'JRL-SMicDDC', 'JRL-W', 'JRL-WCJK', 'JRL-XClosedCJK', 'JRL-XClosedGen', 'SWL-SWL', 'SWL-SWLMic']
+  },
   'US-CST': { 
     tag: '999',
     subs: { a: 'm,l', b: 'i', c: 'a', d: 'w' },
-    lendLocs: ['ARS STACKS','ART STACKS','EARTH-SCI ATLASES','EARTH-SCI MEZZANINE','EARTH-SCI STACKS','EARTH-SCI TECH-RPTS','EAST-ASIA CHINESE','EAST-ASIA JAPANESE','EAST-ASIA KOREAN','EDUCATION STACKS','EDUCATION STORAGE','GREEN CALIF-DOCS','GREEN FED-DOCS','GREEN FOLIO-FLAT','GREEN INTL-DOCS','GREEN STACKS','MUSIC FOLIO','MUSIC MINIATURE','MUSIC SCORES','MUSIC STACKS','SAL SAL-ARABIC','SAL SAL-FOLIO','SAL SAL-PAGE','SAL SALTURKISH','SAL SOUTH-MEZZ','SAL STACKS','SAL3 STACKS','SCIENCE STACKS']
+    lendLocs: ['ARS STACKS', 'ART STACKS', 'EARTH-SCI ATLASES', 'EARTH-SCI MEZZANINE', 'EARTH-SCI STACKS', 'EARTH-SCI TECH-RPTS', 'EAST-ASIA CHINESE', 'EAST-ASIA JAPANESE', 'EAST-ASIA KOREAN', 'EDUCATION STACKS', 'EDUCATION STORAGE', 'GREEN CALIF-DOCS', 'GREEN FED-DOCS', 'GREEN FOLIO-FLAT', 'GREEN INTL-DOCS', 'GREEN STACKS', 'MUSIC FOLIO', 'MUSIC MINIATURE', 'MUSIC SCORES', 'MUSIC STACKS', 'SAL SAL-ARABIC', 'SAL SAL-FOLIO', 'SAL SAL-PAGE', 'SAL SALTURKISH', 'SAL SOUTH-MEZZ', 'SAL STACKS', 'SAL3 STACKS', 'SCIENCE STACKS']
   },
   'US-MDBJ': { 
     tag: '991',
@@ -137,6 +142,7 @@ export function cluster_transform(clusterStr) {
           }
         }
         let subData = getSubs(item);
+        let location = '';
         for (let c in lf.subs) {
           if (lf.linkSub && lf.subs[c].match(/^\w{3}/)) {
             let lsf = lf.subs[c].substring(3);
@@ -167,11 +173,12 @@ export function cluster_transform(clusterStr) {
             obj[c] = text;
             outItem['999'].subfields.push(obj);
           }
-        }
-        for (let lkey in linkedFields) {
+          if (c === 'a') {
+            location = text;
+          }
         }
 
-        let policy = 'UNLOANABLE';
+        let policy = (lf.lendLocs.indexOf(location) > -1) ? 'LOANABLE' : 'UNLOANABLE';
         outItem['999'].subfields.push({ p: policy });
         outItems.push(outItem);
       }
