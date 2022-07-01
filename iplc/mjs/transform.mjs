@@ -1,27 +1,29 @@
 /*
-  Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, v: volume, y: itemId
+  Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, g: copy, k: numberOfPieces, u: chronology, v: volume, w: yearCaption, x: itemMaterialType, y: itemId
 */
 
 const localFields = {
-  'US-ICU': {
-    tag: '927',
-    subs: { a: 'c', b: 'b', c: 'a', d: 't', v: 'v', y: 'i' },
-    lendLocs: ['ASR-JRLASR', 'ASR-LawASR', 'ASR-LawSupr', 'ASR-RecASR', 'ASR-SciASR', 'DLL-Law', 'DLL-LawCity', 'DLL-LawDisp', 'DLL-LawFul', 'DLL-LawMic', 'DLL-LawPer', 'DLL-LawWell', 'Eck-Eck', 'JCL-Games', 'JCL-Sci', 'JCL-SciDDC', 'JCL-SciLg', 'JCL-SFilm', 'JCL-SMedia', 'JRL-CJK', 'JRL-Film', 'JRL-Gen', 'JRL-GenHY', 'JRL-LawMicG', 'JRL-Mic', 'JRL-Pam', 'JRL-SciMic', 'JRL-SMicDDC', 'JRL-W', 'JRL-WCJK', 'JRL-XClosedCJK', 'JRL-XClosedGen', 'SWL-SWL', 'SWL-SWLMic']
-  },
   'US-CST': { 
     tag: '999',
     subs: { a: 'm,l', b: 'i', c: 'a', d: 'w', k: 'j', y: 'i' },
     lendLocs: ['ARS STACKS', 'ART STACKS', 'EARTH-SCI ATLASES', 'EARTH-SCI MEZZANINE', 'EARTH-SCI STACKS', 'EARTH-SCI TECH-RPTS', 'EAST-ASIA CHINESE', 'EAST-ASIA JAPANESE', 'EAST-ASIA KOREAN', 'EDUCATION STACKS', 'EDUCATION STORAGE', 'GREEN CALIF-DOCS', 'GREEN FED-DOCS', 'GREEN FOLIO-FLAT', 'GREEN INTL-DOCS', 'GREEN STACKS', 'MUSIC FOLIO', 'MUSIC MINIATURE', 'MUSIC SCORES', 'MUSIC STACKS', 'SAL SAL-ARABIC', 'SAL SAL-FOLIO', 'SAL SAL-PAGE', 'SAL SALTURKISH', 'SAL SOUTH-MEZZ', 'SAL STACKS', 'SAL3 STACKS', 'SCIENCE STACKS']
+  },
+  'US-ICU': {
+    tag: '927',
+    subs: { a: 'c', b: 'b', c: 'a', d: 't', v: 'v', y: 'i' },
+    lendLocs: ['ASR-JRLASR', 'ASR-LawASR', 'ASR-LawSupr', 'ASR-RecASR', 'ASR-SciASR', 'DLL-Law', 'DLL-LawCity', 'DLL-LawDisp', 'DLL-LawFul', 'DLL-LawMic', 'DLL-LawPer', 'DLL-LawWell', 'Eck-Eck', 'JCL-Games', 'JCL-Sci', 'JCL-SciDDC', 'JCL-SciLg', 'JCL-SFilm', 'JCL-SMedia', 'JRL-CJK', 'JRL-Film', 'JRL-Gen', 'JRL-GenHY', 'JRL-LawMicG', 'JRL-Mic', 'JRL-Pam', 'JRL-SciMic', 'JRL-SMicDDC', 'JRL-W', 'JRL-WCJK', 'JRL-XClosedCJK', 'JRL-XClosedGen', 'SWL-SWL', 'SWL-SWLMic']
   },
   'US-MDBJ': { 
     tag: '991',
     subs: { a: 'c,d', b: 'a', c: 'f', d: 'e', g: 'g', k: 'k', y: 'j' },
     lendLocs: []
   },
-  'US-RPB': {
-    tag: '876',
-    subs: { a: 'i,z', b: 's', c: 'b', d: 'j', y: 'a' },
-    lendLocs: ['ORWIG STACKS', 'ROCK CHINESE', 'ROCK CUTTER_K', 'ROCK JAPANESE', 'ROCK KOREAN', 'ROCK RKSTORAGE', 'ROCK STACKS', 'ROCK STOR_THES', 'ROCK STORAGE', 'SCIENCE STACKS']
+  'US-NIC': {
+    tag: '852',
+    linkedField: '890',
+    linkSub: '0',
+    subs: { a: '890l', b: '890b', c: 'k,h,m', d: '2', k: '890n', u: '890c', v: '890e', w: '890y', x: '890t', y: '890a' },
+    lendLocs: ['Ent,anx', 'afr', 'afr,anx', 'asia', 'asia,anx', 'asia,av', 'ech', 'ech,anx', 'ech,av', 'engr', 'engr,anx', 'engr,ref', 'ent', 'fine', 'fine,anx', 'gnva', 'gnva,anx', 'hote', 'hote,anx', 'ilr', 'ilr,anx', 'jgsm,anx', 'law', 'law,anx', 'mann', 'mann,anx', 'mann,anxt', 'math', 'math,anx', 'math,desk', 'mus', 'mus,anx', 'oclc,olim', 'olin', 'olin,anx', 'olin,av', 'orni,anx', 'phys,anx', 'rmc,ice', 'sasa', 'sasa,anx', 'sasa,av', 'uris', 'uris,anx', 'vet', 'vet,anx', 'was', 'was,anx', 'was,av']
   },
   'US-NNC': {
     tag: '852',
@@ -29,7 +31,12 @@ const localFields = {
     linkSub: '0',
     subs: { a: 'b', b: '876p', c: 'h', d: 'j', v: '8763', y: '876a' },
     lendLocs: ['bar', 'bar,four', 'bar,medi', 'bar,new', 'bar,over', 'bar,three', 'bar,two', 'bar,znz', 'bmc', 'bus', 'bus,new', 'docs', 'eal', 'eax', 'glg', 'glg,medi', 'glx', 'glx,pre', 'gnc', 'gsc', 'hsl', 'jou', 'leh', 'leh,eds', 'mat,anx', 'mil', 'mil,stdy', 'msc', 'msr', 'mus', 'mvr', 'off,bio', 'off,bus', 'off,docs', 'off,eal', 'off,eax', 'off,eng', 'off,glg', 'off,glx', 'off,gnc', 'off,gsc', 'off,hsl', 'off,jou', 'off,leh', 'off,mat', 'off,msr', 'off,mus', 'off,mvr', 'off,phy', 'off,psy', 'off,sci', 'off,swx', 'off,uncat', 'off,uts', 'off,war', 'pat', 'sci', 'swx', 'uts', 'uts,loc', 'uts,unn', 'war']
-  }
+  },
+  'US-RPB': {
+    tag: '876',
+    subs: { a: 'i,z', b: 's', c: 'b', d: 'j', y: 'a' },
+    lendLocs: ['ORWIG STACKS', 'ROCK CHINESE', 'ROCK CUTTER_K', 'ROCK JAPANESE', 'ROCK KOREAN', 'ROCK RKSTORAGE', 'ROCK STACKS', 'ROCK STOR_THES', 'ROCK STORAGE', 'SCIENCE STACKS']
+  },
 };
 
 function getSubs(field) {
@@ -153,6 +160,7 @@ export function cluster_transform(clusterStr) {
               let linkedData = linkedSubs[lsf] || [];
               if (linkedData[0]) {
                 let linkedSubField = {};
+                if (c === 'a') location = linkedData[0];
                 linkedSubField[c] = linkedData[0];
                 outItem['999'].subfields.push(linkedSubField);
               }
@@ -173,7 +181,7 @@ export function cluster_transform(clusterStr) {
             obj[c] = text;
             outItem['999'].subfields.push(obj);
           }
-          if (c === 'a') {
+          if (!location && c === 'a') {
             location = text;
           }
         }
