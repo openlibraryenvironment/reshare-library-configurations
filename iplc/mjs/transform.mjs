@@ -101,18 +101,7 @@ export function cluster_transform(clusterStr) {
       mtype = 'MIX';
     }
 
-    let f999 = {
-      ind1: '1',
-      ind2: '0',
-      subfields: [
-        { i: cluster.clusterId },
-        { l: lid },
-        { s: sid }
-      ]
-    };
-    for (let a = 0; a < cluster.matchValues.length; a++) {
-      f999.subfields.push({ m: cluster.matchValues[a] });
-    }
+    
     let recFields = {};
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
@@ -129,13 +118,25 @@ export function cluster_transform(clusterStr) {
       }
       if (tag === '008') f008 = field['008'];
     }
+    let controlNumber = (recFields['001']) ? recFields['001'][0] : lid;
+    let f999 = {
+      ind1: '1',
+      ind2: '0',
+      subfields: [
+        { i: cluster.clusterId },
+        { l: controlNumber },
+        { s: sid }
+      ]
+    };
+    for (let a = 0; a < cluster.matchValues.length; a++) {
+      f999.subfields.push({ m: cluster.matchValues[a] });
+    }
     f999s.push({ '999': f999 });
 
     // normalized item fields
     let lf = localFields[sid];
     if (lf) {
       let items = recFields[lf.tag] || [];
-      let controlNumber = (recFields['001']) ? recFields['001'][0] : lid;
       let linkedFields = {};
       if (lf.linkedField) {
         let extra = recFields[lf.linkedField] || [];
