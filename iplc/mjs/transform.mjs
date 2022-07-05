@@ -5,8 +5,24 @@
 const localFields = {
   'US-CST': { 
     tag: '999',
-    subs: { a: 'm,l', b: 'i', c: 'a', d: 'w', k: 'j', y: 'i' },
-    lendLocs: ['ARS STACKS', 'ART STACKS', 'EARTH-SCI ATLASES', 'EARTH-SCI MEZZANINE', 'EARTH-SCI STACKS', 'EARTH-SCI TECH-RPTS', 'EAST-ASIA CHINESE', 'EAST-ASIA JAPANESE', 'EAST-ASIA KOREAN', 'EDUCATION STACKS', 'EDUCATION STORAGE', 'GREEN CALIF-DOCS', 'GREEN FED-DOCS', 'GREEN FOLIO-FLAT', 'GREEN INTL-DOCS', 'GREEN STACKS', 'MUSIC FOLIO', 'MUSIC MINIATURE', 'MUSIC SCORES', 'MUSIC STACKS', 'SAL SAL-ARABIC', 'SAL SAL-FOLIO', 'SAL SAL-PAGE', 'SAL SALTURKISH', 'SAL SOUTH-MEZZ', 'SAL STACKS', 'SAL3 STACKS', 'SCIENCE STACKS']
+    subs: { a: 'm,l', b: 'i', c: 'a', d: 'w', k: 'j', x: 't', y: 'i' },
+    lendLocs: ['ARS STACKS', 'ART STACKS', 'EARTH-SCI ATLASES', 'EARTH-SCI MEZZANINE', 'EARTH-SCI STACKS', 'EARTH-SCI TECH-RPTS', 'EAST-ASIA CHINESE', 'EAST-ASIA JAPANESE', 'EAST-ASIA KOREAN', 'EDUCATION STACKS', 'EDUCATION STORAGE', 'GREEN CALIF-DOCS', 'GREEN FED-DOCS', 'GREEN FOLIO-FLAT', 'GREEN INTL-DOCS', 'GREEN STACKS', 'MUSIC FOLIO', 'MUSIC MINIATURE', 'MUSIC SCORES', 'MUSIC STACKS', 'SAL SAL-ARABIC', 'SAL SAL-FOLIO', 'SAL SAL-PAGE', 'SAL SALTURKISH', 'SAL SOUTH-MEZZ', 'SAL STACKS', 'SAL3 STACKS', 'SCIENCE STACKS'],
+    lendItypes: ['STKS-MONO', 'STKS', 'EASTK-DOC', 'ATLAS', 'THESIS', 'THESIS-EXP', 'GOVSTKS', 'SCORE'],
+    lendFunc: function (rec, lf) {
+      let f919 = rec['919'] || [];
+      let policy = null;
+      if (f919[0]) {
+        let subs = getSubs(f919[0]);
+        if (subs.a && subs.a[0].match(/exclude from BorrowDirect/i)) {
+          policy = 'UNLOANABLE';
+        } 
+      } 
+      if (!policy && lf) {
+        let sf = getSubs(lf);
+        if (sf.c && sf.c[0].match(/^3781/)) policy = 'UNLOANABLE'
+      }
+      return policy;
+    }
   },
   'US-CTY': {
     tag: '852',
@@ -82,6 +98,10 @@ function getSubs(field) {
     subs[code].push(s[code]);
   });
   return subs;
+}
+
+function cst(rec) {
+
 }
 
 export function cluster_transform(clusterStr) {
@@ -235,6 +255,9 @@ export function cluster_transform(clusterStr) {
           policy = (lf.lendLocs.indexOf(location) > -1) ? 'LOANABLE' : 'UNLOANABLE';
         } else {
           policy = 'UNLOANABLE';
+        }
+        if (lf.lendFunc) {
+          policy = lf.lendFunc(recFields, outItem['999']) || policy;
         }
         outItem['999'].subfields.push({ p: policy });
         outItems.push(outItem);

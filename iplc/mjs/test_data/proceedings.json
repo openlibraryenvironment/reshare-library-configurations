@@ -1575,6 +1575,16 @@
                 ]
               }
             },
+            { 
+              "920": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  { "a": "exclude from BorrowDirect" }
+                ]
+
+              }
+            },
             {
               "999": {
                 "ind1": " ",
