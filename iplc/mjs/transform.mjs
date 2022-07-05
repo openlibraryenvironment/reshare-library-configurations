@@ -211,11 +211,12 @@ export function cluster_transform(clusterStr) {
           }
         }
 
-        let policy = 'UNLOANABLE';
-        if (lf.lendLocs && lf.lendLocs.indexOf(location) > -1) { 
-          policy = 'LOANABLE';
-        }
-        if (lf.lendItypes && !lf.lendItypes.indexOf(itype) === -1) {
+        let policy = '';
+        if (lf.lendLocs && lf.lendItypes) {
+          policy = (lf.lendLocs.indexOf(location) > -1 && lf.lendItypes.indexOf(itype) > -1) ? 'LOANABLE' : 'UNLOANABLE'; 
+        } else if (lf.lendLocs) {
+          policy = (lf.lendLocs.indexOf(location) > -1) ? 'LOANABLE' : 'UNLOANABLE';
+        } else {
           policy = 'UNLOANABLE';
         }
         outItem['999'].subfields.push({ p: policy });
