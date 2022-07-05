@@ -1,5 +1,5 @@
 /*
-  Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, g: copy, k: numberOfPieces, u: chronology, v: volume, w: yearCaption, x: itemMaterialType, y: itemId
+  Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, g: copy, k: numberOfPieces, u: chronology, v: volume, w: yearCaption, x: itemMaterialType, y: itemId, z: itemType
 */
 
 const localFields = {
@@ -7,6 +7,14 @@ const localFields = {
     tag: '999',
     subs: { a: 'm,l', b: 'i', c: 'a', d: 'w', k: 'j', y: 'i' },
     lendLocs: ['ARS STACKS', 'ART STACKS', 'EARTH-SCI ATLASES', 'EARTH-SCI MEZZANINE', 'EARTH-SCI STACKS', 'EARTH-SCI TECH-RPTS', 'EAST-ASIA CHINESE', 'EAST-ASIA JAPANESE', 'EAST-ASIA KOREAN', 'EDUCATION STACKS', 'EDUCATION STORAGE', 'GREEN CALIF-DOCS', 'GREEN FED-DOCS', 'GREEN FOLIO-FLAT', 'GREEN INTL-DOCS', 'GREEN STACKS', 'MUSIC FOLIO', 'MUSIC MINIATURE', 'MUSIC SCORES', 'MUSIC STACKS', 'SAL SAL-ARABIC', 'SAL SAL-FOLIO', 'SAL SAL-PAGE', 'SAL SALTURKISH', 'SAL SOUTH-MEZZ', 'SAL STACKS', 'SAL3 STACKS', 'SCIENCE STACKS']
+  },
+  'US-CTY': {
+    tag: '852',
+    linkedField: '876',
+    linkSub: '8',
+    subs: { a: 'b', b: '876p', c: 'hi', g: '876t', v: '8763', x: '876h', y: '876a' },
+    lendLocs: ['art', 'artcirc', 'ccl', 'cclger', 'cclgraph', 'chem', 'csssi', 'div', 'divdmr', 'divrrus', 'dra', 'engn', 'fes', 'fesover', 'geo', 'ksl', 'kslant', 'kslantc', 'kslanto', 'kslstks', 'lsf', 'lsfart', 'lsfbaby', 'lsfche', 'lsfchem', 'lsfcla', 'lsfcsssi', 'lsfdiv', 'lsfdra', 'lsfeng', 'lsfeph', 'lsffes', 'lsffor', 'lsffs', 'lsfgdc', 'lsfgeo', 'lsfjud', 'lsfksl', 'lsfkslant', 'lsflamc', 'lsfmarx', 'lsfmath', 'lsfmed', 'lsfmtn', 'lsfmus', 'lsfnea', 'lsfnum', 'lsfsem', 'lsfsla', 'lsfslar', 'lsfsmlaris', 'lsfsmlasi', 'lsfsmlear', 'lsfsmlphi', 'lsfssl', 'lsfsslc', 'lsfstat', 'lsftib', 'marx', 'math', 'med', 'medbiog', 'medhs', 'medhum', 'medrefchc', 'medrefec', 'medrefeol', 'mus', 'musrec', 'sml', 'smleng', 'smljud', 'smllnb', 'smllnbm', 'smlnea', 'ssl', 'sslegc'],
+    lendItypes: ['jour02', 'jour03', 'jour04', 'jour05', 'jour06', 'jour07', 'jour08', 'jour09', 'jour10', 'jour11', 'jour93 - DO NOT USE', 'jour94 - DO NOT USE', 'jour95 - DO NOT USE', 'jour96 - DO NOT USE', 'jour97', 'jour98', 'jour99', 'jourcirc', 'lsfc', 'media']
   },
   'US-ICU': {
     tag: '927',
@@ -162,18 +170,19 @@ export function cluster_transform(clusterStr) {
         }
         let subData = getSubs(item);
         let location = '';
+        let itype = '';
         for (let c in lf.subs) {
           if (lf.linkSub && lf.subs[c].match(/^\w{3}/)) {
             let lsf = lf.subs[c].substring(3);
             let linkDat = subData[lf.linkSub];
             if (linkDat) {
               let linkedItem = linkedFields[linkDat];
-              console.log(linkedItem);
               let linkedSubs = (linkedItem) ? getSubs(linkedItem) : {};
               let linkedData = linkedSubs[lsf] || [];
               if (linkedData[0]) {
                 let linkedSubField = {};
                 if (c === 'a') location = linkedData[0];
+                if (c === 'x') itype = linkedData[0];
                 linkedSubField[c] = linkedData[0];
                 outItem['999'].subfields.push(linkedSubField);
               }
@@ -197,9 +206,18 @@ export function cluster_transform(clusterStr) {
           if (!location && c === 'a') {
             location = text;
           }
+          if (!itype && c === 'x') {
+            itype = text;
+          }
         }
 
-        let policy = (lf.lendLocs.indexOf(location) > -1) ? 'LOANABLE' : 'UNLOANABLE';
+        let policy = 'UNLOANABLE';
+        if (lf.lendLocs && lf.lendLocs.indexOf(location) > -1) { 
+          policy = 'LOANABLE';
+        }
+        if (lf.lendItypes && !lf.lendItypes.indexOf(itype) === -1) {
+          policy = 'UNLOANABLE';
+        }
         outItem['999'].subfields.push({ p: policy });
         outItems.push(outItem);
       }
