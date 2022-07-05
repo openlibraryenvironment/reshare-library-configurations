@@ -21,6 +21,12 @@ const localFields = {
     subs: { a: 'c', b: 'b', c: 'a', d: 't', v: 'v', y: 'i' },
     lendLocs: ['ASR-JRLASR', 'ASR-LawASR', 'ASR-LawSupr', 'ASR-RecASR', 'ASR-SciASR', 'DLL-Law', 'DLL-LawCity', 'DLL-LawDisp', 'DLL-LawFul', 'DLL-LawMic', 'DLL-LawPer', 'DLL-LawWell', 'Eck-Eck', 'JCL-Games', 'JCL-Sci', 'JCL-SciDDC', 'JCL-SciLg', 'JCL-SFilm', 'JCL-SMedia', 'JRL-CJK', 'JRL-Film', 'JRL-Gen', 'JRL-GenHY', 'JRL-LawMicG', 'JRL-Mic', 'JRL-Pam', 'JRL-SciMic', 'JRL-SMicDDC', 'JRL-W', 'JRL-WCJK', 'JRL-XClosedCJK', 'JRL-XClosedGen', 'SWL-SWL', 'SWL-SWLMic']
   },
+  'US-MH': {
+    tag: '876',
+    subs: { a: 'l,m', b: 'p', c: 'n', d: '7', x: 'h,y', y: '0' },
+    lendLocs: ['DIV FOL', 'DIV HD', 'DIV HDSPF', 'DIV HDSPP', 'DIV OLDD', 'DIV OLDDF', 'DIV OLDDP', 'DIV GEN', 'BAK STLC', 'BAK OVERS', 'BAK CORE', 'CAB HD', 'CAB RD', 'MED HD', 'MED RD', 'MED GEN', 'FAL HD', 'FAL RD', 'FAL RUBHD', 'FAL RUBRD', 'GUT HD', 'GUT RD', 'GUT NBS', 'GUT GEN', 'HYL HD', 'HYL HDC', 'HYL HDJ', 'HYL HDK', 'HYL HDV', 'HYL HDW', 'HYL RD', 'HYL RDC', 'HYL RDJ', 'HYL RDK', 'HYL RDV', 'HYL RDW', 'HYL C', 'HYL J', 'HYL K', 'HYL V', 'HYL W', 'HYL GEN', 'KSG HD', 'KSG RD', 'KSG RAND', 'KSG WPC', 'KSG GEN', 'LAM FARNS', 'LAM MRSCD', 'LAM MRSDV', 'LAM GEN', 'LAW HD', 'LAW RD', 'LAW ILS', 'LAW GEN', 'DES HD', 'DES RD', 'DES OVERS', 'DES GEN', 'MUS HD', 'MUS RD', 'MUS 2DFLW', 'MUS ALDR', 'MUS ARCWM', 'MUS NBS', 'MUS RECCO', 'MUS SEEG', 'MUS GEN', 'MCZ HERP', 'MCZ MOLL', 'MCZ TS', 'MCZ GEN', 'TOZ TOZLC', 'TOZ HD', 'TOZ HDLC', 'TOZ RD', 'TOZ RDLC', 'TOZ GEN', 'WID HD', 'WID RD', 'WID SLAV', 'WID TIBET', 'WID WIDLC', 'WID WIDHE', 'WID WIDME', 'WID WIDYI', 'WID GEN'],
+    lendItypes: ['01 BOOK', '01 ISSBD', '01 CD', '01 SCORE', '01 BLURAY', '01 DVD', 'BOOK', 'ISSBD', 'CD', 'SCORE', 'BLURAY', 'DVD']
+  },
   'US-MDBJ': { 
     tag: '991',
     subs: { a: 'c,d', b: 'a', c: 'f', d: 'e', g: 'g', k: 'k', y: 'j' },
