@@ -168,7 +168,8 @@ export function cluster_transform(clusterStr) {
             let linkDat = subData[lf.linkSub];
             if (linkDat) {
               let linkedItem = linkedFields[linkDat];
-              let linkedSubs = getSubs(linkedItem) || {};
+              console.log(linkedItem);
+              let linkedSubs = (linkedItem) ? getSubs(linkedItem) : {};
               let linkedData = linkedSubs[lsf] || [];
               if (linkedData[0]) {
                 let linkedSubField = {};
