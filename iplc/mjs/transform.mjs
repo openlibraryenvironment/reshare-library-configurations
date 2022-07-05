@@ -27,6 +27,11 @@ const localFields = {
     lendLocs: ['DIV FOL', 'DIV HD', 'DIV HDSPF', 'DIV HDSPP', 'DIV OLDD', 'DIV OLDDF', 'DIV OLDDP', 'DIV GEN', 'BAK STLC', 'BAK OVERS', 'BAK CORE', 'CAB HD', 'CAB RD', 'MED HD', 'MED RD', 'MED GEN', 'FAL HD', 'FAL RD', 'FAL RUBHD', 'FAL RUBRD', 'GUT HD', 'GUT RD', 'GUT NBS', 'GUT GEN', 'HYL HD', 'HYL HDC', 'HYL HDJ', 'HYL HDK', 'HYL HDV', 'HYL HDW', 'HYL RD', 'HYL RDC', 'HYL RDJ', 'HYL RDK', 'HYL RDV', 'HYL RDW', 'HYL C', 'HYL J', 'HYL K', 'HYL V', 'HYL W', 'HYL GEN', 'KSG HD', 'KSG RD', 'KSG RAND', 'KSG WPC', 'KSG GEN', 'LAM FARNS', 'LAM MRSCD', 'LAM MRSDV', 'LAM GEN', 'LAW HD', 'LAW RD', 'LAW ILS', 'LAW GEN', 'DES HD', 'DES RD', 'DES OVERS', 'DES GEN', 'MUS HD', 'MUS RD', 'MUS 2DFLW', 'MUS ALDR', 'MUS ARCWM', 'MUS NBS', 'MUS RECCO', 'MUS SEEG', 'MUS GEN', 'MCZ HERP', 'MCZ MOLL', 'MCZ TS', 'MCZ GEN', 'TOZ TOZLC', 'TOZ HD', 'TOZ HDLC', 'TOZ RD', 'TOZ RDLC', 'TOZ GEN', 'WID HD', 'WID RD', 'WID SLAV', 'WID TIBET', 'WID WIDLC', 'WID WIDHE', 'WID WIDME', 'WID WIDYI', 'WID GEN'],
     lendItypes: ['01 BOOK', '01 ISSBD', '01 CD', '01 SCORE', '01 BLURAY', '01 DVD', 'BOOK', 'ISSBD', 'CD', 'SCORE', 'BLURAY', 'DVD']
   },
+  'US-MCM': {
+    tag: '985',
+    subs: { a: 'i,z', b: 's', c: 'b', d: 'j', y: 'a' },
+    lendLocs: ['DEW IMPLS', 'DEW OVRSZ', 'DEW STACK', 'ENG BRWS', 'ENG OVRSZ', 'ENG STACK', 'HUM AUDBK', 'HUM BRWS', 'HUM GRNVL', 'HUM OVRSZ', 'HUM STACK', 'HUM TRAVL', 'LSA STACK', 'MUS OVRSZ', 'MUS BRWS', 'MUS STACK', 'RTC BRWS', 'RTC STACK', 'SCI BRWS', 'SCI OVRSZ', 'SCI STACK']
+  },
   'US-MDBJ': { 
     tag: '991',
     subs: { a: 'c,d', b: 'a', c: 'f', d: 'e', g: 'g', k: 'k', y: 'j' },
@@ -65,7 +70,7 @@ const localFields = {
     tag: '876',
     subs: { a: 'i,z', b: 's', c: 'b', d: 'j', y: 'a' },
     lendLocs: ['ORWIG STACKS', 'ROCK CHINESE', 'ROCK CUTTER_K', 'ROCK JAPANESE', 'ROCK KOREAN', 'ROCK RKSTORAGE', 'ROCK STACKS', 'ROCK STOR_THES', 'ROCK STORAGE', 'SCIENCE STACKS']
-  },
+  }
 };
 
 function getSubs(field) {

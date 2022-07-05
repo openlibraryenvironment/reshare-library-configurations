@@ -1,0 +1,3210 @@
+{
+  "clusterId": "97f25c5c-2b5e-4ce6-90ed-7d9eb4746324",
+  "datestamp": "2022-07-05T11:42:20.427642Z",
+  "records": [
+    {
+      "globalId": "d70bd72a-b043-487b-a1f8-fe3ee95b1520",
+      "localId": "6047679",
+      "sourceId": "US-NNC",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "6047679"
+            },
+            {
+              "005": "20090423175101.0"
+            },
+            {
+              "008": "810414s1924    enk           000 1 eng d"
+            },
+            {
+              "029": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "NLGGC"
+                  },
+                  {
+                    "b": "045519668"
+                  }
+                ]
+              }
+            },
+            {
+              "029": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "NLGGC"
+                  },
+                  {
+                    "b": "270258361"
+                  }
+                ]
+              }
+            },
+            {
+              "029": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "NLGGC"
+                  },
+                  {
+                    "b": "200753991"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)ocm07334005"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(NNC)6047679"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)7334005"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "IXA"
+                  },
+                  {
+                    "c": "IXA"
+                  },
+                  {
+                    "d": "NLGGC"
+                  },
+                  {
+                    "d": "ZCU"
+                  }
+                ]
+              }
+            },
+            {
+              "084": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "18.05"
+                  },
+                  {
+                    "2": "bcl"
+                  }
+                ]
+              }
+            },
+            {
+              "090": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "PR6013.A5"
+                  },
+                  {
+                    "b": "W48 1924"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Galsworthy, John,"
+                  },
+                  {
+                    "d": "1867-1933."
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "The white monkey /"
+                  },
+                  {
+                    "c": "by John Galsworthy."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "London :"
+                  },
+                  {
+                    "b": "W. Heinemann,"
+                  },
+                  {
+                    "c": "1924."
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "viii, 325 p. ;"
+                  },
+                  {
+                    "c": "19 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "490": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Heinemann's colonial library"
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "\"First published 1924\"--T.p. verso."
+                  }
+                ]
+              }
+            },
+            {
+              "830": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Heinemann's colonial library."
+                  }
+                ]
+              }
+            },
+            {
+              "965": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "rcp5371"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "AUTH"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "8",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "0": "7525430"
+                  },
+                  {
+                    "a": "Rare Book, Butler 6th Fl. East (Non-Circulating)"
+                  },
+                  {
+                    "b": "rbx"
+                  },
+                  {
+                    "h": "B825G13 Y54 1924"
+                  }
+                ]
+              }
+            },
+            {
+              "991": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "B825G13 Y54 1924"
+                  },
+                  {
+                    "b": "rbx+------------+@B825+00000000+G1300000+Y5400000+001924"
+                  }
+                ]
+              }
+            },
+            {
+              "992": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Rare Book"
+                  },
+                  {
+                    "b": "Rare Book, Butler 6th Fl. East (Non-Circulating) >> B825G13 Y54 1924|DELIM|7525430"
+                  }
+                ]
+              }
+            },
+            {
+              "995": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "catalog"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "NNC"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01145cam a2200337Ia 4500"
+        },
+        "inventory": {
+          "localIdentifier": "6047679"
+        }
+      }
+    },
+    {
+      "globalId": "bd149523-01a3-498c-9b58-6ee814273e6c",
+      "localId": "9929903503681",
+      "sourceId": "US-PU",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "9929903503681"
+            },
+            {
+              "005": "20181105102323.0"
+            },
+            {
+              "008": "870812s1924    enk           000 1 eng d"
+            },
+            {
+              "016": {
+                "ind1": "7",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "001356965"
+                  },
+                  {
+                    "2": "Uk"
+                  }
+                ]
+              }
+            },
+            {
+              "019": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "312590"
+                  },
+                  {
+                    "a": "727397"
+                  },
+                  {
+                    "a": "8792051"
+                  },
+                  {
+                    "a": "70124966"
+                  },
+                  {
+                    "a": "219444099"
+                  },
+                  {
+                    "a": "867819085"
+                  }
+                ]
+              }
+            },
+            {
+              "024": {
+                "ind1": "8",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "D00016799X"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)ocm07334005"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)7334005"
+                  },
+                  {
+                    "z": "(OCoLC)312590"
+                  },
+                  {
+                    "z": "(OCoLC)727397"
+                  },
+                  {
+                    "z": "(OCoLC)8792051"
+                  },
+                  {
+                    "z": "(OCoLC)70124966"
+                  },
+                  {
+                    "z": "(OCoLC)219444099"
+                  },
+                  {
+                    "z": "(OCoLC)867819085"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(PU)2990-penndb-Voyager"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "z": "(OCoLC)312590"
+                  },
+                  {
+                    "z": "(OCoLC)727397"
+                  },
+                  {
+                    "z": "(OCoLC)8792051"
+                  },
+                  {
+                    "z": "(OCoLC)70124966"
+                  },
+                  {
+                    "z": "(OCoLC)219444099"
+                  },
+                  {
+                    "z": "(OCoLC)867819085"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "IXA"
+                  },
+                  {
+                    "b": "eng"
+                  },
+                  {
+                    "c": "IXA"
+                  },
+                  {
+                    "d": "NLGGC"
+                  },
+                  {
+                    "d": "NZWTU"
+                  },
+                  {
+                    "d": "OCLCG"
+                  },
+                  {
+                    "d": "DRB"
+                  },
+                  {
+                    "d": "N5L"
+                  },
+                  {
+                    "d": "UKMGB"
+                  },
+                  {
+                    "d": "OCLCQ"
+                  },
+                  {
+                    "d": "OCLCO"
+                  },
+                  {
+                    "d": "OCLCF"
+                  },
+                  {
+                    "d": "OCLCQ"
+                  },
+                  {
+                    "d": "UKDEL"
+                  },
+                  {
+                    "d": "OCLCO"
+                  },
+                  {
+                    "d": "PAU"
+                  }
+                ]
+              }
+            },
+            {
+              "043": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "e-uk-en"
+                  }
+                ]
+              }
+            },
+            {
+              "049": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "PAUU"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "PZ3.G139"
+                  },
+                  {
+                    "b": "Whi"
+                  }
+                ]
+              }
+            },
+            {
+              "082": {
+                "ind1": "0",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "823.912"
+                  },
+                  {
+                    "2": "21"
+                  }
+                ]
+              }
+            },
+            {
+              "084": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "18.05"
+                  },
+                  {
+                    "2": "bcl"
+                  }
+                ]
+              }
+            },
+            {
+              "090": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "PR6013.A5"
+                  },
+                  {
+                    "b": "W4 1924b"
+                  },
+                  {
+                    "i": "09/29/87 CTZ"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Galsworthy, John,"
+                  },
+                  {
+                    "d": "1867-1933."
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "The white monkey /"
+                  },
+                  {
+                    "c": "by John Galsworthy."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "London :"
+                  },
+                  {
+                    "b": "W. Heinemann,"
+                  },
+                  {
+                    "c": "1924."
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "viii, 325 pages ;"
+                  },
+                  {
+                    "c": "19 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "336": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "text"
+                  },
+                  {
+                    "b": "txt"
+                  },
+                  {
+                    "2": "rdacontent"
+                  }
+                ]
+              }
+            },
+            {
+              "337": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "unmediated"
+                  },
+                  {
+                    "b": "n"
+                  },
+                  {
+                    "2": "rdamedia"
+                  }
+                ]
+              }
+            },
+            {
+              "338": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "volume"
+                  },
+                  {
+                    "b": "nc"
+                  },
+                  {
+                    "2": "rdacarrier"
+                  }
+                ]
+              }
+            },
+            {
+              "490": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Heinemann's colonial library"
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "\"First published 1924\"--Title page verso."
+                  }
+                ]
+              }
+            },
+            {
+              "590": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Gotham Book Mart Collection copy has dustjacket retained."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Forsyte family (Fictitious characters)"
+                  },
+                  {
+                    "v": "Fiction."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Domestic fiction, English."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Families"
+                  },
+                  {
+                    "z": "England"
+                  },
+                  {
+                    "v": "Fiction."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Domestic fiction, English."
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "(OCoLC)fst00896631"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Families."
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "(OCoLC)fst01728849"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Forsyte family (Fictitious characters)"
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "(OCoLC)fst00933009"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "CHR 1924"
+                  },
+                  {
+                    "5": "PU"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "PRO Wolf, Edwin II (donor) (RBC copy)"
+                  },
+                  {
+                    "5": "PU"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "PRO Gotham Book Mart (former owner) (Gotham Book Mart Collection copy)"
+                  },
+                  {
+                    "5": "PU"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "England."
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "(OCoLC)fst01219920"
+                  }
+                ]
+              }
+            },
+            {
+              "655": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Fiction."
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "(OCoLC)fst01423787"
+                  }
+                ]
+              }
+            },
+            {
+              "710": {
+                "ind1": "2",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Gotham Book Mart Collection (University of Pennsylvania)"
+                  },
+                  {
+                    "5": "PU"
+                  }
+                ]
+              }
+            },
+            {
+              "950": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "l": "RBC"
+                  },
+                  {
+                    "i": "09/29/87 C"
+                  }
+                ]
+              }
+            },
+            {
+              "955": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "l": "RBC"
+                  },
+                  {
+                    "c": "1"
+                  },
+                  {
+                    "q": "87B32669-1"
+                  },
+                  {
+                    "q": "EDWIN WOLF II"
+                  },
+                  {
+                    "i": "09/29/87 C"
+                  }
+                ]
+              }
+            },
+            {
+              "994": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "C0"
+                  },
+                  {
+                    "b": "PAU"
+                  }
+                ]
+              }
+            },
+            {
+              "itm": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "h": "PR6013.A5 W4 1924b"
+                  },
+                  {
+                    "b": "Libra"
+                  },
+                  {
+                    "p": "31198062972729"
+                  },
+                  {
+                    "c": "storspec"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "PU"
+                  }
+                ]
+              }
+            },
+            {
+              "998": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "8": "itm.0\\p"
+                  },
+                  {
+                    "a": "PR6013.A5 W4 1924b"
+                  },
+                  {
+                    "i": "31198062972729"
+                  },
+                  {
+                    "m": "Libra"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "02355cam a2200565Ia 4500"
+        },
+        "inventory": {
+          "localIdentifier": "9929903503681"
+        }
+      }
+    },
+    {
+      "globalId": "f4d378c9-785f-4937-8cf3-cb8bf4714840",
+      "localId": "a1332235",
+      "sourceId": "US-CST",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "a1332235"
+            },
+            {
+              "003": "SIRSI"
+            },
+            {
+              "005": "20220312050002.0"
+            },
+            {
+              "008": "890609s1924    enk           000 1 eng d"
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(CStRLIN)CSUG89-B35590"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC-M)7334005"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC-I)273523835"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "MiU"
+                  },
+                  {
+                    "c": "MiU"
+                  },
+                  {
+                    "d": "CSt"
+                  },
+                  {
+                    "d": "OrLoB"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Galsworthy, John,"
+                  },
+                  {
+                    "d": "1867-1933."
+                  },
+                  {
+                    "=": "^A99086"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "The white monkey ..."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "London,"
+                  },
+                  {
+                    "b": "W. Heinemann"
+                  },
+                  {
+                    "c": "[1924]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "viii, 325 p."
+                  },
+                  {
+                    "c": "19 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "596": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "21"
+                  }
+                ]
+              }
+            },
+            {
+              "916": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DATE CATALOGED"
+                  },
+                  {
+                    "b": "19910824"
+                  }
+                ]
+              }
+            },
+            {
+              "999": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "PR6013.A17 W5 1924E"
+                  },
+                  {
+                    "w": "LC"
+                  },
+                  {
+                    "c": "1"
+                  },
+                  {
+                    "i": "001AGE5931"
+                  },
+                  {
+                    "d": "8/6/1996"
+                  },
+                  {
+                    "l": "FELTON"
+                  },
+                  {
+                    "m": "SPEC-COLL"
+                  },
+                  {
+                    "r": "Y"
+                  },
+                  {
+                    "s": "Y"
+                  },
+                  {
+                    "t": "STKS"
+                  },
+                  {
+                    "u": "6/9/1989"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "CSt"
+                  }
+                ]
+              }
+            },
+            {
+              "998": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "8": "999.0\\p"
+                  },
+                  {
+                    "a": "PR6013.A17 W5 1924E"
+                  },
+                  {
+                    "i": "001AGE5931"
+                  },
+                  {
+                    "m": "SPEC-COLL"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "00730nam a22002291  4500"
+        },
+        "inventory": {
+          "localIdentifier": "a1332235"
+        }
+      }
+    },
+    {
+      "globalId": "ece0915b-8d41-4cab-a2e4-64c127ca8cbb",
+      "localId": "a1332240",
+      "sourceId": "US-CST",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "a1332240"
+            },
+            {
+              "003": "SIRSI"
+            },
+            {
+              "005": "20220312050002.0"
+            },
+            {
+              "008": "890609s1924    enk           000 1 eng d"
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(CStRLIN)CSUG89-B35600"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC-M)123171487"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC-I)273523840"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "MiU"
+                  },
+                  {
+                    "c": "MiU"
+                  },
+                  {
+                    "d": "CSt"
+                  },
+                  {
+                    "d": "OrLoB"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Galsworthy, John,"
+                  },
+                  {
+                    "d": "1867-1933."
+                  },
+                  {
+                    "=": "^A99086"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "The white monkey."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "London,"
+                  },
+                  {
+                    "b": "W. Heinemann"
+                  },
+                  {
+                    "c": "[1924?]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "viii, 325 p."
+                  },
+                  {
+                    "c": "24 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Printed at the Whitefriars Press, London."
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "\"This edition ... is limited to 265 copies numbered and signed by the author.\""
+                  }
+                ]
+              }
+            },
+            {
+              "590": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Stanford copy 1 (FELT): No. 25. Signed: John Galsworthy."
+                  }
+                ]
+              }
+            },
+            {
+              "596": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "21"
+                  }
+                ]
+              }
+            },
+            {
+              "690": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "%PRIN797"
+                  },
+                  {
+                    "a": "Whitefriars Press, London."
+                  }
+                ]
+              }
+            },
+            {
+              "690": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "%PRIN797"
+                  },
+                  {
+                    "a": "Whitefriars Press, London."
+                  }
+                ]
+              }
+            },
+            {
+              "916": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DATE CATALOGED"
+                  },
+                  {
+                    "b": "19910824"
+                  }
+                ]
+              }
+            },
+            {
+              "999": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "PR6013.A17 W5 1924EXL"
+                  },
+                  {
+                    "w": "LC"
+                  },
+                  {
+                    "c": "1"
+                  },
+                  {
+                    "i": "001AGE5936"
+                  },
+                  {
+                    "d": "8/6/1996"
+                  },
+                  {
+                    "l": "FELTON"
+                  },
+                  {
+                    "m": "SPEC-COLL"
+                  },
+                  {
+                    "r": "Y"
+                  },
+                  {
+                    "s": "Y"
+                  },
+                  {
+                    "t": "STKS"
+                  },
+                  {
+                    "u": "6/9/1989"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "CSt"
+                  }
+                ]
+              }
+            },
+            {
+              "998": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "8": "999.0\\p"
+                  },
+                  {
+                    "a": "PR6013.A17 W5 1924EXL"
+                  },
+                  {
+                    "i": "001AGE5936"
+                  },
+                  {
+                    "m": "SPEC-COLL"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01066nam a22002891  4500"
+        },
+        "inventory": {
+          "localIdentifier": "a1332240"
+        }
+      }
+    },
+    {
+      "globalId": "d441f4a6-9fed-481d-b8f5-7fc196c0c896",
+      "localId": "oai:pod.stanford.edu:chicago:403:3768312",
+      "sourceId": "US-ICU",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "3768312"
+            },
+            {
+              "003": "ICU"
+            },
+            {
+              "005": "19990511000000.0"
+            },
+            {
+              "008": "810414s1924    enk           000 1 eng d"
+            },
+            {
+              "019": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "312590"
+                  },
+                  {
+                    "a": "727397"
+                  },
+                  {
+                    "a": "8792051"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)7334005"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "IXA"
+                  },
+                  {
+                    "c": "IXA"
+                  },
+                  {
+                    "d": "CGU"
+                  }
+                ]
+              }
+            },
+            {
+              "049": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "CGUA"
+                  }
+                ]
+              }
+            },
+            {
+              "090": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "PR6013.A5"
+                  },
+                  {
+                    "b": "W48 1924"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Galsworthy, John,"
+                  },
+                  {
+                    "d": "1867-1933"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "The white monkey /"
+                  },
+                  {
+                    "c": "by John Galsworthy."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "London :"
+                  },
+                  {
+                    "b": "W. Heinemann,"
+                  },
+                  {
+                    "c": "1924."
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "viii, 325 p. ;"
+                  },
+                  {
+                    "c": "19 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "336": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "text"
+                  },
+                  {
+                    "b": "txt"
+                  },
+                  {
+                    "2": "rdacontent"
+                  }
+                ]
+              }
+            },
+            {
+              "337": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "unmediated"
+                  },
+                  {
+                    "b": "n"
+                  },
+                  {
+                    "2": "rdamedia"
+                  }
+                ]
+              }
+            },
+            {
+              "338": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "volume"
+                  },
+                  {
+                    "b": "nc"
+                  },
+                  {
+                    "2": "rdacarrier"
+                  }
+                ]
+              }
+            },
+            {
+              "490": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Heinemann's colonial library"
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "\"First published 1924\"--T.p. verso."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Domestic fiction, English."
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "http://id.worldcat.org/fast/fst00896631"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Families."
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "http://id.worldcat.org/fast/fst01728849"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Forsyte family (Fictitious characters)"
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "http://id.worldcat.org/fast/fst00933009"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "England."
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "http://id.worldcat.org/fast/fst01219920"
+                  }
+                ]
+              }
+            },
+            {
+              "655": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Fiction."
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "http://id.worldcat.org/fast/fst01423787"
+                  }
+                ]
+              }
+            },
+            {
+              "928": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "t": "Library of Congress classification"
+                  },
+                  {
+                    "a": "PR6013.A5W6 1924"
+                  },
+                  {
+                    "l": "JRL"
+                  },
+                  {
+                    "c": "JRL-Gen"
+                  },
+                  {
+                    "i": "3994742"
+                  }
+                ]
+              }
+            },
+            {
+              "927": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "t": "Library of Congress classification"
+                  },
+                  {
+                    "a": "PR6013.A5W6 1924"
+                  },
+                  {
+                    "l": "JRL"
+                  },
+                  {
+                    "c": "JRL-Gen"
+                  },
+                  {
+                    "b": "16818676"
+                  },
+                  {
+                    "i": "6202351"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "ICU"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01331nam a2200337Ia 4500"
+        }
+      }
+    },
+    {
+      "globalId": "d4b6ba86-9c34-41d5-b44e-b74c81f3b8ec",
+      "localId": "oai:pod.stanford.edu:princeton:360:9924634243506421",
+      "sourceId": "US-NJP",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "005": "20200810151310.0"
+            },
+            {
+              "008": "810414s1924    enk           000 1 eng d"
+            },
+            {
+              "001": "9924634243506421"
+            },
+            {
+              "019": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "312590"
+                  },
+                  {
+                    "a": "727397"
+                  },
+                  {
+                    "a": "8792051"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)ocm07334005"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/07334005"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "9": "CLN7555TS"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "2463424"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(NjP)2463424-princetondb"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "z": "(OCoLC)312590"
+                  },
+                  {
+                    "z": "(OCoLC)727397"
+                  },
+                  {
+                    "z": "(OCoLC)8792051"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/312590"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/727397"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/8792051"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "IXA"
+                  },
+                  {
+                    "c": "IXA"
+                  },
+                  {
+                    "d": "PUL"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "PR6013.A5"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Galsworthy, John,"
+                  },
+                  {
+                    "d": "1867-1933."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/names/n79041972"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/names/n79041972"
+                  },
+                  {
+                    "0": "(uri) http://viaf.org/viaf/sourceID/LC|n79041972"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "The white monkey /"
+                  },
+                  {
+                    "c": "by John Galsworthy."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "London :"
+                  },
+                  {
+                    "b": "W. Heinemann,"
+                  },
+                  {
+                    "c": "1924."
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "viii, 325 p. ;"
+                  },
+                  {
+                    "c": "19 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "490": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Heinemann's colonial library"
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "\"First published 1924\"--T.p. verso."
+                  }
+                ]
+              }
+            },
+            {
+              "590": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Limited ed., signed by the author."
+                  }
+                ]
+              }
+            },
+            {
+              "561": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "3": "Ex copy:"
+                  },
+                  {
+                    "a": "Presentation copy to Alfred A. Knopf, with inscription by the author."
+                  },
+                  {
+                    "5": "NjP"
+                  }
+                ]
+              }
+            },
+            {
+              "563": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "3": "Ex copy:"
+                  },
+                  {
+                    "a": "Presentation copy: Lillah McCarthy. Lillah Keeble. Hammish Boars Hill Oxford."
+                  },
+                  {
+                    "5": "NjP"
+                  }
+                ]
+              }
+            },
+            {
+              "655": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Fiction."
+                  },
+                  {
+                    "2": "lcgft"
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/genreForms/gf2014026339"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/genreForms/gf2014026339"
+                  }
+                ]
+              }
+            },
+            {
+              "700": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Knopf, Alfred A.,"
+                  },
+                  {
+                    "d": "1892-1984,"
+                  },
+                  {
+                    "e": "former owner."
+                  },
+                  {
+                    "5": "NjP"
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/names/n86134128"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/names/n86134128"
+                  },
+                  {
+                    "0": "(uri) http://viaf.org/viaf/sourceID/LC|n86134128"
+                  }
+                ]
+              }
+            },
+            {
+              "700": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "McCarthy, Lillah,"
+                  },
+                  {
+                    "d": "1875-1960,"
+                  },
+                  {
+                    "e": "former owner."
+                  },
+                  {
+                    "5": "NjP"
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/names/no2009134530"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/names/no2009134530"
+                  },
+                  {
+                    "0": "(uri) http://viaf.org/viaf/sourceID/LC|no2009134530"
+                  }
+                ]
+              }
+            },
+            {
+              "700": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Galsworthy, John,"
+                  },
+                  {
+                    "d": "1867-1933,"
+                  },
+                  {
+                    "e": "inscriber."
+                  },
+                  {
+                    "5": "NjP"
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/names/n79041972"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/names/n79041972"
+                  },
+                  {
+                    "0": "(uri) http://viaf.org/viaf/sourceID/LC|n79041972"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "8",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "b": "rare"
+                  },
+                  {
+                    "c": "hsvr"
+                  },
+                  {
+                    "h": "20th-181"
+                  },
+                  {
+                    "k": "RHT"
+                  },
+                  {
+                    "8": "22728592480006421"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "8",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "b": "rare"
+                  },
+                  {
+                    "c": "ex"
+                  },
+                  {
+                    "h": "3749.2.396.11"
+                  },
+                  {
+                    "8": "22728592490006421"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "NjP"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "02238cam a2200349 a 4500"
+        }
+      }
+    },
+    {
+      "globalId": "d9c92203-8751-4ea4-a1eb-27a55fb15bd1",
+      "localId": "oai:pod.stanford.edu:yale:394:1342443",
+      "sourceId": "US-CTY",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "1342443"
+            },
+            {
+              "005": "20140722180813.0"
+            },
+            {
+              "008": "870812s1924    enk           00011 eng d"
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)ocn683882513"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(UPRA)CTYXRL96904-B"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(UPRA)tmp13485180"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "9": "CAV9120YL"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "1342443"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "MiU"
+                  },
+                  {
+                    "c": "MiU"
+                  },
+                  {
+                    "d": "UPRA"
+                  },
+                  {
+                    "d": "UPRA"
+                  },
+                  {
+                    "d": "UPRA"
+                  }
+                ]
+              }
+            },
+            {
+              "079": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "ocm07334005"
+                  }
+                ]
+              }
+            },
+            {
+              "090": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "\\Iq G139\\"
+                  },
+                  {
+                    "b": "924w"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Galsworthy, John,"
+                  },
+                  {
+                    "d": "1867-1933."
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "The white monkey,"
+                  },
+                  {
+                    "c": "by John Galsworthy."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "London,"
+                  },
+                  {
+                    "b": "W. Heinemann ltd."
+                  },
+                  {
+                    "c": "[1924]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "viii, 325 p. ;"
+                  },
+                  {
+                    "c": "20 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "This WorldCat-derived record is shareable under Open Data Commons ODC-BY, with attribution to OCLC."
+                  },
+                  {
+                    "5": "CTY"
+                  }
+                ]
+              }
+            },
+            {
+              "590": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "BEIN Iq G139 924w:  Inscribed by the author. Bookplate of John Wesley Warrington."
+                  }
+                ]
+              }
+            },
+            {
+              "692": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "Galsworthy, John,"
+                  },
+                  {
+                    "d": "1867-1933"
+                  },
+                  {
+                    "x": "Inscription."
+                  }
+                ]
+              }
+            },
+            {
+              "692": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "Warrington, John Wesley"
+                  },
+                  {
+                    "x": "Bookplate."
+                  }
+                ]
+              }
+            },
+            {
+              "856": {
+                "ind1": "4",
+                "ind2": "2",
+                "subfields": [
+                  {
+                    "y": "Yale catalog record"
+                  },
+                  {
+                    "u": "https://search.library.yale.edu/catalog/1342443"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "8",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "8": "1524246"
+                  },
+                  {
+                    "b": "beingen"
+                  },
+                  {
+                    "h": "Iq G139"
+                  },
+                  {
+                    "i": "924w"
+                  }
+                ]
+              }
+            },
+            {
+              "876": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "8": "1524246"
+                  },
+                  {
+                    "3": "1 piece"
+                  },
+                  {
+                    "a": "10886111"
+                  },
+                  {
+                    "h": "nocirc"
+                  },
+                  {
+                    "p": "39002126610907"
+                  },
+                  {
+                    "t": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "927": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "rlin"
+                  }
+                ]
+              }
+            },
+            {
+              "928": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "AC031397"
+                  }
+                ]
+              }
+            },
+            {
+              "948": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "RLA Beinecke Recon"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "CtY"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01217cam a22003371  4500"
+        }
+      }
+    },
+    {
+      "globalId": "e06ee05a-ed91-4908-8fcc-07012e7f05a2",
+      "localId": "oai:pod.stanford.edu:harvard:301:990094372190203941",
+      "sourceId": "US-MH",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "005": "20040820111555.0"
+            },
+            {
+              "008": "040820s1924    enk           000|f|eng|d"
+            },
+            {
+              "001": "990094372190203941"
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)7334005"
+                  },
+                  {
+                    "z": "(OCoLC)312590"
+                  },
+                  {
+                    "z": "(OCoLC)727397"
+                  },
+                  {
+                    "z": "(OCoLC)8792051"
+                  },
+                  {
+                    "z": "(OCoLC)70124966"
+                  },
+                  {
+                    "z": "(OCoLC)219444099"
+                  },
+                  {
+                    "z": "(OCoLC)250275640"
+                  },
+                  {
+                    "z": "(OCoLC)867819085"
+                  },
+                  {
+                    "z": "(OCoLC)1169387434"
+                  },
+                  {
+                    "z": "(OCoLC)1170811313"
+                  },
+                  {
+                    "z": "(OCoLC)1173007230"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/7334005"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/312590"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/727397"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/8792051"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/70124966"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/219444099"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/250275640"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/867819085"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/1169387434"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/1170811313"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/1173007230"
+                  }
+                ]
+              }
+            },
+            {
+              "043": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "e-uk-en"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "PZ3.G139"
+                  },
+                  {
+                    "b": "Whi"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Galsworthy, John,"
+                  },
+                  {
+                    "d": "1867-1933"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/names/n79041972"
+                  },
+                  {
+                    "0": "(uri) http://viaf.org/viaf/sourceID/LC|n79041972"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "The white monkey /"
+                  },
+                  {
+                    "c": "by John Galsworthy."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "London :"
+                  },
+                  {
+                    "b": "W. Heinemann,"
+                  },
+                  {
+                    "c": "1924."
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "viii, 325 p. ;"
+                  },
+                  {
+                    "c": "20 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "340": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "m": "8vo."
+                  },
+                  {
+                    "2": "rdabf"
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "First edition."
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "\"First published 1924\"--Verso of title page."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Forsyte family (Fictitious characters)"
+                  },
+                  {
+                    "v": "Fiction"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/subjects/sh2008121110"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Domestic fiction, English"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/subjects/sh86004355"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Families"
+                  },
+                  {
+                    "z": "England"
+                  },
+                  {
+                    "v": "Fiction"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/subjects/sh2008103502"
+                  }
+                ]
+              }
+            },
+            {
+              "655": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Fiction"
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "(OCoLC)fst01423787"
+                  },
+                  {
+                    "0": "(uri) http://id.worldcat.org/fast/fst01423787"
+                  }
+                ]
+              }
+            },
+            {
+              "655": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Autographs (Provenance)"
+                  },
+                  {
+                    "2": "rbprov"
+                  }
+                ]
+              }
+            },
+            {
+              "752": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "England"
+                  },
+                  {
+                    "d": "London."
+                  }
+                ]
+              }
+            },
+            {
+              "541": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "c": "Gift;"
+                  },
+                  {
+                    "a": "Amor Hollingsworth;"
+                  },
+                  {
+                    "d": "26 April 1999;"
+                  },
+                  {
+                    "e": "2004-159."
+                  },
+                  {
+                    "5": "hou"
+                  },
+                  {
+                    "8": "222084439150003941"
+                  }
+                ]
+              }
+            },
+            {
+              "562": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Bound in original green cloth."
+                  },
+                  {
+                    "5": "hou"
+                  },
+                  {
+                    "8": "222084439150003941"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "8",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "HOU"
+                  },
+                  {
+                    "c": "HD"
+                  },
+                  {
+                    "h": "*2004-159"
+                  },
+                  {
+                    "8": "222084439150003941"
+                  }
+                ]
+              }
+            },
+            {
+              "876": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "8": "222084439150003941"
+                  },
+                  {
+                    "q": "1"
+                  },
+                  {
+                    "7": "8"
+                  },
+                  {
+                    "m": "HD"
+                  },
+                  {
+                    "y": "BOOK"
+                  },
+                  {
+                    "p": "HH3BFG"
+                  },
+                  {
+                    "c": "HD"
+                  },
+                  {
+                    "0": "232084439140003941"
+                  },
+                  {
+                    "h": "91"
+                  },
+                  {
+                    "n": "*2004-159"
+                  },
+                  {
+                    "b": "HOU"
+                  },
+                  {
+                    "l": "HOU"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "MH"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "02162nam a2200313 a 4500"
+        }
+      }
+    }
+  ],
+  "matchValues": [
+    "white_monkey_______________________________________________________________1924_______wheina________________________________________galsworthy__john___________________p"
+  ]
+}
