@@ -135,6 +135,7 @@ export function cluster_transform(clusterStr) {
     let lf = localFields[sid];
     if (lf) {
       let items = recFields[lf.tag] || [];
+      let controlNumber = (recFields['001']) ? recFields['001'][0] : lid;
       let linkedFields = {};
       if (lf.linkedField) {
         let extra = recFields[lf.linkedField] || [];
@@ -152,8 +153,8 @@ export function cluster_transform(clusterStr) {
             ind1: 1,
             ind2: 1,
             subfields: [
-              { l: lid },
-              { s: sid },
+              { l: controlNumber },
+              { s: 'ISIL:' + sid },
               { t: mtype }
             ]
           }
