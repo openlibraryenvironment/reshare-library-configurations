@@ -164,6 +164,9 @@ export function cluster_transform(clusterStr) {
       if (tag === '008') f008 = field['008'];
     }
     let controlNumber = (recFields['001']) ? recFields['001'][0] : lid;
+    if (sid === 'US-NCD') {
+      controlNumber = controlNumber.replace(/^DUKE/, '');
+    }
     let f999 = {
       ind1: '1',
       ind2: '0',
