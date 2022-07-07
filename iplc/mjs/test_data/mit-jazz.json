@@ -1,0 +1,1695 @@
+{
+  "clusterId": "81f681ed-5695-4e9c-b9bf-ab8ce66245c8",
+  "datestamp": "2022-07-06T01:37:58.518319Z",
+  "records": [
+    {
+      "globalId": "55eb2cc4-323e-45a2-8968-d111fdc25618",
+      "localId": "oai:pod.stanford.edu:mit:401:990017248140106761",
+      "sourceId": "US-MCM",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "005": "20210715115619.0"
+            },
+            {
+              "008": "091007s2010    wiujzau        n  u eng d"
+            },
+            {
+              "001": "990017248140106761"
+            },
+            {
+              "020": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "9781423489627 (pbk.) :"
+                  },
+                  {
+                    "c": "$24.99"
+                  }
+                ]
+              }
+            },
+            {
+              "020": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "1423489624 (pbk.) :"
+                  },
+                  {
+                    "c": "$24.99"
+                  }
+                ]
+              }
+            },
+            {
+              "024": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "884088469825"
+                  }
+                ]
+              }
+            },
+            {
+              "028": {
+                "ind1": "3",
+                "ind2": "2",
+                "subfields": [
+                  {
+                    "a": "HL00311952"
+                  },
+                  {
+                    "b": "Hal Leonard"
+                  }
+                ]
+              }
+            },
+            {
+              "029": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "QBX"
+                  },
+                  {
+                    "b": "qbi10700128"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(MCM)001724814MIT01"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)456170655"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "BTCTA"
+                  },
+                  {
+                    "c": "BTCTA"
+                  },
+                  {
+                    "d": "CXP"
+                  },
+                  {
+                    "d": "QBX"
+                  },
+                  {
+                    "d": "JTH"
+                  },
+                  {
+                    "d": "MYG"
+                  }
+                ]
+              }
+            },
+            {
+              "049": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "MYGG"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "M1680.18"
+                  },
+                  {
+                    "b": ".A5845 2010"
+                  }
+                ]
+              }
+            },
+            {
+              "090": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "M1630.18"
+                  },
+                  {
+                    "b": ".J379 2010"
+                  }
+                ]
+              }
+            },
+            {
+              "092": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "783.242165"
+                  },
+                  {
+                    "b": "J339"
+                  },
+                  {
+                    "2": "22"
+                  }
+                ]
+              }
+            },
+            {
+              "099": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "M1630.18.J379 2010"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "0",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Jazz :"
+                  },
+                  {
+                    "b": "anthology of jazz songs /"
+                  },
+                  {
+                    "c": "Piano, vocal, guitar."
+                  }
+                ]
+              }
+            },
+            {
+              "246": {
+                "ind1": "3",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Anthology of jazz songs"
+                  }
+                ]
+              }
+            },
+            {
+              "250": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Gold ed."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Milwaukee, WI :"
+                  },
+                  {
+                    "b": "Hal Leonard Corporation,"
+                  },
+                  {
+                    "c": "[2010?]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "1 score (405 p.) ;"
+                  },
+                  {
+                    "c": "31 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "336": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "notated music"
+                  },
+                  {
+                    "b": "ntm"
+                  },
+                  {
+                    "2": "rdacontent"
+                  }
+                ]
+              }
+            },
+            {
+              "337": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "unmediated"
+                  },
+                  {
+                    "b": "n"
+                  },
+                  {
+                    "2": "rdamedia"
+                  }
+                ]
+              }
+            },
+            {
+              "338": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "volume"
+                  },
+                  {
+                    "b": "nc"
+                  },
+                  {
+                    "2": "rdacarrier"
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "For voice and piano, with chord symbols and guitar chord diagrams."
+                  }
+                ]
+              }
+            },
+            {
+              "505": {
+                "ind1": "0",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "t": "Across the alley from the Alamo --"
+                  },
+                  {
+                    "t": "All of you --"
+                  },
+                  {
+                    "t": "All or nothing at all --"
+                  },
+                  {
+                    "t": "Almost like being in love --"
+                  },
+                  {
+                    "t": "Always true to you in my fashion --"
+                  },
+                  {
+                    "t": "Angel eyes --"
+                  },
+                  {
+                    "t": "April in Paris --"
+                  },
+                  {
+                    "t": "Autumn leaves --"
+                  },
+                  {
+                    "t": "Bernie's tune --"
+                  },
+                  {
+                    "t": "The birth of the blues --"
+                  },
+                  {
+                    "t": "Body and soul --"
+                  },
+                  {
+                    "t": "C-Jam blues --"
+                  },
+                  {
+                    "t": "Caravan --"
+                  },
+                  {
+                    "t": "Come fly with me --"
+                  },
+                  {
+                    "t": "Cry me a river --"
+                  },
+                  {
+                    "t": "Dancers in love --"
+                  },
+                  {
+                    "t": "Day by day --"
+                  },
+                  {
+                    "t": "Django --"
+                  },
+                  {
+                    "t": "Don't get around much anymore --"
+                  },
+                  {
+                    "t": "East of the sun (and west of the moon) --"
+                  },
+                  {
+                    "t": "Easy street --"
+                  },
+                  {
+                    "t": "Ev'ry time we say goodbye --"
+                  },
+                  {
+                    "t": "Falling in love with love --"
+                  },
+                  {
+                    "t": "A fine romance --"
+                  },
+                  {
+                    "t": "The folks who live on the hill --"
+                  },
+                  {
+                    "t": "From this moment on --"
+                  },
+                  {
+                    "t": "Girl talk --"
+                  },
+                  {
+                    "t": "Gone with the wind --"
+                  },
+                  {
+                    "t": "Guess who I saw today --"
+                  },
+                  {
+                    "t": "Harlem nocturne --"
+                  },
+                  {
+                    "t": "Honeysuckle Rose --"
+                  },
+                  {
+                    "t": "How are things in Glocca Morra --"
+                  },
+                  {
+                    "t": "I ain't got nothin' but the blues --"
+                  },
+                  {
+                    "t": "I can't get started with you --"
+                  },
+                  {
+                    "t": "I don't stand a ghost of a chance --"
+                  },
+                  {
+                    "t": "I got it bad and that ain't good --"
+                  },
+                  {
+                    "t": "I let a song go out of my heart --"
+                  },
+                  {
+                    "t": "I thought about you --"
+                  },
+                  {
+                    "t": "I wish I were in love again --"
+                  },
+                  {
+                    "t": "I'll be seeing you --"
+                  },
+                  {
+                    "t": "I'm just a lucky so and so --"
+                  },
+                  {
+                    "t": "I'm old fashioned --"
+                  },
+                  {
+                    "t": "I've got my love to keep me warm --"
+                  },
+                  {
+                    "t": "I've got you under my skin --"
+                  },
+                  {
+                    "t": "I've grown accustomed to her face --"
+                  },
+                  {
+                    "t": "Ill wind (you're blowin' me no good) --"
+                  },
+                  {
+                    "t": "Imagination --"
+                  },
+                  {
+                    "t": "In a mellow tone --"
+                  },
+                  {
+                    "t": "In the mood --"
+                  },
+                  {
+                    "t": "It all depends on you --"
+                  },
+                  {
+                    "t": "It could happen to you --"
+                  },
+                  {
+                    "t": "It's all right with me --"
+                  },
+                  {
+                    "t": "It's de-lovely --"
+                  },
+                  {
+                    "t": "June in January --"
+                  },
+                  {
+                    "t": "Just in time --"
+                  },
+                  {
+                    "t": "Just squeeze me (but don't tease me) --"
+                  },
+                  {
+                    "t": "The last time I saw Paris --"
+                  },
+                  {
+                    "t": "Lazy afternoon --"
+                  },
+                  {
+                    "t": "Lazy river --"
+                  },
+                  {
+                    "t": "Let's face the music and dance --"
+                  },
+                  {
+                    "t": "Like someone in love --"
+                  },
+                  {
+                    "t": "Love is a simple thing --"
+                  },
+                  {
+                    "t": "Love letters --"
+                  },
+                  {
+                    "t": "Lullaby of the leaves --"
+                  },
+                  {
+                    "t": "Midnight sun --"
+                  },
+                  {
+                    "t": "My foolish heart --"
+                  },
+                  {
+                    "t": "My heart belongs to Daddy --"
+                  },
+                  {
+                    "t": "My old flame --"
+                  },
+                  {
+                    "t": "My shining hour --"
+                  },
+                  {
+                    "t": "My ship --"
+                  },
+                  {
+                    "t": "Never let me go --"
+                  },
+                  {
+                    "t": "Ol' man river --"
+                  },
+                  {
+                    "t": "On a slow boat to China --"
+                  },
+                  {
+                    "t": "One morning in May --"
+                  },
+                  {
+                    "t": "Our day will come --"
+                  },
+                  {
+                    "t": "The party's over --"
+                  },
+                  {
+                    "t": "Polka dots and moonbeams --"
+                  },
+                  {
+                    "t": "The rainbow connection --"
+                  },
+                  {
+                    "t": "Rockin' in rhythm --"
+                  },
+                  {
+                    "t": "St. Louis blues --"
+                  },
+                  {
+                    "t": "September song --"
+                  },
+                  {
+                    "t": "A sleepin' bee --"
+                  },
+                  {
+                    "t": "Small world --"
+                  },
+                  {
+                    "t": "Solitude --"
+                  },
+                  {
+                    "t": "Some day my prince will come --"
+                  },
+                  {
+                    "t": "Stompin' at the Savoy --"
+                  },
+                  {
+                    "t": "Stormy weather (keeps rainin' all the time) --"
+                  },
+                  {
+                    "t": "Tenderly --"
+                  },
+                  {
+                    "t": "There will never be another you --"
+                  },
+                  {
+                    "t": "There's a small hotel --"
+                  },
+                  {
+                    "t": "Time after time --"
+                  },
+                  {
+                    "t": "Too late now --"
+                  },
+                  {
+                    "t": "What a diff'rence a day made --"
+                  },
+                  {
+                    "t": "What's new? --"
+                  },
+                  {
+                    "t": "When I fall in love --"
+                  },
+                  {
+                    "t": "When sunny gets blue --"
+                  },
+                  {
+                    "t": "When you're smiling (the whole world smiles with you) --"
+                  },
+                  {
+                    "t": "Will you still be mine --"
+                  },
+                  {
+                    "t": "You are the sunshine of my life --"
+                  },
+                  {
+                    "t": "You took advantage of me."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Jazz."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Jazz vocals."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Piano music (Jazz)"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Musicals"
+                  },
+                  {
+                    "v": "Excerpts"
+                  },
+                  {
+                    "v": "Vocal scores with piano."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Motion picture music"
+                  },
+                  {
+                    "v": "Excerpts"
+                  },
+                  {
+                    "v": "Vocal scores with piano."
+                  }
+                ]
+              }
+            },
+            {
+              "655": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Jazz."
+                  },
+                  {
+                    "2": "lcgft"
+                  }
+                ]
+              }
+            },
+            {
+              "655": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Vocal scores."
+                  },
+                  {
+                    "2": "lcgft"
+                  }
+                ]
+              }
+            },
+            {
+              "655": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Excerpts."
+                  },
+                  {
+                    "2": "lcgft"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "MUS"
+                  },
+                  {
+                    "d": "STACK"
+                  },
+                  {
+                    "f": "M1630.18.J379 2010"
+                  },
+                  {
+                    "8": "22483591860006761"
+                  }
+                ]
+              }
+            },
+            {
+              "985": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "j": "0"
+                  },
+                  {
+                    "aa": "STACK"
+                  },
+                  {
+                    "t": "BOOK"
+                  },
+                  {
+                    "s": "39080034676467"
+                  },
+                  {
+                    "a": "23483591850006761"
+                  },
+                  {
+                    "c": "01"
+                  },
+                  {
+                    "bb": "SCORE M1630.18.J379 2010"
+                  },
+                  {
+                    "i": "MUS"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "MCM"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "04110ccm  2200469Ia 4500"
+        }
+      }
+    },
+    {
+      "globalId": "93790401-2de1-4ff7-8789-120a6f9c8c98",
+      "localId": "oai:pod.stanford.edu:duke:423:DUKE004297102",
+      "sourceId": "US-NCD",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "DUKE004297102"
+            },
+            {
+              "005": "20100712092426.0"
+            },
+            {
+              "008": "091007s2010^^^^wiujza^^^^^^^^^n^^u^eng^d"
+            },
+            {
+              "020": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "9781423489627"
+                  },
+                  {
+                    "q": "paperback"
+                  },
+                  {
+                    "c": "$24.99"
+                  }
+                ]
+              }
+            },
+            {
+              "020": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "1423489624"
+                  },
+                  {
+                    "q": "paperback"
+                  },
+                  {
+                    "c": "$24.99"
+                  }
+                ]
+              }
+            },
+            {
+              "024": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "884088469825"
+                  }
+                ]
+              }
+            },
+            {
+              "028": {
+                "ind1": "3",
+                "ind2": "2",
+                "subfields": [
+                  {
+                    "a": "HL00311952"
+                  },
+                  {
+                    "b": "Hal Leonard"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "456170655"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "BTCTA"
+                  },
+                  {
+                    "b": "eng"
+                  },
+                  {
+                    "c": "BTCTA"
+                  },
+                  {
+                    "d": "CXP"
+                  },
+                  {
+                    "d": "QBX"
+                  },
+                  {
+                    "d": "JTH"
+                  },
+                  {
+                    "d": "MYG"
+                  }
+                ]
+              }
+            },
+            {
+              "049": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "NDDP"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "M1680.18"
+                  },
+                  {
+                    "b": ".A5845 2010"
+                  }
+                ]
+              }
+            },
+            {
+              "092": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "783.242165"
+                  },
+                  {
+                    "b": "J339"
+                  },
+                  {
+                    "2": "22"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "0",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Jazz :"
+                  },
+                  {
+                    "b": "anthology of jazz songs /"
+                  },
+                  {
+                    "c": "Piano, vocal, guitar."
+                  }
+                ]
+              }
+            },
+            {
+              "246": {
+                "ind1": "3",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Anthology of jazz songs"
+                  }
+                ]
+              }
+            },
+            {
+              "250": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Gold ed."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Milwaukee, WI :"
+                  },
+                  {
+                    "b": "Hal Leonard Corporation,"
+                  },
+                  {
+                    "c": "[2010?]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "1 score (405 p.) ;"
+                  },
+                  {
+                    "c": "31 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "336": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "notated music"
+                  },
+                  {
+                    "b": "ntm"
+                  },
+                  {
+                    "2": "rdacontent"
+                  }
+                ]
+              }
+            },
+            {
+              "337": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "unmediated"
+                  },
+                  {
+                    "b": "n"
+                  },
+                  {
+                    "2": "rdamedia"
+                  }
+                ]
+              }
+            },
+            {
+              "338": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "volume"
+                  },
+                  {
+                    "b": "nc"
+                  },
+                  {
+                    "2": "rdacarrier"
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "For voice and piano, with chord symbols and guitar chord diagrams."
+                  }
+                ]
+              }
+            },
+            {
+              "505": {
+                "ind1": "0",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "t": "Across the alley from the Alamo --"
+                  },
+                  {
+                    "t": "All of you --"
+                  },
+                  {
+                    "t": "All or nothing at all --"
+                  },
+                  {
+                    "t": "Almost like being in love --"
+                  },
+                  {
+                    "t": "Always true to you in my fashion --"
+                  },
+                  {
+                    "t": "Angel eyes --"
+                  },
+                  {
+                    "t": "April in Paris --"
+                  },
+                  {
+                    "t": "Autumn leaves --"
+                  },
+                  {
+                    "t": "Bernie's tune --"
+                  },
+                  {
+                    "t": "The birth of the blues --"
+                  },
+                  {
+                    "t": "Body and soul --"
+                  },
+                  {
+                    "t": "C-Jam blues --"
+                  },
+                  {
+                    "t": "Caravan --"
+                  },
+                  {
+                    "t": "Come fly with me --"
+                  },
+                  {
+                    "t": "Cry me a river --"
+                  },
+                  {
+                    "t": "Dancers in love --"
+                  },
+                  {
+                    "t": "Day by day --"
+                  },
+                  {
+                    "t": "Django --"
+                  },
+                  {
+                    "t": "Don't get around much anymore --"
+                  },
+                  {
+                    "t": "East of the sun (and west of the moon) --"
+                  },
+                  {
+                    "t": "Easy street --"
+                  },
+                  {
+                    "t": "Ev'ry time we say goodbye --"
+                  },
+                  {
+                    "t": "Falling in love with love --"
+                  },
+                  {
+                    "t": "A fine romance --"
+                  },
+                  {
+                    "t": "The folks who live on the hill --"
+                  },
+                  {
+                    "t": "From this moment on --"
+                  },
+                  {
+                    "t": "Girl talk --"
+                  },
+                  {
+                    "t": "Gone with the wind --"
+                  },
+                  {
+                    "t": "Guess who I saw today --"
+                  },
+                  {
+                    "t": "Harlem nocturne --"
+                  },
+                  {
+                    "t": "Honeysuckle Rose --"
+                  },
+                  {
+                    "t": "How are things in Glocca Morra --"
+                  },
+                  {
+                    "t": "I ain't got nothin' but the blues --"
+                  },
+                  {
+                    "t": "I can't get started with you --"
+                  },
+                  {
+                    "t": "I don't stand a ghost of a chance --"
+                  },
+                  {
+                    "t": "I got it bad and that ain't good --"
+                  },
+                  {
+                    "t": "I let a song go out of my heart --"
+                  },
+                  {
+                    "t": "I thought about you --"
+                  }
+                ]
+              }
+            },
+            {
+              "505": {
+                "ind1": "0",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "9": "^"
+                  },
+                  {
+                    "t": "I wish I were in love again --"
+                  },
+                  {
+                    "t": "I'll be seeing you --"
+                  },
+                  {
+                    "t": "I'm just a lucky so and so --"
+                  },
+                  {
+                    "t": "I'm old fashioned --"
+                  },
+                  {
+                    "t": "I've got my love to keep me warm --"
+                  },
+                  {
+                    "t": "I've got you under my skin --"
+                  },
+                  {
+                    "t": "I've grown accustomed to her face --"
+                  },
+                  {
+                    "t": "Ill wind (you're blowin' me no good) --"
+                  },
+                  {
+                    "t": "Imagination --"
+                  },
+                  {
+                    "t": "In a mellow tone --"
+                  },
+                  {
+                    "t": "In the mood --"
+                  },
+                  {
+                    "t": "It all depends on you --"
+                  },
+                  {
+                    "t": "It could happen to you --"
+                  },
+                  {
+                    "t": "It's all right with me --"
+                  },
+                  {
+                    "t": "It's de-lovely --"
+                  },
+                  {
+                    "t": "June in January --"
+                  },
+                  {
+                    "t": "Just in time --"
+                  },
+                  {
+                    "t": "Just squeeze me (but don't tease me) --"
+                  },
+                  {
+                    "t": "The last time I saw Paris --"
+                  },
+                  {
+                    "t": "Lazy afternoon --"
+                  },
+                  {
+                    "t": "Lazy river --"
+                  },
+                  {
+                    "t": "Let's face the music and dance --"
+                  },
+                  {
+                    "t": "Like someone in love --"
+                  },
+                  {
+                    "t": "Love is a simple thing --"
+                  },
+                  {
+                    "t": "Love letters --"
+                  },
+                  {
+                    "t": "Lullaby of the leaves --"
+                  },
+                  {
+                    "t": "Midnight sun --"
+                  },
+                  {
+                    "t": "My foolish heart --"
+                  },
+                  {
+                    "t": "My heart belongs to Daddy --"
+                  },
+                  {
+                    "t": "My old flame --"
+                  },
+                  {
+                    "t": "My shining hour --"
+                  },
+                  {
+                    "t": "My ship --"
+                  },
+                  {
+                    "t": "Never let me go --"
+                  },
+                  {
+                    "t": "Ol' man river --"
+                  },
+                  {
+                    "t": "On a slow boat to China --"
+                  },
+                  {
+                    "t": "One morning in May --"
+                  },
+                  {
+                    "t": "Our day will come --"
+                  },
+                  {
+                    "t": "The party's over --"
+                  },
+                  {
+                    "t": "Polka dots and moonbeams --"
+                  }
+                ]
+              }
+            },
+            {
+              "505": {
+                "ind1": "0",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "9": "^"
+                  },
+                  {
+                    "t": "The rainbow connection --"
+                  },
+                  {
+                    "t": "Rockin' in rhythm --"
+                  },
+                  {
+                    "t": "St. Louis blues --"
+                  },
+                  {
+                    "t": "September song --"
+                  },
+                  {
+                    "t": "A sleepin' bee --"
+                  },
+                  {
+                    "t": "Small world --"
+                  },
+                  {
+                    "t": "Solitude --"
+                  },
+                  {
+                    "t": "Some day my prince will come --"
+                  },
+                  {
+                    "t": "Stompin' at the Savoy --"
+                  },
+                  {
+                    "t": "Stormy weather (keeps rainin' all the time) --"
+                  },
+                  {
+                    "t": "Tenderly --"
+                  },
+                  {
+                    "t": "There will never be another you --"
+                  },
+                  {
+                    "t": "There's a small hotel --"
+                  },
+                  {
+                    "t": "Time after time --"
+                  },
+                  {
+                    "t": "Too late now --"
+                  },
+                  {
+                    "t": "What a diff'rence a day made --"
+                  },
+                  {
+                    "t": "What's new? --"
+                  },
+                  {
+                    "t": "When I fall in love --"
+                  },
+                  {
+                    "t": "When sunny gets blue --"
+                  },
+                  {
+                    "t": "When you're smiling (the whole world smiles with you) --"
+                  },
+                  {
+                    "t": "Will you still be mine --"
+                  },
+                  {
+                    "t": "You are the sunshine of my life --"
+                  },
+                  {
+                    "t": "You took advantage of me."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Jazz."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85069833"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Jazz vocals."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85069851"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Piano music (Jazz)"
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85101805"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Musicals"
+                  },
+                  {
+                    "v": "Excerpts"
+                  },
+                  {
+                    "v": "Vocal scores with piano."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh2008108139"
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Motion picture music"
+                  },
+                  {
+                    "v": "Excerpts"
+                  },
+                  {
+                    "v": "Vocal scores with piano."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85088059"
+                  }
+                ]
+              }
+            },
+            {
+              "029": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "QBX"
+                  },
+                  {
+                    "b": "qbi10700128"
+                  }
+                ]
+              }
+            },
+            {
+              "348": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "score"
+                  },
+                  {
+                    "2": "rdafnm"
+                  },
+                  {
+                    "0": "http://rdaregistry.info/termList/formatNoteMus/1007"
+                  }
+                ]
+              }
+            },
+            {
+              "905": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "MARCIVE 20190327"
+                  }
+                ]
+              }
+            },
+            {
+              "905": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "MARCIVE 20200114"
+                  }
+                ]
+              }
+            },
+            {
+              "942": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "MU"
+                  },
+                  {
+                    "b": "Score"
+                  }
+                ]
+              }
+            },
+            {
+              "946": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "20101213"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "MUSIC"
+                  },
+                  {
+                    "c": "PM"
+                  },
+                  {
+                    "h": "M1680.18"
+                  },
+                  {
+                    "i": ".A5845 2010"
+                  },
+                  {
+                    "D": "x"
+                  }
+                ]
+              }
+            },
+            {
+              "940": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "MUSIC"
+                  },
+                  {
+                    "c": "PM"
+                  },
+                  {
+                    "d": "0"
+                  },
+                  {
+                    "h": "M1680.18 .A5845 2010"
+                  },
+                  {
+                    "o": "01"
+                  },
+                  {
+                    "q": ""
+                  },
+                  {
+                    "r": "SCORE"
+                  },
+                  {
+                    "p": "D04175606T "
+                  },
+                  {
+                    "s": "20100310"
+                  },
+                  {
+                    "u": "20110126"
+                  },
+                  {
+                    "v": "20180507"
+                  },
+                  {
+                    "w": "3"
+                  },
+                  {
+                    "k": "004297184"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "NcD"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "04397ccm a2200481Ia 4500"
+        }
+      }
+    }
+  ],
+  "matchValues": [
+    "jazzanthology_of_jazz_songs________________________________________________2010_______hallec___________________________________________________________________________p"
+  ]
+}
