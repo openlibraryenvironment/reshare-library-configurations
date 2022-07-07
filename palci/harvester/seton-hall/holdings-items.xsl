@@ -35,8 +35,9 @@
                   </i>
                 </arr>
               </formerIds>
+              <xsl:variable name="loc" select="concat(marc:subfield[@code='b'], ' ', marc:subfield[@code='c'])"/>
               <permanentLocationIdHere>
-                <xsl:value-of select="marc:subfield[@code='c']"/>
+                <xsl:value-of select="$loc"/>
               </permanentLocationIdHere>
               <callNumber>
                 <xsl:value-of select="marc:subfield[@code='h']"/>
@@ -44,93 +45,16 @@
               </callNumber>
               <illPolicyId>
                 <xsl:choose>
-                  <xsl:when test="marc:subfield[@code='c']='Apabi Chinese Ebooks'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Asian Collection'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Ask staff for assistance - IN-LIBRARY USE ONLY'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Chinese Corner (2nd floor)'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Circulation Desk'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Circulation Desk CDs'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Circulation Desk DVD/Video'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Circulation Desk OOMF'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Curriculum Library'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Dean''s Office'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Doctoral Dissertation'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='EReserves'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Lonergan Library- IN-LIBRARY USE ONLY'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Main Collection'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Main Collection - IN-LIBRARY USE ONLY'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Main Collection Oversize'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Main Collection Oversize Plus'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Main Reserves - IN-LIBRARY USE ONLY'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Master''s Thesis'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Microform Collection - IN-LIBRARY USE ONLY'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='New Books'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Periodicals - IN-LIBRARY USE ONLY'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Reference Collection - IN-LIBRARY USE ONLY'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Reference Desk - IN-LIBRARY USE ONLY'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Repair'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='UN Documents'">
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Valente Library'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:when test="marc:subfield[@code='c']='Valente Library Oversize'">
-                    <xsl:value-of select="$WILL_LEND"/>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="$WILL_NOT_LEND"/>
-                  </xsl:otherwise>
+                  <xsl:when test="$loc='STHM Circulation Desk CDs'"><xsl:value-of select="$WILL_LEND"/></xsl:when>
+                  <xsl:when test="$loc='STHM Circulation Desk DVD/Video'"><xsl:value-of select="$WILL_LEND"/></xsl:when>
+                  <xsl:when test="$loc='STHM Curriculum Library'"><xsl:value-of select="$WILL_LEND"/></xsl:when>
+                  <xsl:when test="$loc='STHM Main Collection'"><xsl:value-of select="$WILL_LEND"/></xsl:when>
+                  <xsl:when test="$loc='STHM Main Collection Oversize'"><xsl:value-of select="$WILL_LEND"/></xsl:when>
+                  <xsl:when test="$loc='STHM Main Collection Oversize Plus'"><xsl:value-of select="$WILL_LEND"/></xsl:when>
+                  <xsl:when test="$loc='STHM New Books'"><xsl:value-of select="$WILL_LEND"/></xsl:when>
+                  <xsl:when test="$loc='STHM Valente Library'"><xsl:value-of select="$WILL_LEND"/></xsl:when>
+                  <xsl:when test="$loc='STHM Valente Library Oversize'"><xsl:value-of select="$WILL_LEND"/></xsl:when>
+                  <xsl:otherwise><xsl:value-of select="$WILL_NOT_LEND"/></xsl:otherwise>
                 </xsl:choose>
               </illPolicyId>
               <items>
