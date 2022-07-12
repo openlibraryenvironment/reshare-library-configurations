@@ -28,7 +28,7 @@ const localFields = {
     tag: '852',
     linkedField: '876',
     linkSub: '8',
-    subs: { a: 'b', b: '876p', c: 'hi', g: '876t', v: '8763', x: '876h', y: '876a' },
+    subs: { a: 'b', b: '876p', c: 'h,i', g: '876t', v: '8763', x: '876h', y: '876a' },
     lendLocs: ['art', 'artcirc', 'ccl', 'cclger', 'cclgraph', 'chem', 'csssi', 'div', 'divdmr', 'divrrus', 'dra', 'engn', 'fes', 'fesover', 'geo', 'ksl', 'kslant', 'kslantc', 'kslanto', 'kslstks', 'lsf', 'lsfart', 'lsfbaby', 'lsfche', 'lsfchem', 'lsfcla', 'lsfcsssi', 'lsfdiv', 'lsfdra', 'lsfeng', 'lsfeph', 'lsffes', 'lsffor', 'lsffs', 'lsfgdc', 'lsfgeo', 'lsfjud', 'lsfksl', 'lsfkslant', 'lsflamc', 'lsfmarx', 'lsfmath', 'lsfmed', 'lsfmtn', 'lsfmus', 'lsfnea', 'lsfnum', 'lsfsem', 'lsfsla', 'lsfslar', 'lsfsmlaris', 'lsfsmlasi', 'lsfsmlear', 'lsfsmlphi', 'lsfssl', 'lsfsslc', 'lsfstat', 'lsftib', 'marx', 'math', 'med', 'medbiog', 'medhs', 'medhum', 'medrefchc', 'medrefec', 'medrefeol', 'mus', 'musrec', 'sml', 'smleng', 'smljud', 'smllnb', 'smllnbm', 'smlnea', 'ssl', 'sslegc'],
     lendItypes: ['jour02', 'jour03', 'jour04', 'jour05', 'jour06', 'jour07', 'jour08', 'jour09', 'jour10', 'jour11', 'jour93 - DO NOT USE', 'jour94 - DO NOT USE', 'jour95 - DO NOT USE', 'jour96 - DO NOT USE', 'jour97', 'jour98', 'jour99', 'jourcirc', 'lsfc', 'media']
   },
@@ -90,7 +90,7 @@ const localFields = {
   },
   'US-RPB': {
     tag: '876',
-    subs: { a: 'i,z', b: 's', c: 'b', d: 'j', y: 'a' },
+    subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', y: 'a' },
     lendLocs: ['ORWIG STACKS', 'ROCK CHINESE', 'ROCK CUTTER_K', 'ROCK JAPANESE', 'ROCK KOREAN', 'ROCK RKSTORAGE', 'ROCK STACKS', 'ROCK STOR_THES', 'ROCK STORAGE', 'SCIENCE STACKS']
   }
 };

@@ -1,0 +1,2946 @@
+{
+  "clusterId": "1a6cb555-fb2a-48a7-8d57-14be045f090a",
+  "datestamp": "2022-07-08T06:37:30.479549Z",
+  "records": [
+    {
+      "globalId": "290d8219-b2f2-4775-8630-bff0847c3fb8",
+      "localId": "oai:pod.stanford.edu:brown:384:991002190779706966",
+      "sourceId": "US-RPB",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "005": "19921207000000.0"
+            },
+            {
+              "008": "921204s1956    nyua          000 0 eng  "
+            },
+            {
+              "001": "991002190779706966"
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "56008755 /L"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(RPB)b20713277-01bu_inst"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)ocm01225043"
+                  },
+                  {
+                    "9": "ExL"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "RIBG92-B30999"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DLC"
+                  },
+                  {
+                    "c": "FO"
+                  },
+                  {
+                    "d": "m.c."
+                  },
+                  {
+                    "d": "OCoLC"
+                  },
+                  {
+                    "d": "*SER*"
+                  },
+                  {
+                    "d": "CU"
+                  },
+                  {
+                    "d": "CStRLIN"
+                  },
+                  {
+                    "d": "RPB"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DF727"
+                  },
+                  {
+                    "b": ".K5"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Kimbrough, Emily,"
+                  },
+                  {
+                    "d": "1899-1989."
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Water, water everywhere."
+                  },
+                  {
+                    "c": "Drawings by Mircea Vasiliu."
+                  }
+                ]
+              }
+            },
+            {
+              "250": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "[1st ed.]"
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "New York,"
+                  },
+                  {
+                    "b": "Harper"
+                  },
+                  {
+                    "c": "[1956]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "308 p."
+                  },
+                  {
+                    "b": "illus."
+                  },
+                  {
+                    "c": "22 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Greece"
+                  },
+                  {
+                    "x": "Description and travel."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Yugoslavia"
+                  },
+                  {
+                    "x": "Description and travel."
+                  }
+                ]
+              }
+            },
+            {
+              "907": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": ".b20713277"
+                  },
+                  {
+                    "b": "04-14-17"
+                  },
+                  {
+                    "c": "06-07-94"
+                  }
+                ]
+              }
+            },
+            {
+              "998": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "q0001"
+                  },
+                  {
+                    "b": "06-07-94"
+                  },
+                  {
+                    "c": "m"
+                  },
+                  {
+                    "d": "a"
+                  },
+                  {
+                    "e": "-"
+                  },
+                  {
+                    "f": "eng"
+                  },
+                  {
+                    "g": "nyu"
+                  },
+                  {
+                    "h": "0"
+                  },
+                  {
+                    "i": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "910": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "12/07/92"
+                  },
+                  {
+                    "t": "c"
+                  },
+                  {
+                    "s": "9115"
+                  },
+                  {
+                    "n": "RPB"
+                  },
+                  {
+                    "w": "RIBG92B30999"
+                  },
+                  {
+                    "d": "12/04/92"
+                  },
+                  {
+                    "c": "LMW"
+                  },
+                  {
+                    "b": "LAD"
+                  },
+                  {
+                    "i": "921207"
+                  },
+                  {
+                    "l": "RIBG"
+                  }
+                ]
+              }
+            },
+            {
+              "910": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Hathi Trust report SPM"
+                  }
+                ]
+              }
+            },
+            {
+              "940": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "l": "r0001"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "ROCK"
+                  },
+                  {
+                    "d": "RKSTORAGE"
+                  },
+                  {
+                    "f": "DF727"
+                  },
+                  {
+                    "f": ".K5 1956"
+                  },
+                  {
+                    "8": "22301631170006966"
+                  }
+                ]
+              }
+            },
+            {
+              "876": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "ff": "22301631170006966"
+                  },
+                  {
+                    "u": "1"
+                  },
+                  {
+                    "j": "0"
+                  },
+                  {
+                    "aa": "RKSTORAGE"
+                  },
+                  {
+                    "t": "BOOK"
+                  },
+                  {
+                    "s": "31236009306229"
+                  },
+                  {
+                    "z": "RKSTORAGE"
+                  },
+                  {
+                    "q": "NON_PUBLIC_NOTE_3_DONOR: Lappin"
+                  },
+                  {
+                    "a": "23301631160006966"
+                  },
+                  {
+                    "c": "CIRCREG"
+                  },
+                  {
+                    "bb": "DF727 .K5 1956"
+                  },
+                  {
+                    "v": "false"
+                  },
+                  {
+                    "h": "ROCK"
+                  },
+                  {
+                    "i": "ROCK"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "RPB"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01218nam a2200313Ia 4500"
+        }
+      }
+    },
+    {
+      "globalId": "6c6ee181-a3ac-4b4d-9d6a-bfdf9b1e5810",
+      "localId": "oai:pod.stanford.edu:dartmouth:396:991031279069705706",
+      "sourceId": "US-NHD",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "005": "01-01-93"
+            },
+            {
+              "008": "750319|1956|||||||          |||| ||eng u"
+            },
+            {
+              "001": "991031279069705706"
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "56008755"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(NhD)b20138131-01dcl_inst"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "ocm01225043"
+                  },
+                  {
+                    "9": "ExL"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "b20138131"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "c": "ORL"
+                  },
+                  {
+                    "d": "DRB"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": " ",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "DF727"
+                  },
+                  {
+                    "b": ".K5"
+                  }
+                ]
+              }
+            },
+            {
+              "090": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "f": "upd. 040804 pdm"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Kimbrough, Emily,"
+                  },
+                  {
+                    "d": "1899-1989."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/names/n50048171."
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Water, water everywhere /"
+                  },
+                  {
+                    "c": "Drawings by Mircea Vasiliu."
+                  }
+                ]
+              }
+            },
+            {
+              "250": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "[1st. ed.]."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "New York :"
+                  },
+                  {
+                    "b": "Harper,"
+                  },
+                  {
+                    "c": "[1956]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "308 pages :"
+                  },
+                  {
+                    "b": "illustrations ;"
+                  },
+                  {
+                    "c": "22 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "336": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "text"
+                  },
+                  {
+                    "b": "txt"
+                  },
+                  {
+                    "2": "rdacontent."
+                  }
+                ]
+              }
+            },
+            {
+              "337": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "unmediated"
+                  },
+                  {
+                    "b": "n"
+                  },
+                  {
+                    "2": "rdamedia."
+                  }
+                ]
+              }
+            },
+            {
+              "338": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "volume"
+                  },
+                  {
+                    "b": "nc"
+                  },
+                  {
+                    "2": "rdacarrier."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Greece"
+                  },
+                  {
+                    "x": "Description and travel."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85057050."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Yugoslavia"
+                  },
+                  {
+                    "x": "Description and travel."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85149462."
+                  }
+                ]
+              }
+            },
+            {
+              "991": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "b20138131"
+                  }
+                ]
+              }
+            },
+            {
+              "906": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "0"
+                  },
+                  {
+                    "b": "nyu"
+                  },
+                  {
+                    "c": "multi"
+                  },
+                  {
+                    "d": "a"
+                  },
+                  {
+                    "e": "o"
+                  },
+                  {
+                    "f": "m"
+                  },
+                  {
+                    "g": "04-17-93"
+                  },
+                  {
+                    "h": "01-09-19"
+                  },
+                  {
+                    "i": "21"
+                  }
+                ]
+              }
+            },
+            {
+              "948": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "BSLW 06/11/2018"
+                  }
+                ]
+              }
+            },
+            {
+              "995": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "OCLC Recl. 2008"
+                  }
+                ]
+              }
+            },
+            {
+              "903": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DF727"
+                  },
+                  {
+                    "b": ".K5"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "BAKER"
+                  },
+                  {
+                    "c": "STACKS"
+                  },
+                  {
+                    "h": "DF727 .K5"
+                  },
+                  {
+                    "8": "22162612600005706"
+                  }
+                ]
+              }
+            },
+            {
+              "950": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "e": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "NhD"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01238nam a2200361I  4500"
+        }
+      }
+    },
+    {
+      "globalId": "c868710d-60f8-4b52-82b0-7d69ea8a0047",
+      "localId": "oai:pod.stanford.edu:harvard:301:990014231230203941",
+      "sourceId": "US-MH",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "005": "20190829143233.0"
+            },
+            {
+              "008": "750319s1956    nyua          00000 engm "
+            },
+            {
+              "001": "990014231230203941"
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "^^^56008755^/L"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(MH)001423123HVD01-Aleph"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)1225043"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/1225043"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DLC"
+                  },
+                  {
+                    "c": "ORL"
+                  },
+                  {
+                    "d": "m.c."
+                  },
+                  {
+                    "d": "OCL"
+                  },
+                  {
+                    "d": "SER"
+                  }
+                ]
+              }
+            },
+            {
+              "043": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "e-gr---"
+                  },
+                  {
+                    "a": "e-yu---"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": "0",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "DF727"
+                  },
+                  {
+                    "b": ".K5"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Kimbrough, Emily,"
+                  },
+                  {
+                    "d": "1899-1989"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/names/n50048171"
+                  },
+                  {
+                    "0": "(uri) http://viaf.org/viaf/sourceID/LC|n50048171"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Water, water everywhere."
+                  },
+                  {
+                    "c": "Drawings by Mircea Vasiliu."
+                  }
+                ]
+              }
+            },
+            {
+              "250": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "[1st ed.]"
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "New York,"
+                  },
+                  {
+                    "b": "Harper"
+                  },
+                  {
+                    "c": "[1956]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "308 p."
+                  },
+                  {
+                    "b": "illus."
+                  },
+                  {
+                    "c": "22 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "520": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "This latest excursion took her and her companions to Athens, around the Greek mainland, to Chios, and other Aegean islands, to Yugo-slavia, Paris, and London, and an unusual voyage on the Thames."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Greece"
+                  },
+                  {
+                    "x": "Description and travel."
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/subjects/sh85057050"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Yugoslavia"
+                  },
+                  {
+                    "x": "Description and travel."
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/subjects/sh85149462"
+                  }
+                ]
+              }
+            },
+            {
+              "776": {
+                "ind1": "0",
+                "ind2": "8",
+                "subfields": [
+                  {
+                    "i": "Online version:"
+                  },
+                  {
+                    "a": "Kimbrough, Emily, 1899-1989."
+                  },
+                  {
+                    "t": "Water, water everywhere."
+                  },
+                  {
+                    "b": "[1st ed.]"
+                  },
+                  {
+                    "d": "New York, Harper [1956]"
+                  },
+                  {
+                    "w": "(OCoLC)903895045"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "7",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "2": "ZHCL"
+                  },
+                  {
+                    "b": "WID"
+                  },
+                  {
+                    "c": "HD"
+                  },
+                  {
+                    "h": "ALA 3447.102"
+                  },
+                  {
+                    "8": "221804602050003941"
+                  }
+                ]
+              }
+            },
+            {
+              "876": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "8": "221804602050003941"
+                  },
+                  {
+                    "q": "1"
+                  },
+                  {
+                    "7": "7"
+                  },
+                  {
+                    "m": "HD"
+                  },
+                  {
+                    "y": "BOOK"
+                  },
+                  {
+                    "p": "32044105446470"
+                  },
+                  {
+                    "c": "HD"
+                  },
+                  {
+                    "0": "231804602030003941"
+                  },
+                  {
+                    "h": "01"
+                  },
+                  {
+                    "n": "ALA 3447.102"
+                  },
+                  {
+                    "b": "WID"
+                  },
+                  {
+                    "l": "WID"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "MH"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01487cam a2200277I  4500"
+        }
+      }
+    },
+    {
+      "globalId": "5b2635cd-8892-4970-b73b-c909bb048bba",
+      "localId": "oai:pod.stanford.edu:princeton:360:9932031163506421",
+      "sourceId": "US-NJP",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "005": "20200824201323.0"
+            },
+            {
+              "008": "921204s1956    nyua          000 0 eng  "
+            },
+            {
+              "001": "9932031163506421"
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "   56008755 /L"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)1225043"
+                  },
+                  {
+                    "0": "(uri) http://www.worldcat.org/oclc/1225043"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(CStRLIN)RIBG92-B30999"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "57936"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "3203116"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(NjP)3203116-princetondb"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DLC"
+                  },
+                  {
+                    "c": "FO"
+                  },
+                  {
+                    "d": "m.c."
+                  },
+                  {
+                    "d": "OCoLC"
+                  },
+                  {
+                    "d": "*SER*"
+                  },
+                  {
+                    "d": "CU"
+                  },
+                  {
+                    "d": "CStRLIN"
+                  },
+                  {
+                    "d": "RPB"
+                  },
+                  {
+                    "d": "NjP"
+                  }
+                ]
+              }
+            },
+            {
+              "043": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "e-gr---"
+                  },
+                  {
+                    "a": "e-yu---"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DF727"
+                  },
+                  {
+                    "b": ".K5"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Kimbrough, Emily,"
+                  },
+                  {
+                    "d": "1899-1989."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/names/n50048171"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/names/n50048171"
+                  },
+                  {
+                    "0": "(uri) http://viaf.org/viaf/sourceID/LC|n50048171"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Water, water everywhere /"
+                  },
+                  {
+                    "c": "by Emily Kimbrough ; drawings by Mircea Vasiliu."
+                  }
+                ]
+              }
+            },
+            {
+              "250": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "1st ed."
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "New York :"
+                  },
+                  {
+                    "b": "Harper,"
+                  },
+                  {
+                    "c": "c1956."
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "308 p. :"
+                  },
+                  {
+                    "b": "ill. ;"
+                  },
+                  {
+                    "c": "22 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "590": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Gift of the Program in Hellenic Studies with the support of the Stanley J. Seeger Hellenic Fund."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Greece"
+                  },
+                  {
+                    "x": "Description and travel."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85057050"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/subjects/sh85057050"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Yugoslavia"
+                  },
+                  {
+                    "x": "Description and travel."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85149462"
+                  },
+                  {
+                    "0": "(uri) http://id.loc.gov/authorities/subjects/sh85149462"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "f"
+                  },
+                  {
+                    "h": "DF727"
+                  },
+                  {
+                    "i": ".K5 1956"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "recap"
+                  },
+                  {
+                    "c": "pa"
+                  },
+                  {
+                    "h": "DF727"
+                  },
+                  {
+                    "i": ".K5 1956"
+                  },
+                  {
+                    "8": "22613994540006421"
+                  }
+                ]
+              }
+            },
+            {
+              "876": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "0": "22613994540006421"
+                  },
+                  {
+                    "j": "1"
+                  },
+                  {
+                    "g": "0"
+                  },
+                  {
+                    "z": "pa"
+                  },
+                  {
+                    "c": "BOOK"
+                  },
+                  {
+                    "p": "32101097017519"
+                  },
+                  {
+                    "f": "pa"
+                  },
+                  {
+                    "t": "1"
+                  },
+                  {
+                    "a": "23613994530006421"
+                  },
+                  {
+                    "b": "Gen"
+                  },
+                  {
+                    "d": "2000-07-18 06:59:00"
+                  },
+                  {
+                    "h": "DF727 .K5 1956"
+                  },
+                  {
+                    "e": "recap"
+                  },
+                  {
+                    "y": "recap"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "NjP"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01592cam a2200313 a 4500"
+        }
+      }
+    },
+    {
+      "globalId": "808899d9-971c-428c-8a21-e18e63c9e41a",
+      "localId": "oai:pod.stanford.edu:cornell:404:3724634",
+      "sourceId": "US-NIC",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "3724634"
+            },
+            {
+              "005": "20141222203912.0"
+            },
+            {
+              "008": "750319s1956    nyua          000 0 eng  "
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "   56008755 /L "
+                  }
+                ]
+              }
+            },
+            {
+              "015": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "GB57-13532"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(NIC)notisASU2864"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)1225043"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "3724634"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DLC"
+                  },
+                  {
+                    "c": "ORL"
+                  },
+                  {
+                    "d": "OCL"
+                  },
+                  {
+                    "d": "SER"
+                  },
+                  {
+                    "d": "UKM"
+                  },
+                  {
+                    "d": "NIC"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DF727"
+                  },
+                  {
+                    "b": ".K5"
+                  }
+                ]
+              }
+            },
+            {
+              "082": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "914.95"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Kimbrough, Emily,"
+                  },
+                  {
+                    "d": "1899-1989."
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Water, water everywhere."
+                  },
+                  {
+                    "c": "Drawings by Mircea Vasiliu."
+                  }
+                ]
+              }
+            },
+            {
+              "250": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "[1st ed.]"
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "New York,"
+                  },
+                  {
+                    "b": "Harper"
+                  },
+                  {
+                    "c": "[1956]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "308 p."
+                  },
+                  {
+                    "b": "illus."
+                  },
+                  {
+                    "c": "22 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Greece"
+                  },
+                  {
+                    "x": "Description and travel."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Yugoslavia"
+                  },
+                  {
+                    "x": "Description and travel."
+                  }
+                ]
+              }
+            },
+            {
+              "650": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Travel"
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "(OCoLC)fst01155558"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Greece"
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "(OCoLC)fst01208380"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "7",
+                "subfields": [
+                  {
+                    "a": "Yugoslavia"
+                  },
+                  {
+                    "2": "fast"
+                  },
+                  {
+                    "0": "(OCoLC)fst01279262"
+                  }
+                ]
+              }
+            },
+            {
+              "905": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "20000210120000.0"
+                  }
+                ]
+              }
+            },
+            {
+              "948": {
+                "ind1": "2",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "20121023"
+                  },
+                  {
+                    "b": "m"
+                  },
+                  {
+                    "d": "batch"
+                  },
+                  {
+                    "e": "lts"
+                  },
+                  {
+                    "x": "remove999"
+                  }
+                ]
+              }
+            },
+            {
+              "948": {
+                "ind1": "2",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "20141222"
+                  },
+                  {
+                    "b": "m"
+                  },
+                  {
+                    "d": "batch"
+                  },
+                  {
+                    "e": "lts"
+                  },
+                  {
+                    "x": "addfast"
+                  }
+                ]
+              }
+            },
+            {
+              "950": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "l": "OLIN"
+                  },
+                  {
+                    "x": "9999"
+                  },
+                  {
+                    "a": "DF727"
+                  },
+                  {
+                    "b": ".K49"
+                  }
+                ]
+              }
+            },
+            {
+              "999": {
+                "ind1": "f",
+                "ind2": "f",
+                "subfields": [
+                  {
+                    "i": "3b9c413a-ec43-4f2a-be0e-b5397a93ee2c"
+                  },
+                  {
+                    "s": "b3fab928-81d7-40d2-98e1-7fb2116a77a0"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "0": "4295957"
+                  },
+                  {
+                    "a": "Olin Library"
+                  },
+                  {
+                    "b": "Olin Library"
+                  },
+                  {
+                    "h": "DF727 .K49"
+                  },
+                  {
+                    "2": "lc"
+                  }
+                ]
+              }
+            },
+            {
+              "890": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "0": "4295957"
+                  },
+                  {
+                    "a": "e0dab83b-7237-4d73-b48e-f25ce69f70a2"
+                  },
+                  {
+                    "t": "Book"
+                  },
+                  {
+                    "l": "olin"
+                  },
+                  {
+                    "b": "31924028254708"
+                  },
+                  {
+                    "n": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "0": "4295958"
+                  },
+                  {
+                    "a": "Olin Library"
+                  },
+                  {
+                    "b": "Olin Library"
+                  },
+                  {
+                    "h": "DF727 .K49"
+                  },
+                  {
+                    "2": "lc"
+                  },
+                  {
+                    "t": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "890": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "0": "4295958"
+                  },
+                  {
+                    "a": "b5372970-d86b-4b4f-8c69-043065c474b1"
+                  },
+                  {
+                    "t": "Book"
+                  },
+                  {
+                    "l": "olin"
+                  },
+                  {
+                    "b": "31924028254716"
+                  },
+                  {
+                    "n": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "NIC"
+                  }
+                ]
+              }
+            },
+            {
+              "998": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "8": "890.0\\p"
+                  },
+                  {
+                    "i": "e0dab83b-7237-4d73-b48e-f25ce69f70a2"
+                  }
+                ]
+              }
+            },
+            {
+              "998": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "8": "890.1\\p"
+                  },
+                  {
+                    "i": "b5372970-d86b-4b4f-8c69-043065c474b1"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01593cam a2200421   4500"
+        }
+      }
+    },
+    {
+      "globalId": "27c47ceb-d8b8-49ef-9d1c-b7970b7640e0",
+      "localId": "oai:pod.stanford.edu:yale:394:1204906",
+      "sourceId": "US-CTY",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "1204906"
+            },
+            {
+              "005": "20110325143712.0"
+            },
+            {
+              "008": "921204s1956    nyua          00000 eng  "
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "   56008755 /L "
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(OCoLC)ocn687635361"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(UPRA)CTYXRL118232-B"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "(UPRA)tmp13114043"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "9": "CAF9270YL"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "1204906"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DLC"
+                  },
+                  {
+                    "c": "FO"
+                  },
+                  {
+                    "d": "m.c."
+                  },
+                  {
+                    "d": "OCoLC"
+                  },
+                  {
+                    "d": "*SER*"
+                  },
+                  {
+                    "d": "CU"
+                  },
+                  {
+                    "d": "CStRLIN"
+                  },
+                  {
+                    "d": "RPB"
+                  },
+                  {
+                    "d": "UPRA"
+                  },
+                  {
+                    "d": "UPRA"
+                  },
+                  {
+                    "d": "UPRA"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DF727"
+                  },
+                  {
+                    "b": ".K5"
+                  }
+                ]
+              }
+            },
+            {
+              "079": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "ocm01225043"
+                  }
+                ]
+              }
+            },
+            {
+              "082": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "914.95"
+                  }
+                ]
+              }
+            },
+            {
+              "090": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "\\Za K5694\\"
+                  },
+                  {
+                    "b": "956W"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Kimbrough, Emily,"
+                  },
+                  {
+                    "d": "1899-1989."
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Water, water everywhere."
+                  },
+                  {
+                    "c": "Drawings by Mircea Vasiliu."
+                  }
+                ]
+              }
+            },
+            {
+              "250": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "[1st ed.]"
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "New York,"
+                  },
+                  {
+                    "b": "Harper"
+                  },
+                  {
+                    "c": "c1956."
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "308 p. :"
+                  },
+                  {
+                    "b": "ill. ;"
+                  },
+                  {
+                    "c": "21 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "500": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "This WorldCat-derived record is shareable under Open Data Commons ODC-BY, with attribution to OCLC."
+                  },
+                  {
+                    "5": "CTY"
+                  }
+                ]
+              }
+            },
+            {
+              "590": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "BEIN Za K5694 956W:  Bookplate of John S. Gummere."
+                  }
+                ]
+              }
+            },
+            {
+              "692": {
+                "ind1": "1",
+                "ind2": "4",
+                "subfields": [
+                  {
+                    "a": "Gummere, John S."
+                  },
+                  {
+                    "x": "Bookplate."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Greece"
+                  },
+                  {
+                    "x": "Description and travel."
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Yugoslavia"
+                  },
+                  {
+                    "x": "Description and travel."
+                  }
+                ]
+              }
+            },
+            {
+              "856": {
+                "ind1": "4",
+                "ind2": "2",
+                "subfields": [
+                  {
+                    "y": "Yale catalog record"
+                  },
+                  {
+                    "u": "https://search.library.yale.edu/catalog/1204906"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "8",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "8": "1351671"
+                  },
+                  {
+                    "b": "beinycal"
+                  },
+                  {
+                    "h": "Za K5694"
+                  },
+                  {
+                    "i": "956W"
+                  }
+                ]
+              }
+            },
+            {
+              "876": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "8": "1351671"
+                  },
+                  {
+                    "3": "1 piece"
+                  },
+                  {
+                    "a": "11657536"
+                  },
+                  {
+                    "h": "nocirc"
+                  },
+                  {
+                    "p": "39002126464586"
+                  },
+                  {
+                    "t": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "0",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "8": "1351672"
+                  },
+                  {
+                    "b": "lsf"
+                  },
+                  {
+                    "h": "DF727"
+                  },
+                  {
+                    "i": "K55"
+                  }
+                ]
+              }
+            },
+            {
+              "876": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "8": "1351672"
+                  },
+                  {
+                    "3": "1 piece"
+                  },
+                  {
+                    "a": "5693855"
+                  },
+                  {
+                    "h": "lsfc"
+                  },
+                  {
+                    "p": "39002069858323"
+                  },
+                  {
+                    "t": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "927": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "rlin"
+                  }
+                ]
+              }
+            },
+            {
+              "928": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "AC031397"
+                  }
+                ]
+              }
+            },
+            {
+              "948": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "RLA Beinecke Recon"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "CtY"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01485cam a2200421   4500"
+        }
+      }
+    },
+    {
+      "globalId": "1ae550b4-18a0-4251-ab94-369daaede7d0",
+      "localId": "oai:pod.stanford.edu:duke:423:DUKE001394645",
+      "sourceId": "US-NCD",
+      "payload": {
+        "marc": {
+          "fields": [
+            {
+              "001": "DUKE001394645"
+            },
+            {
+              "003": "OCoLC"
+            },
+            {
+              "005": "19931217175323.0"
+            },
+            {
+              "008": "750319s1956^^^^nyua^^^^^^^^^^000^0^eng^^"
+            },
+            {
+              "010": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "56008755 /L"
+                  }
+                ]
+              }
+            },
+            {
+              "035": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "01225043"
+                  }
+                ]
+              }
+            },
+            {
+              "040": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DLC"
+                  },
+                  {
+                    "b": "eng"
+                  },
+                  {
+                    "c": "ORL"
+                  },
+                  {
+                    "d": "m.c."
+                  },
+                  {
+                    "d": "OCL"
+                  },
+                  {
+                    "d": "SER"
+                  },
+                  {
+                    "d": "NDD"
+                  }
+                ]
+              }
+            },
+            {
+              "049": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "NDDP"
+                  }
+                ]
+              }
+            },
+            {
+              "050": {
+                "ind1": "0",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "DF727"
+                  },
+                  {
+                    "b": ".K5"
+                  }
+                ]
+              }
+            },
+            {
+              "082": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "914.95"
+                  }
+                ]
+              }
+            },
+            {
+              "092": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "818.5"
+                  },
+                  {
+                    "b": "K49W"
+                  }
+                ]
+              }
+            },
+            {
+              "100": {
+                "ind1": "1",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "Kimbrough, Emily,"
+                  },
+                  {
+                    "d": "1899-1989."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/names/n50048171"
+                  }
+                ]
+              }
+            },
+            {
+              "245": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Water, water everywhere."
+                  },
+                  {
+                    "c": "Drawings by Mircea Vasiliu."
+                  }
+                ]
+              }
+            },
+            {
+              "250": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "[1st ed.]"
+                  }
+                ]
+              }
+            },
+            {
+              "260": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "New York,"
+                  },
+                  {
+                    "b": "Harper"
+                  },
+                  {
+                    "c": "[1956]"
+                  }
+                ]
+              }
+            },
+            {
+              "300": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "308 p."
+                  },
+                  {
+                    "b": "illus."
+                  },
+                  {
+                    "c": "22 cm."
+                  }
+                ]
+              }
+            },
+            {
+              "336": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "text"
+                  },
+                  {
+                    "b": "txt"
+                  },
+                  {
+                    "2": "rdacontent"
+                  }
+                ]
+              }
+            },
+            {
+              "337": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "unmediated"
+                  },
+                  {
+                    "b": "n"
+                  },
+                  {
+                    "2": "rdamedia"
+                  }
+                ]
+              }
+            },
+            {
+              "338": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "volume"
+                  },
+                  {
+                    "b": "nc"
+                  },
+                  {
+                    "2": "rdacarrier"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Greece"
+                  },
+                  {
+                    "x": "Description and travel."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85057050"
+                  }
+                ]
+              }
+            },
+            {
+              "651": {
+                "ind1": " ",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "a": "Yugoslavia"
+                  },
+                  {
+                    "x": "Description and travel."
+                  },
+                  {
+                    "0": "http://id.loc.gov/authorities/subjects/sh85149462"
+                  }
+                ]
+              }
+            },
+            {
+              "905": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "MARCIVE 20190326"
+                  }
+                ]
+              }
+            },
+            {
+              "905": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "MARCIVE 20200114"
+                  }
+                ]
+              }
+            },
+            {
+              "942": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "a": "AM"
+                  },
+                  {
+                    "b": "Book"
+                  }
+                ]
+              }
+            },
+            {
+              "852": {
+                "ind1": "1",
+                "ind2": "0",
+                "subfields": [
+                  {
+                    "b": "LSC"
+                  },
+                  {
+                    "c": "PSK"
+                  },
+                  {
+                    "h": "818.5"
+                  },
+                  {
+                    "i": "K49W"
+                  },
+                  {
+                    "D": "x"
+                  }
+                ]
+              }
+            },
+            {
+              "940": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "b": "LSC"
+                  },
+                  {
+                    "c": "PSK"
+                  },
+                  {
+                    "d": "1"
+                  },
+                  {
+                    "h": "818.5 K49W"
+                  },
+                  {
+                    "n": "c.1"
+                  },
+                  {
+                    "o": "01"
+                  },
+                  {
+                    "q": "DP"
+                  },
+                  {
+                    "r": "BOOK"
+                  },
+                  {
+                    "p": "D90208545X "
+                  },
+                  {
+                    "s": "20030321"
+                  },
+                  {
+                    "u": "20061011"
+                  },
+                  {
+                    "v": "20040324"
+                  },
+                  {
+                    "w": "0"
+                  },
+                  {
+                    "k": "001394645"
+                  }
+                ]
+              }
+            },
+            {
+              "900": {
+                "ind1": " ",
+                "ind2": " ",
+                "subfields": [
+                  {
+                    "5": "POD"
+                  },
+                  {
+                    "b": "NcD"
+                  }
+                ]
+              }
+            }
+          ],
+          "leader": "01217cam a2200349I  4500"
+        }
+      }
+    }
+  ],
+  "matchValues": [
+    "water_water_everywhere_____________________________________________________1956____1__harpea________________________________________kimbrough__emily___________________p"
+  ]
+}
