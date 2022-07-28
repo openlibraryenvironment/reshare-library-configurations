@@ -30,7 +30,7 @@ const localFields = {
     linkSub: '8',
     subs: { a: 'b', b: '876p', c: 'h,i', g: '876t', v: '8763', x: '876h', y: '876a' },
     lendLocs: ['art', 'artcirc', 'ccl', 'cclger', 'cclgraph', 'chem', 'csssi', 'div', 'divdmr', 'divrrus', 'dra', 'engn', 'fes', 'fesover', 'geo', 'ksl', 'kslant', 'kslantc', 'kslanto', 'kslstks', 'lsf', 'lsfart', 'lsfbaby', 'lsfche', 'lsfchem', 'lsfcla', 'lsfcsssi', 'lsfdiv', 'lsfdra', 'lsfeng', 'lsfeph', 'lsffes', 'lsffor', 'lsffs', 'lsfgdc', 'lsfgeo', 'lsfjud', 'lsfksl', 'lsfkslant', 'lsflamc', 'lsfmarx', 'lsfmath', 'lsfmed', 'lsfmtn', 'lsfmus', 'lsfnea', 'lsfnum', 'lsfsem', 'lsfsla', 'lsfslar', 'lsfsmlaris', 'lsfsmlasi', 'lsfsmlear', 'lsfsmlphi', 'lsfssl', 'lsfsslc', 'lsfstat', 'lsftib', 'marx', 'math', 'med', 'medbiog', 'medhs', 'medhum', 'medrefchc', 'medrefec', 'medrefeol', 'mus', 'musrec', 'sml', 'smleng', 'smljud', 'smllnb', 'smllnbm', 'smlnea', 'ssl', 'sslegc'],
-    lendItypes: ['jour02', 'jour03', 'jour04', 'jour05', 'jour06', 'jour07', 'jour08', 'jour09', 'jour10', 'jour11', 'jour93 - DO NOT USE', 'jour94 - DO NOT USE', 'jour95 - DO NOT USE', 'jour96 - DO NOT USE', 'jour97', 'jour98', 'jour99', 'jourcirc', 'lsfc', 'media']
+    lendItypes: ['artcirc', 'artjourcirc', 'cd', 'circ', 'dvd', 'jour', 'jour00', 'jour01', 'jour02', 'jour03', 'jour04', 'jour05', 'jour06', 'jour07', 'jour08', 'jour09', 'jour10', 'jour11', 'jour93 - DO NOT USE', 'jour94 - DO NOT USE', 'jour95 - DO NOT USE', 'jour96 - DO NOT USE', 'jour97', 'jour98', 'jour99', 'jourcirc', 'lsfc', 'media']
   },
   'US-ICU': {
     tag: '927',
