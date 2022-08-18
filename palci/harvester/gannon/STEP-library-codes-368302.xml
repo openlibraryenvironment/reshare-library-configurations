@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformationStep>
+  <id>368302</id>
+  <XmlTransformStep>
+    <id>368302</id>
+    <description>Maps locations, record identifier type for Gannon</description>
+    <inputFormat>XML</inputFormat>
+    <name>Library codes, Gannon</name>
+    <outputFormat>XML</outputFormat>
+    <script>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#xD;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&#xD;
+&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot; version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;&#xD;
+  &lt;xsl:template match=&quot;@* | node()&quot;&gt;&#xD;
+    &lt;xsl:copy&gt;&#xD;
+      &lt;xsl:apply-templates select=&quot;@* | node()&quot;/&gt;&#xD;
+    &lt;/xsl:copy&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy code for the library/institution to a FOLIO resource identifier&#xD;
+       type UUID. Used for qualifying a local record identifier with the library&#xD;
+       it originated from in context of a shared index setup where the Instance&#xD;
+       represents bib records from multiple libraries.&#xD;
+  --&gt;&#xD;
+  &lt;xsl:template match=&quot;//identifierTypeIdHere&quot;&gt;&#xD;
+    &lt;identifierTypeId&gt;7dcf031f-dba9-5997-9d60-f94d440967e5&lt;/identifierTypeId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Map legacy location code to a FOLIO location UUID --&gt;&#xD;
+  &lt;xsl:template match=&quot;//permanentLocationIdHere&quot;&gt;&#xD;
+    &lt;permanentLocationId&gt;&#xD;
+      &lt;xsl:choose&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;STACKS&#39;&quot;&gt;369d4282-2eb3-5260-9ca1-a5481c200d32&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ARCHIVES&#39;&quot;&gt;1bcee8d8-87f3-5fbd-96a3-d1782eb7ac61&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;DISPLAY&#39;&quot;&gt;9cbac3b9-f84c-522f-9f5c-933607bbdd47&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;DVD&#39;&quot;&gt;d3045bb4-2c2e-510c-9414-3b96a1077d0f&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;EDVD&#39;&quot;&gt;5c2a5f2a-ccfb-5330-af30-090304b7472c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;HOLDS&#39;&quot;&gt;7b5d3ad4-95f1-5243-924c-fd66703411aa&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;JUVENILE&#39;&quot;&gt;520f6df8-d55a-50f7-b954-07c01b250c72&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;ONLINE&#39;&quot;&gt;cd6c1623-46e7-502f-a8f9-944f4d15a5c0&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PAPERBACK&#39;&quot;&gt;47baec8c-978f-53f3-8e9c-c7c04306f96b&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PER&#39;&quot;&gt;60ae23a9-1a91-5ca2-9c84-aeaf7e361919&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;PIC_BOOK&#39;&quot;&gt;3516bce5-96db-5eeb-a092-3a751043f2d5&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;REFERENCE&#39;&quot;&gt;ce4de39a-4c83-51fa-bdbd-3f3a748be39c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;RESERVES&#39;&quot;&gt;766c56fe-d9f9-581f-bdbe-1df16fb8717c&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;RUSKIN&#39;&quot;&gt;c354ddeb-2506-5e70-978b-ed81e6850671&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;STORAGE&#39;&quot;&gt;37892922-38ad-5dc9-a11d-9a9768a3cbd7&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:when test=&quot;.=&#39;YA-JUV&#39;&quot;&gt;4cd9cf48-3278-56d2-82ac-b4c38a6f271a&lt;/xsl:when&gt;&#xD;
+        &lt;xsl:otherwise&gt;3626363e-9e94-5a10-936b-5e732a1397a6&lt;/xsl:otherwise&gt; &lt;!-- Unmapped (US-PERG) --&gt;&#xD;
+      &lt;/xsl:choose&gt;&#xD;
+    &lt;/permanentLocationId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+  &lt;!-- Set FOLIO Inventory ID for the institution --&gt;&#xD;
+  &lt;xsl:template match=&quot;//institutionIdHere&quot;&gt;&#xD;
+     &lt;institutionId&gt;5f652a9e-4cf5-5bb5-82ad-942236891aa4&lt;/institutionId&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+</script>
+    <testData></testData>
+    <testOutput></testOutput>
+  </XmlTransformStep>
+</transformationStep>
