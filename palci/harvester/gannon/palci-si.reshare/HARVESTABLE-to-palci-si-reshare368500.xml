@@ -3,7 +3,7 @@
   <xmlBulk>
     <id>368500</id>
     <name>PALCI SI: Gannon</name>
-    <url>ftp://gannon:XXXXX@ftp.folio.indexdata.com/incoming/merged</url>
+    <url>ftp://gannon:XXXXX@ftp.folio.indexdata.com/incoming</url>
     <passiveMode>true</passiveMode>
     <allowCondReq>true</allowCondReq>
     <allowErrors>true</allowErrors>
