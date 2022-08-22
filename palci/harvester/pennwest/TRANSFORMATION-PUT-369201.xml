@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transformation >
+    <id>369201</id>
+    <basicTransformation>
+        <id>369201</id>
+        <description></description>
+        <enabled>true</enabled>
+        <name>PennWest - OAI-PMH to FOLIO Inventory</name>
+        <parallel>false</parallel>
+        <stepAssociations>
+            <id>369401</id>
+            <position>1</position>
+            <transformation>369201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>301301</id> <!-- OAI20-MARC21 to Instance XML -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>369402</id>
+            <position>2</position>
+            <transformation>369201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>369301</id>  <!-- PennWest holdings and items -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>369403</id>
+            <position>3</position>
+            <transformation>369201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xmlTransformationStep">
+                <id>369302</id> <!-- Granular library codes, PennWest -->
+            </step>
+        </stepAssociations>
+        <stepAssociations>
+            <id>369404</id>
+            <position>4</position>
+            <transformation>369201</transformation>
+            <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customTransformationStep">
+                <id>301302</id> <!-- XML to JSON -->
+            </step>
+        </stepAssociations>
+    </basicTransformation>
+</transformation>
