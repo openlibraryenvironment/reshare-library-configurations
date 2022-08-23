@@ -1,0 +1,145 @@
+MAN	1FN	North Hall Library 	North Hall Library First Floor North
+MAN	1FS	North Hall Library 	North Hall Library First Floor South
+MAN	CSTK	North Hall Library	North Hall Library Closed Stacks
+MAN	4FN	North Hall Library 	North Hall Library Fourth Floor North
+MAN	4FS	North Hall Library 	North Hall Library Fourth Floor South
+MAN	3FN	North Hall Library 	North Hall Library Third Floor North
+MAN	3FS	North Hall Library 	North Hall Library Third Floor South
+MAN	2FN	North Hall Library 	North Hall Library Second Floor North
+MAN	ATR3	North Hall Library 	North Hall Library Third Floor Atrium
+MAN	ATR2	North Hall Library	North Hall Library Second Floor Atrium
+MAN	ATR1	North Hall Library	North Hall Library First Floor Atrium
+MAN	2FS	North Hall Library	North Hall Library Second Floor South
+			
+bloom	GENCOLL	Harvey A. Andruss Library	General Collection (A-N 3rd flr; P-Z 4th flr)
+bloom	GENCOLLOV	Harvey A. Andruss Library	General Collection OVERSIZE, 4th Floor
+bloom	JUVENILE	Harvey A. Andruss Library	Juvenile Collection (2nd flr)
+bloom	JUVENILEOV	Harvey A. Andruss Library	Juvenile Collection OVERSIZE (2nd flr)
+bloom	JUVFIC	Harvey A. Andruss Library	Juvenile Fiction Collection (2nd flr)
+bloom	JUVFICOV	Harvey A. Andruss Library	Juvenile Fiction Collection OVERSIZE (2nd flr)
+bloom	JUVNONFIC	Harvey A. Andruss Library	Juvenile Nonfiction Collection (2nd flr)
+bloom	JUVNONFOV	Harvey A. Andruss Library	Juvenile Nonfiction Collection OVERSIZE (2nd flr)
+bloom	NewBooks	Harvey A. Andruss Library	New Book Display (1st flr)
+bloom	AfroAmImpr	Harvey A. Andruss Library	Afro-Americana Imprints, 1535-1922
+bloom	BNDPERIOD	Harvey A. Andruss Library	Bound Periodical Collection (4th flr)
+bloom	Cataloging	Harvey A. Andruss Library	Cataloging Office
+bloom	COMPACTDSC	Harvey A. Andruss Library	Compact Disc Collection
+bloom	CmpctShlvg	Harvey A. Andruss Library	Compact Shelving (2nd flr)--DOES NOT CIRCULATE
+bloom	IntCredoRf	Harvey A. Andruss Library	Credo Reference
+bloom	CURPERIOD	Harvey A. Andruss Library	Current Periodicals Collection (2nd flr)
+bloom	CURRCOLL	Harvey A. Andruss Library	Curriculum Collection (2nd flr)
+bloom	CURRCOLLOV	Harvey A. Andruss Library	CURRICULUM COLL OVERSIZE (2nd flr)
+bloom	DVD	Harvey A. Andruss Library	DVD Collection (1st flr)
+bloom	IntrEbrKLN	Harvey A. Andruss Library	Ebrary KLN Own
+bloom	IntrEbrOwn	Harvey A. Andruss Library	Ebrary Own
+bloom	IntrEbrPDA	Harvey A. Andruss Library	Ebrary PDA
+bloom	InternetEb	Harvey A. Andruss Library	Ebray Academic Complete Collection
+bloom	IntEbrUPS	Harvey A. Andruss Library	Ebray University Press Collection
+bloom	EbscKLNDDA	Harvey A. Andruss Library	EBSCO KLN DDA
+bloom	EoKDDAOwn	Harvey A. Andruss Library	EBSCO KLN DDA Own
+bloom	IntrNetKLN	Harvey A. Andruss Library	EBSCO KLN Own
+bloom	IntrNetOwn	Harvey A. Andruss Library	EBSCO Own
+bloom	EDMED	Harvey A. Andruss Library	Educational Media Collection
+bloom	EDMEDSFTW	Harvey A. Andruss Library	Educational Media Software Collection
+bloom	EDMEDREC	Harvey A. Andruss Library	Educational Media Sound Recording Collection
+bloom	EDMEDVID	Harvey A. Andruss Library	Educational Media Videorecording Collection
+bloom	IntEvans1	Harvey A. Andruss Library	Evans Early American Imprints Series I
+bloom	EZB	Harvey A. Andruss Library	EZBorrow - Borrowing
+bloom	EZB-lend	Harvey A. Andruss Library	EZBorrow - Lending
+bloom	InterntFOD	Harvey A. Andruss Library	Films On Demand
+bloom	GENCOLOVOV	Harvey A. Andruss Library	General Collection OVER-OVERSIZE, 4th Floor
+bloom	GOVDOCWKRM	Harvey A. Andruss Library	Government Documents Workroom
+bloom	Illiad-Bor	Harvey A. Andruss Library	Illiad - Borrowing
+bloom	Illiad-Len	Harvey A. Andruss Library	Illiad - Lending
+bloom	ILL	Harvey A. Andruss Library	Interlibrary Loan
+bloom	Internet	Harvey A. Andruss Library	Internet
+bloom	JSTebaPALC	Harvey A. Andruss Library	JSTOR EBA PALCI
+bloom	JSTebOpAcc	Harvey A. Andruss Library	JSTOR Open Access Ebook
+bloom	JSTebPalOw	Harvey A. Andruss Library	JSTOR PALCI Own
+bloom	JuvBkDsplF	Harvey A. Andruss Library	Juvenile Book Display Fiction (2nd floor)
+bloom	JuvBkDspNF	Harvey A. Andruss Library	Juvenile Book Display Non-Fiction (2nd floor)
+bloom	CircDesk	Harvey A. Andruss Library	Main Circulation Desk (1st flr)
+bloom	MAPCOLL	Harvey A. Andruss Library	Map Collection (2nd flr)
+bloom	MICROFICHE	Harvey A. Andruss Library	Microfiche Collection (1st flr)
+bloom	MICROFILM	Harvey A. Andruss Library	Microfilm Collection (1st flr)
+bloom	MICRFLMPER	Harvey A. Andruss Library	Microfilm Periodicals Collection (1st flr)
+bloom	MicroGuide	Harvey A. Andruss Library	Microform Guides
+bloom	MICROPRINT	Harvey A. Andruss Library	Microprint Collection
+bloom	InternetNL	Harvey A. Andruss Library	NetLibrary Ebook Collection
+bloom	ONDISPLAY	Harvey A. Andruss Library	On Display
+bloom	PADOC	Harvey A. Andruss Library	Pennsylvania Documents Collection (2nd flr)
+bloom	PADOCOV	Harvey A. Andruss Library	Pennsylvania Documents Collection OVERSIZE
+bloom	PADOCMAP	Harvey A. Andruss Library	Pennsylvania Documents Maps
+bloom	PADOCMD	Harvey A. Andruss Library	Pennsylvania Documents Media Collection
+bloom	PERMRES	Harvey A. Andruss Library	Permanent Reserve Collection (1st flr)
+bloom	PHONODISC	Harvey A. Andruss Library	Phonodisc Collection
+bloom	PopRead	Harvey A. Andruss Library	Popular Reading Collection (1st flr)
+bloom	IntMuOAebo	Harvey A. Andruss Library	Project MUSE Open Access Ebook Collection
+bloom	REFERENCE	Harvey A. Andruss Library	Reference Collection (2nd flr) -- DOES NOT CIRCULATE
+bloom	SCORES	Harvey A. Andruss Library	Scores Collection
+bloom	SPECIALCOL	Harvey A. Andruss Library	Special Collections (3rd flr) -- DOES NOT CIRCULATE
+bloom	SPECOLOVOV	Harvey A. Andruss Library	Special Collections Overoversize--DOES NOT CIRCULATE
+bloom	SPECCOLLOV	Harvey A. Andruss Library	Special Collections Oversize--DOES NOT CIRCULATE
+bloom	TODELETE	Harvey A. Andruss Library	TODELETE
+bloom	UNASSIGNED	Harvey A. Andruss Library	UNASSIGNED location
+bloom	ARCHIVES	Harvey A. Andruss Library	University Archives (3rd flr) -- DOES NOT CIRCULATE
+bloom	USGOVDOC	Harvey A. Andruss Library	U.S. Government Documents Collection (2nd flr)
+bloom	USGOVDOCMP	Harvey A. Andruss Library	U.S. Government Documents Map Collection
+bloom	USGOVDOCMD	Harvey A. Andruss Library	U.S. Government Documents Media Collection
+bloom	USGOVDOCMF	Harvey A. Andruss Library	U.S. Government Documents Microfiche Collection (1st flr) -- NONCIRC
+bloom	USGOVDOCOV	Harvey A. Andruss Library	U.S. Government Documents OVERSIZE
+bloom	USGOVDOCPL	Harvey A. Andruss Library	U.S. Government Documents Public Library Collection
+bloom	VIDEOCASS	Harvey A. Andruss Library	Video Collection (1st flr)
+bloom	VIDEOOVR	Harvey A. Andruss Library	Video Oversize Collection
+bloom	Withdrawn	Harvey A. Andruss Library	Withdrawn
+			
+Stevenson	CALD	Stevenson Library 	Caldecott Award
+Stevenson	CDMUS	Stevenson Library 	CD Music
+Stevenson	CHIL	Stevenson Library 	Juvenile/Young Adult
+Clearfield	CLEAR	Clearfield Library	Clearfield Library 
+Clearfield	CLEARADBK	Clearfield Library	Clearfield Audio Book
+Clearfield	CLEARCAR	Clearfield Library	Clearfield Library Career
+Clearfield	CLEARCHIL	Clearfield Library	Clearfield Children
+Clearfield	CLEARFOL	Clearfield Library 	Clearfield Folio
+Clearfield	CLEARLREAD	Clearfield Library 	Clearfield Leisure Reading
+Stevenson	CUR	Stevenson Library 	Curriculum 
+Stevenson	E-CHIL	Stevenson Library 	Easy Reader
+Stevenson	FOL	Stevenson Library 	Folio
+Stevenson	LREAD	Stevenson Library 	Leisure Reading Area
+Stevenson	MAIN	Stevenson Library 	Main Stacks 
+Stevenson	NBC	Stevenson Library 	New Book Shelf Children's
+Stevenson	NBS	Stevenson Library 	New Book Shelf 
+Stevenson	NEWBERY	Stevenson Library 	Newbery Award
+Stevenson	PER	Stevenson Library 	Bound Periodicals
+Stevenson	PICBOO	Stevenson Library 	Picture Books
+Stevenson	TFOL	Stevenson Library 	Tall Folio
+Clearfield	C-REF	Clearfield Library	Children's Reference
+Clearfield	CLEARCIRCD	Clearfield Library	Clearfiled Circ Desk
+Clearfield	CLEARGAME	Clearfield Library	Clearfiled Gaming
+Clearfield	CLEAR_REF	Clearfield Library	Clearfield Reference
+Clearfield	CLEAR_RES	Clearfield Library	Clearfiled Reserve
+Clearfield	CLEARDVD	Clearfield Library	Clearfield DVD
+Clearfield	CLEARINSTD	Clearfield Library	Clearfield Inst DVD
+Clearfield	CLEARARC	Clearfield Library 	Clearfield Archives
+Stevenson	ARCHIVES	Stevenson Library 	ARCHIVES
+Stevenson	MFC	Stevenson Library 	Microfiche
+Stevenson	MICR	Stevenson Library 	Microfilm
+Stevenson	REF	Stevenson Library 	Reference
+Stevenson	DVD	Stevenson Library 	DVD-Drama
+Stevenson	DVDACT	Stevenson Library 	DVD-Action
+Stevenson	DVDANI	Stevenson Library 	DVD-Animation
+Stevenson	DVDC	Stevenson Library 	DVD Instructional
+Stevenson	DVDCAR	Stevenson Library 	DVD Carousel
+Stevenson	DVDCOM	Stevenson Library 	DVD-Comedy
+Stevenson	DVDDOC	Stevenson Library 	DVD-Documentry
+Stevenson	DVDHOR	Stevenson Library 	DVD-Horror
+Stevenson	DVDMYS	Stevenson Library 	DVD-Mystery
+Stevenson	DVDPER	Stevenson Library 	DVD-Performance
+Stevenson	DVDSCI	Stevenson Library 	DVD-Science Fiction
+Stevenson	DVDTV	Stevenson Library 	DVD-TV
+Stevenson	DVDWAR	Stevenson Library 	DVD-War
+Stevenson	DVDWES	Stevenson Library 	DVD-Western
+Stevenson	TRREF	Stevenson Library 	Treasury Room-Reference
+Stevenson	TRRM	Stevenson Library 	Treasury Room
+Stevenson	UNPER	Stevenson Library 	Unbound Periodicals
+Stevenson	VIDEO	Stevenson Library 	Media - Video
