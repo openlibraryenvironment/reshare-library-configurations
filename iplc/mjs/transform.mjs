@@ -50,7 +50,7 @@ const localFields = {
   },
   'US-MDBJ': { 
     tag: '991',
-    subs: { a: 'c', b: 'a', c: 'f', d: 'e', g: 'g', k: 'k', x: 'b', y: 'j' },
+    subs: { a: 'd', b: 'a', c: 'f', d: 'e', g: 'g', k: 'k', x: 'b', y: 'j' },
     lendLocs: ['coffmcc', 'eanal', 'eanalbl', 'eavbd', 'ecl87', 'ecl87bl', 'eclasbl', 'eclass', 'egother', 'egpcl87', 'egpigo', 'egplaw', 'egpo', 'emain', 'emblue', 'eoblu', 'eoblunc', 'eoc87bl', 'eocl87', 'eofanal', 'eofdt', 'eofdtbl', 'eofdtnc', 'eoffs', 'eoffsnc', 'eogplaw', 'eogpma', 'eogpo', 'eogponc', 'eogpref', 'eoigo', 'eolawnc', 'eolawrf', 'eolblue', 'eolcir', 'eoligo', 'eollaw', 'eoran', 'eostate', 'eotech', 'erand', 'etech', 'euglcl', 'sbook', 'sosai', 'wempbk', 'wlilsta', 'wmppcbk', 'wwbks', 'abwf', 'acass', 'acd', 'acdlc', 'acslc', 'advd', 'afcdr', 'afrie', 'amicr', 'amonu', 'amsco', 'asal', 'asco', 'asrec', 'avc', 'avd'],
     lendItypes: ['enorm', 'eav', 'scirc', 'wbooks', 'abkit', 'acdit', 'acdlcit', 'acdrom', 'acsit', 'acslcit', 'advdit', 'alpit', 'amicrit', 'amonit', 'amsit', 'ascoit', 'avidit', 'avkit']
   },
@@ -103,10 +103,6 @@ function getSubs(field) {
     subs[code].push(s[code]);
   });
   return subs;
-}
-
-function cst(rec) {
-
 }
 
 export function cluster_transform(clusterStr) {
