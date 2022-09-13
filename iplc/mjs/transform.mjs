@@ -147,17 +147,17 @@ export function cluster_transform(clusterStr) {
       mtype = 'MIX';
     }
 
-    
     let recFields = {};
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
       let tag = Object.keys(field)[0];
       if (!recFields[tag]) recFields[tag] = [];
       recFields[tag].push(field[tag]);
-      if (tag > '009' && tag < '831') {
+      if ((tag > '009' && tag < '831') || tag.match(/^88./)) {
         if (tag !== '245' || tag === '245' && !tiSeen) {
           let fkey = JSON.stringify(field);
           fkey = fkey.replace(/,{"(=|0)":".*?"}/,''); // remove and local authority links from record.
+          fkey = fkey.replace(/\."\}/, '"}');
           fields.push(fkey);
         }
         if (tag === '245') tiSeen = 1;
@@ -272,7 +272,7 @@ export function cluster_transform(clusterStr) {
   let preKey = '';
   out.fields = [];
   for (let z = 0; z < fields.length; z++) {
-    let fkey = fields[z];
+    let fkey = fields[z] || '';
     if (fkey != preKey) {
       let fobj = JSON.parse(fkey);
       out.fields.push(fobj);
