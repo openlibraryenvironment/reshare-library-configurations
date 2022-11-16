@@ -1,8 +1,5 @@
 {
   "id": "marc-transformer",
-  "method": "javascript",
-  "params": {
-    "url": "https://raw.githubusercontent.com/indexdata/reshare-customer-settings/master/palci/mjs/transform.mjs?token=GHSAT0AAAAAAB3HWXQJAGCIJR2MCLIQXPXSY3UD7PA"
-  },
-  "function": "cluster_transform"
+  "type": "javascript",
+  "url": "https://raw.githubusercontent.com/openlibraryenvironment/reshare-library-configurations/master/palci/mjs/marc-transformer-conf.json"
 }
