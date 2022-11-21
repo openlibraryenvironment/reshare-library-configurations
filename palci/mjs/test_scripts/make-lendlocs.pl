@@ -10,5 +10,5 @@ while (<IN>) {
   $val =~ s/'/\\'/g;
   push @str, "'$val'";
 }
-my $inner = join ', ', @str;
+my $inner = join ', ', sort @str;
 print "lendLocs: [ $inner ]\n";
