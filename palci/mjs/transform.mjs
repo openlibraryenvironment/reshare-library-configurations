@@ -20,7 +20,7 @@ function getSubs(field) {
   return subs;
 }
 
-export function cluster_transform(clusterStr) {
+export function transform(clusterStr) {
   let now = new Date().toISOString();
   now = now.replace(/^(\d{4})-(\d\d)-(\d\d).*/, '$1$2$3000000.0')
   const f005 = now;
