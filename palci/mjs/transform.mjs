@@ -37,19 +37,25 @@ export function transform(clusterStr) {
   const f005 = now;
   let cluster = JSON.parse(clusterStr);
   let crecs = cluster.records;
-  const out = {}
-  let fields = [];
   const f001 = cluster.clusterId;
-  let f008 = '';
   let f999s = [];
-  let tiSeen = 0;
   let outItems = [];
+  let preSize = '';
+  let mainBib;
+  let isMainBib;
   for (let x = 0; x < crecs.length; x++) {
     let crec = crecs[x];
     let sid = crec.sourceId;
     let lid = crec.localId;
     let rec = crec.payload.marc;
-    out.leader = rec.leader;
+    let rsize = rec.leader.substring(0, 5);
+    if (rsize > preSize) {
+      isMainBib = 1;
+      mainBib = { leader: rec.leader, fields: [] };
+    } else {
+      isMainBib = 0;
+    }
+    preSize = rsize;
 
     // figure out mtypes from leader codes
     let mt = rec.leader.substring(6, 7);
@@ -74,26 +80,21 @@ export function transform(clusterStr) {
     }
 
     let recFields = {};
+
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
       let tag = Object.keys(field)[0];
       if (!recFields[tag]) recFields[tag] = [];
       recFields[tag].push(field[tag]);
-      if ((tag > '009' && tag < '831') || tag.match(/^88./)) {
-        if (tag !== '245' || tag === '245' && !tiSeen) {
-          let fkey = JSON.stringify(field);
-          fkey = fkey.replace(/,{"(=|0)":".*?"}/,''); // remove and local authority links from record.
-          fkey = fkey.replace(/\."\}/, '"}');
-          fields.push(fkey);
+      if (isMainBib) { 
+        if ((tag > '009' && tag < '831') || tag.match(/^88./)) {
+          mainBib.fields.push(field);
         }
-        if (tag === '245') tiSeen = 1;
+        if (tag === '008') mainBib.fields.push(field);
       }
-      if (tag === '008') f008 = field['008'];
     }
+
     let controlNumber = (recFields['001']) ? recFields['001'][0] : lid;
-    if (sid === 'US-NCD') {
-      controlNumber = controlNumber.replace(/^DUKE/, '');
-    }
     let f999 = {
       ind1: '1',
       ind2: '0',
@@ -194,23 +195,11 @@ export function transform(clusterStr) {
       }
     }
   }
-  fields.sort();
-  let preKey = '';
-  out.fields = [];
-  for (let z = 0; z < fields.length; z++) {
-    let fkey = fields[z] || '';
-    if (fkey != preKey) {
-      let fobj = JSON.parse(fkey);
-      out.fields.push(fobj);
-    }
-    preKey = fkey;
-  }
-  out.leader = out.leader.replace(/^....../, '00000n');
-  out.fields.unshift({ '008': f008 });
-  out.fields.unshift({ '005': f005 });
-  out.fields.unshift({ '001': f001 });
-  out.fields.push(...f999s);
-  out.fields.push(...outItems);
-  return JSON.stringify(out, null, 2);
+
+  mainBib.fields.unshift({ '005': f005 });
+  mainBib.fields.unshift({ '001': f001 });
+  mainBib.fields.push(...f999s);
+  mainBib.fields.push(...outItems);
+  return JSON.stringify(mainBib, null, 2);
 }
 
