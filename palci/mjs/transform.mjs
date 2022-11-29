@@ -23,6 +23,11 @@ const localFields = {
     tag: '995',
     subs: { a: 'h', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w' },
     lendLocs: ['ba', 'baf', 'baff', 'bc', 'bcf', 'bcff', 'bcsfi', 'bkraw', 'bs', 'bsff', 'bsx']
+  },
+  'US-PINU': {
+    tag: '995',
+    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w' },
+    lendLocs: ['PZI1', 'PZII', 'PZIO', 'PZIT', 'SHAFER']
   }
 };
 
