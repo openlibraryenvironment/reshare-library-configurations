@@ -33,7 +33,12 @@ const localFields = {
     tag: '995',
     subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a' },
     lendLocs: ['ENGR-SCI NEWBOOK', 'ENGR-SCI STACKS', 'HUNT CAREER-2', 'HUNT FA-NEWBK-4', 'HUNT FOLIOS-2', 'HUNT FOLIOS-4', 'HUNT NEWBOOK-1', 'HUNT OVRSZQ-3', 'HUNT OVRSZQ-4', 'HUNT STACKS-2', 'HUNT STACKS-3', 'HUNT STACKS-4', 'MELLON NEWBOOK', 'MELLON READING-RM', 'OFFSITE BY-REQUEST']
-  }
+  },
+  'US-PPIU': {
+    tag: '995',
+    subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w' },
+    lendLocs: ['ART stks', 'ART stksfac', 'CHEM stks', 'ENGR stks', 'HILL dis', 'HILL stks', 'HILL stksafro', 'HILL stksalld', 'HILL stkseac', 'HILL stkseaj', 'HILL stkseak', 'LANG over', 'LANG stks', 'MUS over', 'MUS stks', 'THOM stor', 'UPB over', 'UPB stks', 'UPG graph', 'UPG stks', 'UPG young', 'UPJ graph', 'UPJ stks', 'UPT stks']
+  },
 };
 
 function getSubs(field) {
