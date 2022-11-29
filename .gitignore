@@ -6,3 +6,4 @@ ignored-by-git/
 *.ini
 node_modules/
 login-*sh
+.okapi
