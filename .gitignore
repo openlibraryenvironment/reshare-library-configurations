@@ -5,3 +5,4 @@ ignored-by-git/
 .idea/
 *.ini
 node_modules/
+login-*sh
