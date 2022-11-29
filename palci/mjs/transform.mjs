@@ -5,40 +5,53 @@
 
 const localFields = {
   'US-PU': {
+    name: 'University of Pennsylvania',
     tag: '995',
     subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a' },
     lendLocs: ['LippLib lipp', 'VanPeltLib easiaover', 'VanPeltLib eastasia', 'VanPeltLib vanp', 'VanPeltLib vpnewbook', 'VanPeltLib yarn']
   },
   'US-PMA': {
+    name: 'Allegheny',
     tag: '995',
     subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a'},
     lendLocs: ['bksl', 'bksu', 'dvdl']
   },
   'US-NJNBRU': {
+    name: 'Rutgers',
     tag: '995',
     subs: { a: 'l', b: 'b', c: 'c', x: 't', y: 'a', u: 'h,i', n: 'f,g', v: 'j', k: 'p' },
     lendLocs: ['aldocc', 'aldoclusc', 'aldocnjc', 'aldocusc', 'aldocusfoc', 'alealfoc', 'alealstac', 'aledlabc', 'alefolioc', 'alfolioc', 'aliylcc', 'aliylgcc', 'aljuvc', 'aljuvrc', 'alstackc', 'anstackc', 'cadocusc', 'cafolioc', 'castackc', 'chfolioc', 'chstackc', 'crcareerc', 'crfolioc', 'crstackc', 'dadocc', 'dadocnjc', 'dadocusc', 'dafolioc', 'dastackc', 'dgfolioc', 'dgplaysc', 'dgstackc', 'lsdocc', 'lsdocfoc', 'lsdocnjc', 'lsdocusc', 'lsdocusfoc', 'lsstackc', 'mafolioc', 'mastackc', 'sichinardm', 'sistackm', 'smstackc']
   },
   'US-PBM': {
+    name: 'Bryn Mawr',
     tag: '995',
     subs: { a: 'h', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w' },
     lendLocs: ['ba', 'baf', 'baff', 'bc', 'bcf', 'bcff', 'bcsfi', 'bkraw', 'bs', 'bsff', 'bsx']
   },
   'US-PINU': {
+    name: 'Indiana University of Pennsylvania',
     tag: '995',
     subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w' },
     lendLocs: ['PZI1', 'PZII', 'PZIO', 'PZIT', 'SHAFER']
   },
   'US-PPIC': {
+    name: 'Carnegie Mellon',
     tag: '995',
     subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a' },
     lendLocs: ['ENGR-SCI NEWBOOK', 'ENGR-SCI STACKS', 'HUNT CAREER-2', 'HUNT FA-NEWBK-4', 'HUNT FOLIOS-2', 'HUNT FOLIOS-4', 'HUNT NEWBOOK-1', 'HUNT OVRSZQ-3', 'HUNT OVRSZQ-4', 'HUNT STACKS-2', 'HUNT STACKS-3', 'HUNT STACKS-4', 'MELLON NEWBOOK', 'MELLON READING-RM', 'OFFSITE BY-REQUEST']
   },
   'US-PPIU': {
+    name: 'University of Pittsburgh',
     tag: '995',
     subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w' },
     lendLocs: ['ART stks', 'ART stksfac', 'CHEM stks', 'ENGR stks', 'HILL dis', 'HILL stks', 'HILL stksafro', 'HILL stksalld', 'HILL stkseac', 'HILL stkseaj', 'HILL stkseak', 'LANG over', 'LANG stks', 'MUS over', 'MUS stks', 'THOM stor', 'UPB over', 'UPB stks', 'UPG graph', 'UPG stks', 'UPG young', 'UPJ graph', 'UPJ stks', 'UPT stks']
   },
+  'US-PPT': {
+    name: 'Temple',
+    tag: 'ITM',
+    subs: { a: 'n,m', b: 'b', c: 'q', d: 'd', x: 'd', y: 'x', u: 'h,i', n: 'f,g', v: 'j' },
+    lendLocs: ['AMBLER stacks', 'ASRS asrs', 'KARDON p_GovDocs', 'KARDON p_remote', 'MAIN hirsch', 'MAIN juvenile', 'MAIN stacks']
+  }
 };
 
 function getSubs(field) {
@@ -152,6 +165,7 @@ export function transform(clusterStr) {
             subfields: [
               { l: controlNumber },
               { s: 'ISIL:' + sid },
+              { i: lf.name },
               { t: mtype }
             ]
           }
