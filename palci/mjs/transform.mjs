@@ -64,7 +64,13 @@ const localFields = {
     tag: '995',
     subs: { a: 'r', b: 'b', c: 't', d: 's', x: 'd', y: 'a', u: 'i,j', n: 'k,l', v: 'm', k: 'aa' },
     lendLocs: ['Alumni', 'BrowseGT', 'BrowseRoom', 'CollAuth', 'Display', 'NewBook', 'Offsite', 'Oversize', 'Stacks']
-  }
+  },
+  'US-PABBCUP': {
+    name: 'Commonwealth',
+    tag: '995',
+    subs: { a: 'i,z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w' },
+    lendLocs: ['Clearfield CLEAR', 'Clearfield CLEARADBK', 'Clearfield CLEARCAR', 'Clearfield CLEARCHIL', 'Clearfield CLEARFOL', 'Clearfield CLEARLREAD', 'MAN 1FN', 'MAN 1FS', 'MAN 2FN', 'MAN 3FN', 'MAN 3FS', 'MAN 4FN', 'MAN 4FS', 'MAN ATR1', 'MAN ATR2', 'MAN ATR3', 'MAN ATR4', 'MAN CSTK', 'Stevenson CALD', 'Stevenson CDMUS', 'Stevenson CHIL', 'Stevenson CUR', 'Stevenson E-CHIL', 'Stevenson FOL', 'Stevenson LREAD', 'Stevenson MAIN', 'Stevenson NBC', 'Stevenson NBS', 'Stevenson NEWBERY', 'Stevenson PER', 'Stevenson PICBOO', 'Stevenson TFOL', 'bloom GENCOLL', 'bloom GENCOLLOV', 'bloom JUVENILE', 'bloom JUVENILEOV', 'bloom JUVFIC', 'bloom JUVFICOV', 'bloom JUVNONFIC', 'bloom JUVNONFOV', 'bloom NewBooks']
+  },
 };
 
 function getSubs(field) {
