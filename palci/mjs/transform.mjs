@@ -83,7 +83,13 @@ const localFields = {
     tag: '995',
     subs: { a: 'z', b: 's', c: 'f', x: 't', y: 'a', v: 'e' },
     lendLocs: ['Child3rdFl', 'Main', 'Wilson']
-  }
+  },
+  'US-PACALPWU': {
+    name: 'PennWest',
+    tag: '995',
+    subs: { a: 'i,z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g' },
+    lendLocs: ['Carlson Browsing', 'Carlson Carl Juv', 'Carlson Carl Main', 'Carlson Carl Ovrsz', 'Carlson Carl-3', 'Carlson Carl-fn', 'Carlson Carl-zo', 'Carlson CarlTxtbk', 'Carlson Douglass', 'EUP Book4', 'EUP Book5', 'EUP Book6', 'EUP Juvenile', 'MAN 2LC', 'MAN 3LC', 'MAN 4LC', 'MAN CURR', 'MAN FAC', 'MAN FDI', 'MAN GNC', 'Suhr Ven Juv', 'Suhr Ven Main', 'Suhr Ven-O']
+  },
 };
 
 function getSubs(field) {
