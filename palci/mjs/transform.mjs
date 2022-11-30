@@ -50,7 +50,8 @@ const localFields = {
     name: 'Temple',
     tag: 'ITM',
     subs: { a: 'n,m', b: 'b', c: 'q', d: 'd', x: 'd', y: 'x', u: 'h,i', n: 'f,g', v: 'j' },
-    lendLocs: ['AMBLER stacks', 'ASRS asrs', 'KARDON p_GovDocs', 'KARDON p_remote', 'MAIN hirsch', 'MAIN juvenile', 'MAIN stacks']
+    lendLocs: ['AMBLER stacks', 'ASRS asrs', 'KARDON p_GovDocs', 'KARDON p_remote', 'MAIN hirsch', 'MAIN juvenile', 'MAIN stacks'],
+    notLendItypes: ['2', '3', '23']
   },
   'US-PAGLAUL': {
     name: 'Arcadia',
@@ -258,6 +259,8 @@ export function transform(clusterStr) {
         let policy = '';
         if (lf.lendLocs && lf.lendItypes) {
           policy = (lf.lendLocs.indexOf(location) > -1 && lf.lendItypes.indexOf(itype) > -1) ? 'LOANABLE' : 'UNLOANABLE'; 
+        } if (lf.lendLocs && lf.notLendItypes) {
+          policy = (lf.lendLocs.indexOf(location) > -1 && lf.notLendItypes.indexOf(itype) === -1) ? 'LOANABLE' : 'UNLOANABLE';
         } else if (lf.lendLocs) {
           policy = (lf.lendLocs.indexOf(location) > -1) ? 'LOANABLE' : 'UNLOANABLE';
         } else {
