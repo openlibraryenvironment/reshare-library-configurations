@@ -135,16 +135,18 @@ export function transform(clusterStr) {
     }
 
     let lf = localFields[sid];
+    let controlNumber = lid;
     if (lf && lf.idField) {
       let tag = lf.idField.substring(0, 3);
       let sf = lf.idField.substring(3);
       let field = recFields[tag];
       if (field && sf) {
         let subs = getSubs(field[0]);
-        let data = (subs[sf]) ? subs[sf][0] : '';
+        controlNumber = (subs[sf]) ? subs[sf][0] : '';
       }
+    } else if (recFields['001']) { 
+      controlNumber = recFields['001'][0];
     }
-    let controlNumber = (recFields['001']) ? recFields['001'][0] : lid;
     let f999 = {
       ind1: '1',
       ind2: '0',
@@ -250,6 +252,6 @@ export function transform(clusterStr) {
   mainBib.fields.unshift({ '001': f001 });
   mainBib.fields.push(...f999s);
   mainBib.fields.push(...outItems);
-  // return JSON.stringify(mainBib, null, 2);
+  return JSON.stringify(mainBib, null, 2);
 }
 
