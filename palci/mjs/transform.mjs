@@ -54,6 +54,7 @@ const localFields = {
   },
   'US-PAGLAUL': {
     name: 'Arcadia',
+    idField: '999c',
     tag: '952',
     subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y', y: '9', u: 'h', n: 'h', v: 'v' },
     lendLocs: ['CURRIC-FIC', 'CURRIC-JUV', 'CURRICULUM', 'DISPLAY', 'FACAUTH', 'MEDIA - AUDIOCASSETTE', 'OVERSIZE', 'STACKS', 'THESIS']
@@ -133,6 +134,16 @@ export function transform(clusterStr) {
       }
     }
 
+    let lf = localFields[sid];
+    if (lf && lf.idField) {
+      let tag = lf.idField.substring(0, 3);
+      let sf = lf.idField.substring(3);
+      let field = recFields[tag];
+      if (field && sf) {
+        let subs = getSubs(field[0]);
+        let data = (subs[sf]) ? subs[sf][0] : '';
+      }
+    }
     let controlNumber = (recFields['001']) ? recFields['001'][0] : lid;
     let f999 = {
       ind1: '1',
@@ -149,7 +160,6 @@ export function transform(clusterStr) {
     f999s.push({ '999': f999 });
 
     // normalized item fields
-    let lf = localFields[sid];
     if (lf) {
       let items = recFields[lf.tag] || [];
       let linkedFields = {};
@@ -240,6 +250,6 @@ export function transform(clusterStr) {
   mainBib.fields.unshift({ '001': f001 });
   mainBib.fields.push(...f999s);
   mainBib.fields.push(...outItems);
-  return JSON.stringify(mainBib, null, 2);
+  // return JSON.stringify(mainBib, null, 2);
 }
 
