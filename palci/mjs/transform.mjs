@@ -74,8 +74,14 @@ const localFields = {
   'US-PPPSB': {
     name: 'Cairn',
     tag: '952',
-    subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i', v: 'j' },
+    subs: { a: 'd', b: 'm', c: 'e', d: 'j', x: 'i', v: 'j' },
     lendLocs: ['Book Display', 'CD Collection', 'DVD Collection', 'EZBorrow', 'Library Storage', 'ML Thesis and Projects', 'Main Stacks 1st Floor ', 'Main Stacks 2nd Floor (Mezz Level)', 'Music Scores', 'Technical Services Deptartment']
+  },
+  'US-NJGBS': {
+    name: 'Rowan',
+    tag: '995',
+    subs: { a: 'z', b: 's', c: 'f', x: 't', y: 'a', v: 'e' },
+    lendLocs: ['Child3rdFl', 'Main', 'Wilson']
   }
 };
 
