@@ -128,6 +128,13 @@ const localFields = {
     subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', x: 'c', y: 'a', u: 'f,x', n: 'e,w', v: 'g', k: 'jj' },
     lendLocs: ['HHN d-dvd', 'HHN d-leisure', 'HHN d-oversize', 'HHN d-stacks', 'QL d-dvd', 'QL d-stacks', 'WWH d-child', 'WWH d-dvd', 'WWH d-leisure', 'WWH d-oversize', 'WWH d-stacks', 'WWH d-stacks-1', 'WWH d-td-1', 'WWH d-teen']
   },
+  'US-PCW': {
+    name: 'Widener',
+    idField: '907a',
+    tag: '945',
+    subs: { a: 'l', b: 'i', c: '%050|%090|%099', x: 't', y: 'y', v: 'c' },
+    lendLocs: ['g', 'g1', 'g1f', 'g1o', 'g2', 'g3', 'g4', 'g5', 'g5cc', 'g5co', 'g5cp', 'g5cs', 'g5mk', 'g5mo', 'g5ms']
+  }
 };
 
 function getSubs(field) {
@@ -189,10 +196,15 @@ export function transform(clusterStr) {
     }
 
     let recFields = {};
+    let bibCall = {};
 
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
       let tag = Object.keys(field)[0];
+      if (tag.match(/050|082|090|099/)) {
+        let csubs = getSubs(field[tag]);
+        bibCall[tag] = (csubs.b) ? csubs.a[0] + csubs.b[0] : csubs.a[0];
+      }
       if (!recFields[tag]) recFields[tag] = [];
       recFields[tag].push(field[tag]);
       if (isMainBib) { 
@@ -287,6 +299,14 @@ export function transform(clusterStr) {
             }
           }
           let text = fdata.join(' ');
+          if (c === 'c' && lf.subs.c.match(/.../)) {
+            let cnTags = lf.subs.c.split(/\|/);
+            for (let t = 0; t < cnTags.length; t++) {
+              let tag = cnTags[t].replace(/^%/, '');
+              text = bibCall[tag];
+              if (text) break;
+            }
+          }
           if (text) {
             let obj = {};
             obj[c] = text;
