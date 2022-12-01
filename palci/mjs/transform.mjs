@@ -90,6 +90,12 @@ const localFields = {
     subs: { a: 'i,z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g' },
     lendLocs: ['Carlson Browsing', 'Carlson Carl Juv', 'Carlson Carl Main', 'Carlson Carl Ovrsz', 'Carlson Carl-3', 'Carlson Carl-fn', 'Carlson Carl-zo', 'Carlson CarlTxtbk', 'Carlson Douglass', 'EUP Book4', 'EUP Book5', 'EUP Book6', 'EUP Juvenile', 'MAN 2LC', 'MAN 3LC', 'MAN 4LC', 'MAN CURR', 'MAN FAC', 'MAN FDI', 'MAN GNC', 'Suhr Ven Juv', 'Suhr Ven Main', 'Suhr Ven-O']
   },
+  'US-PCARLD': {
+    name: 'Dickinson',
+    tag: '999',
+    subs: { a: 'l', b: 's', c: 'a', d: 'w', x: 't', y: 'i', v: 'v' },
+    lendLocs: ['CIRC_DESK', 'E_ASIAN_RM', 'MUS_SCORES', 'OVERSIZE', 'STACKS', 'STORAGE']
+  }
 };
 
 function getSubs(field) {
