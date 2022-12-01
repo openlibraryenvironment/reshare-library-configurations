@@ -134,7 +134,13 @@ const localFields = {
     tag: '945',
     subs: { a: 'l', b: 'i', c: '%050|%090|%099', x: 't', y: 'y', v: 'c' },
     lendLocs: ['mcir', 'mcurc', 'mcurn', 'mtxc']
-  }
+  },
+  'US-PMILS': {
+    name: 'Millersville',
+    tag: '995',
+    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a' },
+    lendLocs: ['B', 'BDVD', 'BO', 'CKT', 'CPOS', 'CT', 'CTO', 'EXHIBIT', 'EZB', 'EZBM', 'EZB_LEND', 'GD', 'GDMC', 'GDMF', 'GDML', 'ILLB', 'J', 'JO', 'MEND', 'MF', 'MFD', 'N_M', 'OBOC', 'PROCCA', 'PROCLA', 'R', 'RESE', 'RESM', 'RESP', 'RESS', 'STORAGE_02', 'VC']
+  },
 };
 
 function getSubs(field) {
