@@ -108,6 +108,12 @@ const localFields = {
     tag: '950',
     subs: { a: 'f', b: 'a', c: 'm', d: 'l', x: 'b', y: 'z' },
     lendLocs: ['STACK2', 'STACK3']
+  },
+  'US-PWCS': {
+    name: 'West Chester',
+    tag: 'ERI',
+    subs: { a: 'j', b: 'a', c: 'l', d: 's', x: 'c', y: '7', u: 'x,y', n: 'u,v', k: 'm' },
+    lendLocs: ['docspa', 'docsus', 'fhg3', 'fhg3h', 'fhg3ho', 'fhg3o', 'fhg4', 'fhg4o', 'fhg5', 'fhg5o', 'fhg6', 'fhg6o', 'imcbb', 'imcbkk', 'imcjkd', 'imctxt', 'juve', 'juvebrd', 'juvejfic', 'juvenonf', 'juvepict', 'pmbk', 'pmbkov', 'pmed', 'pmmin', 'pmsc', 'pmscov']
   }
 };
 
