@@ -114,6 +114,13 @@ const localFields = {
     tag: 'ERI',
     subs: { a: 'j', b: 'a', c: 'l', d: 's', x: 'c', y: '7', u: 'x,y', n: 'u,v', k: 'm' },
     lendLocs: ['docspa', 'docsus', 'fhg3', 'fhg3h', 'fhg3ho', 'fhg3o', 'fhg4', 'fhg4o', 'fhg5', 'fhg5o', 'fhg6', 'fhg6o', 'imcbb', 'imcbkk', 'imcjkd', 'imctxt', 'juve', 'juvebrd', 'juvejfic', 'juvenonf', 'juvepict', 'pmbk', 'pmbkov', 'pmed', 'pmmin', 'pmsc', 'pmscov']
+  },
+  'US-PPICC': {
+    name: 'Chatham',
+    idField: '999c',
+    tag: '952',
+    subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y', y: '9', v: 'h' },
+    lendLocs: ['CC', 'CIRC2', 'CIRC3', 'FEATURE', 'FOLIO', 'OLKES', 'POPULAR']
   }
 };
 
