@@ -133,7 +133,7 @@ const localFields = {
     idField: '907a',
     tag: '945',
     subs: { a: 'l', b: 'i', c: '%050|%090|%099', x: 't', y: 'y', v: 'c' },
-    lendLocs: ['g', 'g1', 'g1f', 'g1o', 'g2', 'g3', 'g4', 'g5', 'g5cc', 'g5co', 'g5cp', 'g5cs', 'g5mk', 'g5mo', 'g5ms']
+    lendLocs: ['mcir', 'mcurc', 'mcurn', 'mtxc']
   }
 };
 
