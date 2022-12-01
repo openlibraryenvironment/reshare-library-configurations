@@ -95,6 +95,13 @@ const localFields = {
     tag: '999',
     subs: { a: 'l', b: 's', c: 'a', d: 'w', x: 't', y: 'i', v: 'v' },
     lendLocs: ['CIRC_DESK', 'E_ASIAN_RM', 'MUS_SCORES', 'OVERSIZE', 'STACKS', 'STORAGE']
+  },
+  'US-PPID': {
+    name: 'Duquesne',
+    idField: '907a',
+    tag: '945',
+    subs: { a: 'l', b: 'i', c: 'a', x: 't', y: 'y', v: 'c' },
+    lendLocs: ['g', 'g1', 'g1f', 'g1o', 'g2', 'g3', 'g4', 'g5', 'g5cc', 'g5co', 'g5cp', 'g5cs', 'g5mk', 'g5mo', 'g5ms']
   }
 };
 
@@ -260,8 +267,8 @@ export function transform(clusterStr) {
             obj[c] = text;
             outItem['999'].subfields.push(obj);
           }
-          if (!location && c === 'a') {
-            location = text;
+          if (text && !location && c === 'a') {
+            location = text.trim();
           }
           if (!itype && c === 'x') {
             itype = text;
