@@ -121,7 +121,13 @@ const localFields = {
     tag: '952',
     subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y', y: '9', v: 'h' },
     lendLocs: ['CC', 'CIRC2', 'CIRC3', 'FEATURE', 'FOLIO', 'OLKES', 'POPULAR']
-  }
+  },
+  'US-PPD': {
+    name: 'Drexel',
+    tag: '995',
+    subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', x: 'c', y: 'a', u: 'f,x', n: 'e,w', v: 'g', k: 'jj' },
+    lendLocs: ['HHN d-dvd', 'HHN d-leisure', 'HHN d-oversize', 'HHN d-stacks', 'QL d-dvd', 'QL d-stacks', 'WWH d-child', 'WWH d-dvd', 'WWH d-leisure', 'WWH d-oversize', 'WWH d-stacks', 'WWH d-stacks-1', 'WWH d-td-1', 'WWH d-teen']
+  },
 };
 
 function getSubs(field) {
