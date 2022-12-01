@@ -102,6 +102,12 @@ const localFields = {
     tag: '945',
     subs: { a: 'l', b: 'i', c: 'a', x: 't', y: 'y', v: 'c' },
     lendLocs: ['g', 'g1', 'g1f', 'g1o', 'g2', 'g3', 'g4', 'g5', 'g5cc', 'g5co', 'g5cp', 'g5cs', 'g5mk', 'g5mo', 'g5ms']
+  },
+  'US-PSRS': {
+    name: 'Slippery Rock',
+    tag: '950',
+    subs: { a: 'f', b: 'a', c: 'm', d: 'l', x: 'b', y: 'z' },
+    lendLocs: ['STACK2', 'STACK3']
   }
 };
 
@@ -278,7 +284,7 @@ export function transform(clusterStr) {
         let policy = '';
         if (lf.lendLocs && lf.lendItypes) {
           policy = (lf.lendLocs.indexOf(location) > -1 && lf.lendItypes.indexOf(itype) > -1) ? 'LOANABLE' : 'UNLOANABLE'; 
-        } if (lf.lendLocs && lf.notLendItypes) {
+        } else if (lf.lendLocs && lf.notLendItypes) {
           policy = (lf.lendLocs.indexOf(location) > -1 && lf.notLendItypes.indexOf(itype) === -1) ? 'LOANABLE' : 'UNLOANABLE';
         } else if (lf.lendLocs) {
           policy = (lf.lendLocs.indexOf(location) > -1) ? 'LOANABLE' : 'UNLOANABLE';
