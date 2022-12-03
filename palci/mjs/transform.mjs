@@ -159,7 +159,15 @@ const localFields = {
     tag: '949',
     subs: { a: 'a', b: 'g', c: 'c', y: 'ff', v: 'i', w: 'h' },
     lendLocs: ['WFPBOOK', 'WMHBOOK', 'WSTACKBOOK']
-  }
+  },
+  'US-PLF': {
+    name: 'Franklin and Marshall',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8','9'],
+    subs: { a: 'b,c', b: '876p', c: 'h,i', n: '3', v: '3' },
+    lendLocs: ['LFMC Flat Oversize Collection', 'LFMC General Collection', 'LFMC Oversize Collection', 'LFMM Flat Oversize Collection', 'LFMM General Collection', 'LFMM Oversize Collection']
+  },
 };
 
 function getSubs(field) {
@@ -276,7 +284,7 @@ export function transform(clusterStr) {
         for (let e = 0; e < extra.length; e++) {
           let exField = extra[e];
           let esubs = getSubs(exField);
-          let link = esubs[lf.linkSub];
+          let link = esubs[lf.linkSubs[1]];
           linkedFields[link] = exField;
         }
       }
@@ -298,9 +306,9 @@ export function transform(clusterStr) {
         let location = '';
         let itype = '';
         for (let c in lf.subs) {
-          if (lf.linkSub && lf.subs[c].match(/^\w{3}/)) {
+          if (lf.linkSubs && lf.linkSubs[0] && lf.subs[c].match(/^\w{3}/)) {
             let lsf = lf.subs[c].substring(3);
-            let linkDat = subData[lf.linkSub];
+            let linkDat = subData[lf.linkSubs[0]];
             if (linkDat) {
               let linkedItem = linkedFields[linkDat];
               let linkedSubs = (linkedItem) ? getSubs(linkedItem) : {};
@@ -324,7 +332,7 @@ export function transform(clusterStr) {
             }
           }
           let text = fdata.join(' ');
-          if (c === 'c' && lf.subs.c.match(/.../)) {
+          if (c === 'c' && lf.subs.c.match(/^%/)) {
             let cnTags = lf.subs.c.split(/\|/);
             for (let t = 0; t < cnTags.length; t++) {
               let tag = cnTags[t].replace(/^%/, '');
