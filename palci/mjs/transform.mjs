@@ -173,6 +173,12 @@ const localFields = {
     tag: '999',
     subs: { a: 'l', b: 'i', c: 'a', d: 'w', x: 't', n: 'v', v: 'v', k: 'j' },
     lendLocs: ['DVD', 'EDVD', 'JUVENILE', 'PAPERBACK', 'PIC_BOOK', 'STACKS', 'YA-JUV']
+  },
+  'US-NNU': {
+    name: 'NYU',
+    tag: '930',
+    subs: { a: 's', b: 'b', c: 'c', d: 't', x: 't', n: 'd', u: 'd', v: 'd', w: 'd' },
+    lendLocs: ['BOBSTEZB', 'NCOUREZB', 'OSCOREZB', 'OSNYUEZB']
   }
 };
 
