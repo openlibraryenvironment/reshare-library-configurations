@@ -179,7 +179,13 @@ const localFields = {
     tag: '930',
     subs: { a: 's', b: 'b', c: 'c', d: 't', x: 't', n: 'd', u: 'd', v: 'd', w: 'd' },
     lendLocs: ['BOBSTEZB', 'NCOUREZB', 'OSCOREZB', 'OSNYUEZB']
-  }
+  },
+  'US-PSC': {
+    name: 'Swarthmore',
+    tag: '995',
+    subs: { a: 'aa', b: 'b', c: 'bb', d: 'j', x: 't', y: 'a', n: 'e,w', u: 'f,x', v: 'j', w: 'd', k: 'x' },
+    lendLocs: ['sm']
+  },
 };
 
 function getSubs(field) {
