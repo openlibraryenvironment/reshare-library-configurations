@@ -146,6 +146,12 @@ const localFields = {
     tag: '852',
     subs: { a: 'b', c: 'h,i' },
     lendLocs: ['MAIN']
+  },
+  'US-PESS': {
+    name: 'East Stroudsburg',
+    tag: '955',
+    subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'ff', u: 'f,x', n: 'e,w', v: 'e', w: 'f', k: 'g' },
+    lendLocs: ['BIO', 'CHILDBIO', 'CHILDDEWEY', 'CHILDEASY', 'CHILDFIC', 'FICTION', 'MAIN', 'OVERSIZE']
   }
 };
 
