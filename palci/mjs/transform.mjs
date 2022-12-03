@@ -152,6 +152,13 @@ const localFields = {
     tag: '955',
     subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'ff', u: 'f,x', n: 'e,w', v: 'e', w: 'f', k: 'g' },
     lendLocs: ['BIO', 'CHILDBIO', 'CHILDDEWEY', 'CHILDEASY', 'CHILDFIC', 'FICTION', 'MAIN', 'OVERSIZE']
+  },
+  'US-PSTDE': {
+    name: 'Eastern',
+    idField: '039a',
+    tag: '949',
+    subs: { a: 'a', b: 'g', c: 'c', y: 'ff', v: 'i', w: 'h' },
+    lendLocs: ['WFPBOOK', 'WMHBOOK', 'WSTACKBOOK']
   }
 };
 
