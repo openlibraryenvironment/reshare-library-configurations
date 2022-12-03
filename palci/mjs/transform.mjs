@@ -141,6 +141,12 @@ const localFields = {
     subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a' },
     lendLocs: ['B', 'BDVD', 'BO', 'CKT', 'CPOS', 'CT', 'CTO', 'EXHIBIT', 'EZB', 'EZBM', 'EZB_LEND', 'GD', 'GDMC', 'GDMF', 'GDML', 'ILLB', 'J', 'JO', 'MEND', 'MF', 'MFD', 'N_M', 'OBOC', 'PROCCA', 'PROCLA', 'R', 'RESE', 'RESM', 'RESP', 'RESS', 'STORAGE_02', 'VC']
   },
+  'US-PV': {
+    name: 'Villanova',
+    tag: '852',
+    subs: { a: 'b', c: 'h,i' },
+    lendLocs: ['MAIN']
+  }
 };
 
 function getSubs(field) {
