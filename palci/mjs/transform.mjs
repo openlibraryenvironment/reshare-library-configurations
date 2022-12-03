@@ -168,6 +168,12 @@ const localFields = {
     subs: { a: 'b,c', b: '876p', c: 'h,i', n: '3', v: '3' },
     lendLocs: ['LFMC Flat Oversize Collection', 'LFMC General Collection', 'LFMC Oversize Collection', 'LFMM Flat Oversize Collection', 'LFMM General Collection', 'LFMM Oversize Collection']
   },
+  'US-PERG': {
+    name: 'Gannon',
+    tag: '999',
+    subs: { a: 'l', b: 'i', c: 'a', d: 'w', x: 't', n: 'v', v: 'v', k: 'j' },
+    lendLocs: ['DVD', 'EDVD', 'JUVENILE', 'PAPERBACK', 'PIC_BOOK', 'STACKS', 'YA-JUV']
+  }
 };
 
 function getSubs(field) {
