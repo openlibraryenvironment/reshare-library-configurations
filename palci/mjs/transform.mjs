@@ -205,6 +205,13 @@ const localFields = {
     subs: { a: 'l', b: 'i', c: '%050|%090', y: 'y' },
     lendLocs: ['lasg', 'lasl', 'lasla', 'laslb', 'lati']
   },
+  'US-PWML': {
+    name: 'Lycoming',
+    idField: '039a',
+    tag: '949',
+    subs: { a: 'h', c: 'a,b', b: 'z' },
+    lendLocs: ['LYCA', 'LYCDVD', 'LYCJ', 'LYCL', 'LYCT', 'NEW', 'OVSZ']
+  },
 };
 
 function getSubs(field) {
