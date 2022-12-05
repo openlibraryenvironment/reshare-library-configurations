@@ -186,6 +186,12 @@ const localFields = {
     subs: { a: 'aa', b: 'b', c: 'bb', d: 'j', x: 't', y: 'a', n: 'e,w', u: 'f,x', v: 'j', w: 'd', k: 'x' },
     lendLocs: ['sm']
   },
+  'US-PHC': {
+    name: 'Haverford',
+    tag: '995',
+    subs: { a: 'i', b: 's', c: 'bb', d: 'j', x: 'c', y: 'a', u: 'f,x', n: 'e,w', v: 'g', k: 'jj' },
+    lendLocs: ['hm']
+  }
 };
 
 function getSubs(field) {
