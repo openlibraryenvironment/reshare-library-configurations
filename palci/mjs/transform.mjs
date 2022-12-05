@@ -212,6 +212,14 @@ const localFields = {
     subs: { a: 'h', c: 'a,b', b: 'z' },
     lendLocs: ['LYCA', 'LYCDVD', 'LYCJ', 'LYCL', 'LYCT', 'NEW', 'OVSZ']
   },
+  'US-PCOR': {
+    name: 'Robert Morris',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    subs: { a: 'c', c: 'h,i', b: '876p' },
+    lendLocs: ['Folio (Main Floor)', 'Juvenile  Fiction', 'Juvenile - Easy', 'Juvenile - Fiction', 'Juvenile Easy', 'Juvenile Fiction', 'Juvenile Nofiction', 'Juvenile Nonfiction', 'Juvenile', 'Kalevitch Collection', 'New Books', 'Oversize (Main Floor)', 'Pedagogy', 'Stacks (Top Floor)']
+  },
 };
 
 function getSubs(field) {
