@@ -197,7 +197,14 @@ const localFields = {
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
     lendLocs: ['Fairchild - 5th Floor - North', 'Fairchild - 6th Floor - North - Media Collection', 'Fairchild - 6th Floor - North', 'Fairchild - 7th Floor - North', 'LMC-B', 'LMC-G', 'Linderman 1st Floor - Reading Room - Faculty Authors', 'Linderman 1st Floor - Reading Room - Juvenile Collection', 'Linderman 1st Floor - Reading Room - New Books', 'Linderman 1st Floor - Reading Room - Reading Room Collection', 'Linderman 1st Floor - Rotunda', 'Linderman 2nd Floor - Rotunda', 'Linderman 3rd Floor - Rotunda', 'Linderman 3rd Floor - Stacks', 'Linderman 4th Floor - Stacks', 'Linderman Ground Floor - Lower Level', 'Linderman Ground Floor - Upper Level', 'Lucy\'s Cafe - Linderman Ground Level Rotunda']
-  }
+  }, 
+  'US-PPLAS': {
+    name: 'La Salle',
+    idField: '907a',
+    tag: '945',
+    subs: { a: 'l', b: 'i', c: '%050|%090', y: 'y' },
+    lendLocs: ['lasg', 'lasl', 'lasla', 'laslb', 'lati']
+  },
 };
 
 function getSubs(field) {
