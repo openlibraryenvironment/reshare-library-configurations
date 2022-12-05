@@ -231,7 +231,14 @@ const localFields = {
     tag: '999',
     subs: { a: 'l', b: 'i', c: 'a', d: 'w', x: 't', v: 'v', k: 'j'},
     lendLocs: ['JUV', 'MEDIA', 'MFICHE', 'MFILM', 'OVERSIZE', 'SHELVES', 'YCP_AUTH']
-  }
+  },
+  'US-PPIL': {
+    name: 'La Roche',
+    idField: '907a',
+    tag: '945',
+    subs: { a: 'l', b: 'i', c: '%092', y: 'y' },
+    lendLocs: ['brows', 'cd', 'circ', 'dvd', 'educ', 'jcal1', 'jcha1', 'jcha2', 'jcha3', 'jcha4', 'jcha5', 'jcha6', 'jcha7', 'jmat1', 'jnew1', 'jnew2', 'jnew3', 'jnew4', 'jpic1', 'jpic2', 'jpic3', 'jpic4', 'jpoet', 'jscie', 'jsoc', 'jsoc1', 'jsoc2', 'jsoc3', 'juv', 'ref', 'ya']
+  },
 };
 
 function getSubs(field) {
@@ -298,7 +305,7 @@ export function transform(clusterStr) {
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
       let tag = Object.keys(field)[0];
-      if (tag.match(/050|082|090|099/)) {
+      if (tag.match(/050|082|090|092|099/)) {
         let csubs = getSubs(field[tag]);
         bibCall[tag] = (csubs.b) ? csubs.a[0] + csubs.b[0] : csubs.a[0];
       }
@@ -399,6 +406,7 @@ export function transform(clusterStr) {
             }
           }
           let text = fdata.join(' ');
+          text = text.trim();
           if (c === 'c' && lf.subs.c.match(/^%/)) {
             let cnTags = lf.subs.c.split(/\|/);
             for (let t = 0; t < cnTags.length; t++) {
@@ -411,9 +419,6 @@ export function transform(clusterStr) {
             let obj = {};
             obj[c] = text;
             outItem['999'].subfields.push(obj);
-          }
-          if (text && !location && c === 'a') {
-            location = text.trim();
           }
           if (!itype && c === 'x') {
             itype = text;
