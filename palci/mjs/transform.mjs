@@ -246,6 +246,14 @@ const localFields = {
     subs: { a: 'a,c', b: 'p', c: 'o', d: '2', x: 'y', y: '9', u: 'h', n: 'h', v: 'h' },
     lendLocs: ['HAMMER CURR', 'HAMMER NEWBOOK', 'HAMMER STACKS', 'HAMMER THESIS SPEC']
   },
+  'US-PBMW': {
+    name: 'Moravian',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    subs: { a: 'b,c', c: 'h,i', b: '876p' },
+    lendLocs: ['MORA Bookstacks']
+  }
 };
 
 function getSubs(field) {
