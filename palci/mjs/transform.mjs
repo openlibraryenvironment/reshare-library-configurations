@@ -226,6 +226,12 @@ const localFields = {
     subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', n: 'e,w', u: 'f,x' },
     lendLocs: ['Leisure', 'Main', 'bks1', 'bks2', 'bks3', 'campbk', 'cmclit']
   },
+  'US-PYC': {
+    name: 'York',
+    tag: '999',
+    subs: { a: 'l', b: 'i', c: 'a', d: 'w', x: 't', v: 'v', k: 'j'},
+    lendLocs: ['JUV', 'MEDIA', 'MFICHE', 'MFILM', 'OVERSIZE', 'SHELVES', 'YCP_AUTH']
+  }
 };
 
 function getSubs(field) {
@@ -308,6 +314,9 @@ export function transform(clusterStr) {
 
     let lf = localFields[sid];
     let controlNumber = lid;
+    if (sid === 'US-PYC') {
+      controlNumber = controlNumber.replace(/.+:/, 'u');
+    }
     if (lf && lf.idField) {
       let tag = lf.idField.substring(0, 3);
       let sf = lf.idField.substring(3);

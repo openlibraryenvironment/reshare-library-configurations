@@ -6,6 +6,7 @@ open IN, $infile or die "Can't open $infile!";
 my @str;
 while (<IN>) {
   chomp;
+  next unless /\w/;
   my $val = $_;
   $val =~ s/'/\\'/g;
   push @str, "'$val'";
