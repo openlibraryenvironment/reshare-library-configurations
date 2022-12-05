@@ -239,6 +239,13 @@ const localFields = {
     subs: { a: 'l', b: 'i', c: '%092', y: 'y' },
     lendLocs: ['brows', 'cd', 'circ', 'dvd', 'educ', 'jcal1', 'jcha1', 'jcha2', 'jcha3', 'jcha4', 'jcha5', 'jcha6', 'jcha7', 'jmat1', 'jnew1', 'jnew2', 'jnew3', 'jnew4', 'jpic1', 'jpic2', 'jpic3', 'jpic4', 'jpoet', 'jscie', 'jsoc', 'jsoc1', 'jsoc2', 'jsoc3', 'juv', 'ref', 'ya']
   },
+  'US-PERMC': {
+    name: 'Mercyhurst',
+    idField: '999c',
+    tag: '952',
+    subs: { a: 'a,c', b: 'p', c: 'o', d: '2', x: 'y', y: '9', u: 'h', n: 'h', v: 'h' },
+    lendLocs: ['HAMMER CURR', 'HAMMER NEWBOOK', 'HAMMER STACKS', 'HAMMER THESIS SPEC']
+  },
 };
 
 function getSubs(field) {
@@ -419,6 +426,9 @@ export function transform(clusterStr) {
             let obj = {};
             obj[c] = text;
             outItem['999'].subfields.push(obj);
+          }
+          if (!location && c === 'a') {
+            location = text;
           }
           if (!itype && c === 'x') {
             itype = text;
