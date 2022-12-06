@@ -203,6 +203,14 @@ const localFields = {
     subs: { a: 'b,c', b: '876p', c: 'h,i', n: '3', v: '3' },
     lendLocs: ['STHM Asian Collection', 'STHM Chinese Corner (2nd floor)', 'STHM Circulation Desk CDs', 'STHM Circulation Desk DVD/Video', 'STHM Curriculum Library', 'STHM Main Collection Oversize Plus', 'STHM Main Collection Oversize', 'STHM Main Collection', 'STHM New Books', 'STHM Valente Library Oversize', 'STHM Valente Library']
   },
+  'US-WVU': {
+    name: 'West Virgina University',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    subs: { a: 'b,c', b: '876p', c: 'h,i', n: '3', v: '3' },
+    lendLocs: ['WVUA Appalachian Collection', 'WVUA Closed Stacks In Library Circulating', 'WVUA Closed Stacks', 'WVUA DVD', 'WVUA Eliza\'s', 'WVUA Government Documents Census', 'WVUA Government Documents Index', 'WVUA Government Documents Maps', 'WVUA Government Documents Media', 'WVUA Government Documents Microfiche', 'WVUA Government Documents Microfilm', 'WVUA Government Documents Prints', 'WVUA Government Documents West Virginia Media', 'WVUA Government Documents West Virginia', 'WVUA Government Documents', 'WVUA Microcard', 'WVUA Microfiche', 'WVUA Microfilm', 'WVUA Microphotography', 'WVUA Stacks Oversize', 'WVUA Stacks', 'WVUA WVU Electronic Theses and Dissertations', 'WVUD Closed Stacks In Library Circulating', 'WVUD Closed Stacks', 'WVUD Microfiche', 'WVUD Microfilm', 'WVUE Children\'s Award Winners Collection', 'WVUE Children\'s Collection', 'WVUE Closed Stacks In Library Circulating', 'WVUE Closed Stacks', 'WVUE Compact Shelving', 'WVUE Cookbook Collection', 'WVUE DVD', 'WVUE Government Documents', 'WVUE Leisure Reading', 'WVUE Microfiche', 'WVUE Microfilm', 'WVUE Miniature Score', 'WVUE Oversize', 'WVUE Patent', 'WVUE Stacks', 'WVUH Audiovisuals', 'WVUH CD-ROM', 'WVUH Closed Stacks In Library Circulating', 'WVUH Closed Stacks', 'WVUH Current Stacks', 'WVUH DVDS', 'WVUH Government Documents', 'WVUH Leisure Reading Collection', 'WVUH Microfiche', 'WVUH Microfilm', 'WVUL General Collection Non-Circulating', 'WVUL General Collection', 'WVUL Law Cleanup', 'WVUL Legal Leisure', 'WVUL Media Services Equipment 4 hours', 'WVUL Media Services Equipment 7 day', 'WVUL Media', 'WVUL Online', 'WVUL Oversize', 'WVUL Racial Justice Collection', 'WVUL Rare Book Room', 'WVUL Reference', 'WVUL Reserve', 'WVUL Storage', 'WVUL Study Aids', 'WVUL Video Collection', 'WVUL West Virginia Collection Non-Circulating', 'WVUL West Virginia Collection']
+  },
   'US-PERG': {
     name: 'Gannon',
     tag: '999',
