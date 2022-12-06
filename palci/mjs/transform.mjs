@@ -290,6 +290,12 @@ const localFields = {
     subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', n: 'e,w', u: 'f,x' },
     lendLocs: ['Leisure', 'Main', 'bks1', 'bks2', 'bks3', 'campbk', 'cmclit']
   },
+  'US-PSELS': {
+    name: 'Susquehanna',
+    tag: '995',
+    subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', n: 'e,w', u: 'f,x' },
+    lendLocs: ['FOLIO', 'FOLIOSCORE', 'JUV ', 'JUVFOLIO', 'LESIURE', 'MAIN', 'MUSIC_CDS', 'OVERSIZE', 'SCORES', 'VIDEOS']
+  },
   'US-PYC': {
     name: 'York',
     tag: '999',
