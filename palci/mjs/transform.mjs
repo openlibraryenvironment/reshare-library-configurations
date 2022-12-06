@@ -73,6 +73,13 @@ const localFields = {
     subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y', y: '9', u: 'h', n: 'h', v: 'v' },
     lendLocs: ['CURRIC-FIC', 'CURRIC-JUV', 'CURRICULUM', 'DISPLAY', 'FACAUTH', 'MEDIA - AUDIOCASSETTE', 'OVERSIZE', 'STACKS', 'THESIS']
   },
+  'US-PPIPP': {
+    name: 'Point Park',
+    idField: '999c',
+    tag: '952',
+    subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y', y: '9', u: 'h', v: 'v' },
+    lendLocs: ['AUDIOBOOK', 'CHILDRENS', 'MAIN', 'OVERSIZED', 'SAUDIOBOOK', 'SMAIN', 'SOVERSIZED']
+  },
   'US-PGC': {
     name: 'Gettysburg',
     tag: '995',
