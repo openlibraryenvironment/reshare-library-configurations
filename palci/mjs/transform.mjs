@@ -316,6 +316,13 @@ const localFields = {
     subs: { a: 'a,c', b: 'p', c: 'o', d: '2', x: 'y', y: '9', u: 'h', n: 'h', v: 'h' },
     lendLocs: ['HAMMER CURR', 'HAMMER NEWBOOK', 'HAMMER STACKS', 'HAMMER THESIS SPEC']
   },
+  'US-PSCM': {
+    name: 'Marywood',
+    idField: '999c',
+    tag: '952',
+    subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y', y: '9', u: 'h', n: 'h', v: 'h' },
+    lendLocs: ['BIN', 'MARKETPL']
+  },
   'US-PBMW': {
     name: 'Moravian',
     tag: '852',
