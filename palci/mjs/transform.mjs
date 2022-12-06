@@ -256,6 +256,12 @@ const localFields = {
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
     lendLocs: ['Fairchild - 5th Floor - North', 'Fairchild - 6th Floor - North - Media Collection', 'Fairchild - 6th Floor - North', 'Fairchild - 7th Floor - North', 'LMC-B', 'LMC-G', 'Linderman 1st Floor - Reading Room - Faculty Authors', 'Linderman 1st Floor - Reading Room - Juvenile Collection', 'Linderman 1st Floor - Reading Room - New Books', 'Linderman 1st Floor - Reading Room - Reading Room Collection', 'Linderman 1st Floor - Rotunda', 'Linderman 2nd Floor - Rotunda', 'Linderman 3rd Floor - Rotunda', 'Linderman 3rd Floor - Stacks', 'Linderman 4th Floor - Stacks', 'Linderman Ground Floor - Lower Level', 'Linderman Ground Floor - Upper Level', 'Lucy\'s Cafe - Linderman Ground Level Rotunda']
   }, 
+  'US-PWW': {
+    name: 'Washington and Jefferson',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
+    lendLocs: ['IRC', 'Music', 'Oversize', 'Plays', 'Reference', 'Stacks', 'Video']
+  }, 
   'US-PPLAS': {
     name: 'La Salle',
     idField: '907a',
