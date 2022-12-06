@@ -177,8 +177,15 @@ const localFields = {
   'US-NNU': {
     name: 'NYU',
     tag: '930',
-    subs: { a: 's', b: 'b', c: 'c', d: 't', x: 't', n: 'd', u: 'd', v: 'd', w: 'd' },
+    subs: { a: 's', b: 'b', c: 'c', d: 't', x: 'm', n: 'd', u: 'd', v: 'd', w: 'd' },
     lendLocs: ['BOBSTEZB', 'NCOUREZB', 'OSCOREZB', 'OSNYUEZB']
+  },
+  'US-NNNS': {
+    name: 'New School',
+    tag: '930',
+    subs: { a: 's', b: 'b', c: 'c', d: 't', x: 'm', n: 'd', u: 'd', v: 'd', w: 'd' },
+    lendLocs: ['TNSFOEZB', 'TNSGIEZB', 'TNSOSEZB', 'TNSSCEZB'],
+    lendItypes: ['BOOK', 'SCORE']
   },
   'US-PSC': {
     name: 'Swarthmore',
