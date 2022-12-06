@@ -195,6 +195,14 @@ const localFields = {
     subs: { a: 'b,c', b: '876p', c: 'h,i', n: '3', v: '3' },
     lendLocs: ['LFMC Flat Oversize Collection', 'LFMC General Collection', 'LFMC Oversize Collection', 'LFMM Flat Oversize Collection', 'LFMM General Collection', 'LFMM Oversize Collection']
   },
+  'US-NJSOOS': {
+    name: 'Seton Hall',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    subs: { a: 'b,c', b: '876p', c: 'h,i', n: '3', v: '3' },
+    lendLocs: ['STHM Asian Collection', 'STHM Chinese Corner (2nd floor)', 'STHM Circulation Desk CDs', 'STHM Circulation Desk DVD/Video', 'STHM Curriculum Library', 'STHM Main Collection Oversize Plus', 'STHM Main Collection Oversize', 'STHM Main Collection', 'STHM New Books', 'STHM Valente Library Oversize', 'STHM Valente Library']
+  },
   'US-PERG': {
     name: 'Gannon',
     tag: '999',
