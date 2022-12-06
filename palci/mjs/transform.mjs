@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-P': {
+    name: 'State Library of Pennsylvania',
+    tag: '995',
+    subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g', w: 'd', k: 'gg' },
+    lendLocs: ['sldocspa', 'sldocsus', 'slmain', 'slmainovr', 'slstkover', 'slstkrovr', 'slstks']
+  },
   'US-PU': {
     name: 'University of Pennsylvania',
     tag: '995',
