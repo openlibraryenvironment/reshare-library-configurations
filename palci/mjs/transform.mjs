@@ -10,6 +10,13 @@ const localFields = {
     subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g', w: 'd', k: 'gg' },
     lendLocs: ['sldocspa', 'sldocsus', 'slmain', 'slmainovr', 'slstkover', 'slstkrovr', 'slstks']
   },
+  'US-PPPM': {
+    name: 'Philadelphia Museum Art',
+    tag: 'Z30',
+    subs: { a: '2', b: '5', c: 'h', x: 'm', y: 'u' },
+    lendLocs: ['MAIN', 'MAINO'],
+    lendItypes: ['BOOK', 'MONO']
+  },
   'US-PU': {
     name: 'University of Pennsylvania',
     tag: '995',
