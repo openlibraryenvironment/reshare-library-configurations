@@ -260,7 +260,13 @@ const localFields = {
     linkSubs: ['8', '9'],
     subs: { a: 'b,c', c: 'h,i', b: '876p' },
     lendLocs: ['MORA Bookstacks']
-  }
+  },
+  'US-PPCO': {
+    name: 'PCOM',
+    tag: '852',
+    subs: { a: 'b', c: 'h' },
+    lendLocs: ['BOOK', 'GA-BOOK', 'STORAGE']
+  },
 };
 
 function getSubs(field) {
