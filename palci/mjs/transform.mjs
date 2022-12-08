@@ -127,8 +127,15 @@ const localFields = {
     name: 'Scranton',
     idField: '907a',
     tag: '945',
-    subs: { a: 'l', b: 'i', c: '%050|%090', x: 't', y: 'y', v: 'c' },
+    subs: { a: 'l', b: 'i', c: '%050|%090|%086|%082|%070', x: 't', y: 'y', v: 'c' },
     lendLocs: ['mcmr', 'mcc', 'mcos']
+  },
+  'US-WVHUM': {
+    name: 'Marshall',
+    idField: '907a',
+    tag: '945',
+    subs: { a: 'l', b: 'i', c: '%050|%090', x: 't', y: 'y', v: 'c' },
+    lendLocs: ['drapp', 'drcd', 'drg', 'drgn', 'drj', 'drmfo', 'drmm', 'drmvc', 'drsc', 'gcg', 'gdg', 'mmvc', 'msg', 'scwv']
   },
   'US-PSRS': {
     name: 'Slippery Rock',
