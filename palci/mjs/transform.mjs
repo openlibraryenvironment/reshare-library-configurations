@@ -379,8 +379,10 @@ export function transform(clusterStr) {
     let sid = crec.sourceId;
     let lid = crec.localId;
     let rec = crec.payload.marc;
+    let unknown = false;
     if (!rec.leader) {
       rec.leader = '00000cam a2200229Ia 4500';
+      unknown = true
     }
     let rsize = rec.leader.substring(0, 5);
     if (rsize > preSize) {
@@ -395,7 +397,9 @@ export function transform(clusterStr) {
     let mt = rec.leader.substring(6, 7);
     let bl = rec.leader.substring(7, 8);
     let mtype = '';
-    if (bl.match(/[sb]/)) {
+    if (unknown) {
+      mtype = 'UNK'
+    } else if (bl.match(/[sb]/)) {
       mtype = 'CNR';
     } else if (mt.match(/[at]/)) {
       mtype = 'BKS';
