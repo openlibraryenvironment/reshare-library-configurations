@@ -379,6 +379,9 @@ export function transform(clusterStr) {
     let sid = crec.sourceId;
     let lid = crec.localId;
     let rec = crec.payload.marc;
+    if (!rec.leader) {
+      rec.leader = '00000cam a2200229Ia 4500';
+    }
     let rsize = rec.leader.substring(0, 5);
     if (rsize > preSize) {
       isMainBib = 1;
