@@ -46,7 +46,7 @@ const localFields = {
   'US-MCM': {
     tag: '985',
     subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a' },
-    lendLocs: ['DEW IMPLS', 'DEW OVRSZ', 'DEW STACK', 'ENG BRWS', 'ENG OVRSZ', 'ENG STACK', 'HUM AUDBK', 'HUM BRWS', 'HUM GRNVL', 'HUM OVRSZ', 'HUM STACK', 'HUM TRAVL', 'LSA STACK', 'MUS OVRSZ', 'MUS BRWS', 'MUS STACK', 'RTC BRWS', 'RTC STACK', 'SCI BRWS', 'SCI OVRSZ', 'SCI STACK']
+    lendLocs: ['DEW BRWS', 'DEW IMPLS', 'DEW MEDIA', 'DEW OVRSZ', 'DEW STACK', 'ENG BRWS', 'ENG OVRSZ', 'ENG STACK', 'HUM AUDBK', 'HUM BRWS', 'HUM GRNVL', 'HUM MEDIA', 'HUM OVRSZ', 'HUM STACK', 'HUM TRAVL', 'LSA STACK', 'MUS BRWS', 'MUS MEDIA', 'MUS OVRSZ', 'MUS STACK', 'RTC BRWS', 'RTC STACK', 'SCI BRWS', 'SCI MEDIA', 'SCI OVRSZ', 'SCI STACK']
   },
   'US-MDBJ': {
     tag: '991',
