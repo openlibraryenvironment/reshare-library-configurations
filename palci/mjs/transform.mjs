@@ -1,6 +1,6 @@
 /*
-  Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, g: copy, k: numberOfPieces, n: enumeration, u: chronology,
-  v: volume, w: yearCaption, x: itemMaterialType, y: itemId
+  Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, g: copy, k: numberOfPieces, i: institutionName, 
+  n: enumeration, u: chronology, v: volume, w: yearCaption, x: itemMaterialType, y: itemId
 */
 
 const localFields = {
@@ -35,6 +35,12 @@ const localFields = {
     subs: { a: 'l', b: 'b', c: 'c', x: 't', y: 'a', u: 'h,i', n: 'f,g', v: 'j', k: 'p' },
     lendLocs: ['aldocc', 'aldoclusc', 'aldocnjc', 'aldocusc', 'aldocusfoc', 'alealfoc', 'alealstac', 'aledlabc', 'alefolioc', 'alfolioc', 'aliylcc', 'aliylgcc', 'aljuvc', 'aljuvrc', 'alstackc', 'anstackc', 'cadocusc', 'cafolioc', 'castackc', 'chfolioc', 'chstackc', 'crcareerc', 'crfolioc', 'crstackc', 'dadocc', 'dadocnjc', 'dadocusc', 'dafolioc', 'dastackc', 'dgfolioc', 'dgplaysc', 'dgstackc', 'lsdocc', 'lsdocfoc', 'lsdocnjc', 'lsdocusc', 'lsdocusfoc', 'lsstackc', 'mafolioc', 'mastackc', 'sichinardm', 'sistackm', 'smstackc']
   },
+  'US-PPJ': {
+    name: 'Thomas Jefferson',
+    tag: '995',
+    subs: { a: 'aa', b: 'b', c: 'bb', x: 't', y: 'a', n: 'f,g', v: 'j', k: 'x', w: 'd' },
+    lendLocs: ['1ST_GRAPH', '4TH_STACKS', 'BKSTACKS1', 'BKSTACKS2']
+  }, 
   'US-PBM': {
     name: 'Bryn Mawr',
     tag: '995',
