@@ -292,7 +292,7 @@ const localFields = {
     lendLocs: ['Folio (Main Floor)', 'Juvenile  Fiction', 'Juvenile - Easy', 'Juvenile - Fiction', 'Juvenile Easy', 'Juvenile Fiction', 'Juvenile Nofiction', 'Juvenile Nonfiction', 'Juvenile', 'Kalevitch Collection', 'New Books', 'Oversize (Main Floor)', 'Pedagogy', 'Stacks (Top Floor)']
   },
   'US-PPSJ': {
-    name: 'St. Joeseph\'s',
+    name: 'St. Joeseph\'s University',
     tag: '995',
     subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', n: 'e,w', u: 'f,x' },
     lendLocs: ['Leisure', 'Main', 'bks1', 'bks2', 'bks3', 'campbk', 'cmclit']
