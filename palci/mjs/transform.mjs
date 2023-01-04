@@ -107,7 +107,9 @@ const localFields = {
   'US-NJGBS': {
     name: 'Rowan',
     tag: '995',
-    subs: { a: 'z', b: 's', c: 'f', x: 't', y: 'a', v: 'e' },
+    linkedField: '900',
+    linkSubs: ['ff', '8'],
+    subs: { a: 'z', b: 's', c: '900f', x: 't', y: 'a', v: 'e' },
     lendLocs: ['Child3rdFl', 'Main', 'Wilson']
   },
   'US-PACALPWU': {
