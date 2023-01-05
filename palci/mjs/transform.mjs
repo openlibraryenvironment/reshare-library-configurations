@@ -454,6 +454,9 @@ export function transform(clusterStr) {
     if (sid === 'US-PYC') {
       controlNumber = controlNumber.replace(/.+:/, 'u');
     }
+    if (sid === 'US-PST') {
+      controlNumber = controlNumber.replace(/.+:/, 'a');
+    }
     if (lf && lf.idField) {
       let tag = lf.idField.substring(0, 3);
       let sf = lf.idField.substring(3);
