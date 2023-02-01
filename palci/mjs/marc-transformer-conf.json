@@ -1,5 +1,5 @@
 {
   "id": "marc-transformer",
   "type": "javascript",
-  "url": "https://raw.githubusercontent.com/openlibraryenvironment/reshare-library-configurations/master/palci/mjs/transform.mjs"
+  "url": "https://raw.githubusercontent.com/openlibraryenvironment/reshare-library-configurations/master/trln/mjs/transform.mjs"
 }
