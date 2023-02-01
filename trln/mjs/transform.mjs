@@ -9,7 +9,14 @@ const localFields = {
     tag: '940',
     subs: { a: 'b,c', b: 'p', c: 'h', d: 'd', x: 'r', y: 'k', s: 'n', z: 'z' },
     lendLocs: ['LAW LALUI', 'LAW LCHRI', 'LAW LCOX', 'LAW LEMP', 'LAW LGEN', 'LILLY PL2', 'LILLY PL2F', 'LILLY PL3', 'LILLY PLD', 'LILLY PLI', 'LILLY PLW', 'LILLY PLWF', 'LSC PSB', 'LSC PSBF', 'LSC PSBQ', 'LSC PSD', 'LSC PSDF', 'LSC PSDQ', 'LSC PSDV', 'LSC PSK', 'LSC PSK2', 'LSC PSK6', 'LSC PSKC', 'LSC PSKE', 'LSC PSKEF', 'LSC PSKEQ', 'LSC PSKF', 'LSC PSKJ', 'LSC PSKL', 'LSC PSKL', 'LSC PSKLF', 'LSC PSKN', 'LSC PSKOH', 'LSC PSKQ', 'LSC PSV', 'LSC PSZ', 'MUSIC PM', 'MUSIC PM9', 'MUSIC PMF', 'MUSIC PMF9', 'MUSIC PMMS', 'MUSIC PMMS9', 'MUSIC PMT', 'MUSIC PMTF', 'PERKN PK', 'PERKN PK2', 'PERKN PKE', 'PERKN PKEF', 'PERKN PKF', 'PERKN PKFF', 'PERKN PKQ', 'PERKN PKT']
-  }};
+  },
+  'US-NCRS': {
+    name: 'NC State University',
+    tag: '999',
+    subs: { a: 'b,c', b: 'p', c: 'h', d: 'd', x: 'r', y: 'k', s: 'n', z: 'z' },
+    lendLocs: []
+  }
+};
 
 function getSubs(field) {
   let subs = {};
@@ -102,12 +109,7 @@ export function transform(clusterStr) {
 
     let lf = localFields[sid];
     let controlNumber = lid;
-    if (sid === 'US-PYC') {
-      controlNumber = controlNumber.replace(/.+:/, 'u');
-    }
-    if (sid === 'US-PST') {
-      controlNumber = controlNumber.replace(/.+:/, 'a');
-    }
+    
     if (lf && lf.idField) {
       let tag = lf.idField.substring(0, 3);
       let sf = lf.idField.substring(3);
@@ -118,6 +120,9 @@ export function transform(clusterStr) {
       }
     } else if (recFields['001']) { 
       controlNumber = recFields['001'][0];
+    }
+    if (sid === 'US-NCD') {
+      controlNumber = controlNumber.replace(/^DUKE/, '');
     }
     let f999 = {
       ind1: '1',
