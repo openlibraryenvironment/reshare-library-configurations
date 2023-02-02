@@ -20,8 +20,8 @@ const localFields = {
     name: 'University of North Carolina at Chapel Hill',
     idField: '907a',
     tag: '99991',
-    subs: { a: 'b,c', b: 'p', c: 'h', d: 'd', x: 'r', y: 'i' },
-    lendLocs: []
+    subs: { a: 'l', b: 'b', c: 'q', d: 'p', g: 'c', v: 'v', x: 't', y: 'i' },
+    lendLocs: ['aa', 'aada', 'aadd', 'aaof', 'bb', 'bbdb', 'bbdc', 'bbla', 'dcpf', 'dcpfb', 'dcps', 'dcpw', 'dcpwc', 'ddda ', 'dddb', 'dddc', 'ddof', 'dg', 'dgdaa', 'dgdab', 'dgdac', 'dgdad', 'dgdad', 'dgdae', 'dgdaf', 'dgdda', 'dm', 'dmda', 'dmdb', 'dmdc', 'dq', 'dqda', 'll', 'llda', 'lldac', 'lldb', 'lldc', 'lljd', 'mmda', 'mmdb', 'mmka', 'ssda', 'ssdb', 'ssdc', 'trln', 'troup', 'ua', 'uada', 'ud', 'udba', 'udbb', 'uldaa', 'vada', 'wb', 'wbda', 'ydda', 'yddc', 'ydfa', 'ydra' ]
   },
 };
 
@@ -212,7 +212,6 @@ export function transform(clusterStr) {
               }
             }
             let text = fdata.join(' ');
-            text = text.trim();
             if (c === 'c' && lf.subs.c.match(/^%/)) {
               let cnTags = lf.subs.c.split(/\|/);
               for (let t = 0; t < cnTags.length; t++) {
@@ -220,9 +219,11 @@ export function transform(clusterStr) {
                 text = bibCall[tag];
                 if (text) break;
               }
-            }
+            } 
             if (text) {
               let obj = {};
+              if (c === 'c' && sid === 'US-NCU') text = text.replace(/\|./g, ' ');
+              text = text.trim();
               obj[c] = text;
               outItem['999'].subfields.push(obj);
             }
