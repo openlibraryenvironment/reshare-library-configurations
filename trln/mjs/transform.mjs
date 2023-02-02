@@ -1,19 +1,19 @@
 /*
   Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, g: copy, k: numberOfPieces, i: institutionName, 
-  n: enumeration, s: description, u: chronology, v: volume, w: yearCaption, x: itemMaterialType, y: itemId, z: note
+  n: enumeration, m: description, u: chronology, v: volume, w: yearCaption, x: itemMaterialType, y: itemId, z: note
 */
 
 const localFields = {
   'US-NCD': {
     name: 'Duke University',
     tag: '940',
-    subs: { a: 'b,c', b: 'p', c: 'h', d: 'd', x: 'r', y: 'k', s: 'n', z: 'z' },
+    subs: { a: 'b,c', b: 'p', c: 'h', d: 'd', x: 'r', y: 'k', s: 'm', z: 'z' },
     lendLocs: ['LAW LALUI', 'LAW LCHRI', 'LAW LCOX', 'LAW LEMP', 'LAW LGEN', 'LILLY PL2', 'LILLY PL2F', 'LILLY PL3', 'LILLY PLD', 'LILLY PLI', 'LILLY PLW', 'LILLY PLWF', 'LSC PSB', 'LSC PSBF', 'LSC PSBQ', 'LSC PSD', 'LSC PSDF', 'LSC PSDQ', 'LSC PSDV', 'LSC PSK', 'LSC PSK2', 'LSC PSK6', 'LSC PSKC', 'LSC PSKE', 'LSC PSKEF', 'LSC PSKEQ', 'LSC PSKF', 'LSC PSKJ', 'LSC PSKL', 'LSC PSKL', 'LSC PSKLF', 'LSC PSKN', 'LSC PSKOH', 'LSC PSKQ', 'LSC PSV', 'LSC PSZ', 'MUSIC PM', 'MUSIC PM9', 'MUSIC PMF', 'MUSIC PMF9', 'MUSIC PMMS', 'MUSIC PMMS9', 'MUSIC PMT', 'MUSIC PMTF', 'PERKN PK', 'PERKN PK2', 'PERKN PKE', 'PERKN PKEF', 'PERKN PKF', 'PERKN PKFF', 'PERKN PKQ', 'PERKN PKT']
   },
   'US-NCRS': {
     name: 'NC State University',
     tag: '999',
-    subs: { a: 'm,l', b: 'i', c: 'a', d: 'w', x: 't' },
+    subs: { a: 'm,l', c: 'a', d: 'w', x: 't', y: 'i' },
     lendLocs: ['BOOKBOT CUR-PER', 'BOOKBOT FLOATDVD', 'BOOKBOT HAB-REF', 'BOOKBOT MATH', 'BOOKBOT MEDIA', 'BOOKBOT MFGUIDES', 'BOOKBOT MICROFORMS', 'BOOKBOT NCDOCS-MF', 'BOOKBOT OVERSIZE', 'BOOKBOT OVERSIZE2', 'BOOKBOT REF', 'BOOKBOT REF-USDOCS', 'BOOKBOT SMALLBOOK', 'BOOKBOT STACKS', 'BOOKBOT STCKS-SRL', 'BOOKBOT US-DOCS', 'BOOKBOT US-DOCS-CB', 'BOOKBOT US-DOCS-MF', 'BOOKBOT US-DOCS-MP', 'BOOKBOT US-DOCS-O2', 'BOOKBOT US-DOCS-OV', 'BOOKBOT US-DOCS-PF', 'BOOKBOT US-DOCS-PT', 'DESIGN OVERSIZE', 'DESIGN OVERSIZE2', 'DESIGN SMALLBOOK', 'DESIGN STACKS', 'DHHILL DATASPACE', 'DHHILL DISPLAY', 'DHHILL EXHIBITS', 'DHHILL FACPUBS-RR', 'DHHILL FACPUBS-RR', 'DHHILL FLOATDVD', 'DHHILL INNOSTUD', 'DHHILL JUV-FICT', 'DHHILL MAKERSPACE', 'DHHILL MAPS', 'DHHILL MICROFORMS', 'DHHILL NCDOCS-MF', 'DHHILL NEWBOOK', 'DHHILL OVERSIZE', 'DHHILL OVERSIZE2', 'DHHILL POPREAD', 'DHHILL SMALLBOOK', 'DHHILL STACKS', 'DHHILL STCKS-SRL', 'DHHILL TECCLASSIC', 'DHHILL US-DOCS', 'DHHILL US-DOCS-MF', 'DHHILL US-DOCS-PF', 'DHHILL US-DOCS-PT', 'HUNT DATASPACE', 'HUNT FACPUBS-RR', 'HUNT FLOATDVD', 'HUNT OVERSIZE', 'HUNT SCI-BEST', 'HUNT STACKS', 'HUNT TECCLASSIC', 'LRL GRAPH-NOV', 'LRL INFOTEXT', 'LRL JUV-FICT', 'LRL STACKS', 'LRL YA-FICT', 'NRL STACKS', 'VETMED OVERSIZE', 'VETMED STACKS']
   }
 };
