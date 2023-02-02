@@ -23,6 +23,13 @@ const localFields = {
     subs: { a: 'l', b: 'b', c: 'q', d: 'p', g: 'c', v: 'v', x: 't', y: 'i' },
     lendLocs: ['aa', 'aada', 'aadd', 'aaof', 'bb', 'bbdb', 'bbdc', 'bbla', 'dcpf', 'dcpfb', 'dcps', 'dcpw', 'dcpwc', 'ddda ', 'dddb', 'dddc', 'ddof', 'dg', 'dgdaa', 'dgdab', 'dgdac', 'dgdad', 'dgdad', 'dgdae', 'dgdaf', 'dgdda', 'dm', 'dmda', 'dmdb', 'dmdc', 'dq', 'dqda', 'll', 'llda', 'lldac', 'lldb', 'lldc', 'lljd', 'mmda', 'mmdb', 'mmka', 'ssda', 'ssdb', 'ssdc', 'trln', 'troup', 'ua', 'uada', 'ud', 'udba', 'udbb', 'uldaa', 'vada', 'wb', 'wbda', 'ydda', 'yddc', 'ydfa', 'ydra' ]
   },
+  'US-NCDURC' : {
+    name: 'North Carolina Central University ',
+    tag: '999',
+    subs: { a: 'm,l', c: 'a', d: 'w', g: 'j', v: 's', x: 't', y: 'i' },
+    lendLocs: ['CMC STACKS', 'MUSIC STACKS', 'SHEPARD STACKS', 'SLIS STACKS'],
+    lendItypes: ['BOOK', 'DVD']
+  }
 };
 
 function getSubs(field) {
