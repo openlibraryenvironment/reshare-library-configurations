@@ -185,9 +185,10 @@ const localFields = {
   },
   'US-PV': {
     name: 'Villanova',
-    tag: '852',
-    subs: { a: 'b', c: 'h,i' },
-    lendLocs: ['MAIN']
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'f,e,g', d: 'h', n: 'k', u: 'l', v: 'j', x: 'i', w: 'l' },
+    lendLocs: ['Acquisitions', 'Astronomy Department - 3rd Floor Mendel - Non-Circulating', 'Augustinian Historical Institute', 'CASA', 'Cataloging Department', 'Colege of Nursing Special Collections', 'College of Nursing Learning Resource Center', 'Current Periodicals', 'DVD Collection - Falvey West', 'Dundale - On Exhibit', 'Falvey Circulation', 'Falvey West - Restricted Access', 'Health Promotion', 'Law Library Remote Storage', 'Main Stacks', 'Michaela Walsh Collection', 'Microform Cabinets', 'Microform Collection', 'Nursing Video Collection', 'OBSOLETE', 'Periodicals Remote Storage', 'ReShare', 'Reserve Closed Shelves', 'Spec Coll Art Curiosa', 'Spec Coll Aug His Inst', 'Spec Coll Augustiniana', 'Spec Coll Autographed Bks', 'Spec Coll Distinguished', 'Spec Coll Early Amer.Impr', 'Spec Coll Early Eur.Impr.', 'Spec Coll Fine Bindings', 'Spec Coll First Editions', 'Spec Coll Hubbard', 'Spec Coll Incunabula', 'Spec Coll James Wheeler', 'Spec Coll Lewis Becker', 'Spec Coll Limited Edition', 'Spec Coll Manuscripts', 'Spec Coll McGarrity', 'Spec Coll Mendel', 'Spec Coll Moulden', 'Spec Coll Nursing', 'Spec Coll Shelley', 'Spec Coll Smith Maps', 'Spec Coll Tucker', 'Spec Coll VU Manuscripts', 'Spec Coll Villanova', 'Spec Coll Worthington', 'Spec University Archives', 'Test', 'Unmapped', 'VITAL Library', 'World Wide Web'],
+    lendItypes: ['Book']
   },
   'US-PESS': {
     name: 'East Stroudsburg',
