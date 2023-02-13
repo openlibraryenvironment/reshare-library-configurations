@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-PWBK': {
+    name: 'King\s College',
+    tag: '952',
+    subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y' },
+    lendLocs: ['COURT', 'DISPLAY', 'FIRST ', 'SECOND']
+  },
   'US-P': {
     name: 'State Library of Pennsylvania',
     tag: '995',
