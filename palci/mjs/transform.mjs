@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-NNCOO': {
+    name: 'The Cooper Union',
+    tag: '930',
+    subs: { a: 's', b: 'b', c: 'c', d: 't', x: 'm', v: 'd', n: 'd', u: 'd', w: 'd' },
+    lendLocs: ['CU', 'CUEZB', 'CUOS', 'CUOSEZB']
+  },
   'US-NJUPM': {
     name: 'Montclair State University',
     tag: '852',
