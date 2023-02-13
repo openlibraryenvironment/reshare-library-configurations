@@ -4,8 +4,16 @@
 */
 
 const localFields = {
+  'US-NJUPM': {
+    name: 'Montclair State University',
+    tag: '852',
+    linkedField: '876', 
+    linkSubs: ['8', '9'],
+    subs: { a: 'c', b: '876p', c: 'h,i', d: '2', x: 'y', y: '8' },
+    lendLocs: ['2nd Floor', 'Government Documents', 'Juvenile Collection - 1st Floor', 'Lower Level', 'Multimedia Dept.', 'Oversize - Lower Level']
+  },
   'US-PWBK': {
-    name: 'King\s College',
+    name: 'King\'s College',
     tag: '952',
     subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y' },
     lendLocs: ['COURT', 'DISPLAY', 'FIRST ', 'SECOND']
