@@ -7,6 +7,13 @@
 */
 
 const localFields = {
+  'US-NBP': {
+    name: 'Pratt Institute',
+    tag: '945',
+    idField: '907a',
+    subs: { a: 'l', b: 'i', c: 'a', v: 'c', x: 't', y: 'y' },
+    lendLocs: ['pb0od', 'pbbcf', 'pbbcn', 'pbbco', 'pbbfc', 'pbbgn', 'pbbsk', 'pbbso', 'pm0od', 'pmbfc', 'pmbsk', 'pmbso', 'psfav']
+  },
   'US-NRRI': {
     name: 'RIT',
     tag: '945',
