@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-NPKMC': {
+    name: 'Marist College',
+    tag: '995',
+    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', n: 'e,w', u: 'f,x', v: 'e', x: 't', y: 'a' },
+    lendLocs: ['circ', 'graphic_no', 'juvenile', 'oversize', 'remote', 'stacks']
+  },
   'US-NLOUVS': {
     name: 'Siena College',
     tag: '995',
