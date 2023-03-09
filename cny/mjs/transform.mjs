@@ -1,9 +1,18 @@
 /*
   Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, g: copy, k: numberOfPieces, i: institutionName, 
   n: enumeration, m: description, u: chronology, v: volume, w: yearCaption, x: itemMaterialType, y: itemId, z: note
+
+  To get set call number (subfield c) from fields in the bib record, start setting with "%" and separate various fields by "|"
+  (ex: '%050|%090'); 
 */
 
 const localFields = {
+  'US-NPV': {
+    name: 'Vassar College',
+    tag: '945',
+    subs: { a: 'l', b: 'i', c: '%050|%090', y: 'y' },
+    lendLocs: ['annex', 'vxw2', 'vxwa', 'vxwb', 'vxwk', 'vxwm', 'vxwu', 'vxww', 'vxwy']
+  },
   'US-NPKMC': {
     name: 'Marist College',
     tag: '995',
