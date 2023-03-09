@@ -7,6 +7,12 @@
 */
 
 const localFields = {
+  'US-NWWPP': {
+    name: 'USMA West Point',
+    tag: '995',
+    subs: { a: 'z', b: 's', c: 'bb', d: 'j', v: 'g', x: 't', y: 'a' },
+    lendLocs: ['53room', 'circ', 'folio', 'gdocs', 'oversize', 'rr4', 'vcassette', 'vcdmusic', 'vcdrom', 'vdvd', 'vlanguage', 'vmisc', 'vvhs']
+  },
   'US-NPV': {
     name: 'Vassar College',
     tag: '945',
