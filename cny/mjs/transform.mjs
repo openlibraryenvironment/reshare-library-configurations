@@ -7,6 +7,13 @@
 */
 
 const localFields = {
+  'US-NRRI': {
+    name: 'RIT',
+    tag: '945',
+    idField: '907a',
+    subs: { a: 'k', b: 'd', c: 'a,b', v: 'c', y: 'p' },
+    lendLocs: ['w2fl', 'w3fl', 'w4fl', 'whuge', 'wmedi', 'wover', 'wstob', 'wstod', 'wstom']
+  },
   'US-NWWPP': {
     name: 'USMA West Point',
     tag: '995',
