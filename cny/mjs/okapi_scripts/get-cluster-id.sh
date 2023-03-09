@@ -14,4 +14,4 @@ fi
 
 URL="${OKAPI}/reservoir/clusters/${ID}"
 
-curl -v --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}"
+curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}"
