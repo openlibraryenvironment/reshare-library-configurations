@@ -8,7 +8,14 @@ const localFields = {
     name: 'Adelphi',
     tag: '995',
     subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a' },
-    lendLocs: ['clevel~BOOK', 'dvd', 'haup dvd', 'haup main', 'main', 'mh dvd', 'mh main', 'mh vhs', 'microforms'],
+    lendLocs: ['clevel', 'dvd', 'haup dvd', 'haup main', 'main', 'mh dvd', 'mh main', 'mh vhs', 'microforms'],
+    lendFunc: (loc, itype) => {
+      let pol = null;
+      if (loc === 'clevel') {
+        pol = (itype === 'BOOK') ? 'LOANABLE' : 'UNLOANABLE';
+      }
+      return pol
+    }
   }
 };
 
@@ -169,7 +176,6 @@ export function transform(clusterStr) {
           let subData = getSubs(item);
           let location = '';
           let itype = '';
-          let matLimit = '';
           for (let c in lf.subs) {
             if (lf.linkSubs && lf.linkSubs[0] && lf.subs[c].match(/^\w{3}/)) {
               let lsf = lf.subs[c].substring(3);
@@ -218,7 +224,6 @@ export function transform(clusterStr) {
               itype = text;
             }
           }
-          console.log(location);
         
           let policy = '';
           if (lf.lendLocs && lf.lendItypes) {
@@ -231,7 +236,7 @@ export function transform(clusterStr) {
             policy = 'UNLOANABLE';
           }
           if (lf.lendFunc) {
-            policy = lf.lendFunc(recFields, outItem['999']) || policy;
+            policy = lf.lendFunc(location, itype) || policy;
           }
           outItem['999'].subfields.push({ p: policy });
           outItems.push(outItem);
