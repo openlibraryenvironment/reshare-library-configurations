@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-NLOUVS': {
+    name: 'Siena College',
+    tag: '995',
+    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', n: 'e,w', u: 'f,x', v: 'e', x: 't', y: 'a' },
+    lendLocs: ['1stfl', '2ndfl', 'audio', 'avcol', 'lowle', 'over']
+  },
   'US-NGCA': {
     name: 'Adelphi',
     tag: '995',
