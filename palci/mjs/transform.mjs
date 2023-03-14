@@ -89,7 +89,7 @@ const localFields = {
     name: 'Temple',
     tag: 'ITM',
     subs: { a: 'n,m', b: 'b', c: 'q', d: 'd', x: 'd', y: 'x', u: 'h,i', n: 'f,g', v: 'j' },
-    lendLocs: ['AMBLER stacks', 'ASRS asrs', 'KARDON p_GovDocs', 'KARDON p_remote', 'MAIN hirsch', 'MAIN juvenile', 'MAIN stacks'],
+    lendLocs: ['AMBLER stacks', 'ASRS ASRS', 'KARDON p_GovDocs', 'KARDON p_remote', 'MAIN hirsch', 'MAIN juvenile', 'MAIN stacks'],
     notLendItypes: ['2', '3', '23']
   },
   'US-PAGLAUL': {
