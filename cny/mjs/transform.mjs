@@ -7,6 +7,14 @@
 */
 
 const localFields = {
+  'US-NNPC': {
+    name: 'Pace',
+    tag: '852',
+    subs: { a: 'b,c', b: '876p', c: 'h,i', n: '8763', y: '8' },
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    lendLocs: ['VZL Stacks', 'VZUA Juvenile Collection', 'VZUA New Book Display', 'VZUA On Display', 'VZUA Oversize', 'VZUA Stacks', 'VZUA Videos/DVDs', 'VZUB Curriculum Center', 'VZUB New Book Display', 'VZUB On Display', 'VZUB Oversize', 'VZUB Stacks', 'VZUB Videos/DVDs']
+  },
   'US-NTR': {
     name: 'RPI',
     tag: '852',
