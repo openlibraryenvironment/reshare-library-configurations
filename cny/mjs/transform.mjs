@@ -7,6 +7,21 @@
 */
 
 const localFields = {
+  'US-NANB': {
+    name: 'Bard College',
+    tag: '945',
+    idField: '907a',
+    subs: { a: 'l', b: 'i', c: '%050|%090', v: 'c', x: 't', y: 'y' },
+    lendLocs: ['main'],
+    lendItypes: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '18']
+  },
+  'US-NSYL': {
+    name: 'Le Moyne College',
+    tag: '945',
+    idField: '907a',
+    subs: { a: 'l', b: 'i', c: 'a,b', v: 'c', x: 't', y: 'y' },
+    lendLocs: ['lbks', 'lbkso', 'lmcod', 'lmvc', 'ltm', 'ltmyl']
+  },
   'US-NNPC': {
     name: 'Pace',
     tag: '852',
