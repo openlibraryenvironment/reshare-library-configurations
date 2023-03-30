@@ -21,7 +21,7 @@ const localFields = {
     idField: '907a',
     tag: '99991',
     subs: { a: 'l', b: 'b', c: 'q', d: 'p', g: 'c', v: 'v', x: 't', y: 'i' },
-    lendLocs: ['aa', 'aada', 'aadd', 'aaof', 'bb', 'bbdb', 'bbdc', 'bbla', 'dcpf', 'dcpfb', 'dcps', 'dcpw', 'dcpwc', 'ddda ', 'dddb', 'dddc', 'ddof', 'dg', 'dgdaa', 'dgdab', 'dgdac', 'dgdad', 'dgdad', 'dgdae', 'dgdaf', 'dgdda', 'dm', 'dmda', 'dmdb', 'dmdc', 'dq', 'dqda', 'll', 'llda', 'lldac', 'lldb', 'lldc', 'lljd', 'mmda', 'mmdb', 'mmka', 'ssda', 'ssdb', 'ssdc', 'trln', 'troup', 'ua', 'uada', 'ud', 'udba', 'udbb', 'uldaa', 'vada', 'wb', 'wbda', 'ydda', 'yddc', 'ydfa', 'ydra' ]
+    lendLocs: ['aa', 'aada', 'aadd', 'aaof', 'bb', 'bbdb', 'bbdc', 'bbla', 'dcpf', 'dcpfb', 'dcps', 'dcpw', 'dcpwc', 'ddda', 'dddb', 'dddc', 'ddof', 'dg', 'dgdaa', 'dgdab', 'dgdac', 'dgdad', 'dgdad', 'dgdae', 'dgdaf', 'dgdda', 'dm', 'dmda', 'dmdb', 'dmdc', 'dq', 'dqda', 'll', 'llda', 'lldac', 'lldb', 'lldc', 'lljd', 'mmda', 'mmdb', 'mmka', 'ssda', 'ssdb', 'ssdc', 'trln', 'troup', 'ua', 'uada', 'ud', 'udba', 'udbb', 'uldaa', 'vada', 'wb', 'wbda', 'ydda', 'yddc', 'ydfa', 'ydra' ]
   },
   'US-NCDURC' : {
     name: 'North Carolina Central University ',
