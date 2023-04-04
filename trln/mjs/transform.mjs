@@ -135,9 +135,8 @@ export function transform(clusterStr) {
     } else if (recFields['001']) { 
       controlNumber = recFields['001'][0];
     }
-    if (sid === 'US-NCD') {
-      controlNumber = controlNumber.replace(/^DUKE/, '');
-    }
+    if (sid === 'US-NCD') controlNumber = controlNumber.replace(/^DUKE/, '');
+    if (sid === 'US-NCDURC') controlNumber = controlNumber.replace(/^u/, '');
     let f999 = {
       ind1: '1',
       ind2: '0',
