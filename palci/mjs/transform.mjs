@@ -318,7 +318,7 @@ const localFields = {
     linkedField: '876',
     linkSubs: ['8', '9'],
     subs: { a: 'c', c: 'h,i', b: '876p' },
-    lendLocs: ['Folio (Main Floor)', 'Juvenile  Fiction', 'Juvenile - Easy', 'Juvenile - Fiction', 'Juvenile Easy', 'Juvenile Fiction', 'Juvenile Nofiction', 'Juvenile Nonfiction', 'Juvenile', 'Kalevitch Collection', 'New Books', 'Oversize (Main Floor)', 'Pedagogy', 'Stacks (Top Floor)']
+    lendLocs: ['Folio (Main Floor)', 'Kalevitch Collection', 'New Books', 'Oversize (Main Floor)', 'Pedagogy', 'Stacks (Top Floor)']
   },
   'US-PPSJ': {
     name: 'St. Joseph\'s University',
