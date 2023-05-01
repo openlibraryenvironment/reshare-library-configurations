@@ -296,7 +296,7 @@ const localFields = {
     name: 'Washington and Jefferson',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
-    lendLocs: ['IRC', 'Music', 'Oversize', 'Plays', 'Reference', 'Stacks', 'Video']
+    lendLocs: ['IRC', 'Music', 'Oversize', 'Plays', 'Reference', 'Stacks', 'Video', 'MUSIC', 'OVERSIZE', 'PLAYS', 'REFERENCE', 'STACKS', 'VIDEO']
   }, 
   'US-PPLAS': {
     name: 'La Salle',
