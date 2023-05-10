@@ -213,7 +213,6 @@ export function transform(clusterStr) {
             let fdata = [];
             for (let x = 0; x < codes.length; x++) {
               let cps = codes[x].split(/\|/);
-              console.log(cps);
               for (let y = 0; y < cps.length; y++) {
                 let code = cps[y];
                 if (subData[code]) {
