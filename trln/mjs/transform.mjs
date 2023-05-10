@@ -13,7 +13,7 @@ const localFields = {
   'US-NCRS': {
     name: 'NC State University',
     tag: '999',
-    subs: { a: 'm,l', b: 'i', c: 'a', d: 'w', x: 't' },
+    subs: { a: 'm,k|l', b: 'i', c: 'a', d: 'w', x: 't' },
     lendLocs: ['BOOKBOT CUR-PER', 'BOOKBOT FLOATDVD', 'BOOKBOT HAB-REF', 'BOOKBOT MATH', 'BOOKBOT MEDIA', 'BOOKBOT MFGUIDES', 'BOOKBOT MICROFORMS', 'BOOKBOT NCDOCS-MF', 'BOOKBOT OVERSIZE', 'BOOKBOT OVERSIZE2', 'BOOKBOT REF', 'BOOKBOT REF-USDOCS', 'BOOKBOT SMALLBOOK', 'BOOKBOT STACKS', 'BOOKBOT STCKS-SRL', 'BOOKBOT US-DOCS', 'BOOKBOT US-DOCS-CB', 'BOOKBOT US-DOCS-MF', 'BOOKBOT US-DOCS-MP', 'BOOKBOT US-DOCS-O2', 'BOOKBOT US-DOCS-OV', 'BOOKBOT US-DOCS-PF', 'BOOKBOT US-DOCS-PT', 'DESIGN OVERSIZE', 'DESIGN OVERSIZE2', 'DESIGN SMALLBOOK', 'DESIGN STACKS', 'DHHILL DATASPACE', 'DHHILL DISPLAY', 'DHHILL EXHIBITS', 'DHHILL FACPUBS-RR', 'DHHILL FACPUBS-RR', 'DHHILL FLOATDVD', 'DHHILL INNOSTUD', 'DHHILL JUV-FICT', 'DHHILL MAKERSPACE', 'DHHILL MAPS', 'DHHILL MICROFORMS', 'DHHILL NCDOCS-MF', 'DHHILL NEWBOOK', 'DHHILL OVERSIZE', 'DHHILL OVERSIZE2', 'DHHILL POPREAD', 'DHHILL SMALLBOOK', 'DHHILL STACKS', 'DHHILL STCKS-SRL', 'DHHILL TECCLASSIC', 'DHHILL US-DOCS', 'DHHILL US-DOCS-MF', 'DHHILL US-DOCS-PF', 'DHHILL US-DOCS-PT', 'HUNT DATASPACE', 'HUNT FACPUBS-RR', 'HUNT FLOATDVD', 'HUNT OVERSIZE', 'HUNT SCI-BEST', 'HUNT STACKS', 'HUNT TECCLASSIC', 'LRL GRAPH-NOV', 'LRL INFOTEXT', 'LRL JUV-FICT', 'LRL STACKS', 'LRL YA-FICT', 'NRL STACKS', 'VETMED OVERSIZE', 'VETMED STACKS'],
     lendItypes: ['AUD-CD', 'BOOK', 'BOOK-2WK', 'CD-ROM', 'DISSERTN', 'FLOATBOOK', 'MICROFICHE', 'MICROFILM', 'SOFTWARE', 'SRLCIRC', 'THESIS', 'VID-DVD']
   },
@@ -212,10 +212,15 @@ export function transform(clusterStr) {
             let codes = lf.subs[c].split(',');
             let fdata = [];
             for (let x = 0; x < codes.length; x++) {
-              let code = codes[x];
-              if (subData[code]) {
-                let res = subData[code].join(' ');
-                fdata.push(res);
+              let cps = codes[x].split(/\|/);
+              console.log(cps);
+              for (let y = 0; y < cps.length; y++) {
+                let code = cps[y];
+                if (subData[code]) {
+                  let res = subData[code].join(' ');
+                  fdata.push(res);
+                  break;
+                }
               }
             }
             let text = fdata.join(' ');
