@@ -20,6 +20,7 @@ const localFields = {
   },
   'US-PWBK': {
     name: 'King\'s College',
+    idField: '999c',
     tag: '952',
     subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y' },
     lendLocs: ['COURT', 'DISPLAY', 'FIRST ', 'SECOND']
