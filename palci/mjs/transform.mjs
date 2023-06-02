@@ -299,6 +299,12 @@ const localFields = {
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
     lendLocs: ['IRC', 'Music', 'Oversize', 'Plays', 'Reference', 'Stacks', 'Video', 'MUSIC', 'OVERSIZE', 'PLAYS', 'REFERENCE', 'STACKS', 'VIDEO']
   }, 
+  'US-PEL': {
+    name: 'Lafayette',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', x: 'i' },
+    lendLocs: ['Media Browsing', 'Media Storage Room', 'Browsing', 'Folio Upper Level', 'Oversize Upper Level', 'Skillman Upper Level', 'Skillman Main Level', 'Skillman Lower Level', 'Kirby']
+  },
   'US-PPLAS': {
     name: 'La Salle',
     idField: '907a',
