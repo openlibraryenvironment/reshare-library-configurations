@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-PELC': {
+    name: 'Elizabethtown College',
+    tag: '995',
+    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g' },
+    lendLocs: ['display', 'etown', 'fac-dis', 'main', 'med-cd', 'med-dvd', 'new-books', 'score']
+  },
   'US-NNCOO': {
     name: 'The Cooper Union',
     tag: '930',
