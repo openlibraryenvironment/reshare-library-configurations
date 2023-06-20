@@ -29,7 +29,7 @@ const localFields = {
     idField: '999c',
     tag: '952',
     subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y' },
-    lendLocs: ['COURT', 'DISPLAY', 'FIRST ', 'SECOND']
+    lendLocs: ['COURT', 'DISPLAY', 'FIRST', 'SECOND']
   },
   'US-P': {
     name: 'State Library of Pennsylvania',
@@ -129,7 +129,7 @@ const localFields = {
     name: 'Cairn',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'j', x: 'i', v: 'j' },
-    lendLocs: ['Book Display', 'CD Collection', 'DVD Collection', 'EZBorrow', 'Library Storage', 'ML Thesis and Projects', 'Main Stacks 1st Floor ', 'Main Stacks 2nd Floor (Mezz Level)', 'Music Scores', 'Technical Services Deptartment']
+    lendLocs: ['Book Display', 'CD Collection', 'DVD Collection', 'EZBorrow', 'Library Storage', 'ML Thesis and Projects', 'Main Stacks 1st Floor', 'Main Stacks 2nd Floor (Mezz Level)', 'Music Scores', 'Technical Services Deptartment']
   },
   'US-NJGBS': {
     name: 'Rowan',
@@ -343,7 +343,7 @@ const localFields = {
     name: 'Susquehanna',
     tag: '995',
     subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', n: 'e,w', u: 'f,x' },
-    lendLocs: ['FOLIO', 'FOLIOSCORE', 'JUV ', 'JUVFOLIO', 'LESIURE', 'MAIN', 'MUSIC_CDS', 'OVERSIZE', 'SCORES', 'VIDEOS']
+    lendLocs: ['FOLIO', 'FOLIOSCORE', 'JUV', 'JUVFOLIO', 'LESIURE', 'MAIN', 'MUSIC_CDS', 'OVERSIZE', 'SCORES', 'VIDEOS']
   },
   'US-PYC': {
     name: 'York',
