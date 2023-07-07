@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-WVWELW': {
+    name: 'West Liberty University',
+    idField: '999c',
+    tag: '952',
+    subs: { a: 'c', b: 'p', c: 'o', d: '2', k: '3', n: 'h', x: 'y' },
+    lendLocs: ['CHILD', 'FICTION', 'MOVIES', 'MOVIES', 'MUSIC', 'MUSICSCORE', 'REFERENCE', 'SERIALS', 'STACKS', 'THESISDISS', 'YA']
+  },
   'US-PELC': {
     name: 'Elizabethtown College',
     tag: '995',
