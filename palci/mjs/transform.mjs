@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-PLOR': {
+    name: 'Saint Francis University',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    subs: { a: 'c', b: '876p', c: 'h,i', n: '3', v: '3' },
+    lendLocs: ['*DISPLAY SHELF*', '*DVD \[ASK AT CIRCULATION DESK\]*', '*GENERAL \[LOWER LEVEL\]*', '*JUVENILE LITERATURE \[LOWER LEVEL\]*', '*MINI BOOKS \[LOWER LEVEL\]*', '*NEW BOOKS*', '*OVERSIZE \[LOWER LEVEL\]*', '*PERIODICALS*', '*POPULAR READING \[MAIN\]*', '*TEACHER\'S RESOURCE MATERIALS*', '*YOUNG ADULT \[LOWER LEVEL\]*']
+  },
   'US-PCLVU': {
     name: 'Ursinus College',
     tag: '852',

@@ -9,6 +9,8 @@ while (<IN>) {
   next unless /\w/;
   my $val = $_;
   $val =~ s/'/\\'/g;
+  $val =~ s/\[/\\[/g;
+  $val =~ s/\]/\\]/g;
   push @str, "'$val'";
 }
 my $inner = join ', ', sort @str;
