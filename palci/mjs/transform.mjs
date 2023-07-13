@@ -335,7 +335,6 @@ const localFields = {
   },
   'US-PWML': {
     name: 'Lycoming',
-    idField: '039a',
     tag: '949',
     subs: { a: 'h', c: 'a,b', b: 'z' },
     lendLocs: ['LYCA', 'LYCDVD', 'LYCJ', 'LYCL', 'LYCT', 'NEW', 'OVSZ']
