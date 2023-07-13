@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-PCLVU': {
+    name: 'Ursinus College',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    subs: { a: 'c', b: '876p', c: 'h,i', n: '3', v: '3' },
+    lendLocs: ['Berman Books', 'Bestsellers', 'Eilts Collection', 'Faculty Publications', 'Fine Arts Collection', 'Folio Collection', 'Juvenile Literature', 'Main Collection']
+  },
   'US-WVWELW': {
     name: 'West Liberty University',
     idField: '999c',
@@ -507,7 +515,7 @@ export function transform(clusterStr) {
         controlNumber = (subs[sf]) ? subs[sf][0] : '';
       }
     } else if (recFields['001']) { 
-      controlNumber = recFields['001'][0];
+      controlNumber = recFields['001'][0] || '';
     }
     let f999 = {
       ind1: '1',
@@ -536,6 +544,7 @@ export function transform(clusterStr) {
           linkedFields[link] = exField;
         }
       }
+      controlNumber = controlNumber.trim();
       for (let i = 0; i < items.length; i++) {
         let item = items[i];
         let outItem = {
