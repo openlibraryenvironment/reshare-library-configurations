@@ -171,15 +171,14 @@ const localFields = {
   'US-PCARLD': {
     name: 'Dickinson',
     tag: '999',
-    subs: { a: 'l', b: 's', c: 'a', d: 'w', x: 't', y: 'i', v: 'v' },
+    subs: { a: 'l', b: 's', c: 'a', d: 'w', x: 't', v: 'j' },
     lendLocs: ['CIRC_DESK', 'E_ASIAN_RM', 'MUS_SCORES', 'OVERSIZE', 'STACKS', 'STORAGE']
   },
   'US-PPID': {
     name: 'Duquesne',
-    idField: '907a',
-    tag: '945',
-    subs: { a: 'l', b: 'i', c: 'a', x: 't', y: 'y', v: 'c' },
-    lendLocs: ['g', 'g1', 'g1f', 'g1o', 'g2', 'g3', 'g4', 'g5', 'g5cc', 'g5co', 'g5cp', 'g5cs', 'g5mk', 'g5mo', 'g5ms']
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i', n: 'k', u: 'l', v: 'c' },
+    lendLocs: ['Gumberg 1st Floor Compact Shelving Folio', 'Gumberg 1st Floor Compact Shelving Oversize', 'Gumberg 1st Floor Compact Shelving Theses', 'Gumberg 2nd Floor General Collection', 'Gumberg 5th Floor Curriculum Center Big Books', 'Gumberg 5th Floor Curriculum Center Chapter Books', 'Gumberg 5th Floor Curriculum Center Picture Books', 'Gumberg 5th Floor Curriculum Center Stacks']
   },
   'US-PSCU': {
     name: 'Scranton',
