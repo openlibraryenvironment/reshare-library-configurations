@@ -18,7 +18,7 @@ const localFields = {
     linkedField: '876',
     linkSubs: ['8', '9'],
     subs: { a: 'c', b: '876p', c: 'h,i', n: '3', v: '3' },
-    lendLocs: ['*DISPLAY SHELF*', '*DVD \[ASK AT CIRCULATION DESK\]*', '*GENERAL \[LOWER LEVEL\]*', '*JUVENILE LITERATURE \[LOWER LEVEL\]*', '*MINI BOOKS \[LOWER LEVEL\]*', '*NEW BOOKS*', '*OVERSIZE \[LOWER LEVEL\]*', '*PERIODICALS*', '*POPULAR READING \[MAIN\]*', '*TEACHER\'S RESOURCE MATERIALS*', '*YOUNG ADULT \[LOWER LEVEL\]*']
+    lendLocs: ['BIG BOOKS \[Lower Level\]', 'CD \[Ask at Circulation Desk\]', 'CHILDREN\'S LITERATURE OVERSIZE \[Lower Level\]', 'CHILDREN\'S LITERATURE \[Lower Level\]', 'DISPLAY SHELF', 'DVD \[Ask at Circulation Desk\]', 'GENERAL \[Lower Level\]', 'JUVENILE LITERATURE \[Lower Level\]', 'MINI BOOKS \[Lower Level\]', 'NEW BOOKS', 'OVERSIZE \[Lower Level\]', 'PERIODICALS', 'POPULAR READING \[Main\]', 'TEACHER\'S RESOURCE MATERIALS', 'YOUNG ADULT \[Lower Level\]']
   },
   'US-PCLVU': {
     name: 'Ursinus College',
