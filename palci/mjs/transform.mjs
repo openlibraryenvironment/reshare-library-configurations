@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-PLEB': {
+    name: 'Bucknell University',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    subs: { a: 'b', b: '876p', c: 'h,i', n: '3', v: '3' },
+    lendLocs: ['PBUB']
+  },
   'US-PLOR': {
     name: 'Saint Francis University',
     tag: '852',
@@ -177,7 +185,7 @@ const localFields = {
   'US-PPID': {
     name: 'Duquesne',
     tag: '952',
-    subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i', n: 'k', u: 'l', v: 'c' },
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i', n: 'k', u: 'l', v: 'j' },
     lendLocs: ['Gumberg 1st Floor Compact Shelving Folio', 'Gumberg 1st Floor Compact Shelving Oversize', 'Gumberg 1st Floor Compact Shelving Theses', 'Gumberg 2nd Floor General Collection', 'Gumberg 5th Floor Curriculum Center Big Books', 'Gumberg 5th Floor Curriculum Center Chapter Books', 'Gumberg 5th Floor Curriculum Center Picture Books', 'Gumberg 5th Floor Curriculum Center Stacks']
   },
   'US-PSCU': {
