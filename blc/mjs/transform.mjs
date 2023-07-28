@@ -26,7 +26,7 @@ export function showSettings() {
   return (localFields);
 }
 
-export function transform(clusterStr) {
+export function cluster_transform(clusterStr) {
   let now = new Date().toISOString();
   now = now.replace(/^(\d{4})-(\d\d)-(\d\d).*/, '$1$2$3000000.0')
   const f005 = now;
