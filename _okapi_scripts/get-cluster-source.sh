@@ -14,4 +14,4 @@ fi
 
 URL="${OKAPI}/reservoir/clusters?matchkeyid=goldrush&query=sourceId==${SRCID}"
 
-curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}"
+curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" | jq .
