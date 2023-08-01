@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-PDALCM': {
+    name: 'Misericordia',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    subs: { a: 'c', b: '876p', c: 'h,i' },
+    lendLocs: ['AV Center - 1st Floor', 'AV Center - 2nd Floor', 'Children\'s Lit. Book', 'Children\'s Lit. DVD', 'On Shelf']
+  },
   'US-PLEB': {
     name: 'Bucknell University',
     tag: '852',
