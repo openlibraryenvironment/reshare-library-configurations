@@ -9,7 +9,7 @@ const localFields = {
     tag: '852',
     linkedField: '876',
     linkSubs: ['8', '9'],
-    subs: { a: 'c', b: '876p', c: 'h,i',  n: '3', v: '3' },
+    subs: { a: 'c', b: '876p', c: 'h,i',  n: '3', v: '3', x: 't' },
     lendLocs: ['AV Center - 1st Floor', 'AV Center - 2nd Floor', 'Children\'s Lit. Book', 'Children\'s Lit. DVD', 'On Shelf']
   },
   'US-PLEB': {
