@@ -11,5 +11,5 @@ if [ -z $EP ]
     exit
 fi
 
-curl -v -w '\n' -X PUT --http1.1 "${OKAPI}/${EP}" -H 'content-type: application/json' -H "x-okapi-token: ${TOKEN}" -d ""
+curl -w '\n' -X PUT --http1.1 "${OKAPI}/${EP}" -H 'content-type: application/json' -H "x-okapi-token: ${TOKEN}" -d ""
 
