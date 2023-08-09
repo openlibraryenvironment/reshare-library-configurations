@@ -7,7 +7,7 @@ const localFields = {
   'US-MMET': {
     name: 'Tufts University',
     tag: '954',
-    subs: { a: 'q', b: '876p', c: 't', d: 'v', x: 'c', y: 'b' },
+    subs: { a: 'r', b: '876p', c: 't', d: 'v', x: 'c', y: 'b' },
     lendLocs: ['GINNS', 'HIRSHBUS', 'HIRSHGMED', 'HIRSHHIST', 'HIRSHI', 'HIRSHRM', 'HIRSHSO', 'HIRSHSTO', 'HIRSHSW', 'MUSICNB', 'MUSICS', 'MUSICSF', 'MUSICSO', 'SMFADISP', 'SMFANB', 'SMFAOD', 'SMFAS', 'SMFASH', 'SMFASO', 'TISCHDIS', 'TISCHLR', 'TISCHNEW', 'TISCHS', 'TISCHSF', 'TISCHSH', 'TISCHSO']
   }
 };
