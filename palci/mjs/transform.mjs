@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-TEST-P': {
+    name: 'Test Institution',
+    tag: '852',
+    subs: { a: 'c', b: 'p' },
+    lendLocs: ['Stacks']
+  },
   'US-PDALCM': {
     name: 'Misericordia',
     tag: '852',
