@@ -9,6 +9,14 @@ const localFields = {
     tag: '954',
     subs: { a: 'r', b: '876p', c: 't', d: 'v', x: 'c', y: 'b' },
     lendLocs: ['GINNS', 'HIRSHBUS', 'HIRSHGMED', 'HIRSHHIST', 'HIRSHI', 'HIRSHRM', 'HIRSHSO', 'HIRSHSTO', 'HIRSHSW', 'MUSICNB', 'MUSICS', 'MUSICSF', 'MUSICSO', 'SMFADISP', 'SMFANB', 'SMFAOD', 'SMFAS', 'SMFASH', 'SMFASO', 'TISCHDIS', 'TISCHLR', 'TISCHNEW', 'TISCHS', 'TISCHSF', 'TISCHSH', 'TISCHSO']
+  },
+  'US-MAWCMUM': {
+    name: 'UMass Chan Medical School',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: [ '8', '9' ],
+    subs: { a: 'c', b: '876p', c: 'h,i', y: '8' },
+    lendLocs: ['Book Collection', 'Consumer Health', 'Diversity and Equal Opportunity Collection', 'GSBS Career and Professional Development', 'Graphic Medicine Book Collection', 'History of Medicine & Health Care Collection', 'Humanities in Medicine', 'Over Size \[Book Collection\]', 'Professional Employee Collection', 'Retirement', 'UMass Chan Authors Collection']
   }
 };
 
