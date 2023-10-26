@@ -104,12 +104,15 @@ export function cluster_transform(clusterStr) {
 
     let lf = localFields[sid];
     let controlNumber = lid;
-    if (sid === 'US-PYC') {
+
+    /* control number updates (uncomment if needed)
+
+    if (sid === 'US-ISILCODE') {
       controlNumber = controlNumber.replace(/.+:/, 'u');
     }
-    if (sid === 'US-PST') {
-      controlNumber = controlNumber.replace(/.+:/, 'a');
-    }
+
+    */
+
     if (lf && lf.idField) {
       let tag = lf.idField.substring(0, 3);
       let sf = lf.idField.substring(3);
@@ -120,9 +123,6 @@ export function cluster_transform(clusterStr) {
       }
     } else if (recFields['001']) { 
       controlNumber = recFields['001'][0] || '';
-    }
-    if (sid === 'US-PPLAS') {
-      controlNumber = controlNumber.replace(/.$/, '');
     }
     let f999 = {
       ind1: '1',
