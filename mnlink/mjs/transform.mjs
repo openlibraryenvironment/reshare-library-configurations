@@ -4,9 +4,16 @@
 */
 
 const localFields = {
+  'US-MNTNR': {
+    name: 'Northwest Regional Library',
+    ils: 'Evergreen',
+    tag: '852',
+    subs: { a: 'b,c', c: 'j', b: 'p', v: 'v', x: 'g', y: 'p' },
+    lendLocs: ['GODEL Main', 'GREENBUSH Main', 'HALLOCK Main', 'RED_LAKE_FALLS Main', 'ROSEAU Main', 'THIEF_RIVER_FALLS Main', 'WARROAD Main', 'ZLINK_GRYGLA Main', 'ZLINK_KARLSTAD Main', 'ZLINK_MIDDLE_RIVER Main']
+  },
   'US-MNMOHL': {
     name: 'Lake Agassiz Regional Library',
-    desc: 'Evergreen',
+    ils: 'Evergreen',
     tag: '852',
     subs: { a: 'b,c', c: 'j', b: 'p', v: 'v', x: 'g', y: 'p' },
     lendLocs: ['ADA Main', 'ADA New', 'BAGLEY Main', 'BAGLEY New', 'BARNESVILLE Main', 'BARNESVILLE New', 'BRECKENRIDGE Main', 'BRECKENRIDGE New', 'CLIMAX Main', 'CLIMAX New', 'CROOKSTON Main', 'CROOKSTON New', 'DETROIT_LAKES Main', 'DETROIT_LAKES New', 'FERTILE Main', 'FERTILE New', 'FOSSTON Main', 'FOSSTON New', 'HAWLEY Main', 'HAWLEY New', 'MAHNOMEN Main', 'MAHNOMEN New', 'MCINTOSH Main', 'MCINTOSH New', 'MOORHEAD Main', 'MOORHEAD New', 'ZLINK_CORMORANT Main', 'ZLINK_CORMORANT New', 'ZLINK_FRAZEE Main', 'ZLINK_FRAZEE New', 'ZLINK_GONVICK Main', 'ZLINK_GONVICK New', 'ZLINK_HALSTAD Main', 'ZLINK_HALSTAD New', 'ZLINK_HENDRUM Main', 'ZLINK_HENDRUM New', 'ZLINK_LAKE_PARK Main', 'ZLINK_LAKE_PARK New', 'ZLINK_ROTHSAY Main', 'ZLINK_ROTHSAY New', 'ZLINK_TWIN_VALLEY Main', 'ZLINK_TWIN_VALLEY New', 'ZLINK_ULEN Main', 'ZLINK_ULEN New']
