@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-MNMHCL': {
+    name: 'Hennepin County Library',
+    ils: 'Horizon',
+    tag: '949',
+    subs: { a: 'm,c', c: 'd', d: 'q', b: 'b', v: 'e', x: 't', y: 'n' },
+    lendItypes: ['a10', 'a21', 'a7', 'j21', 'j7']
+  },
   'US-MNWILPLS': {
     name: 'Pioneerland Library System',
     ils: 'III',
@@ -246,6 +253,8 @@ export function cluster_transform(clusterStr) {
           policy = (lf.notLendLocs.indexOf(location) === -1 && lf.notLendItypes.indexOf(itype) === -1) ? 'LOANABLE' : 'UNLOANABLE';
         } else if (lf.notLendLocs) {
           policy = (lf.notLendLocs.indexOf(location) === -1) ? 'LOANABLE' : 'UNLOANABLE';
+        } else if (lf.lendItypes && !lf.lendLocs && !lf.notLendLocs && lf.lendItypes.indexOf(itype) > -1) {
+          policy = 'LOANABLE';
         } else {
           policy = 'UNLOANABLE';
         }
