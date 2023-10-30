@@ -9,7 +9,7 @@ const localFields = {
     ils: 'Horizon',
     tag: '949',
     subs: { a: 'm,c', c: 'd', d: 'q', b: 'b', v: 'e', x: 't', y: 'n' },
-    lendItypes: ['a10', 'a21', 'a7', 'j21', 'j7']
+    lendItypes: { 'a10': 1, 'a21': 1, 'a7': 1, 'j21': 1, 'j7': 1 }
   },
   'US-MNWILPLS': {
     name: 'Pioneerland Library System',
@@ -17,21 +17,21 @@ const localFields = {
     idField: '907a',
     tag: '945',
     subs: { a: 'l', c: '%99', b: 'i', x: 't', y: 'y' },
-    notLendLocs: ['apar', 'apeq', 'apjr', 'apref', 'apres', 'atar', 'ateq', 'atjr', 'atref', 'atres', 'bear', 'beeq', 'bejr', 'beref', 'beres', 'biar', 'bieq', 'bijr', 'biref', 'bires', 'brar', 'breq', 'brjr', 'brref', 'brres', 'caar', 'caeq', 'cajr', 'caref', 'cares', 'ccar', 'cceq', 'ccjr', 'ccref', 'ccres', 'coar', 'coeq', 'cojr', 'coref', 'cores', 'dsar', 'dseq', 'dsjr', 'dsref', 'dsres', 'dwar', 'dweq', 'dwjr', 'dwref', 'dwres', 'fxar', 'fxeq', 'fxjr', 'fxref', 'fxres', 'gcar', 'gceq', 'gcjr', 'gcref', 'gcres', 'gfar', 'gfeq', 'gfjr', 'gfref', 'gfres', 'glar', 'gleq', 'gljr', 'glref', 'glres', 'grar', 'greq', 'grjr', 'grref', 'grres', 'hear', 'heeq', 'hejr', 'heref', 'heres', 'huar', 'hueq', 'hujr', 'huref', 'hures', 'khar', 'kheq', 'khjr', 'khref', 'khres', 'lfar', 'lfeq', 'lfjr', 'lfref', 'lfres', 'llar', 'lleq', 'lljr', 'llref', 'llres', 'mdar', 'mdeq', 'mdjr', 'mdref', 'mdres', 'miar', 'mieq', 'mijr', 'miref', 'mires', 'moar', 'moeq', 'mojr', 'moref', 'mores', 'myar', 'myeq', 'myjr', 'myref', 'myres', 'nlar', 'nleq', 'nljr', 'nlref', 'nlres', 'olar', 'oleq', 'oljr', 'olref', 'olres', 'orar', 'oreq', 'orjr', 'orref', 'orres', 'rear', 'reeq', 'rejr', 'reref', 'reres', 'ryar', 'ryeq', 'ryjr', 'ryref', 'ryres', 'spar', 'speq', 'spjr', 'spref', 'spres', 'wlar', 'wleq', 'wljr', 'wlref', 'wlres', 'wnar', 'wneq', 'wnjr', 'wnref', 'wnres']
+    notLendLocs: { apar: {}, apeq: {}, apjr: {}, apref: {}, apres: {}, atar: {}, ateq: {}, atjr: {}, atref: {}, atres: {}, bear: {}, beeq: {}, bejr: {}, beref: {}, beres: {}, biar: {}, bieq: {}, bijr: {}, biref: {}, bires: {}, brar: {}, breq: {}, brjr: {}, brref: {}, brres: {}, caar: {}, caeq: {}, cajr: {}, caref: {}, cares: {}, ccar: {}, cceq: {}, ccjr: {}, ccref: {}, ccres: {}, coar: {}, coeq: {}, cojr: {}, coref: {}, cores: {}, dsar: {}, dseq: {}, dsjr: {}, dsref: {}, dsres: {}, dwar: {}, dweq: {}, dwjr: {}, dwref: {}, dwres: {}, fxar: {}, fxeq: {}, fxjr: {}, fxref: {}, fxres: {}, gcar: {}, gceq: {}, gcjr: {}, gcref: {}, gcres: {}, gfar: {}, gfeq: {}, gfjr: {}, gfref: {}, gfres: {}, glar: {}, gleq: {}, gljr: {}, glref: {}, glres: {}, grar: {}, greq: {}, grjr: {}, grref: {}, grres: {}, hear: {}, heeq: {}, hejr: {}, heref: {}, heres: {}, huar: {}, hueq: {}, hujr: {}, huref: {}, hures: {}, khar: {}, kheq: {}, khjr: {}, khref: {}, khres: {}, lfar: {}, lfeq: {}, lfjr: {}, lfref: {}, lfres: {}, llar: {}, lleq: {}, lljr: {}, llref: {}, llres: {}, mdar: {}, mdeq: {}, mdjr: {}, mdref: {}, mdres: {}, miar: {}, mieq: {}, mijr: {}, miref: {}, mires: {}, moar: {}, moeq: {}, mojr: {}, moref: {}, mores: {}, myar: {}, myeq: {}, myjr: {}, myref: {}, myres: {}, nlar: {}, nleq: {}, nljr: {}, nlref: {}, nlres: {}, olar: {}, oleq: {}, oljr: {}, olref: {}, olres: {}, orar: {}, oreq: {}, orjr: {}, orref: {}, orres: {}, rear: {}, reeq: {}, rejr: {}, reref: {}, reres: {}, ryar: {}, ryeq: {}, ryjr: {}, ryref: {}, ryres: {}, spar: {}, speq: {}, spjr: {}, spref: {}, spres: {}, wlar: {}, wleq: {}, wljr: {}, wlref: {}, wlres: {}, wnar: {}, wneq: {}, wnjr: {}, wnref: {}, wnres: {} }
   },
   'US-MNTNR': {
     name: 'Northwest Regional Library',
     ils: 'Evergreen',
     tag: '852',
     subs: { a: 'b,c', c: 'j', b: 'p', v: 'v', x: 'g', y: 'p' },
-    lendLocs: ['GODEL Main', 'GREENBUSH Main', 'HALLOCK Main', 'RED_LAKE_FALLS Main', 'ROSEAU Main', 'THIEF_RIVER_FALLS Main', 'WARROAD Main', 'ZLINK_GRYGLA Main', 'ZLINK_KARLSTAD Main', 'ZLINK_MIDDLE_RIVER Main']
+    lendLocs: { 'GODEL Main': {}, 'GREENBUSH Main': {}, 'HALLOCK Main': {}, 'RED_LAKE_FALLS Main': {}, 'ROSEAU Main': {}, 'THIEF_RIVER_FALLS Main': {}, 'WARROAD Main': {}, 'ZLINK_GRYGLA Main': {}, 'ZLINK_KARLSTAD Main': {}, 'ZLINK_MIDDLE_RIVER Main': {} }
   },
   'US-MNMOHL': {
     name: 'Lake Agassiz Regional Library',
     ils: 'Evergreen',
     tag: '852',
     subs: { a: 'b,c', c: 'j', b: 'p', v: 'v', x: 'g', y: 'p' },
-    lendLocs: ['ADA Main', 'ADA New', 'BAGLEY Main', 'BAGLEY New', 'BARNESVILLE Main', 'BARNESVILLE New', 'BRECKENRIDGE Main', 'BRECKENRIDGE New', 'CLIMAX Main', 'CLIMAX New', 'CROOKSTON Main', 'CROOKSTON New', 'DETROIT_LAKES Main', 'DETROIT_LAKES New', 'FERTILE Main', 'FERTILE New', 'FOSSTON Main', 'FOSSTON New', 'HAWLEY Main', 'HAWLEY New', 'MAHNOMEN Main', 'MAHNOMEN New', 'MCINTOSH Main', 'MCINTOSH New', 'MOORHEAD Main', 'MOORHEAD New', 'ZLINK_CORMORANT Main', 'ZLINK_CORMORANT New', 'ZLINK_FRAZEE Main', 'ZLINK_FRAZEE New', 'ZLINK_GONVICK Main', 'ZLINK_GONVICK New', 'ZLINK_HALSTAD Main', 'ZLINK_HALSTAD New', 'ZLINK_HENDRUM Main', 'ZLINK_HENDRUM New', 'ZLINK_LAKE_PARK Main', 'ZLINK_LAKE_PARK New', 'ZLINK_ROTHSAY Main', 'ZLINK_ROTHSAY New', 'ZLINK_TWIN_VALLEY Main', 'ZLINK_TWIN_VALLEY New', 'ZLINK_ULEN Main', 'ZLINK_ULEN New']
+    lendLocs: { 'ADA Main': {}, 'ADA New': {}, 'BAGLEY Main': {}, 'BAGLEY New': {}, 'BARNESVILLE Main': {}, 'BARNESVILLE New': {}, 'BRECKENRIDGE Main': {}, 'BRECKENRIDGE New': {}, 'CLIMAX Main': {}, 'CLIMAX New': {}, 'CROOKSTON Main': {}, 'CROOKSTON New': {}, 'DETROIT_LAKES Main': {}, 'DETROIT_LAKES New': {}, 'FERTILE Main': {}, 'FERTILE New': {}, 'FOSSTON Main': {}, 'FOSSTON New': {}, 'HAWLEY Main': {}, 'HAWLEY New': {}, 'MAHNOMEN Main': {}, 'MAHNOMEN New': {}, 'MCINTOSH Main': {}, 'MCINTOSH New': {}, 'MOORHEAD Main': {}, 'MOORHEAD New': {}, 'ZLINK_CORMORANT Main': {}, 'ZLINK_CORMORANT New': {}, 'ZLINK_FRAZEE Main': {}, 'ZLINK_FRAZEE New': {}, 'ZLINK_GONVICK Main': {}, 'ZLINK_GONVICK New': {}, 'ZLINK_HALSTAD Main': {}, 'ZLINK_HALSTAD New': {}, 'ZLINK_HENDRUM Main': {}, 'ZLINK_HENDRUM New': {}, 'ZLINK_LAKE_PARK Main': {}, 'ZLINK_LAKE_PARK New': {}, 'ZLINK_ROTHSAY Main': {}, 'ZLINK_ROTHSAY New': {}, 'ZLINK_TWIN_VALLEY Main': {}, 'ZLINK_TWIN_VALLEY New': {}, 'ZLINK_ULEN Main': {}, 'ZLINK_ULEN New': {} }
   }
 };
 
@@ -240,28 +240,21 @@ export function cluster_transform(clusterStr) {
           }
         }
 
-        let policy = '';
-        if (lf.lendLocs && lf.lendItypes) {
-          policy = (lf.lendLocs.indexOf(location) > -1 && lf.lendItypes.indexOf(itype) > -1) ? 'LOANABLE' : 'UNLOANABLE'; 
-        } else if (lf.lendLocs && lf.notLendItypes) {
-          policy = (lf.lendLocs.indexOf(location) > -1 && lf.notLendItypes.indexOf(itype) === -1) ? 'LOANABLE' : 'UNLOANABLE';
-        } else if (lf.lendLocs) {
-          policy = (lf.lendLocs.indexOf(location) > -1) ? 'LOANABLE' : 'UNLOANABLE';
-        } else if (lf.notlendLocs && lf.lendItypes) {
-          policy = (lf.notLendLocs.indexOf(location) === -1 && lf.lendItypes.indexOf(itype) > -1) ? 'LOANABLE' : 'UNLOANABLE';
-        } else if (lf.notLendLocs && lf.notLendItypes) {
-          policy = (lf.notLendLocs.indexOf(location) === -1 && lf.notLendItypes.indexOf(itype) === -1) ? 'LOANABLE' : 'UNLOANABLE';
-        } else if (lf.notLendLocs) {
-          policy = (lf.notLendLocs.indexOf(location) === -1) ? 'LOANABLE' : 'UNLOANABLE';
-        } else if (lf.lendItypes && !lf.lendLocs && !lf.notLendLocs && lf.lendItypes.indexOf(itype) > -1) {
-          policy = 'LOANABLE';
-        } else {
-          policy = 'UNLOANABLE';
+        let pol = 0;
+        if (lf.lendLocs && lf.lendLocs[location] || lf.notLendLocs && !lf.notLendLocs[location])  {
+          pol = 1;
+          if (lf.lendItypes && !lf.lendItypes[itype]) {
+            pol = 0;
+          }
+        }
+        if (!(lf.lendLocs || lf.notLendLocs) && lf.lendItypes && lf.lendItypes[itype]) {
+          pol = 1;
         }
 
         if (lf.lendFunc) {
-          policy = lf.lendFunc(recFields, outItem['999']) || policy;
+          pol = lf.lendFunc(recFields, outItem['999']) || pol;
         }
+        let policy = (pol) ? 'LOANABLE' : 'UNLOANABLE';
         outItem['999'].subfields.push({ p: policy });
         outItems.push(outItem);
       }
