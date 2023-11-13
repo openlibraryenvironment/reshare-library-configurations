@@ -1,11 +1,7 @@
 #!/usr/bin/perl
 
-my $infile = shift or die "Usage ./make-locs.pl <locs_file> [ no_lend ]";
-my $no_lend = shift || '';
-my $lend = 1;
-if ($no_lend) {
-  $lend = 0;
-}
+my $infile = shift or die "Usage ./make-locs.pl <locs_file> [ constant ]";
+my $const = shift || '{}';
 
 open IN, $infile or die "Can't open $infile!";
 my @str;
@@ -19,7 +15,7 @@ while (<IN>) {
   if ($val =~ /\W/) { 
     $val = "'$val'";
   }
-  push @str, "$val:{}";
+  push @str, "$val:$const";
 }
 my $inner = join "," , sort @str;
 print "lendLocs: {$inner}\n";

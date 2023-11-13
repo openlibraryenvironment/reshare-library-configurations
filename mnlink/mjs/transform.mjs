@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-MNFFV': {
+    name: 'Viking Library System',
+    ils: 'Horizon',
+    tag: '945',
+    subs: { a: 'c,d', c: 'e', d: 'f', b: 'b', x: 'a', y: 'n' },
+    lendItypes: { ac: 1, acsp: 1, bk: 1, cbc: 1, cbcd: 1, cd: 1, cdsp: 1, chper: 1, cper: 1, dvd: 1, dvdtv: 1, hol: 1, idvd: 1, pb: 1, per: 1, pro: 1, sc: 1, sm: 1, v: 1, vr: 1 }
+  },
   'US-MNDU': {
     name: 'Duluth Public Library',
     ils: 'Polaris',
