@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-MNDU': {
+    name: 'Duluth Public Library',
+    ils: 'Polaris',
+    tag: '852',
+    subs: { a: 'b', c: 'k,h,i,m', d: 'j', b: 'p', x: '7' },
+    lendItypes: { 'True': 1 }
+  },
   'US-MNMHCL': {
     name: 'Hennepin County Library',
     ils: 'Horizon',
