@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-MNLEW': {
+    name: 'Washington County Library',
+    ils: 'Symphony',
+    tag: '999',
+    subs: { a: 'l', c: 'a', d: 'w', b: 'i', x: 't', y: 'i' },
+    lendLocs: { AUDIOBK_JN: {}, AUDIOBK_NF: {}, AUDIOBK_YA: {}, AUDIOBOOK: {}, AUDIOBOOKJ: {}, CD: {}, CDJ: {}, CHINESE: {}, DECODABLE: {}, DVDF: {}, DVDJ: {}, DVDJN: {}, DVDN: {}, DVDTEEN: {}, EARLYREAD: {}, EASY_NF: {}, ER_BOOKCD: {}, FICTION: {}, GAMES: {}, GRAPHIC: {}, GRAPHIC_J: {}, GRAPHIC_NF: {}, GRAPHIC_T: {}, HMONG: {}, HOLIDAY: {}, J_FICTION: {}, J_NONFIC: {}, LARGEPRINT: {}, MAGAZINES: {}, MYSTERY: {}, NONFICTION: {}, PB_FICTION: {}, PB_MYSTERY: {}, PB_ROMANCE: {}, PB_SCIFI: {}, PB_WESTERN: {}, PICTURE_BK: {}, PIC_BOOKCD: {}, PROF_COLL: {}, REFERENCE: {}, ROMANCE: {}, SCIFI: {}, SOMALI: {}, SPA_BOARD: {}, SPA_EARLY: {}, SPA_E_NF: {}, SPA_F: {}, SPA_G: {}, SPA_J_F: {}, SPA_J_G: {}, SPA_J_NF: {}, SPA_NF: {}, SPA_PIC: {}, TEEN: {}, TEEN_NF: {}, VIDEOGAMES: {}, WESTERNS: {} }
+  },
   'US-MNFFV': {
     name: 'Viking Library System',
     ils: 'Horizon',
