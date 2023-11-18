@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-MNSTCLG': {
+    name: 'Great River Regional Library',
+    ils: 'Horizon',
+    tag: '949',
+    subs: { a: 'm', c: 'd', d: 'q', b: 'n', x: 't', y: 'n' },
+    lendItypes: {bk: 1, cd: 1, djmed: 1, dmed: 1, dvp: 1, dvrc3: 1, dvrc: 1, jbk: 1, jcd: 1, jdvp: 1, jdvrc3: 1, jdvrc: 1, jmed: 1, jvp: 1, jvrc3: 1, jvrc: 1, med: 1, rdvp: 1, rdvrc3: 1, rdvrc: 1, rvp: 1, rvrc3: 1, rvrc: 1, vp: 1, vrc3: 1, vrc: 1},
+    lendLocs: {al: {}, an: {}, be: {}, br: {}, bu: {}, co: {}, cs: {}, cw: {}, de: {}, eb: {}, er: {}, fo: {}, ge: {}, hl: {}, hq: {}, ki: {}, lf: {}, lp: {}, me: {}, mo: {}, pa: {}, ri: {}, ry: {}, sk: {}, sm: {}, sp: {}, sw: {}, up: {}, wp: {}}
+  },
   'US-MNLEW': {
     name: 'Washington County Library',
     ils: 'Symphony',
@@ -165,8 +173,6 @@ export function cluster_transform(clusterStr) {
         let subs = getSubs(field[0]);
         controlNumber = (subs[sf]) ? subs[sf][0] : '';
       }
-    } else if (recFields['001']) { 
-      controlNumber = recFields['001'][0] || '';
     }
     let f999 = {
       ind1: '1',

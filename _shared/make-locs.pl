@@ -8,6 +8,7 @@ my @str;
 while (<IN>) {
   chomp;
   next unless /\w/;
+  $_ =~ s/^ +| +$//g;
   my $val = $_;
   $val =~ s/'/\\'/g;
   $val =~ s/\[/\\[/g;
@@ -17,5 +18,5 @@ while (<IN>) {
   }
   push @str, "$val:$const";
 }
-my $inner = join "," , sort @str;
+my $inner = join ", ", sort @str;
 print "lendLocs: {$inner}\n";
