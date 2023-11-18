@@ -28,6 +28,7 @@ const localFields = {
   'US-MNMHCL': {
     name: 'Hennepin County Library',
     ils: 'Horizon',
+    idField: '999a',
     tag: '949',
     subs: { a: 'm,c', c: 'd', d: 'q', b: 'b', v: 'e', x: 't', y: 'n' },
     lendItypes: { 'a10': 1, 'a21': 1, 'a7': 1, 'j21': 1, 'j7': 1 }
