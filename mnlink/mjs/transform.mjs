@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-MNU': {
+    name: 'University of Minnesota',
+    ils: 'Alma',
+    idField: '001',
+    tag: '952',
+    subs: { a: 'a', c: 'd', d: 'n', b: 'c', x: 'm', y: 'i' },
+    lendLocs: {TARCHGEN:{}, TARCHOVF:{}, TBIOMGEN:{}, TBIOMGENJS:{}, TBIOMGENS:{}, TBIOMGENVS:{}, TBIOMTHSJS:{}, TBIOMTHSVS:{}, TCOSGEN:{}, TCOSSN1:{}, TCOSSN2:{}, TLAWGEN:{}, TLAWUSD:{}, TMAGRGEN:{}, TMAGRGOV:{}, TMAGRGOVS:{}, TMAGRGOVU:{}, TMAGRTHS:{}, TMATHGEN:{}, TMUSIGEN:{}, TNRLGEN:{}, TNRLGOV:{}, TNRLGOVCD:{}, TNRLGOVS:{}, TNRLGOVU:{}, TNRLGOVUM:{}, TNRLMAP:{}, TNRLTHS:{}, TNRLVID:{}, TSCIGEN:{}, TSCIOVF:{}, TSCITHS:{}, TWILSAME:{}, TWILSCLS:{}, TWILSCLSE:{}, TWILSCLSJ:{}, TWILSCLSM:{}, TWILSEAS:{}, TWILSGEN:{}, TWILSGEND:{}, TWILSGENR:{}, TWILSGOVCD:{}, TWILSGOVCG:{}, TWILSGOVH:{}, TWILSGOVK:{}, TWILSGOVN:{}, TWILSGOVO:{}, TWILSGOVQ:{}, TWILSGOVU:{}, TWILSMAP:{}, TWILSTHS:{}, ZMLACGEN:{}, ZMLACGENX:{}, ZMLACLAW:{}, ZMLACMPL:{}, ZMLACOWL:{}, ZMLACSPP:{}, ZMLACUMD:{}, ZMLACUMDN:{}}
+  },
   'US-MNSTCLG': {
     name: 'Great River Regional Library',
     ils: 'Horizon',
@@ -36,7 +44,6 @@ const localFields = {
   'US-MNMHCL': {
     name: 'Hennepin County Library',
     ils: 'Horizon',
-    idField: '999a',
     tag: '949',
     subs: { a: 'm,c', c: 'd', d: 'q', b: 'b', v: 'e', x: 't', y: 'n' },
     lendItypes: { 'a10': 1, 'a21': 1, 'a7': 1, 'j21': 1, 'j7': 1 }
@@ -164,12 +171,14 @@ export function cluster_transform(clusterStr) {
     }
 
     */
-
     if (lf && lf.idField) {
+      
       let tag = lf.idField.substring(0, 3);
       let sf = lf.idField.substring(3);
       let field = recFields[tag];
-      if (field && sf) {
+      if (lf.idField.match(/^00/)) {
+        controlNumber = (recFields[lf.idField]) ? recFields[lf.idField][0] : '';
+      } else if (field && sf) {
         let subs = getSubs(field[0]);
         controlNumber = (subs[sf]) ? subs[sf][0] : '';
       }
