@@ -20,6 +20,13 @@ const localFields = {
     lendItypes: {bk: 1, cd: 1, djmed: 1, dmed: 1, dvp: 1, dvrc3: 1, dvrc: 1, jbk: 1, jcd: 1, jdvp: 1, jdvrc3: 1, jdvrc: 1, jmed: 1, jvp: 1, jvrc3: 1, jvrc: 1, med: 1, rdvp: 1, rdvrc3: 1, rdvrc: 1, rvp: 1, rvrc3: 1, rvrc: 1, vp: 1, vrc3: 1, vrc: 1},
     lendLocs: {al: {}, an: {}, be: {}, br: {}, bu: {}, co: {}, cs: {}, cw: {}, de: {}, eb: {}, er: {}, fo: {}, ge: {}, hl: {}, hq: {}, ki: {}, lf: {}, lp: {}, me: {}, mo: {}, pa: {}, ri: {}, ry: {}, sk: {}, sm: {}, sp: {}, sw: {}, up: {}, wp: {}}
   },
+  'US-MNPR': {
+    name: 'Kitchigami Regional Library',
+    ils: 'Symphony',
+    tag: '999',
+    subs: { a: 'm', c: 'a', d: 'w', b: 'i', x: 't' },
+    lendItypes: {'BOOK-W-CD':1, 'BOOK-W-DVD':1, AUDIOBOOK:1, BINGEBOX:1, BOOK:1, DVD:1, HARDCOVER:1, LARGEPRINT:1, MEGAZINE:1, MICROFORM:1, MUSICCD:1, PAPERBACK:1}
+  },
   'US-MNWSPD': {
     name: 'Dakota County Library',
     ils: 'Symphony',
