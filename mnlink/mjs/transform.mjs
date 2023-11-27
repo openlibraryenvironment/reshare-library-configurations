@@ -24,7 +24,7 @@ const localFields = {
     name: 'Kitchigami Regional Library',
     ils: 'Symphony',
     tag: '999',
-    subs: { a: 'm', c: 'a', d: 'w', b: 'i', x: 't' },
+    subs: { a: 'm,l', c: 'a', d: 'w', b: 'i', x: 't' },
     lendItypes: {'BOOK-W-CD':1, 'BOOK-W-DVD':1, AUDIOBOOK:1, BINGEBOX:1, BOOK:1, DVD:1, HARDCOVER:1, LARGEPRINT:1, MEGAZINE:1, MICROFORM:1, MUSICCD:1, PAPERBACK:1}
   },
   'US-MNWSPD': {
