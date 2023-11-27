@@ -70,6 +70,13 @@ const localFields = {
     subs: { a: 'l', c: '%99', b: 'i', x: 't', y: 'y' },
     notLendLocs: { apar: {}, apeq: {}, apjr: {}, apref: {}, apres: {}, atar: {}, ateq: {}, atjr: {}, atref: {}, atres: {}, bear: {}, beeq: {}, bejr: {}, beref: {}, beres: {}, biar: {}, bieq: {}, bijr: {}, biref: {}, bires: {}, brar: {}, breq: {}, brjr: {}, brref: {}, brres: {}, caar: {}, caeq: {}, cajr: {}, caref: {}, cares: {}, ccar: {}, cceq: {}, ccjr: {}, ccref: {}, ccres: {}, coar: {}, coeq: {}, cojr: {}, coref: {}, cores: {}, dsar: {}, dseq: {}, dsjr: {}, dsref: {}, dsres: {}, dwar: {}, dweq: {}, dwjr: {}, dwref: {}, dwres: {}, fxar: {}, fxeq: {}, fxjr: {}, fxref: {}, fxres: {}, gcar: {}, gceq: {}, gcjr: {}, gcref: {}, gcres: {}, gfar: {}, gfeq: {}, gfjr: {}, gfref: {}, gfres: {}, glar: {}, gleq: {}, gljr: {}, glref: {}, glres: {}, grar: {}, greq: {}, grjr: {}, grref: {}, grres: {}, hear: {}, heeq: {}, hejr: {}, heref: {}, heres: {}, huar: {}, hueq: {}, hujr: {}, huref: {}, hures: {}, khar: {}, kheq: {}, khjr: {}, khref: {}, khres: {}, lfar: {}, lfeq: {}, lfjr: {}, lfref: {}, lfres: {}, llar: {}, lleq: {}, lljr: {}, llref: {}, llres: {}, mdar: {}, mdeq: {}, mdjr: {}, mdref: {}, mdres: {}, miar: {}, mieq: {}, mijr: {}, miref: {}, mires: {}, moar: {}, moeq: {}, mojr: {}, moref: {}, mores: {}, myar: {}, myeq: {}, myjr: {}, myref: {}, myres: {}, nlar: {}, nleq: {}, nljr: {}, nlref: {}, nlres: {}, olar: {}, oleq: {}, oljr: {}, olref: {}, olres: {}, orar: {}, oreq: {}, orjr: {}, orref: {}, orres: {}, rear: {}, reeq: {}, rejr: {}, reref: {}, reres: {}, ryar: {}, ryeq: {}, ryjr: {}, ryref: {}, ryres: {}, spar: {}, speq: {}, spjr: {}, spref: {}, spres: {}, wlar: {}, wleq: {}, wljr: {}, wlref: {}, wlres: {}, wnar: {}, wneq: {}, wnjr: {}, wnref: {}, wnres: {} }
   },
+  'US-MNMANTD': {
+    name: 'Traverse des Sioux Library Cooperative',
+    ils: 'Evergreen',
+    tag: '852',
+    subs: { a: 'b,c', c: 'j', b: 'p', v: 'v', x: 'g', y: 'p' },
+    notLendLocs: {'AM Art Prints Non-Circulating':1, 'AM Chidren\'s Big Books':1, 'AM Children\'s Literature Area Reference':1, 'AM General Reserves':1, 'AM Rare Books Room':1, 'AM Ready Reference':1, 'AM Reference':1, 'AM Reserves Shelf':1, 'BC Reference':1, 'BD Adult Reference':1, 'BD Minnesota Reference Collection':1, 'BH Adult Reference':1, 'BH Junior Reference':1, 'BN Junior Reference':1, 'BN Library of Things':1, 'FB Bricelyn':1, 'FB Kiester':1, 'FW Adult Reference':1, 'FW Delavan':1, 'FW Easton':1, 'FW Junior Reference':1, 'LS Lucky Day':1, 'LW Adult Reference':1, 'LW Rotating Materials':1, 'MA Junior Vox Books':1, 'MA Lucky Day':1, 'NS Adult Reference':1, 'SB Adult Reference':1, 'SG Adult Reference':1, 'SG Storage':1, 'VL Adult Reference':1, 'VL Children Reference':1, 'VL Lucky Day Collection':1, 'VL Minnesota Reference Collection':1}
+  },
   'US-MNTNR': {
     name: 'Northwest Regional Library',
     ils: 'Evergreen',
@@ -91,7 +98,7 @@ function getSubs(field) {
   field.subfields.forEach(s => {
     let code = Object.keys(s);
     if (!subs[code]) subs[code] = [];
-    subs[code].push(s[code]);
+    if (subs[code].indexOf(s[code]) === -1) subs[code].push(s[code]);
   });
   return subs;
 }
