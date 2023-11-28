@@ -90,10 +90,10 @@ const localFields = {
   },
   'US-PPPM': {
     name: 'Philadelphia Museum Art',
-    tag: 'Z30',
-    subs: { a: '2', b: '5', c: 'h', x: 'm', y: 'u' },
-    lendLocs: ['MAIN', 'MAINO'],
-    lendItypes: ['BOOK', 'MONO']
+    tag: '930',
+    subs: { a: '2', b: '5', c: 'h,i', x: 'm' },
+    lendLocs: [ 'MAIN' ],
+    lendItypes: ['BOOK', 'MONOGRAPH']
   },
   'US-PU': {
     name: 'University of Pennsylvania',
