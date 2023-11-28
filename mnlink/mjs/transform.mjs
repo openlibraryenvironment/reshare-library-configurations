@@ -62,12 +62,19 @@ const localFields = {
     subs: { a: 'm,c', c: 'd', d: 'q', b: 'b', v: 'e', x: 't', y: 'n' },
     lendItypes: { 'a10': 1, 'a21': 1, 'a7': 1, 'j21': 1, 'j7': 1 }
   },
+  'US-MNSP': {
+    name: 'Saint Paul Public Library',
+    ils: 'III',
+    tag: '945',
+    subs: { a: 'l', c: '%099|%090|%050', b: 'i', x: 't', y: 'y' },
+    lendLocs: {ar:{}, c:{}, cf:{}, cg:{}, ci:{}, cm:{}, cp:{}, cs:{}, cw:{}, cx:{}, cy:{}, db:{}, fsh:{}, ha:{}, hh:{}, hi:{}, me:{}, mlac:{}, rc:{}, rd:{}, rv:{}, sa:{}, sr:{}}
+  },
   'US-MNWILPLS': {
     name: 'Pioneerland Library System',
     ils: 'III',
     idField: '907a',
     tag: '945',
-    subs: { a: 'l', c: '%99', b: 'i', x: 't', y: 'y' },
+    subs: { a: 'l', c: '%099', b: 'i', x: 't', y: 'y' },
     notLendLocs: { apar: {}, apeq: {}, apjr: {}, apref: {}, apres: {}, atar: {}, ateq: {}, atjr: {}, atref: {}, atres: {}, bear: {}, beeq: {}, bejr: {}, beref: {}, beres: {}, biar: {}, bieq: {}, bijr: {}, biref: {}, bires: {}, brar: {}, breq: {}, brjr: {}, brref: {}, brres: {}, caar: {}, caeq: {}, cajr: {}, caref: {}, cares: {}, ccar: {}, cceq: {}, ccjr: {}, ccref: {}, ccres: {}, coar: {}, coeq: {}, cojr: {}, coref: {}, cores: {}, dsar: {}, dseq: {}, dsjr: {}, dsref: {}, dsres: {}, dwar: {}, dweq: {}, dwjr: {}, dwref: {}, dwres: {}, fxar: {}, fxeq: {}, fxjr: {}, fxref: {}, fxres: {}, gcar: {}, gceq: {}, gcjr: {}, gcref: {}, gcres: {}, gfar: {}, gfeq: {}, gfjr: {}, gfref: {}, gfres: {}, glar: {}, gleq: {}, gljr: {}, glref: {}, glres: {}, grar: {}, greq: {}, grjr: {}, grref: {}, grres: {}, hear: {}, heeq: {}, hejr: {}, heref: {}, heres: {}, huar: {}, hueq: {}, hujr: {}, huref: {}, hures: {}, khar: {}, kheq: {}, khjr: {}, khref: {}, khres: {}, lfar: {}, lfeq: {}, lfjr: {}, lfref: {}, lfres: {}, llar: {}, lleq: {}, lljr: {}, llref: {}, llres: {}, mdar: {}, mdeq: {}, mdjr: {}, mdref: {}, mdres: {}, miar: {}, mieq: {}, mijr: {}, miref: {}, mires: {}, moar: {}, moeq: {}, mojr: {}, moref: {}, mores: {}, myar: {}, myeq: {}, myjr: {}, myref: {}, myres: {}, nlar: {}, nleq: {}, nljr: {}, nlref: {}, nlres: {}, olar: {}, oleq: {}, oljr: {}, olref: {}, olres: {}, orar: {}, oreq: {}, orjr: {}, orref: {}, orres: {}, rear: {}, reeq: {}, rejr: {}, reref: {}, reres: {}, ryar: {}, ryeq: {}, ryjr: {}, ryref: {}, ryres: {}, spar: {}, speq: {}, spjr: {}, spref: {}, spres: {}, wlar: {}, wleq: {}, wljr: {}, wlref: {}, wlres: {}, wnar: {}, wneq: {}, wnjr: {}, wnref: {}, wnres: {} }
   },
   'US-MNMANTD': {
