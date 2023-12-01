@@ -27,6 +27,13 @@ const localFields = {
     subs: { a: 'm,l', c: 'a', d: 'w', b: 'i', x: 't' },
     lendItypes: {'BOOK-W-CD':1, 'BOOK-W-DVD':1, AUDIOBOOK:1, BINGEBOX:1, BOOK:1, DVD:1, HARDCOVER:1, LARGEPRINT:1, MEGAZINE:1, MICROFORM:1, MUSICCD:1, PAPERBACK:1}
   },
+  'US-MNMAC': {
+    name: 'Anoka County Library',
+    ils: 'Symphony',
+    tag: '999',
+    subs: { a: 'l', c: 'a', d: 'w', b: 'i', x: 't' },
+    lendLocs: {'E-AV':{}, 'E-NONFIC':{}, 'J-AV':{}, 'J-NONFIC':{}, 'SF-FANTASY':{}, 'YA-AV':{}, 'YA-NONFIC':{}, ADULTGRAPH:{}, AMERINDIAN:{}, AV:{}, BOARDBOOKS:{}, CHILDRENS:{}, EASIES:{}, EASYREADER:{}, EJ:{}, FICTION:{}, JUVGRAPH:{}, LARGEPRINT:{}, MAGAZINES:{}, MYSTERY:{}, NONFICTION:{}, PROFESSNL:{}, ROMANCEPB:{}, WESTERN:{}, YA:{}, YAGRAPH:{}}
+  },
   'US-MNWSPD': {
     name: 'Dakota County Library',
     ils: 'Symphony',
@@ -192,13 +199,12 @@ export function cluster_transform(clusterStr) {
     let lf = localFields[sid];
     let controlNumber = lid;
 
-    /* control number updates (uncomment if needed)
+    // control number updates 
 
-    if (sid === 'US-ISILCODE') {
+    if (sid === 'US-MNMAC') {
       controlNumber = controlNumber.replace(/.+:/, 'u');
     }
 
-    */
     if (lf && lf.idField) {
       
       let tag = lf.idField.substring(0, 3);
