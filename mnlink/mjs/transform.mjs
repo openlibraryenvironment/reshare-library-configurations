@@ -28,6 +28,13 @@ const localFields = {
     lendItypes: {bk: 1, cd: 1, djmed: 1, dmed: 1, dvp: 1, dvrc3: 1, dvrc: 1, jbk: 1, jcd: 1, jdvp: 1, jdvrc3: 1, jdvrc: 1, jmed: 1, jvp: 1, jvrc3: 1, jvrc: 1, med: 1, rdvp: 1, rdvrc3: 1, rdvrc: 1, rvp: 1, rvrc3: 1, rvrc: 1, vp: 1, vrc3: 1, vrc: 1},
     lendLocs: {al: {}, an: {}, be: {}, br: {}, bu: {}, co: {}, cs: {}, cw: {}, de: {}, eb: {}, er: {}, fo: {}, ge: {}, hl: {}, hq: {}, ki: {}, lf: {}, lp: {}, me: {}, mo: {}, pa: {}, ri: {}, ry: {}, sk: {}, sm: {}, sp: {}, sw: {}, up: {}, wp: {}}
   },
+  'US-MNCH': {
+    name: 'Carver County Library',
+    ils: 'Symphony',
+    tag: '999',
+    subs: { a: 'l', c: 'a', d: 'w', b: 'i', x: 't' },
+    lendLocs: {A_BK_CD:{}, A_CD:{}, A_DVD:{}, A_FIC:{}, A_FIC_MYST:{}, A_FIC_SCFI:{}, A_FIC_WEST:{}, A_GRAPHIC:{}, A_GRAPHIC_NF:{}, A_LARGE:{}, A_MAG:{}, A_NEWREAD:{}, A_NONFIC:{}, A_PAPER:{}, A_PB_MYST:{}, A_PB_SCIFI:{}, A_PB_WEST:{}, A_WORLD:{}, J_BK_CD:{}, J_CD:{}, J_DVD:{}, J_EASYREAD:{}, J_EASY_FIC:{}, J_EASY_NON:{}, J_FIC:{}, J_GRAPHIC:{}, J_GRAPHIC_NF:{}, J_HOLIDAY:{}, J_MAG:{}, J_NON_FIC:{}, J_PAPER:{}, J_SERIES:{}, J_WORLD:{}, LOCAL_AUTH:{}, RESHELVING:{}, STACKS:{}, STORAGE:{}, T_BK_CD:{}, T_CD:{}, T_DVD:{}, T_FIC:{}, T_GRAPHIC:{}, T_GRAPHIC_NF:{}, T_MAG:{}, T_NONFIC:{}}
+  },
   'US-MNPR': {
     name: 'Kitchigami Regional Library',
     ils: 'Symphony',
@@ -211,6 +218,8 @@ export function cluster_transform(clusterStr) {
 
     if (sid === 'US-MNMAC') {
       controlNumber = controlNumber.replace(/.+:/, 'u');
+    } else if (sid === 'US-MNCH') {
+      controlNumber = controlNumber.replace(/^/, 'u');
     }
 
     if (lf && lf.idField) {
