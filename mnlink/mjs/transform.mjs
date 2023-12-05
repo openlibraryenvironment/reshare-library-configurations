@@ -99,6 +99,13 @@ const localFields = {
     subs: { a: 'l', c: '%099', b: 'i', x: 't', y: 'y' },
     notLendLocs: { apar: {}, apeq: {}, apjr: {}, apref: {}, apres: {}, atar: {}, ateq: {}, atjr: {}, atref: {}, atres: {}, bear: {}, beeq: {}, bejr: {}, beref: {}, beres: {}, biar: {}, bieq: {}, bijr: {}, biref: {}, bires: {}, brar: {}, breq: {}, brjr: {}, brref: {}, brres: {}, caar: {}, caeq: {}, cajr: {}, caref: {}, cares: {}, ccar: {}, cceq: {}, ccjr: {}, ccref: {}, ccres: {}, coar: {}, coeq: {}, cojr: {}, coref: {}, cores: {}, dsar: {}, dseq: {}, dsjr: {}, dsref: {}, dsres: {}, dwar: {}, dweq: {}, dwjr: {}, dwref: {}, dwres: {}, fxar: {}, fxeq: {}, fxjr: {}, fxref: {}, fxres: {}, gcar: {}, gceq: {}, gcjr: {}, gcref: {}, gcres: {}, gfar: {}, gfeq: {}, gfjr: {}, gfref: {}, gfres: {}, glar: {}, gleq: {}, gljr: {}, glref: {}, glres: {}, grar: {}, greq: {}, grjr: {}, grref: {}, grres: {}, hear: {}, heeq: {}, hejr: {}, heref: {}, heres: {}, huar: {}, hueq: {}, hujr: {}, huref: {}, hures: {}, khar: {}, kheq: {}, khjr: {}, khref: {}, khres: {}, lfar: {}, lfeq: {}, lfjr: {}, lfref: {}, lfres: {}, llar: {}, lleq: {}, lljr: {}, llref: {}, llres: {}, mdar: {}, mdeq: {}, mdjr: {}, mdref: {}, mdres: {}, miar: {}, mieq: {}, mijr: {}, miref: {}, mires: {}, moar: {}, moeq: {}, mojr: {}, moref: {}, mores: {}, myar: {}, myeq: {}, myjr: {}, myref: {}, myres: {}, nlar: {}, nleq: {}, nljr: {}, nlref: {}, nlres: {}, olar: {}, oleq: {}, oljr: {}, olref: {}, olres: {}, orar: {}, oreq: {}, orjr: {}, orref: {}, orres: {}, rear: {}, reeq: {}, rejr: {}, reref: {}, reres: {}, ryar: {}, ryeq: {}, ryjr: {}, ryref: {}, ryres: {}, spar: {}, speq: {}, spjr: {}, spref: {}, spres: {}, wlar: {}, wleq: {}, wljr: {}, wlref: {}, wlres: {}, wnar: {}, wneq: {}, wnjr: {}, wnref: {}, wnres: {} }
   },
+  'US-MNCAE': {
+    name: 'East Central Regional Library',
+    ils: 'Evergreen',
+    tag: '852',
+    subs: { a: 'c', c: 'j', b: 'p', v: 'v', y: 'p' },
+    lendLocs: {'AV-Set':{}, 'Audio Cassettes':{}, 'Board Books':{}, 'Book on CD':{}, 'Compact Disc':{}, 'Easy Book':{}, 'Juv. Audio Cassettes':{}, 'Juv. Book on CD':{}, 'Juv. DVD':{}, 'Juv. Nonfiction':{}, 'Juv. Video Cassette':{}, 'Juvenile Biography':{}, 'Juvenile Fiction':{}, 'Large Print':{}, 'Teen Audio Cassette':{}, 'Teen Biography':{}, 'Teen Book on CD':{}, 'Teen Fiction':{}, 'Teen Nonfiction':{}, 'Video Cassette':{}, Biography:{}, Current:{}, DVD:{}, Fiction:{}, Minnesota:{}, Nonfiction:{}, Oversize:{}}
+  },
   'US-MNMANTD': {
     name: 'Traverse des Sioux Library Cooperative',
     ils: 'Evergreen',
