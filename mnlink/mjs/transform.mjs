@@ -229,10 +229,9 @@ export function cluster_transform(clusterStr) {
     let controlNumber = lid;
 
     // control number updates 
+    controlNumber = controlNumber.replace(/^oai.+:/, '');
 
-    if (sid === 'US-MNMAC') {
-      controlNumber = controlNumber.replace(/.+:/, 'u');
-    } else if (sid === 'US-MNCH') {
+    if (sid.match(/^(US-MNMAC|US-MNCH)$/) && !controlNumber.match(/^u/)) {
       controlNumber = controlNumber.replace(/^/, 'u');
     }
 
