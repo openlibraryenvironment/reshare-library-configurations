@@ -61,6 +61,14 @@ const localFields = {
     subs: { a: 'l', c: 'a', d: 'w', b: 'i', x: 't', y: 'i' },
     lendLocs: { AUDIOBK_JN: {}, AUDIOBK_NF: {}, AUDIOBK_YA: {}, AUDIOBOOK: {}, AUDIOBOOKJ: {}, CD: {}, CDJ: {}, CHINESE: {}, DECODABLE: {}, DVDF: {}, DVDJ: {}, DVDJN: {}, DVDN: {}, DVDTEEN: {}, EARLYREAD: {}, EASY_NF: {}, ER_BOOKCD: {}, FICTION: {}, GAMES: {}, GRAPHIC: {}, GRAPHIC_J: {}, GRAPHIC_NF: {}, GRAPHIC_T: {}, HMONG: {}, HOLIDAY: {}, J_FICTION: {}, J_NONFIC: {}, LARGEPRINT: {}, MAGAZINES: {}, MYSTERY: {}, NONFICTION: {}, PB_FICTION: {}, PB_MYSTERY: {}, PB_ROMANCE: {}, PB_SCIFI: {}, PB_WESTERN: {}, PICTURE_BK: {}, PIC_BOOKCD: {}, PROF_COLL: {}, REFERENCE: {}, ROMANCE: {}, SCIFI: {}, SOMALI: {}, SPA_BOARD: {}, SPA_EARLY: {}, SPA_E_NF: {}, SPA_F: {}, SPA_G: {}, SPA_J_F: {}, SPA_J_G: {}, SPA_J_NF: {}, SPA_NF: {}, SPA_PIC: {}, TEEN: {}, TEEN_NF: {}, VIDEOGAMES: {}, WESTERNS: {} }
   },
+  'US-MNRHSLC': {
+    name: 'Southeastern Libraries Cooperating (SELCO)',
+    ils: 'Horizon',
+    tag: '949',
+    subs: { a: 'a', c: 'i', b: 'f', x: 'e', y: 'f' },
+    lendLocs: {al:{}, au:{}, bp:{}, br:{}, byrs:{}, cal:{}, cf:{}, chat:{}, chats:{}, chatsel:{}, dc:{}, far:{}, gm:{}, gms:{}, goods:{}, har:{}, hays:{}, hok:{}, hou:{}, hous:{}, houselm:{}, ka:{}, ken:{}, kmhs:{}, kmsint:{}, kwselm:{}, kwsmh:{}, lan:{}, lc:{}, lcr:{}, lcs:{}, ler:{}, lon:{}, lyles:{}, mab:{}, nor:{}, owat:{}, pi:{}, pis:{}, pla:{}, pre:{}, rps:{}, rush:{}, rw:{}, rwshs:{}, sc:{}, selco:{}, sg:{}, shats:{}, soushs:{}, stew:{}, stews:{}, stewsb:{}, stewsc:{}, sv:{}, wab:{}, west:{}, win:{}, wks:{}, wkselem:{}, zum:{}, zumselm:{}, zumsms:{}},
+    lendItypes: {bking2w:1, bking6w:1, gc39:1, gmb21:1, gmd7:1, hfp14:1, hm7:1, hp14:1, htv14:1, ov10:1, ov11:1, ov12:1, ov14:1, ov15:1, ov17:1, ov18:1, ov19:1, ov1:1, ov20:1, ov21:1, ov22:1, ov23:1, ov24:1, ov25:1, ov26:1, ov27:1, ov28:1, ov29:1, ov2:1, ov31:1, ov32:1, ov33:1, ov39:1, ov3:1, ov40:1, ov41:1, ov42:1, ov4:1, ov5:1, ov6:1, ov701:1, ov702:1, ov703:1, ov7:1, ov8:1, ov9:1, sc16:1, sc19:1, sc701:1, sc7:1, sc9:1, schav21:1, schbk21:1}
+  },
   'US-MNVA': {
     name: 'Arrowhead Library System',
     ils: 'Horizon',
