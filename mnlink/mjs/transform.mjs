@@ -10,7 +10,6 @@ const localFields = {
     tag: '952',
     subs: { a: 'c', c: 'o', d: '2', b: 'p', x: 'y', y: 'i' },
     notLendLocs: {'BRD-BK':{}, BARNKIT:{}, BINDERY:{}, BOOKCLUB:{}, CATALOGING:{}, CHILDSTORAGE:{}, GAMEBRD:{}, GAMRES:{}, ILLN:{}, JPUZZLE:{}, MLCLLIVE:{}, MNREF:{}, MP3:{}, OFFICE:{}, ONORD:{}, OUTKIT:{}, OUTSTOR:{}, PUP:{}, PUZ:{}, REFERENCE:{}, STAFF:{}, STEAM:{}, STORAGE:{}, STORPBK:{}, VERTFILE:{}, VGAME:{}, WOW:{}}
-
   },
   'US-MNU': {
     name: 'University of Minnesota',
@@ -19,14 +18,6 @@ const localFields = {
     tag: '952',
     subs: { a: 'a', c: 'd', d: 'n', b: 'c', x: 'm', y: 'i' },
     lendLocs: {TARCHGEN:{}, TARCHOVF:{}, TBIOMGEN:{}, TBIOMGENJS:{}, TBIOMGENS:{}, TBIOMGENVS:{}, TBIOMTHSJS:{}, TBIOMTHSVS:{}, TCOSGEN:{}, TCOSSN1:{}, TCOSSN2:{}, TLAWGEN:{}, TLAWUSD:{}, TMAGRGEN:{}, TMAGRGOV:{}, TMAGRGOVS:{}, TMAGRGOVU:{}, TMAGRTHS:{}, TMATHGEN:{}, TMUSIGEN:{}, TNRLGEN:{}, TNRLGOV:{}, TNRLGOVCD:{}, TNRLGOVS:{}, TNRLGOVU:{}, TNRLGOVUM:{}, TNRLMAP:{}, TNRLTHS:{}, TNRLVID:{}, TSCIGEN:{}, TSCIOVF:{}, TSCITHS:{}, TWILSAME:{}, TWILSCLS:{}, TWILSCLSE:{}, TWILSCLSJ:{}, TWILSCLSM:{}, TWILSEAS:{}, TWILSGEN:{}, TWILSGEND:{}, TWILSGENR:{}, TWILSGOVCD:{}, TWILSGOVCG:{}, TWILSGOVH:{}, TWILSGOVK:{}, TWILSGOVN:{}, TWILSGOVO:{}, TWILSGOVQ:{}, TWILSGOVU:{}, TWILSMAP:{}, TWILSTHS:{}, ZMLACGEN:{}, ZMLACGENX:{}, ZMLACLAW:{}, ZMLACMPL:{}, ZMLACOWL:{}, ZMLACSPP:{}, ZMLACUMD:{}, ZMLACUMDN:{}}
-  },
-  'US-MNSTCLG': {
-    name: 'Great River Regional Library',
-    ils: 'Horizon',
-    tag: '949',
-    subs: { a: 'm', c: 'd', d: 'q', b: 'n', x: 't', y: 'n' },
-    lendItypes: {bk: 1, cd: 1, djmed: 1, dmed: 1, dvp: 1, dvrc3: 1, dvrc: 1, jbk: 1, jcd: 1, jdvp: 1, jdvrc3: 1, jdvrc: 1, jmed: 1, jvp: 1, jvrc3: 1, jvrc: 1, med: 1, rdvp: 1, rdvrc3: 1, rdvrc: 1, rvp: 1, rvrc3: 1, rvrc: 1, vp: 1, vrc3: 1, vrc: 1},
-    lendLocs: {al: {}, an: {}, be: {}, br: {}, bu: {}, co: {}, cs: {}, cw: {}, de: {}, eb: {}, er: {}, fo: {}, ge: {}, hl: {}, hq: {}, ki: {}, lf: {}, lp: {}, me: {}, mo: {}, pa: {}, ri: {}, ry: {}, sk: {}, sm: {}, sp: {}, sw: {}, up: {}, wp: {}}
   },
   'US-MNR': {
     name: 'Rochester Public Library',
@@ -70,19 +61,27 @@ const localFields = {
     subs: { a: 'l', c: 'a', d: 'w', b: 'i', x: 't', y: 'i' },
     lendLocs: { AUDIOBK_JN: {}, AUDIOBK_NF: {}, AUDIOBK_YA: {}, AUDIOBOOK: {}, AUDIOBOOKJ: {}, CD: {}, CDJ: {}, CHINESE: {}, DECODABLE: {}, DVDF: {}, DVDJ: {}, DVDJN: {}, DVDN: {}, DVDTEEN: {}, EARLYREAD: {}, EASY_NF: {}, ER_BOOKCD: {}, FICTION: {}, GAMES: {}, GRAPHIC: {}, GRAPHIC_J: {}, GRAPHIC_NF: {}, GRAPHIC_T: {}, HMONG: {}, HOLIDAY: {}, J_FICTION: {}, J_NONFIC: {}, LARGEPRINT: {}, MAGAZINES: {}, MYSTERY: {}, NONFICTION: {}, PB_FICTION: {}, PB_MYSTERY: {}, PB_ROMANCE: {}, PB_SCIFI: {}, PB_WESTERN: {}, PICTURE_BK: {}, PIC_BOOKCD: {}, PROF_COLL: {}, REFERENCE: {}, ROMANCE: {}, SCIFI: {}, SOMALI: {}, SPA_BOARD: {}, SPA_EARLY: {}, SPA_E_NF: {}, SPA_F: {}, SPA_G: {}, SPA_J_F: {}, SPA_J_G: {}, SPA_J_NF: {}, SPA_NF: {}, SPA_PIC: {}, TEEN: {}, TEEN_NF: {}, VIDEOGAMES: {}, WESTERNS: {} }
   },
+  'US-MNVA': {
+    name: 'Arrowhead Library System',
+    ils: 'Horizon',
+    tag: '939',
+    subs: { a: 'm', c: 'd', b: 'b' },
+    lendLocs: {aurora:{}, babbit:{}, bdette:{}, bgfgnd:{}, bovey:{}, buhl:{}, calumt:{}, chisom:{}, cloque:{}, cook:{}, craine:{}, cton:{}, dhsdrr:{}, digital:{}, ehsesc:{}, ely:{}, evelth:{}, felfal:{}, fhsfal:{}, ghsgnd:{}, gilber:{}, gmarai:{}, gpmgnd:{}, grapid:{}, hibbng:{}, hoyt:{}, ifalls:{}, irrc:{}, keewat:{}, kssdrr:{}, marble:{}, mbook:{}, mhsccs:{}, mmslks:{}, moose:{}, mrtmib:{}, mshill:{}, mtiron:{}, nkhnke:{}, nselks:{}, shslks:{}, silver:{}, thslks:{}, twohar:{}, vrgnia:{}, wesesc:{}}
+  },
+  'US-MNSTCLG': {
+    name: 'Great River Regional Library',
+    ils: 'Horizon',
+    tag: '949',
+    subs: { a: 'm', c: 'd', d: 'q', b: 'n', x: 't', y: 'n' },
+    lendItypes: {bk: 1, cd: 1, djmed: 1, dmed: 1, dvp: 1, dvrc3: 1, dvrc: 1, jbk: 1, jcd: 1, jdvp: 1, jdvrc3: 1, jdvrc: 1, jmed: 1, jvp: 1, jvrc3: 1, jvrc: 1, med: 1, rdvp: 1, rdvrc3: 1, rdvrc: 1, rvp: 1, rvrc3: 1, rvrc: 1, vp: 1, vrc3: 1, vrc: 1},
+    lendLocs: {al: {}, an: {}, be: {}, br: {}, bu: {}, co: {}, cs: {}, cw: {}, de: {}, eb: {}, er: {}, fo: {}, ge: {}, hl: {}, hq: {}, ki: {}, lf: {}, lp: {}, me: {}, mo: {}, pa: {}, ri: {}, ry: {}, sk: {}, sm: {}, sp: {}, sw: {}, up: {}, wp: {}}
+  },
   'US-MNFFV': {
     name: 'Viking Library System',
     ils: 'Horizon',
     tag: '945',
     subs: { a: 'c,d', c: 'e', d: 'f', b: 'b', x: 'a', y: 'n' },
     lendItypes: { ac: 1, acsp: 1, bk: 1, cbc: 1, cbcd: 1, cd: 1, cdsp: 1, chper: 1, cper: 1, dvd: 1, dvdtv: 1, hol: 1, idvd: 1, pb: 1, per: 1, pro: 1, sc: 1, sm: 1, v: 1, vr: 1 }
-  },
-  'US-MNDU': {
-    name: 'Duluth Public Library',
-    ils: 'Polaris',
-    tag: '852',
-    subs: { a: 'b', c: 'k,h,i,m', d: 'j', b: 'p', x: '7' },
-    lendItypes: { 'True': 1 }
   },
   'US-MNMHCL': {
     name: 'Hennepin County Library',
@@ -91,7 +90,14 @@ const localFields = {
     subs: { a: 'm,c', c: 'd', d: 'q', b: 'b', v: 'e', x: 't', y: 'n' },
     lendItypes: { 'a10': 1, 'a21': 1, 'a7': 1, 'j21': 1, 'j7': 1 }
   },
-  'US-MNSP': {
+  'US-MNDU': {
+    name: 'Duluth Public Library',
+    ils: 'Polaris',
+    tag: '852',
+    subs: { a: 'b', c: 'k,h,i,m', d: 'j', b: 'p', x: '7' },
+    lendItypes: { 'True': 1 }
+  },
+ 'US-MNSP': {
     name: 'Saint Paul Public Library',
     ils: 'III',
     tag: '945',
