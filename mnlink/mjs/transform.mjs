@@ -61,6 +61,13 @@ const localFields = {
     subs: { a: 'l', c: 'a', d: 'w', b: 'i', x: 't', y: 'i' },
     lendLocs: { AUDIOBK_JN: {}, AUDIOBK_NF: {}, AUDIOBK_YA: {}, AUDIOBOOK: {}, AUDIOBOOKJ: {}, CD: {}, CDJ: {}, CHINESE: {}, DECODABLE: {}, DVDF: {}, DVDJ: {}, DVDJN: {}, DVDN: {}, DVDTEEN: {}, EARLYREAD: {}, EASY_NF: {}, ER_BOOKCD: {}, FICTION: {}, GAMES: {}, GRAPHIC: {}, GRAPHIC_J: {}, GRAPHIC_NF: {}, GRAPHIC_T: {}, HMONG: {}, HOLIDAY: {}, J_FICTION: {}, J_NONFIC: {}, LARGEPRINT: {}, MAGAZINES: {}, MYSTERY: {}, NONFICTION: {}, PB_FICTION: {}, PB_MYSTERY: {}, PB_ROMANCE: {}, PB_SCIFI: {}, PB_WESTERN: {}, PICTURE_BK: {}, PIC_BOOKCD: {}, PROF_COLL: {}, REFERENCE: {}, ROMANCE: {}, SCIFI: {}, SOMALI: {}, SPA_BOARD: {}, SPA_EARLY: {}, SPA_E_NF: {}, SPA_F: {}, SPA_G: {}, SPA_J_F: {}, SPA_J_G: {}, SPA_J_NF: {}, SPA_NF: {}, SPA_PIC: {}, TEEN: {}, TEEN_NF: {}, VIDEOGAMES: {}, WESTERNS: {} }
   },
+  'US-MNSRC': {
+    name: 'Ramsey County Library',
+    ils: 'Horizon',
+    tag: '949',
+    subs: { a: 'd', c: 'b', b: 'a', x: 'c', y: 'i' },
+    lendItypes: {apb:1, avd:1, b:1, cd:1, jb:1, jcd:1, jlt:1, jpb:1, jtb:1, jvd:1, lt:1, tb:1, yb:1, ylt:1, ypb:1, ytb:1}
+  },
   'US-MNRHSLC': {
     name: 'Southeastern Libraries Cooperating (SELCO)',
     ils: 'Horizon',
