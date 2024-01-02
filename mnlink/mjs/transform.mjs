@@ -277,6 +277,15 @@ export function cluster_transform(clusterStr) {
         { s: sid }
       ]
     };
+    // this is a test-- delete when done
+    if (cluster.clusterId === '000d81e4-6349-4773-993c-9a6cbd9ef034' && sid === 'US-MNMAC') {
+      f999.subfields.forEach(s => {
+        if (s.s) {
+          s.s = 'US-MIME';
+        }
+      });
+    }
+    //
     for (let a = 0; a < cluster.matchValues.length; a++) {
       f999.subfields.push({ m: cluster.matchValues[a] });
     }
