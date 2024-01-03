@@ -277,7 +277,7 @@ export function cluster_transform(clusterStr) {
         { s: sid }
       ]
     };
-    // this is a test-- delete when done
+    /* this is a test-- delete or disable when done
     if (cluster.clusterId === '000d81e4-6349-4773-993c-9a6cbd9ef034' && sid === 'US-MNMAC') {
       f999.subfields.forEach(s => {
         if (s.s) {
@@ -285,7 +285,7 @@ export function cluster_transform(clusterStr) {
         }
       });
     }
-    //
+    */
     for (let a = 0; a < cluster.matchValues.length; a++) {
       f999.subfields.push({ m: cluster.matchValues[a] });
     }
