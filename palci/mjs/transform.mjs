@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-PPHFC' : {
+    name: 'Holy Family University',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
+    lendLocs: [ 'Academic Media', 'Curriculum Library', 'DVDs', 'Display Lower Level', 'Display Main Level', 'Display Upper Level', 'Lower Level' ]
+  },
   'US-PANL': {
     name: 'Lebanon Valley College',
     tag: '995',
