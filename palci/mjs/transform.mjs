@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-DEWGBC': {
+    name: 'Goldey-Beacom College',
+    tag: '952',
+    idField: '999c',
+    subs: { a: 'c', b: 'p', c: 'o', d: '2', k: '3', n: 'h', x: 'y' },
+    lendLocs: [ 'CART', 'OVERSIZE', 'STACKS', 'STORAGE', 'TECHROOM' ]
+  },
   'US-PPHFC' : {
     name: 'Holy Family University',
     tag: '952',
