@@ -333,9 +333,9 @@ const localFields = {
   },
   'US-NNU': {
     name: 'NYU',
-    tag: '930',
-    subs: { a: 's', b: 'b', c: 'c', d: 't', x: 'm', n: 'd', u: 'd', v: 'd', w: 'd' },
-    lendLocs: ['BOBSTEZB', 'NCOUREZB', 'OSCOREZB', 'OSNYUEZB']
+    tag: '995',
+    subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'},
+    lendLocs: [ 'BOBST BLEIS', 'BOBST EASIA', 'BOBST EASOV', 'BOBST FOLIO', 'BOBST MAIN', 'BOBST OVER', 'BOBST RR4CL', 'BOBST SCORE', 'OSNYU COUR', 'OSNYU COUR4', 'OSNYU EASIA', 'OSNYU MAIN' ]
   },
   'US-NNNS': {
     name: 'New School',
