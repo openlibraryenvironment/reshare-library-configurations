@@ -339,10 +339,9 @@ const localFields = {
   },
   'US-NNNS': {
     name: 'New School',
-    tag: '930',
-    subs: { a: 's', b: 'b', c: 'c', d: 't', x: 'm', n: 'd', u: 'd', v: 'd', w: 'd' },
-    lendLocs: ['TNSFOEZB', 'TNSGIEZB', 'TNSOSEZB', 'TNSSCEZB'],
-    lendItypes: ['BOOK', 'SCORE']
+    tag: '995',
+    subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'},
+    lendLocs: ['TNSFO MAIN', 'TNSGI MAIN', 'TNSOS MAIN', 'TNSSC MAIN']
   },
   'US-PSC': {
     name: 'Swarthmore',
