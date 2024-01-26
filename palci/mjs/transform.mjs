@@ -76,9 +76,9 @@ const localFields = {
   },
   'US-NNCOO': {
     name: 'The Cooper Union',
-    tag: '930',
-    subs: { a: 's', b: 'b', c: 'c', d: 't', x: 'm', v: 'd', n: 'd', u: 'd', w: 'd' },
-    lendLocs: ['CUEZB', 'CUOSEZB']
+    tag: '995',
+    subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'},
+    lendLocs: ['CU MAIN', 'CUOS MAIN']
   },
   'US-NJUPM': {
     name: 'Montclair State University',
