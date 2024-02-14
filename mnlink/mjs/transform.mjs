@@ -15,7 +15,7 @@ const localFields = {
     name: 'Pine Technical and Community College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%082|%090|%050', b: 'b', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNU': {
@@ -241,7 +241,7 @@ export function cluster_transform(clusterStr) {
       let tag = Object.keys(field)[0];
       if (tag.match(/050|082|090|092|099/)) {
         let csubs = getSubs(field[tag]);
-        bibCall[tag] = (csubs.a && csubs.b) ? csubs.a[0] + csubs.b[0] : (csubs.a) ? csubs.a[0] : '';
+        bibCall[tag] = (csubs.a && csubs.b) ? csubs.a[0] + ' ' + csubs.b[0] : (csubs.a) ? csubs.a[0] : '';
       }
       if (!recFields[tag]) recFields[tag] = [];
       recFields[tag].push(field[tag]);
