@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-PATM': {
+    name: 'Muhlenberg College',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8','9'],
+    subs: { a: 'c', b: '876p', c: 'k,h,i', k: '876x' },
+    lendLocs: [ 'AV Area - Movies', 'Main Collection (Oversize)', 'Main Collection', 'Microform Area - Documents', 'Microform Area - Periodicals', 'Reference Atlases', 'U.S. Government Publications Microforms', 'U.S. Government Publications' ]
+  },
   'US-DEWGBC': {
     name: 'Goldey-Beacom College',
     tag: '952',
