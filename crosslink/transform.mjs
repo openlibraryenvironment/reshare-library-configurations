@@ -4,11 +4,11 @@
 */
 
 const localFields = {
- 'US-MNU': {
+ 'US-MWALB': {
     name: 'Brandeis University',
     ils: 'Alma',
-    tag: '952',
-    subs: { a: 'a', c: 'd', d: 'n', b: 'c', x: 'm', y: 'i' },
+    tag: '995',
+    subs: { a: 'aa', c: 'd', d: 'n', b: 'c', x: 'm', y: 'i' }
   }
 };
 
