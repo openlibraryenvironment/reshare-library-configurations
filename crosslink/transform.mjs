@@ -8,7 +8,8 @@ const localFields = {
     name: 'Brandeis University',
     ils: 'Alma',
     tag: '995',
-    subs: { a: 'aa', c: 'd', d: 'n', b: 'c', x: 'm', y: 'i' }
+    subs: { a: 'aa', c: 'bb', d: 'k', b: 's', n: 'e,w', u: 'f,x', x: 't', y: 'a' },
+    lendLocs: {CDBC:{}, JMFLM:{}, MLREF:{}, MMEDB:{}, MSTCK:{}, SCHOLARS:{}, SMICROFORM:{}, SSTCK:{}}
   }
 };
 
