@@ -266,7 +266,7 @@ export function cluster_transform(clusterStr) {
     // control number updates 
     controlNumber = controlNumber.replace(/^oai.+:/, '');
 
-    if (sid.match(/^(US-MNMAC|US-MNCH)$/) && !controlNumber.match(/^u/)) {
+    if (sid.match(/^(US-MNMAC|US-MNCH|US-MNSHS)$/) && !controlNumber.match(/^u/)) {
       controlNumber = controlNumber.replace(/^/, 'u');
     }
 
