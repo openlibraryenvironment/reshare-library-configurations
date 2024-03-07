@@ -365,6 +365,7 @@ const localFields = {
   },
   'US-PBL': {
     name: 'Lehigh',
+    ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
     lendLocs: ['Fairchild - 5th Floor - North', 'Fairchild - 6th Floor - North - Media Collection', 'Fairchild - 6th Floor - North', 'Fairchild - 7th Floor - North', 'LMC-B', 'LMC-G', 'Linderman 1st Floor - Reading Room - Faculty Authors', 'Linderman 1st Floor - Reading Room - Juvenile Collection', 'Linderman 1st Floor - Reading Room - New Books', 'Linderman 1st Floor - Reading Room - Reading Room Collection', 'Linderman 1st Floor - Rotunda', 'Linderman 2nd Floor - Rotunda', 'Linderman 3rd Floor - Rotunda', 'Linderman 3rd Floor - Stacks', 'Linderman 4th Floor - Stacks', 'Linderman Ground Floor - Lower Level', 'Linderman Ground Floor - Upper Level', 'Lucy\'s Cafe - Linderman Ground Level Rotunda']
@@ -551,8 +552,24 @@ export function transform(clusterStr) {
         if (tag === '008') mainBib.fields.push(field);
       }
     }
+    let isSuppressed = false;
 
     let lf = localFields[sid];
+    if (lf && lf.ils && lf.ils === 'FOLIO') {
+      let ff999 = recFields['999'];
+      if (ff999) {
+        for (let x = 0; x < ff999.length; x++) {
+          let f = ff999[x];
+          if (f.ind1 === 'f' && f.ind2 === 'f') {
+            let subs = getSubs(f);
+            if (subs.t && subs.t[0] === '1') {
+              isSuppressed = true
+            }
+          }
+        }
+      }
+      
+    }
     let controlNumber = lid;
     if (sid === 'US-PYC') {
       controlNumber = controlNumber.replace(/.+:/, 'u');
@@ -586,7 +603,7 @@ export function transform(clusterStr) {
     for (let a = 0; a < cluster.matchValues.length; a++) {
       f999.subfields.push({ m: cluster.matchValues[a] });
     }
-    f999s.push({ '999': f999 });
+    if (!isSuppressed) f999s.push({ '999': f999 });
 
     // normalized item fields
     if (lf) {
@@ -682,7 +699,7 @@ export function transform(clusterStr) {
           policy = lf.lendFunc(recFields, outItem['999']) || policy;
         }
         outItem['999'].subfields.push({ p: policy });
-        outItems.push(outItem);
+        if (!isSuppressed) outItems.push(outItem);
       }
     }
   }
