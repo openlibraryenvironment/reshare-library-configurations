@@ -26,6 +26,13 @@ const localFields = {
     subs: { a: 'a', c: 'd', d: 'n', b: 'c', x: 'm', y: 'i' },
     lendLocs: {TARCHGEN:{}, TARCHOVF:{}, TBIOMGEN:{}, TBIOMGENJS:{}, TBIOMGENS:{}, TBIOMGENVS:{}, TBIOMTHSJS:{}, TBIOMTHSVS:{}, TCOSGEN:{}, TCOSSN1:{}, TCOSSN2:{}, TLAWGEN:{}, TLAWUSD:{}, TMAGRGEN:{}, TMAGRGOV:{}, TMAGRGOVS:{}, TMAGRGOVU:{}, TMAGRTHS:{}, TMATHGEN:{}, TMUSIGEN:{}, TNRLGEN:{}, TNRLGOV:{}, TNRLGOVCD:{}, TNRLGOVS:{}, TNRLGOVU:{}, TNRLGOVUM:{}, TNRLMAP:{}, TNRLTHS:{}, TNRLVID:{}, TSCIGEN:{}, TSCIOVF:{}, TSCITHS:{}, TWILSAME:{}, TWILSCLS:{}, TWILSCLSE:{}, TWILSCLSJ:{}, TWILSCLSM:{}, TWILSEAS:{}, TWILSGEN:{}, TWILSGEND:{}, TWILSGENR:{}, TWILSGOVCD:{}, TWILSGOVCG:{}, TWILSGOVH:{}, TWILSGOVK:{}, TWILSGOVN:{}, TWILSGOVO:{}, TWILSGOVQ:{}, TWILSGOVU:{}, TWILSMAP:{}, TWILSTHS:{}, ZMLACGEN:{}, ZMLACGENX:{}, ZMLACLAW:{}, ZMLACMPL:{}, ZMLACOWL:{}, ZMLACSPP:{}, ZMLACUMD:{}, ZMLACUMDN:{}}
   },
+  'US-MNSHS': {
+    name: 'Scott County Library',
+    ils: 'Symphony',
+    tag: '999',
+    subs: { a: 'l', c: 'a', d: 'w', b: 'i', x: 't' },
+    lendLocs: {'AV-BKSONCD':{}, 'AV-CD':{}, 'AV-DVD':{}, 'EARLY READ':{}, 'EASY-NONF':{}, 'EASY-SPEC':{}, 'JUV-GRAPHI':{}, 'JUV-MAG':{}, 'JUV-MAUD':{}, 'JUV-SERIES':{}, 'WORLD EASY':{}, 'WORLD LANG':{}, 'YA-GRAPHIC':{}, 'YA-MAG':{}, 'YA-SERIES':{}, BOARDBKS:{}, BUSINESS:{}, EASYBOOK:{}, GAMES:{}, GRAPHICFIC:{}, JUVENILE:{}, LARGEPRINT:{}, MAGAZINE:{}, PAPERBACK:{}, PARENTING:{}, PROFSSNL:{}, REFERENCE:{}, RESHELVING:{}, SHELF:{}, WORLD_JUV:{}, WORLD_YA:{}, YA:{}}
+  },
   'US-MNR': {
     name: 'Rochester Public Library',
     ils: 'Symphony',
