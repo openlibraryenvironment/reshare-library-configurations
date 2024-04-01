@@ -377,7 +377,7 @@ const localFields = {
     ils: 'Evergreen',
     tag: '852',
     subs: { a: 'b,c', c: 'j', b: 'p', v: 'v', x: 'g', y: 'p' },
-    lendLocs: { 'GODEL Main': {}, 'GREENBUSH Main': {}, 'HALLOCK Main': {}, 'RED_LAKE_FALLS Main': {}, 'ROSEAU Main': {}, 'THIEF_RIVER_FALLS Main': {}, 'WARROAD Main': {}, 'ZLINK_GRYGLA Main': {}, 'ZLINK_KARLSTAD Main': {}, 'ZLINK_MIDDLE_RIVER Main': {} }
+    lendLocs: { 'GODEL Main': {}, 'GREENBUSH Main': {}, 'HALLOCK Main': {}, 'RED_LAKE_FALLS Main': {}, 'ROSEAU Main': {}, 'THIEF_RIVER_FALLS Main': {}, 'WARROAD Main': {}, 'ZLINK_KARLSTAD Main': {}, 'ZLINK_MIDDLE_RIVER Main': {} }
   },
   'US-MNMOHL': {
     name: 'Lake Agassiz Regional Library',
