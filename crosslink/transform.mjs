@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+ 'US-NGENOU': {
+    name: 'SUNY Geneseo',
+    ils: 'Alma',
+    tag: '995',
+    subs: { a: 'aa', c: 'bb', d: 'k', b: 's', n: 'e,w', u: 'f,x', x: 't', y: 'a' },
+    lendLocs: {}
+  },
  'US-MWALB': {
     name: 'Brandeis University',
     ils: 'Alma',
