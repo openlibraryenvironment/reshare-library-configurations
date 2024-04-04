@@ -384,10 +384,10 @@ const localFields = {
   },
   'US-PPLAS': {
     name: 'La Salle',
-    idField: '907a',
-    tag: '945',
-    subs: { a: 'l', b: 'i', c: '%050|%090', y: 'y' },
-    lendLocs: ['lasg', 'lasl', 'lasla', 'laslb', 'lati']
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
+    lendLocs: [ '2ND FL FOLIO SHELVES', '2ND FLOOR', '2nd FL FOLIO SHELVES', '2nd FLOOR', '3RD FLOOR MEZZANINE', '3RD FLOOR', '3rd FLOOR MEZZANINE', '3rd FLOOR', 'AUDIOBOOK (REC. READING)', 'BOUND (LOWER LVL)', 'CHILDREN\'S BOOKS -- LOWER LEVEL', 'ILL DEPARTMENT', 'ILL Department', 'INTERLIB LOAN BOOK', 'MEETING ROOMS', 'NEW BOOKS', 'RECREATIONAL BKS, 1st floor', 'RECREATIONAL BOOKS, 1ST FLOOR', 'TEXTBOOKS', 'VIDEO SHELVES, LOWER LEVEL', 'VIDEO SHELVES, lower level' ]
   },
   'US-PWML': {
     name: 'Lycoming',
