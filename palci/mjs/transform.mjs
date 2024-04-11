@@ -363,6 +363,13 @@ const localFields = {
     subs: { a: 'i', b: 's', c: 'bb', d: 'j', x: 'c', y: 'a', u: 'f,x', n: 'e,w', v: 'g', k: 'jj' },
     lendLocs: ['hm']
   },
+  'US-NJMD': {
+    name: 'Drew University',
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
+    lendLocs: [ 'Level A Folio', 'Level A', 'Level B', 'Level C Reserves', 'Level C', 'Level D', 'Level E', 'Level F', 'Media Library' ]
+  }, 
   'US-PBL': {
     name: 'Lehigh',
     ils: 'FOLIO',
