@@ -11,6 +11,20 @@ const localFields = {
     subs: { a: 'c', c: 'o', d: '2', b: 'p', x: 'y', y: 'i' },
     notLendLocs: {'BRD-BK':{}, BARNKIT:{}, BINDERY:{}, BOOKCLUB:{}, CATALOGING:{}, CHILDSTORAGE:{}, GAMEBRD:{}, GAMRES:{}, ILLN:{}, JPUZZLE:{}, MLCLLIVE:{}, MNREF:{}, MP3:{}, OFFICE:{}, ONORD:{}, OUTKIT:{}, OUTSTOR:{}, PUP:{}, PUZ:{}, REFERENCE:{}, STAFF:{}, STEAM:{}, STORAGE:{}, STORPBK:{}, VERTFILE:{}, VGAME:{}, WOW:{}}
   },
+  'US-MNWILTC': {
+    name: 'Ridgewater College, Willmar',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
+  'US-MNHURCL': {
+    name: 'Ridgewater College, Hutchinson',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%091|%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
   'US-MNTINCT': {
     name: 'Northland Community & Technical College, Thief River Falls',
     ils: 'Alma',
@@ -568,7 +582,7 @@ export function cluster_transform(clusterStr) {
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
       let tag = Object.keys(field)[0];
-      if (tag.match(/050|082|090|092|099/)) {
+      if (tag.match(/050|082|090|091|092|099/)) {
         let csubs = getSubs(field[tag]);
         bibCall[tag] = (csubs.a && csubs.b) ? csubs.a[0] + ' ' + csubs.b[0] : (csubs.a) ? csubs.a[0] : '';
       }
