@@ -11,6 +11,20 @@ const localFields = {
     subs: { a: 'c', c: 'o', d: '2', b: 'p', x: 'y', y: 'i' },
     notLendLocs: {'BRD-BK':{}, BARNKIT:{}, BINDERY:{}, BOOKCLUB:{}, CATALOGING:{}, CHILDSTORAGE:{}, GAMEBRD:{}, GAMRES:{}, ILLN:{}, JPUZZLE:{}, MLCLLIVE:{}, MNREF:{}, MP3:{}, OFFICE:{}, ONORD:{}, OUTKIT:{}, OUTSTOR:{}, PUP:{}, PUZ:{}, REFERENCE:{}, STAFF:{}, STEAM:{}, STORAGE:{}, STORPBK:{}, VERTFILE:{}, VGAME:{}, WOW:{}}
   },
+  'US-MNMPSMU': {
+    name: 'South Central College, North Mankato',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
+  'US-MNWINOSM': {
+    name: 'South Central College, Faribault',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
   'US-MNNMT': {
     name: 'Saint Mary\'s University of Minnesota, Winona',
     ils: 'Alma',
