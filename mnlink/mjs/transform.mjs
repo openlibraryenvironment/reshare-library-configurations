@@ -40,28 +40,28 @@ const localFields = {
     notLendLocs: {}
   },
   'US-MNMPSMU': {
-    name: 'South Central College, North Mankato',
+    name: 'Saint Mary\'s University of Minnesota, Twin Cities',
     ils: 'Alma',
     tag: '909',
     subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNWINOSM': {
-    name: 'South Central College, Faribault',
-    ils: 'Alma',
-    tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
-    notLendLocs: {}
-  },
-  'US-MNNMT': {
     name: 'Saint Mary\'s University of Minnesota, Winona',
     ils: 'Alma',
     tag: '909',
     subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
+  'US-MNNMT': {
+    name: 'South Central College, North Mankato',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
   'US-MNFBSCT': {
-    name: 'Saint Mary\'s University of Minnesota, Twin Cities',
+    name: 'South Central College, Faribault',
     ils: 'Alma',
     tag: '909',
     subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
