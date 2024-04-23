@@ -11,6 +11,34 @@ const localFields = {
     subs: { a: 'c', c: 'o', d: '2', b: 'p', x: 'y', y: 'i' },
     notLendLocs: {'BRD-BK':{}, BARNKIT:{}, BINDERY:{}, BOOKCLUB:{}, CATALOGING:{}, CHILDSTORAGE:{}, GAMEBRD:{}, GAMRES:{}, ILLN:{}, JPUZZLE:{}, MLCLLIVE:{}, MNREF:{}, MP3:{}, OFFICE:{}, ONORD:{}, OUTKIT:{}, OUTSTOR:{}, PUP:{}, PUZ:{}, REFERENCE:{}, STAFF:{}, STEAM:{}, STORAGE:{}, STORPBK:{}, VERTFILE:{}, VGAME:{}, WOW:{}}
   },
+  'US-MNELYV': {
+    name: 'Minnesota North College, Vermilion',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
+  'US-MNIFRC': {
+    name: 'Minnesota North College, Rainy River',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%099|%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
+  'US-MNVM': {
+    name: 'Minnesota North College, Mesabi Range',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
+  'US-MNGRI': {
+    name: 'Minnesota North College, Itasca',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
   'US-MNHIBC': {
     name: 'Minnesota North College, Hibbing',
     ils: 'Alma',
@@ -598,7 +626,8 @@ export function cluster_transform(clusterStr) {
       let tag = Object.keys(field)[0];
       if (tag.match(/050|082|090|091|092|099/)) {
         let csubs = getSubs(field[tag]);
-        bibCall[tag] = (csubs.a && csubs.b) ? csubs.a[0] + ' ' + csubs.b[0] : (csubs.a) ? csubs.a[0] : '';
+        let a = (csubs.a) ? csubs.a.join(' ') : '';
+        bibCall[tag] = (a && csubs.b) ? a + ' ' + csubs.b[0] : (a) ? a : '';
       }
       if (!recFields[tag]) recFields[tag] = [];
       recFields[tag].push(field[tag]);
