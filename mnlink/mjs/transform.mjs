@@ -15,7 +15,7 @@ const localFields = {
     name: 'Minnesota State Community and Technical College, Wadena',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%090|%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%092|%082|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNMOHNTC': {
