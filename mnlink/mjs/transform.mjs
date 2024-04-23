@@ -11,6 +11,34 @@ const localFields = {
     subs: { a: 'c', c: 'o', d: '2', b: 'p', x: 'y', y: 'i' },
     notLendLocs: {'BRD-BK':{}, BARNKIT:{}, BINDERY:{}, BOOKCLUB:{}, CATALOGING:{}, CHILDSTORAGE:{}, GAMEBRD:{}, GAMRES:{}, ILLN:{}, JPUZZLE:{}, MLCLLIVE:{}, MNREF:{}, MP3:{}, OFFICE:{}, ONORD:{}, OUTKIT:{}, OUTSTOR:{}, PUP:{}, PUZ:{}, REFERENCE:{}, STAFF:{}, STEAM:{}, STORAGE:{}, STORPBK:{}, VERTFILE:{}, VGAME:{}, WOW:{}}
   },
+  'US-MNWADNTC': {
+    name: 'Minnesota State Community and Technical College, Wadena',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
+  'US-MNMOHNTC': {
+    name: 'Minnesota State Community and Technical College, Moorhead',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
+  'US-MNFFC': {
+    name: 'Minnesota State Community and Technical College, Fergus Falls',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
+  'US-MNDLTI': {
+    name: 'Minnesota State Community and Technical College, Detroit Lakes',
+    ils: 'Alma',
+    tag: '909',
+    subs: { a: 'l', c: '%093|%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    notLendLocs: {}
+  },
   'US-MNELYV': {
     name: 'Minnesota North College, Vermilion',
     ils: 'Alma',
@@ -624,7 +652,7 @@ export function cluster_transform(clusterStr) {
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
       let tag = Object.keys(field)[0];
-      if (tag.match(/050|082|090|091|092|099/)) {
+      if (tag.match(/050|082|09\d/)) {
         let csubs = getSubs(field[tag]);
         let a = (csubs.a) ? csubs.a.join(' ') : '';
         bibCall[tag] = (a && csubs.b) ? a + ' ' + csubs.b[0] : (a) ? a : '';
