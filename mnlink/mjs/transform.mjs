@@ -134,7 +134,7 @@ const localFields = {
     name: 'South Central College, North Mankato',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNFBSCT': {
@@ -148,84 +148,84 @@ const localFields = {
     name: 'Hennepin Technical College, Eden Prairie',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNBPHTC': {
     name: 'Hennepin Technical College, Brooklyn Park',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNCRPARC': {
     name: 'Anoka-Ramsey Community College, Coon Rapids',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNCAARC': {
     name: 'Anoka-Ramsey Community College, Cambridge',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNSTCLVT': {
     name: 'St. Cloud Technical & Community College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNSTC': {
     name: 'Saint Paul College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MN': {
     name: 'Minnesota State Law Library',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNANVT': {
     name: 'Anoka Technical College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNALETI': {
     name: 'Alexandria Technical & Community College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNMARS': {
     name: 'Southwest Minnesota State University',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNSSC': {
     name: 'St. Catherine University',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNSTCLS': {
     name: 'St. Cloud State University',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNRON': {
@@ -239,7 +239,7 @@ const localFields = {
     name: 'Perpich Center for Arts Education',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNBEMNTC': {
@@ -253,133 +253,133 @@ const localFields = {
     name: 'Winona State University',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNMNHE': {
     name: 'North Hennepin Community College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNMANS': {
     name: 'Minnesota State University, Mankato',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNMOHS': {
     name: 'Minnesota State University Moorhead',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNHI': {
     name: 'Minnesota Historical Society',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNHW': {
     name: 'Minnesota Department of Transportation',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNSPMLR': {
     name: 'Minnesota Legislative Reference Library',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNSPMDR': {
     name: 'Minnesota Department of Revenue',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNN': {
     name: 'Minnesota Department of Natural Resources',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNMPCTC': {
     name: 'Minneapolis College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNMCA': {
     name: 'Minneapolis College of Art and Design',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNSPMSU': {
     name: 'Metropolitan State University',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNDULSC': {
     name: 'Lake Superior College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNCASLLT': {
     name: 'Leech Lake Tribal College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNIGS': {
     name: 'Inver Hills Community College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNSH': {
     name: 'Hamline University',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNCLFC': {
     name: 'Fond du Lac Tribal and Community College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNRTDTC': {
     name: 'Dakota County Technical College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNWBLCC': {
     name: 'Century College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNBRC': {
@@ -400,21 +400,21 @@ const localFields = {
     name: 'Bethany Lutheran College',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNDUSTS': {
     name: 'College of St. Scholastica',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNBEMS': {
     name: 'Bemidji State University',
     ils: 'Alma',
     tag: '909',
-    subs: { a: 'l', c: '%092|%082|%090|%050', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
+    subs: { a: 'l', c: '%090|%050|%092|%082', b: 'b', k: 'p', n: 'e', u: 'c', x: 'm', y: 'a' },
     notLendLocs: {}
   },
   'US-MNSCC': {

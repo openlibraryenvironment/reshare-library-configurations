@@ -11,13 +11,16 @@ fi
 
 if [ $1 == '-f' ]; then
   SRCIDS=`sort -u $2`
+  SLP=10
 else
   SRCIDS=$1
+  SLP=0
 fi
 
 for SRCID in $SRCIDS; do
   URL="${OKAPI}/reservoir/clusters/touch?query=matchkeyId==goldrush%20AND%20sourceId==${SRCID}"
   echo "POST $URL"
   curl -w '\n' --http1.1 $URL -H 'content-type: application/json' -H "x-okapi-token: ${TOKEN}" -d {}
+  sleep $SLP
 done
 
