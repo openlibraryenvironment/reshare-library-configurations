@@ -595,9 +595,6 @@ export function transform(clusterStr) {
     } else if (recFields['001']) { 
       controlNumber = recFields['001'][0] || '';
     }
-    if (sid === 'US-PPLAS') {
-      controlNumber = controlNumber.replace(/.$/, '');
-    }
     let f999 = {
       ind1: '1',
       ind2: '0',
