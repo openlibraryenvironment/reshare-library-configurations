@@ -508,7 +508,7 @@ const localFields = {
     tag: '949',
     subs: { a: 'a', c: 'i', b: 'f', x: 'e', y: 'f' },
     lendLocs: {al:{}, au:{}, bp:{}, br:{}, byrs:{}, cal:{}, cf:{}, chat:{}, chats:{}, chatsel:{}, dc:{}, far:{}, gm:{}, gms:{}, goods:{}, har:{}, hays:{}, hok:{}, hou:{}, hous:{}, houselm:{}, ka:{}, ken:{}, kmhs:{}, kmsint:{}, kwselm:{}, kwsmh:{}, lan:{}, lc:{}, lcr:{}, lcs:{}, ler:{}, lon:{}, lyles:{}, mab:{}, nor:{}, owat:{}, pi:{}, pis:{}, pla:{}, pre:{}, rps:{}, rush:{}, rw:{}, rwshs:{}, sc:{}, selco:{}, sg:{}, shats:{}, soushs:{}, stew:{}, stews:{}, stewsb:{}, stewsc:{}, sv:{}, wab:{}, west:{}, win:{}, wks:{}, wkselem:{}, zum:{}, zumselm:{}, zumsms:{}},
-    lendItypes: {bking2w:1, bking6w:1, gc39:1, gmb21:1, gmd7:1, hfp14:1, hm7:1, hp14:1, htv14:1, ov10:1, ov11:1, ov12:1, ov14:1, ov15:1, ov17:1, ov18:1, ov19:1, ov1:1, ov20:1, ov21:1, ov22:1, ov23:1, ov24:1, ov25:1, ov26:1, ov27:1, ov28:1, ov29:1, ov2:1, ov31:1, ov32:1, ov33:1, ov39:1, ov3:1, ov40:1, ov41:1, ov42:1, ov4:1, ov5:1, ov6:1, ov701:1, ov702:1, ov703:1, ov7:1, ov8:1, ov9:1, sc16:1, sc19:1, sc701:1, sc7:1, sc9:1, schav21:1, schbk21:1}
+    lendItypes: {'21d':1, al14d:1, bking2w:1, bking6w:1, fn10d:1, fn20d:1, fn25d:1, fn50d:1, fndol:1, newm:1, schav21:1, schbk21:1, std0r:1} 
   },
   'US-MNVA': {
     name: 'Arrowhead Library System',
