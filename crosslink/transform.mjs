@@ -4,6 +4,28 @@
 */
 
 const localFields = {
+  'US-CST': {
+    name: 'Stanford University',
+    tag: '999',
+    subs: { a: 'm,l', b: 'i', c: 'a', d: 'w', k: 'j', x: 't', y: 'i' },
+    lendLocs: {'ARS STACKS':{}, 'ART STACKS':{}, 'EARTH-SCI ATLASES':{}, 'EARTH-SCI MEZZANINE':{}, 'EARTH-SCI STACKS':{}, 'EARTH-SCI TECH-RPTS':{}, 'EAST-ASIA CHINESE':{}, 'EAST-ASIA JAPANESE':{}, 'EAST-ASIA KOREAN':{}, 'EDUCATION STACKS':{}, 'EDUCATION STORAGE':{}, 'GREEN CALIF-DOCS':{}, 'GREEN FED-DOCS':{}, 'GREEN FOLIO-FLAT':{}, 'GREEN INTL-DOCS':{}, 'GREEN STACKS':{}, 'MUSIC FOLIO':{}, 'MUSIC MINIATURE':{}, 'MUSIC SCORES':{}, 'MUSIC STACKS':{}, 'SAL SAL-ARABIC':{}, 'SAL SAL-FOLIO':{}, 'SAL SAL-PAGE':{}, 'SAL SALTURKISH':{}, 'SAL SOUTH-MEZZ':{}, 'SAL STACKS':{}, 'SAL3 STACKS':{}, 'SCIENCE STACKS':{}},
+    lendItypes: {'STKS-MONO':1, 'STKS':1, 'EASTK-DOC':1, 'ATLAS':1, 'THESIS':1, 'THESIS-EXP':1, 'GOVSTKS':1, 'SCORE':1},
+    lendFunc: function (rec, lf) {
+      let f919 = rec['919'] || [];
+      let policy = 1;
+      if (f919[0]) {
+        let subs = getSubs(f919[0]);
+        if (subs.a && subs.a[0].match(/exclude from BorrowDirect/i)) {
+          policy = 0;
+        }
+      }
+      if (policy && lf) {
+        let sf = getSubs(lf);
+        if (sf.c && sf.c[0].match(/^3781/)) policy = 0;
+      }
+      return policy;
+    }
+  },
  'US-NGENOU': {
     name: 'SUNY Geneseo',
     ils: 'Alma',
@@ -246,7 +268,7 @@ export function cluster_transform(clusterStr) {
         }
 
         if (lf.lendFunc) {
-          pol = lf.lendFunc(recFields, outItem['999']) || pol;
+          pol = lf.lendFunc(recFields, outItem['999']);
         }
         let policy = (pol) ? 'LOANABLE' : 'UNLOANABLE';
         outItem['999'].subfields.push({ p: policy });
