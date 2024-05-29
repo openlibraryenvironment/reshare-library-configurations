@@ -414,7 +414,7 @@ const localFields = {
     name: 'St. Joseph\'s University',
     tag: '995',
     subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', n: 'e,w', u: 'f,x' },
-    lendLocs: ['Leisure', 'Main', 'bks1', 'bks2', 'bks3', 'campbk', 'cmclit']
+    lendLocs: ['Leisure', 'Main', 'bks1', 'bks2', 'bks3', 'campbk', 'cmclit', 'gfgen']
   },
   'US-PSELS': {
     name: 'Susquehanna',
