@@ -271,10 +271,10 @@ const localFields = {
   },
   'US-PCW': {
     name: 'Widener',
-    idField: '907a',
-    tag: '945',
-    subs: { a: 'l', b: 'i', c: '%050|%090|%099', x: 't', y: 'y', v: 'c' },
-    lendLocs: ['mcir', 'mcurc', 'mcurn', 'mtxc']
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: [ 'Wolfgram Circulating', 'Wolfgram Curriculum (LC)', 'Wolfgram Curriculum (local)', 'Wolfgram Tax Circulating' ]
   },
   'US-PMILS': {
     name: 'Millersville',
