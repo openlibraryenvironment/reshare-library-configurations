@@ -231,10 +231,11 @@ const localFields = {
   },
   'US-PSCU': {
     name: 'Scranton',
-    idField: '907a',
-    tag: '945',
-    subs: { a: 'l', b: 'i', c: '%050|%090|%086|%082|%070', x: 't', y: 'y', v: 'c' },
-    lendLocs: ['mcmr', 'mcc', 'mcos']
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: [ 'Circulating Collection', 'Graphic Novel Collection', 'Graphic Novel Spotlight', 'Mission Reflection Room', 'New Book Shelf', 'Oversize Collection' ],
+    lendItypes: ['Book']
   },
   'US-WVHUM': {
     name: 'Marshall',
