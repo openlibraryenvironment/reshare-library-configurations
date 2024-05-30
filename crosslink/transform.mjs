@@ -4,6 +4,15 @@
 */
 
 const localFields = {
+  'US-NIC': {
+    name: 'Cornell Univeristy',
+    tag: '852',
+    linkedField: '890',
+    linkSubs: ['0', '0'],
+    subs: { a: '890l', b: '890b', c: 'k,h,m', d: '2', k: '890n', u: '890c', v: '890e', w: '890y', x: '890t', y: '890a' },
+    lendLocs: { 'Ent,anx':{}, 'afr':{}, 'afr,anx':{}, 'asia':{}, 'asia,anx':{}, 'asia,av':{}, 'ech':{}, 'ech,anx':{}, 'ech,av':{}, 'engr':{}, 'engr,anx':{}, 'engr,ref':{}, 'ent':{}, 'fine':{}, 'fine,anx':{}, 'gnva':{}, 'gnva,anx':{}, 'hote':{}, 'hote,anx':{}, 'ilr':{}, 'ilr,anx':{}, 'jgsm,anx':{}, 'law':{}, 'law,anx':{}, 'mann':{}, 'mann,anx':{}, 'mann,anxt':{}, 'math':{}, 'math,anx':{}, 'math,desk':{}, 'mus':{}, 'mus,anx':{}, 'oclc,olim':{}, 'olin':{}, 'olin,anx':{}, 'olin,av':{}, 'orni,anx':{}, 'phys,anx':{}, 'rmc,ice':{}, 'sasa':{}, 'sasa,anx':{}, 'sasa,av':{}, 'uris':{}, 'uris,anx':{}, 'vet':{}, 'vet,anx':{}, 'was':{}, 'was,anx':{}, 'was,av':{} }
+
+  },
   'US-CST': {
     name: 'Stanford University',
     tag: '999',
