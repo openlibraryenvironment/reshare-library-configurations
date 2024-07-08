@@ -4,7 +4,14 @@
 */
 
 const localFields = {
-'US-MBSI': {
+  'US-MBNECO': {
+    name: 'NECO',
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {'Clinical Collection':{}, 'Reading Room':{}}
+    },
+  'US-MBSI': {
     name: 'Simmons Univeristy',
     ils: 'FOLIO',
     tag: '952',
