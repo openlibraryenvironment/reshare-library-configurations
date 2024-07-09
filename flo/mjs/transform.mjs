@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-MBEMM': {
+    name: 'Emmanuel',
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {'Emmanuel Authors':{}, 'Main Stacks':{}, Leisure:{}, Mulvaney:{}}
+  },
   'US-MBE': {
     name: 'Emerson',
     ils: 'FOLIO',
