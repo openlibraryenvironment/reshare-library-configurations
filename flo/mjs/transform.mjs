@@ -4,13 +4,20 @@
 */
 
 const localFields = {
+  'US-MBE': {
+    name: 'Emerson',
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {'Director\'s Office - Ask at Service Desk':{}, 'Main Stacks':{}, Display:{}}
+  },
   'US-MBNECO': {
     name: 'NECO',
     ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
     lendLocs: {'Clinical Collection':{}, 'Reading Room':{}}
-    },
+  },
   'US-MBSI': {
     name: 'Simmons Univeristy',
     ils: 'FOLIO',
