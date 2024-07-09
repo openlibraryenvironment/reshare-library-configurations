@@ -122,6 +122,22 @@ export function cluster_transform(clusterStr) {
     // control number updates 
     controlNumber = controlNumber.replace(/^oai.+[\/:]/, '');
 
+    let isSuppressed = false;
+    if (lf && lf.ils && lf.ils === 'FOLIO') {
+      let ff999 = recFields['999'];
+      if (ff999) {
+        for (let x = 0; x < ff999.length; x++) {
+          let f = ff999[x];
+          if (f.ind1 === 'f' && f.ind2 === 'f') {
+            let subs = getSubs(f);
+            if (subs.t && subs.t[0] === '1') {
+              isSuppressed = true
+            }
+          }
+        }
+      }
+    }
+
     if (lf && lf.idField) {
       let tag = lf.idField.substring(0, 3);
       let sf = lf.idField.substring(3);
@@ -146,7 +162,8 @@ export function cluster_transform(clusterStr) {
     for (let a = 0; a < cluster.matchValues.length; a++) {
       f999.subfields.push({ m: cluster.matchValues[a] });
     }
-    f999s.push({ '999': f999 });
+    console.log(isSuppressed);
+    if (!isSuppressed) f999s.push({ '999': f999 });
 
     // normalized item fields
     if (lf) {
@@ -163,6 +180,7 @@ export function cluster_transform(clusterStr) {
       }
       controlNumber = controlNumber.trim();
       for (let i = 0; i < items.length; i++) {
+        if (isSuppressed) break;
         let item = items[i];
         let outItem = {
           '999' : {
@@ -253,6 +271,7 @@ export function cluster_transform(clusterStr) {
   mainBib.fields.unshift({ '001': f001 });
   mainBib.fields.push(...f999s);
   mainBib.fields.push(...outItems);
+  // return '{}'
   return JSON.stringify(mainBib, null, 2);
 }
 
