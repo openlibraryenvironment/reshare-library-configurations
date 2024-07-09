@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-MBP': {
+    name: 'MCPHS',
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {'Boston Circulation':{}, 'Boston Graphic Medicine':{}, 'Boston Leisure Reading':{}}
+  },
   'US-MBEMM': {
     name: 'Emmanuel',
     ils: 'FOLIO',
