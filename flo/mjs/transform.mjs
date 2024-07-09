@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-MBWI': {
+    name: 'Wentworth',
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {DVDs:{}, Display:{}, Fiction:{}, Oversized:{}, Stacks:{}}
+  },
   'US-MBP': {
     name: 'MCPHS',
     ils: 'FOLIO',
