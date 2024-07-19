@@ -312,11 +312,9 @@ const localFields = {
   },
   'US-PNWC': {
     name: 'Westminster',
-    tag: '852',
-    linkedField: '876',
-    linkSubs: ['8', '9'],
-    subs: { a: 'b,c', b: '876p', c: 'h,i', n: '3', v: '3' },
-    lendLocs: ['WFNN General Book Stacks', 'WFNN Juvenile Book Collection', 'WFNN Juvenile Easy Read Books', 'WFNN Juvenile Picture Books', 'WFNN Media Stacks', 'WFNN Oversized Book Stacks', 'WFNN Young Adult Books']
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: [ 'McGill Library CCB Collection', 'McGill Library CCB Collection', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Picture Books', 'McGill Library Juvenile Picture Books', 'McGill Library Juvenile Picture Books', 'McGill Library Juvenile Picture Books', 'McGill Library Juvenile Picture Books', 'McGill Library Library Staff Office', 'McGill Library Library Staff Office', 'McGill Library Microfilm Cabinets/Periodicals', 'McGill Library Microfilm Cabinets/Periodicals', 'McGill Library Oversized Book Stacks', 'McGill Library Oversized Book Stacks', 'McGill Library Oversized Book Stacks', 'McGill Library Oversized Book Stacks', 'McGill Library Oversized Book Stacks', 'McGill Library Oversized Book Stacks', 'McGill Library Young Adult Books' ]
   },
   'US-NJSOOS': {
     name: 'Seton Hall',
