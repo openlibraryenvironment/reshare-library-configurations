@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-NSYL': {
+    name: 'Le Moyne College',
+    tag: '945',
+    idField: '907a',
+    subs: { a: 'l', b: 'i', c: 'a,b', v: 'c', x: 't', y: 'y' },
+    lendLocs: ['lbks', 'lbkso', 'lmcod', 'lmvc', 'ltm', 'ltmyl']
+  },
   'US-PATM': {
     name: 'Muhlenberg College',
     tag: '852',
