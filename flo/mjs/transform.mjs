@@ -7,6 +7,7 @@ const localFields = {
   'US-MBWI': {
     name: 'Wentworth',
     ils: 'FOLIO',
+    show856: true,
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
     lendLocs: {DVDs:{}, Display:{}, Fiction:{}, Oversized:{}, Stacks:{}}
@@ -14,6 +15,7 @@ const localFields = {
   'US-MBP': {
     name: 'MCPHS',
     ils: 'FOLIO',
+    show856: true,
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
     lendLocs: {'Boston Circulation':{}, 'Boston Graphic Medicine':{}, 'Boston Leisure Reading':{}}
@@ -21,6 +23,7 @@ const localFields = {
   'US-MBEMM': {
     name: 'Emmanuel',
     ils: 'FOLIO',
+    show856: true,
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
     lendLocs: {'Emmanuel Authors':{}, 'Main Stacks':{}, Leisure:{}, Mulvaney:{}}
@@ -28,6 +31,7 @@ const localFields = {
   'US-MBE': {
     name: 'Emerson',
     ils: 'FOLIO',
+    show856: true,
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
     lendLocs: {'Director\'s Office - Ask at Service Desk':{}, 'Main Stacks':{}, Display:{}}
@@ -35,6 +39,7 @@ const localFields = {
   'US-MBNECO': {
     name: 'NECO',
     ils: 'FOLIO',
+    show856: true,
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
     lendLocs: {'Clinical Collection':{}, 'Reading Room':{}}
@@ -42,6 +47,7 @@ const localFields = {
   'US-MBSI': {
     name: 'Simmons Univeristy',
     ils: 'FOLIO',
+    show856: true,
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
     lendLocs: {'Careers Collection - Library Reading Room':{}, 'Children\'s Lit - Early Readers':{}, 'Children\'s Lit - Fiction':{}, 'Children\'s Lit - Picture Books':{}, 'Children\'s Literature - Level 1':{}, 'Children\'s Nonfiction':{}, 'Main Collection Overflow':{}, 'Main Collection':{}, 'On Display':{}, 'Oversized Books':{}, 'Simmons Authors Collection - Library Reading Room':{}, Zines:{}}
@@ -74,6 +80,8 @@ export function cluster_transform(clusterStr) {
   let preSize = '';
   let mainBib;
   let isMainBib;
+  let elinks = [];
+  let linkSeen = {};
   for (let x = 0; x < crecs.length; x++) {
     let crec = crecs[x];
     let sid = crec.sourceId;
@@ -143,6 +151,21 @@ export function cluster_transform(clusterStr) {
     // control number updates 
     controlNumber = controlNumber.replace(/^oai.+[\/:]/, '');
 
+    // 856 field field processing
+    let f856 = recFields['856'];
+    if (lf.show856 && f856) {
+      for (let x = 0; x < f856.length; x++) {
+        let f = f856[x];
+        let s = getSubs(f);
+        if (s.u) {
+          if (!linkSeen[s.u]) {
+            elinks.push({ '856': f });
+            linkSeen[s.u] = 1;
+          };
+        }
+      }
+    }
+
     let isSuppressed = false;
     if (lf && lf.ils && lf.ils === 'FOLIO') {
       let ff999 = recFields['999'];
@@ -183,7 +206,6 @@ export function cluster_transform(clusterStr) {
     for (let a = 0; a < cluster.matchValues.length; a++) {
       f999.subfields.push({ m: cluster.matchValues[a] });
     }
-    console.log(isSuppressed);
     if (!isSuppressed) f999s.push({ '999': f999 });
 
     // normalized item fields
@@ -290,6 +312,7 @@ export function cluster_transform(clusterStr) {
 
   mainBib.fields.unshift({ '005': f005 });
   mainBib.fields.unshift({ '001': f001 });
+  if (elinks && elinks[0]) mainBib.fields.push(...elinks);
   mainBib.fields.push(...f999s);
   mainBib.fields.push(...outItems);
   // return '{}'
