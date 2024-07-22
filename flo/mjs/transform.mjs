@@ -51,7 +51,13 @@ const localFields = {
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
     lendLocs: {'Careers Collection - Library Reading Room':{}, 'Children\'s Lit - Early Readers':{}, 'Children\'s Lit - Fiction':{}, 'Children\'s Lit - Picture Books':{}, 'Children\'s Literature - Level 1':{}, 'Children\'s Nonfiction':{}, 'Main Collection Overflow':{}, 'Main Collection':{}, 'On Display':{}, 'Oversized Books':{}, 'Simmons Authors Collection - Library Reading Room':{}, Zines:{}}
-  }
+  },
+  'US-FLOTEST': {
+    name: 'Test Institution',
+    tag: '852',
+    subs: { a: 'c', b: 'p' },
+    lendLocs: { Stacks: {}} 
+  },
 };
 
 function getSubs(field) {
@@ -153,7 +159,7 @@ export function cluster_transform(clusterStr) {
 
     // 856 field field processing
     let f856 = recFields['856'];
-    if (lf.show856 && f856) {
+    if (lf && lf.show856 && f856) {
       for (let x = 0; x < f856.length; x++) {
         let f = f856[x];
         let s = getSubs(f);
