@@ -314,7 +314,7 @@ const localFields = {
     name: 'Westminster',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
-    lendLocs: [ 'McGill Library CCB Collection', 'McGill Library CCB Collection', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library General Book Stacks', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Picture Books', 'McGill Library Juvenile Picture Books', 'McGill Library Juvenile Picture Books', 'McGill Library Juvenile Picture Books', 'McGill Library Juvenile Picture Books', 'McGill Library Library Staff Office', 'McGill Library Library Staff Office', 'McGill Library Microfilm Cabinets/Periodicals', 'McGill Library Microfilm Cabinets/Periodicals', 'McGill Library Oversized Book Stacks', 'McGill Library Oversized Book Stacks', 'McGill Library Oversized Book Stacks', 'McGill Library Oversized Book Stacks', 'McGill Library Oversized Book Stacks', 'McGill Library Oversized Book Stacks', 'McGill Library Young Adult Books' ]
+    lendLocs: [ 'McGill Library CCB Collection', 'McGill Library General Book Stacks', 'McGill Library Juvenile Book Collection', 'McGill Library Juvenile Picture Books', 'McGill Library Library Staff Office', 'McGill Library Microfilm Cabinets/Periodicals', 'McGill Library Oversized Book Stacks', 'McGill Library Young Adult Books' ]
   },
   'US-NJSOOS': {
     name: 'Seton Hall',
