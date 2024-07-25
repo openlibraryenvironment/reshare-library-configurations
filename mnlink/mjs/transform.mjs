@@ -634,7 +634,7 @@ export function cluster_transform(clusterStr) {
           ind1: ' ',
           ind2: ' ',
           subfields: [
-            { a: `Encountered a bad leader "${badLeader}". Using a fake one instead.`}
+            { a: `Encountered a bad leader "${badLeader}". Using the default leader.`}
           ]
         }
       };
