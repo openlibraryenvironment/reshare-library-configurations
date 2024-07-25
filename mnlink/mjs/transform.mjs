@@ -623,9 +623,22 @@ export function cluster_transform(clusterStr) {
     let lid = crec.localId;
     let rec = crec.payload.marc;
     let unknown = false;
-    if (!rec.leader) {
-      rec.leader = '00000cam a2200229Ia 4500';
-      unknown = true
+    if (rec.leader) rec.leader = rec.leader.replace(/^\D{5}/, '00000') 
+    let lerr = (rec.leader && !rec.leader.match(/^\d{5}[a-z]{3}[ a][ a]22\d\d\d\d\d...4500$/)) ? true : false;
+    if (!rec.leader || lerr) {
+      let badLeader = rec.leader;
+      rec.leader = '00000nam a22000000a 4500';
+      unknown = true;
+      let noteField = {
+        '599': {
+          ind1: ' ',
+          ind2: ' ',
+          subfields: [
+            { a: `Encountered a bad leader "${badLeader}". Using a fake one instead.`}
+          ]
+        }
+      };
+      rec.fields.push(noteField);
     }
     let rsize = rec.leader.substring(0, 5);
     if (rsize > preSize) {
