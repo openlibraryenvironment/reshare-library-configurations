@@ -35,7 +35,7 @@ const localFields = {
   'US-ICU': {
     tag: '927',
     subs: { a: 'c', b: 'b', c: 'a', d: 't', v: 'v', y: 'i' },
-    lendLocs: ['ASR-JRLASR', 'ASR-LawASR', 'ASR-LawSupr', 'ASR-RecASR', 'ASR-SciASR', 'DLL-Law', 'DLL-LawCity', 'DLL-LawDisp', 'DLL-LawFul', 'DLL-LawMic', 'DLL-LawPer', 'DLL-LawWell', 'Eck-Eck', 'JCL-Games', 'JCL-Sci', 'JCL-SciDDC', 'JCL-SciLg', 'JCL-SFilm', 'JCL-SMedia', 'JRL-CJK', 'JRL-Film', 'JRL-Gen', 'JRL-GenHY', 'JRL-LawMicG', 'JRL-Mic', 'JRL-Pam', 'JRL-SciMic', 'JRL-SMicDDC', 'JRL-W', 'JRL-WCJK', 'JRL-XClosedCJK', 'JRL-XClosedGen', 'SWL-SWL', 'SWL-SWLMic']
+    lendLocs: ["ASR-JRLASR","ASR-LawASR","ASR-RecASR","ASR-SciASR","DLL-Law","DLL-LawAid","DLL-LawAnxN","DLL-LawAnxS","DLL-LawCat","DLL-LawCity","DLL-LawDisp","DLL-LawFul","DLL-LawMic","DLL-LawPer","DLL-LawWell","Eck-Eck","JCL-Games","JCL-SFilm","JCL-SMedia","JCL-Sci","JCL-SciDDC","JCL-SciLg","JRL-CJK","JRL-Film","JRL-Gen","JRL-GenHY","JRL-LawMicG","JRL-Mic","JRL-Pam","JRL-SMicDDC","JRL-SciMic","JRL-W","JRL-WCJK","JRL-XClosedCJK","JRL-XClosedGen","SWL-SWL","SWL-SWLDiss","SWL-SWLMEd","SWL-SWLMic"]
   },
   'US-MH': {
     tag: '876',
