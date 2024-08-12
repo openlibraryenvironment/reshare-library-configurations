@@ -147,7 +147,7 @@ const localFields = {
     name: 'Rutgers',
     tag: '995',
     subs: { a: 'l', b: 'b', c: 'c', x: 't', y: 'a', u: 'h,i', n: 'f,g', v: 'j', k: 'p' },
-    lendLocs: ['alcyrillc', 'aldocc', 'aldoclusc', 'aldocnjc', 'aldocusc', 'aldocusfoc', 'alealfoc', 'alealstac', 'aledlabc', 'alefolioc', 'alfolioc', 'aliylcc', 'aliylgcc', 'aljuvc', 'aljuvrc', 'alofficec', 'alstackc', 'anstackc', 'cadocusc', 'cafolioc', 'carecreadg', 'castackc', 'chfolioc', 'chstackc', 'crcareerc', 'crfolioc', 'crstackc', 'dadocc', 'dadocnjc', 'dadocusc', 'dafolioc', 'dastackc', 'dgfolioc', 'dgplaysc', 'dgstackc', 'lsdocc', 'lsdocfoc', 'lsdocnjc', 'lsdocusc', 'lsdocusfoc', 'lsstackc', 'mafolioc', 'mastackc', 'sibenrushm', 'sichinardm', 'sistackm', 'smstackc']
+    lendLocs: ['alcyrillc', 'aldocc', 'aldoclusc', 'aldocnjc', 'aldocusc', 'aldocusfoc', 'alealfoc', 'alealstac', 'aledlabc', 'alefolioc', 'alfolioc', 'algalilic', 'aliylcc', 'aliylgcc', 'aljuvc', 'aljuvrc', 'almongolc', 'alofficec', 'alstackc', 'anstackc', 'cadocusc', 'cafolioc', 'carecreadg', 'castackc', 'chfolioc', 'chstackc', 'crcareerc', 'crfolioc', 'crstackc', 'dadocc', 'dadocnjc', 'dadocusc', 'dafolioc', 'dastackc', 'dgcwglc', 'dgfolioc', 'dgplaysc', 'dgstackc', 'lsdocc', 'lsdocfoc', 'lsdocnjc', 'lsdocusc', 'lsdocusfoc', 'lsstackc', 'mafolioc', 'mastackc', 'sibenrushm', 'sichinardm', 'sistackm', 'smstackc']
   },
   'US-PPJ': {
     name: 'Thomas Jefferson',
