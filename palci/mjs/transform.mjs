@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-NTR': {
+    name: 'RPI',
+    tag: '852',
+    subs: { a: 'b,c', b: '876p', c: 'h,i', n: '8763', y: '8' },
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    lendLocs: ['YRMA Beranek Collection', 'YRMA Book Stacks', 'YRMA CDROM', 'YRMA DVD', 'YRMA Outsize', 'YRMA Video', 'YRMM Book Stacks', 'YRMM CD (1st Floor)', 'YRMM CDROM (1st Floor)', 'YRMM DVD (2nd Floor)', 'YRMM Microform', 'YRMM Outsize', 'YRMM Phonorecord (1st Floor)', 'YRMM Technical Reports (3rd Floor)', 'YRMM Thesis Microfilm (1st Floor)', 'YRMM VHS Video (Service Desk)']
+  },
   'US-NSYL': {
     name: 'Le Moyne College',
     tag: '945',
