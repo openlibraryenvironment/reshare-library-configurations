@@ -12,6 +12,6 @@ then
   exit
 fi
 
-URL="${OKAPI}/reservoir/clusters?matchkeyid=goldrush&query=sourceId==${SRCID}"
+URL="${OKAPI}/reservoir/clusters?matchkeyid=goldrush&query=sourceId==${SRCID}&limit=100"
 
 curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" | jq .
