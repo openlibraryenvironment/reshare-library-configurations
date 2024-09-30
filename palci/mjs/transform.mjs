@@ -38,7 +38,8 @@ const localFields = {
     name: 'Holy Family University',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
-    lendLocs: [ 'Academic Media', 'Curriculum Library', 'DVDs', 'Display Lower Level', 'Display Main Level', 'Display Upper Level', 'Lower Level' ]
+    oldlendLocs: [ 'Academic Media', 'Curriculum Library', 'DVDs', 'Display Lower Level', 'Display Main Level', 'Display Upper Level', 'Lower Level' ],
+    lendLocs: [ 'Academic Media', 'DVDs', 'Display Main Level', 'Lower Level', 'Main Floor ~ Leisure', 'Main Floor ~ Stacks' ]
   },
   'US-PANL': {
     name: 'Lebanon Valley College',
