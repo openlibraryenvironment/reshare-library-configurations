@@ -4,6 +4,41 @@
 */
 
 const localFields = {
+  'US-WEST': {
+    name: 'Cardinal West',
+    ils: 'III',
+    tag: '945',
+    subs: { a: 'l', b: 'i', c: '%090', y: 'y' },
+    notLendLocs: {}
+  },
+  'US-SOUTH': {
+    name: 'Cardinal South',
+    ils: 'III',
+    tag: '945',
+    subs: { a: 'l', b: 'i', c: '%090', y: 'y' },
+    notLendLocs: {}
+  },
+  'US-OUTER': {
+    name: 'Cardinal Outer',
+    ils: 'III',
+    tag: '852',
+    subs: { a: 'a,c', b: 'p', c: 'b'},
+    notLendLocs: {}
+  },
+  'US-NORTH': {
+    name: 'Cardinal North',
+    ils: 'III',
+    tag: '945',
+    subs: { a: 'l', b: 'i', c: '%090', y: 'y' },
+    notLendLocs: {}
+  },
+  'US-FORTH': {
+    name: 'Cardinal Forth',
+    ils: 'III',
+    tag: '945',
+    subs: { a: 'l', b: 'i', c: '%090', y: 'y' },
+    notLendLocs: {}
+  },
   'US-EAST': {
     name: 'Cardinal East',
     ils: 'III',
