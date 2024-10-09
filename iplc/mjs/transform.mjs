@@ -6,8 +6,8 @@ const localFields = {
   'US-CST': {
     tag: '999',
     subs: { a: 'm,l', b: 'i', c: 'a', d: 'w', k: 'j', x: 't', y: 'i' },
-    lendLocs: ['ARS STACKS', 'ART STACKS', 'EARTH-SCI ATLASES', 'EARTH-SCI MEZZANINE', 'EARTH-SCI STACKS', 'EARTH-SCI TECH-RPTS', 'EAST-ASIA CHINESE', 'EAST-ASIA JAPANESE', 'EAST-ASIA KOREAN', 'EDUCATION STACKS', 'EDUCATION STORAGE', 'GREEN CALIF-DOCS', 'GREEN FED-DOCS', 'GREEN FOLIO-FLAT', 'GREEN INTL-DOCS', 'GREEN STACKS', 'MUSIC FOLIO', 'MUSIC MINIATURE', 'MUSIC SCORES', 'MUSIC STACKS', 'SAL SAL-ARABIC', 'SAL SAL-FOLIO', 'SAL SAL-PAGE', 'SAL SALTURKISH', 'SAL SOUTH-MEZZ', 'SAL STACKS', 'SAL3 STACKS', 'SCIENCE STACKS'],
-    lendItypes: ['STKS-MONO', 'STKS', 'EASTK-DOC', 'ATLAS', 'THESIS', 'THESIS-EXP', 'GOVSTKS', 'SCORE'],
+    lendLocs: ['ARS-STACKS', 'ART-STACKS', 'EAR-ATLASES', 'EAR-MEZZANINE', 'EAR-STACKS', 'EAR-TECH-REPORTS', 'EAL-CHINESE', 'EAL-JAPANESE', 'EAL-KOREAN', 'EDU-STACKS', 'GRE-CAL-DOCS', 'GRE-FED-DOCS', 'GRE-FOLIO-FLAT', 'GRE-INTL-DOCS', 'GRE-STACKS', 'MUS-FOLIO', 'MUS-MINIATURE', 'MUS-SCORES', 'MUS-STACKS', 'SAL-ARABIC', 'SAL-FOLIO', 'SAL-PAGE', 'SAL-TURKISH', 'SAL-SOUTH-MEZZ', 'SAL-STACKS', 'SAL3-STACKS', 'SCI-STACKS'],
+    lendItypes: ['book', 'score'],
     lendFunc: function (rec, lf) {
       let f919 = rec['919'] || [];
       let policy = null;
@@ -198,6 +198,7 @@ export function cluster_transform(clusterStr) {
       }
       for (let i = 0; i < items.length; i++) {
         let item = items[i];
+        if (lf.tag === '999' && item.ind1 === 'f' && item.ind2 === 'f') continue;
         let outItem = {
           '999': {
             ind1: 1,
