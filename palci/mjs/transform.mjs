@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-PSHS': {
+    name: 'Shippensburg University',
+    tag: '995',
+    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g' },
+    lendLocs: [ 'CD', 'DVD', 'Luhrs', 'NEW', 'POP', 'SU', 'Stacks', 'StacksOV', 'YPC' ]
+  },
   'US-NTR': {
     name: 'RPI',
     tag: '852',
@@ -718,7 +724,7 @@ export function transform(clusterStr) {
           policy = lf.lendFunc(recFields, outItem['999']) || policy;
         }
         outItem['999'].subfields.push({ p: policy });
-        if (!isSuppressed) outItems.push(outItem);
+        if (!isSuppressed && location) outItems.push(outItem);
       }
     }
   }
