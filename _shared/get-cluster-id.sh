@@ -13,5 +13,9 @@ then
 fi
 
 URL="${OKAPI}/reservoir/clusters/${ID}"
+if [ $DEBUG ]
+then
+	echo $URL
+fi
 
 curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" | jq .

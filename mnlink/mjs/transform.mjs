@@ -690,7 +690,7 @@ export function cluster_transform(clusterStr) {
         if ((tag > '009' && tag < '831') || tag.match(/^88./)) {
           mainBib.fields.push(field);
         }
-        if (tag === '008') mainBib.fields.push(field);
+        if (tag === '008' || tag === '007' || tag === '006') mainBib.fields.push(field);
       }
     }
 
