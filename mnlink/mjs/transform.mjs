@@ -7,6 +7,7 @@ const localFields = {
   'US-MNWOP': {
     name: 'Plum Creek Library System',
     ils: 'Koha',
+    idField: '999c',
     tag: '952',
     subs: { a: 'c', c: 'o', d: '2', b: 'p', x: 'y', y: 'i' },
     notLendLocs: {'BRD-BK':{}, BARNKIT:{}, BINDERY:{}, BOOKCLUB:{}, CATALOGING:{}, CHILDSTORAGE:{}, GAMEBRD:{}, GAMRES:{}, ILLN:{}, JPUZZLE:{}, MLCLLIVE:{}, MNREF:{}, MP3:{}, OFFICE:{}, ONORD:{}, OUTKIT:{}, OUTSTOR:{}, PUP:{}, PUZ:{}, REFERENCE:{}, STAFF:{}, STEAM:{}, STORAGE:{}, STORPBK:{}, VERTFILE:{}, VGAME:{}, WOW:{}}
