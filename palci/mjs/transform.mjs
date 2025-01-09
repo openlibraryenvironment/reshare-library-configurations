@@ -315,7 +315,7 @@ const localFields = {
     name: 'East Stroudsburg',
     tag: '955',
     subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'ff', u: 'f,x', n: 'e,w', v: 'e', w: 'f', k: 'g' },
-    lendLocs: ['BIO', 'CHYAAWARD', 'CHILDBIO', 'CHILDDEWEY', 'CHILDEASY', 'CHILDFIC', 'FICTION', 'GRAPHNOV', 'MAIN', 'OVERSIZE', 'YAFICTION']
+    lendLocs: ['BIO', 'CHYAAWARD', 'CHILDBIO', 'CHILDDEWEY', 'CHILDEASY', 'CHILDFIC', 'FICTION', 'MAIN', 'OVERSIZE', 'YAFICTION']
   },
   'US-PSTDE': {
     name: 'Eastern',
@@ -577,7 +577,7 @@ export function transform(clusterStr) {
         if ((tag > '009' && tag < '831') || tag.match(/^88./)) {
           mainBib.fields.push(field);
         }
-        if (tag === '008') mainBib.fields.push(field);
+        if (tag === '008' || tag === '007' || tag === '006') mainBib.fields.push(field);
       }
     }
     let isSuppressed = false;
