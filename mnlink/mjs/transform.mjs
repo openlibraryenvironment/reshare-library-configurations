@@ -618,17 +618,21 @@ export function cluster_transform(clusterStr) {
   let preSize = '';
   let mainBib;
   let isMainBib;
+  let mainIsil;
   for (let x = 0; x < crecs.length; x++) {
     let crec = crecs[x];
     let sid = crec.sourceId;
     let lid = crec.localId;
     let rec = crec.payload.marc;
     let unknown = false;
-    if (rec.leader) rec.leader = rec.leader.replace(/^\D{5}/, '00000') 
+    if (rec.leader) {
+      rec.leader = rec.leader.replace(/^\D{5}/, '00000');
+      rec.leader = rec.leader.replace(/^(.{10})22\D{5}/, '$12200000');
+    }
     let lerr = (rec.leader && !rec.leader.match(/^\d{5}[a-z]{3}[ a][ a]22\d\d\d\d\d...4500$/)) ? true : false;
     if (!rec.leader || lerr) {
       let badLeader = rec.leader;
-      rec.leader = '00000nam a22000000a 4500';
+      rec.leader = '00000nam a2200000 a 4500';
       unknown = true;
       let noteField = {
         '599': {
@@ -644,6 +648,7 @@ export function cluster_transform(clusterStr) {
     let rsize = rec.leader.substring(0, 5);
     if (rsize > preSize) {
       isMainBib = 1;
+      mainIsil = sid;
       mainBib = { leader: rec.leader, fields: [] };
     } else {
       isMainBib = 0;
@@ -842,6 +847,7 @@ export function cluster_transform(clusterStr) {
   }
 
   mainBib.fields.unshift({ '005': f005 });
+  if (mainIsil) mainBib.fields.unshift({ '003': mainIsil });
   mainBib.fields.unshift({ '001': f001 });
   mainBib.fields.push(...f999s);
   mainBib.fields.push(...outItems);
