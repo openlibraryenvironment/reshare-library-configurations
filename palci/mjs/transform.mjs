@@ -340,11 +340,10 @@ const localFields = {
   },
   'US-NJSOOS': {
     name: 'Seton Hall',
-    tag: '852',
-    linkedField: '876',
-    linkSubs: ['8', '9'],
-    subs: { a: 'b,c', b: '876p', c: 'h,i', n: '3', v: '3' },
-    lendLocs: ['STHM Asian Collection', 'STHM Chinese Corner (2nd floor)', 'STHM Circulation Desk CDs', 'STHM Circulation Desk DVD/Video', 'STHM Curriculum Library', 'STHM Main Collection Oversize Plus', 'STHM Main Collection Oversize', 'STHM Main Collection', 'STHM New Books', 'STHM Valente Library Oversize', 'STHM Valente Library']
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: [ 'Walsh Library - Asian Collection', 'Walsh Library - Chinese Corner', 'Walsh Library - Curriculum Collection', 'Walsh Library - DVD Collection', 'Walsh Library - Doctoral Dissertations', 'Walsh Library - Faculty Publications', 'Walsh Library - Leisure Collection', 'Walsh Library - Main Collection Oversize', 'Walsh Library - Main Collection', 'Walsh Library - Master\'s Theses', 'Walsh Library - New Books', 'Walsh Library - On Display', 'Walsh Library - Valente Collection', 'Walsh Library - Valente Library New', 'Walsh Library - Valente Library Oversize', 'Walsh Library - Walsh Library CAPS Collection' ]
   },
   'US-WVU': {
     name: 'West Virgina University',
@@ -518,6 +517,7 @@ export function transform(clusterStr) {
   let preSize = '';
   let mainBib;
   let isMainBib;
+  let isil = '';
   for (let x = 0; x < crecs.length; x++) {
     let crec = crecs[x];
     let sid = crec.sourceId;
@@ -532,6 +532,7 @@ export function transform(clusterStr) {
     if (rsize > preSize) {
       isMainBib = 1;
       mainBib = { leader: rec.leader, fields: [] };
+      isil = sid;
     } else {
       isMainBib = 0;
     }
@@ -730,6 +731,7 @@ export function transform(clusterStr) {
   }
 
   mainBib.fields.unshift({ '005': f005 });
+  mainBib.fields.unshift({ '003': isil });
   mainBib.fields.unshift({ '001': f001 });
   mainBib.fields.push(...f999s);
   mainBib.fields.push(...outItems);
