@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-MBBKC': {
+    name: 'Berklee',
+    ils: 'FOLIO',
+    show856: true,
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {'Africana Studies Collection':{}, 'Alphin Display - Main':{}, 'Alphin Display - Quiet Room':{}, 'Alphin Diversity, Equity, and Inclusion Collection':{}, 'Alphin Main Room':{}, 'Alphin Quiet Room':{}, 'Berklee Press Collection':{}, 'Career Collection':{}, 'Getz Berklee Faculty Collection':{}, 'Getz Display - Living Room':{}, 'Getz Display - New Acquisitions':{}, 'Getz Display - Reading Room':{}, 'Getz Display - Special':{}, 'Getz Display - Stacks':{}, 'Getz Diversity, Equity, and Inclusion Collection':{}, 'Getz Reading Room - Miniscores':{}, 'Getz Reading Room':{}, 'Getz Stacks - Oversize':{}, 'Getz Stacks':{}, 'Global Jazz Institute Collection':{}, 'Jazz and Gender Justice Collection':{}, 'Leisure Reading Collection':{}, 'Music Tech Collection':{}, 'Ralph’s Corner':{}}
+  },
   'US-MBWI': {
     name: 'Wentworth',
     ils: 'FOLIO',
@@ -88,6 +96,7 @@ export function cluster_transform(clusterStr) {
   let isMainBib;
   let elinks = [];
   let linkSeen = {};
+  let isil = '';
   for (let x = 0; x < crecs.length; x++) {
     let crec = crecs[x];
     let sid = crec.sourceId;
@@ -102,6 +111,7 @@ export function cluster_transform(clusterStr) {
     if (rsize > preSize) {
       isMainBib = 1;
       mainBib = { leader: rec.leader, fields: [] };
+      isil = sid;
     } else {
       isMainBib = 0;
     }
@@ -147,7 +157,7 @@ export function cluster_transform(clusterStr) {
         if ((tag > '009' && tag < '831') || tag.match(/^88./)) {
           mainBib.fields.push(field);
         }
-        if (tag === '008') mainBib.fields.push(field);
+        if (tag === '008' || tag === '007' || tag === '006') mainBib.fields.push(field);
       }
     }
 
@@ -296,6 +306,9 @@ export function cluster_transform(clusterStr) {
         }
 
         let pol = 0;
+
+        // the following line is added for Berklee to strip out the library and address, etc. from the location.
+        if (sid === 'US-MBBKC' && location) location = location.replace(/^.+? - /, '');
         if (lf.lendLocs && lf.lendLocs[location] || lf.notLendLocs && !lf.notLendLocs[location])  {
           pol = 1;
           if (lf.lendItypes && !lf.lendItypes[itype]) {
@@ -317,6 +330,7 @@ export function cluster_transform(clusterStr) {
   }
 
   mainBib.fields.unshift({ '005': f005 });
+  mainBib.fields.unshift({ '003': isil });
   mainBib.fields.unshift({ '001': f001 });
   if (elinks && elinks[0]) mainBib.fields.push(...elinks);
   mainBib.fields.push(...f999s);
