@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-PRALV': {
+    name: 'Alvernia University',
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: [ 'DVDs', 'Easy Reading Collection', 'General Collection', 'Leisure Reading', 'Young Adult Fiction', 'Young Adult Nonfiction' ]
+  },
   'US-PSHS': {
     name: 'Shippensburg University',
     tag: '995',
