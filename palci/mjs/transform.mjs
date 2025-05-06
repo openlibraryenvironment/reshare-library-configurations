@@ -9,7 +9,7 @@ const localFields = {
     ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
-    lendLocs: [ 'DVDs', 'Easy Reading Collection', 'General Collection', 'Leisure Reading', 'Young Adult Fiction', 'Young Adult Nonfiction' ]
+    lendLocs: [ 'DVDs – Wellness Zone, 1st Floor', 'Easy Reading Collection - 1st Floor', 'General Collection - 2nd Floor', 'Leisure Reading', 'Young Adult Fiction - 1st Floor', 'Young Adult Nonfiction - 1st Floor' ]
   },
   'US-PSHS': {
     name: 'Shippensburg University',
