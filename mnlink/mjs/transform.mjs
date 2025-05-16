@@ -505,11 +505,10 @@ const localFields = {
   },
   'US-MNRHSLC': {
     name: 'Southeastern Libraries Cooperating (SELCO)',
-    ils: 'Horizon',
-    tag: '949',
-    subs: { a: 'a', c: 'i', b: 'f', x: 'e', y: 'f' },
-    lendLocs: {al:{}, au:{}, bp:{}, br:{}, byrs:{}, cal:{}, cf:{}, chat:{}, chats:{}, chatsel:{}, dc:{}, far:{}, gm:{}, gms:{}, goods:{}, har:{}, hays:{}, hok:{}, hou:{}, hous:{}, houselm:{}, ka:{}, ken:{}, kmhs:{}, kmsint:{}, kwselm:{}, kwsmh:{}, lan:{}, lc:{}, lcr:{}, lcs:{}, ler:{}, lon:{}, lyles:{}, mab:{}, nor:{}, owat:{}, pi:{}, pis:{}, pla:{}, pre:{}, rps:{}, rush:{}, rw:{}, rwshs:{}, sc:{}, selco:{}, sg:{}, shats:{}, soushs:{}, stew:{}, stews:{}, stewsb:{}, stewsc:{}, sv:{}, wab:{}, west:{}, win:{}, wks:{}, wkselem:{}, zum:{}, zumselm:{}, zumsms:{}},
-    lendItypes: {'21d':1, al14d:1, bking2w:1, bking6w:1, fn10d:1, fn20d:1, fn25d:1, fn50d:1, fndol:1, newm:1, schav21:1, schbk21:1, std0r:1} 
+    ils: 'Evergreen',
+    tag: '852',
+    subs: { a: 'b', c: 'j', b: 'p', x: 'g', y: 'p' },
+    lendLocs: {ALB:{}, AUS:{}, BLO:{}, BRO:{}, CAL:{}, CAN:{}, CHA:{}, DOD:{}, FAR:{}, GRA:{}, HAR:{}, HOK:{}, HOU:{}, KAS:{}, KEN:{}, LAK:{}, LAN:{}, LCR:{}, LER:{}, LON:{}, MAB:{}, NOR:{}, OWA:{}, PIN:{}, PLA:{}, PRE:{}, RED:{}, RUS:{}, SEL:{}, SPG:{}, SPV:{}, STC:{}, STE:{}, WAB:{}, WES:{}, WIN:{}, ZUM:{}}
   },
   'US-MNVA': {
     name: 'Arrowhead Library System',
