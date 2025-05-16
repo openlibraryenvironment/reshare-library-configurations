@@ -356,7 +356,7 @@ const localFields = {
     ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
-    lendLocs: [ 'Walsh Library - Asian Collection', 'Walsh Library - Chinese Corner', 'Walsh Library - Curriculum Collection', 'Walsh Library - DVD Collection', 'Walsh Library - Doctoral Dissertations', 'Walsh Library - Faculty Publications', 'Walsh Library - Leisure Collection', 'Walsh Library - Main Collection Oversize', 'Walsh Library - Main Collection', 'Walsh Library - Master\'s Theses', 'Walsh Library - New Books', 'Walsh Library - On Display', 'Walsh Library - Valente Collection', 'Walsh Library - Valente Library New', 'Walsh Library - Valente Library Oversize', 'Walsh Library - Walsh Library CAPS Collection' ]
+    lendLocs: [ 'Turro Seminary Library - Main Collection', 'Turro Seminary Library - Newman Collection', 'Turro Seminary Library - Oversize', 'Walsh Library - Asian Collection', 'Walsh Library - Chinese Corner', 'Walsh Library - Curriculum Collection', 'Walsh Library - DVD Collection', 'Walsh Library - Doctoral Dissertations', 'Walsh Library - Faculty Publications', 'Walsh Library - Leisure Collection', 'Walsh Library - Main Collection Oversize', 'Walsh Library - Main Collection', 'Walsh Library - Master\'s Theses', 'Walsh Library - New Books', 'Walsh Library - On Display', 'Walsh Library - Valente Collection', 'Walsh Library - Valente Library New', 'Walsh Library - Valente Library Oversize', 'Walsh Library - Walsh Library CAPS Collection' ]
   },
   'US-WVU': {
     name: 'West Virgina University',
