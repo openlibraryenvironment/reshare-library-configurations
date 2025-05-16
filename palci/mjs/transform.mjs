@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-PGRAM': {
+    name: 'Messiah University',
+    tag: '852',
+    subs: { a: 'b', b: 'p', c: 'm', v: 'w', y: '8', x: 'i' },
+    lendLocs: [ 'audio', 'cafe', 'cd', 'cdov', 'dvd', 'dvdbr', 'dvdor', 'free', 'graphic', 'index', 'juv', 'juvf', 'juvov', 'mubook', 'scor', 'scorm', 'scorov', 'stax', 'staxov', 'tr', 'vide', 'videov' ]
+  },
   'US-PRALV': {
     name: 'Alvernia University',
     ils: 'FOLIO',
