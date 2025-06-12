@@ -4,6 +4,12 @@
 */
 
 const localFields = {
+  'US-NJPOR': {
+    name: 'Stockton University',
+    tag: '995',
+    subs: { a: 'p', b: 'b', c: 'c', d: 'd', k: 'x', x: 't', y: 'a', u: 'k,l', n: 'i,j' },
+    lendLocs: [ 'DVDCOLL', 'GOVDOCS', 'MICRO', 'UPPERLEVEL', 'YPCOLL ' ]
+  },
   'US-PGRAM': {
     name: 'Messiah University',
     tag: '852',
