@@ -332,10 +332,10 @@ const localFields = {
   },
   'US-PSTDE': {
     name: 'Eastern',
-    idField: '039a',
-    tag: '949',
-    subs: { a: 'a', b: 'g', c: 'c', y: 'ff', v: 'i', w: 'h' },
-    lendLocs: ['WFPBOOK', 'WMHBOOK', 'WSTACKBOOK']
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: [ 'Interlibrary Loaned', 'Warner Library Faculty Publications', 'Warner Library Main Stacks', 'Warner Library Mazie Hall Collection', 'Warner Library Social Justice Collection', 'Faculty Publications', 'Main Stacks Collection', 'Mazie Hall Collection', 'Social Justice Collection' ]
   },
   'US-PLF': {
     name: 'Franklin and Marshall',
