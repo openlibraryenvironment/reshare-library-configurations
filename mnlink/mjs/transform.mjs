@@ -515,7 +515,7 @@ const localFields = {
     ils: 'Horizon',
     tag: '939',
     subs: { a: 'm', c: 'd', b: 'b' },
-    lendLocs: {aurora:{}, babbit:{}, bdette:{}, bgfgnd:{}, bovey:{}, buhl:{}, calumt:{}, chisom:{}, cloque:{}, cook:{}, craine:{}, cton:{}, dhsdrr:{}, digital:{}, ehsesc:{}, ely:{}, evelth:{}, felfal:{}, fhsfal:{}, ghsgnd:{}, gilber:{}, gmarai:{}, gpmgnd:{}, grapid:{}, hibbng:{}, hoyt:{}, ifalls:{}, irrc:{}, keewat:{}, kssdrr:{}, marble:{}, mbook:{}, mhsccs:{}, mmslks:{}, moose:{}, mrtmib:{}, mshill:{}, mtiron:{}, nkhnke:{}, nselks:{}, shslks:{}, silver:{}, thslks:{}, twohar:{}, vrgnia:{}, wesesc:{}}
+    lendLocs: {aljlgpt:{}, allgpt:{}, alprof:{}, aurora:{}, babbit:{}, bdette:{}, bgfgnd:{}, bovey:{}, buhl:{}, calumt:{}, chisom:{}, cloque:{}, cook:{}, craine:{}, cton:{}, dhsdrr:{}, digital:{}, ehsesc:{}, ely:{}, evelth:{}, felfal:{}, fhsfal:{}, ghsgnd:{}, gilber:{}, gmarai:{}, gpmgnd:{}, grapid:{}, hibbng:{}, hoyt:{}, ifalls:{}, irrc:{}, keewat:{}, kssdrr:{}, marble:{}, mbook:{}, mhsccs:{}, mmslks:{}, moose:{}, mrtmib:{}, mshill:{}, mtiron:{}, nkhnke:{}, nselks:{}, shslks:{}, silver:{}, thslks:{}, twohar:{}, vrgnia:{}, wesesc:{}}
   },
   'US-MNSTCLG': {
     name: 'Great River Regional Library',
