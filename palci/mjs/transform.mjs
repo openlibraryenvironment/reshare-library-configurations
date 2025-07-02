@@ -437,9 +437,10 @@ const localFields = {
   },
   'US-PWML': {
     name: 'Lycoming',
-    tag: '949',
-    subs: { a: 'h', c: 'a,b', b: 'z' },
-    lendLocs: ['LYCA', 'LYCDVD', 'LYCJ', 'LYCL', 'LYCT', 'NEW', 'OVSZ']
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: [ 'Game Books', 'General Collection', 'Government Publication', 'Historial Collection', 'Juvenile Collection', 'Lycoming Authors', 'New Book Shelf', 'Oversize', 'Teaching Shelf', 'Videos and Video Games' ]
   },
   'US-PCOR': {
     name: 'Robert Morris',
