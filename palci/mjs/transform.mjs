@@ -341,7 +341,7 @@ const localFields = {
     ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
-    lendLocs: [ 'Interlibrary Loaned', 'Warner Library Faculty Publications', 'Warner Library Main Stacks', 'Warner Library Mazie Hall Collection', 'Warner Library Social Justice Collection', 'Faculty Publications', 'Main Stacks Collection', 'Mazie Hall Collection', 'Social Justice Collection' ]
+    lendLocs: [ 'Faculty Publications Collection', 'Interlibrary Loaned', 'Main Stacks Collection', 'Mazie Hall Collection', 'Social Justice Collection' ]
   },
   'US-PLF': {
     name: 'Franklin and Marshall',
@@ -499,9 +499,10 @@ const localFields = {
   },
   'US-PPCO': {
     name: 'PCOM',
-    tag: '852',
-    subs: { a: 'b', c: 'h' },
-    lendLocs: ['BOOK', 'GA-BOOK', 'STORAGE']
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: [ 'GA-Display', 'GA-Leisure', 'GA-Main', 'PA-Display', 'PA-Leisure', 'PA-Main', 'PA-Storage', 'PA-Thesis', 'SGA-Display', 'SGA-Leisure', 'SGA-Main' ]
   },
   'US-PST': {
     name: 'Penn State',
