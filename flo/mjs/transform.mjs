@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-MNOES': {
+    name: 'Stonehill',
+    ils: 'FOLIO',
+    show856: true,
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {'Curriculum Collection':{}, 'DVDs - Curriculum Collection':{}, 'Government Documents Microfiche':{}, 'Government Documents Storage':{}, 'Leisure Reading':{}, 'Main Stacks - MacPhaidin':{}, 'Music CDs':{}, 'Oversize Stacks':{}, 'Periodicals Storage':{}, 'Print Journals':{}, 'Special Collections':{}, 'Teaching & Learning':{}, DVDs:{}}
+  },
   'US-MBBKC': {
     name: 'Berklee',
     ils: 'FOLIO',
