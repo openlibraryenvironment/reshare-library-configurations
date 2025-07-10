@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-MBCM': {
+    name: 'NEC',
+    ils: 'FOLIO',
+    show856: true,
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {'FSSGB Collection':{}, 'Miniature Scores':{}, 'New England Conservatory':{}, 'Service Desk':{}, Oversize:{}}
+  },
   'US-MCLC': {
     name: 'Lesley',
     ils: 'FOLIO',
