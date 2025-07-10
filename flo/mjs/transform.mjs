@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-MBMSA': {
+    name: 'MassArt',
+    ils: 'FOLIO',
+    show856: true,
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {'Main Stacks':{}}
+  },
   'US-MBCM': {
     name: 'NEC',
     ils: 'FOLIO',
