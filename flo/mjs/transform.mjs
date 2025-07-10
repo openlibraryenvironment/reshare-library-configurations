@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-MCLC': {
+    name: 'Lesley',
+    ils: 'FOLIO',
+    show856: true,
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {'Moriarty Comics':{}, 'Moriarty DVD':{}, 'Moriarty Display':{}, 'Moriarty Lesley Authors':{}, 'Moriarty Oversize':{}, 'Moriarty Stacks':{}, 'Sherrill Browsing':{}, 'Sherrill Display':{}, 'Sherrill Early Readers':{}, 'Sherrill Faculty':{}, 'Sherrill Juv Fiction':{}, 'Sherrill Juv Graphic Novels':{}, 'Sherrill Juv Nonfiction':{}, 'Sherrill Juv Picture':{}, 'Sherrill Lesley Authors':{}, 'Sherrill Stacks':{}}
+  },
   'US-MNOES': {
     name: 'Stonehill',
     ils: 'FOLIO',
