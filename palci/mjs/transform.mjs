@@ -470,10 +470,12 @@ const localFields = {
   },
   'US-PPIL': {
     name: 'La Roche',
-    idField: '907a',
-    tag: '945',
-    subs: { a: 'l', b: 'i', c: '%092', y: 'y' },
-    lendLocs: ['brows', 'cd', 'circ', 'dvd', 'educ', 'jcal1', 'jcha1', 'jcha2', 'jcha3', 'jcha4', 'jcha5', 'jcha6', 'jcha7', 'jmat1', 'jnew1', 'jnew2', 'jnew3', 'jnew4', 'jpic1', 'jpic2', 'jpic3', 'jpic4', 'jpoet', 'jscie', 'jsoc', 'jsoc1', 'jsoc2', 'jsoc3', 'juv', 'ref', 'ya']
+    ils: 'WMS',
+    tag: '852',
+    linkedField: '876',
+    linkSubs: ['8', '9'],
+    subs: { a: 'c', c: 'h,i', b: '876p' },
+    lendLocs: [ 'Biography', 'Book Worm ', 'Browsing', 'Circulation', 'Reference', 'Short Introduction', 'Who\'s Who', 'Young Adult', 'juvenile', 'spiritual' ]
   },
   'US-PERMC': {
     name: 'Mercyhurst',
