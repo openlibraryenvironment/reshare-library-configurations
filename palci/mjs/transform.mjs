@@ -504,7 +504,7 @@ const localFields = {
     ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', n: 'k', u: 'l', v: 'j', x: 'i' },
-    lendLocs: [ 'GA-Display', 'GA-Leisure', 'GA-Main', 'PA-Display', 'PA-Leisure', 'PA-Main', 'PA-Storage', 'PA-Thesis', 'SGA-Display', 'SGA-Leisure', 'SGA-Main' ]
+    lendLocs: [ 'GA Leisure Collection', 'GA Main Collection', 'GA On Display', 'PA Leisure Collection', 'PA Main Collection', 'PA On Display', 'PA Storage', 'PA Thesis Collection', 'SGA Leisure Collection', 'SGA Main Collection', 'SGA On Display' ]
   },
   'US-PST': {
     name: 'Penn State',
