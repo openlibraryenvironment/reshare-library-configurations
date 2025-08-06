@@ -30,9 +30,11 @@ const localFields = {
     tag: '852',
     linkedField: '876',
     linkSub: '8',
-    subs: { a: 'b', b: '876p', c: 'h,i', g: '876t', v: '8763', x: '876h', y: '876a' },
-    lendLocs: ["art","artcirc","ast","ccl","cclger","cclgraph","chem","csssi","div","divdmr","divrrus","dra","engn","fes","fesover","geo","ksl","kslant","kslantc","kslanto","kslstks","lsf","lsfart","lsfast","lsfbaby","lsfche","lsfchem","lsfcla","lsfcsssi","lsfdiv","lsfdra","lsfeng","lsfeph","lsffes","lsffor","lsffs","lsfgdc","lsfgeo","lsfjud","lsfksl","lsfkslant","lsflamc","lsfmap","lsfmarx","lsfmath","lsfmed","lsfmtn","lsfmus","lsfnea","lsfnum","lsfsem","lsfsla","lsfslar","lsfsmlaris","lsfsmlasi","lsfsmlear","lsfsmlphi","lsfssl","lsfsslc","lsfstat","lsftib","marx","math","med","medbiog","medhs","medhum","medrefchc","medrefec","medrefeol","mus","musrec","sml","smleng","smljud","smllnb","smllnbm","smllts","smlmic","smlnea","ssl","sslegc"],
-    lendItypes: ['artcirc', 'artjourcirc', 'cd', 'circ', 'dvd', 'jour', 'jour00', 'jour01', 'jour02', 'jour03', 'jour04', 'jour05', 'jour06', 'jour07', 'jour08', 'jour09', 'jour10', 'jour11', 'jour93 - DO NOT USE', 'jour94 - DO NOT USE', 'jour95 - DO NOT USE', 'jour96 - DO NOT USE', 'jour97', 'jour98', 'jour99', 'jourcirc', 'lsfc', 'media']
+    subs: { a: 'b', c: 'h,i,m', b: '876p', y: '876a' },
+    lendLocs: [ 'artmain', 'bassgraph', 'bassmain', 'divcd', 'divdmr', 'divmain', 'lsfart', 'lsfdiv', 'lsfgdc', 'lsfi', 'lsfmain', 'lsfmarx', 'lsfmarxmap', 'lsfmtn', 'lsfmus', 'marxmain', 'medbiog', 'medhs', 'medhum', 'medmain', 'medrefeol', 'musmain', 'musmic', 'musrec', 'new', 'rr', 'smlfolio', 'smllnb', 'smllnbm', 'smllts', 'smlmic', 'smlmicr', 'smlstacks', 'smltadoku' ]
+    // subs: { a: 'b', b: '876p', c: 'h,i,m', g: '876t', v: '8763', x: '876h', y: '876a' },
+    // lendLocs: ["art","artcirc","ast","ccl","cclger","cclgraph","chem","csssi","div","divdmr","divrrus","dra","engn","fes","fesover","geo","ksl","kslant","kslantc","kslanto","kslstks","lsf","lsfart","lsfast","lsfbaby","lsfche","lsfchem","lsfcla","lsfcsssi","lsfdiv","lsfdra","lsfeng","lsfeph","lsffes","lsffor","lsffs","lsfgdc","lsfgeo","lsfjud","lsfksl","lsfkslant","lsflamc","lsfmap","lsfmarx","lsfmath","lsfmed","lsfmtn","lsfmus","lsfnea","lsfnum","lsfsem","lsfsla","lsfslar","lsfsmlaris","lsfsmlasi","lsfsmlear","lsfsmlphi","lsfssl","lsfsslc","lsfstat","lsftib","marx","math","med","medbiog","medhs","medhum","medrefchc","medrefec","medrefeol","mus","musrec","sml","smleng","smljud","smllnb","smllnbm","smllts","smlmic","smlnea","ssl","sslegc"],
+    // lendItypes: ['artcirc', 'artjourcirc', 'cd', 'circ', 'dvd', 'jour', 'jour00', 'jour01', 'jour02', 'jour03', 'jour04', 'jour05', 'jour06', 'jour07', 'jour08', 'jour09', 'jour10', 'jour11', 'jour93 - DO NOT USE', 'jour94 - DO NOT USE', 'jour95 - DO NOT USE', 'jour96 - DO NOT USE', 'jour97', 'jour98', 'jour99', 'jourcirc', 'lsfc', 'media']
   },
   'US-ICU': {
     name: 'University of Chicago',
