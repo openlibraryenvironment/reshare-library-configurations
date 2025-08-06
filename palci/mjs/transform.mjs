@@ -203,7 +203,7 @@ const localFields = {
     name: 'University of Pittsburgh',
     tag: '995',
     subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w' },
-    lendLocs: ['ART skszine', 'ART stkssl', 'ENGR stkssl', 'HILL stksslg', 'MUS stkssl', 'UPB stkssl', 'UPG stkssl', 'UPJ stkssl', 'UPT stkssl', 'ART stks', 'ART stksbrowse', 'ART stkscourse', 'ART stksfac', 'ART stksrr', 'CHEM stks', 'ENGR stks', 'ENGR stks2', 'HILL dis', 'HILL stks', 'HILL stksafro', 'HILL stksalld', 'HILL stkseac', 'HILL stkseaj', 'HILL stkseak', 'HILL stkssl1', 'HILL stkssl2', 'LANG over', 'LANG stks', 'MUS folio', 'MUS over', 'MUS stks', 'THOM stor', 'UPB curr', 'UPB frnd', 'UPB new', 'UPB over', 'UPB stks', 'UPG child', 'UPG curr', 'UPG graph', 'UPG stks', 'UPG young', 'UPJ curr', 'UPJ graph', 'UPJ juv', 'UPJ juvover', 'UPJ over', 'UPJ stks', 'UPJ young', 'UPT stks']
+    lendLocs: ['ART stkszine', 'ART stkssl', 'ENGR stkssl', 'HILL stksslg', 'MUS stkssl', 'UPB stkssl', 'UPG stkssl', 'UPJ stkssl', 'UPT stkssl', 'ART stks', 'ART stksbrowse', 'ART stkscourse', 'ART stksfac', 'ART stksrr', 'CHEM stks', 'ENGR stks', 'ENGR stks2', 'HILL dis', 'HILL stks', 'HILL stksafro', 'HILL stksalld', 'HILL stkseac', 'HILL stkseaj', 'HILL stkseak', 'HILL stkssl1', 'HILL stkssl2', 'LANG over', 'LANG stks', 'MUS folio', 'MUS over', 'MUS stks', 'THOM stor', 'UPB curr', 'UPB frnd', 'UPB new', 'UPB over', 'UPB stks', 'UPG child', 'UPG curr', 'UPG graph', 'UPG stks', 'UPG young', 'UPJ curr', 'UPJ graph', 'UPJ juv', 'UPJ juvover', 'UPJ over', 'UPJ stks', 'UPJ young', 'UPT stks']
   },
   'US-PPT': {
     name: 'Temple',
