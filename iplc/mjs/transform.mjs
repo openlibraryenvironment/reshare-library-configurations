@@ -233,6 +233,7 @@ export function cluster_transform(clusterStr) {
         let subData = getSubs(item);
         let location = '';
         let itype = '';
+        let willNotLend = false;
         for (let c in lf.subs) {
           if (lf.linkSub && lf.subs[c].match(/^\w{3}/)) {
             let lsf = lf.subs[c].substring(3);
@@ -271,6 +272,9 @@ export function cluster_transform(clusterStr) {
           if (!itype && c === 'x') {
             itype = text;
           }
+          if (sid === 'US-CST' && subData.r && subData.r[0] === 'Will not lend') {
+            willNotLend = true;
+          }
         }
 
         let policy = '';
@@ -284,6 +288,7 @@ export function cluster_transform(clusterStr) {
         if (lf.lendFunc) {
           policy = lf.lendFunc(recFields, outItem['999']) || policy;
         }
+        if (willNotLend) policy = 'UNLOANABLE';
         outItem['999'].subfields.push({ p: policy });
         outItems.push(outItem);
       }
