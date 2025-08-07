@@ -440,7 +440,7 @@ const localFields = {
     ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', n: 'k', u: 'l', v: 'j', x: 'i' },
-    lendLocs: [ 'Game Books', 'General Collection', 'Government Publication', 'Historial Collection', 'Juvenile Collection', 'Lycoming Authors', 'New Book Shelf', 'Oversize', 'Teaching Shelf', 'Videos and Video Games' ]
+    lendLocs: [ 'Game Books', 'General Collection', 'Government Publication', 'Historical Collection', 'Juvenile Collection', 'Lycoming Authors', 'New Book Shelf', 'Oversize', 'Teaching Shelf', 'Videos and Video Games' ]
   },
   'US-PCOR': {
     name: 'Robert Morris',
