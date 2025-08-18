@@ -4,6 +4,13 @@
 */
 
 const localFields = {
+  'US-TNLVILS': {
+    name: 'Ingram',
+    tag: '949',
+    isVendor: true,
+    subs: { a: 'a', p: 'p' },
+    notLendLocs: {}
+  }
 };
 
 function getSubs(field) {
@@ -32,21 +39,37 @@ export function cluster_transform(clusterStr) {
   let preSize = '';
   let mainBib;
   let isMainBib;
-  let elinks = [];
-  let linkSeen = {};
+  let mainIsil;
   for (let x = 0; x < crecs.length; x++) {
     let crec = crecs[x];
     let sid = crec.sourceId;
     let lid = crec.localId;
     let rec = crec.payload.marc;
     let unknown = false;
-    if (!rec.leader) {
-      rec.leader = '00000cam a2200229Ia 4500';
-      unknown = true
+    if (rec.leader) {
+      rec.leader = rec.leader.replace(/^\D{5}/, '00000');
+      rec.leader = rec.leader.replace(/^(.{10})22\D{5}/, '$12200000');
+    }
+    let lerr = (rec.leader && !rec.leader.match(/^\d{5}[a-z]{3}[ a][ a]22\d\d\d\d\d...4500$/)) ? true : false;
+    if (!rec.leader || lerr) {
+      let badLeader = rec.leader;
+      rec.leader = '00000nam a2200000 a 4500';
+      unknown = true;
+      let noteField = {
+        '599': {
+          ind1: ' ',
+          ind2: ' ',
+          subfields: [
+            { a: `Encountered a bad leader "${badLeader}". Using the default leader.`}
+          ]
+        }
+      };
+      rec.fields.push(noteField);
     }
     let rsize = rec.leader.substring(0, 5);
     if (rsize > preSize) {
       isMainBib = 1;
+      mainIsil = sid;
       mainBib = { leader: rec.leader, fields: [] };
     } else {
       isMainBib = 0;
@@ -83,9 +106,10 @@ export function cluster_transform(clusterStr) {
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
       let tag = Object.keys(field)[0];
-      if (tag.match(/050|082|090|092|099/)) {
+      if (tag.match(/050|082|09\d/)) {
         let csubs = getSubs(field[tag]);
-        bibCall[tag] = (csubs.a && csubs.b) ? csubs.a[0] + ' ' + csubs.b[0] : (csubs.a) ? csubs.a[0] : '';
+        let a = (csubs.a) ? csubs.a.join(' ') : '';
+        bibCall[tag] = (a && csubs.b) ? a + ' ' + csubs.b[0] : (a) ? a : '';
       }
       if (!recFields[tag]) recFields[tag] = [];
       recFields[tag].push(field[tag]);
@@ -93,48 +117,18 @@ export function cluster_transform(clusterStr) {
         if ((tag > '009' && tag < '831') || tag.match(/^88./)) {
           mainBib.fields.push(field);
         }
-        if (tag === '008') mainBib.fields.push(field);
+        if (tag === '008' || tag === '007' || tag === '006') mainBib.fields.push(field);
       }
     }
 
     let lf = localFields[sid];
-    let controlNumber = (recFields['001']) ? recFields['001'][0] : lid;
+    let controlNumber = lid;
 
     // control number updates 
-    controlNumber = controlNumber.replace(/^oai.+[\/:]/, '');
-
-    // 856 field field processing
-    let f856 = recFields['856'];
-    if (lf && lf.show856 && f856) {
-      for (let x = 0; x < f856.length; x++) {
-        let f = f856[x];
-        let s = getSubs(f);
-        if (s.u) {
-          if (!linkSeen[s.u]) {
-            elinks.push({ '856': f });
-            linkSeen[s.u] = 1;
-          };
-        }
-      }
-    }
-
-    let isSuppressed = false;
-    if (lf && lf.ils && lf.ils === 'FOLIO') {
-      let ff999 = recFields['999'];
-      if (ff999) {
-        for (let x = 0; x < ff999.length; x++) {
-          let f = ff999[x];
-          if (f.ind1 === 'f' && f.ind2 === 'f') {
-            let subs = getSubs(f);
-            if (subs.t && subs.t[0] === '1') {
-              isSuppressed = true
-            }
-          }
-        }
-      }
-    }
+    controlNumber = controlNumber.replace(/^oai.+:/, '');
 
     if (lf && lf.idField) {
+      
       let tag = lf.idField.substring(0, 3);
       let sf = lf.idField.substring(3);
       let field = recFields[tag];
@@ -154,11 +148,10 @@ export function cluster_transform(clusterStr) {
         { s: sid }
       ]
     };
-    
     for (let a = 0; a < cluster.matchValues.length; a++) {
       f999.subfields.push({ m: cluster.matchValues[a] });
     }
-    if (!isSuppressed) f999s.push({ '999': f999 });
+    f999s.push({ '999': f999 });
 
     // normalized item fields
     if (lf) {
@@ -175,7 +168,6 @@ export function cluster_transform(clusterStr) {
       }
       controlNumber = controlNumber.trim();
       for (let i = 0; i < items.length; i++) {
-        if (isSuppressed) break;
         let item = items[i];
         let outItem = {
           '999' : {
@@ -241,33 +233,34 @@ export function cluster_transform(clusterStr) {
           }
         }
 
+        if (!lf.isVendor) {
         let pol = 0;
-        if (lf.lendLocs && lf.lendLocs[location] || lf.notLendLocs && !lf.notLendLocs[location])  {
-          pol = 1;
-          if (lf.lendItypes && !lf.lendItypes[itype]) {
-            pol = 0;
+          if (lf.lendLocs && lf.lendLocs[location] || lf.notLendLocs && !lf.notLendLocs[location])  {
+            pol = 1;
+            if (lf.lendItypes && !lf.lendItypes[itype]) {
+              pol = 0;
+            }
           }
-        }
-        if (!(lf.lendLocs || lf.notLendLocs) && lf.lendItypes && lf.lendItypes[itype]) {
-          pol = 1;
-        }
+          if (!(lf.lendLocs || lf.notLendLocs) && lf.lendItypes && lf.lendItypes[itype]) {
+            pol = 1;
+          }
 
-        if (lf.lendFunc) {
-          pol = lf.lendFunc(recFields, outItem['999']);
+          if (lf.lendFunc) {
+            pol = lf.lendFunc(recFields, outItem['999']) || pol;
+          }
+          let policy = (pol) ? 'LOANABLE' : 'UNLOANABLE';
+          outItem['999'].subfields.push({ p: policy });
         }
-        let policy = (pol) ? 'LOANABLE' : 'UNLOANABLE';
-        outItem['999'].subfields.push({ p: policy });
         outItems.push(outItem);
       }
     }
   }
 
   mainBib.fields.unshift({ '005': f005 });
+  if (mainIsil) mainBib.fields.unshift({ '003': mainIsil });
   mainBib.fields.unshift({ '001': f001 });
-  if (elinks && elinks[0]) mainBib.fields.push(...elinks);
   mainBib.fields.push(...f999s);
   mainBib.fields.push(...outItems);
-  // return '{}'
   return JSON.stringify(mainBib, null, 2);
 }
 
