@@ -6,6 +6,7 @@
 const localFields = {
   'US-NPKMHL': {
     name: 'Mid-Hudson Library System',
+    ils: 'III',
     tag: '945',
     subs: { a: 'l', c: 'a ', b: 'i', v: 'c', y: 'y'},
     notLendLocs: {befa:{}, cxfa:{}, dwxa:{}, fkxa:{}, gexa:{}, grea:{}, hufa:{}} 
