@@ -4,12 +4,12 @@
 */
 
 const localFields = {
-  'US-TNLVILS': {
-    name: 'Ingram',
+  'US-MNMHCL': {
+    name: 'Hennepin County Library',
+    ils: 'Horizon',
     tag: '949',
-    isVendor: true,
-    subs: { a: 'a', p: 'p' },
-    notLendLocs: {}
+    subs: { a: 'm,c', c: 'd', d: 'q', b: 'b', v: 'e', x: 't', y: 'n' },
+    lendItypes: { 'a10': 1, 'a21': 1, 'a7': 1, 'j21': 1, 'j7': 1 }
   },
   'US-SOUTH': {
     name: 'Cardinal South',
