@@ -31,7 +31,7 @@ const localFields = {
     linkedField: '876',
     linkSub: '8',
     subs: { a: 'b', c: 'h,i,m', b: '876p', y: '876a' },
-    lendLocs: [ 'adswkrm', 'artdesk', 'artdisplay', 'artmain', 'artnew', 'artpopup', 'arttransfe', 'bassdis', 'bassgraph', 'bassmain', 'divcd', 'divdmr', 'divmain', 'graphicmed', 'lawbl', 'lsfart', 'lsfdiv', 'lsfgdc', 'lsfi', 'lsfmain', 'lsfmarx', 'lsfmarxmap', 'lsfmtn', 'lsfmus', 'marxdisp', 'marxdisp2', 'marxmain', 'marxnew', 'marxstaff', 'medbiog', 'medhs', 'medhum', 'medmain', 'medrefeol', 'monthlydis', 'musmain', 'musmic', 'musnb', 'musrec', 'new', 'rr', 'smlfolio', 'smllnb', 'smllnbm', 'smllts', 'smlmic', 'smlmicr', 'smlstacks', 'smltadoku' ]
+    lendLocs: [ 'adswkrm', 'artdesk', 'artdisplay', 'artmain', 'artnew', 'artpopup', 'arttransfe', 'bassdis', 'bassgraph', 'bassmain', 'divcd', 'divdisp', 'divdmr', 'divjuv', 'divnb', 'divmain', 'graphicmed', 'lawbl', 'lsfart', 'lsfdiv', 'lsfgdc', 'lsfi', 'lsfmain', 'lsfmarx', 'lsfmarxmap', 'lsfmtn', 'lsfmus', 'marxdisp', 'marxdisp2', 'marxmain', 'marxnew', 'marxstaff', 'medbiog', 'medhs', 'medhum', 'medmain', 'medrefeol', 'monthlydis', 'musmain', 'musmic', 'musnb', 'musrec', 'new', 'rr', 'smlfolio', 'smllnb', 'smllnbm', 'smllts', 'smlmic', 'smlmicr', 'smlstacks', 'smltadoku' ]
   },
   'US-ICU': {
     name: 'University of Chicago',
