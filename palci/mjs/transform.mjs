@@ -334,14 +334,14 @@ const localFields = {
     name: 'East Stroudsburg',
     tag: '955',
     subs: { a: 'z', b: 's', c: 'bb', d: 'j', x: 't', y: 'ff', u: 'f,x', n: 'e,w', v: 'e', w: 'f', k: 'g' },
-    lendLocs: ['BIO', 'CHYAAWARD', 'CHILDBIO', 'CHILDDEWEY', 'CHILDEASY', 'CHILDFIC', 'FICTION', 'MAIN', 'OVERSIZE', 'YAFICTION']
+    lendLocs: [ 'BIO', 'CHILDBIO', 'CHILDDEWEY', 'CHILDEASY', 'CHILDFIC', 'FICTION', 'MAIN', 'YAFICTION' ]
   },
   'US-PSTDE': {
     name: 'Eastern',
     ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
-    lendLocs: [ 'Faculty Publications Collection', 'Main Stacks Collection', 'Mazie Hall Collection', 'Social Justice Collection', 'Warner Library Juvenile Fiction', 'Warner Library Juvenile Nonfiction', 'Warner Library Young Adult' ]
+    lendLocs: [ 'Faculty Publications Collection', 'Main Stacks Collection', 'Mazie Hall Collection', 'Social Justice Collection', './geJuvenile Fiction', 'Warner Library Juvenile Nonfiction', 'Warner Library Young Adult', 'Warner Library Juvenile Fiction', 'Warner Library Juvenile Nonfiction', 'Warner Library Young Adult' ]
   },
   'US-PLF': {
     name: 'Franklin and Marshall',
