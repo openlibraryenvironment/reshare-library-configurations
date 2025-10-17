@@ -341,7 +341,7 @@ const localFields = {
     ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
-    lendLocs: [ 'Faculty Publications Collection', 'Main Stacks Collection', 'Mazie Hall Collection', 'Social Justice Collection', 'Juvenile Fiction', 'Juvenile Nonfiction', 'Young Adult', 'Warner Library Juvenile Fiction', 'Warner Library Juvenile Nonfiction', 'Warner Library Young Adult' ]
+    lendLocs: [ 'Faculty Publications Collection', 'Main Stacks Collection', 'Mazie Hall Collection', 'Social Justice Collection', 'Juvenile Fiction Collection', 'Juvenile Nonfiction Collection', 'Young Adult Collection' ]
   },
   'US-PLF': {
     name: 'Franklin and Marshall',
