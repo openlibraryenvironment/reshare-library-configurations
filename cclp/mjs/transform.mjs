@@ -1,15 +1,51 @@
 /*
-  Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, g: copy, k: numberOfPieces, i: institutionName, 
-  n: enumeration, u: chronology, v: volume, w: yearCaption, x: itemMaterialType, y: itemId
+999 11
+{
+  "a": "location",
+  "b": "barcode",
+  "c": "callNumber",
+  "d": "callNumberType",
+  "g": "copy",
+  "i": "institutionName",
+  "j": "vendor",
+  "k": "numberOfPieces",
+  "l": "localId",
+  "m": "price",
+  "n": "enumeration",
+  "o": "territory",
+  "p": "policy",
+  "q": "currency",
+  "r": "priceType",
+  "s": "sourceType",
+  "u": "chronology",
+  "v": "volume",
+  "w": "yearCaption",
+  "x": "itemMaterialType",
+  "y": "itemId",
+  "z": "availability"
+}
+
+999 12 (online)
+{
+  "u": "uri",
+  "r": "rigts",
+  "x": "nonPublicNote",
+  "z": "publicNote"
+}
 */
 
 const localFields = {
+  'US-MIAAHDL': {
+    name: 'HathiTrust',
+    tag: '856',
+    online: true,
+    subs: { u: 'u', r: 'r', x: 'x', z: 'z' }
+  },
   'US-TNLVILS': {
     name: 'Ingram',
     tag: '949',
     isVendor: true,
-    subs: { a: 'a', p: 'p' },
-    notLendLocs: {}
+    subs: { a: 'v,t', o: 't', m: 'p', q: 'c', r: 'y', z: 'a' }
   }
 };
 
@@ -169,10 +205,11 @@ export function cluster_transform(clusterStr) {
       controlNumber = controlNumber.trim();
       for (let i = 0; i < items.length; i++) {
         let item = items[i];
+        let ind2 = (lf.online) ? '2' : '1';
         let outItem = {
           '999' : {
-            ind1: 1,
-            ind2: 1,
+            ind1: "1",
+            ind2: ind2,
             subfields: [
               { l: controlNumber },
               { s: 'ISIL:' + sid },
@@ -233,7 +270,7 @@ export function cluster_transform(clusterStr) {
           }
         }
 
-        if (!lf.isVendor) {
+        if (!(lf.isVendor || lf.online)) {
         let pol = 0;
           if (lf.lendLocs && lf.lendLocs[location] || lf.notLendLocs && !lf.notLendLocs[location])  {
             pol = 1;
