@@ -35,6 +35,13 @@
 */
 
 const localFields = {
+  'US-PBL': {
+    name: 'Lehigh',
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
+    lendLocs: {'Fairchild - 5th Floor - North': {}, 'Fairchild - 6th Floor - North - Media Collection': {}, 'Fairchild - 6th Floor - North': {}, 'Fairchild - 7th Floor - North': {}, 'LMC-B': {}, 'LMC-G': {}, 'Linderman 1st Floor - Reading Room - Faculty Authors': {}, 'Linderman 1st Floor - Reading Room - Juvenile Collection': {}, 'Linderman 1st Floor - Reading Room - New Books': {}, 'Linderman 1st Floor - Reading Room - Reading Room Collection': {}, 'Linderman 1st Floor - Rotunda': {}, 'Linderman 2nd Floor - Rotunda': {}, 'Linderman 3rd Floor - Rotunda': {}, 'Linderman 3rd Floor - Stacks': {}, 'Linderman 4th Floor - Stacks': {}, 'Linderman Ground Floor - Lower Level': {}, 'Linderman Ground Floor - Upper Level': {}, 'Lucy\'s Cafe - Linderman Ground Level Rotunda': {}}
+  },
   'US-MIAAHDL': {
     name: 'HathiTrust',
     tag: '856',
@@ -271,7 +278,7 @@ export function cluster_transform(clusterStr) {
         }
 
         if (!(lf.isVendor || lf.online)) {
-        let pol = 0;
+          let pol = 0;
           if (lf.lendLocs && lf.lendLocs[location] || lf.notLendLocs && !lf.notLendLocs[location])  {
             pol = 1;
             if (lf.lendItypes && !lf.lendItypes[itype]) {
