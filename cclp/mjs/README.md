@@ -18,7 +18,8 @@
   "p": "policy",
   "q": "currency",
   "r": "priceType",
-  "s": "sourceType",
+  "s": "sourceId",
+  "t": "type",
   "u": "chronology",
   "v": "volume",
   "w": "yearCaption",
@@ -31,9 +32,15 @@
 #### 999 12 (online items) subfields
 ```
 {
+  "i": "instutionName",
+  "l": "localId",
+  "s": "sourceId",
+  "t": "type",
   "u": "uri",
   "r": "rights",
   "x": "nonPublicNote",
   "z": "publicNote"
 }
 ```
+
+NOTE: Subfield "t" carries the OCLC type code derived from leader bytes 6 and 7.  See https://www.oclc.org/bibformats/en/fixedfield/type.html
