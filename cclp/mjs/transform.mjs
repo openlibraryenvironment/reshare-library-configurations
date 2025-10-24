@@ -48,6 +48,12 @@ const localFields = {
     online: true,
     subs: { u: 'u', r: 'r', x: 'x', z: 'z' }
   },
+  'US-CLOCKSS': {
+    name: 'CLOCKSS',
+    tag: '856',
+    online: true,
+    subs: { u: 'u', r: 'r', x: 'x', z: 'z' }
+  },
   'US-TNLVILS': {
     name: 'Ingram',
     tag: '949',
