@@ -91,7 +91,7 @@ const localFields = {
     linkedField: '876',
     linkSub: '0',
     subs: { a: 'b', b: '876p', c: 'h', d: 'j', v: '8763', y: '876a' },
-    lendLocs: ["bar","bar,four","bar,medi","bar,new","bar,over","bar,three","bar,two","bar,znz","bmc","bus","docs","eal","eax","glg","glx","glx,pre","gnc","hsl","jou","leh","mil","msc","msr","mus","mvr","off,bio","off,bus","off,docs","off,eal","off,eax","off,eng","off,glg","off,glx","off,gnc","off,gsc","off,hsl","off,jou","off,leh","off,mat","off,msr","off,mus","off,mvr","off,phy","off,psy","off,sci","off,swx","off,uts","off,war","pat","sci","swx","uts","uts,unn"]
+    lendLocs: ["bar","bar,four","bar,medi","bar,new","bar,over","bar,three","bar,two","bar,znz","bmc","bus","docs","eal","eax","glg","glx","glx,pre","gnc","hsl","jou","lawgnb3","lawgnb8","lawgnb8f","lawgnc","lawgns1","lawgns2","lawrsear","leh","mil","msc","msr","mus","mvr","off,bio","off,bus","off,docs","off,eal","off,eax","off,eng","off,glg","off,glx","off,gnc","off,gsc","off,hsl","off,jou","off,leh","off,mat","off,msr","off,mus","off,mvr","off,phy","off,psy","off,sci","off,swx","off,uts","off,war","pat","sci","swx","uts","uts,unn"]
   },
   'US-PU': {
     name: 'Penn',
