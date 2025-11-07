@@ -56,7 +56,7 @@ const localFields = {
     name: 'Johns Hopkins',
     tag: '991',
     subs: { a: 'c,d', b: 'a', c: 'f', d: 'e', g: 'g', k: 'k', x: 'b', y: 'j' },
-    lendLocs: ['AFL aflavc', 'AFL aflavm', 'AFL aflbk', 'AFL aflsco', 'AFL aflscomin', 'LSC aflof', 'LSC shmoffs', 'LSC welbklsc', 'LSC welprcblsc', 'ShDC shdbook', 'ShMSEL shmavbd', 'ShMSEL shmblue', 'ShMSEL shmmain', 'ShMSEL shmotech', 'wwelch welbks5', 'wwelch wellilbk5'],
+    lendLocs: ['AFL aflavc', 'AFL aflavm', 'AFL aflbk', 'AFL aflsco', 'AFL aflscomin', 'LSC aflof', 'LSC shmoffs', 'LSC welprcblsc', 'ShDC shdbook',  'ShMSEL shmmain', 'wwelch welbks5', 'wwelch wellilbk5'],
     lendItypes: ['aflavac', 'aflavaclc', 'aflavcd', 'aflavcdlc', 'aflavpd', 'aflavvc', 'aflavvd', 'aflmicr', 'aflmisc', 'aflscoit', 'aflscomini', 'jhav', 'jhbooks']
   },
   'US-NHD': {
