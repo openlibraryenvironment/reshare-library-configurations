@@ -637,8 +637,11 @@ export function transform(clusterStr) {
         let subs = getSubs(field[0]);
         controlNumber = (subs[sf]) ? subs[sf][0] : '';
       }
-    } else if (recFields['001']) { 
-      controlNumber = recFields['001'][0] || '';
+    } else if (recFields['001']) {
+      let d = recFields['001'][0];
+      if (typeof(d) === 'string') {
+        controlNumber = d || '';
+      }
     }
     let f999 = {
       ind1: '1',
