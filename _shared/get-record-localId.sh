@@ -12,6 +12,6 @@ then
   exit
 fi
 
-URL="${OKAPI}/reservoir/records?query=localId==%22${1}%22"
+URL="${OKAPI}/reservoir/records?query=localId==${1}"
 
-curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" | jq .
+curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" | jq

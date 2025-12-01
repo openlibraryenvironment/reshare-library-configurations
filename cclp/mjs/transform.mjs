@@ -64,7 +64,7 @@ const localFields = {
     name: 'Ingram',
     tag: '949',
     isVendor: true,
-    subs: { a: 'v,t', o: 't', m: 'p', q: 'c', r: 'y', z: 'a' }
+    subs: { a: 'v,t', j: 't', b: 'p', c: 'c', e: 'y', z: 'a' }
   }
 };
 
@@ -224,7 +224,7 @@ export function cluster_transform(clusterStr) {
       controlNumber = controlNumber.trim();
       for (let i = 0; i < items.length; i++) {
         let item = items[i];
-        let ind2 = (lf.online) ? '2' : '1';
+        let ind2 = (lf.online) ? '2' : (lf.isVendor) ? '3' : '1';
         let outItem = {
           '999' : {
             ind1: "1",
