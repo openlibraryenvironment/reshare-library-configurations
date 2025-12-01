@@ -35,6 +35,12 @@
 */
 
 const localFields = {
+  'US-ISSNIC': {
+    name: 'ISSN',
+    tag: '022',
+    online: true,
+    subs: { u: '1', z: 'a' }
+  },
   'US-PBL': {
     name: 'Lehigh',
     ils: 'FOLIO',
