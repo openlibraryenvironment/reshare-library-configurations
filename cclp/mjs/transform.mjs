@@ -64,7 +64,7 @@ const localFields = {
     name: 'Ingram',
     tag: '949',
     isVendor: true,
-    subs: { a: 'v,t', j: 't', b: 'p', c: 'c', e: 'y', z: 'a' }
+    subs: { a: 'v', j: 't', b: 'p', c: 'c', e: 'y', z: 'a' }
   }
 };
 

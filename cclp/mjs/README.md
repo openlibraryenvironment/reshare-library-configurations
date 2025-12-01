@@ -9,23 +9,17 @@
   "d": "callNumberType",
   "g": "copy",
   "i": "institutionName",
-  "j": "vendor",
   "k": "numberOfPieces",
   "l": "localId",
-  "m": "price",
   "n": "enumeration",
-  "o": "territory",
   "p": "policy",
-  "q": "currency",
-  "r": "priceType",
   "s": "sourceId",
   "t": "type",
   "u": "chronology",
   "v": "volume",
   "w": "yearCaption",
   "x": "itemMaterialType",
-  "y": "itemId",
-  "z": "availability"
+  "y": "itemId"
 }
 ```
 
@@ -40,6 +34,22 @@
   "r": "rights",
   "x": "nonPublicNote",
   "z": "publicNote"
+}
+```
+
+#### 999 13 (vendor entries) subfields
+```
+{
+  "a": "fullVendorName",
+  "b": "price",
+  "c": "currencyCode",
+  "e": "priceNote",
+  "i": "vendor",
+  "j": "countryCode",
+  "l": "localId",
+  "s": "sourceId",
+  "t": "type",
+  "z": "availability"
 }
 ```
 
