@@ -49,8 +49,7 @@ const localFields = {
     tag: '852',
     linkedField: '876',
     linkSubs: ['8','9'],
-    subs: { a: 'c', b: '876p', c: 'k,h,i', k: '876x' },
-    lendLocs: [ 'AV Area - Movies', 'Main Collection (Oversize)', 'Main Collection', 'Microform Area - Documents', 'Microform Area - Periodicals', 'Reference Atlases', 'U.S. Government Publications Microforms', 'U.S. Government Publications' ]
+    subs: { a: 'c', b: '876p', c: 'k,h,i', k: '876x' }
   },
   'US-DEWGBC': {
     name: 'Goldey-Beacom College',
@@ -69,8 +68,7 @@ const localFields = {
   'US-PANL': {
     name: 'Lebanon Valley College',
     tag: '995',
-    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g' },
-    lendLocs: ['DISPLAY', 'GRAPHICNOV', 'JUVENILE', 'LOWERLV', 'OVERSIZE', 'SECONDFL', 'YOUNGADULT', 'DISPLAYTR', 'NEW BOOKS']
+    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g' }
   },
   'US-TEST-P': {
     name: 'Test Institution',
@@ -99,8 +97,7 @@ const localFields = {
     tag: '852',
     linkedField: '876',
     linkSubs: ['8', '9'],
-    subs: { a: 'c', b: '876p', c: 'h,i', n: '3', v: '3' },
-    lendLocs: ['BIG BOOKS \[Lower Level\]', 'CD \[Ask at Circulation Desk\]', 'CHILDREN\'S LITERATURE OVERSIZE \[Lower Level\]', 'CHILDREN\'S LITERATURE \[Lower Level\]', 'DISPLAY SHELF', 'DVD \[Ask at Circulation Desk\]', 'GENERAL \[Lower Level\]', 'JUVENILE LITERATURE \[Lower Level\]', 'MINI BOOKS \[Lower Level\]', 'NEW BOOKS', 'OVERSIZE \[Lower Level\]', 'PERIODICALS', 'POPULAR READING \[Main\]', 'TEACHER\'S RESOURCE MATERIALS', 'YOUNG ADULT \[Lower Level\]']
+    subs: { a: 'c', b: '876p', c: 'h,i', n: '3', v: '3' }
   },
   'US-PCLVU': {
     name: 'Ursinus College',
@@ -120,8 +117,7 @@ const localFields = {
   'US-PELC': {
     name: 'Elizabethtown College',
     tag: '995',
-    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g' },
-    lendLocs: ['display', 'etown', 'fac-dis', 'main', 'med-cd', 'med-dvd', 'new-books', 'score']
+    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g' }
   },
   'US-NNCOO': {
     name: 'The Cooper Union',
