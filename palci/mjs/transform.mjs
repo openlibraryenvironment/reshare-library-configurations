@@ -471,7 +471,7 @@ const localFields = {
     linkedField: '876',
     linkSubs: ['8', '9'],
     subs: { a: 'c', c: 'h,i', b: '876p' },
-    lendLocs: [ 'Biography', 'Book Worm ', 'Browsing', 'Circulation', 'Reference', 'Short Introduction', 'Who\'s Who', 'Young Adult', 'juvenile', 'spiritual' ]
+    lendLocs: [ 'Biography', 'Book Worm ', 'Browsing', 'Circulation', 'Reference', 'Short Introduction', 'Who\'s Who', 'Young Adult', 'Juvenile', 'Spiritual' ]
   },
   'US-PERMC': {
     name: 'Mercyhurst',
