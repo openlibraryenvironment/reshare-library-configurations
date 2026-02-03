@@ -318,5 +318,6 @@ export function cluster_transform(clusterStr) {
   mainBib.fields.push(...f999s);
   mainBib.fields.push(...outItems);
   return JSON.stringify(mainBib, null, 2);
+  // THIS IS A NOTE FOR TESTING PUROSES
 }
 
