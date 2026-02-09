@@ -1,4 +1,5 @@
 /*
+RSRVR-26 Verify content update - A
   Subfield guide: a: location, b: barcode, c: callNumber, d: callNumberType, g: copy, k: numberOfPieces, i: institutionName, 
   n: enumeration, u: chronology, v: volume, w: yearCaption, x: itemMaterialType, y: itemId
 */
