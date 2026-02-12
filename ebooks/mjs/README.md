@@ -1,4 +1,4 @@
-### CCLP transformer definitions
+### transformer definitions
 
 #### 999 11 (library items and vendor data) subfields
 ```
