@@ -52,6 +52,13 @@ const localFields = {
     online: 'true',
     urlRecipe: 'https://search.library.nyu.edu/permalink/01NYU_INST/1d6v258/alma%%',
     subs: { u: 'f', n: 'g', r: 'r', x: 'x', z: 'c' }
+  },
+  'US-NNNS': {
+    name: 'New School',
+    ils: 'Alma',
+    tag: '996',
+    online: 'true',
+    subs: { u: 's', n: 'g', x: 'x', z: 'c' }
   }
 };
 
