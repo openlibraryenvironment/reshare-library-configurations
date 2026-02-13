@@ -29,6 +29,7 @@
 999 12 (online)
 {
   "u": "uri",
+  "n": "termsGoverningAccess"
   "r": "rigts",
   "x": "nonPublicNote",
   "z": "publicNote"
@@ -40,9 +41,9 @@ const localFields = {
     name: 'Lehigh',
     ils: 'FOLIO',
     idField: '001',
-    tag: '952',
+    tag: '856',
     online: 'true',
-    subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' }
+    subs: { u: 'u', n: 'n', r: 'r', x: 'x', z: 'z' }
   }
 };
 
@@ -136,18 +137,8 @@ export function cluster_transform(clusterStr) {
     let recFields = {};
     let bibCall = {};
 
-    let eloan = false;
-    let uris = [];
     for (let y = 0; y < rec.fields.length; y++) {
       let field = rec.fields[y];
-      if (field['856']) {
-        let f = field['856'];
-        for (let x = 0; x < f.subfields.length; x++) {
-          let s = f.subfields[x];
-          if (s.n && s.n === 'EILLWholeBookPermitted') eloan = true;
-          if (s.u) uris.push(s.u);
-        }
-      }
       let tag = Object.keys(field)[0];
       if (tag.match(/050|082|09\d/)) {
         let csubs = getSubs(field[tag]);
@@ -228,6 +219,7 @@ export function cluster_transform(clusterStr) {
         let subData = getSubs(item);
         let location = '';
         let itype = '';
+        let hasUri = false
         for (let c in lf.subs) {
           if (lf.linkSubs && lf.linkSubs[0] && lf.subs[c].match(/^\w{3}/)) {
             let lsf = lf.subs[c].substring(3);
@@ -277,34 +269,11 @@ export function cluster_transform(clusterStr) {
           }
         }
 
-        if (!(lf.isVendor)) {
-          let pol = 0;
-          if (lf.lendLocs && lf.lendLocs[location] || lf.notLendLocs && !lf.notLendLocs[location])  {
-            pol = 1;
-            if (lf.lendItypes && !lf.lendItypes[itype]) {
-              pol = 0;
-            }
-          }
-          if (!(lf.lendLocs || lf.notLendLocs) && lf.lendItypes && lf.lendItypes[itype]) {
-            pol = 1;
-          }
-
-          if (lf.lendFunc) {
-            pol = lf.lendFunc(recFields, outItem['999']) || pol;
-          }
-          if (eloan) {
-            pol = 1;
-            
-          }
-          if (uris[0]) {
-            for (let z = 0; z < uris.length; z++) {
-              outItem['999'].subfields.push({ u: uris[z] });
-            }
-          }
-          let policy = (pol) ? 'LOANABLE' : 'UNLOANABLE';
+        if (!lf.isVendor) {
+          let policy = (subData.n && subData.n[0] === 'EILLWholeBookPermitted') ? 'LOANABLE' : 'UNLOANABLE';
           outItem['999'].subfields.push({ p: policy });
         }
-        outItems.push(outItem);
+        if (subData.u) outItems.push(outItem);
       }
     }
   }
