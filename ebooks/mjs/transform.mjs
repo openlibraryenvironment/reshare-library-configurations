@@ -44,6 +44,14 @@ const localFields = {
     tag: '856',
     online: 'true',
     subs: { u: 'u', n: 'n', r: 'r', x: 'x', z: 'z' }
+  },
+  'US-NNU': {
+    name: 'New York University',
+    ils: 'Alma',
+    tag: '996',
+    online: 'true',
+    urlRecipe: 'https://search.library.nyu.edu/permalink/01NYU_INST/1d6v258/alma%%',
+    subs: { u: 'f', n: 'g', r: 'r', x: 'x', z: 'c' }
   }
 };
 
@@ -160,7 +168,7 @@ export function cluster_transform(clusterStr) {
 
     // control number updates 
     controlNumber = controlNumber.replace(/^oai.+:/, '');
-
+    
     if (lf && lf.idField) {
       
       let tag = lf.idField.substring(0, 3);
@@ -201,6 +209,7 @@ export function cluster_transform(clusterStr) {
         }
       }
       controlNumber = controlNumber.trim();
+      
       for (let i = 0; i < items.length; i++) {
         let item = items[i];
         let ind2 = (lf.online) ? '2' : (lf.isVendor) ? '3' : '1';
@@ -219,7 +228,8 @@ export function cluster_transform(clusterStr) {
         let subData = getSubs(item);
         let location = '';
         let itype = '';
-        let hasUri = false
+        let hasUrl = false;
+        let ndata = ''; 
         for (let c in lf.subs) {
           if (lf.linkSubs && lf.linkSubs[0] && lf.subs[c].match(/^\w{3}/)) {
             let lsf = lf.subs[c].substring(3);
@@ -258,7 +268,12 @@ export function cluster_transform(clusterStr) {
           }
           if (text) {
             let obj = {};
+            if (c === 'u' && lf.urlRecipe) {
+              text = lf.urlRecipe.replace(/%%/, controlNumber);
+            }
             obj[c] = text;
+            if (c === 'u' && text) hasUrl = true;
+            if (c === 'n') ndata = text;
             outItem['999'].subfields.push(obj);
           }
           if (!location && c === 'a') {
@@ -270,10 +285,10 @@ export function cluster_transform(clusterStr) {
         }
 
         if (!lf.isVendor) {
-          let policy = (subData.n && subData.n[0] === 'EILLWholeBookPermitted') ? 'LOANABLE' : 'UNLOANABLE';
+          let policy = (ndata.match(/EILLWholeBookPermitted/)) ? 'LOANABLE' : 'UNLOANABLE';
           outItem['999'].subfields.push({ p: policy });
         }
-        if (subData.u) outItems.push(outItem);
+        if (hasUrl) outItems.push(outItem);
       }
     }
   }
