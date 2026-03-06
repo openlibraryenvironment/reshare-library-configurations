@@ -49,7 +49,8 @@ const localFields = {
     tag: '852',
     linkedField: '876',
     linkSubs: ['8','9'],
-    subs: { a: 'c', b: '876p', c: 'k,h,i', k: '876x' }
+    subs: { a: 'c', b: '876p', c: 'k,h,i', k: '876x' },
+    lendLocs: [ 'Main Collection', 'U.S. Government Publications' ]
   },
   'US-DEWGBC': {
     name: 'Goldey-Beacom College',
