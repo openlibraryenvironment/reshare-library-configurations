@@ -158,7 +158,7 @@ const localFields = {
     name: 'University of Pennsylvania',
     tag: '995',
     subs: { a: 'i,aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a' },
-    lendLocs: ['LippLib lipp', 'VanPeltLib easiaover', 'VanPeltLib eastasia', 'VanPeltLib vanp', 'VanPeltLib vpnewbook', 'VanPeltLib yarn']
+    lendLocs: [ 'Libra stor', 'LippLib lipp', 'VanPeltLib easiaover', 'VanPeltLib eastasia', 'VanPeltLib vanp', 'VanPeltLib vanpcgc', 'VanPeltLib vanpcgccm', 'VanPeltLib vpnewbook', 'VanPeltLib yarn' ]
   },
   'US-PMA': {
     name: 'Allegheny',
