@@ -5,7 +5,7 @@
 const localFields = {
   'US-CST': {
     name: 'Stanford',
-    tag: '999',
+    tag: '950',
     subs: { a: 'm,l', b: 'i', c: 'a', d: 'w', k: 'j', x: 't', y: 'i' },
     lendLocs: ['ARS-STACKS', 'ART-STACKS', 'EAR-ATLASES', 'EAR-MEZZANINE', 'EAR-STACKS', 'EAR-TECH-REPORTS', 'EAL-CHINESE', 'EAL-JAPANESE', 'EAL-KOREAN', 'EDU-STACKS', 'GRE-CAL-DOCS', 'GRE-FED-DOCS', 'GRE-FOLIO-FLAT', 'GRE-INTL-DOCS', 'GRE-STACKS', 'MUS-FOLIO', 'MUS-MINIATURE', 'MUS-SCORES', 'MUS-STACKS', 'SAL-ARABIC', 'SAL-FOLIO', 'SAL-PAGE', 'SAL-TURKISH', 'SAL-SOUTH-MEZZ', 'SAL-STACKS', 'SAL3-STACKS', 'SCI-STACKS'],
     lendItypes: ['book', 'score'],
@@ -143,6 +143,7 @@ export function cluster_transform(clusterStr) {
     // figure out mtypes from leader codes
     let mt = rec.leader.substring(6, 7);
     let bl = rec.leader.substring(7, 8);
+    let mtbl = mt + bl;
     let mtype = '';
     if (bl.match(/[sb]/)) {
       mtype = 'CNR';
@@ -270,9 +271,13 @@ export function cluster_transform(clusterStr) {
           if (!itype && c === 'x') {
             itype = text;
           }
-          if (sid === 'US-CST' && subData.r && subData.r[0] === 'Will not lend') {
-            willNotLend = true;
-          }
+          if (sid === 'US-CST') {
+            if (subData.r && subData.r[0] === 'Will not lend') {
+              willNotLend = true;
+            } else if (!mtbl.match(/^(am|cn|tm)$/)) {
+              willNotLend = true;
+            }
+          } 
         }
 
         let policy = '';
