@@ -32,12 +32,12 @@ const localFields = {
       if (f919[0]) {
         let subs = getSubs(f919[0]);
         if (subs.a && subs.a[0].match(/exclude from BorrowDirect/i)) {
-          policy = '0';
+          policy = 0;
         }
       }
       if (!policy && lf) {
         let sf = getSubs(lf);
-        if (sf.c && sf.c[0].match(/^3781/)) policy = '0'
+        if (sf.c && sf.c[0].match(/^3781/)) policy = 0;
       }
       return policy;
     }
