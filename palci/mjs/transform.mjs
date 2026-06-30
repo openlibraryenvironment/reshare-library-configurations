@@ -39,10 +39,10 @@ const localFields = {
   },
   'US-NSYL': {
     name: 'Le Moyne College',
-    tag: '945',
-    idField: '907a',
-    subs: { a: 'l', b: 'i', c: 'a,b', v: 'c', x: 't', y: 'y' },
-    lendLocs: ['lbks', 'lbksm', 'lbkso', 'lmcod', 'lmvc', 'ltm', 'ltmyl']
+    ils: 'FOLIO',
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: [ 'Bookstacks', 'Bookstacks: Oversize', 'Compact Disc', 'Display', 'On Display', 'Teaching Material', 'Videorecording', 'Youth Literature', 'lbks', 'lbkso', 'ldisp', 'lmcod', 'lmvc', 'lod', 'ltm', 'ltmyl' ]
   },
   'US-PATM': {
     name: 'Muhlenberg College',
