@@ -58,6 +58,10 @@ const localFields = {
       tag: '996',
       subs: { u: 'f', n: 'g', r: 'r', x: 'x', z: 'c' },
       urlRecipe: 'https://search.library.nyu.edu/permalink/01NYU_INST/1d6v258/alma%%'
+    },
+    physical: {
+      tag: '995',
+      subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'}
     }
   },
   'US-NNNS': {
@@ -66,6 +70,10 @@ const localFields = {
     online: {
       tag: '996',
       subs: { u: 's', n: 'g', x: 'x', z: 'c' }
+    },
+    physical: {
+      tag: '995',
+      subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'}
     }
   }
 };
