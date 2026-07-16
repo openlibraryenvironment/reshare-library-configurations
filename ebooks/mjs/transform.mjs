@@ -41,26 +41,36 @@ const localFields = {
     name: 'Lehigh',
     ils: 'FOLIO',
     idField: '001',
-    tag: '856',
-    online: 'true',
-    subs: { u: 'u', n: 'n', r: 'r', x: 'x', z: 'z' }
+    online: {
+      tag: '856',
+      subs: { u: 'u', n: 'n', r: 'r', x: 'x', z: 'z' }
+    },
+    physical: {
+      tag: '952',
+      subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
+      noAdd: { a: 'Online' }
+    }
   },
   'US-NNU': {
     name: 'New York University',
     ils: 'Alma',
-    tag: '996',
-    online: 'true',
-    urlRecipe: 'https://search.library.nyu.edu/permalink/01NYU_INST/1d6v258/alma%%',
-    subs: { u: 'f', n: 'g', r: 'r', x: 'x', z: 'c' }
+    online: {
+      tag: '996',
+      subs: { u: 'f', n: 'g', r: 'r', x: 'x', z: 'c' },
+      urlRecipe: 'https://search.library.nyu.edu/permalink/01NYU_INST/1d6v258/alma%%'
+    }
   },
   'US-NNNS': {
     name: 'New School',
     ils: 'Alma',
-    tag: '996',
-    online: 'true',
-    subs: { u: 's', n: 'g', x: 'x', z: 'c' }
+    online: {
+      tag: '996',
+      subs: { u: 's', n: 'g', x: 'x', z: 'c' }
+    }
   }
 };
+
+const rtypes = [ 'online', 'physical', 'vendor' ];
 
 function getSubs(field) {
   let subs = {};
@@ -177,7 +187,6 @@ export function cluster_transform(clusterStr) {
     controlNumber = controlNumber.replace(/^oai.+:/, '');
     
     if (lf && lf.idField) {
-      
       let tag = lf.idField.substring(0, 3);
       let sf = lf.idField.substring(3);
       let field = recFields[tag];
@@ -204,98 +213,116 @@ export function cluster_transform(clusterStr) {
 
     // normalized item fields
     if (lf) {
-      let items = recFields[lf.tag] || [];
-      let linkedFields = {};
-      if (lf.linkedField) {
-        let extra = recFields[lf.linkedField] || [];
-        for (let e = 0; e < extra.length; e++) {
-          let exField = extra[e];
-          let esubs = getSubs(exField);
-          let link = esubs[lf.linkSubs[1]];
-          linkedFields[link] = exField;
-        }
-      }
-      controlNumber = controlNumber.trim();
-      
-      for (let i = 0; i < items.length; i++) {
-        let item = items[i];
-        let ind2 = (lf.online) ? '2' : (lf.isVendor) ? '3' : '1';
-        let outItem = {
-          '999' : {
-            ind1: "1",
-            ind2: ind2,
-            subfields: [
-              { l: controlNumber },
-              { s: 'ISIL:' + sid },
-              { i: lf.name },
-              { t: mtype }
-            ]
+      for (let z = 0; z < rtypes.length; z++) {
+        let rtype = rtypes[z];
+        let lfr = lf[rtype];
+        if (!lfr) break;
+        let lfTag = (lfr)? lfr.tag : ''
+        let items = recFields[lfTag] || [];
+        let linkedFields = {};
+        let dl = lfr.delimiter || ' ';
+        if (lfr.linkedField) {
+          let extra = recFields[lfr.linkedField] || [];
+          for (let e = 0; e < extra.length; e++) {
+            let exField = extra[e];
+            let esubs = getSubs(exField);
+            let link = esubs[lfr.linkSubs[1]];
+            linkedFields[link] = exField;
           }
         }
-        let subData = getSubs(item);
-        let location = '';
-        let itype = '';
-        let hasUrl = false;
-        let ndata = ''; 
-        for (let c in lf.subs) {
-          if (lf.linkSubs && lf.linkSubs[0] && lf.subs[c].match(/^\w{3}/)) {
-            let lsf = lf.subs[c].substring(3);
-            let linkDat = subData[lf.linkSubs[0]];
-            if (linkDat) {
-              let linkedItem = linkedFields[linkDat];
-              let linkedSubs = (linkedItem) ? getSubs(linkedItem) : {};
-              let linkedData = linkedSubs[lsf] || [];
-              if (linkedData[0]) {
-                let linkedSubField = {};
-                if (c === 'a') location = linkedData[0];
-                if (c === 'x') itype = linkedData[0];
-                linkedSubField[c] = linkedData[0];
-                outItem['999'].subfields.push(linkedSubField);
+        controlNumber = controlNumber.trim();
+        
+        for (let i = 0; i < items.length; i++) {
+          let item = items[i];
+          let ind2 = (rtype === 'online') ? '2' : (rtype === 'vendor') ? '3' : '1';
+          let outItem = {
+            '999' : {
+              ind1: "1",
+              ind2: ind2,
+              subfields: [
+                { l: controlNumber },
+                { s: 'ISIL:' + sid },
+                { i: lf.name },
+                { t: mtype }
+              ]
+            }
+          }
+          let subData = getSubs(item);
+          let location = '';
+          let itype = '';
+          let hasUrl = false;
+          let ndata = '';
+          let addField = true;
+          for (let c in lfr.subs) {
+            if (lfr.linkSubs && lfr.linkSubs[0] && lfr.subs[c].match(/^\w{3}/)) {
+              let lsf = lfr.subs[c].substring(3);
+              let linkDat = subData[lfr.linkSubs[0]];
+              if (linkDat) {
+                let linkedItem = linkedFields[linkDat];
+                let linkedSubs = (linkedItem) ? getSubs(linkedItem) : {};
+                let linkedData = linkedSubs[lsf] || [];
+                if (linkedData[0]) {
+                  let linkedSubField = {};
+                  if (c === 'a') location = linkedData[0];
+                  if (c === 'x') itype = linkedData[0];
+                  linkedSubField[c] = linkedData[0];
+                  outItem['999'].subfields.push(linkedSubField);
+                }
               }
             }
-          }
-          let codes = lf.subs[c].split(',');
-          let fdata = [];
-          for (let x = 0; x < codes.length; x++) {
-            let code = codes[x];
-            if (subData[code]) {
-              let res = subData[code].join(' ');
-              fdata.push(res);
+            let codes = lfr.subs[c].split(/,/);
+            let fdata = [];
+            for (let x = 0; x < codes.length; x++) {
+              let code = codes[x];
+              if (subData[code]) {
+                let res = subData[code].join(dl);
+                fdata.push(res);
+              }
+            }
+            let text = fdata.join(dl);
+            text = text.trim();
+            if (c === 'c' && lfr.subs.c.match(/^%/)) {
+              let cnTags = lfr.subs.c.split(/\|/);
+              for (let t = 0; t < cnTags.length; t++) {
+                let tag = cnTags[t].replace(/^%/, '');
+                text = bibCall[tag];
+                if (text) break;
+              }
+            }
+            if (text) {
+              let obj = {};
+              if (c === 'u' && lfr.urlRecipe) {
+                text = lfr.urlRecipe.replace(/%%/, controlNumber);
+              }
+              obj[c] = text;
+              if (rtype === 'online') {
+                if (c === 'u' && text) hasUrl = true;
+                if (c === 'n') ndata = text;
+              }
+              outItem['999'].subfields.push(obj);
+            }
+            if (!location && c === 'a') {
+              location = text;
+            }
+            if (!itype && c === 'x') {
+              itype = text;
+            }
+            if (lfr.noAdd && lfr.noAdd[c]) {
+              let re = new RegExp(lfr.noAdd[c], 'i');
+              if (text.match(re)) addField = false;
             }
           }
-          let text = fdata.join(' ');
-          text = text.trim();
-          if (c === 'c' && lf.subs.c.match(/^%/)) {
-            let cnTags = lf.subs.c.split(/\|/);
-            for (let t = 0; t < cnTags.length; t++) {
-              let tag = cnTags[t].replace(/^%/, '');
-              text = bibCall[tag];
-              if (text) break;
+          
+          if (addField) {
+            if (rtype !== 'vendor') {
+              let policy = (ndata.match(/EILLWholeBookPermitted/)) ? 'LOANABLE' : 'UNLOANABLE';
+              outItem['999'].subfields.push({ p: policy });
             }
-          }
-          if (text) {
-            let obj = {};
-            if (c === 'u' && lf.urlRecipe) {
-              text = lf.urlRecipe.replace(/%%/, controlNumber);
-            }
-            obj[c] = text;
-            if (c === 'u' && text) hasUrl = true;
-            if (c === 'n') ndata = text;
-            outItem['999'].subfields.push(obj);
-          }
-          if (!location && c === 'a') {
-            location = text;
-          }
-          if (!itype && c === 'x') {
-            itype = text;
+            if ((rtype === 'online' && hasUrl) || rtype !== 'online') {
+              outItems.push(outItem)
+            };
           }
         }
-
-        if (!lf.isVendor) {
-          let policy = (ndata.match(/EILLWholeBookPermitted/)) ? 'LOANABLE' : 'UNLOANABLE';
-          outItem['999'].subfields.push({ p: policy });
-        }
-        if (hasUrl) outItems.push(outItem);
       }
     }
   }
