@@ -48,7 +48,8 @@ const localFields = {
     physical: {
       tag: '952',
       subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
-      noAdd: { a: 'Online' }
+      noAdd: { a: 'Online' },
+      lendLocs: ['Fairchild - 5th Floor - North', 'Fairchild - 6th Floor - North - Media Collection', 'Fairchild - 6th Floor - North', 'Fairchild - 7th Floor - North', 'LMC-B', 'LMC-G', 'Linderman 1st Floor - Reading Room - Faculty Authors', 'Linderman 1st Floor - Reading Room - Juvenile Collection', 'Linderman 1st Floor - Reading Room - New Books', 'Linderman 1st Floor - Reading Room - Reading Room Collection', 'Linderman 1st Floor - Rotunda', 'Linderman 2nd Floor - Rotunda', 'Linderman 3rd Floor - Rotunda', 'Linderman 3rd Floor - Stacks', 'Linderman 4th Floor - Stacks', 'Linderman Ground Floor - Lower Level', 'Linderman Ground Floor - Upper Level', 'Lucy\'s Cafe - Linderman Ground Level Rotunda']
     }
   },
   'US-NNU': {
@@ -57,11 +58,12 @@ const localFields = {
     online: {
       tag: '996',
       subs: { u: 'f', n: 'g', r: 'r', x: 'x', z: 'c' },
-      urlRecipe: 'https://search.library.nyu.edu/permalink/01NYU_INST/1d6v258/alma%%'
+      urlRecipe: 'https://search.library.nyu.edu/permalink/01NYU_INST/1d6v258/alma%%',
     },
     physical: {
       tag: '995',
-      subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'}
+      subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'},
+      lendLocs: [ 'BOBST BLEIS', 'BOBST EASIA', 'BOBST EASOV', 'BOBST FOLIO', 'BOBST MAIN', 'BOBST OVER', 'BOBST RR4CL', 'BOBST SCORE', 'OSNYU COUR', 'OSNYU COUR4', 'OSNYU EASIA', 'OSNYU MAIN' ]
     }
   },
   'US-NNNS': {
@@ -73,7 +75,8 @@ const localFields = {
     },
     physical: {
       tag: '995',
-      subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'}
+      subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'},
+      lendLocs: ['TNSFO MAIN', 'TNSGI MAIN', 'TNSOS MAIN', 'TNSSC MAIN']
     }
   }
 };
@@ -311,6 +314,7 @@ export function cluster_transform(clusterStr) {
             }
             if (!location && c === 'a') {
               location = text;
+              console.log(location);
             }
             if (!itype && c === 'x') {
               itype = text;
@@ -322,13 +326,28 @@ export function cluster_transform(clusterStr) {
           }
           
           if (addField) {
-            if (rtype !== 'vendor') {
+            if (rtype === 'online') {
               let policy = (ndata.match(/EILLWholeBookPermitted/)) ? 'LOANABLE' : 'UNLOANABLE';
+              outItem['999'].subfields.push({ p: policy });
+            } else if (rtype === 'physical') {
+              let policy = '';
+              if (lf.lendLocs && lf.lendItypes) {
+                policy = (lfr.lendLocs.indexOf(location) > -1 && lfrlendItypes.indexOf(itype) > -1) ? 'LOANABLE' : 'UNLOANABLE'; 
+              } else if (lf.rlendLocs && lfr.notLendItypes) {
+                policy = (lfr.lendLocs.indexOf(location) > -1 && lfr.notLendItypes.indexOf(itype) === -1) ? 'LOANABLE' : 'UNLOANABLE';
+              } else if (lfr.lendLocs) {
+                policy = (lfr.lendLocs.indexOf(location) > -1) ? 'LOANABLE' : 'UNLOANABLE';
+              } else {
+                policy = 'UNLOANABLE';
+              }
+              if (lfr.lendFunc) {
+                policy = lf.lendFunc(recFields, outItem['999']) || policy;
+              }
               outItem['999'].subfields.push({ p: policy });
             }
             if ((rtype === 'online' && hasUrl) || rtype !== 'online') {
-              outItems.push(outItem)
-            };
+              outItems.push(outItem);
+            }
           }
         }
       }
