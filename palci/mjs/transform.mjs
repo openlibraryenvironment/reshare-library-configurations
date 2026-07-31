@@ -486,7 +486,7 @@ const localFields = {
     idField: '999c',
     tag: '952',
     subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y', y: '9', u: 'h', n: 'h', v: 'h' },
-    lendLocs: ['BIN', 'MARKETPL']
+    lendLocs: [ 'BINSTOR', 'DISPLAY', 'FICTION', 'Juniors', 'NONFICTION' ]
   },
   'US-PBMW': {
     name: 'Moravian',
