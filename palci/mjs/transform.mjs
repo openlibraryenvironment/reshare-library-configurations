@@ -139,7 +139,8 @@ const localFields = {
     idField: '999c',
     tag: '952',
     subs: { a: 'c', b: 'p', c: 'o', d: '2', x: 'y' },
-    lendLocs: ['COURT', 'DISPLAY', 'FIRST', 'SECOND']
+    lendLocs: ['COURT', 'DISPLAY', 'FIRST', 'SECOND'],
+    notLendItypes: ['LR']
   },
   'US-P': {
     name: 'State Library of Pennsylvania',
