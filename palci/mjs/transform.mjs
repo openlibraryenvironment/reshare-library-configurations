@@ -21,7 +21,7 @@ const localFields = {
     ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
-    lendLocs: [ 'Caldecott Collection - Old Italian Room', 'Easy Reading Collection - Old Italian Room', 'General Collection - 1st Floor', 'General Collection - 2nd Floor', 'Leisure Reading', 'Newbery Collection - Old Italian Room', 'Young Adult Fiction - Old Italian Room', 'Young Adult Fiction Collection - Old Italian', 'Young Adult Nonfiction - Old Italian Room', 'Young Adult Nonfiction Collection - Old Italian Room' ]
+    lendLocs: [ 'Caldecott Collection - Old Italian Room', 'Easy Reading Collection - Old Italian Room', 'General Collection - 1st Floor', 'General Collection - 2nd Floor', 'Leisure Reading', 'Newbery Collection - Old Italian Room', 'Young Adult Fiction - Old Italian Room', 'Young Adult Fiction Collection - Old Italian Room', 'Young Adult Nonfiction - Old Italian Room', 'Young Adult Nonfiction Collection - Old Italian Room' ]
   },
   'US-PSHS': {
     name: 'Shippensburg University',
