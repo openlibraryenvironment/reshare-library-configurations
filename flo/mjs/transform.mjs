@@ -9,7 +9,8 @@ const localFields = {
     ils: 'FOLIO',
     show856: true,
     tag: '952',
-    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'p' },
+    lendItypes: { 'Can circulate': 1, 'Standard': 1 },
     lendLocs: {'At Bindery':{}, 'Atlas (LC)':{}, 'Children\'s Library':{}, 'Children\'s Picture Books':{}, 'Cutter Classification':{}, 'Featured Books':{}, 'Library of Congress Classification Map':{}, 'Library of Congress Classification':{}, 'New Book (14 Days)':{}, 'New Book (28 Days)':{}, 'New Books Shelves':{}, 'Off-Site Storage (Please Consult Reference Librarian)':{}, 'Off-Site Storage Boxes (Please Consult Reference Librarian)':{}, 'Young Adult Collection':{}}
   },
   'US-MBMSA': {
