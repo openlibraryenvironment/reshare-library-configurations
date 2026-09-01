@@ -4,6 +4,14 @@
 */
 
 const localFields = {
+  'US-MBAT': {
+    name: 'Boston Athenaeum',
+    ils: 'FOLIO',
+    show856: true,
+    tag: '952',
+    subs: { a: 'd', b: 'm', c: 'e', d: 'h', k: 'n', n: 'k', u: 'l', v: 'j', x: 'i' },
+    lendLocs: {'At Bindery':{}, 'Atlas (LC)':{}, 'Children\'s Library':{}, 'Children\'s Picture Books':{}, 'Cutter Classification':{}, 'Featured Books':{}, 'Library of Congress Classification Map':{}, 'Library of Congress Classification':{}, 'New Book (14 Days)':{}, 'New Book (28 Days)':{}, 'New Books Shelves':{}, 'Off-Site Storage (Please Consult Reference Librarian)':{}, 'Off-Site Storage Boxes (Please Consult Reference Librarian)':{}, 'Young Adult Collection':{}}
+  },
   'US-MBMSA': {
     name: 'MassArt',
     ils: 'FOLIO',
