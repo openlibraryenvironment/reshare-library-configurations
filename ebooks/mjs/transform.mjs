@@ -314,7 +314,6 @@ export function cluster_transform(clusterStr) {
             }
             if (!location && c === 'a') {
               location = text;
-              console.log(location);
             }
             if (!itype && c === 'x') {
               itype = text;
