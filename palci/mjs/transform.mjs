@@ -69,7 +69,8 @@ const localFields = {
   'US-PANL': {
     name: 'Lebanon Valley College',
     tag: '995',
-    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g' }
+    subs: { a: 'aa', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w', v: 'g' },
+    lendLocs: [ 'DISPLAY', 'DISPLAYTR', 'GRAPHICNOV', 'JUVENILE', 'LOWERLV', 'NEW BOOKS', 'OVERSIZE', 'SECONDFL', 'YOUNGADULT' ]
   },
   'US-TEST-P': {
     name: 'Test Institution',
