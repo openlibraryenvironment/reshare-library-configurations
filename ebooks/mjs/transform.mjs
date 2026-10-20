@@ -192,6 +192,21 @@ export function cluster_transform(clusterStr) {
     }
 
     let lf = localFields[sid];
+    let isSuppressed = false;
+    if (lf && lf.ils && lf.ils === 'FOLIO') {
+      let ff999 = recFields['999'];
+      if (ff999) {
+        for (let x = 0; x < ff999.length; x++) {
+          let f = ff999[x];
+          if (f.ind1 === 'f' && f.ind2 === 'f') {
+            let subs = getSubs(f);
+            if (subs.t && subs.t[0] === '1') {
+              isSuppressed = true
+            }
+          }
+        }
+      }
+    }
     let controlNumber = lid;
 
     // control number updates 
@@ -220,7 +235,7 @@ export function cluster_transform(clusterStr) {
     for (let a = 0; a < cluster.matchValues.length; a++) {
       f999.subfields.push({ m: cluster.matchValues[a] });
     }
-    f999s.push({ '999': f999 });
+    if (!isSuppressed) f999s.push({ '999': f999 });
 
     // normalized item fields
     if (lf) {
@@ -345,7 +360,7 @@ export function cluster_transform(clusterStr) {
               outItem['999'].subfields.push({ p: policy });
             }
             if ((rtype === 'online' && hasUrl) || rtype !== 'online') {
-              outItems.push(outItem);
+              if (!isSuppressed) outItems.push(outItem);
             }
           }
         }
