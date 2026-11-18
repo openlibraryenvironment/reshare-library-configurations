@@ -8,10 +8,16 @@ ID=$1
 
 if [ -z $ID ]
 then
-  echo "Usage: ${0} <globalId>"
+  echo "Usage: ${0} <globalId> [ <matcher> ]"
   exit
 fi
 
-URL="${OKAPI}/reservoir/clusters?matchkeyid=goldrush&query=globalId==${1}"
+M=goldrush
+if [ $2 ]
+then
+  M=$2
+fi
 
-curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" | jq .items[0]
+URL="${OKAPI}/reservoir/clusters?matchkeyid=${M}&query=globalId==${1}"
+
+curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" # | jq .items[0]
