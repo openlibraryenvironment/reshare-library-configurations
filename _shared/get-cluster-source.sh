@@ -5,7 +5,8 @@ OKAPI=`cat ${TMP}/url`
 TOKEN=`cat ${TMP}/token | sed 's/.$//'`
 
 SRCID=$1
-EL=$2;
+EL=$3;
+M=goldrush
 
 if [ -z $SRCID ]
 then
@@ -18,7 +19,11 @@ then
   EL=0
 fi
 
+if [ $2 ]
+then
+  M=$2
+fi
 
-URL="${OKAPI}/reservoir/clusters?matchkeyid=goldrush&query=sourceId==${SRCID}"
+URL="${OKAPI}/reservoir/clusters?matchkeyid=$2&query=sourceId==${SRCID}"
 
-curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" | jq ".items[$EL]";
+curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" | jq ".items[$EL]"
