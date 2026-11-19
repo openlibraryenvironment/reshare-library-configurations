@@ -37,18 +37,36 @@ RELOAD TESTING NOTE
 */
 
 const localFields = {
-  'US-PBLX': {
+  'US-PBL': {
     name: 'Lehigh',
     ils: 'FOLIO',
     tag: '952',
     subs: { a: 'd', b: 'm', c: 'e', d: 'h', x: 'i' },
     lendLocs: {'Fairchild - 5th Floor - North': {}, 'Fairchild - 6th Floor - North - Media Collection': {}, 'Fairchild - 6th Floor - North': {}, 'Fairchild - 7th Floor - North': {}, 'LMC-B': {}, 'LMC-G': {}, 'Linderman 1st Floor - Reading Room - Faculty Authors': {}, 'Linderman 1st Floor - Reading Room - Juvenile Collection': {}, 'Linderman 1st Floor - Reading Room - New Books': {}, 'Linderman 1st Floor - Reading Room - Reading Room Collection': {}, 'Linderman 1st Floor - Rotunda': {}, 'Linderman 2nd Floor - Rotunda': {}, 'Linderman 3rd Floor - Rotunda': {}, 'Linderman 3rd Floor - Stacks': {}, 'Linderman 4th Floor - Stacks': {}, 'Linderman Ground Floor - Lower Level': {}, 'Linderman Ground Floor - Upper Level': {}, 'Lucy\'s Cafe - Linderman Ground Level Rotunda': {}}
   },
+  'US-NNU': {
+    name: 'NYU',
+    tag: '995',
+    subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'},
+    lendLocs: { 'BOBST BLEIS': {}, 'BOBST EASIA': {}, 'BOBST EASOV': {}, 'BOBST FOLIO': {}, 'BOBST MAIN': {}, 'BOBST OVER': {}, 'BOBST RR4CL': {}, 'BOBST SCORE': {}, 'OSNYU COUR': {}, 'OSNYU COUR4': {}, 'OSNYU EASIA': {}, 'OSNYU MAIN': {} }
+  },
   'US-NNNS': {
     name: 'New School',
     tag: '995',
     subs: { a: 'n,o', b: 'b', c: 'z', d: 'y', x: 't', n: 'f,g', u: 'i,j', k: 'p', y: 'a'},
-    lendLocs: ['TNSFO MAIN', 'TNSGI MAIN', 'TNSOS MAIN', 'TNSSC MAIN']
+    lendLocs: { 'TNSFO MAIN': {}, 'TNSGI MAIN': {}, 'TNSOS MAIN': {}, 'TNSSC MAIN': {} }
+  },
+  'US-PBM': {
+    name: 'Bryn Mawr',
+    tag: '995',
+    subs: { a: 'h', b: 's', c: 'bb', d: 'j', x: 't', y: 'a', u: 'f,x', n: 'e,w' },
+    lendLocs: { 'ba': {}, 'baf': {}, 'baff': {}, 'bc': {}, 'bcf': {}, 'bcff': {}, 'bcsfi': {}, 'bkraw': {}, 'bs': {}, 'bsff': {}, 'bsx': {} }
+  },
+  'US-PHC': {
+    name: 'Haverford',
+    tag: '995',
+    subs: { a: 'i', b: 's', c: 'bb', d: 'j', x: 'c', y: 'a', u: 'f,x', n: 'e,w', v: 'g', k: 'jj' },
+    lendLocs: { 'hm': {} }
   }
 };
 
