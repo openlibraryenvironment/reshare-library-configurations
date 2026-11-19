@@ -37,7 +37,7 @@ RELOAD TESTING NOTE
 */
 
 const localFields = {
-  'US-PBL': {
+  'US-PBLX': {
     name: 'Lehigh',
     ils: 'FOLIO',
     tag: '952',
