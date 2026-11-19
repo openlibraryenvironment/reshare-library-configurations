@@ -85,6 +85,7 @@ export function cluster_transform(clusterStr) {
     let lid = crec.localId;
     let rec = crec.payload.marc;
     let unknown = false;
+    let anotes = [];
     if (rec.leader) {
       rec.leader = rec.leader.replace(/^\D{5}/, '00000');
       rec.leader = rec.leader.replace(/^(.{10})22\D{5}/, '$12200000');
@@ -158,6 +159,14 @@ export function cluster_transform(clusterStr) {
         }
         if (tag === '008' || tag === '007' || tag === '006') mainBib.fields.push(field);
       }
+      if (tag === '583') {
+        for (let x = 0; x < field[tag].subfields.length; x++) {
+          let sf = field[tag].subfields[x];
+          let c = Object.keys(sf)[0];
+          let v = sf[c]
+          anotes.push(`$${c} ${v}`);
+        }
+      }
     }
 
     let lf = localFields[sid];
@@ -167,7 +176,6 @@ export function cluster_transform(clusterStr) {
     controlNumber = controlNumber.replace(/^oai.+:/, '');
 
     if (lf && lf.idField) {
-      
       let tag = lf.idField.substring(0, 3);
       let sf = lf.idField.substring(3);
       let field = recFields[tag];
@@ -178,6 +186,7 @@ export function cluster_transform(clusterStr) {
         controlNumber = (subs[sf]) ? subs[sf][0] : '';
       }
     }
+
     let f999 = {
       ind1: '1',
       ind2: '0',
@@ -290,6 +299,10 @@ export function cluster_transform(clusterStr) {
           }
           let policy = (pol) ? 'LOANABLE' : 'UNLOANABLE';
           outItem['999'].subfields.push({ p: policy });
+          if (anotes[0]) {
+            let andata = anotes.join(', ');
+            outItem['999'].subfields.push({ '0': andata})
+          }
         }
         outItems.push(outItem);
       }
