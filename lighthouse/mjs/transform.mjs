@@ -196,7 +196,7 @@ export function cluster_transform(clusterStr) {
           let sf = field[tag].subfields[x];
           let c = Object.keys(sf)[0];
           let v = sf[c]
-          anotes.push(`$${c} ${v}`);
+          anotes.push({ [c]: v });
         }
       }
     }
@@ -332,8 +332,8 @@ export function cluster_transform(clusterStr) {
           let policy = (pol) ? 'LOANABLE' : 'UNLOANABLE';
           outItem['999'].subfields.push({ p: policy });
           if (anotes[0]) {
-            let andata = anotes.join(', ');
-            outItem['999'].subfields.push({ '0': andata})
+            let anotesStr = JSON.stringify(anotes);
+            outItem['999'].subfields.push({ '0': anotesStr })
           }
         }
         outItems.push(outItem);
