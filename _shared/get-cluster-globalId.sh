@@ -20,4 +20,5 @@ fi
 
 URL="${OKAPI}/reservoir/clusters?matchkeyid=${M}&query=globalId==${1}"
 
-curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" # | jq .items[0]
+RES=$(curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}")
+echo $RES | jq .items[0] 2>/dev/null || echo "ERROR $RES ($URL)"
