@@ -4,22 +4,30 @@ TMP='./.okapi'
 OKAPI=`cat ${TMP}/url`
 TOKEN=`cat ${TMP}/token | sed 's/.$//'`
 
-SRCID=$1
-PARA=$2
+MK=goldrush
+EL=0
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    -k)
+      MK=$2
+      shift 2
+      ;;
+    *)
+      SRCID=$1
+      shift
+      ;;
+  esac
+done
 
 if [ -z $SRCID ]
 then
-  echo "Usage: ${0} <sourceId> [<additional_http_query_string>]"
+  echo "Usage: ${0} <sourceId> [ -k <matchkey> ]"
   exit
 fi
 
-if [ $PARA ]
-then
-  PARA="&${PARA}"
-fi
-
-
-URL="${OKAPI}/reservoir/clusters?matchkeyid=goldrush&query=sourceId==${SRCID}${PARA}"
+URL="${OKAPI}/reservoir/clusters?matchkeyid=${MK}&query=sourceId==${SRCID}"
 echo "GET ${URL}" 1>&2
 
-curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}" | jq .
+RES=$(curl --http1.1 -w '\n' -s $URL -H "x-okapi-token: ${TOKEN}")
+echo $RES

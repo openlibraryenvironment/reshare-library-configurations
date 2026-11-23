@@ -8,7 +8,7 @@ ID=$1
 
 if [ -z $ID ]
 then
-  echo "Usage: ${0} <globalId> [ <matcher> ]"
+  echo "Usage: ${0} <globalId> [ <matchkey> ]"
   exit
 fi
 
